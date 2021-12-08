@@ -1,0 +1,33 @@
+{
+  "1": {
+    "$route": "/",
+    "$get": "hello world"
+  },
+  "2": {
+    "$route": "/modify-site",
+    "textarea<attrs>": "<textarea rows={12} cols={100} name='data'>{escapeHtml(JSON.stringify(attrs.data,null,2))}</textarea>",
+    "form<attrs>": "<form method='POST'>{attrs.id && <><input readonly name='id' value={attrs.id}/><br/></>}<this.textarea data={attrs.data}/><br/><button>{attrs.button}</button></form>",
+    "$get(http)": "return <><this.form data={{}} button='Create'/><p/><>{$site.items.map(it => <this.form id={it.$id} data={it.$data} button='Update'/>)}</></>",
+    "$post(http)": "const form = http.request.form(); const id=form.get('id'); const data = JSON.parse(form.get('data')); if (id===null) $site.create(data); else $site.update(id, data); $site.rebuild(); http.response.redirect(this.$route)"
+  },
+  "3": {
+    "$route<>": "/posts.html",
+    "$get<>": "<ul>{this.$items.map(it => <li><a href={it.$route()}>{it.title}</a></li>)}</ul>",
+    "$figure": {
+      "$route<>": "/posts/{this.slug}.html",
+      "$get<>": "<h2>{this.title}</h2>{markdown.render(this.body)}"
+    }
+  },
+  "4": {
+    "$type": "3",
+    "slug": "hello-world",
+    "title": "Hello World!",
+    "body": "It *works*"
+  },
+  "5": {
+    "$type": "3",
+    "slug": "second-post",
+    "title": "Second post...",
+    "body": "* So\n* Cool!"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "name": "immaculatalibrary-v3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "out/main.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node out/main.js",
+    "watch": "tsc --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Steven Degutis",
+  "license": "TBD",
+  "dependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/plugin-transform-react-jsx": "^7.16.0",
+    "@sdegutis/imlib": "^1.0.4",
+    "@types/babel__core": "^7.1.16",
+    "@types/cookie-session": "^2.0.43",
+    "bcryptjs": "^2.4.3",
+    "chance": "^1.1.8",
+    "cookie-session": "^1.4.0",
+    "escape-html": "^1.0.3",
+    "express": "^4.17.1",
+    "markdown-it": "^12.2.0",
+    "source-map-support": "^0.5.21",
+    "vm2": "^3.9.5"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "out",
+      "data.json"
+    ]
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/chance": "^1.1.3",
+    "@types/escape-html": "^1.0.1",
+    "@types/express": "^4.17.13",
+    "@types/markdown-it": "^12.2.3",
+    "@types/node": "^16.11.10",
+    "typescript": "^4.5.2"
+  }
+}
