@@ -4,13 +4,6 @@ import { Compiler } from "./compiler";
 import { makeHandler } from "./http";
 import { Item } from "./item";
 
-type Normalized = {
-  item: Item,
-  self: { [key: string]: any },
-  figure: { [key: string]: any },
-  shadow: { [key: string]: any },
-};
-
 const verbs = ['get', 'post', 'delete', 'put', 'patch', 'head', 'options'];
 
 export class ViewSite {
@@ -116,21 +109,11 @@ export class Site {
       if (item.type) item.type.items.push(item);
     }
 
-    // Normalize data, figures, and shadows
-    const normalized = new Map<string, Normalized>();
-    for (const [id, item] of this.itemsById) {
-      normalized.set(id, {
-        item,
-        self: normalize(item.raw),
-        figure: normalize(item.raw['$figure']),
-        shadow: normalize(item.raw['$shadow']),
-      });
-    }
-
     // Inherit shadows/figures, deepest ancestor first
-    for (const [id, { item, self: data }] of normalized) {
-      item.type?.copyInto(item.data, id => normalized.get(id)?.figure);
-      item.type?.copyInto(item.globals, id => normalized.get(id)?.shadow);
+    for (const [id, item] of this.itemsById) {
+      const data = item.raw;
+      item.type?.copyInto(item.data, id => this.itemsById.get(id)?.raw['$figure']);
+      item.type?.copyInto(item.globals, id => this.itemsById.get(id)?.raw['$shadow']);
       Object.assign(item.data, data);
     }
 
@@ -193,30 +176,4 @@ export class Site {
     }
   }
 
-}
-
-function normalize(source: any) {
-  const data = Object.create(null);
-
-  for (const [rawKey, rawVal] of Object.entries<any>(source || {})) {
-    let key = rawKey;
-    let val = rawVal;
-
-    const match = rawKey.match(/^(.+?)(\(|\<)([a-zA-Z0-9_$, ]*?)(\)|\>)$/);
-    if (match) {
-      const [, innerKey, kind, argStr] = match;
-
-      const args = (argStr?.split(/s*,\s*/g) ?? []);
-      const body = (kind === '<'
-        ? `return <>${rawVal}</>`
-        : rawVal);
-
-      key = innerKey!;
-      val = { args, body };
-    }
-
-    data[key] = val;
-  }
-
-  return data;
 }
