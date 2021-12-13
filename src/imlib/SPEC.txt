@@ -12,9 +12,9 @@ Engine rules (i.e. app.start):
   1. Process each item in data
   2. Link items via $type (avoiding cycles)
   3. Populate item.items[]
-  4. Inherit figures and shadows
-  5. Build site.rootIds ($)
-  6. Build site.roodNames ($$)
+  4. Inherit figures
+  5. Shadows globals
+  6. Build site.{rootIds, rootNames}
   7. Start routes, timers, boots
 
 
@@ -25,9 +25,9 @@ Special item fields (all optional):
     => note: top-down, so must be reachable
 
   $type, $figure, $shadow
-    => find type by id
-    => inherit this[keys] from type.$figure
-    => inherit globals from type.$shadow
+    => for each $type by id (deepest first)
+      => inherit this[keys] from type.$figure
+      => set globals via type.$shadow
 
   $route, $get, $post, $delete, $put, $patch, $head, $options
     => if $route is non-blank string, route each verb-fn
