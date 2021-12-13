@@ -20,11 +20,11 @@ export class ViewSite {
     this.#site = site;
   }
 
-  get itemsByName() {
+  get rootNames() {
     return this.#site.rootNames;
   }
 
-  get itemsById() {
+  get rootIds() {
     return this.#site.rootIds;
   }
 

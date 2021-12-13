@@ -27,7 +27,7 @@ Special item fields (all optional):
   $type, $figure, $shadow
     => for each $type by id (deepest first)
       => inherit this[keys] from type.$figure
-      => set globals via type.$shadow
+      => set globals wholesale via type.$shadow
 
   $route, $get, $post, $delete, $put, $patch, $head, $options
     => if $route is non-blank string, route each verb-fn
@@ -63,6 +63,7 @@ Site API:
 Globals:
 
   Note: these can all be shadowed
+  Note: shadowing sets wholesale
 
   $site: current site
   $$: site.rootNames
