@@ -67,4 +67,16 @@ export class Item {
     return (val instanceof Function ? val : () => val);
   }
 
+  maybeAddNameTo(target: any) {
+    const name = this.raw['$name'];
+    if (name && typeof name === 'string') {
+      const pathSegment = Object.create(null);
+      pathSegment['$$'] = this.viewItem;
+      target[name] = pathSegment;
+      for (const subitem of this.items) {
+        subitem.maybeAddNameTo(pathSegment);
+      }
+    }
+  }
+
 }

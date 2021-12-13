@@ -20,8 +20,12 @@ export class ViewSite {
     this.#site = site;
   }
 
-  get root() {
-    return this.#site.root;
+  get itemsByName() {
+    return this.#site.rootNames;
+  }
+
+  get itemsById() {
+    return this.#site.rootIds;
   }
 
   get items() {
@@ -63,7 +67,8 @@ export class Site {
     id: NodeJS.Timer | null,
   }>();
 
-  root = Object.create(null);
+  rootNames = Object.create(null);
+  rootIds = Object.create(null);
 
 
   constructor(
@@ -73,7 +78,8 @@ export class Site {
     const compiler = new Compiler({
       ...sandbox,
       $site: new ViewSite(this),
-      $: this.root,
+      $$: this.rootNames,
+      $: this.rootIds,
     });
 
     // Create smart items
@@ -128,22 +134,24 @@ export class Site {
       Object.assign(item.data, data);
     }
 
+    // Build $ map
+    for (const [id, item] of this.itemsById) {
+      this.rootIds[id] = item.viewItem;
+    }
+
+    // Build $$ tree
+    for (const [id, item] of this.itemsById) {
+      if (!item.type) {
+        item.maybeAddNameTo(this.rootNames);
+      }
+    }
+
     for (const [id, item] of this.itemsById) {
       item.compile(compiler, item.data);
       item.compile(compiler, item.globals);
 
       // We have to do this first
       item.buildViewItem();
-
-      // Build $ tree
-      let root = this.root;
-      for (const { name, node } of item.nodePath()) {
-        if (!root[name]) root[name] = node.viewItem;
-        root = node;
-      }
-
-      // Add id to $
-      this.root[id] = item.viewItem;
 
       // Handle timers
       const tick = item.fn('$tick');
