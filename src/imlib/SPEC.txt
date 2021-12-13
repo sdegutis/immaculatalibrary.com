@@ -81,13 +81,14 @@ Route API:
     headers(): express.js headers object
     session: object
 
-  Return object:
-
+  return Promise<string | {
     status?: number
     headers?: object
     (redirect: string |
      text: string |
      json: object)
+  }>
+
 
 Computing:
 
