@@ -15,7 +15,6 @@
   "dependencies": {
     "@babel/core": "^7.16.0",
     "@babel/plugin-transform-react-jsx": "^7.16.0",
-    "@sdegutis/imlib": "^1.0.4",
     "@types/babel__core": "^7.1.16",
     "@types/cookie-session": "^2.0.43",
     "bcryptjs": "^2.4.3",

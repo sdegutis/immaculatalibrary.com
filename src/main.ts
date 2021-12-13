@@ -1,4 +1,4 @@
-import * as imlib from '@sdegutis/imlib';
+import * as imlib from './imlib';
 import bcrypt from 'bcryptjs';
 import Chance from 'chance';
 import cookieSession from 'cookie-session';
