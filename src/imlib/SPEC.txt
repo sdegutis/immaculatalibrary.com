@@ -1,0 +1,95 @@
+
+
+Engine input data:
+
+  { [id: string]: object }[]
+
+  Used for routes, views, data, helpers, etc.
+
+
+Engine rules (i.e. app.start):
+
+  1. Process each item in data
+  2. Link items via $type (avoiding cycles)
+  3. Populate item.items[]
+  4. Inherit figures and shadows
+  5. Build site.rootIds ($)
+  6. Build site.roodNames ($$)
+  7. Start routes, timers, boots
+
+
+Special item fields (all optional):
+
+  $name
+    => assigned under type's $name in $$
+    => note: top-down, so must be reachable
+
+  $type, $figure, $shadow
+    => find type by id
+    => inherit this[keys] from type.$figure
+    => inherit globals from type.$shadow
+
+  $route, $get, $post, $delete, $put, $patch, $head, $options
+    => if $route is non-blank string, route each verb-fn
+
+  $tick & $ms
+    => call $tick every $ms seconds
+
+  $boot
+    => run after each site build
+
+
+Item API:
+
+  this: always executing item
+
+  item[key]   => item.computed[key]
+  item.$id    => string
+  item.$data  => raw object for item
+  item.$items => items with this direct type
+  item.$type  => item or null
+
+
+Site API:
+
+  site.items: item[]
+  site.rootIds (shortcut $)
+  site.rootNames (shortcut $$)
+  site.create(data): new id
+  site.update(id, data)
+  site.delete(id)
+  site.rebuild()
+
+Globals:
+
+  Note: these can all be shadowed
+
+  $site: current site
+  $$: site.rootNames
+  $: site.rootIds
+  [globals]: app.sandbox
+
+
+Route API:
+
+  Request:
+
+    query(): URLSearchParams from query
+    text(): string from body
+    json(): object from body
+    form(): URLSearchParams from body
+    headers(): express.js headers object
+    session: object
+
+  Return object:
+
+    status?: number
+    headers?: object
+    (redirect: string |
+     text: string |
+     json: object)
+
+Computing:
+
+  { eval: string } => returns vm2.eval(s)
+  any other value  => that value

@@ -36,12 +36,6 @@ export class Item {
     Object.assign(target, getData(this.id));
   }
 
-  fullname() {
-    return (this.nodePath()
-      .map(n => n.name)
-      .join('.'));
-  }
-
   nodePath() {
     let parts = [];
     for (let node: Item | null = this; node; node = node.type) {
@@ -54,7 +48,6 @@ export class Item {
 
   buildViewItem() {
     Object.assign(this.viewItem, this.data);
-    this.viewItem.$name = this.fullname();
     this.viewItem.$id = this.id;
     this.viewItem.$data = this.raw;
     this.viewItem.$items = this.items.map(it => it.viewItem);
