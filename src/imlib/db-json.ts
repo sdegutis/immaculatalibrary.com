@@ -4,6 +4,7 @@ import { Database, SerializableObject } from './db';
 export default class JsonFileDatabase implements Database {
 
   #items = new Map<string, { readonly [key: string]: any }>();
+  changes = 0;
 
   constructor(private filepath: string) { }
 
@@ -20,11 +21,15 @@ export default class JsonFileDatabase implements Database {
   put(id: string, data: SerializableObject | null) {
     if (data) this.#items.set(id, data);
     else this.#items.delete(id);
+    this.changes++;
   }
 
   // Note: this is super inefficient
   // but it shouldn't be used long-term
   push() {
+    if (this.changes === 0) return;
+    this.changes = 0;
+
     const everything = Object.fromEntries(this.#items);
     const content = JSON.stringify(everything, null, 2);
     fs.writeFileSync(this.filepath, content);

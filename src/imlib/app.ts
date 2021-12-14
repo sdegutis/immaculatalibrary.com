@@ -31,25 +31,28 @@ export default class App {
   }
 
   rebuild() {
-    const firstTime = this.#site === undefined;
-    let site;
-    try {
-      site = new Site(this, this.sandbox)
-    }
-    catch (e) {
-      console.error('Error building site:');
-      console.error(e);
-    }
-
+    const { site, error } = this.buildNewSite();
     if (site) {
+      this.db.push();
+
       this.#site?.stop();
       this.#site = site;
       this.#site.start();
       this.#siteMiddleware.routes = this.#site.routes;
+    }
+    else {
+      console.error('Error building site:');
+      console.error(error);
+    }
+    return site;
+  }
 
-      if (!firstTime) {
-        this.db.push();
-      }
+  private buildNewSite(): { site: Site, error?: undefined } | { site?: undefined, error: any } {
+    try {
+      return { site: new Site(this, this.sandbox) };
+    }
+    catch (e) {
+      return { error: e }
     }
   }
 
