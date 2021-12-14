@@ -10,12 +10,12 @@ Engine input data:
 Engine rules (i.e. app.start):
 
   1. Link items via $type
-  2. Set item children
-  3. Apply figures
-  4. Cast shadows
-  5. Build site structures
-  6. Compute item properties
-  7. Start timers, routes, boots
+  2. Apply figures
+  3. Cast shadows
+  4. Build site structures
+  5. Compute item properties
+  6. Start timers, routes, boots
+  7. On site.rebuild() goto #1
 
 
 Computing:
@@ -23,7 +23,7 @@ Computing:
   { eval: string } => returns vm2.eval(s)
   any other value  => that value
 
-  eval context has access to JSX
+  Eval context has access to JSX syntax, and:
     JSX.createElement
     JSX.fragment
 
