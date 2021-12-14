@@ -37,7 +37,8 @@ export default class App {
       site = new Site(this, this.sandbox)
     }
     catch (e) {
-      console.log(e);
+      console.error('Error building site:');
+      console.error(e);
     }
 
     if (site) {

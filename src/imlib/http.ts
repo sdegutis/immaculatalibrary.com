@@ -45,8 +45,9 @@ export function makeHandler(fn: Function): express.Handler {
       response = fn(request);
     }
     catch (e) {
-      res.status(500).send('Error');
+      console.error('Error handling route');
       console.error(e);
+      res.status(500).send('Error');
       return;
     }
 
