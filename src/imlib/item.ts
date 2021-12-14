@@ -14,7 +14,7 @@ export class Item {
     public readonly raw: SerializableObject,
   ) { }
 
-  compile(compiler: Compiler, target: any) {
+  compute(compiler: Compiler, target: any) {
     for (const [key, val] of Object.entries<any>(target)) {
       if (typeof val?.eval === 'string') {
         target[key] = compiler.eval({

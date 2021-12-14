@@ -123,8 +123,8 @@ export class Site {
     }
 
     for (const [id, item] of this.itemsById) {
-      item.compile(compiler, item.data);
-      item.compile(compiler, item.globals);
+      item.compute(compiler, item.data);
+      item.compute(compiler, item.globals);
 
       // We have to do this first
       item.buildViewItem();

@@ -9,13 +9,23 @@ Engine input data:
 
 Engine rules (i.e. app.start):
 
-  1. Process each item in data
-  2. Link items via $type (avoiding cycles)
-  3. Populate item.items[]
-  4. Inherit figures
-  5. Whitelist globals via shadows
-  6. Build site.root, site.items
-  7. Start routes, timers, boots
+  1. Link items via $type
+  2. Set item children
+  3. Apply figures
+  4. Cast shadows
+  5. Build site structures
+  6. Compute item properties
+  7. Start timers, routes, boots
+
+
+Computing:
+
+  { eval: string } => returns vm2.eval(s)
+  any other value  => that value
+
+  eval context has access to JSX
+    JSX.createElement
+    JSX.fragment
 
 
 Special item fields (all optional):
@@ -59,6 +69,7 @@ Site API:
   site.delete(id)
   site.rebuild()
 
+
 Globals:
 
   Note: these can all be shadowed
@@ -86,13 +97,3 @@ Route API:
      text: string |
      json: object)
   }>
-
-
-Computing:
-
-  { eval: string } => returns vm2.eval(s)
-  any other value  => that value
-
-  eval context has access to JSX
-    JSX.createElement
-    JSX.fragment
