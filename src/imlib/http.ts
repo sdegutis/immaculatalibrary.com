@@ -37,32 +37,33 @@ export function makeHandler(fn: Function): express.Handler {
       json: () => JSON.parse(req.body),
       form: () => new URLSearchParams(req.body),
       headers: () => req.headers,
+      session: req.session,
     };
 
-    const response = {
-      redirect(location: string, status?: number) {
-        if (status !== undefined) res.status(status);
-        res.redirect(location);
-      },
-      text(string: string, status?: number) {
-        if (status !== undefined) res.status(status);
-        res.send(string);
-      },
-      json(json: any, status?: number) {
-        if (status !== undefined) res.status(status);
-        res.json(json);
-      },
-      setHeader(key: string, val: string) {
-        res.setHeader(key, val);
-      },
-    };
-
-    const session = (req as any).session;
-
-    const result = fn({ request, response, session });
-    if (typeof result !== 'undefined') {
-      response.text(String(result));
+    let response = fn(request);
+    response = Promise.resolve(response);
+    if (typeof response !== 'object') {
+      response = { text: String(response) };
     }
 
+    if ('status' in response) {
+      res.status(response.status);
+    }
+
+    if ('headers' in response) {
+      for (const [k, v] of Object.entries<any>(response.headers)) {
+        res.setHeader(k, v);
+      }
+    }
+
+    if ('redirect' in response) {
+      res.redirect(response.redirect);
+    }
+    else if ('text' in response) {
+      res.send(response.text);
+    }
+    else if ('json' in response) {
+      res.json(response.json);
+    }
   };
 }

@@ -70,7 +70,7 @@ Globals:
 
 Route API:
 
-  Request:
+  Input parameter:
 
     query(): URLSearchParams from query
     text(): string from body
