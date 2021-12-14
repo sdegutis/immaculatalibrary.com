@@ -67,7 +67,7 @@ Site API:
   site.create(data): new id
   site.update(id, data)
   site.delete(id)
-  site.rebuild()
+  site.rebuild() [also pushes db updates]
 
 
 Globals:

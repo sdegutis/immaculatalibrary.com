@@ -1,6 +1,7 @@
 export interface Database {
   load(): Promise<LiveItemMap>;
   put(id: string, data: SerializableObject | null): void;
+  push(): void;
 }
 
 export type LiveItemMap = ReadonlyMap<string, {

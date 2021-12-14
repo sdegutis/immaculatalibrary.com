@@ -31,6 +31,7 @@ export default class App {
   }
 
   rebuild() {
+    const firstTime = this.#site === undefined;
     let site;
     try {
       site = new Site(this, this.sandbox)
@@ -44,6 +45,10 @@ export default class App {
       this.#site = site;
       this.#site.start();
       this.#siteMiddleware.routes = this.#site.routes;
+
+      if (!firstTime) {
+        this.db.push();
+      }
     }
   }
 

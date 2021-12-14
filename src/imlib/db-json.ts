@@ -17,12 +17,14 @@ export default class JsonFileDatabase implements Database {
     return this.#items;
   }
 
-  // Note: this is super inefficient
-  // but it shouldn't be used long-term
   put(id: string, data: SerializableObject | null) {
     if (data) this.#items.set(id, data);
     else this.#items.delete(id);
+  }
 
+  // Note: this is super inefficient
+  // but it shouldn't be used long-term
+  push() {
     const everything = Object.fromEntries(this.#items);
     const content = JSON.stringify(everything, null, 2);
     fs.writeFileSync(this.filepath, content);
