@@ -31,16 +31,6 @@ export class Item {
     Object.assign(target, getData(this.id));
   }
 
-  nodePath() {
-    let parts = [];
-    for (let node: Item | null = this; node; node = node.type) {
-      const name = node.raw['$name'];
-      if (!name || typeof name !== 'string') break;
-      parts.unshift({ node, name });
-    }
-    return parts;
-  }
-
   buildViewItem() {
     Object.assign(this.viewItem, this.data);
     this.viewItem.$id = this.id;
