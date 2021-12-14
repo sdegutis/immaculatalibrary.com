@@ -16,16 +16,11 @@ export class Item {
 
   compile(compiler: Compiler, target: any) {
     for (const [key, val] of Object.entries<any>(target)) {
-      const isFn = (
-        Array.isArray(val?.args) &&
-        typeof val?.body === 'string'
-      );
-      if (isFn) {
-        target[key] = compiler.createFn({
+      if (typeof val?.eval === 'string') {
+        target[key] = compiler.eval({
           this: this.viewItem,
           globals: this.globals,
-          args: val.args,
-          body: val.body
+          body: val.eval,
         });
       }
     }
@@ -63,8 +58,6 @@ export class Item {
   maybeAddNameTo(target: any) {
     const name = this.raw['$name'];
     if (name && typeof name === 'string') {
-      // const pathSegment = Object.create(null);
-      // pathSegment['$$'] = this.viewItem;
       target['$$' + name] = this.viewItem;
       for (const subitem of this.items) {
         subitem.maybeAddNameTo(this.viewItem);

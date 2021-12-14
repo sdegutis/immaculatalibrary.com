@@ -42,7 +42,7 @@ export class Compiler {
     };
   }
 
-  createFn(input: { this: any, globals: any, args: string[], body: string }) {
+  eval(input: { this: any, globals: any, body: string }) {
     const vm = new vm2.VM({
       sandbox: {
         ...this.globals,
@@ -51,10 +51,11 @@ export class Compiler {
     });
 
     // TODO: catch error or something?
-    const wrapped = new vm2.VMScript(`(function(${input.args.join(', ')}) {${input.body}})`, {
-      compiler: compileWithJsx,
-    });
-    return vm.run(wrapped).bind(input.this);
+    const wrapped = new vm2.VMScript(
+      `(function() {return ${input.body}})`,
+      { compiler: compileWithJsx }
+    );
+    return vm.run(wrapped).bind(input.this)();
   }
 
 }
