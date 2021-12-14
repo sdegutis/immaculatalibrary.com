@@ -1,13 +1,20 @@
 import { Compiler } from "./compiler";
 import { SerializableObject } from "./db";
 
+export interface ViewItem {
+  $id: string;
+  $data: { [key: string]: any };
+  $items: ViewItem[];
+  $type: ViewItem | undefined;
+}
+
 export class Item {
 
   type: Item | null = null;
   items: Item[] = [];
   data = Object.create(null);
   globals = Object.create(null);
-  viewItem = Object.create(null);
+  viewItem: ViewItem = Object.create(null);
 
   constructor(
     public readonly id: string,
@@ -33,10 +40,10 @@ export class Item {
 
   buildViewItem() {
     Object.assign(this.viewItem, this.data);
-    this.viewItem.$id = this.id;
-    this.viewItem.$data = this.raw;
-    this.viewItem.$items = this.items.map(it => it.viewItem);
-    this.viewItem.$type = this.type?.viewItem;
+    hardSet(this.viewItem, '$id', this.id);
+    hardSet(this.viewItem, '$data', this.raw);
+    hardSet(this.viewItem, '$items', this.items.map(it => it.viewItem));
+    hardSet(this.viewItem, '$type', this.type?.viewItem);
   }
 
   fn(key: string): Function | undefined {
@@ -45,14 +52,11 @@ export class Item {
     return (val instanceof Function ? val : () => val);
   }
 
-  maybeAddNameTo(target: any) {
-    const name = this.raw['$name'];
-    if (name && typeof name === 'string') {
-      target['$$' + name] = this.viewItem;
-      for (const subitem of this.items) {
-        subitem.maybeAddNameTo(this.viewItem);
-      }
-    }
-  }
+}
 
+function hardSet(target: any, key: string, value: any) {
+  Object.defineProperty(target, key, {
+    value,
+    enumerable: true,
+  });
 }

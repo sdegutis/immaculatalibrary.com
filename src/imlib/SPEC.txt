@@ -31,12 +31,11 @@ Computing:
 Special item fields (all optional):
 
   $name
-    => assigned under type's $name in site.root
-    => note: top-down, so must be reachable
+    => used for site.named()
 
   $type, $figure, $shadow
     => for each $type by id (deepest first)
-      => inherit this[keys] from type.$figure
+      => inherit this[k] from type.$figure
       => inherit globals from type.$shadow
 
   $route, $get, $post, $delete, $put, $patch, $head, $options
@@ -63,7 +62,8 @@ Item API:
 Site API:
 
   site.items: { id: item }
-  site.root: { '$$'+name: root item }
+  site.root: top-level item[]
+  site.named(path: string[])
   site.create(data): new id
   site.update(id, data)
   site.delete(id)

@@ -2,9 +2,17 @@ import { Handler } from "express";
 import App from './app';
 import { Compiler } from "./compiler";
 import { makeHandler } from "./http";
-import { Item } from "./item";
+import { Item, ViewItem } from "./item";
 
 const verbs = ['get', 'post', 'delete', 'put', 'patch', 'head', 'options'];
+
+function getNamed(items: ViewItem[], path: string[]): ViewItem | null {
+  const name = path.shift();
+  const item = items.find(i => i.$data['$name'] === name);
+  if (!item) return null;
+  if (path.length === 0) return item;
+  return getNamed(item.$items, path.slice(1));
+}
 
 export class ViewSite {
 
@@ -14,7 +22,12 @@ export class ViewSite {
   }
 
   get root() {
-    return this.#site.rootNames;
+    return this.#site.root;
+  }
+
+  named(...path: string[]) {
+    if (path.length === 0) return null;
+    return getNamed(this.root, path);
   }
 
   get items() {
@@ -55,8 +68,8 @@ export class Site {
     id: NodeJS.Timer | null,
   }>();
 
-  rootNames = Object.create(null);
-  viewItemsById = Object.create(null);
+  root: ViewItem[] = [];
+  viewItemsById: { [id: string]: ViewItem } = Object.create(null);
 
 
   constructor(
@@ -118,7 +131,7 @@ export class Site {
     // Build $site.root
     for (const [id, item] of this.itemsById) {
       if (!item.type) {
-        item.maybeAddNameTo(this.rootNames);
+        this.root.push(item.viewItem);
       }
     }
 
