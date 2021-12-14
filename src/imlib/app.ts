@@ -1,4 +1,4 @@
-import express from 'express';
+import { v4 as uuidv4 } from 'uuid';
 import { Database, LiveItemMap, SerializableObject } from "./db";
 import { RoutingMiddleware } from "./http";
 import { Site } from "./site";
@@ -8,26 +8,22 @@ export default class App {
   #siteMiddleware = new RoutingMiddleware();
   routeMiddleware = this.#siteMiddleware.middleware;
 
-  public db;
+  #db;
   #sandbox;
-  #idgen: () => string;
   #items!: LiveItemMap;
   #site: Site | undefined;
   #staged = new Map<string, SerializableObject>();
 
   constructor(opts: {
     db: Database,
-    server: express.Application,
     sandbox: object,
-    generateId: () => string,
   }) {
-    this.db = opts.db;
+    this.#db = opts.db;
     this.#sandbox = opts.sandbox;
-    this.#idgen = opts.generateId;
   }
 
   async start() {
-    this.#items = await this.db.load();
+    this.#items = await this.#db.load();
     this.rebuild();
   }
 
@@ -60,7 +56,7 @@ export default class App {
       }
     }
 
-    this.db.save([...this.#staged.keys()]);
+    this.#db.save([...this.#staged.keys()]);
     this.#staged.clear();
   }
 
@@ -85,8 +81,8 @@ export default class App {
 
   create(data: SerializableObject) {
     let id;
-    do { id = this.#idgen() } while (this.#items.has(id));
-    // TODO: handle rare case where all ids are taken
+    do { id = uuidv4() }
+    while (this.#items.has(id));
 
     this.#staged.set(id, JSON.parse(JSON.stringify(data)));
     return id;

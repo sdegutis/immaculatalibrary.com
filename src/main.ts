@@ -1,12 +1,11 @@
-import * as imlib from './imlib';
 import bcrypt from 'bcryptjs';
-import Chance from 'chance';
 import cookieSession from 'cookie-session';
 import escapeHtml from 'escape-html';
 import express from 'express';
 import MarkdownIt from 'markdown-it';
 import 'source-map-support/register';
 import { URLSearchParams } from 'url';
+import * as imlib from './imlib';
 
 const port = 8080;
 
@@ -26,18 +25,10 @@ server.use(cookieSession({
   httpOnly: true,
 }));
 
-const chance = new Chance();
 const markdown = new MarkdownIt();
 
 const app = new imlib.App({
   db: new imlib.JsonFileDatabase('data.json'),
-  server,
-  generateId: () => chance.string({
-    alpha: true,
-    casing: 'lower',
-    numeric: true,
-    length: 7,
-  }),
   sandbox: {
     console,
     JSON,
