@@ -33,10 +33,10 @@ export function makeHandler(fn: Function): express.Handler {
     try {
       response = fn(request);
     }
-    catch (e) {
+    catch (e: any) {
       console.error('Error handling route');
       console.error(e);
-      res.status(500).send('Error');
+      res.status(500).send(`<pre>${e.stack}</pre>`);
       return;
     }
 
