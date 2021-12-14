@@ -1,7 +1,8 @@
 import App from './app';
-import JsonFileDatabase from './db-json';
 import { Database } from './db';
+import JsonFileDatabase from './db-json';
 
 export { App };
 export { JsonFileDatabase };
 export { Database };
+
