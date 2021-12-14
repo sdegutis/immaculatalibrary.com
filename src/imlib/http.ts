@@ -29,7 +29,7 @@ export const redirectFinalSlash: express.Handler = (req, res, next) => {
 };
 
 export function makeHandler(fn: Function): express.Handler {
-  return (req, res) => {
+  return async (req, res) => {
 
     const request = {
       query: () => req.query,
@@ -40,8 +40,17 @@ export function makeHandler(fn: Function): express.Handler {
       session: req.session,
     };
 
-    let response = fn(request);
-    response = Promise.resolve(response);
+    let response;
+    try {
+      response = fn(request);
+    }
+    catch (e) {
+      res.status(500).send('Error');
+      console.error(e);
+      return;
+    }
+
+    response = await Promise.resolve(response);
     if (typeof response !== 'object') {
       response = { text: String(response) };
     }
