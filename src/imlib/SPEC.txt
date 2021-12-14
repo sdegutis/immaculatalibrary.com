@@ -2,7 +2,7 @@
 
 Engine input data:
 
-  { [id: string]: object }[]
+  { [key: string]: object }[]
 
   Used for routes, views, data, helpers, etc.
 
@@ -13,21 +13,21 @@ Engine rules (i.e. app.start):
   2. Link items via $type (avoiding cycles)
   3. Populate item.items[]
   4. Inherit figures
-  5. Shadows globals
-  6. Build site.{rootIds, rootNames}
+  5. Whitelist globals via shadows
+  6. Build site.root, site.items
   7. Start routes, timers, boots
 
 
 Special item fields (all optional):
 
   $name
-    => assigned under type's $name in $$
+    => assigned under type's $name in site.root
     => note: top-down, so must be reachable
 
   $type, $figure, $shadow
     => for each $type by id (deepest first)
       => inherit this[keys] from type.$figure
-      => set globals wholesale via type.$shadow
+      => whitelists globals via type.$shadow
 
   $route, $get, $post, $delete, $put, $patch, $head, $options
     => if $route is non-blank string, route each verb-fn
@@ -52,9 +52,8 @@ Item API:
 
 Site API:
 
-  site.items: item[]
-  site.rootIds (shortcut $)
-  site.rootNames (shortcut $$)
+  site.items: { id: item }
+  site.root: { '$$'+name: root item }
   site.create(data): new id
   site.update(id, data)
   site.delete(id)
@@ -63,11 +62,9 @@ Site API:
 Globals:
 
   Note: these can all be shadowed
-  Note: shadowing sets wholesale
+  Note: shadowing is a whitelist
 
   $site: current site
-  $$: site.rootNames
-  $: site.rootIds
   [globals]: app.sandbox
 
 
@@ -95,3 +92,7 @@ Computing:
 
   { eval: string } => returns vm2.eval(s)
   any other value  => that value
+
+  eval context has access to JSX
+    JSX.createElement
+    JSX.fragment

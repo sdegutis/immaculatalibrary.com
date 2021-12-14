@@ -13,17 +13,12 @@ export class ViewSite {
     this.#site = site;
   }
 
-  get rootNames() {
+  get root() {
     return this.#site.rootNames;
   }
 
-  get rootIds() {
-    return this.#site.rootIds;
-  }
-
   get items() {
-    return ([...this.#site.itemsById.values()]
-      .map(it => it.viewItem));
+    return this.#site.viewItemsById;
   }
 
   create(data: object) {
@@ -61,7 +56,7 @@ export class Site {
   }>();
 
   rootNames = Object.create(null);
-  rootIds = Object.create(null);
+  viewItemsById = Object.create(null);
 
 
   constructor(
@@ -71,8 +66,6 @@ export class Site {
     const compiler = new Compiler({
       ...sandbox,
       $site: new ViewSite(this),
-      $$: this.rootNames,
-      $: this.rootIds,
     });
 
     // Create smart items
@@ -117,12 +110,12 @@ export class Site {
       Object.assign(item.data, data);
     }
 
-    // Build $ map
+    // Build $site.items
     for (const [id, item] of this.itemsById) {
-      this.rootIds[id] = item.viewItem;
+      this.viewItemsById[id] = item.viewItem;
     }
 
-    // Build $$ tree
+    // Build $site.root
     for (const [id, item] of this.itemsById) {
       if (!item.type) {
         item.maybeAddNameTo(this.rootNames);

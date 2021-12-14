@@ -3,8 +3,8 @@ import vm2 from 'vm2';
 
 const unary = new Set(['br', 'hr', 'input']);
 
-function jsxCreateElement(tag: string | Function, attrs: any, ...children: any[]) {
-  if (tag === '') {
+function createElement(tag: string | Function, attrs: any, ...children: string[]) {
+  if ((tag as unknown) === JSX.fragment) {
     return children.flat().join('');
   }
 
@@ -26,6 +26,11 @@ function jsxCreateElement(tag: string | Function, attrs: any, ...children: any[]
   return `<${tag}${attrsString}>${childrenString}</${tag}>`;
 }
 
+const JSX = {
+  createElement,
+  fragment: Symbol('fragment'),
+};
+
 export class Compiler {
 
   globals: any;
@@ -33,7 +38,7 @@ export class Compiler {
   constructor(sandbox: object) {
     this.globals = {
       ...sandbox,
-      _jsxCreateElement: jsxCreateElement,
+      JSX,
     };
   }
 
@@ -59,8 +64,8 @@ function compileWithJsx(code: string, filename: string) {
     plugins: [
       ['@babel/plugin-transform-react-jsx', {
         useSpread: true,
-        pragma: '_jsxCreateElement',
-        pragmaFrag: "''",
+        pragma: 'JSX.createElement',
+        pragmaFrag: "JSX.fragment",
         throwIfNamespace: false,
       }],
     ],

@@ -63,11 +63,11 @@ export class Item {
   maybeAddNameTo(target: any) {
     const name = this.raw['$name'];
     if (name && typeof name === 'string') {
-      const pathSegment = Object.create(null);
-      pathSegment['$$'] = this.viewItem;
-      target[name] = pathSegment;
+      // const pathSegment = Object.create(null);
+      // pathSegment['$$'] = this.viewItem;
+      target['$$' + name] = this.viewItem;
       for (const subitem of this.items) {
-        subitem.maybeAddNameTo(pathSegment);
+        subitem.maybeAddNameTo(this.viewItem);
       }
     }
   }
