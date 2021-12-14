@@ -24,9 +24,9 @@ Computing:
   any other value  => that value
 
   What 'this' is in each context:
-    Item:   the item executing the code
-    Figure: figure's destination item
-    Shadow: shadow's definition item
+    Item:   defining item
+    Figure: destination item
+    Shadow: defining item
 
   All eval contexts have access to JSX, including:
     JSX.createElement
@@ -73,15 +73,6 @@ Site API:
   site.rebuild() [also pushes db updates]
 
 
-Globals:
-
-  Note: these can all be shadowed
-  Note: to hide, shadow as null or anything
-
-  $site: current site
-  [globals]: app.sandbox
-
-
 Route API:
 
   Input parameter:
@@ -100,3 +91,12 @@ Route API:
      text: string |
      json: object)
   }>
+
+
+Globals:
+
+  $site: current site
+  [globals]: app.sandbox
+
+  Note: these can all be shadowed
+  Note: to hide, shadow as null or anything
