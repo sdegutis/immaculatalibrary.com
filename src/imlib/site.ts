@@ -11,7 +11,7 @@ function getNamed(items: ViewItem[], path: string[]): ViewItem | null {
   const item = items.find(i => i.$data['$name'] === name);
   if (!item) return null;
   if (path.length === 0) return item;
-  return getNamed(item.$items, path.slice(1));
+  return getNamed(item.$items, path);
 }
 
 export class ViewSite {

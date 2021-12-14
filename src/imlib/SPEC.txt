@@ -10,8 +10,8 @@ Engine input data:
 Engine rules (i.e. app.start):
 
   1. Link items via $type
-  2. Apply figures
-  3. Cast shadows
+  2. Apply type figures
+  3. Cast global shadows
   4. Build site structures
   5. Compute item properties
   6. Start timers, routes, boots
