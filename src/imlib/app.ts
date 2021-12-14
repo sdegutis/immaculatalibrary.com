@@ -9,10 +9,11 @@ export default class App {
   routeMiddleware = this.#siteMiddleware.middleware;
 
   public db;
-  private sandbox;
-  private idgen: () => string;
-  public items!: LiveItemMap;
+  #sandbox;
+  #idgen: () => string;
+  #items!: LiveItemMap;
   #site: Site | undefined;
+  #staged = new Map<string, SerializableObject>();
 
   constructor(opts: {
     db: Database,
@@ -21,19 +22,19 @@ export default class App {
     generateId: () => string,
   }) {
     this.db = opts.db;
-    this.sandbox = opts.sandbox;
-    this.idgen = opts.generateId;
+    this.#sandbox = opts.sandbox;
+    this.#idgen = opts.generateId;
   }
 
   async start() {
-    this.items = await this.db.load();
+    this.#items = await this.db.load();
     this.rebuild();
   }
 
   rebuild() {
     const { site, error } = this.buildNewSite();
     if (site) {
-      this.db.push();
+      this.pushToDb();
 
       this.#site?.stop();
       this.#site = site;
@@ -44,12 +45,38 @@ export default class App {
       console.error('Error building site:');
       console.error(error);
     }
-    return site;
+    return { site, error };
+  }
+
+  private pushToDb() {
+    if (this.#staged.size === 0) return;
+
+    for (const [id, data] of this.#staged) {
+      if (typeof data === 'object' && data !== null) {
+        this.#items.set(id, data);
+      }
+      else {
+        this.#items.delete(id);
+      }
+    }
+
+    this.db.save([...this.#staged.keys()]);
+    this.#staged.clear();
   }
 
   private buildNewSite(): { site: Site, error?: undefined } | { site?: undefined, error: any } {
     try {
-      return { site: new Site(this, this.sandbox) };
+      const items: LiveItemMap = new Map();
+
+      for (const [id, raw] of this.#items) {
+        items.set(id, raw);
+      }
+
+      for (const [id, raw] of this.#staged) {
+        items.set(id, raw);
+      }
+
+      return { site: new Site(items, this, this.#sandbox) };
     }
     catch (e) {
       return { error: e }
@@ -58,15 +85,15 @@ export default class App {
 
   create(data: SerializableObject) {
     let id;
-    do { id = this.idgen() } while (this.items.has(id));
+    do { id = this.#idgen() } while (this.#items.has(id));
     // TODO: handle rare case where all ids are taken
 
-    this.db.put(id, JSON.parse(JSON.stringify(data)));
+    this.#staged.set(id, JSON.parse(JSON.stringify(data)));
     return id;
   }
 
   put(id: string, data: SerializableObject | null) {
-    return this.db.put(id, JSON.parse(JSON.stringify(data)));
+    this.#staged.set(id, JSON.parse(JSON.stringify(data)));
   }
 
 };

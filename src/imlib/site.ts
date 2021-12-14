@@ -1,6 +1,7 @@
 import { Handler } from "express";
 import App from './app';
 import { Compiler } from "./compiler";
+import { LiveItemMap } from "./db";
 import { makeHandler } from "./http";
 import { Item, ViewItem } from "./item";
 
@@ -73,6 +74,7 @@ export class Site {
 
 
   constructor(
+    items: LiveItemMap,
     public app: App,
     sandbox: object,
   ) {
@@ -82,7 +84,7 @@ export class Site {
     });
 
     // Create smart items
-    for (const [id, raw] of app.items) {
+    for (const [id, raw] of items) {
       const item = new Item(id, raw);
       this.itemsById.set(item.id, item);
     }
