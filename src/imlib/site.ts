@@ -118,6 +118,9 @@ export class Site {
     // Inherit shadows/figures, deepest ancestor first
     for (const [id, item] of this.itemsById) {
       const data = item.raw;
+      if (item.raw['$shadow']) {
+        item.compute(compiler, item.raw['$shadow']);
+      }
       item.type?.copyInto(item.data, id => this.itemsById.get(id)?.raw['$figure']);
       item.type?.copyInto(item.globals, id => this.itemsById.get(id)?.raw['$shadow']);
       Object.assign(item.data, data);
@@ -137,7 +140,6 @@ export class Site {
 
     for (const [id, item] of this.itemsById) {
       item.compute(compiler, item.data);
-      item.compute(compiler, item.globals);
 
       // We have to do this first
       item.buildViewItem();

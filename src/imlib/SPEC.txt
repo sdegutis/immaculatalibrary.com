@@ -23,7 +23,12 @@ Computing:
   { eval: string } => returns vm2.eval(s)
   any other value  => that value
 
-  Eval context has access to JSX syntax, and:
+  What 'this' is in each context:
+    Item:   the item executing the code
+    Figure: figure's destination item
+    Shadow: shadow's definition item
+
+  All eval contexts have access to JSX, including:
     JSX.createElement
     JSX.fragment
 
@@ -49,8 +54,6 @@ Special item fields (all optional):
 
 
 Item API:
-
-  this: always executing item
 
   item[key]   => item.computed[key]
   item.$id    => string
