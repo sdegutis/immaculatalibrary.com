@@ -1,9 +1,9 @@
 import fs from 'fs';
-import { Database, SerializableObject } from './db';
+import { Database, LiveItemMap } from './db';
 
 export default class JsonFileDatabase implements Database {
 
-  #items = new Map<string, { readonly [key: string]: any }>();
+  #items: LiveItemMap = new Map();
 
   constructor(private filepath: string) { }
 
