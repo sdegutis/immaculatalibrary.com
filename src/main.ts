@@ -12,9 +12,15 @@ const port = 8080;
 
 const server = express();
 server.set('trust proxy', 1);
-server.set('query parser', (s: string | null) => new URLSearchParams(s ?? ''));
-server.use(imlib.alwaysTextBodies);
-server.use(imlib.redirectFinalSlash);
+server.set('query parser', (s: string | null) =>
+  new URLSearchParams(s ?? ''));
+server.use(express.text({ type: '*/*' }));
+server.use((req, res, next) => {
+  if (req.path.endsWith('/') && req.path !== '/')
+    res.redirect(req.path.slice(0, -1));
+  else
+    next();
+});
 server.use(cookieSession({
   secret: 'use dotenv for this in real life',
   httpOnly: true,

@@ -1,6 +1,7 @@
 import App from './app';
 import JsonFileDatabase from './db-json';
-export { alwaysTextBodies, redirectFinalSlash } from './http';
+import { Database } from './db';
 
 export { App };
 export { JsonFileDatabase };
+export { Database };

@@ -17,17 +17,6 @@ export class RoutingMiddleware {
 
 }
 
-export const alwaysTextBodies = express.text({ type: '*/*' });
-
-export const redirectFinalSlash: express.Handler = (req, res, next) => {
-  if (req.path.endsWith('/') && req.path !== '/') {
-    res.redirect(req.path.slice(0, -1));
-  }
-  else {
-    next();
-  }
-};
-
 export function makeHandler(fn: Function): express.Handler {
   return async (req, res) => {
 
