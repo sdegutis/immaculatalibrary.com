@@ -20,7 +20,7 @@ Engine rules (i.e. app.start):
 
 Computing:
 
-  { eval: string } => returns vm2.eval(s)
+  { $eval: string } => returns vm2.eval(s)
   any other value  => that value
 
   What 'this' is in each context:
@@ -43,7 +43,8 @@ Special item fields (all optional):
       => inherit this[k] from type.$figure
       => inherit globals from type.$shadow
 
-  $route, $get, $post, $delete, $put, $patch, $head, $options
+  $route, $get, $post, $delete,
+  $put, $patch, $head, $options
     => if $route is non-blank string, route each verb-fn
 
   $tick & $ms

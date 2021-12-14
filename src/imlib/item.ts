@@ -23,11 +23,11 @@ export class Item {
 
   compute(compiler: Compiler, target: any) {
     for (const [key, val] of Object.entries<any>(target)) {
-      if (typeof val?.eval === 'string') {
+      if (typeof val?.$eval === 'string') {
         target[key] = compiler.eval({
           this: this.viewItem,
           globals: this.globals,
-          body: val.eval,
+          body: val.$eval,
         });
       }
     }
