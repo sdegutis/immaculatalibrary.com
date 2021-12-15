@@ -35,6 +35,12 @@ Computing:
 
 Special item fields (all optional):
 
+  Each of these fields can be:
+    - A static value (any JSON type)
+    - An eval that returns a static JS value
+    - An eval that returns a function
+      - It's return value will be used here
+
   $name
     => used for site.named()
 
