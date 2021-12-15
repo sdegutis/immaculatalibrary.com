@@ -46,30 +46,26 @@ export default class App {
 
   private pushToDb() {
     if (this.#staged.size === 0) return;
-
-    for (const [id, data] of this.#staged) {
-      if (typeof data === 'object' && data !== null) {
-        this.#items.set(id, data);
-      }
-      else {
-        this.#items.delete(id);
-      }
-    }
-
+    this.applyStagedChanges(this.#items);
     this.#db.save([...this.#staged.keys()]);
     this.#staged.clear();
   }
 
+  private applyStagedChanges(items: LiveItemMap) {
+    for (const [id, data] of this.#staged) {
+      if (typeof data === 'object' && data !== null) {
+        items.set(id, data);
+      }
+      else {
+        items.delete(id);
+      }
+    }
+  }
+
   private buildNewSite(): { site: Site, error?: undefined } | { site?: undefined, error: any } {
     try {
-      const items: LiveItemMap = new Map([...this.#items, ...this.#staged]);
-
-      for (const [id, item] of items) {
-        if (item === null || typeof item !== 'object') {
-          items.delete(id);
-        }
-      }
-
+      const items: LiveItemMap = new Map(this.#items);
+      this.applyStagedChanges(items);
       return { site: new Site(items, this, this.#sandbox) };
     }
     catch (e) {
