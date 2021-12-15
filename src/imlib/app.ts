@@ -41,17 +41,17 @@ export default class App {
       console.error('Error building site:');
       console.error(error);
     }
+    this.#staged.clear();
     return { site, error };
   }
 
   private pushToDb() {
     if (this.#staged.size === 0) return;
-    this.applyStagedChanges(this.#items);
+    this.applyStagedChangesTo(this.#items);
     this.#db.save([...this.#staged.keys()]);
-    this.#staged.clear();
   }
 
-  private applyStagedChanges(items: LiveItemMap) {
+  private applyStagedChangesTo(items: LiveItemMap) {
     for (const [id, data] of this.#staged) {
       if (typeof data === 'object' && data !== null) {
         items.set(id, data);
@@ -65,7 +65,7 @@ export default class App {
   private buildNewSite(): { site: Site, error?: undefined } | { site?: undefined, error: any } {
     try {
       const items: LiveItemMap = new Map(this.#items);
-      this.applyStagedChanges(items);
+      this.applyStagedChangesTo(items);
       return { site: new Site(items, this, this.#sandbox) };
     }
     catch (e) {
