@@ -62,14 +62,12 @@ export default class App {
 
   private buildNewSite(): { site: Site, error?: undefined } | { site?: undefined, error: any } {
     try {
-      const items: LiveItemMap = new Map();
+      const items: LiveItemMap = new Map([...this.#items, ...this.#staged]);
 
-      for (const [id, raw] of this.#items) {
-        items.set(id, raw);
-      }
-
-      for (const [id, raw] of this.#staged) {
-        items.set(id, raw);
+      for (const [id, item] of items) {
+        if (item === null || typeof item !== 'object') {
+          items.delete(id);
+        }
       }
 
       return { site: new Site(items, this, this.#sandbox) };
