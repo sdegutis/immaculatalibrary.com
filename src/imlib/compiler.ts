@@ -14,8 +14,14 @@ function createElement(tag: string | Function, attrs: any, ...children: string[]
 
   const attrsArray = Object.entries(attrs ?? {});
   const attrsString = (attrsArray.length > 0
-    ? ' ' + attrsArray.map(([k, v]) =>
-      `${k}="${v}"`).join(' ')
+    ? ' ' + attrsArray
+      .map(([k, v]) =>
+      (v === true
+        ? k
+        : v === false
+          ? ''
+          : `${k}="${v}"`))
+      .join(' ')
     : '');
 
   if (unary.has(tag)) {
@@ -52,7 +58,7 @@ export class Compiler {
 
     // TODO: catch error or something?
     const wrapped = new vm2.VMScript(
-      `(function() {return ${input.body}})`,
+      `(function() {return ${input.body.trim()}})`,
       { compiler: compileWithJsx }
     );
     return vm.run(wrapped).bind(input.this)();
