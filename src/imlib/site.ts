@@ -118,7 +118,7 @@ export class Site {
     }
 
     // Compute shadows in defining item's context
-    const shadows = new Map<string, Item>();
+    const shadows = new Map<string, any>();
     for (const [id, item] of this.itemsById) {
       const source = item.raw['$shadow'];
       const target = Object.create(null);
@@ -154,6 +154,7 @@ export class Site {
 
       // We have to do this first
       item.buildViewItem();
+      item.viewItem.$shadow = shadows.get(item.id);
 
       // Handle timers
       const tick = item.fn('$tick');

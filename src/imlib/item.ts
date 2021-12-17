@@ -4,6 +4,7 @@ import { SerializableObject } from "./db";
 export interface ViewItem {
   $id: string;
   $data: { [key: string]: any };
+  $shadow: { [key: string]: any };
   $items: ViewItem[];
   $type: ViewItem | undefined;
 }
@@ -22,14 +23,15 @@ export class Item {
   ) { }
 
   compute(compiler: Compiler, source: any, target: any) {
-    for (const [key, val] of Object.entries<any>(source)) {
+    for (let [key, val] of Object.entries<any>(source)) {
       if (typeof val?.$eval === 'string') {
-        target[key] = compiler.eval({
+        val = compiler.eval({
           this: this.viewItem,
           globals: this.globals,
           body: val.$eval,
         });
       }
+      target[key] = val;
     }
   }
 
