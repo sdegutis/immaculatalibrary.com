@@ -21,8 +21,8 @@ export class Item {
     public readonly raw: SerializableObject,
   ) { }
 
-  compute(compiler: Compiler, target: any) {
-    for (const [key, val] of Object.entries<any>(target)) {
+  compute(compiler: Compiler, source: any, target: any) {
+    for (const [key, val] of Object.entries<any>(source)) {
       if (typeof val?.$eval === 'string') {
         target[key] = compiler.eval({
           this: this.viewItem,

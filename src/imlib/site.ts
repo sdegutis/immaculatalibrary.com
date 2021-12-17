@@ -117,15 +117,23 @@ export class Site {
       if (item.type) item.type.items.push(item);
     }
 
+    // Compute shadows in defining item's context
+    const shadows = new Map<string, Item>();
+    for (const [id, item] of this.itemsById) {
+      const source = item.raw['$shadow'];
+      const target = Object.create(null);
+
+      shadows.set(id, target);
+      if (source) {
+        item.compute(compiler, source, target);
+      }
+    }
+
     // Inherit shadows/figures, deepest ancestor first
     for (const [id, item] of this.itemsById) {
-      const data = item.raw;
-      if (item.raw['$shadow']) {
-        item.compute(compiler, item.raw['$shadow']);
-      }
       item.type?.copyInto(item.data, id => this.itemsById.get(id)?.raw['$figure']);
-      item.type?.copyInto(item.globals, id => this.itemsById.get(id)?.raw['$shadow']);
-      Object.assign(item.data, data);
+      item.type?.copyInto(item.globals, id => shadows.get(id));
+      Object.assign(item.data, item.raw);
     }
 
     // Build $site.items
@@ -141,7 +149,8 @@ export class Site {
     }
 
     for (const [id, item] of this.itemsById) {
-      item.compute(compiler, item.data);
+      // Compute each item in their own context
+      item.compute(compiler, item.data, item.data);
 
       // We have to do this first
       item.buildViewItem();
