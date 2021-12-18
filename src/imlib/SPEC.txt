@@ -35,28 +35,23 @@ Computing:
 
 Special item fields (all optional):
 
-  Each of these fields can be:
-    - A static value (any JSON type)
-    - An eval that returns a static JS value
-    - An eval that returns a function
-      - It's return value will be used here
-
-  $name
+  $name:str
     => used for site.named()
 
-  $type, $figure, $shadow
+  $type:str, $figure:obj, $shadow:obj
     => for each $type by id (deepest first)
       => inherit this[k] from type.$figure
       => inherit globals from type.$shadow
 
-  $route, $get, $post, $delete,
-  $put, $patch, $head, $options
-    => if $route is non-blank string, route each verb-fn
+  $route:fn, $get:fn, $post:fn, $delete:fn,
+  $put:fn, $patch:fn, $head:fn, $options:fn
+    => if $route evals to non-blank string
+       map that path each verb-fn present
 
-  $tick & $ms
+  $tick:fn & $ms:num
     => call $tick every $ms seconds
 
-  $boot
+  $boot:fn
     => run after each site build
 
 
