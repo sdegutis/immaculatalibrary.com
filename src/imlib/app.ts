@@ -46,9 +46,10 @@ export default class App {
   }
 
   private pushToDb() {
-    if (this.#staged.size === 0) return;
-    this.applyStagedChangesTo(this.#items);
-    this.#db.save([...this.#staged.keys()]);
+    if (this.#staged.size > 0) {
+      this.applyStagedChangesTo(this.#items);
+      this.#db.save([...this.#staged.keys()]);
+    }
   }
 
   private applyStagedChangesTo(items: LiveItemMap) {
@@ -76,7 +77,7 @@ export default class App {
   create(data: SerializableObject) {
     let id;
     do { id = uuidv4() }
-    while (this.#items.has(id));
+    while (this.#items.has(id) && this.#staged.has(id));
 
     this.#staged.set(id, JSON.parse(JSON.stringify(data)));
     return id;
