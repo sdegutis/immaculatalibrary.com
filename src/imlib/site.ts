@@ -52,7 +52,9 @@ export class ViewSite {
   }
 
   rebuild() {
-    this.#site.app.rebuild();
+    const result = this.#site.app.rebuild();
+    if (result.site) return result.site;
+    throw result.error;
   }
 
 }

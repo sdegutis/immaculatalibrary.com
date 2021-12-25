@@ -74,8 +74,12 @@ Site API:
   site.delete(id)
   site.rebuild()
     tries to build new site
-    pushes db changes if worked
-    returns { site } or { error }
+    if worked
+      pushes db changes
+      routes new site
+      returns new site
+    else
+      throws error
 
 
 Route API:
