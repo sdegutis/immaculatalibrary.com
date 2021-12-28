@@ -26,8 +26,12 @@ type ItemData = {
 
   $boot?: ItemFunction<(this: Item) => void>;
 
-  [key: string]: any;
+  [key: string]: ItemFunction<any> | ItemEncodedData | any;
 
+};
+
+type ItemEncodedData = {
+  $data: string;
 };
 
 type ItemFunction<T> = {
