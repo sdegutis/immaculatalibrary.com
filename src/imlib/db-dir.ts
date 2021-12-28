@@ -29,8 +29,14 @@ export default class JsonDirDatabase implements Database {
   save(ids: Iterable<string>) {
     for (const id of ids) {
       const entry = this.#items.get(id);
-      const content = JSON.stringify(entry, null, 2);
-      fs.writeFile(path.join(this.dir, `item-${id}.json`), content, () => { });
+      const itemPath = path.join(this.dir, `item-${id}.json`);
+      if (entry === undefined) {
+        fs.rmSync(itemPath);
+      }
+      else {
+        const content = JSON.stringify(entry, null, 2);
+        fs.writeFile(itemPath, content, () => { });
+      }
     }
   }
 
