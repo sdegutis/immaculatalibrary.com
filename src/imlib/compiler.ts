@@ -3,13 +3,21 @@ import vm2 from 'vm2';
 
 const unary = new Set(['br', 'hr', 'input']);
 
-function createElement(tag: string | Function, attrs: any, ...children: string[]) {
-  if ((tag as unknown) === JSX.fragment) {
-    return children.flat().join('');
-  }
-
+function createElement(tag: string | Function, attrs: any, ...children: any[]) {
   if (tag instanceof Function) {
     return tag(attrs, children);
+  }
+
+  const childrenString = (children
+    .filter(c =>
+      c !== null &&
+      c !== undefined &&
+      c !== false)
+    .flat()
+    .join(''));
+
+  if ((tag as unknown) === JSX.fragment) {
+    return childrenString;
   }
 
   const attrsArray = Object.entries(attrs ?? {});
@@ -28,7 +36,6 @@ function createElement(tag: string | Function, attrs: any, ...children: string[]
     return `<${tag}${attrsString}/>`;
   }
 
-  const childrenString = children.flat().join('');
   return `<${tag}${attrsString}>${childrenString}</${tag}>`;
 }
 

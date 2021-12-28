@@ -19,7 +19,7 @@ export default class JsonFileDatabase implements Database {
 
   // Note: this is super inefficient
   // but it shouldn't be used long-term
-  save(ids: string[]) {
+  save(ids: Iterable<string>) {
     const everything = Object.fromEntries(this.#items);
     const content = JSON.stringify(everything, null, 2);
     fs.writeFileSync(this.filepath, content);

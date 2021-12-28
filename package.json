@@ -5,6 +5,7 @@
   "main": "out/main.js",
   "scripts": {
     "build": "tsc",
+    "transfer": "node out/transfer.js",
     "start": "node out/main.js",
     "watch": "tsc --watch",
     "test": "echo \"Error: no test specified\" && exit 1"

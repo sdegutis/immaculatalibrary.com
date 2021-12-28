@@ -28,7 +28,7 @@ server.use(cookieSession({
 const markdown = new MarkdownIt();
 
 const app = new imlib.App({
-  db: new imlib.JsonFileDatabase('data.json'),
+  db: new imlib.JsonDirDatabase('data'),
   sandbox: {
     console,
     JSON,

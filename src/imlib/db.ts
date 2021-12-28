@@ -1,6 +1,6 @@
 export interface Database {
   load(): Promise<LiveItemMap>;
-  save(ids: string[]): void;
+  save(ids: Iterable<string>): void;
 }
 
 export type LiveItemMap = Map<string, Readonly<SerializableObject>>;
