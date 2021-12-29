@@ -13,7 +13,7 @@ const server = express();
 server.set('trust proxy', 1);
 server.set('query parser', (s: string | null) =>
   new URLSearchParams(s ?? ''));
-server.use(express.text({ type: '*/*' }));
+server.use(express.text({ type: '*/*', limit: '100mb' }));
 server.use((req, res, next) => {
   if (req.path.endsWith('/') && req.path !== '/')
     res.redirect(req.path.slice(0, -1));
