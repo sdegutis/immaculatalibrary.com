@@ -54,7 +54,7 @@ export class Item {
   fn(key: string): Function | undefined {
     const val = this.data[key];
     if (val === null || val === undefined) return undefined;
-    return (val instanceof Function ? val : () => val);
+    return (typeof val === 'function' ? val : () => val);
   }
 
 }

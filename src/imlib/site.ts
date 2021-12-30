@@ -161,7 +161,7 @@ export class Site {
       // Handle timers
       const tick = item.fn('$tick');
       const ms = item.fn('$ms')?.();
-      if (tick instanceof Function && typeof ms === 'number') {
+      if (typeof tick === 'function' && typeof ms === 'number') {
         this.#timers.add({ fn: tick, ms, id: null });
       }
 

@@ -1,10 +1,10 @@
 import * as babel from "@babel/core";
-import vm2 from 'vm2';
+import vm from 'vm';
 
 const unary = new Set(['br', 'hr', 'input']);
 
 function createElement(tag: string | Function, attrs: any, ...children: any[]) {
-  if (tag instanceof Function) {
+  if (typeof tag === 'function') {
     return tag(attrs, children);
   }
 
@@ -56,24 +56,22 @@ export class Compiler {
   }
 
   eval(input: { this: any, globals: any, body: string }) {
-    const vm = new vm2.VM({
-      sandbox: {
+    // TODO: catch error or something?
+
+    const body = compileWithJsx(input.body).slice(0, -1);
+    const wrapped: Function = vm.runInNewContext(
+      `(function() {return (${body})})`,
+      {
         ...this.globals,
         ...input.globals,
-      },
-    });
-
-    // TODO: catch error or something?
-    const wrapped = new vm2.VMScript(
-      `(function() {return ${input.body.trim()}})`,
-      { compiler: compileWithJsx }
+      }
     );
-    return vm.run(wrapped).bind(input.this)();
+    return wrapped.call(input.this);
   }
 
 }
 
-function compileWithJsx(code: string, filename: string) {
+function compileWithJsx(code: string) {
   const babelOutput = babel.transformSync(code, {
     plugins: [
       ['@babel/plugin-transform-react-jsx', {
