@@ -51,9 +51,9 @@ export class Compiler {
   eval(input: { this: any, globals: any, body: string }) {
     // TODO: catch error or something?
 
-    const body = compileWithJsx(input.body).slice(0, -1);
+    const body = compileWithJsx(input.body);
     const wrapped: Function = vm.runInNewContext(
-      `(function() {return (${body})})`,
+      `(function() {return ${body}})`,
       {
         ...this.sandbox,
         ...input.globals,
