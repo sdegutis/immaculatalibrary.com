@@ -46,14 +46,7 @@ const JSX = {
 
 export class Compiler {
 
-  globals: any;
-
-  constructor(sandbox: object) {
-    this.globals = {
-      ...sandbox,
-      JSX,
-    };
-  }
+  constructor(private sandbox: object) { }
 
   eval(input: { this: any, globals: any, body: string }) {
     // TODO: catch error or something?
@@ -62,8 +55,9 @@ export class Compiler {
     const wrapped: Function = vm.runInNewContext(
       `(function() {return (${body})})`,
       {
-        ...this.globals,
+        ...this.sandbox,
         ...input.globals,
+        JSX,
       }
     );
     return wrapped.call(input.this);
