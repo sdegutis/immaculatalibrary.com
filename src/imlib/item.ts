@@ -57,6 +57,13 @@ export class Item {
     return (typeof val === 'function' ? val : () => val);
   }
 
+  boot() {
+    this.fn('$boot')?.();
+    for (const item of this.items) {
+      item.boot();
+    }
+  }
+
 }
 
 function hardSet(target: any, key: string, value: any) {

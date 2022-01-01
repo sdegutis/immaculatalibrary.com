@@ -190,7 +190,9 @@ export class Site {
     }
 
     for (const [id, item] of this.itemsById) {
-      item.fn('$boot')?.();
+      if (item.type === null) {
+        item.boot();
+      }
     }
   }
 
