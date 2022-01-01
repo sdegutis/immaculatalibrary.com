@@ -43,7 +43,7 @@ export class Item {
     Object.assign(target, getData(this.id));
   }
 
-  buildViewItem() {
+  populateViewItem() {
     Object.assign(this.viewItem, this.data);
     hardSet(this.viewItem, '$id', this.id);
     hardSet(this.viewItem, '$data', this.raw);

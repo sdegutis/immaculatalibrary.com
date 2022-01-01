@@ -150,14 +150,17 @@ export class Site {
       }
     }
 
+    // We have to do this first
     for (const [id, item] of this.itemsById) {
       // Compute each item in their own context
       item.compute(compiler, item.data, item.data);
 
-      // We have to do this first
-      item.buildViewItem();
+      item.populateViewItem();
       item.viewItem.$shadow = shadows.get(item.id);
+    }
 
+    // Now all associations will be built
+    for (const [id, item] of this.itemsById) {
       // Handle timers
       const tick = item.fn('$tick');
       const ms = item.fn('$ms')?.();
