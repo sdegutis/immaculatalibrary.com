@@ -1,4 +1,4 @@
-import * as babel from "@babel/core";
+import * as sucrase from 'sucrase';
 import vm from 'vm';
 
 const unary = new Set(['br', 'hr', 'input']);
@@ -66,16 +66,13 @@ export class Compiler {
 }
 
 function compileWithJsx(code: string) {
-  const babelOutput = babel.transformSync(code, {
-    plugins: [
-      ['@babel/plugin-transform-react-jsx', {
-        useSpread: true,
-        pragma: 'JSX.createElement',
-        pragmaFrag: "JSX.fragment",
-        throwIfNamespace: false,
-      }],
-    ],
+  const result = sucrase.transform(code, {
+    jsxPragma: 'JSX.createElement',
+    jsxFragmentPragma: 'JSX.fragment',
+    transforms: ['jsx'],
+    disableESTransforms: true,
+    production: true,
   });
-  if (!babelOutput?.code) throw new Error('Invalid code');
-  return babelOutput?.code;
+  if (!result?.code) throw new Error('Invalid code');
+  return result?.code;
 }

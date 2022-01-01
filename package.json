@@ -14,9 +14,6 @@
   "author": "Steven Degutis",
   "license": "TBD",
   "dependencies": {
-    "@babel/core": "^7.16.0",
-    "@babel/plugin-transform-react-jsx": "^7.16.0",
-    "@types/babel__core": "^7.1.16",
     "@types/cookie-session": "^2.0.43",
     "@types/uuid": "^8.3.3",
     "bcryptjs": "^2.4.3",
@@ -25,6 +22,7 @@
     "express": "^4.17.1",
     "markdown-it": "^12.2.0",
     "source-map-support": "^0.5.21",
+    "sucrase": "^3.20.3",
     "uuid": "^8.3.2"
   },
   "nodemonConfig": {
