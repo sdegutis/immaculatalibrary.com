@@ -25,7 +25,12 @@ server.use(cookieSession({
   httpOnly: true,
 }));
 
-const markdown = new MarkdownIt();
+const markdown = new MarkdownIt({
+  html: true,
+  typographer: true,
+  linkify: true,
+  // breaks:true,
+});
 
 const app = new imlib.App({
   db: new imlib.JsonDirDatabase('data'),
