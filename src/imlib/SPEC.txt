@@ -20,7 +20,6 @@ Engine rules (i.e. app.start):
 Computing:
 
   { $eval: string } => returns vm.runInNewContext(s)
-  { $data: string } => returns Buffer.from(s, 'base64')
   any other value  => that value
 
   What 'this' is in each context:

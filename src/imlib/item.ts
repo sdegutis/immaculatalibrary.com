@@ -28,9 +28,6 @@ export class Item {
           body: val.$eval,
         });
       }
-      else if (typeof val?.$data === 'string') {
-        val = Buffer.from(val.$data, 'base64');
-      }
       target[key] = val;
     }
   }

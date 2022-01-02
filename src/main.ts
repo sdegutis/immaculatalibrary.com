@@ -41,6 +41,7 @@ const app = new imlib.App({
     escapeHtml,
     markdown,
     bcrypt,
+    Buffer,
     basicAuth,
   }
 });
