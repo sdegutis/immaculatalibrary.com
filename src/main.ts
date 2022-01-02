@@ -48,8 +48,10 @@ const app = new imlib.App({
 
 server.use(app.routeMiddleware);
 
+app.start().then(() => {
 
-app.start();
-server.listen(port, () => {
-  console.log(`Running on http://localhost:${port}`);
+  server.listen(port, () => {
+    console.log(`Running on http://localhost:${port}`);
+  });
+
 });
