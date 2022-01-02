@@ -15,7 +15,6 @@ export default class S3Database implements Database {
   client;
   constructor(private Bucket: string) {
     this.client = new S3Client({ region: 'us-east-2' });
-    this.saveRegularly();
   }
 
   saveRegularly() {

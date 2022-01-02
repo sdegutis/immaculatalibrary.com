@@ -35,11 +35,14 @@ const markdown = new MarkdownIt({
   html: true,
   typographer: true,
   linkify: true,
-  // breaks:true,
+  breaks: true,
 });
 
+const db = new imlib.S3Database('imlibv3');
+db.saveRegularly();
+
 const app = new imlib.App({
-  db: new imlib.JsonDirDatabase('data'),
+  db,
   sandbox: {
     console,
     JSON,
