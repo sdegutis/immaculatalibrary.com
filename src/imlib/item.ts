@@ -4,7 +4,6 @@ import { SerializableObject } from "./db";
 export interface ViewItem {
   $id: string;
   $data: { [key: string]: any };
-  $shadow: { [key: string]: any };
   $items: ViewItem[];
   $type: ViewItem | undefined;
 }

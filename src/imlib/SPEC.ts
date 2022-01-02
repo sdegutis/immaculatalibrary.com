@@ -10,7 +10,6 @@ type ItemData = {
 
   $type?: string;
   $figure?: ItemData;
-  $shadow?: ItemData;
 
   $route?: ItemFunction<(this: Item) => string>;
   $get?: RouteFunction;

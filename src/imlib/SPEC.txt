@@ -11,11 +11,10 @@ Engine rules (i.e. app.start):
 
   1. Link items via $type
   2. Apply type figures
-  3. Cast global shadows
-  4. Build site structures
-  5. Compute item properties
-  6. Start timers, routes, boots
-  7. On site.rebuild() goto #1
+  3. Build site structures
+  4. Compute item properties
+  5. Start timers, routes, boots
+  6. On site.rebuild() goto #1
 
 
 Computing:
@@ -26,7 +25,6 @@ Computing:
 
   What 'this' is in each context:
     Item:   defining item
-    Shadow: defining item
     Figure: destination item
 
   All eval contexts have access to JSX, including:
@@ -39,10 +37,9 @@ Special item fields (all optional):
   $name:str
     => used for site.named()
 
-  $type:str, $figure:obj, $shadow:obj
+  $type:str, $figure:obj
     => for each $type by id (deepest first)
       => inherit this[k] from type.$figure
-      => inherit globals from type.$shadow
 
   $route:fn, $get:fn, $post:fn, $delete:fn,
   $put:fn, $patch:fn, $head:fn, $options:fn
@@ -107,6 +104,4 @@ Globals:
 
   $site: current site
   [globals]: app.sandbox
-
-  Note: these can all be shadowed
-  Note: to hide, shadow as null or anything
+  All items share context

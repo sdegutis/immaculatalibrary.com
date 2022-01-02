@@ -118,22 +118,9 @@ export class Site {
       if (item.type) item.type.items.push(item);
     }
 
-    // Compute shadows in defining item's context
-    const shadows = new Map<string, any>();
-    for (const [id, item] of this.itemsById) {
-      const source = item.raw['$shadow'];
-      const target = Object.create(null);
-
-      shadows.set(id, target);
-      if (source) {
-        item.compute(compiler, source, target);
-      }
-    }
-
-    // Inherit shadows/figures, deepest ancestor first
+    // Inherit figures, deepest ancestor first
     for (const [id, item] of this.itemsById) {
       item.type?.copyInto(item.data, id => this.itemsById.get(id)?.raw['$figure']);
-      item.type?.copyInto(item.globals, id => shadows.get(id));
       Object.assign(item.data, item.raw);
     }
 
@@ -151,11 +138,8 @@ export class Site {
 
     // We have to do this first
     for (const [id, item] of this.itemsById) {
-      // Compute each item in their own context
       item.compute(compiler, item.data, item.data);
-
       item.populateViewItem();
-      item.viewItem.$shadow = shadows.get(item.id);
     }
 
     // Now all associations will be built

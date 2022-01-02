@@ -28,8 +28,10 @@ export default class App {
   }
 
   rebuild() {
+    console.log("Rebuilding site");
     const { site, error } = this.buildNewSite();
     if (site) {
+      console.log("Rebuilt site successfully");
       this.pushToDb();
 
       this.#site?.stop();
