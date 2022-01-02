@@ -13,7 +13,6 @@ export class Item {
   type: Item | null = null;
   items: Item[] = [];
   data = Object.create(null);
-  globals = Object.create(null);
   viewItem: ViewItem = Object.create(null);
 
   constructor(
@@ -26,7 +25,6 @@ export class Item {
       if (typeof val?.$eval === 'string') {
         val = compiler.eval({
           this: this.viewItem,
-          globals: this.globals,
           body: val.$eval,
         });
       }

@@ -51,6 +51,7 @@ Special item fields (all optional):
 
   $boot:fn
     => run after each site build
+       runs in top-down order
 
 
 Item API:

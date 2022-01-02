@@ -54,7 +54,7 @@ export class Compiler {
     });
   }
 
-  eval(input: { this: any, globals: any, body: string }) {
+  eval(input: { this: any, body: string }) {
     const body = compileWithJsx(input.body);
     const wrapped: Function = vm.runInContext(`(function() {return ${body}})`, this.context);
     return wrapped.call(input.this);
