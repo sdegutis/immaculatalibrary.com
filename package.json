@@ -16,7 +16,6 @@
   "dependencies": {
     "@aws-sdk/client-s3": "^3.45.0",
     "@types/cookie-session": "^2.0.43",
-    "@types/uuid": "^8.3.3",
     "basic-auth": "^2.0.1",
     "bcryptjs": "^2.4.3",
     "cookie-session": "^1.4.0",
@@ -25,8 +24,7 @@
     "express": "^4.17.1",
     "markdown-it": "^12.2.0",
     "source-map-support": "^0.5.21",
-    "sucrase": "^3.20.3",
-    "uuid": "^8.3.2"
+    "sucrase": "^3.20.3"
   },
   "nodemonConfig": {
     "watch": [

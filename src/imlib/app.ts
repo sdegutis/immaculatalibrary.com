@@ -1,4 +1,4 @@
-import { v4 as uuidv4 } from 'uuid';
+import { randomUUID } from "crypto";
 import { Database, LiveItemMap, SerializableObject } from "./db";
 import { RoutingMiddleware } from "./http";
 import { Site } from "./site";
@@ -76,7 +76,7 @@ export default class App {
 
   create(data: SerializableObject) {
     let id;
-    do { id = uuidv4() }
+    do { id = randomUUID() }
     while (this.#items.has(id) && this.#staged.has(id));
 
     this.#staged.set(id, JSON.parse(JSON.stringify(data)));
