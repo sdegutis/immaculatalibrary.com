@@ -26,7 +26,7 @@ function createElement(tag: string | Function, attrs: any, ...children: any[]) {
       .map(([k, v]) =>
       (v === true
         ? k
-        : v === false
+        : (v === false || v === null || v === undefined)
           ? ''
           : `${k}="${v}"`))
       .join(' ')
