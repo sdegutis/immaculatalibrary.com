@@ -1,3 +1,4 @@
+import basicAuth from 'basic-auth';
 import bcrypt from 'bcryptjs';
 import cookieSession from 'cookie-session';
 import escapeHtml from 'escape-html';
@@ -21,7 +22,7 @@ server.use((req, res, next) => {
     next();
 });
 server.use(cookieSession({
-  secret: 'use dotenv for this in real life',
+  secret: 'not a very good secret, honestly',
   httpOnly: true,
 }));
 
@@ -40,6 +41,7 @@ const app = new imlib.App({
     escapeHtml,
     markdown,
     bcrypt,
+    basicAuth,
   }
 });
 
