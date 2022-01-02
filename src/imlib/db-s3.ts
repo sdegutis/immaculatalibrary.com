@@ -1,6 +1,5 @@
 import { GetObjectCommand, paginateListObjectsV2, PutObjectCommand, S3Client } from "@aws-sdk/client-s3";
 import { randomUUID } from "crypto";
-import 'dotenv/config';
 import { Readable } from "stream";
 import { Database, LiveItemMap } from './db';
 

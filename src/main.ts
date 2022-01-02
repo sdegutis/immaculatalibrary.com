@@ -1,6 +1,7 @@
 import basicAuth from 'basic-auth';
 import bcrypt from 'bcryptjs';
 import cookieSession from 'cookie-session';
+import 'dotenv/config';
 import escapeHtml from 'escape-html';
 import express from 'express';
 import MarkdownIt from 'markdown-it';
@@ -11,18 +12,22 @@ import * as imlib from './imlib';
 const port = 8080;
 
 const server = express();
+
 server.set('trust proxy', 1);
-server.set('query parser', (s: string | null) =>
-  new URLSearchParams(s ?? ''));
+
+server.set('query parser', (s: string | null) => new URLSearchParams(s ?? ''));
+
 server.use(express.text({ type: '*/*', limit: '100mb' }));
+
 server.use((req, res, next) => {
   if (req.path.endsWith('/') && req.path !== '/')
     res.redirect(req.path.slice(0, -1));
   else
     next();
 });
+
 server.use(cookieSession({
-  secret: 'not a very good secret, honestly',
+  secret: process.env['COOKIE_SECRET'],
   httpOnly: true,
 }));
 
