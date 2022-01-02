@@ -1,23 +1,45 @@
 import express from 'express';
 import { URLSearchParams } from 'url';
 
+type AsyncHandler = (req: express.Request, res: express.Response) => Promise<void>;
 
 export class RoutingMiddleware {
 
-  routes = new Map<string, express.Handler>();
-  middleware: express.Handler = (req, res, next) => {
+  routes = new Map<string, AsyncHandler>();
+  middleware: express.Handler = (req, res) => {
     const path = `${req.method} ${req.path}`;
-    const handler = this.routes.get(path);
+    const handler = this.routes.get(path) ?? this.routes.get(`GET /404.html`);
     if (!handler) {
-      res.status(404).send(`no route: ${path}`);
+      res.status(404).send(`Page not found.`);
       return;
     }
-    handler(req, res, next);
+
+    handler(req, res).catch(e => {
+      console.error('Error handling route');
+      console.error(e);
+
+      const handler = this.routes.get(`GET /500.html`);
+      if (!handler) {
+        console.error('No error handling route');
+        console.error(e);
+
+        res.status(500).send("An error occurred.");
+        return;
+      }
+
+      handler(req, res).catch(e => {
+        console.error('Error handling error!');
+        console.error(e);
+
+        res.status(500).send("An error occurred.");
+        return;
+      });
+    });
   };
 
 }
 
-export function makeHandler(fn: Function): express.Handler {
+export function makeHandler(fn: Function): AsyncHandler {
   return async (req, res) => {
 
     const request = {
@@ -29,18 +51,8 @@ export function makeHandler(fn: Function): express.Handler {
       session: req.session,
     };
 
-    let response;
-    try {
-      response = fn(request);
-    }
-    catch (e: any) {
-      console.error('Error handling route');
-      console.error(e);
-      res.status(500).send(`<pre>${e.stack}</pre>`);
-      return;
-    }
+    let response = await fn(request);
 
-    response = await Promise.resolve(response);
     if (typeof response !== 'object') {
       response = { text: String(response) };
     }
