@@ -46,20 +46,17 @@ const JSX = {
 
 export class Compiler {
 
-  constructor(private sandbox: object) { }
+  context;
+  constructor(sandbox: object) {
+    this.context = vm.createContext({
+      ...sandbox,
+      JSX,
+    });
+  }
 
   eval(input: { this: any, globals: any, body: string }) {
-    // TODO: catch error or something?
-
     const body = compileWithJsx(input.body);
-    const wrapped: Function = vm.runInNewContext(
-      `(function() {return ${body}})`,
-      {
-        ...this.sandbox,
-        ...input.globals,
-        JSX,
-      }
-    );
+    const wrapped: Function = vm.runInContext(`(function() {return ${body}})`, this.context);
     return wrapped.call(input.this);
   }
 
