@@ -24,6 +24,7 @@ export default class App {
 
   async start() {
     this.#items = await this.#db.load();
+    console.log(`Loaded ${this.#items.size} items`);
     this.rebuild();
   }
 

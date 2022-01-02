@@ -48,7 +48,13 @@ export class Item {
   boot() {
     const boot = this.data['$boot'];
     if (typeof boot === 'function') {
-      boot();
+      try {
+        boot();
+      }
+      catch (e) {
+        console.error(`Error when booting:`, this.id);
+        throw e;
+      }
     }
 
     for (const item of this.items) {
