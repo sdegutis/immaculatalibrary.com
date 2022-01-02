@@ -1,8 +1,7 @@
-import { Handler } from "express";
 import App from './app';
 import { Compiler } from "./compiler";
 import { LiveItemMap } from "./db";
-import { makeHandler } from "./http";
+import { AsyncHandler, makeHandler } from "./http";
 import { Item, ViewItem } from "./item";
 
 const verbs = ['get', 'post', 'delete', 'put', 'patch', 'head', 'options'];
@@ -63,7 +62,7 @@ export class Site {
 
   itemsById = new Map<string, Item>();
 
-  routes = new Map<string, Handler>();
+  routes = new Map<string, AsyncHandler>();
 
   #timers = new Set<{
     fn: Function,

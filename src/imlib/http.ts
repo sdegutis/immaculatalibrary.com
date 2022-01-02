@@ -1,7 +1,7 @@
 import express from 'express';
 import { URLSearchParams } from 'url';
 
-type AsyncHandler = (req: express.Request, res: express.Response) => Promise<void>;
+export type AsyncHandler = (req: express.Request, res: express.Response) => Promise<void>;
 
 export class RoutingMiddleware {
 
