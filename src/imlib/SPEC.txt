@@ -12,9 +12,10 @@ Engine rules (i.e. app.start):
   1. Link items via $type
   2. Apply type figures
   3. Build site structures
-  4. Compute item properties
-  5. Start timers, routes, boots
-  6. On site.rebuild() goto #1
+  4. Compute item functions
+  5. Boot all items top-down
+  6. Start timers and routes
+  7. On site.rebuild() goto #1
 
 
 Computing:

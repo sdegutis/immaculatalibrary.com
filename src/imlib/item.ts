@@ -45,14 +45,12 @@ export class Item {
     hardSet(this.viewItem, '$type', this.type?.viewItem);
   }
 
-  fn(key: string): Function | undefined {
-    const val = this.data[key];
-    if (val === null || val === undefined) return undefined;
-    return (typeof val === 'function' ? val : () => val);
-  }
-
   boot() {
-    this.fn('$boot')?.();
+    const boot = this.data['$boot'];
+    if (typeof boot === 'function') {
+      boot();
+    }
+
     for (const item of this.items) {
       item.boot();
     }

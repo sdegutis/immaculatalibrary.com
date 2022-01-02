@@ -136,26 +136,34 @@ export class Site {
       }
     }
 
-    // We have to do this first
+    // Compute functions and prepare view-items
     for (const [id, item] of this.itemsById) {
       item.compute(compiler, item.data, item.data);
       item.populateViewItem();
     }
 
-    // Now all associations will be built
+    // Boot all items top-down
     for (const [id, item] of this.itemsById) {
-      // Handle timers
-      const tick = item.fn('$tick');
-      const ms = item.fn('$ms')?.();
+      if (item.type === null) {
+        item.boot();
+      }
+    }
+
+    // Prepare timers
+    for (const [id, item] of this.itemsById) {
+      const tick = item.data['$tick'];
+      const ms = item.data['$ms'];
       if (typeof tick === 'function' && typeof ms === 'number') {
         this.#timers.add({ fn: tick, ms, id: null });
       }
+    }
 
-      // Add routes
-      const path = item.fn('$route')?.();
+    // Add routes
+    for (const [id, item] of this.itemsById) {
+      const path = item.data['$route']?.();
       if (path) {
         for (const verb of verbs) {
-          const fn = item.fn('$' + verb);
+          const fn = item.data['$' + verb];
           if (fn) {
             const VERB = verb.toUpperCase();
             const key = `${VERB} ${path}`;
@@ -170,12 +178,6 @@ export class Site {
     // Start timers
     for (const timer of this.#timers) {
       timer.id = setInterval(() => timer.fn(), timer.ms);
-    }
-
-    for (const [id, item] of this.itemsById) {
-      if (item.type === null) {
-        item.boot();
-      }
     }
   }
 
