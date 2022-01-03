@@ -20,7 +20,7 @@ Engine rules (i.e. app.start):
 
 Computing:
 
-  { $eval: string } => returns vm.runInNewContext(s)
+  { $eval: string } => returns vm.runInContext(s)
   any other value  => that value
 
   What 'this' is in each context:
