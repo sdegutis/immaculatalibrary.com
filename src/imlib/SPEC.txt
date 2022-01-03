@@ -21,7 +21,7 @@ Engine rules (i.e. app.start):
 Computing:
 
   { $eval: string } => returns vm.runInContext(s)
-  any other value  => that value
+  any other value   => that value (any valid JSON type)
 
   What 'this' is in each context:
     Item:   defining item
