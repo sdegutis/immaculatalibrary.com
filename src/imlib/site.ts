@@ -52,7 +52,7 @@ export class ViewSite {
 
   rebuild() {
     const result = this.#site.app.rebuild();
-    if (result.site) return result.site;
+    if (result.site) return result.site.viewSite;
     throw result.error;
   }
 
@@ -73,6 +73,7 @@ export class Site {
   root: ViewItem[] = [];
   viewItemsById: { [id: string]: ViewItem } = Object.create(null);
 
+  readonly viewSite = new ViewSite(this);
 
   constructor(
     items: LiveItemMap,
@@ -81,7 +82,7 @@ export class Site {
   ) {
     const compiler = new Compiler({
       ...sandbox,
-      $site: new ViewSite(this),
+      $site: this.viewSite,
     });
 
     // Create smart items
