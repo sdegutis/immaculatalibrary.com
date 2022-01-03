@@ -4,6 +4,8 @@ import vm from 'vm';
 const unary = new Set(['br', 'hr', 'input']);
 
 function createElement(tag: string | Function, attrs: any, ...children: any[]) {
+  attrs ??= {};
+
   if (typeof tag === 'function') {
     return tag(attrs, children);
   }
@@ -20,7 +22,7 @@ function createElement(tag: string | Function, attrs: any, ...children: any[]) {
     return childrenString;
   }
 
-  const attrsArray = Object.entries(attrs ?? {});
+  const attrsArray = Object.entries(attrs);
   const attrsString = (attrsArray.length > 0
     ? ' ' + attrsArray
       .map(([k, v]) =>
