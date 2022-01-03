@@ -38,6 +38,8 @@ const markdown = new MarkdownIt({
   breaks: true,
 });
 
+// const db = new imlib.JsonDirDatabase('data');
+
 const db = new imlib.S3Database('imlibv3');
 db.saveRegularly();
 

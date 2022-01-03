@@ -118,9 +118,9 @@ export class Site {
       if (item.type) item.type.items.push(item);
     }
 
-    // Inherit figures, deepest ancestor first
+    // Inherit figures
     for (const [id, item] of this.itemsById) {
-      item.type?.copyInto(item.data, id => this.itemsById.get(id)?.raw['$figure']);
+      Object.assign(item.data, item.type?.raw['$figure']);
       Object.assign(item.data, item.raw);
     }
 

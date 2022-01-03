@@ -81,7 +81,10 @@ export default class S3Database implements Database {
           console.log('Creating', id);
           let group = [...this.#groups.entries()].find(([k, v]) => v.size < MAX_GROUP_SIZE);
           if (!group) {
-            group = [randomUUID(), new Map()];
+            let groupId;
+            do { groupId = randomUUID(); }
+            while (this.#groups.has(groupId));
+            group = [groupId, new Map()];
             this.#groups.set(...group);
           }
           const [groupId, groupItems] = group;

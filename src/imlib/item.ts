@@ -32,11 +32,6 @@ export class Item {
     }
   }
 
-  copyInto(target: any, getData: (id: string) => any) {
-    this.type?.copyInto(target, getData);
-    Object.assign(target, getData(this.id));
-  }
-
   populateViewItem() {
     Object.assign(this.viewItem, this.data);
     hardSet(this.viewItem, '$id', this.id);

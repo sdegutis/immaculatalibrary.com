@@ -10,7 +10,7 @@ Engine input data:
 Engine rules (i.e. app.start):
 
   1. Link items via $type
-  2. Apply type figures
+  2. Inherit type figures
   3. Build site structures
   4. Compute item functions
   5. Boot all items top-down
@@ -38,7 +38,7 @@ Special item fields (all optional):
     => used for site.named()
 
   $type:str, $figure:obj
-    => for each $type by id (deepest first)
+    => for each $type by id
       => inherit this[k] from type.$figure
 
   $route:fn, $get:fn, $post:fn, $delete:fn,
