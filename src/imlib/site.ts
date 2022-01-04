@@ -88,8 +88,8 @@ export class Site {
 
     // Inherit figures
     for (const [id, item] of itemsById) {
-      Object.assign(item.data, item.type?.raw['$figure']);
-      Object.assign(item.data, item.raw);
+      Object.assign(item.viewItem, item.type?.raw['$figure']);
+      Object.assign(item.viewItem, item.raw);
     }
 
     // Build site.items
@@ -99,8 +99,8 @@ export class Site {
 
     // Compute functions and prepare view-items
     for (const [id, item] of itemsById) {
-      item.compute(compiler, item.data);
-      item.populateViewItem();
+      item.compute(compiler, item.viewItem);
+      item.finishViewItem();
     }
 
     // Boot all items top-down

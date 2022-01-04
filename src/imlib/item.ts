@@ -14,7 +14,6 @@ export class Item {
 
   type: Item | null = null;
   items: Item[] = [];
-  data = Object.create(null);
   viewItem: ViewItem = Object.create(null);
 
   constructor(
@@ -34,8 +33,7 @@ export class Item {
     }
   }
 
-  populateViewItem() {
-    Object.assign(this.viewItem, this.data);
+  finishViewItem() {
     hardSet(this.viewItem, '$id', this.id);
     hardSet(this.viewItem, '$data', this.raw);
     hardSet(this.viewItem, '$items', this.items.map(it => it.viewItem));
