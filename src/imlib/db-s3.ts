@@ -96,7 +96,9 @@ export default class S3Database implements Database {
   }
 
   saveIfNeeded() {
-    console.log('Saving', this.#affectedGroupIds.size);
+    if (this.#affectedGroupIds.size > 0) {
+      console.log('Saving', this.#affectedGroupIds.size);
+    }
     for (const Key of this.#affectedGroupIds) {
       const { client, Bucket } = this;
       const group = this.#groups.get(Key)!;
