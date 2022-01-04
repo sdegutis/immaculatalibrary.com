@@ -1,7 +1,8 @@
 import { randomUUID } from "crypto";
+import { Compiler } from "./compiler";
 import { Database, LiveItemMap, SerializableObject } from "./db";
 import { RoutingMiddleware } from "./http";
-import { Site } from "./site";
+import { Site, ViewSite } from "./site";
 
 export default class App {
 
@@ -70,7 +71,11 @@ export default class App {
     try {
       const items: LiveItemMap = new Map(this.#items);
       this.applyStagedChangesTo(items);
-      return { site: new Site(items, this, this.#sandbox) };
+
+      const viewSite = new ViewSite(this);
+      const compiler = new Compiler(this.#sandbox);
+      const site = new Site(viewSite, items, compiler);
+      return { site };
     }
     catch (e) {
       return { error: e }

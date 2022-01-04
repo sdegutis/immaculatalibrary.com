@@ -8,33 +8,31 @@ const verbs = ['get', 'post', 'delete', 'put', 'patch', 'head', 'options'];
 
 export class ViewSite {
 
-  #site;
-  constructor(site: Site) {
-    this.#site = site;
-  }
+  items: { [id: string]: ViewItem } = Object.create(null);
 
-  get items() {
-    return this.#site.viewItemsById;
+  #app;
+  constructor(app: App) {
+    this.#app = app;
   }
 
   create(data: object) {
     if (typeof data !== 'object') throw new Error('site.create() must be given object');
     const serializable = JSON.parse(JSON.stringify(data));
-    return this.#site.app.create(serializable);
+    return this.#app.create(serializable);
   }
 
   update(id: string, data: object) {
     if (typeof data !== 'object') throw new Error('site.update() must be given object');
     const serializable = JSON.parse(JSON.stringify(data));
-    this.#site.app.put(id, serializable);
+    this.#app.put(id, serializable);
   }
 
   delete(id: string) {
-    this.#site.app.put(id, null);
+    this.#app.put(id, null);
   }
 
   rebuild() {
-    const result = this.#site.app.rebuild();
+    const result = this.#app.rebuild();
     if (result.site) return result.site.viewSite;
     throw result.error;
   }
@@ -43,9 +41,9 @@ export class ViewSite {
 
 export class Site {
 
-  itemsById = new Map<string, Item>();
+  #itemsById = new Map<string, Item>();
 
-  routes = new Map<string, AsyncHandler>();
+  public routes = new Map<string, AsyncHandler>();
 
   #timers = new Set<{
     fn: Function,
@@ -53,28 +51,18 @@ export class Site {
     id: NodeJS.Timer | null,
   }>();
 
-  viewItemsById: { [id: string]: ViewItem } = Object.create(null);
-
-  readonly viewSite = new ViewSite(this);
-
-  constructor(
-    items: LiveItemMap,
-    public app: App,
-    sandbox: object,
-  ) {
-    const compiler = new Compiler(sandbox);
-
+  constructor(readonly viewSite: ViewSite, items: LiveItemMap, compiler: Compiler) {
     // Create smart items
     for (const [id, raw] of items) {
       const item = new Item(id, raw);
-      this.itemsById.set(item.id, item);
+      this.#itemsById.set(item.id, item);
     }
 
     // Link with type items
-    for (const [id, item] of this.itemsById) {
+    for (const [id, item] of this.#itemsById) {
       const typeId = item.raw['$type'];
       if (typeof typeId === 'string') {
-        const type = this.itemsById.get(typeId);
+        const type = this.#itemsById.get(typeId);
         if (type !== item) {
           item.type = type ?? null;
         }
@@ -82,7 +70,7 @@ export class Site {
     }
 
     // Break type cycles
-    for (const [id, item] of this.itemsById) {
+    for (const [id, item] of this.#itemsById) {
       const seen = new Set([item.id]);
       for (let node: Item | null = item; node; node = node.type) {
         if (node.type && seen.has(node.type.id)) {
@@ -94,36 +82,36 @@ export class Site {
     }
 
     // Set children
-    for (const [id, item] of this.itemsById) {
+    for (const [id, item] of this.#itemsById) {
       if (item.type) item.type.items.push(item);
     }
 
     // Inherit figures
-    for (const [id, item] of this.itemsById) {
+    for (const [id, item] of this.#itemsById) {
       Object.assign(item.data, item.type?.raw['$figure']);
       Object.assign(item.data, item.raw);
     }
 
-    // Build $site.items
-    for (const [id, item] of this.itemsById) {
-      this.viewItemsById[id] = item.viewItem;
+    // Build site.items
+    for (const [id, item] of this.#itemsById) {
+      this.viewSite.items[id] = item.viewItem;
     }
 
     // Compute functions and prepare view-items
-    for (const [id, item] of this.itemsById) {
+    for (const [id, item] of this.#itemsById) {
       item.compute(compiler, item.data, item.data);
       item.populateViewItem();
     }
 
     // Boot all items top-down
-    for (const [id, item] of this.itemsById) {
+    for (const [id, item] of this.#itemsById) {
       if (item.type === null) {
         item.boot(this.viewSite);
       }
     }
 
     // Prepare timers
-    for (const [id, item] of this.itemsById) {
+    for (const [id, item] of this.#itemsById) {
       const tick = item.data['$tick'];
       const ms = item.data['$ms'];
       if (typeof tick === 'function' && typeof ms === 'number') {
@@ -132,7 +120,7 @@ export class Site {
     }
 
     // Add routes
-    for (const [id, item] of this.itemsById) {
+    for (const [id, item] of this.#itemsById) {
       const path = item.data['$route']?.();
       if (path) {
         for (const verb of verbs) {
