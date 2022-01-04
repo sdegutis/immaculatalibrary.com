@@ -98,6 +98,5 @@ Route API:
 
 Globals:
 
-  $site: current site
   [globals]: app.sandbox
   All items share context

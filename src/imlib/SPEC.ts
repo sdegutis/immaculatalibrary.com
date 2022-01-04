@@ -2,7 +2,7 @@ import { URLSearchParams } from "url";
 
 type EngineInput = {
   [id: string]: ItemData;
-}[];
+};
 
 type ItemData = {
 
@@ -21,7 +21,7 @@ type ItemData = {
   $tick?: ItemFunction<(this: Item) => void>;
   $ms?: number;
 
-  $boot?: ItemFunction<(this: Item) => void>;
+  $boot?: ItemFunction<(this: Item, site: Site) => void>;
 
   [key: string]: ItemFunction<any> | any;
 
@@ -36,6 +36,7 @@ type Item = {
   $data: ItemData;
   $items: Item[];
   $type: Item | null;
+
   [key: string]: any;
 };
 
@@ -69,9 +70,4 @@ type RouteOutput = string | {
   redirect?: string;
   text?: string;
   json?: object;
-};
-
-type ItemFunctionGlobals = {
-  $site: Site;
-  [name: string]: any;
 };
