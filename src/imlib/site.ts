@@ -99,7 +99,7 @@ export class Site {
 
     // Compute functions and prepare view-items
     for (const [id, item] of itemsById) {
-      item.compute(compiler, item.data, item.data);
+      item.compute(compiler, item.data);
       item.populateViewItem();
     }
 

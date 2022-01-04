@@ -22,15 +22,15 @@ export class Item {
     public readonly raw: SerializableObject,
   ) { }
 
-  compute(compiler: Compiler, source: any, target: any) {
-    for (let [key, val] of Object.entries<any>(source)) {
+  compute(compiler: Compiler, data: any) {
+    for (let [key, val] of Object.entries<any>(data)) {
       if (typeof val?.$eval === 'string') {
         val = compiler.eval({
           this: this.viewItem,
           body: val.$eval,
         });
       }
-      target[key] = val;
+      data[key] = val;
     }
   }
 
