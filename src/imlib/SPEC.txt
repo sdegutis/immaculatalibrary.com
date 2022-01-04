@@ -20,8 +20,12 @@ Engine rules (i.e. app.start):
 
 Computing:
 
-  { $eval: string } => returns vm.runInContext(s)
+  { $eval: string } => returns vm.runInContext(string, sandbox)
   any other value   => that value (any valid JSON type)
+
+  All items share the same global context
+    Populated via app.sandbox
+    Resets on each build
 
   What 'this' is in each context:
     Item:   defining item
@@ -41,14 +45,13 @@ Special item fields (all optional):
   $route:fn, $get:fn, $post:fn, $delete:fn,
   $put:fn, $patch:fn, $head:fn, $options:fn
     => if $route evals to non-blank string
-       map that path each verb-fn present
+       map that path for each verb-fn present
 
   $tick:fn & $ms:num
-    => call $tick every $ms seconds
+    => call $tick every $ms
 
   $boot:fn
-    => run after each site build
-       runs in top-down order
+    => run (top-down) during each site build
 
 
 Item API:
@@ -94,9 +97,3 @@ Route API:
      text: string |
      json: object)
   }>
-
-
-Globals:
-
-  [globals]: app.sandbox
-  All items share context
