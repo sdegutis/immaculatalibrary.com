@@ -41,8 +41,6 @@ export class ViewSite {
 
 export class Site {
 
-  #itemsById = new Map<string, Item>();
-
   public routes = new Map<string, AsyncHandler>();
 
   #timers = new Set<{
@@ -52,17 +50,19 @@ export class Site {
   }>();
 
   constructor(readonly viewSite: ViewSite, items: LiveItemMap, compiler: Compiler) {
+    const itemsById = new Map<string, Item>();
+
     // Create smart items
     for (const [id, raw] of items) {
       const item = new Item(id, raw);
-      this.#itemsById.set(item.id, item);
+      itemsById.set(item.id, item);
     }
 
     // Link with type items
-    for (const [id, item] of this.#itemsById) {
+    for (const [id, item] of itemsById) {
       const typeId = item.raw['$type'];
       if (typeof typeId === 'string') {
-        const type = this.#itemsById.get(typeId);
+        const type = itemsById.get(typeId);
         if (type !== item) {
           item.type = type ?? null;
         }
@@ -70,7 +70,7 @@ export class Site {
     }
 
     // Break type cycles
-    for (const [id, item] of this.#itemsById) {
+    for (const [id, item] of itemsById) {
       const seen = new Set([item.id]);
       for (let node: Item | null = item; node; node = node.type) {
         if (node.type && seen.has(node.type.id)) {
@@ -82,36 +82,36 @@ export class Site {
     }
 
     // Set children
-    for (const [id, item] of this.#itemsById) {
+    for (const [id, item] of itemsById) {
       if (item.type) item.type.items.push(item);
     }
 
     // Inherit figures
-    for (const [id, item] of this.#itemsById) {
+    for (const [id, item] of itemsById) {
       Object.assign(item.data, item.type?.raw['$figure']);
       Object.assign(item.data, item.raw);
     }
 
     // Build site.items
-    for (const [id, item] of this.#itemsById) {
+    for (const [id, item] of itemsById) {
       this.viewSite.items[id] = item.viewItem;
     }
 
     // Compute functions and prepare view-items
-    for (const [id, item] of this.#itemsById) {
+    for (const [id, item] of itemsById) {
       item.compute(compiler, item.data, item.data);
       item.populateViewItem();
     }
 
     // Boot all items top-down
-    for (const [id, item] of this.#itemsById) {
+    for (const [id, item] of itemsById) {
       if (item.type === null) {
         item.boot(this.viewSite);
       }
     }
 
     // Prepare timers
-    for (const [id, item] of this.#itemsById) {
+    for (const [id, item] of itemsById) {
       const tick = item.data['$tick'];
       const ms = item.data['$ms'];
       if (typeof tick === 'function' && typeof ms === 'number') {
@@ -120,7 +120,7 @@ export class Site {
     }
 
     // Add routes
-    for (const [id, item] of this.#itemsById) {
+    for (const [id, item] of itemsById) {
       const path = item.data['$route']?.();
       if (path) {
         for (const verb of verbs) {
