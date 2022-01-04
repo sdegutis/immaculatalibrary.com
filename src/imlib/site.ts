@@ -112,8 +112,8 @@ export class Site {
 
     // Prepare timers
     for (const [id, item] of itemsById) {
-      const tick = item.data['$tick'];
-      const ms = item.data['$ms'];
+      const tick = item.viewItem['$tick'];
+      const ms = item.viewItem['$ms'];
       if (typeof tick === 'function' && typeof ms === 'number') {
         this.#timers.add({ fn: tick, ms, id: null });
       }
@@ -121,10 +121,10 @@ export class Site {
 
     // Add routes
     for (const [id, item] of itemsById) {
-      const path = item.data['$route']?.();
+      const path = item.viewItem['$route']?.();
       if (path) {
         for (const verb of verbs) {
-          const fn = item.data['$' + verb];
+          const fn = item.viewItem['$' + verb];
           if (fn) {
             const VERB = verb.toUpperCase();
             const key = `${VERB} ${path}`;

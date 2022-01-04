@@ -7,6 +7,7 @@ export interface ViewItem {
   $data: { [key: string]: any };
   $items: ViewItem[];
   $type: ViewItem | undefined;
+  [key: string]: any;
 }
 
 export class Item {
@@ -42,7 +43,7 @@ export class Item {
   }
 
   boot(viewSite: ViewSite) {
-    const boot = this.data['$boot'];
+    const boot = this.viewItem['$boot'];
     if (typeof boot === 'function') {
       try {
         boot(viewSite);
