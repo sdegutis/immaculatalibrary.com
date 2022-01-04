@@ -6,8 +6,6 @@ type EngineInput = {
 
 type ItemData = {
 
-  $name?: string;
-
   $type?: string;
   $figure?: ItemData;
 
@@ -43,8 +41,6 @@ type Item = {
 
 type Site = {
   items: { [id: string]: Item };
-  root: Item[];
-  named(...path: string[]): Item | null;
 
   create(data: ItemData): string;
   update(id: string, data: ItemData): void;

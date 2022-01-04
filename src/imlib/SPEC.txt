@@ -34,9 +34,6 @@ Computing:
 
 Special item fields (all optional):
 
-  $name:str
-    => used for site.named()
-
   $type:str, $figure:obj
     => for each $type by id
       => inherit this[k] from type.$figure
@@ -66,8 +63,6 @@ Item API:
 Site API:
 
   site.items: { id: item }
-  site.root: top-level item[]
-  site.named(path: string[])
   site.create(data): new id
   site.update(id, data)
   site.delete(id)

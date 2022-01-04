@@ -6,28 +6,11 @@ import { Item, ViewItem } from "./item";
 
 const verbs = ['get', 'post', 'delete', 'put', 'patch', 'head', 'options'];
 
-function getNamed(items: ViewItem[], path: string[]): ViewItem | null {
-  const name = path.shift();
-  const item = items.find(i => i.$data['$name'] === name);
-  if (!item) return null;
-  if (path.length === 0) return item;
-  return getNamed(item.$items, path);
-}
-
 export class ViewSite {
 
   #site;
   constructor(site: Site) {
     this.#site = site;
-  }
-
-  get root() {
-    return this.#site.root;
-  }
-
-  named(...path: string[]) {
-    if (path.length === 0) return null;
-    return getNamed(this.root, path);
   }
 
   get items() {
@@ -70,7 +53,6 @@ export class Site {
     id: NodeJS.Timer | null,
   }>();
 
-  root: ViewItem[] = [];
   viewItemsById: { [id: string]: ViewItem } = Object.create(null);
 
   readonly viewSite = new ViewSite(this);
@@ -128,13 +110,6 @@ export class Site {
     // Build $site.items
     for (const [id, item] of this.itemsById) {
       this.viewItemsById[id] = item.viewItem;
-    }
-
-    // Build $site.root
-    for (const [id, item] of this.itemsById) {
-      if (!item.type) {
-        this.root.push(item.viewItem);
-      }
     }
 
     // Compute functions and prepare view-items
