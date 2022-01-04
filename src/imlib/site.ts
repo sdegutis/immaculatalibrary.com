@@ -62,10 +62,7 @@ export class Site {
     public app: App,
     sandbox: object,
   ) {
-    const compiler = new Compiler({
-      ...sandbox,
-      $site: this.viewSite,
-    });
+    const compiler = new Compiler(sandbox);
 
     // Create smart items
     for (const [id, raw] of items) {
@@ -121,7 +118,7 @@ export class Site {
     // Boot all items top-down
     for (const [id, item] of this.itemsById) {
       if (item.type === null) {
-        item.boot();
+        item.boot(this.viewSite);
       }
     }
 

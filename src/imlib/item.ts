@@ -1,5 +1,6 @@
 import { Compiler } from "./compiler";
 import { SerializableObject } from "./db";
+import { ViewSite } from "./site";
 
 export interface ViewItem {
   $id: string;
@@ -40,11 +41,11 @@ export class Item {
     hardSet(this.viewItem, '$type', this.type?.viewItem);
   }
 
-  boot() {
+  boot(viewSite: ViewSite) {
     const boot = this.data['$boot'];
     if (typeof boot === 'function') {
       try {
-        boot();
+        boot(viewSite);
       }
       catch (e) {
         console.error(`Error when booting:`, this.id);
@@ -53,7 +54,7 @@ export class Item {
     }
 
     for (const item of this.items) {
-      item.boot();
+      item.boot(viewSite);
     }
   }
 
