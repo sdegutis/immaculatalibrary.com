@@ -24,7 +24,7 @@ export class Item {
   compute(compiler: Compiler, data: any) {
     for (let [key, val] of Object.entries<any>(data)) {
       if (typeof val?.$eval === 'string') {
-        val = compiler.eval({
+        val = compiler.eval(`item[${this.id}][${key}]`, {
           this: this.viewItem,
           body: val.$eval,
         });
