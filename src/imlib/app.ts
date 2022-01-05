@@ -84,6 +84,10 @@ export default class App {
     }
   }
 
+  hasStagedChanges() {
+    return this.#staged.size > 0;
+  }
+
   create(data: SerializableObject) {
     let id;
     do { id = randomUUID() }

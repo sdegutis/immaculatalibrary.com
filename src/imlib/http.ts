@@ -1,5 +1,6 @@
 import express from 'express';
 import { URLSearchParams } from 'url';
+import { ViewSite } from './site';
 
 export type AsyncHandler = (req: express.Request, res: express.Response) => Promise<void>;
 
@@ -24,7 +25,7 @@ export class RoutingMiddleware {
 
 }
 
-export function makeHandler(fn: Function, onRouteError: any): AsyncHandler {
+export function makeHandler(fn: Function, onRouteError: any, viewSite: ViewSite): AsyncHandler {
   return async (req, res) => {
 
     const request = {
@@ -73,5 +74,7 @@ export function makeHandler(fn: Function, onRouteError: any): AsyncHandler {
     else if ('json' in response) {
       res.json(response.json);
     }
+
+    viewSite.rebuildIfNeeded();
   };
 }

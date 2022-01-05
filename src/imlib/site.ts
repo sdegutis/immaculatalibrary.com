@@ -37,6 +37,12 @@ export class ViewSite {
     throw result.error;
   }
 
+  rebuildIfNeeded() {
+    if (this.#app.hasStagedChanges()) {
+      this.rebuild();
+    }
+  }
+
 }
 
 export class Site {
@@ -115,7 +121,7 @@ export class Site {
     const notFoundPage = compiler.context['$notFoundPage'];
 
     if (typeof notFoundPage === 'function') {
-      this.notFoundPage = makeHandler(notFoundPage, errorHandler);
+      this.notFoundPage = makeHandler(notFoundPage, errorHandler, viewSite);
     }
 
     // Prepare timers
@@ -136,7 +142,7 @@ export class Site {
           if (fn) {
             const VERB = verb.toUpperCase();
             const key = `${VERB} ${path}`;
-            this.routes.set(key, makeHandler(fn, errorHandler));
+            this.routes.set(key, makeHandler(fn, errorHandler, viewSite));
           }
         }
       }
