@@ -46,7 +46,6 @@ db.saveRegularly();
 const app = new imlib.App({
   db,
   sandbox: {
-    console,
     JSON,
     escapeHtml,
     markdown,

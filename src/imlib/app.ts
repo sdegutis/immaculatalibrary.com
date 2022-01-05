@@ -39,7 +39,9 @@ export default class App {
       this.#site?.stop();
       this.#site = site;
       this.#site.start();
+
       this.#siteMiddleware.routes = this.#site.routes;
+      this.#siteMiddleware.notFoundHandler = this.#site.notFoundPage;
     }
     else {
       console.error('Error building site:');

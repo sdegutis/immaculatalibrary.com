@@ -42,6 +42,7 @@ export class ViewSite {
 export class Site {
 
   public routes = new Map<string, AsyncHandler>();
+  public notFoundPage?: AsyncHandler;
 
   #timers = new Set<{
     fn: Function,
@@ -110,6 +111,13 @@ export class Site {
       }
     }
 
+    const errorHandler = compiler.context['$onRouteError'];
+    const notFoundPage = compiler.context['$notFoundPage'];
+
+    if (typeof notFoundPage === 'function') {
+      this.notFoundPage = makeHandler(notFoundPage, errorHandler);
+    }
+
     // Prepare timers
     for (const [id, item] of itemsById) {
       const tick = item.viewItem['$tick'];
@@ -128,7 +136,7 @@ export class Site {
           if (fn) {
             const VERB = verb.toUpperCase();
             const key = `${VERB} ${path}`;
-            this.routes.set(key, makeHandler(fn));
+            this.routes.set(key, makeHandler(fn, errorHandler));
           }
         }
       }
