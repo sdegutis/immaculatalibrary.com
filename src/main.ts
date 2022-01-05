@@ -7,6 +7,7 @@ import express from 'express';
 import MarkdownIt from 'markdown-it';
 import 'source-map-support/register';
 import { URLSearchParams } from 'url';
+import util from 'util';
 import * as imlib from './imlib';
 
 const port = 8080;
@@ -46,6 +47,7 @@ db.saveRegularly();
 const app = new imlib.App({
   db,
   sandbox: {
+    util,
     JSON,
     escapeHtml,
     markdown,
