@@ -88,7 +88,7 @@ export class Site {
       }
     }
 
-    // Set children
+    // Set sub-items
     for (const [id, item] of itemsById) {
       if (item.type) item.type.items.push(item);
     }
