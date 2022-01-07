@@ -44,17 +44,14 @@ const db = new imlib.JsonFileDatabase('data.json');
 // const db = new imlib.S3Database('imlibv3');
 // db.saveRegularly();
 
-const app = new imlib.App({
-  db,
-  sandbox: {
-    util,
-    JSON,
-    escapeHtml,
-    markdown,
-    bcrypt,
-    Buffer,
-    basicAuth,
-  }
+const app = new imlib.App(db, {
+  util,
+  JSON,
+  escapeHtml,
+  markdown,
+  bcrypt,
+  Buffer,
+  basicAuth,
 });
 
 server.use(app.routeMiddleware);

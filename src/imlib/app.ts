@@ -9,22 +9,17 @@ export default class App {
   #siteMiddleware = new RoutingMiddleware();
   routeMiddleware = this.#siteMiddleware.middleware;
 
-  #db;
-  #sandbox;
   #items!: LiveItemMap;
   timers: NodeJS.Timer[] = [];
   #staged = new Map<string, SerializableObject>();
 
-  constructor(opts: {
-    db: Database,
-    sandbox: object,
-  }) {
-    this.#db = opts.db;
-    this.#sandbox = opts.sandbox;
-  }
+  constructor(
+    private db: Database,
+    private sandbox: object,
+  ) { }
 
   async start() {
-    this.#items = await this.#db.load();
+    this.#items = await this.db.load();
     console.log(`Loaded ${this.#items.size} items`);
     this.rebuild();
   }
@@ -36,7 +31,7 @@ export default class App {
       console.log("Rebuilt site successfully");
       this.pushToDb();
 
-      this.timers?.forEach(clearInterval);
+      this.timers.forEach(clearInterval);
       this.timers = output.timers;
 
       this.#siteMiddleware.routes = output.routes;
@@ -53,7 +48,7 @@ export default class App {
   private pushToDb() {
     if (this.#staged.size > 0) {
       this.applyStagedChangesTo(this.#items);
-      this.#db.save([...this.#staged.keys()]);
+      this.db.save([...this.#staged.keys()]);
     }
   }
 
@@ -72,9 +67,7 @@ export default class App {
     try {
       const items: LiveItemMap = new Map(this.#items);
       this.applyStagedChangesTo(items);
-
-      const updater = new Updater(this);
-      return buildSite(items, updater, this.#sandbox);
+      return buildSite(items, new Updater(this), this.sandbox);
     }
     catch (e) {
       return { error: e }
