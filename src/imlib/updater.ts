@@ -25,7 +25,7 @@ export class Updater {
 
   rebuild() {
     const result = this.#app.rebuild();
-    if ('routes' in result) return result;
+    if ('routes' in result) return true;
     throw result.error;
   }
 

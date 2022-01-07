@@ -9,49 +9,27 @@ Engine input data:
 
 Engine rules (i.e. app.start):
 
-  1. Link items via $type
-  2. Inherit type figures
-  3. Build site structures
-  4. Compute item functions
-  5. Boot all items top-down
-  6. Start timers and routes
-  7. On site.rebuild() goto #1
+  1. Compute item functions
+  2. Call boot item function
+  3. Start timers and routes
+
+  On site.rebuild() goto #1
 
 
 Computing:
 
-  { $eval: string } => returns vm.runInContext(string, sandbox)
-  any other value   => that value (any valid JSON type)
+  For each given value in an item:
+    { $eval: string } => returns vm.runInContext(string, sandbox)
+    any other value   => that value (any valid JSON type)
 
-  All items share the same global context
-    Populated via app.sandbox
-    Resets on each build
+  * Items share a new global context on each build
+  * Each item function has 'this' be the item
+  * All eval contexts have access to JSX
 
-  What 'this' is in each context:
-    Item:   defining item
-    Figure: destination item
-
-  All eval contexts have access to JSX, including:
-    JSX.createElement
-    JSX.fragment
-
-
-Special item fields (all optional):
-
-  $type:str, $figure:obj
-    => for each $type by id
-      => inherit this[k] from type.$figure
-
-  $route:fn, $get:fn, $post:fn, $delete:fn,
-  $put:fn, $patch:fn, $head:fn, $options:fn
-    => if $route evals to non-blank string
-       map that path for each verb-fn present
-
-  $tick:fn & $ms:num
-    => call $tick every $ms
-
-  $boot:fn
-    => run (top-down) during each site build
+  There must be one item with $boot pointing to a function.
+    This function will be called each time the site is built.
+    Input = { items, updater, sandbox }
+    Output = { routes, timers?, [etc] }
 
 
 Item API:
@@ -59,24 +37,17 @@ Item API:
   item[key]   => item.computed[key]
   item.$id    => string
   item.$data  => raw object for item
-  item.$items => items with this direct type
-  item.$type  => item or null
 
 
-Site API:
+Updater API:
 
-  site.items: { id: item }
   site.create(data): new id
   site.update(id, data)
   site.delete(id)
   site.rebuild()
-    tries to build new site
-    if worked
-      pushes db changes
-      routes new site
-      returns new site
-    else
-      throws error
+    pushes db changes
+    routes new site
+    if fails, throws
 
 
 Route API:
