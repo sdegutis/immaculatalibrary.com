@@ -72,7 +72,15 @@ export function buildSite(rawItems: LiveItemMap, updater: Updater, sandbox: any)
 
   // Prepare timers
   if (Array.isArray(timers)) {
-    output.timers = timers.map(({ ms, fn }) => setInterval(fn, ms));
+    try {
+      for (const { ms, fn } of timers) {
+        output.timers.push(setInterval(fn, ms));
+      }
+    }
+    catch (e) {
+      output.timers.forEach(clearInterval);
+      throw e;
+    }
   }
 
   return output;
