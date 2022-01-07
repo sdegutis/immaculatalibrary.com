@@ -1,7 +1,8 @@
 import { randomUUID } from "crypto";
+import { BuildResult, buildSite } from "./build";
 import { Database, LiveItemMap, SerializableObject } from "./db";
 import { RoutingMiddleware } from "./http";
-import { Site } from "./site";
+import { Updater } from "./updater";
 
 export default class App {
 
@@ -11,7 +12,7 @@ export default class App {
   #db;
   #sandbox;
   #items!: LiveItemMap;
-  #site: Site | undefined;
+  timers: NodeJS.Timer[] = [];
   #staged = new Map<string, SerializableObject>();
 
   constructor(opts: {
@@ -30,24 +31,23 @@ export default class App {
 
   rebuild() {
     console.log("Rebuilding site");
-    const result = this.buildNewSite();
-    if ('site' in result) {
+    const output = this.buildNewSite();
+    if ('routes' in output) {
       console.log("Rebuilt site successfully");
       this.pushToDb();
 
-      this.#site?.stop();
-      this.#site = result.site;
-      this.#site.start();
+      this.timers?.forEach(clearInterval);
+      this.timers = output.timers;
 
-      this.#siteMiddleware.routes = this.#site.routes;
-      this.#siteMiddleware.notFoundHandler = this.#site.notFoundPage;
+      this.#siteMiddleware.routes = output.routes;
+      this.#siteMiddleware.notFoundHandler = output.notFoundPage;
     }
     else {
       console.error('Error building site:');
-      console.error(result.error);
+      console.error(output.error);
     }
     this.#staged.clear();
-    return result;
+    return output;
   }
 
   private pushToDb() {
@@ -68,14 +68,13 @@ export default class App {
     }
   }
 
-  private buildNewSite(): { site: Site, viewSite: ViewSite } | { error: any } {
+  private buildNewSite(): BuildResult | { error: any } {
     try {
       const items: LiveItemMap = new Map(this.#items);
       this.applyStagedChangesTo(items);
 
-      const viewSite = new ViewSite(this);
-      const site = new Site(viewSite, items, this.#sandbox);
-      return { site, viewSite };
+      const updater = new Updater(this);
+      return buildSite(items, updater, this.#sandbox);
     }
     catch (e) {
       return { error: e }
@@ -100,40 +99,3 @@ export default class App {
   }
 
 };
-
-export class ViewSite {
-
-  #app;
-  constructor(app: App) {
-    this.#app = app;
-  }
-
-  create(data: object) {
-    if (typeof data !== 'object') throw new Error('site.create() must be given object');
-    const serializable = JSON.parse(JSON.stringify(data));
-    return this.#app.create(serializable);
-  }
-
-  update(id: string, data: object) {
-    if (typeof data !== 'object') throw new Error('site.update() must be given object');
-    const serializable = JSON.parse(JSON.stringify(data));
-    this.#app.put(id, serializable);
-  }
-
-  delete(id: string) {
-    this.#app.put(id, null);
-  }
-
-  rebuild() {
-    const result = this.#app.rebuild();
-    if ('viewSite' in result) return result.viewSite;
-    throw result.error;
-  }
-
-  rebuildIfNeeded() {
-    if (this.#app.hasStagedChanges()) {
-      this.rebuild();
-    }
-  }
-
-}

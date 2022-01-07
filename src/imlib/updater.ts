@@ -1,0 +1,38 @@
+import { App } from ".";
+
+export class Updater {
+
+  #app;
+  constructor(app: App) {
+    this.#app = app;
+  }
+
+  create(data: object) {
+    if (typeof data !== 'object') throw new Error('updater.create() must be given object');
+    const serializable = JSON.parse(JSON.stringify(data));
+    return this.#app.create(serializable);
+  }
+
+  update(id: string, data: object) {
+    if (typeof data !== 'object') throw new Error('updater.update() must be given object');
+    const serializable = JSON.parse(JSON.stringify(data));
+    this.#app.put(id, serializable);
+  }
+
+  delete(id: string) {
+    this.#app.put(id, null);
+  }
+
+  rebuild() {
+    const result = this.#app.rebuild();
+    if ('routes' in result) return result;
+    throw result.error;
+  }
+
+  rebuildIfNeeded() {
+    if (this.#app.hasStagedChanges()) {
+      this.rebuild();
+    }
+  }
+
+}

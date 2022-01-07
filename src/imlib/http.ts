@@ -1,6 +1,6 @@
 import express from 'express';
 import { URLSearchParams } from 'url';
-import { ViewSite } from './app';
+import { Updater } from './updater';
 
 export type AsyncHandler = (req: express.Request, res: express.Response) => Promise<void>;
 
@@ -17,7 +17,6 @@ export class RoutingMiddleware {
     }
 
     handler(req, res).catch(e => {
-      console.error('Error handling error!');
       console.error(e);
       res.status(500).send("An error occurred.");
     });
@@ -25,7 +24,7 @@ export class RoutingMiddleware {
 
 }
 
-export function makeHandler(fn: Function, onRouteError: any, viewSite: ViewSite): AsyncHandler {
+export function makeHandler(fn: Function, onRouteError: any, updater: Updater): AsyncHandler {
   return async (req, res) => {
 
     const request = {
@@ -75,6 +74,6 @@ export function makeHandler(fn: Function, onRouteError: any, viewSite: ViewSite)
       res.json(response.json);
     }
 
-    viewSite.rebuildIfNeeded();
+    updater.rebuildIfNeeded();
   };
 }
