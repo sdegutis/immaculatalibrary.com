@@ -20,7 +20,7 @@ export class Site {
     id: NodeJS.Timer | null,
   }>();
 
-  constructor(viewSite: ViewSite, rawItems: LiveItemMap, sandbox: any) {
+  constructor(site: ViewSite, rawItems: LiveItemMap, sandbox: any) {
     const compiler = new Compiler();
 
     // Compile items
@@ -49,11 +49,7 @@ export class Site {
     const booter = booters[0]!;
 
     // Boot site
-    const result = booter['$boot']({
-      site: viewSite,
-      items: items,
-      sandbox,
-    });
+    const result = booter['$boot']({ site, items, sandbox });
     const routes = result['routes'];
     const timers = result['timers'];
     const notFoundPage = result['notFoundPage'];
@@ -66,13 +62,13 @@ export class Site {
     for (const [path, fn] of Object.entries(routes)) {
       if (typeof fn !== 'function') continue;
       if (!path.match(/^[A-Z]+ \//)) continue;
-      this.routes.set(path, makeHandler(fn, onRouteError, viewSite));
+      this.routes.set(path, makeHandler(fn, onRouteError, site));
     }
     if (this.routes.size === 0) throw new Error('No routes were created.');
 
     // Set 404 handler
     if (typeof notFoundPage === 'function') {
-      this.notFoundPage = makeHandler(notFoundPage, onRouteError, viewSite);
+      this.notFoundPage = makeHandler(notFoundPage, onRouteError, site);
     }
 
     // Prepare timers

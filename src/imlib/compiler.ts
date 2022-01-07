@@ -25,12 +25,11 @@ function createElement(tag: string | Function, attrs: any, ...children: any[]) {
   const attrsArray = Object.entries(attrs);
   const attrsString = (attrsArray.length > 0
     ? ' ' + attrsArray
-      .map(([k, v]) =>
-      (v === true
-        ? k
-        : (v === false || v === null || v === undefined)
-          ? ''
-          : `${k}="${v}"`))
+      .map(([k, v]) => {
+        if (v === true) return k;
+        if (v === false || v === null || v === undefined) return '';
+        return `${k}="${v}"`;
+      })
       .join(' ')
     : '');
 
