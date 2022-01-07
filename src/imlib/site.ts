@@ -44,7 +44,6 @@ export class Site {
     });
 
     // Find booter
-    console.log(viewItems);
     const booters = viewItems.filter(item => typeof item['$boot'] === 'function');
     if (booters.length !== 1) throw new Error(`Must have (1) $boot, got (${booters.length})`);
     const booter = booters[0]!;
