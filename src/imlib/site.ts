@@ -24,38 +24,36 @@ export class Site {
     const compiler = new Compiler();
 
     // Compile items
-    const viewItems: ViewItem[] = [...rawItems].map(([id, raw]) => {
-      const viewItem: ViewItem = Object.create(null);
+    const items: ViewItem[] = [...rawItems].map(([id, raw]) => {
+      const item: ViewItem = Object.create(null);
 
       for (let [key, val] of Object.entries<any>(raw)) {
         if (typeof val?.['$eval'] === 'string') {
           val = compiler.eval(`item[${id}][${key}]`, {
-            this: viewItem,
+            this: item,
             body: val['$eval'],
           });
         }
-        viewItem[key] = val;
+        item[key] = val;
       }
 
-      Object.defineProperty(viewItem, '$id', { value: id, enumerable: true });
-      Object.defineProperty(viewItem, '$data', { value: raw, enumerable: true });
+      Object.defineProperty(item, '$id', { value: id, enumerable: true });
+      Object.defineProperty(item, '$data', { value: raw, enumerable: true });
 
-      return viewItem;
+      return item;
     });
 
     // Find booter
-    const booters = viewItems.filter(item => typeof item['$boot'] === 'function');
+    const booters = items.filter(item => typeof item['$boot'] === 'function');
     if (booters.length !== 1) throw new Error(`Must have (1) $boot, got (${booters.length})`);
     const booter = booters[0]!;
 
     // Boot site
     const result = booter['$boot']({
       site: viewSite,
-      items: viewItems,
+      items: items,
       sandbox,
     });
-
-    // Handle response
     const routes = result['routes'];
     const timers = result['timers'];
     const notFoundPage = result['notFoundPage'];
