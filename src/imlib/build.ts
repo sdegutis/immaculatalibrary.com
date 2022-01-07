@@ -15,7 +15,7 @@ export interface BuildResult {
   timers: NodeJS.Timer[];
 }
 
-export function buildSite(rawItems: LiveItemMap, updater: Updater, sandbox: any): BuildResult {
+export function buildSite(rawItems: LiveItemMap, updater: Updater, sandbox: object): BuildResult {
   const output: BuildResult = {
     routes: new Map<string, AsyncHandler>(),
     timers: [],
