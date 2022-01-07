@@ -27,7 +27,7 @@ export class RoutingMiddleware {
 export function makeHandler(fn: Function, onRouteError: any, updater: Updater): AsyncHandler {
   return async (req, res) => {
 
-    const request = {
+    const input = {
       path: () => req.path,
       query: () => req.query,
       text: () => req.body,
@@ -37,41 +37,41 @@ export function makeHandler(fn: Function, onRouteError: any, updater: Updater): 
       session: req.session,
     };
 
-    let response;
+    let output;
     try {
-      response = await fn(request);
+      output = await fn(input);
     }
     catch (e) {
       if (typeof onRouteError === 'function') {
-        response = onRouteError(request, e);
+        output = onRouteError(input, e);
       }
       else {
         throw e;
       }
     }
 
-    if (typeof response !== 'object') {
-      response = { text: String(response) };
+    if (typeof output !== 'object') {
+      output = { text: String(output) };
     }
 
-    if ('status' in response) {
-      res.status(response.status);
+    if ('status' in output) {
+      res.status(output.status);
     }
 
-    if ('headers' in response) {
-      for (const [k, v] of Object.entries<any>(response.headers)) {
+    if ('headers' in output) {
+      for (const [k, v] of Object.entries<any>(output.headers)) {
         res.setHeader(k, v);
       }
     }
 
-    if ('redirect' in response) {
-      res.redirect(response.redirect);
+    if ('redirect' in output) {
+      res.redirect(output.redirect);
     }
-    else if ('text' in response) {
-      res.send(response.text);
+    else if ('text' in output) {
+      res.send(output.text);
     }
-    else if ('json' in response) {
-      res.json(response.json);
+    else if ('json' in output) {
+      res.json(output.json);
     }
 
     updater.rebuildIfNeeded();
