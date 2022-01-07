@@ -1,48 +1,12 @@
-import App from './app';
+import { ViewSite } from "./app";
 import { Compiler } from "./compiler";
 import { LiveItemMap } from "./db";
 import { AsyncHandler, makeHandler } from "./http";
-import { Item, ViewItem } from "./item";
 
-const verbs = ['get', 'post', 'delete', 'put', 'patch', 'head', 'options'];
-
-export class ViewSite {
-
-  items: { [id: string]: ViewItem } = Object.create(null);
-
-  #app;
-  constructor(app: App) {
-    this.#app = app;
-  }
-
-  create(data: object) {
-    if (typeof data !== 'object') throw new Error('site.create() must be given object');
-    const serializable = JSON.parse(JSON.stringify(data));
-    return this.#app.create(serializable);
-  }
-
-  update(id: string, data: object) {
-    if (typeof data !== 'object') throw new Error('site.update() must be given object');
-    const serializable = JSON.parse(JSON.stringify(data));
-    this.#app.put(id, serializable);
-  }
-
-  delete(id: string) {
-    this.#app.put(id, null);
-  }
-
-  rebuild() {
-    const result = this.#app.rebuild();
-    if (result.site) return result.site.viewSite;
-    throw result.error;
-  }
-
-  rebuildIfNeeded() {
-    if (this.#app.hasStagedChanges()) {
-      this.rebuild();
-    }
-  }
-
+interface ViewItem {
+  $id: string;
+  $data: { [key: string]: any };
+  [key: string]: any;
 }
 
 export class Site {
@@ -56,94 +20,69 @@ export class Site {
     id: NodeJS.Timer | null,
   }>();
 
-  constructor(readonly viewSite: ViewSite, items: LiveItemMap, compiler: Compiler) {
-    const itemsById = new Map<string, Item>();
+  constructor(viewSite: ViewSite, rawItems: LiveItemMap, sandbox: any) {
+    const compiler = new Compiler();
 
-    // Create smart items
-    for (const [id, raw] of items) {
-      const item = new Item(id, raw);
-      itemsById.set(item.id, item);
-    }
+    // Compile items
+    const viewItems: ViewItem[] = [...rawItems].map(([id, raw]) => {
+      const viewItem: ViewItem = Object.create(null);
 
-    // Link with type items
-    for (const [id, item] of itemsById) {
-      const typeId = item.raw['$type'];
-      if (typeof typeId === 'string') {
-        const type = itemsById.get(typeId);
-        if (type !== item) {
-          item.type = type ?? null;
+      for (let [key, val] of Object.entries<any>(raw)) {
+        if (typeof val?.['$eval'] === 'string') {
+          val = compiler.eval(`item[${id}][${key}]`, {
+            this: viewItem,
+            body: val['$eval'],
+          });
         }
+        viewItem[key] = val;
       }
+
+      Object.defineProperty(viewItem, '$id', { value: id, enumerable: true });
+      Object.defineProperty(viewItem, '$data', { value: raw, enumerable: true });
+
+      return viewItem;
+    });
+
+    // Find booter
+    console.log(viewItems);
+    const booters = viewItems.filter(item => typeof item['$boot'] === 'function');
+    if (booters.length !== 1) throw new Error(`Must have (1) $boot, got (${booters.length})`);
+    const booter = booters[0]!;
+
+    // Boot site
+    const result = booter['$boot']({
+      site: viewSite,
+      items: viewItems,
+      sandbox,
+    });
+
+    // Handle response
+    const routes = result['routes'];
+    const timers = result['timers'];
+    const notFoundPage = result['notFoundPage'];
+    const onRouteError = result['onRouteError'];
+
+    // Add routes
+    if (typeof routes !== 'object') {
+      throw new Error(`Expected routes object, got ${typeof routes}`);
     }
-
-    // Break type cycles
-    for (const [id, item] of itemsById) {
-      const seen = new Set([item.id]);
-      for (let node: Item | null = item; node; node = node.type) {
-        if (node.type && seen.has(node.type.id)) {
-          node.type = null;
-          break;
-        }
-        seen.add(node.id);
-      }
+    for (const [path, fn] of Object.entries(routes)) {
+      if (typeof fn !== 'function') continue;
+      if (!path.match(/^[A-Z]+ \//)) continue;
+      this.routes.set(path, makeHandler(fn, onRouteError, viewSite));
     }
+    if (this.routes.size === 0) throw new Error('No routes were created.');
 
-    // Set sub-items
-    for (const [id, item] of itemsById) {
-      if (item.type) item.type.items.push(item);
-    }
-
-    // Inherit figures
-    for (const [id, item] of itemsById) {
-      Object.assign(item.viewItem, item.type?.raw['$figure']);
-      Object.assign(item.viewItem, item.raw);
-    }
-
-    // Build site.items
-    for (const [id, item] of itemsById) {
-      this.viewSite.items[id] = item.viewItem;
-    }
-
-    // Compute functions and prepare view-items
-    for (const [id, item] of itemsById) {
-      item.compute(compiler, item.viewItem);
-      item.finishViewItem();
-    }
-
-    // Boot all items top-down
-    for (const [id, item] of itemsById) {
-      if (item.type === null) {
-        item.boot(this.viewSite);
-      }
-    }
-
-    const errorHandler = compiler.context['$onRouteError'];
-    const notFoundPage = compiler.context['$notFoundPage'];
-
+    // Set 404 handler
     if (typeof notFoundPage === 'function') {
-      this.notFoundPage = makeHandler(notFoundPage, errorHandler, viewSite);
+      this.notFoundPage = makeHandler(notFoundPage, onRouteError, viewSite);
     }
 
     // Prepare timers
-    for (const [id, item] of itemsById) {
-      const tick = item.viewItem['$tick'];
-      const ms = item.viewItem['$ms'];
-      if (typeof tick === 'function' && typeof ms === 'number') {
-        this.#timers.add({ fn: tick, ms, id: null });
-      }
-    }
-
-    // Add routes
-    for (const [id, item] of itemsById) {
-      const path = item.viewItem['$route']?.();
-      if (path) {
-        for (const verb of verbs) {
-          const fn = item.viewItem['$' + verb];
-          if (fn) {
-            const VERB = verb.toUpperCase();
-            const key = `${VERB} ${path}`;
-            this.routes.set(key, makeHandler(fn, errorHandler, viewSite));
-          }
+    if (Array.isArray(timers)) {
+      for (const { ms, tick } of timers) {
+        if (typeof tick === 'function' && typeof ms === 'number') {
+          this.#timers.add({ fn: tick, ms, id: null });
         }
       }
     }

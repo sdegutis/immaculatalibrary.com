@@ -39,10 +39,10 @@ const markdown = new MarkdownIt({
   breaks: true,
 });
 
-// const db = new imlib.JsonDirDatabase('data');
+const db = new imlib.JsonFileDatabase('data.json');
 
-const db = new imlib.S3Database('imlibv3');
-db.saveRegularly();
+// const db = new imlib.S3Database('imlibv3');
+// db.saveRegularly();
 
 const app = new imlib.App({
   db,

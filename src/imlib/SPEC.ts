@@ -6,54 +6,38 @@ type EngineInput = {
 
 type ItemData = {
 
-  $type?: string;
-  $figure?: ItemData;
-
-  $route?: ItemFunction<(this: Item) => string>;
-  $get?: RouteFunction;
-  $post?: RouteFunction;
-  $delete?: RouteFunction;
-  $put?: RouteFunction;
-  $patch?: RouteFunction;
-  $head?: RouteFunction;
-  $options?: RouteFunction;
-
-  $tick?: ItemFunction<(this: Item) => void>;
-  $ms?: number;
-
-  $boot?: ItemFunction<(this: Item, site: Site) => void>;
+  $boot?: ItemFunction<(this: CompiledItem, input: {
+    site: Site,
+    items: CompiledItem[],
+    sandbox: any,
+  }) => {
+    routes: Record<RouteString, (input: RouteInput) => RouteOutput>;
+    timers?: { ms: number, fn: () => void }[];
+    notFoundPage?: (input: RouteInput) => RouteOutput;
+    onRouteError?: (input: RouteInput, error: any) => RouteOutput;
+  }>;
 
   [key: string]: ItemFunction<any> | any;
 
 };
 
-type ItemFunction<T> = {
-  $eval: string;
+type ItemFunction<T extends (this: CompiledItem, ...args: any) => any> = {
+  $eval: string & T;
 };
 
-type Item = {
+type CompiledItem = {
   $id: string;
   $data: ItemData;
-  $items: Item[];
-  $type: Item | null;
 
   [key: string]: any;
 };
 
 type Site = {
-  items: { [id: string]: Item };
-
   create(data: ItemData): string;
   update(id: string, data: ItemData): void;
   delete(id: string): void;
-
   rebuild(): Site;
 };
-
-type RouteFunction = ItemFunction<
-  (this: Item, input: RouteInput) =>
-    Promise<RouteOutput>
->;
 
 type RouteInput = {
   query(): URLSearchParams;
@@ -70,4 +54,7 @@ type RouteOutput = string | {
   redirect?: string;
   text?: string;
   json?: object;
-};
+} | Promise<RouteOutput>;
+
+type HttpVerb = 'GET' | 'POST' | 'DELETE' | 'PUT' | 'PATCH' | 'HEAD' | 'OPTIONS';
+type RouteString = `${HttpVerb} /${string}`;

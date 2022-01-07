@@ -1,8 +1,7 @@
 import { randomUUID } from "crypto";
-import { Compiler } from "./compiler";
 import { Database, LiveItemMap, SerializableObject } from "./db";
 import { RoutingMiddleware } from "./http";
-import { Site, ViewSite } from "./site";
+import { Site } from "./site";
 
 export default class App {
 
@@ -31,13 +30,13 @@ export default class App {
 
   rebuild() {
     console.log("Rebuilding site");
-    const { site, error } = this.buildNewSite();
-    if (site) {
+    const result = this.buildNewSite();
+    if ('site' in result) {
       console.log("Rebuilt site successfully");
       this.pushToDb();
 
       this.#site?.stop();
-      this.#site = site;
+      this.#site = result.site;
       this.#site.start();
 
       this.#siteMiddleware.routes = this.#site.routes;
@@ -45,10 +44,10 @@ export default class App {
     }
     else {
       console.error('Error building site:');
-      console.error(error);
+      console.error(result.error);
     }
     this.#staged.clear();
-    return { site, error };
+    return result;
   }
 
   private pushToDb() {
@@ -69,15 +68,14 @@ export default class App {
     }
   }
 
-  private buildNewSite(): { site: Site, error?: undefined } | { site?: undefined, error: any } {
+  private buildNewSite(): { site: Site, viewSite: ViewSite } | { error: any } {
     try {
       const items: LiveItemMap = new Map(this.#items);
       this.applyStagedChangesTo(items);
 
       const viewSite = new ViewSite(this);
-      const compiler = new Compiler(this.#sandbox);
-      const site = new Site(viewSite, items, compiler);
-      return { site };
+      const site = new Site(viewSite, items, this.#sandbox);
+      return { site, viewSite };
     }
     catch (e) {
       return { error: e }
@@ -102,3 +100,40 @@ export default class App {
   }
 
 };
+
+export class ViewSite {
+
+  #app;
+  constructor(app: App) {
+    this.#app = app;
+  }
+
+  create(data: object) {
+    if (typeof data !== 'object') throw new Error('site.create() must be given object');
+    const serializable = JSON.parse(JSON.stringify(data));
+    return this.#app.create(serializable);
+  }
+
+  update(id: string, data: object) {
+    if (typeof data !== 'object') throw new Error('site.update() must be given object');
+    const serializable = JSON.parse(JSON.stringify(data));
+    this.#app.put(id, serializable);
+  }
+
+  delete(id: string) {
+    this.#app.put(id, null);
+  }
+
+  rebuild() {
+    const result = this.#app.rebuild();
+    if ('viewSite' in result) return result.viewSite;
+    throw result.error;
+  }
+
+  rebuildIfNeeded() {
+    if (this.#app.hasStagedChanges()) {
+      this.rebuild();
+    }
+  }
+
+}
