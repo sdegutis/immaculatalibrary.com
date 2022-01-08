@@ -36,8 +36,8 @@ export function buildSite(rawItems: LiveItemMap, updater: Updater, sandbox: obje
       }
     }
 
-    Object.defineProperty(item, '$id', { value: id, enumerable: true });
-    Object.defineProperty(item, '$data', { value: raw, enumerable: true });
+    Object.defineProperty(item, '$id', { value: id });
+    Object.defineProperty(item, '$data', { value: raw });
 
     return item;
   });
