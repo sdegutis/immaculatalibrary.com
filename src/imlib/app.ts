@@ -15,7 +15,7 @@ export default class App {
 
   constructor(
     private db: Database,
-    private sandbox: object,
+    private external: object,
   ) { }
 
   async start() {
@@ -67,7 +67,7 @@ export default class App {
     try {
       const items: LiveItemMap = new Map(this.#items);
       this.applyStagedChangesTo(items);
-      return buildSite(items, new Updater(this), this.sandbox);
+      return buildSite(items, new Updater(this), this.external);
     }
     catch (e) {
       return { error: e }

@@ -15,7 +15,7 @@ export interface BuildResult {
   timers: NodeJS.Timer[];
 }
 
-export function buildSite(rawItems: LiveItemMap, updater: Updater, sandbox: object): BuildResult {
+export function buildSite(rawItems: LiveItemMap, updater: Updater, external: object): BuildResult {
   const output: BuildResult = {
     routes: new Map<string, AsyncHandler>(),
     timers: [],
@@ -48,7 +48,7 @@ export function buildSite(rawItems: LiveItemMap, updater: Updater, sandbox: obje
   const booter = booters[0]!;
 
   // Boot site
-  const result = booter['$boot']({ updater, items, sandbox });
+  const result = booter['$boot']({ items, updater, external });
   const routes = result['routes'];
   const timers = result['timers'];
   const notFoundPage = result['notFoundPage'];

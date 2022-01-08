@@ -2,9 +2,9 @@
 
 Engine input data:
 
-  { [key: string]: object }[]
-
-  Used for routes, views, data, helpers, etc.
+  Items: JsonObject[]
+  Used for routes, views, user data, helpers, logging, etc.
+  Basically, anything you want to persist.
 
 
 Engine rules (i.e. app.start):
@@ -19,22 +19,22 @@ Engine rules (i.e. app.start):
 Computing:
 
   For each given value in an item:
-    { $eval: string } => returns vm.runInContext(string, sandbox)
-    any other value   => that value (any valid JSON type)
+    { $eval: string } => maps to vm.runInContext(string, context)
+    any other value   => keeps the same value (any valid JSON type)
 
   * Items share a new global context on each build
-  * Each item function has 'this' be the item
-  * All eval contexts have access to JSX
+  * On each item function, 'this' is the item
+  * All item functions can use JSX and TypeScript syntax
 
-  There must be one item with $boot pointing to a function.
-    This function will be called each time the site is built.
-    Input = { items, updater, sandbox }
-    Output = { routes, timers?, [etc] }
+  There must be one item with an item function called $boot.
+    This function will be called as soon as the site is built.
+    Input = { items, updater, external }
+    Output = { routes, timers?, notFoundPage?, onRouteError? }
 
 
 Item API:
 
-  item[key]   => item.computed[key]
+  item[key]   => computed[val]
   item.$id    => string
   item.$data  => raw object for item
 
@@ -45,15 +45,14 @@ Updater API:
   site.update(id, data)
   site.delete(id)
   site.rebuild()
-    pushes db changes
-    routes new site
-    if fails, throws
+    if no error thrown:
+      pushes db changes
+      starts up new site
 
 
 Route API:
 
   Input parameter:
-
     query(): URLSearchParams from query
     text(): string from body
     json(): object from body
