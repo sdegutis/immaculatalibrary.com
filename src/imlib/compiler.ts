@@ -62,7 +62,7 @@ function compileWithJsx(code: string) {
   const result = sucrase.transform(code, {
     jsxPragma: 'JSX.createElement',
     jsxFragmentPragma: 'JSX.fragment',
-    transforms: ['jsx'],
+    transforms: ['jsx', 'typescript'],
     disableESTransforms: true,
     production: true,
   });
