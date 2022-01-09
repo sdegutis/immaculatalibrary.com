@@ -7,7 +7,7 @@ module Api {
 
     [key: string]: any | ItemFunction<any>;
 
-    $boot?: ItemFunction<(this: Item, site: {
+    $$boot?: ItemFunction<(this: Item, site: {
       items: Item[],
       updater: Updater,
       external: any,
@@ -26,7 +26,7 @@ module Api {
   }
 
   interface ItemFunction<T extends (this: Item) => any> {
-    $eval: string & T;
+    $$eval: string & T;
   }
 
   type HttpVerb = Uppercase<string>;

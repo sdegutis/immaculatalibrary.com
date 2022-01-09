@@ -19,14 +19,14 @@ Engine rules (i.e. app.start):
 Compiling item functions:
 
   For each given value in an item:
-    { $eval: string } => maps to vm.runInContext(string, context)
+    { $$eval: string } => maps to vm.runInContext(string, context)
     any other value   => keeps the same value (any valid JSON type)
 
   * Items share a new global context on each build
   * On each item function, 'this' is the item
   * All item functions can use JSX and TypeScript syntax
 
-  There must be one item with an item function called $boot.
+  There must be one item with an item function called $$boot.
     This function will be called as soon as the site is built.
     Input = { items, updater, external }
     Output = { routes, timers?, notFoundPage?, onRouteError?, onTimerError? }
@@ -34,9 +34,9 @@ Compiling item functions:
 
 Item API:
 
-  item[key]   => compile(val.$eval) or val
-  item.$id    => string
-  item.$data  => raw object for item
+  item[key]   => compile(val.$$eval) or val
+  item.$$id    => string
+  item.$$data  => raw object for item
 
 
 Updater API:

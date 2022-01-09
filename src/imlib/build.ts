@@ -4,8 +4,8 @@ import { AsyncHandler, makeHandler } from "./http";
 import { Updater } from "./updater";
 
 interface Item {
-  $id: string;
-  $data: { [key: string]: any };
+  $$id: string;
+  $$data: { [key: string]: any };
   [key: string]: any;
 }
 
@@ -28,29 +28,29 @@ export function buildSite(rawItems: LiveItemMap, updater: Updater, external: obj
     const item: Item = Object.create(null);
 
     for (let [key, val] of Object.entries<any>(raw)) {
-      if (typeof val?.['$eval'] === 'string') {
+      if (typeof val?.['$$eval'] === 'string') {
         item[key] = compiler.eval(`item[${id}][${key}]`, {
           this: item,
-          body: val['$eval'],
+          body: val['$$eval'],
         });
       }
     }
 
-    Object.defineProperty(item, '$id', { value: id });
-    Object.defineProperty(item, '$data', { value: raw });
+    Object.defineProperty(item, '$$id', { value: id });
+    Object.defineProperty(item, '$$data', { value: raw });
 
     return item;
   });
 
   // Find booter
-  const booters = items.filter(item => typeof item['$boot'] === 'function');
+  const booters = items.filter(item => typeof item['$$boot'] === 'function');
   if (booters.length !== 1) {
-    throw new Error(`Must have (1) $boot, got (${booters.length})`);
+    throw new Error(`Must have (1) $$boot, got (${booters.length})`);
   }
   const booter = booters[0]!;
 
   // Boot site
-  const result = booter['$boot']({ items, updater, external });
+  const result = booter['$$boot']({ items, updater, external });
   const routes = result['routes'];
   const timers = result['timers'];
   const notFoundPage = result['notFoundPage'];
