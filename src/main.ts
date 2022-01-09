@@ -39,7 +39,7 @@ const markdown = new MarkdownIt({
 
 const db = new purity.JsonFileDatabase('data.json');
 
-// const db = new imlib.S3Database('imlibv3');
+// const db = new purity.S3Database('imlibv3');
 // db.saveRegularly();
 
 const app = new purity.App(db, {

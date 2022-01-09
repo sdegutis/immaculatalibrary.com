@@ -1,12 +1,12 @@
+import * as purity from '@sdegutis/purity';
 import 'dotenv/config';
 import 'source-map-support/register';
-import * as imlib from './imlib';
 
 main();
 async function main() {
 
-  const oldDb = new imlib.JsonDirDatabase('data');
-  const newDb = new imlib.S3Database('imlibv3');
+  const oldDb = new purity.JsonDirDatabase('data');
+  const newDb = new purity.S3Database('imlibv3');
 
   const oldItems = await oldDb.load();
   const newItems = await newDb.load();
