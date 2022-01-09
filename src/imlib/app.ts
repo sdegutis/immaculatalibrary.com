@@ -1,5 +1,5 @@
 import { randomUUID } from "crypto";
-import { BuildResult, buildSite } from "./build";
+import { buildSite } from "./build";
 import { Database, LiveItemMap, SerializableObject } from "./db";
 import { RoutingMiddleware } from "./http";
 import { Updater } from "./updater";
@@ -26,30 +26,24 @@ export default class App {
 
   rebuild() {
     console.log("Rebuilding site");
-    const output = this.buildNewSite();
-    if ('routes' in output) {
-      console.log("Rebuilt site successfully");
-      this.pushToDb();
 
-      this.timers.forEach(clearInterval);
-      this.timers = output.timers;
+    const tryingItems: LiveItemMap = new Map(this.#items);
+    this.applyStagedChangesTo(tryingItems);
+    const newSite = buildSite(tryingItems, new Updater(this), this.external);
 
-      this.#siteMiddleware.routes = output.routes;
-      this.#siteMiddleware.notFoundHandler = output.notFoundPage;
-    }
-    else {
-      console.error('Error building site:');
-      console.error(output.error);
-    }
-    this.#staged.clear();
-    return output;
-  }
+    console.log("Rebuilt site successfully");
 
-  private pushToDb() {
     if (this.#staged.size > 0) {
       this.applyStagedChangesTo(this.#items);
+      this.#staged.clear();
       this.db.save([...this.#staged.keys()]);
     }
+
+    this.timers.forEach(clearInterval);
+    this.timers = newSite.timers;
+
+    this.#siteMiddleware.routes = newSite.routes;
+    this.#siteMiddleware.notFoundHandler = newSite.notFoundPage;
   }
 
   private applyStagedChangesTo(items: LiveItemMap) {
@@ -63,17 +57,6 @@ export default class App {
     }
   }
 
-  private buildNewSite(): BuildResult | { error: any } {
-    try {
-      const items: LiveItemMap = new Map(this.#items);
-      this.applyStagedChangesTo(items);
-      return buildSite(items, new Updater(this), this.external);
-    }
-    catch (e) {
-      return { error: e }
-    }
-  }
-
   hasStagedChanges() {
     return this.#staged.size > 0;
   }
@@ -83,7 +66,7 @@ export default class App {
     do { id = randomUUID() }
     while (this.#items.has(id) && this.#staged.has(id));
 
-    this.#staged.set(id, JSON.parse(JSON.stringify(data)));
+    this.put(id, data);
     return id;
   }
 

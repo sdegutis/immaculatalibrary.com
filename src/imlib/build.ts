@@ -44,7 +44,9 @@ export function buildSite(rawItems: LiveItemMap, updater: Updater, external: obj
 
   // Find booter
   const booters = items.filter(item => typeof item['$boot'] === 'function');
-  if (booters.length !== 1) throw new Error(`Must have (1) $boot, got (${booters.length})`);
+  if (booters.length !== 1) {
+    throw new Error(`Must have (1) $boot, got (${booters.length})`);
+  }
   const booter = booters[0]!;
 
   // Boot site

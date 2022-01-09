@@ -40,6 +40,7 @@ export function makeHandler(fn: Function, onRouteError: any, updater: Updater): 
     let output;
     try {
       output = await fn(input);
+      updater.rebuildIfNeeded();
     }
     catch (e) {
       if (typeof onRouteError === 'function') {
@@ -73,7 +74,5 @@ export function makeHandler(fn: Function, onRouteError: any, updater: Updater): 
     else if ('json' in output) {
       res.json(output.json);
     }
-
-    updater.rebuildIfNeeded();
   };
 }
