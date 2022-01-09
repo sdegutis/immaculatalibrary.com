@@ -12,10 +12,11 @@ module Api {
       updater: Updater,
       external: any,
     }) => {
-      routes: Record<Route, RouteHandler>,
+      routes: Record<Route, (input: RouteInput) => RouteOutput>,
       timers?: { ms: number, fn: Function }[],
-      notFoundPage?: RouteHandler,
-      onRouteError?: RouteHandler,
+      notFoundPage?: (input: RouteInput) => RouteOutput,
+      onRouteError?: (input: RouteInput, error: any) => RouteOutput,
+      onTimerError?: (error: any) => void,
     }>;
 
   }
@@ -31,8 +32,6 @@ module Api {
   type HttpVerb = Uppercase<string>;
   type Route = `${HttpVerb} /${string}`
 
-  type RouteHandler = (input: RouteInput) => RouteOutput | Promise<RouteOutput>;
-
   type RouteInput = {
     path: () => string,
     query: () => URLSearchParams,
@@ -43,7 +42,7 @@ module Api {
     session: unknown,
   };
 
-  type RouteOutput = {
+  type RouteOutput = Promise<RouteOutput> | {
     status?: number,
     headers?: { [key: string]: string },
     data?: any,

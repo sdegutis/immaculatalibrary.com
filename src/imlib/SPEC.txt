@@ -29,7 +29,7 @@ Computing:
   There must be one item with an item function called $boot.
     This function will be called as soon as the site is built.
     Input = { items, updater, external }
-    Output = { routes, timers?, notFoundPage?, onRouteError? }
+    Output = { routes, timers?, notFoundPage?, onRouteError?, onTimerError? }
 
 
 Item API:

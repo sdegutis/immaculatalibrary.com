@@ -45,6 +45,7 @@ const db = new imlib.JsonFileDatabase('data.json');
 const app = new imlib.App(db, {
   util,
   JSON,
+  console,
   markdown,
   bcrypt,
   Buffer,

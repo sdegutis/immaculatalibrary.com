@@ -55,6 +55,7 @@ export function buildSite(rawItems: LiveItemMap, updater: Updater, external: obj
   const timers = result['timers'];
   const notFoundPage = result['notFoundPage'];
   const onRouteError = result['onRouteError'];
+  const onTimerError = result['onTimerError'] ?? ((e: any) => { throw e });
 
   // Add routes
   if (typeof routes !== 'object') {
@@ -76,7 +77,19 @@ export function buildSite(rawItems: LiveItemMap, updater: Updater, external: obj
   if (Array.isArray(timers)) {
     try {
       for (const { ms, fn } of timers) {
-        output.timers.push(setInterval(fn, ms));
+        output.timers.push(setInterval(() => {
+          try {
+            fn();
+          }
+          catch (e) {
+            try {
+              onTimerError(e);
+            }
+            catch (e) {
+              console.error('Error handling timer error:', e);
+            }
+          }
+        }, ms));
       }
     }
     catch (e) {
