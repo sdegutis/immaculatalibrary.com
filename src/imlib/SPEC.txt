@@ -9,14 +9,14 @@ Engine input data:
 
 Engine rules (i.e. app.start):
 
-  1. Compute item functions
+  1. Compile item functions
   2. Call boot item function
   3. Start timers and routes
 
   On site.rebuild() goto #1
 
 
-Computing:
+Compiling item functions:
 
   For each given value in an item:
     { $eval: string } => maps to vm.runInContext(string, context)
@@ -34,7 +34,7 @@ Computing:
 
 Item API:
 
-  item[key]   => computed[val]
+  item[key]   => compile(val.$eval) or val
   item.$id    => string
   item.$data  => raw object for item
 
