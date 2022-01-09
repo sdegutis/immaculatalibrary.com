@@ -43,15 +43,10 @@ module Api {
     session: unknown,
   };
 
-  type RouteOutput = ({
-    redirect: string;
-  } | {
-    text: any;
-  } | {
-    json: object;
-  }) & {
+  type RouteOutput = {
     status?: number,
     headers?: { [key: string]: string },
+    data?: any,
   };
 
 }

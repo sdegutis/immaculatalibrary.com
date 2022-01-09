@@ -51,28 +51,8 @@ export function makeHandler(fn: Function, onRouteError: any, updater: Updater): 
       }
     }
 
-    if (typeof output !== 'object') {
-      output = { text: String(output) };
-    }
-
-    if ('status' in output) {
-      res.status(output.status);
-    }
-
-    if ('headers' in output) {
-      for (const [k, v] of Object.entries<any>(output.headers)) {
-        res.setHeader(k, v);
-      }
-    }
-
-    if ('redirect' in output) {
-      res.redirect(output.redirect);
-    }
-    else if ('text' in output) {
-      res.send(output.text);
-    }
-    else if ('json' in output) {
-      res.json(output.json);
-    }
+    res.status(output['status'] ?? 200);
+    res.header(output['headers'] ?? {});
+    res.send(output['data'] ?? '');
   };
 }

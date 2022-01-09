@@ -60,10 +60,8 @@ Route API:
     headers(): express.js headers object
     session: object
 
-  return Promise<string | {
+  return Promise<{
     status?: number
     headers?: object
-    (redirect: string |
-     text: string |
-     json: object)
+    data?: any
   }>
