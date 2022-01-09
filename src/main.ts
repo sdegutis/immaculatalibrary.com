@@ -1,8 +1,6 @@
-import basicAuth from 'basic-auth';
 import bcrypt from 'bcryptjs';
 import cookieSession from 'cookie-session';
 import 'dotenv/config';
-import escapeHtml from 'escape-html';
 import express from 'express';
 import MarkdownIt from 'markdown-it';
 import 'source-map-support/register';
@@ -47,11 +45,9 @@ const db = new imlib.JsonFileDatabase('data.json');
 const app = new imlib.App(db, {
   util,
   JSON,
-  escapeHtml,
   markdown,
   bcrypt,
   Buffer,
-  basicAuth,
 });
 
 server.use(app.routeMiddleware);
