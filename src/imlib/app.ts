@@ -10,7 +10,7 @@ export default class App {
   routeMiddleware = this.#siteMiddleware.middleware;
 
   #items!: LiveItemMap;
-  timers: NodeJS.Timer[] = [];
+  #timers: NodeJS.Timer[] = [];
   #staged = new Map<string, SerializableObject>();
 
   constructor(
@@ -46,8 +46,8 @@ export default class App {
       this.db.save([...this.#staged.keys()]);
     }
 
-    this.timers.forEach(clearInterval);
-    this.timers = newSite.timers;
+    this.#timers.forEach(clearInterval);
+    this.#timers = newSite.timers;
 
     this.#siteMiddleware.routes = newSite.routes;
     this.#siteMiddleware.notFoundHandler = newSite.notFoundPage;
