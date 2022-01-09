@@ -1,12 +1,13 @@
-import * as purity from '@sdegutis/purity';
-import bcrypt from 'bcryptjs';
-import cookieSession from 'cookie-session';
-import 'dotenv/config';
-import express from 'express';
-import MarkdownIt from 'markdown-it';
-import 'source-map-support/register';
-import { URLSearchParams } from 'url';
-import util from 'util';
+const purity = require('@puritylib/purity');
+const dotenv = require('dotenv');
+const bcrypt = require('bcryptjs');
+const cookieSession = require('cookie-session');
+const express = require('express');
+const MarkdownIt = require('markdown-it');
+const { URLSearchParams } = require('url');
+const util = require('util');
+
+dotenv.config();
 
 const port = 8080;
 
@@ -14,7 +15,7 @@ const server = express();
 
 server.set('trust proxy', 1);
 
-server.set('query parser', (s: string | null) => new URLSearchParams(s ?? ''));
+server.set('query parser', (s) => new URLSearchParams(s ?? ''));
 
 server.use(express.text({ type: '*/*', limit: '100mb' }));
 

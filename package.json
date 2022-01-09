@@ -2,33 +2,22 @@
   "name": "immaculatalibrary-v3",
   "version": "1.0.0",
   "description": "",
-  "main": "out/main.js",
+  "main": "src/main.js",
   "scripts": {
-    "build": "tsc",
-    "transfer": "node out/transfer.js",
-    "start": "node out/main.js",
-    "watch": "tsc --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "transfer": "node src/transfer.js",
+    "start": "node src/main.js"
   },
   "keywords": [],
   "author": "Steven Degutis",
   "license": "TBD",
   "dependencies": {
     "@aws-sdk/client-s3": "^3.45.0",
-    "@sdegutis/purity": "^1.0.0",
+    "@puritylib/purity": "^1.0.0",
     "bcryptjs": "^2.4.3",
     "cookie-session": "^1.4.0",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "markdown-it": "^12.2.0",
-    "source-map-support": "^0.5.21",
-    "sucrase": "^3.20.3"
-  },
-  "nodemonConfig": {
-    "watch": [
-      "out",
-      "data.json"
-    ]
+    "markdown-it": "^12.2.0"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
