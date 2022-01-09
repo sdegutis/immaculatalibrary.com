@@ -2,11 +2,7 @@
   "name": "immaculatalibrary-v3",
   "version": "1.0.0",
   "description": "",
-  "main": "src/main.js",
-  "scripts": {
-    "transfer": "node src/transfer.js",
-    "start": "node src/main.js"
-  },
+  "main": "main.js",
   "keywords": [],
   "author": "Steven Degutis",
   "license": "TBD",
