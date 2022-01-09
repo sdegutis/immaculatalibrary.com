@@ -8,20 +8,20 @@ export class Updater {
   }
 
   create(data: object) {
-    if (typeof data !== 'object') throw new Error('updater.create(...) must be given object');
+    if (typeof data !== 'object') throw new Error('data must be object or null');
     const serializable = JSON.parse(JSON.stringify(data));
     return this.#app.create(serializable);
   }
 
   update(id: string, data: object) {
-    if (typeof id !== 'string') throw new Error('updater.update(...) must be given string id');
-    if (typeof data !== 'object') throw new Error('updater.update(...) must be given object');
+    if (typeof id !== 'string') throw new Error('id must be string');
+    if (typeof data !== 'object') throw new Error('data must be object or null');
     const serializable = JSON.parse(JSON.stringify(data));
     this.#app.put(id, serializable);
   }
 
   delete(id: string) {
-    if (typeof id !== 'string') throw new Error('updater.delete(...) must be given string id');
+    if (typeof id !== 'string') throw new Error('id must be string');
     this.#app.put(id, null);
   }
 
