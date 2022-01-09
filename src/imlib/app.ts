@@ -1,5 +1,5 @@
 import { randomUUID } from "crypto";
-import { buildSite } from "./build";
+import { BuildResult, buildSite } from "./build";
 import { Database, LiveItemMap, SerializableObject } from "./db";
 import { RoutingMiddleware } from "./http";
 import { Updater } from "./updater";
@@ -29,7 +29,14 @@ export default class App {
 
     const tryingItems: LiveItemMap = new Map(this.#items);
     this.applyStagedChangesTo(tryingItems);
-    const newSite = buildSite(tryingItems, new Updater(this), this.external);
+    let newSite: BuildResult;
+    try {
+      newSite = buildSite(tryingItems, new Updater(this), this.external);
+    }
+    catch (e) {
+      this.#staged.clear();
+      throw e;
+    }
 
     console.log("Rebuilt site successfully");
 
