@@ -1,3 +1,4 @@
+import * as purity from '@sdegutis/purity';
 import bcrypt from 'bcryptjs';
 import cookieSession from 'cookie-session';
 import 'dotenv/config';
@@ -6,7 +7,6 @@ import MarkdownIt from 'markdown-it';
 import 'source-map-support/register';
 import { URLSearchParams } from 'url';
 import util from 'util';
-import * as imlib from './imlib';
 
 const port = 8080;
 
@@ -37,12 +37,12 @@ const markdown = new MarkdownIt({
   breaks: true,
 });
 
-const db = new imlib.JsonFileDatabase('data.json');
+const db = new purity.JsonFileDatabase('data.json');
 
 // const db = new imlib.S3Database('imlibv3');
 // db.saveRegularly();
 
-const app = new imlib.App(db, {
+const app = new purity.App(db, {
   util,
   JSON,
   console,

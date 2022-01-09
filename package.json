@@ -15,6 +15,7 @@
   "license": "TBD",
   "dependencies": {
     "@aws-sdk/client-s3": "^3.45.0",
+    "@sdegutis/purity": "^1.0.0",
     "bcryptjs": "^2.4.3",
     "cookie-session": "^1.4.0",
     "dotenv": "^10.0.0",
