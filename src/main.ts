@@ -7,22 +7,39 @@ import vm from 'vm';
 
 class Module {
 
-  exports = Object.create(null);
-  ran = false;
+  public exports = Object.create(null);
+  private ran = false;
+  private runModule!: Function;
 
   constructor(
+    private moduleFile: File,
     private moduleDir: Dir,
-    private runModule: Function,
     private runtime: Runtime,
-    private fromPath: string,
   ) { }
 
   run() {
     if (!this.ran) {
+      const rawCode = this.moduleFile.buffer.toString('utf8');
+      const { code } = sucrase.transform(rawCode, {
+        jsxPragma: 'JSX.createElement',
+        jsxFragmentPragma: 'JSX.fragment',
+        transforms: ['jsx', 'typescript', 'imports'],
+        disableESTransforms: true,
+        production: true,
+      });
+
+      this.runModule = vm.compileFunction(code, ['require', 'exports', '__dir'], {
+        filename: this.moduleFile.path,
+        parsingContext: this.runtime.context,
+      });
+
       const require = (toPath: string) => {
-        const destPath = path.join(this.fromPath, toPath);
-        return this.runtime.require(destPath);
+        const destPath = path.join(this.moduleFile.path, toPath);
+        const mod = this.runtime.findModuleFromRoot(destPath);
+        mod.run();
+        return mod.exports;
       };
+
       this.runModule(require, this.exports, this.moduleDir);
       this.ran = true;
     }
@@ -65,10 +82,10 @@ class Runtime {
   });
 
   constructor(public root: Dir) {
-    this.compileFunctions(root);
+    this.createModules(root);
   }
 
-  require(destPath: string) {
+  findModuleFromRoot(destPath: string) {
     if (!destPath.endsWith('.tsx')) destPath += '.tsx';
 
     let dir: Dir = this.root;
@@ -79,8 +96,7 @@ class Runtime {
       if (parts.length === 0) {
         const file = dir.files[part];
         if (file && file.module) {
-          file.module.run();
-          return file.module.exports;
+          return file.module;
         }
       }
       else {
@@ -95,29 +111,14 @@ class Runtime {
     throw new Error(`Can't find module at path: ${destPath}`);
   }
 
-  compileFunctions(dir: Dir) {
+  createModules(dir: Dir) {
     for (const subdir of Object.values(dir.subdirs)) {
-      this.compileFunctions(subdir);
+      this.createModules(subdir);
     }
 
     for (const child of Object.values(dir.files)) {
       if (child.name.endsWith('.tsx')) {
-        const rawCode = child.buffer.toString('utf8');
-
-        const { code } = sucrase.transform(rawCode, {
-          jsxPragma: 'JSX.createElement',
-          jsxFragmentPragma: 'JSX.fragment',
-          transforms: ['jsx', 'typescript', 'imports'],
-          disableESTransforms: true,
-          production: true,
-        });
-
-        const fn = vm.compileFunction(code, ['require', 'exports', '__dir'], {
-          filename: child.path,
-          parsingContext: this.context,
-        });
-
-        child.module = new Module(dir, fn, this, child.path);
+        child.module = new Module(child, dir, this);
       }
     }
   }
@@ -166,9 +167,10 @@ const loader = new FsLoader('testing/foo');
 const root = loader.load();
 
 const runtime = new Runtime(root);
-const rootExports = runtime.require('a.tsx');
-console.log(rootExports.foo(3));
-console.log(rootExports.foo(9));
+const boot = runtime.findModuleFromRoot('a.tsx');
+boot.run();
+console.log(boot.exports.foo(3));
+console.log(boot.exports.foo(9));
 
 
 
