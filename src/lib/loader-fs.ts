@@ -1,16 +1,17 @@
 import fs from "fs";
 import path from "path";
+import { Loader } from "./loader";
 import { Dir, File } from "./runtime";
 
-export class FsLoader {
+export class FsLoader implements Loader {
 
   constructor(private fsBase: string) { }
 
-  load() {
-    return this.loadDir('', null);
+  async load() {
+    return this.#loadDir('', null);
   }
 
-  loadDir(base: string, parent: Dir | null) {
+  #loadDir(base: string, parent: Dir | null) {
     const files = fs.readdirSync(path.join(this.fsBase, base));
 
     const dir = new Dir(base, path.basename(base), parent);
@@ -22,7 +23,7 @@ export class FsLoader {
       const stat = fs.statSync(fullpath);
 
       if (stat.isDirectory()) {
-        const child = this.loadDir(path.join(base, name), dir);
+        const child = this.#loadDir(path.join(base, name), dir);
         dir.subdirs[name] = child;
         dir.entries[name] = child;
       }
