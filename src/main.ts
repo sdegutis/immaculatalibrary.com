@@ -15,7 +15,7 @@ import { Runtime } from "./lib/runtime";
     console,
   });
   const boot = runtime.findModuleFromRoot('a.tsx')!;
-  boot.run();
+  boot.require();
   console.log(boot.exports.foo(3));
   console.log(boot.exports.foo(9));
 

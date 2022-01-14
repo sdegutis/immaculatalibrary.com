@@ -5,19 +5,22 @@ import vm from 'vm';
 export class Module {
 
   public exports = Object.create(null);
-  private ran = false;
+  #ran = false;
+  #runtime: Runtime;
 
   constructor(
-    private file: File,
-    private runtime: Runtime,
-  ) { }
+    public file: File,
+    runtime: Runtime,
+  ) {
+    this.#runtime = runtime;
+  }
 
-  run() {
-    if (!this.ran) {
+  require() {
+    if (!this.#ran) {
       const rawCode = this.file.buffer.toString('utf8');
 
       const args = {
-        require: (path: string) => this.require(path),
+        require: (path: string) => this.#require(path),
         exports: this.exports,
         __dir: this.file.parent!,
       };
@@ -28,9 +31,9 @@ export class Module {
         production: true,
       };
 
-      if (this.runtime.jsxCreateElement) {
+      if (this.#runtime.jsxCreateElement) {
         (args as any).JSX = {
-          createElement: this.runtime.jsxCreateElement,
+          createElement: this.#runtime.jsxCreateElement,
           fragment: Symbol('fragment'),
         };
         sucraseOptions.transforms.push('jsx');
@@ -42,23 +45,23 @@ export class Module {
 
       const runModule = vm.compileFunction(code, Object.keys(args), {
         filename: this.file.path,
-        parsingContext: this.runtime.context,
+        parsingContext: this.#runtime.context,
       });
 
       runModule(...Object.values(args));
-      this.ran = true;
+
+      this.#ran = true;
     }
     return this.exports;
   }
 
-  private require(toPath: string) {
+  #require(toPath: string) {
     const destPath = path.join(this.file.path, toPath);
-    const mod = this.runtime.findModuleFromRoot(destPath);
+    const mod = this.#runtime.findModuleFromRoot(destPath);
     if (!mod) {
       throw new Error(`Can't find module at path: ${destPath}`);
     }
-    mod.run();
-    return mod.exports;
+    return mod.require();
   }
 
 }
@@ -90,9 +93,11 @@ export class File {
 
 }
 
-interface JsxCreateElement {
-  (tag: string | Function | symbol, attrs: any, ...children: any[]): any;
-}
+type JsxCreateElement = (
+  tag: string | Function | symbol,
+  attrs: any,
+  ...children: any[]
+) => any;
 
 interface RuntimeOptions {
   jsxCreateElement?: JsxCreateElement;
@@ -102,7 +107,11 @@ export class Runtime {
 
   context;
   jsxCreateElement: JsxCreateElement | undefined;
-  constructor(public root: Dir, options: RuntimeOptions, sandbox: { [global: string]: any }) {
+  constructor(
+    public root: Dir,
+    options: RuntimeOptions,
+    sandbox: { [global: string]: any },
+  ) {
     this.jsxCreateElement = options.jsxCreateElement;
     this.context = vm.createContext(sandbox);
     this.createModules(root);
