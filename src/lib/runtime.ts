@@ -1,6 +1,7 @@
 import * as path from "path";
 import * as sucrase from 'sucrase';
 import vm from 'vm';
+import { Dir, File } from "./vfs";
 
 export class Module {
 
@@ -63,31 +64,6 @@ export class Module {
     }
     return mod.require();
   }
-
-}
-
-export class Dir {
-
-  files: { [name: string]: File } = Object.create(null);
-  subdirs: { [name: string]: Dir } = Object.create(null);
-  entries: { [name: string]: File | Dir } = Object.create(null);
-
-  constructor(
-    public path: string,
-    public name: string,
-    public parent: Dir | null,
-  ) { }
-
-}
-
-export class File {
-
-  constructor(
-    public path: string,
-    public name: string,
-    public parent: Dir | null,
-    public buffer: Buffer,
-  ) { }
 
 }
 

@@ -1,13 +1,36 @@
 import fs from "fs";
 import path from "path";
-import { Loader } from "./loader";
-import { Dir, File } from "./runtime";
 
-export class FsLoader implements Loader {
+export class Dir {
+
+  files: { [name: string]: File } = Object.create(null);
+  subdirs: { [name: string]: Dir } = Object.create(null);
+  entries: { [name: string]: File | Dir } = Object.create(null);
+
+  constructor(
+    public path: string,
+    public name: string,
+    public parent: Dir | null,
+  ) { }
+
+}
+
+export class File {
+
+  constructor(
+    public path: string,
+    public name: string,
+    public parent: Dir | null,
+    public buffer: Buffer,
+  ) { }
+
+}
+
+export class LocalFs {
 
   constructor(private fsBase: string) { }
 
-  async load() {
+  load() {
     return this.#loadDir('', null);
   }
 

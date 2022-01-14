@@ -1,25 +1,21 @@
 import 'source-map-support/register';
 import { jsxCreateStringifiedElement } from "./lib/jsx-stringify";
-import { FsLoader } from "./lib/loader-fs";
 import { Runtime } from "./lib/runtime";
+import { LocalFs } from './lib/vfs';
 
-(async () => {
-
-  const loader = new FsLoader('testing/foo');
-  const root = await loader.load();
+const loader = new LocalFs('testing/foo');
+const root = loader.load();
 
 
-  const runtime = new Runtime(root, {
-    jsxCreateElement: jsxCreateStringifiedElement,
-  }, {
-    console,
-  });
-  const boot = runtime.findModuleFromRoot('a.tsx')!;
-  boot.require();
-  console.log(boot.exports.foo(3));
-  console.log(boot.exports.foo(9));
-
-})();
+const runtime = new Runtime(root, {
+  jsxCreateElement: jsxCreateStringifiedElement,
+}, {
+  console,
+});
+const boot = runtime.findModuleFromRoot('a.tsx')!;
+boot.require();
+console.log(boot.exports.foo(3));
+console.log(boot.exports.foo(9));
 
 
 
