@@ -34,9 +34,12 @@ const context = vm.createContext({
   console,
 });
 
+function fakeRequire(...args: any[]) {
+  console.log({ args });
+}
+
 function loadDir(base: string, parent: Dir | null) {
   const files = fs.readdirSync(base);
-  console.log(files);
 
   const dir = new Dir(path.basename(base), parent);
 
@@ -69,14 +72,24 @@ function loadDir(base: string, parent: Dir | null) {
           production: true,
         });
 
-        child.function = vm.compileFunction(code, [], {
+        const fakeModule = {
+          exports: Object.create(null),
+        };
+
+        child.function = vm.compileFunction(code, ['require', 'exports'], {
           filename: fullpath,
+          parsingContext: context,
         });
+
+        if (name === 'c.tsx') {
+          console.log(code);
+          child.function(fakeRequire, fakeModule.exports);
+
+          console.log(fakeModule.exports.default(3))
+          console.log(fakeModule.exports.default(9))
+        }
       }
 
-      if (name === 'c.tsx') {
-        child.function!();
-      }
     }
   }
 
@@ -85,7 +98,7 @@ function loadDir(base: string, parent: Dir | null) {
 
 const root = loadDir('foo', null);
 
-console.dir(root, { depth: null });
+// console.dir(root, { depth: null });
 
 
 
