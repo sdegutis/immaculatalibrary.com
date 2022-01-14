@@ -32,13 +32,13 @@ export class Module {
       };
 
       if (this.#runtime.jsxCreateElement) {
-        (args as any).JSX = {
+        (args as any)._JSX = {
           createElement: this.#runtime.jsxCreateElement,
           fragment: Symbol('fragment'),
         };
         sucraseOptions.transforms.push('jsx');
-        sucraseOptions.jsxPragma = 'JSX.createElement';
-        sucraseOptions.jsxFragmentPragma = 'JSX.fragment';
+        sucraseOptions.jsxPragma = '_JSX.createElement';
+        sucraseOptions.jsxFragmentPragma = '_JSX.fragment';
       }
 
       const { code } = sucrase.transform(rawCode, sucraseOptions);
@@ -56,7 +56,7 @@ export class Module {
   }
 
   #require(toPath: string) {
-    const destPath = path.join(this.file.path, toPath);
+    const destPath = path.join(path.dirname(this.file.path), toPath);
     const mod = this.#runtime.findModuleFromRoot(destPath);
     if (!mod) {
       throw new Error(`Can't find module at path: ${destPath}`);
@@ -133,9 +133,8 @@ export class Runtime {
       }
       else {
         const subdir = dir.subdirs[part];
-        if (subdir) {
-          dir = subdir;
-        }
+        if (!subdir) break;
+        dir = subdir;
       }
     }
 
