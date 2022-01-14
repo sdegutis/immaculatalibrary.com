@@ -30,9 +30,9 @@ class Module {
 
 class Dir {
 
-  files: File[] = [];
-  subdirs: Dir[] = [];
-  entries: (File | Dir)[] = [];
+  files: { [name: string]: File } = Object.create(null);
+  subdirs: { [name: string]: Dir } = Object.create(null);
+  entries: { [name: string]: File | Dir } = Object.create(null);
 
   constructor(
     public path: string,
@@ -74,14 +74,14 @@ class Runtime {
     let part: string | undefined;
     while (part = parts.shift()) {
       if (parts.length === 0) {
-        const file = dir.files.find(f => f.name === part);
+        const file = dir.files[part];
         if (file) {
           file.module!.run();
           return file.module!.exports;
         }
       }
       else {
-        const subdir = dir.subdirs.find(d => d.name === part);
+        const subdir = dir.subdirs[part];
         if (subdir) {
           dir = subdir;
           continue;
@@ -93,11 +93,11 @@ class Runtime {
   }
 
   compileFunctions(dir: Dir) {
-    for (const subdir of dir.subdirs) {
+    for (const subdir of Object.values(dir.subdirs)) {
       this.compileFunctions(subdir);
     }
 
-    for (const child of dir.files) {
+    for (const child of Object.values(dir.files)) {
       if (child.name.endsWith('.tsx')) {
         const rawCode = child.buffer.toString('utf8');
 
@@ -135,15 +135,15 @@ function loadDirFromFs(fsBase: string, base: string, parent: Dir | null) {
 
     if (stat.isDirectory()) {
       const child = loadDirFromFs(fsBase, path.join(base, name), dir);
-      dir.subdirs.push(child);
-      dir.entries.push(child);
+      dir.subdirs[name] = child;
+      dir.entries[name] = child;
     }
     else if (stat.isFile()) {
       const buffer = fs.readFileSync(fullpath);
 
       const child = new File(path.join(base, name), name, dir, buffer);
-      dir.files.push(child);
-      dir.entries.push(child);
+      dir.files[name] = child;
+      dir.entries[name] = child;
     }
   }
 
@@ -154,7 +154,7 @@ const root = loadDirFromFs('testing/foo', '', null);
 
 const runtime = new Runtime(root);
 
-const boot = root.files.find(file => file.name === 'a.tsx')!;
+const boot = root.files['a.tsx']!;
 boot.module!.run();
 console.log(boot.module!.exports.foo(3));
 console.log(boot.module!.exports.foo(9));
