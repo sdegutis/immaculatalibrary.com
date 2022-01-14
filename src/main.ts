@@ -11,13 +11,13 @@ class Module {
   private ran = false;
 
   constructor(
-    private moduleFile: File,
+    private file: File,
     private runtime: Runtime,
   ) { }
 
   run() {
     if (!this.ran) {
-      const rawCode = this.moduleFile.buffer.toString('utf8');
+      const rawCode = this.file.buffer.toString('utf8');
       const { code } = sucrase.transform(rawCode, {
         jsxPragma: 'JSX.createElement',
         jsxFragmentPragma: 'JSX.fragment',
@@ -26,25 +26,31 @@ class Module {
         production: true,
       });
 
-      const runModule = vm.compileFunction(code, ['require', 'exports', '__dir'], {
-        filename: this.moduleFile.path,
+      const args = {
+        require: (path: string) => this.require(path),
+        exports: this.exports,
+        __dir: this.file.parent!,
+      };
+
+      const runModule = vm.compileFunction(code, Object.keys(args), {
+        filename: this.file.path,
         parsingContext: this.runtime.context,
       });
 
-      const require = (toPath: string) => {
-        const destPath = path.join(this.moduleFile.path, toPath);
-        const mod = this.runtime.findModuleFromRoot(destPath);
-        if (!mod) {
-          throw new Error(`Can't find module at path: ${destPath}`);
-        }
-        mod.run();
-        return mod.exports;
-      };
-
-      runModule(require, this.exports, this.moduleFile.parent!);
+      runModule(...Object.values(args));
       this.ran = true;
     }
     return this.exports;
+  }
+
+  private require(toPath: string) {
+    const destPath = path.join(this.file.path, toPath);
+    const mod = this.runtime.findModuleFromRoot(destPath);
+    if (!mod) {
+      throw new Error(`Can't find module at path: ${destPath}`);
+    }
+    mod.run();
+    return mod.exports;
   }
 
 }
