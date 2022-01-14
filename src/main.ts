@@ -82,13 +82,19 @@ class File {
 
 }
 
+interface Sandbox {
+  JSX?: {
+    createElement: (tag: string | Function | Symbol, attrs: any, ...children: any[]) => any,
+    fragment: Symbol,
+  },
+  [global: string]: any;
+}
+
 class Runtime {
 
-  context = vm.createContext({
-    console,
-  });
-
-  constructor(public root: Dir) {
+  context;
+  constructor(public root: Dir, sandbox: Sandbox) {
+    this.context = vm.createContext(sandbox);
     this.createModules(root);
   }
 
@@ -172,7 +178,62 @@ class FsLoader {
 const loader = new FsLoader('testing/foo');
 const root = loader.load();
 
-const runtime = new Runtime(root);
+
+const unary = new Set(['br', 'hr', 'input']);
+
+function createElement(tag: string | Function | Symbol, attrs: any, ...children: any[]) {
+  attrs ??= {};
+
+  if (typeof tag === 'function') {
+    return tag(attrs, children);
+  }
+
+  const childrenString = (children
+    .filter(c =>
+      c !== null &&
+      c !== undefined &&
+      c !== false)
+    .flat()
+    .join(''));
+
+  if (tag instanceof Symbol) {
+    if (tag === JSX.fragment) {
+      return childrenString;
+    }
+    else if (!tag.description) {
+      throw new Error('Empty Symbol passed as JSX tag.');
+    }
+    tag = tag.description;
+  }
+
+  const attrsArray = Object.entries(attrs);
+  const attrsString = (attrsArray.length > 0
+    ? ' ' + attrsArray
+      .map(([k, v]) => {
+        if (v === true) return k;
+        if (v === false || v === null || v === undefined) return '';
+        return `${k}="${v}"`;
+      })
+      .join(' ')
+    : '');
+
+  if (unary.has(tag)) {
+    return `<${tag}${attrsString}/>`;
+  }
+
+  return `<${tag}${attrsString}>${childrenString}</${tag}>`;
+}
+
+const JSX = {
+  createElement,
+  fragment: Symbol('fragment'),
+};
+
+
+const runtime = new Runtime(root, {
+  console,
+  JSX,
+});
 const boot = runtime.findModuleFromRoot('a.tsx')!;
 boot.run();
 console.log(boot.exports.foo(3));
