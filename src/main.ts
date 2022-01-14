@@ -18,6 +18,24 @@ class Dir {
 
 }
 
+class Module {
+
+  exports = Object.create(null);
+
+  constructor(
+    public dir: Dir,
+    public fn: Function,
+    public require: Function,
+  ) {
+
+  }
+
+  run() {
+    this.fn(this.require, this.exports);
+  }
+
+}
+
 class File {
 
   constructor(
@@ -26,7 +44,7 @@ class File {
     public buffer: Buffer,
   ) { }
 
-  function: Function | null = null;
+  module: Module | null = null;
 
 }
 
@@ -34,8 +52,10 @@ const context = vm.createContext({
   console,
 });
 
-function fakeRequire(...args: any[]) {
-  console.log({ args });
+function requireFile(fullpath: string, other: string) {
+  const filepath = path.join(fullpath, path.dirname(other));
+
+  console.log({ fullpath, other, filepath });
   return [123];
 }
 
@@ -73,10 +93,14 @@ function loadDir(base: string, parent: Dir | null) {
           production: true,
         });
 
-        child.function = vm.compileFunction(code, ['require', 'exports'], {
+        const fn = vm.compileFunction(code, ['require', 'exports'], {
           filename: fullpath,
           parsingContext: context,
         });
+
+        const req = requireFile.bind(child, fullpath);
+
+        child.module = new Module(dir, fn, req);
       }
 
     }
@@ -88,15 +112,9 @@ function loadDir(base: string, parent: Dir | null) {
 const root = loadDir('foo', null);
 
 const boot = root.files.find(file => file.name === 'a.tsx')!;
-
-const fakeModule = {
-  exports: Object.create(null),
-};
-
-boot.function!(fakeRequire, fakeModule.exports);
-
-console.log(fakeModule.exports.default(3))
-console.log(fakeModule.exports.default(9))
+boot.module!.run();
+console.log(boot.module!.exports.default(3))
+console.log(boot.module!.exports.default(9))
 
 
 // console.dir(root, { depth: null });
