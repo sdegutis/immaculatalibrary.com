@@ -1,8 +1,56 @@
+import 'source-map-support/register';
+import * as fs from "fs";
+import * as path from "path";
 
 
 
+class Dir {
+
+  files: File[] = [];
+  dirs: Dir[] = [];
+  entries: (File | Dir)[] = [];
+
+  constructor(public name: string) { }
+
+}
+
+class File {
+
+  constructor(public name: string) { }
+
+}
 
 
+function loadDir(base: string) {
+  const files = fs.readdirSync(base);
+  console.log(files);
+
+  const root = new Dir(path.basename(base));
+
+  for (const name of files) {
+    if (name.startsWith('.')) continue;
+
+    const fullpath = path.join(base, name);
+    const stat = fs.statSync(fullpath);
+
+    if (stat.isDirectory()) {
+      const child = loadDir(fullpath);
+      root.dirs.push(child);
+      root.entries.push(child);
+    }
+    else if (stat.isFile()) {
+      const child = new File(name);
+      root.files.push(child);
+      root.entries.push(child);
+    }
+  }
+
+  return root;
+}
+
+const root = loadDir('foo');
+
+console.dir(root, { depth: null });
 
 
 
