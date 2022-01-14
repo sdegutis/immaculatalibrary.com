@@ -8,7 +8,7 @@
   "license": "TBD",
   "dependencies": {
     "@aws-sdk/client-s3": "^3.45.0",
-    "@puritylib/purity": "^1.0.0",
+    "@puritylib/purity": "file:../Purity",
     "bcryptjs": "^2.4.3",
     "cookie-session": "^1.4.0",
     "dotenv": "^10.0.0",

@@ -1,63 +1,93 @@
-const purity = require('@puritylib/purity');
-const dotenv = require('dotenv');
-const bcrypt = require('bcryptjs');
-const cookieSession = require('cookie-session');
-const express = require('express');
-const MarkdownIt = require('markdown-it');
-const { URLSearchParams } = require('url');
-const util = require('util');
 
-dotenv.config();
 
-const port = 8080;
 
-const server = express();
 
-server.set('trust proxy', 1);
 
-server.set('query parser', (s) => new URLSearchParams(s ?? ''));
 
-server.use(express.text({ type: '*/*', limit: '100mb' }));
 
-server.use((req, res, next) => {
-  if (req.path.endsWith('/') && req.path !== '/')
-    res.redirect(req.path.slice(0, -1));
-  else
-    next();
-});
+// const purity = require('@puritylib/purity');
+// const dotenv = require('dotenv');
+// const bcrypt = require('bcryptjs');
+// const cookieSession = require('cookie-session');
+// const express = require('express');
+// const MarkdownIt = require('markdown-it');
+// const { URLSearchParams } = require('url');
+// const util = require('util');
 
-server.use(cookieSession({
-  secret: process.env['COOKIE_SECRET'],
-  httpOnly: true,
-}));
+// const fs = require('fs');
+// const boot = fs.readFileSync('bootstrapper.tsx', 'utf8');
+// const html = fs.readFileSync('bootstrapper.html', 'utf8');
+// const js = fs.readFileSync('bootstrapper.js', 'utf8');
+// fs.writeFileSync('data.json', JSON.stringify({
+//   "ee7f907b-9324-4ab9-bca7-6ece08b57ab4": {
+//     "$$boot": { "$$eval": boot },
+//     "html": html,
+//     "js": js,
+//   }
+// }));
 
-const markdown = new MarkdownIt({
-  html: true,
-  typographer: true,
-  linkify: true,
-  breaks: true,
-});
+// dotenv.config();
 
-const db = new purity.JsonFileDatabase('data.json');
+// const port = 8080;
 
-// const db = new purity.S3Database('imlibv3');
-// db.saveRegularly();
+// const server = express();
 
-const app = new purity.App(db, {
-  util,
-  JSON,
-  console,
-  markdown,
-  bcrypt,
-  Buffer,
-});
+// server.set('trust proxy', 1);
 
-server.use(app.routeMiddleware);
+// server.set('query parser', (s) => new URLSearchParams(s ?? ''));
 
-app.start().then(() => {
+// server.use(express.raw({ type: '*/*', limit: '100mb' }));
 
-  server.listen(port, () => {
-    console.log(`Running on http://localhost:${port}`);
-  });
+// server.use((req, res, next) => {
+//   if (req.path.endsWith('/') && req.path !== '/')
+//     res.redirect(req.path.slice(0, -1));
+//   else
+//     next();
+// });
 
-});
+// server.use(cookieSession({
+//   secret: process.env['COOKIE_SECRET'],
+//   httpOnly: true,
+// }));
+
+// const markdown = new MarkdownIt({
+//   html: true,
+//   typographer: true,
+//   linkify: true,
+//   breaks: true,
+// });
+
+// const db = new purity.JsonFileDatabase('data.json');
+
+// // const db = new purity.S3Database('imlibv3');
+// // db.saveRegularly();
+
+// const app = new purity.App(db, {
+//   util,
+//   JSON,
+//   console,
+//   markdown,
+//   bcrypt,
+//   Buffer,
+// });
+
+// server.use((req, res) => {
+//   app.handleRequest({
+//     body: req.body,
+//     headers: req.headers,
+//     method: req.method,
+//     url: new URL(req.url, 'http://localhost:8080'),
+//   }).then(output => {
+//     res.status(output.status ?? 200);
+//     res.set(output.headers ?? {});
+//     res.end(output.body ?? '');
+//   });
+// });
+
+// app.start().then(() => {
+
+//   server.listen(port, () => {
+//     console.log(`Running on http://localhost:${port}`);
+//   });
+
+// });
