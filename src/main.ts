@@ -1,7 +1,8 @@
-import 'source-map-support/register';
 import * as fs from "fs";
 import * as path from "path";
-
+import 'source-map-support/register';
+import * as sucrase from 'sucrase';
+import vm from 'vm';
 
 
 class Dir {
@@ -29,6 +30,9 @@ class File {
 
 }
 
+const context = vm.createContext({
+  console,
+});
 
 function loadDir(base: string, parent: Dir | null) {
   const files = fs.readdirSync(base);
@@ -54,8 +58,24 @@ function loadDir(base: string, parent: Dir | null) {
       dir.files.push(child);
       dir.entries.push(child);
 
-      if (name === 'a.tsx') {
+      if (name.endsWith('.tsx')) {
+        const rawCode = child.buffer.toString('utf8');
 
+        const { code } = sucrase.transform(rawCode, {
+          jsxPragma: 'JSX.createElement',
+          jsxFragmentPragma: 'JSX.fragment',
+          transforms: ['jsx', 'typescript', 'imports'],
+          disableESTransforms: true,
+          production: true,
+        });
+
+        child.function = vm.compileFunction(code, [], {
+          filename: fullpath,
+        });
+      }
+
+      if (name === 'c.tsx') {
+        child.function!();
       }
     }
   }
