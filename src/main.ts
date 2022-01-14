@@ -18,19 +18,30 @@ class Module {
   run() {
     if (!this.ran) {
       const rawCode = this.file.buffer.toString('utf8');
-      const { code } = sucrase.transform(rawCode, {
-        jsxPragma: 'JSX.createElement',
-        jsxFragmentPragma: 'JSX.fragment',
-        transforms: ['jsx', 'typescript', 'imports'],
-        disableESTransforms: true,
-        production: true,
-      });
 
       const args = {
         require: (path: string) => this.require(path),
         exports: this.exports,
         __dir: this.file.parent!,
       };
+
+      const sucraseOptions: sucrase.Options = {
+        transforms: ['typescript', 'imports'],
+        disableESTransforms: true,
+        production: true,
+      };
+
+      if (this.runtime.jsxCreateElement) {
+        (args as any).JSX = {
+          createElement: this.runtime.jsxCreateElement,
+          fragment: Symbol('fragment'),
+        };
+        sucraseOptions.transforms.push('jsx');
+        sucraseOptions.jsxPragma = 'JSX.createElement';
+        sucraseOptions.jsxFragmentPragma = 'JSX.fragment';
+      }
+
+      const { code } = sucrase.transform(rawCode, sucraseOptions);
 
       const runModule = vm.compileFunction(code, Object.keys(args), {
         filename: this.file.path,
@@ -82,18 +93,20 @@ class File {
 
 }
 
-interface Sandbox {
-  JSX?: {
-    createElement: (tag: string | Function | Symbol, attrs: any, ...children: any[]) => any,
-    fragment: Symbol,
-  },
-  [global: string]: any;
+interface JsxCreateElement {
+  (tag: string | Function | symbol, attrs: any, ...children: any[]): any;
+}
+
+interface RuntimeOptions {
+  jsxCreateElement?: JsxCreateElement;
 }
 
 class Runtime {
 
   context;
-  constructor(public root: Dir, sandbox: Sandbox) {
+  jsxCreateElement: JsxCreateElement | undefined;
+  constructor(public root: Dir, options: RuntimeOptions, sandbox: { [global: string]: any }) {
+    this.jsxCreateElement = options.jsxCreateElement;
     this.context = vm.createContext(sandbox);
     this.createModules(root);
   }
@@ -181,7 +194,7 @@ const root = loader.load();
 
 const unary = new Set(['br', 'hr', 'input']);
 
-function createElement(tag: string | Function | Symbol, attrs: any, ...children: any[]) {
+function jsxCreateStringifiedElement(tag: string | Function | symbol, attrs: any, ...children: any[]) {
   attrs ??= {};
 
   if (typeof tag === 'function') {
@@ -196,8 +209,8 @@ function createElement(tag: string | Function | Symbol, attrs: any, ...children:
     .flat()
     .join(''));
 
-  if (tag instanceof Symbol) {
-    if (tag === JSX.fragment) {
+  if (typeof tag === 'symbol') {
+    if (tag.description === 'fragment') {
       return childrenString;
     }
     else if (!tag.description) {
@@ -224,15 +237,11 @@ function createElement(tag: string | Function | Symbol, attrs: any, ...children:
   return `<${tag}${attrsString}>${childrenString}</${tag}>`;
 }
 
-const JSX = {
-  createElement,
-  fragment: Symbol('fragment'),
-};
-
 
 const runtime = new Runtime(root, {
+  jsxCreateElement: jsxCreateStringifiedElement,
+}, {
   console,
-  JSX,
 });
 const boot = runtime.findModuleFromRoot('a.tsx')!;
 boot.run();
