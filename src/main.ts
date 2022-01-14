@@ -8,6 +8,7 @@ import vm from 'vm';
 class Module {
 
   exports = Object.create(null);
+  ran = false;
 
   constructor(
     public dir: Dir,
@@ -18,7 +19,11 @@ class Module {
   }
 
   run() {
-    this.fn(this.require, this.exports);
+    if (!this.ran) {
+      this.fn(this.require, this.exports, this.dir);
+      this.ran = true;
+    }
+    return this.exports;
   }
 
 }
@@ -50,11 +55,11 @@ class File {
 
 }
 
-const context = vm.createContext({
-  console,
-});
-
 class Runtime {
+
+  context = vm.createContext({
+    console,
+  });
 
   constructor(public root: Dir) {
     this.compileFunctions(root);
@@ -104,9 +109,9 @@ class Runtime {
           production: true,
         });
 
-        const fn = vm.compileFunction(code, ['require', 'exports'], {
+        const fn = vm.compileFunction(code, ['require', 'exports', '__dir'], {
           filename: child.path,
-          parsingContext: context,
+          parsingContext: this.context,
         });
 
         const require = (other: string) => this.requireFile(child, other);
@@ -148,8 +153,6 @@ function loadDirFromFs(fsBase: string, base: string, parent: Dir | null) {
 const root = loadDirFromFs('testing/foo', '', null);
 
 const runtime = new Runtime(root);
-
-// console.dir(root, { depth: null });
 
 const boot = root.files.find(file => file.name === 'a.tsx')!;
 boot.module!.run();
