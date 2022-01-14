@@ -10,22 +10,31 @@ class Dir {
   dirs: Dir[] = [];
   entries: (File | Dir)[] = [];
 
-  constructor(public name: string) { }
+  constructor(
+    public name: string,
+    public parent: Dir | null,
+  ) { }
 
 }
 
 class File {
 
-  constructor(public name: string) { }
+  constructor(
+    public name: string,
+    public parent: Dir | null,
+    public buffer: Buffer,
+  ) { }
+
+  function: Function | null = null;
 
 }
 
 
-function loadDir(base: string) {
+function loadDir(base: string, parent: Dir | null) {
   const files = fs.readdirSync(base);
   console.log(files);
 
-  const root = new Dir(path.basename(base));
+  const dir = new Dir(path.basename(base), parent);
 
   for (const name of files) {
     if (name.startsWith('.')) continue;
@@ -34,21 +43,27 @@ function loadDir(base: string) {
     const stat = fs.statSync(fullpath);
 
     if (stat.isDirectory()) {
-      const child = loadDir(fullpath);
-      root.dirs.push(child);
-      root.entries.push(child);
+      const child = loadDir(fullpath, dir);
+      dir.dirs.push(child);
+      dir.entries.push(child);
     }
     else if (stat.isFile()) {
-      const child = new File(name);
-      root.files.push(child);
-      root.entries.push(child);
+      const buffer = fs.readFileSync(fullpath);
+
+      const child = new File(name, dir, buffer);
+      dir.files.push(child);
+      dir.entries.push(child);
+
+      if (name === 'a.tsx') {
+
+      }
     }
   }
 
-  return root;
+  return dir;
 }
 
-const root = loadDir('foo');
+const root = loadDir('foo', null);
 
 console.dir(root, { depth: null });
 
