@@ -36,6 +36,7 @@ const context = vm.createContext({
 
 function fakeRequire(...args: any[]) {
   console.log({ args });
+  return [123];
 }
 
 function loadDir(base: string, parent: Dir | null) {
@@ -72,22 +73,10 @@ function loadDir(base: string, parent: Dir | null) {
           production: true,
         });
 
-        const fakeModule = {
-          exports: Object.create(null),
-        };
-
         child.function = vm.compileFunction(code, ['require', 'exports'], {
           filename: fullpath,
           parsingContext: context,
         });
-
-        if (name === 'c.tsx') {
-          console.log(code);
-          child.function(fakeRequire, fakeModule.exports);
-
-          console.log(fakeModule.exports.default(3))
-          console.log(fakeModule.exports.default(9))
-        }
       }
 
     }
@@ -97,6 +86,18 @@ function loadDir(base: string, parent: Dir | null) {
 }
 
 const root = loadDir('foo', null);
+
+const boot = root.files.find(file => file.name === 'a.tsx')!;
+
+const fakeModule = {
+  exports: Object.create(null),
+};
+
+boot.function!(fakeRequire, fakeModule.exports);
+
+console.log(fakeModule.exports.default(3))
+console.log(fakeModule.exports.default(9))
+
 
 // console.dir(root, { depth: null });
 
