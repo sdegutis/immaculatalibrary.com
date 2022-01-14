@@ -165,12 +165,10 @@ class FsLoader {
 const loader = new FsLoader('testing/foo');
 const root = loader.load();
 
-new Runtime(root);
-
-const boot = root.files['a.tsx']!;
-boot.module!.run();
-console.log(boot.module!.exports.foo(3));
-console.log(boot.module!.exports.foo(9));
+const runtime = new Runtime(root);
+const rootExports = runtime.require('a.tsx');
+console.log(rootExports.foo(3));
+console.log(rootExports.foo(9));
 
 
 
