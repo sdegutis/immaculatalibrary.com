@@ -54,43 +54,37 @@ const context = vm.createContext({
   console,
 });
 
-function loadDir(fsBase: string, base: string, parent: Dir | null) {
-  const files = fs.readdirSync(path.join(fsBase, base));
-
-  const dir = new Dir(base, path.basename(base), parent);
-
-  for (const name of files) {
-    if (name.startsWith('.')) continue;
-
-    const fullpath = path.join(fsBase, base, name);
-    const stat = fs.statSync(fullpath);
-
-    if (stat.isDirectory()) {
-      const child = loadDir(fsBase, path.join(base, name), dir);
-      dir.subdirs.push(child);
-      dir.entries.push(child);
-    }
-    else if (stat.isFile()) {
-      const buffer = fs.readFileSync(fullpath);
-
-      const child = new File(path.join(base, name), name, dir, buffer);
-      dir.files.push(child);
-      dir.entries.push(child);
-    }
-  }
-
-  return dir;
-}
-
 class Runtime {
+
+  constructor(public root: Dir) {
+    this.compileFunctions(root);
+  }
 
   requireFile(file: File, other: string) {
     let destPath = path.join(path.dirname(file.path), other);
     if (!destPath.endsWith('.tsx')) destPath += '.tsx';
-    console.log({ other, file, destPath })
 
-    // console.log({ file, fullpath, other, filepath });
-    return [123];
+    let dir: Dir = this.root;
+    const parts = destPath.split(path.sep);
+    let part: string | undefined;
+    while (part = parts.shift()) {
+      if (parts.length === 0) {
+        const file = dir.files.find(f => f.name === part);
+        if (file) {
+          file.module!.run();
+          return file.module!.exports;
+        }
+      }
+      else {
+        const subdir = dir.subdirs.find(d => d.name === part);
+        if (subdir) {
+          dir = subdir;
+          continue;
+        }
+      }
+    }
+
+    throw new Error(`Can't find module at path: ${destPath}`);
   }
 
   compileFunctions(dir: Dir) {
@@ -123,17 +117,44 @@ class Runtime {
 
 }
 
-const root = loadDir('testing/foo', '', null);
+function loadDirFromFs(fsBase: string, base: string, parent: Dir | null) {
+  const files = fs.readdirSync(path.join(fsBase, base));
 
-const runtime = new Runtime();
-runtime.compileFunctions(root);
+  const dir = new Dir(base, path.basename(base), parent);
+
+  for (const name of files) {
+    if (name.startsWith('.')) continue;
+
+    const fullpath = path.join(fsBase, base, name);
+    const stat = fs.statSync(fullpath);
+
+    if (stat.isDirectory()) {
+      const child = loadDirFromFs(fsBase, path.join(base, name), dir);
+      dir.subdirs.push(child);
+      dir.entries.push(child);
+    }
+    else if (stat.isFile()) {
+      const buffer = fs.readFileSync(fullpath);
+
+      const child = new File(path.join(base, name), name, dir, buffer);
+      dir.files.push(child);
+      dir.entries.push(child);
+    }
+  }
+
+  return dir;
+}
+
+const root = loadDirFromFs('testing/foo', '', null);
+
+const runtime = new Runtime(root);
 
 // console.dir(root, { depth: null });
 
 const boot = root.files.find(file => file.name === 'a.tsx')!;
 boot.module!.run();
-console.log(boot.module!.exports.default(3))
-console.log(boot.module!.exports.default(9))
+console.log(boot.module!.exports.foo(3));
+console.log(boot.module!.exports.foo(9));
 
 
 

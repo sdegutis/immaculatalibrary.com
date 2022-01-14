@@ -1,5 +1,5 @@
 import { inB } from "./b";
 
-console.log('executing A', inB());
+console.log(['executing A', inB()]);
 
-export const foo = Math.random();
+export const foo = (a: number) => ({ a, b: Math.random() });
