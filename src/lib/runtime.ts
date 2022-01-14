@@ -89,8 +89,6 @@ export class File {
     public buffer: Buffer,
   ) { }
 
-  module: Module | null = null;
-
 }
 
 type JsxCreateElement = (
@@ -107,6 +105,9 @@ export class Runtime {
 
   context;
   jsxCreateElement: JsxCreateElement | undefined;
+
+  modules = new Map<File, Module>();
+
   constructor(
     public root: Dir,
     options: RuntimeOptions,
@@ -127,8 +128,9 @@ export class Runtime {
     while (part = parts.shift()) {
       if (parts.length === 0) {
         const file = dir.files[part];
-        if (file && file.module) {
-          return file.module;
+        if (file) {
+          const mod = this.modules.get(file);
+          if (mod) return mod;
         }
       }
       else {
@@ -148,7 +150,7 @@ export class Runtime {
 
     for (const file of Object.values(dir.files)) {
       if (file.name.endsWith('.tsx')) {
-        file.module = new Module(file, this);
+        this.modules.set(file, new Module(file, this));
       }
     }
   }
