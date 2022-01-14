@@ -11,8 +11,8 @@ class Module {
   ran = false;
 
   constructor(
-    private dir: Dir,
-    private fn: Function,
+    private moduleDir: Dir,
+    private runModule: Function,
     private runtime: Runtime,
     private fromPath: string,
   ) { }
@@ -23,7 +23,7 @@ class Module {
         const destPath = path.join(this.fromPath, toPath);
         return this.runtime.require(destPath);
       };
-      this.fn(require, this.exports, this.dir);
+      this.runModule(require, this.exports, this.moduleDir);
       this.ran = true;
     }
     return this.exports;
@@ -78,9 +78,9 @@ class Runtime {
     while (part = parts.shift()) {
       if (parts.length === 0) {
         const file = dir.files[part];
-        if (file) {
-          file.module!.run();
-          return file.module!.exports;
+        if (file && file.module) {
+          file.module.run();
+          return file.module.exports;
         }
       }
       else {
