@@ -9,11 +9,9 @@ class Module {
 
   public exports = Object.create(null);
   private ran = false;
-  private runModule!: Function;
 
   constructor(
     private moduleFile: File,
-    private moduleDir: Dir,
     private runtime: Runtime,
   ) { }
 
@@ -28,7 +26,7 @@ class Module {
         production: true,
       });
 
-      this.runModule = vm.compileFunction(code, ['require', 'exports', '__dir'], {
+      const runModule = vm.compileFunction(code, ['require', 'exports', '__dir'], {
         filename: this.moduleFile.path,
         parsingContext: this.runtime.context,
       });
@@ -36,11 +34,14 @@ class Module {
       const require = (toPath: string) => {
         const destPath = path.join(this.moduleFile.path, toPath);
         const mod = this.runtime.findModuleFromRoot(destPath);
+        if (!mod) {
+          throw new Error(`Can't find module at path: ${destPath}`);
+        }
         mod.run();
         return mod.exports;
       };
 
-      this.runModule(require, this.exports, this.moduleDir);
+      runModule(require, this.exports, this.moduleFile.parent!);
       this.ran = true;
     }
     return this.exports;
@@ -103,12 +104,11 @@ class Runtime {
         const subdir = dir.subdirs[part];
         if (subdir) {
           dir = subdir;
-          continue;
         }
       }
     }
 
-    throw new Error(`Can't find module at path: ${destPath}`);
+    return null;
   }
 
   createModules(dir: Dir) {
@@ -116,9 +116,9 @@ class Runtime {
       this.createModules(subdir);
     }
 
-    for (const child of Object.values(dir.files)) {
-      if (child.name.endsWith('.tsx')) {
-        child.module = new Module(child, dir, this);
+    for (const file of Object.values(dir.files)) {
+      if (file.name.endsWith('.tsx')) {
+        file.module = new Module(file, this);
       }
     }
   }
@@ -167,7 +167,7 @@ const loader = new FsLoader('testing/foo');
 const root = loader.load();
 
 const runtime = new Runtime(root);
-const boot = runtime.findModuleFromRoot('a.tsx');
+const boot = runtime.findModuleFromRoot('a.tsx')!;
 boot.run();
 console.log(boot.exports.foo(3));
 console.log(boot.exports.foo(9));
