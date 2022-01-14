@@ -124,37 +124,48 @@ class Runtime {
 
 }
 
-function loadDirFromFs(fsBase: string, base: string, parent: Dir | null) {
-  const files = fs.readdirSync(path.join(fsBase, base));
+class FsLoader {
 
-  const dir = new Dir(base, path.basename(base), parent);
+  constructor(private fsBase: string) { }
 
-  for (const name of files) {
-    if (name.startsWith('.')) continue;
-
-    const fullpath = path.join(fsBase, base, name);
-    const stat = fs.statSync(fullpath);
-
-    if (stat.isDirectory()) {
-      const child = loadDirFromFs(fsBase, path.join(base, name), dir);
-      dir.subdirs[name] = child;
-      dir.entries[name] = child;
-    }
-    else if (stat.isFile()) {
-      const buffer = fs.readFileSync(fullpath);
-
-      const child = new File(path.join(base, name), name, dir, buffer);
-      dir.files[name] = child;
-      dir.entries[name] = child;
-    }
+  load() {
+    return this.loadDir('', null);
   }
 
-  return dir;
+  loadDir(base: string, parent: Dir | null) {
+    const files = fs.readdirSync(path.join(this.fsBase, base));
+
+    const dir = new Dir(base, path.basename(base), parent);
+
+    for (const name of files) {
+      if (name.startsWith('.')) continue;
+
+      const fullpath = path.join(this.fsBase, base, name);
+      const stat = fs.statSync(fullpath);
+
+      if (stat.isDirectory()) {
+        const child = this.loadDir(path.join(base, name), dir);
+        dir.subdirs[name] = child;
+        dir.entries[name] = child;
+      }
+      else if (stat.isFile()) {
+        const buffer = fs.readFileSync(fullpath);
+
+        const child = new File(path.join(base, name), name, dir, buffer);
+        dir.files[name] = child;
+        dir.entries[name] = child;
+      }
+    }
+
+    return dir;
+  }
+
 }
 
-const root = loadDirFromFs('testing/foo', '', null);
+const loader = new FsLoader('testing/foo');
+const root = loader.load();
 
-const runtime = new Runtime(root);
+new Runtime(root);
 
 const boot = root.files['a.tsx']!;
 boot.module!.run();
