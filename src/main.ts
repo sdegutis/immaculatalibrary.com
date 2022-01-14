@@ -26,7 +26,7 @@ class Module {
 class Dir {
 
   files: File[] = [];
-  dirs: Dir[] = [];
+  subdirs: Dir[] = [];
   entries: (File | Dir)[] = [];
 
   constructor(
@@ -54,22 +54,6 @@ const context = vm.createContext({
   console,
 });
 
-function requireFile(file: File, fullpath: string, other: string) {
-  const filepath = path.join(fullpath, path.dirname(other));
-
-  let last: File | Dir | null = file;
-
-  for (const part of other.split('/')) {
-    if (part === '.') last = last!.parent;
-
-  }
-
-  console.log({ other: other.split('/') })
-
-  // console.log({ file, fullpath, other, filepath });
-  return [123];
-}
-
 function loadDir(fsBase: string, base: string, parent: Dir | null) {
   const files = fs.readdirSync(path.join(fsBase, base));
 
@@ -83,7 +67,7 @@ function loadDir(fsBase: string, base: string, parent: Dir | null) {
 
     if (stat.isDirectory()) {
       const child = loadDir(fsBase, path.join(base, name), dir);
-      dir.dirs.push(child);
+      dir.subdirs.push(child);
       dir.entries.push(child);
     }
     else if (stat.isFile()) {
@@ -92,8 +76,30 @@ function loadDir(fsBase: string, base: string, parent: Dir | null) {
       const child = new File(path.join(base, name), name, dir, buffer);
       dir.files.push(child);
       dir.entries.push(child);
+    }
+  }
 
-      if (name.endsWith('.tsx')) {
+  return dir;
+}
+
+class Runtime {
+
+  requireFile(file: File, other: string) {
+    let destPath = path.join(path.dirname(file.path), other);
+    if (!destPath.endsWith('.tsx')) destPath += '.tsx';
+    console.log({ other, file, destPath })
+
+    // console.log({ file, fullpath, other, filepath });
+    return [123];
+  }
+
+  compileFunctions(dir: Dir) {
+    for (const subdir of dir.subdirs) {
+      this.compileFunctions(subdir);
+    }
+
+    for (const child of dir.files) {
+      if (child.name.endsWith('.tsx')) {
         const rawCode = child.buffer.toString('utf8');
 
         const { code } = sucrase.transform(rawCode, {
@@ -105,23 +111,24 @@ function loadDir(fsBase: string, base: string, parent: Dir | null) {
         });
 
         const fn = vm.compileFunction(code, ['require', 'exports'], {
-          filename: fullpath,
+          filename: child.path,
           parsingContext: context,
         });
 
-        const req = requireFile.bind(null, child, fullpath);
-
-        child.module = new Module(dir, fn, req);
+        const require = (other: string) => this.requireFile(child, other);
+        child.module = new Module(dir, fn, require);
       }
-
     }
   }
 
-  return dir;
 }
 
 const root = loadDir('testing/foo', '', null);
-console.dir(root, { depth: null });
+
+const runtime = new Runtime();
+runtime.compileFunctions(root);
+
+// console.dir(root, { depth: null });
 
 const boot = root.files.find(file => file.name === 'a.tsx')!;
 boot.module!.run();

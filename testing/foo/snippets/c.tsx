@@ -1,2 +1,4 @@
 
-export default () => 'in c!';
+import { foo } from '../a';
+
+export default () => 'in c!' + foo;
