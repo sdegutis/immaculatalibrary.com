@@ -11,16 +11,19 @@ class Module {
   ran = false;
 
   constructor(
-    public dir: Dir,
-    public fn: Function,
-    public require: Function,
-  ) {
-
-  }
+    private dir: Dir,
+    private fn: Function,
+    private runtime: Runtime,
+    private fromPath: string,
+  ) { }
 
   run() {
     if (!this.ran) {
-      this.fn(this.require, this.exports, this.dir);
+      const require = (toPath: string) => {
+        const destPath = path.join(this.fromPath, toPath);
+        return this.runtime.require(destPath);
+      };
+      this.fn(require, this.exports, this.dir);
       this.ran = true;
     }
     return this.exports;
@@ -65,13 +68,13 @@ class Runtime {
     this.compileFunctions(root);
   }
 
-  requireFile(file: File, other: string) {
-    let destPath = path.join(path.dirname(file.path), other);
+  require(destPath: string) {
     if (!destPath.endsWith('.tsx')) destPath += '.tsx';
 
     let dir: Dir = this.root;
     const parts = destPath.split(path.sep);
     let part: string | undefined;
+
     while (part = parts.shift()) {
       if (parts.length === 0) {
         const file = dir.files[part];
@@ -114,8 +117,7 @@ class Runtime {
           parsingContext: this.context,
         });
 
-        const require = (other: string) => this.requireFile(child, other);
-        child.module = new Module(dir, fn, require);
+        child.module = new Module(dir, fn, this, child.path);
       }
     }
   }
