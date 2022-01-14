@@ -5,19 +5,6 @@ import * as sucrase from 'sucrase';
 import vm from 'vm';
 
 
-class Dir {
-
-  files: File[] = [];
-  dirs: Dir[] = [];
-  entries: (File | Dir)[] = [];
-
-  constructor(
-    public name: string,
-    public parent: Dir | null,
-  ) { }
-
-}
-
 class Module {
 
   exports = Object.create(null);
@@ -36,9 +23,24 @@ class Module {
 
 }
 
+class Dir {
+
+  files: File[] = [];
+  dirs: Dir[] = [];
+  entries: (File | Dir)[] = [];
+
+  constructor(
+    public path: string,
+    public name: string,
+    public parent: Dir | null,
+  ) { }
+
+}
+
 class File {
 
   constructor(
+    public path: string,
     public name: string,
     public parent: Dir | null,
     public buffer: Buffer,
@@ -52,33 +54,42 @@ const context = vm.createContext({
   console,
 });
 
-function requireFile(fullpath: string, other: string) {
+function requireFile(file: File, fullpath: string, other: string) {
   const filepath = path.join(fullpath, path.dirname(other));
 
-  console.log({ fullpath, other, filepath });
+  let last: File | Dir | null = file;
+
+  for (const part of other.split('/')) {
+    if (part === '.') last = last!.parent;
+
+  }
+
+  console.log({ other: other.split('/') })
+
+  // console.log({ file, fullpath, other, filepath });
   return [123];
 }
 
-function loadDir(base: string, parent: Dir | null) {
-  const files = fs.readdirSync(base);
+function loadDir(fsBase: string, base: string, parent: Dir | null) {
+  const files = fs.readdirSync(path.join(fsBase, base));
 
-  const dir = new Dir(path.basename(base), parent);
+  const dir = new Dir(base, path.basename(base), parent);
 
   for (const name of files) {
     if (name.startsWith('.')) continue;
 
-    const fullpath = path.join(base, name);
+    const fullpath = path.join(fsBase, base, name);
     const stat = fs.statSync(fullpath);
 
     if (stat.isDirectory()) {
-      const child = loadDir(fullpath, dir);
+      const child = loadDir(fsBase, path.join(base, name), dir);
       dir.dirs.push(child);
       dir.entries.push(child);
     }
     else if (stat.isFile()) {
       const buffer = fs.readFileSync(fullpath);
 
-      const child = new File(name, dir, buffer);
+      const child = new File(path.join(base, name), name, dir, buffer);
       dir.files.push(child);
       dir.entries.push(child);
 
@@ -98,7 +109,7 @@ function loadDir(base: string, parent: Dir | null) {
           parsingContext: context,
         });
 
-        const req = requireFile.bind(child, fullpath);
+        const req = requireFile.bind(null, child, fullpath);
 
         child.module = new Module(dir, fn, req);
       }
@@ -109,7 +120,8 @@ function loadDir(base: string, parent: Dir | null) {
   return dir;
 }
 
-const root = loadDir('foo', null);
+const root = loadDir('testing/foo', '', null);
+console.dir(root, { depth: null });
 
 const boot = root.files.find(file => file.name === 'a.tsx')!;
 boot.module!.run();
@@ -117,7 +129,6 @@ console.log(boot.module!.exports.default(3))
 console.log(boot.module!.exports.default(9))
 
 
-// console.dir(root, { depth: null });
 
 
 
