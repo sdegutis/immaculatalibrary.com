@@ -30,11 +30,11 @@ export class Runtime {
     this.createModules(root);
   }
 
-  findModuleFromRoot(destPath: string) {
+  findAbsoluteModule(destPath: string) {
     if (!destPath.endsWith('.tsx')) destPath += '.tsx';
 
     let dir: Dir = this.root;
-    const parts = destPath.split(path.sep);
+    const parts = destPath.split(path.posix.sep).slice(1);
     let part: string | undefined;
 
     while (part = parts.shift()) {
@@ -123,8 +123,10 @@ class Module {
   }
 
   #require(toPath: string) {
-    const destPath = path.join(path.dirname(this.file.path), toPath);
-    const mod = this.#runtime.findModuleFromRoot(destPath);
+    const destPath = (toPath.startsWith('/')
+      ? toPath
+      : path.posix.join(path.posix.dirname(this.file.path), toPath));
+    const mod = this.#runtime.findAbsoluteModule(destPath);
     if (!mod) {
       throw new Error(`Can't find module at path: ${destPath}`);
     }

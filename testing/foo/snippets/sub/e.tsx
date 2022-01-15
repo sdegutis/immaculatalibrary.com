@@ -1,2 +1,3 @@
+import { bar } from "/a";
 
-expo const data = () => 123 * 3;
+export const data = () => 123 * 3 + bar;

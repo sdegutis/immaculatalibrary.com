@@ -1,4 +1,4 @@
-import { data } from "./d";
+import { data } from "/snippets/sub/d";
 
 export default () => <a href='hey'>in <>yes</>c!</a>;
 

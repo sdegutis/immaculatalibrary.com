@@ -5,5 +5,10 @@
     ],
     "jsx": "preserve",
     "noEmit": true,
+    "paths": {
+      "/*": [
+        "./*"
+      ],
+    }
   }
 }

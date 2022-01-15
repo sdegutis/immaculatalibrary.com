@@ -12,7 +12,7 @@ const runtime = new Runtime(root, {
 }, {
   console,
 });
-const boot = runtime.findModuleFromRoot('a.tsx')!;
+const boot = runtime.findAbsoluteModule('/a.tsx')!;
 boot.require();
 console.log(boot.exports.foo(3));
 console.log(boot.exports.foo(9));

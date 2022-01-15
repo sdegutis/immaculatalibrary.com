@@ -31,29 +31,29 @@ export class LocalFs {
   constructor(private fsBase: string) { }
 
   load() {
-    return this.#loadDir('', null);
+    return this.#loadDir('/', null);
   }
 
   #loadDir(base: string, parent: Dir | null) {
-    const files = fs.readdirSync(path.join(this.fsBase, base));
+    const files = fs.readdirSync(path.posix.join(this.fsBase, base));
 
-    const dir = new Dir(base, path.basename(base), parent);
+    const dir = new Dir(base, path.posix.basename(base), parent);
 
     for (const name of files) {
       if (name.startsWith('.')) continue;
 
-      const fullpath = path.join(this.fsBase, base, name);
+      const fullpath = path.posix.join(this.fsBase, base, name);
       const stat = fs.statSync(fullpath);
 
       if (stat.isDirectory()) {
-        const child = this.#loadDir(path.join(base, name), dir);
+        const child = this.#loadDir(path.posix.join(base, name), dir);
         dir.subdirs[name] = child;
         dir.entries[name] = child;
       }
       else if (stat.isFile()) {
         const buffer = fs.readFileSync(fullpath);
 
-        const child = new File(path.join(base, name), name, dir, buffer);
+        const child = new File(path.posix.join(base, name), name, dir, buffer);
         dir.files[name] = child;
         dir.entries[name] = child;
       }
