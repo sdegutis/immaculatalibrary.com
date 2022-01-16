@@ -2,8 +2,15 @@ import 'source-map-support/register';
 import { jsxCreateStringifiedElement } from "./lib/jsx-stringify";
 import { Runtime } from "./lib/runtime";
 import { LocalFs } from './lib/vfs';
+import chokidar from 'chokidar';
 
-const loader = new LocalFs('testing/foo');
+chokidar.watch('data', {
+  ignoreInitial: true,
+}).on('all', (e, p) => {
+  console.log(e, p);
+});
+
+const loader = new LocalFs('data');
 const root = loader.load();
 
 
