@@ -1,7 +1,6 @@
+import * as fs from 'fs';
 import { URL } from "url";
 import { inB } from "./b";
-import * as fs from 'fs';
-
 import qux from './snippets/sub/c';
 
 console.log(['executing A', inB()]);

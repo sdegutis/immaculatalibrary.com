@@ -126,9 +126,18 @@ class Module {
   }
 
   #require(toPath: string) {
-    const absolutePath = (path.posix.isAbsolute(toPath)
-      ? toPath
-      : path.posix.join(path.posix.dirname(this.file.path), toPath));
+    let absolutePath: string;
+
+    if (toPath.startsWith('/')) {
+      absolutePath = toPath;
+    }
+    else if (toPath.startsWith('.')) {
+      absolutePath = path.posix.join(path.posix.dirname(this.file.path), toPath);
+    }
+    else {
+      return require(toPath);
+    }
+
     const mod = this.#runtime.findModule(absolutePath);
     if (!mod) {
       throw new Error(`Can't find module at path: ${absolutePath}`);
