@@ -4,6 +4,7 @@ import { inB } from "./b";
 import qux from './snippets/sub/c';
 import bcrypt from 'bcryptjs';
 import MarkdownIt from 'markdown-it';
+import { RouteHandler } from '../../src/http';
 
 const markdown = new MarkdownIt({
   html: true,
@@ -12,6 +13,7 @@ const markdown = new MarkdownIt({
   breaks: true,
 });
 
+
 console.log(typeof markdown);
 console.log(typeof bcrypt);
 
@@ -19,15 +21,15 @@ console.log(typeof bcrypt);
 
 console.log(['executing A', inB()]);
 
-console.log(new URL(String(fs), 'http://localhost'));
+// console.log(new URL(String(fs), 'http://localhost'));
 
-setTimeout(() => {
-  console.log('timeout')
-}, 1000);
+// setTimeout(() => {
+//   console.log('timeout')
+// }, 1000);
 
-setInterval(() => {
-  console.log('interval')
-}, 1000);
+// setInterval(() => {
+//   console.log('interval')
+// }, 1000);
 
 export const foo = (a: number) => ({ q: qux(), a, b: Math.random() });
 

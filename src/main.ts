@@ -4,23 +4,9 @@ import express from 'express';
 import 'source-map-support/register';
 import { URL, URLSearchParams } from 'url';
 import { FileSys } from './filesys';
+import { RouteHandler } from './http';
 import { jsxCreateStringifiedElement } from "./jsx-stringify";
 import { Runtime } from "./runtime";
-
-interface RouteInput {
-  method: Uppercase<string>;
-  url: URL;
-  headers: { [name: Lowercase<string>]: string | string[] | undefined };
-  body: Buffer;
-}
-
-interface RouteOutput {
-  status?: number;
-  headers?: object;
-  body?: string | Buffer;
-}
-
-type RouteHandler = (input: RouteInput) => RouteOutput;
 
 class Site {
 
@@ -29,6 +15,7 @@ class Site {
   runtime: Runtime | undefined;
 
   build() {
+    console.log('Building site');
     const root = this.#filesys.load();
 
     this.runtime?.shutdown();
@@ -80,7 +67,3 @@ server.use((req, res, next) => {
 server.listen(port, () => {
   console.log(`Running on http://localhost:${port}`);
 });
-
-
-
-

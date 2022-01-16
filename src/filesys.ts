@@ -41,8 +41,7 @@ export class FileSys {
 
     const dir = new Dir(root!, base, path.posix.basename(base), parent);
     if (!root) {
-      root = dir;
-      dir.root = dir;
+      root = dir.root = dir;
     }
 
     for (const name of files) {
