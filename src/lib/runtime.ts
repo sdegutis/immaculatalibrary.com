@@ -126,12 +126,12 @@ class Module {
   }
 
   #require(toPath: string) {
-    const destPath = (toPath.startsWith('/')
+    const absolutePath = (toPath.startsWith('/')
       ? toPath
       : path.posix.join(path.posix.dirname(this.file.path), toPath));
-    const mod = this.#runtime.findModule(destPath);
+    const mod = this.#runtime.findModule(absolutePath);
     if (!mod) {
-      throw new Error(`Can't find module at path: ${destPath}`);
+      throw new Error(`Can't find module at path: ${absolutePath}`);
     }
     return mod.require();
   }
