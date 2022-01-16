@@ -126,7 +126,7 @@ class Module {
   }
 
   #require(toPath: string) {
-    const absolutePath = (toPath.startsWith('/')
+    const absolutePath = (path.posix.isAbsolute(toPath)
       ? toPath
       : path.posix.join(path.posix.dirname(this.file.path), toPath));
     const mod = this.#runtime.findModule(absolutePath);
