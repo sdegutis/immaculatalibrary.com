@@ -28,7 +28,7 @@ export class File {
 
 export class LocalFs {
 
-  constructor(private fsBase: string) { }
+  constructor(public fsBase: string) { }
 
   load() {
     return this.#loadDir('/', null);

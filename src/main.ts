@@ -1,17 +1,19 @@
+import chokidar from 'chokidar';
 import 'source-map-support/register';
 import { jsxCreateStringifiedElement } from "./lib/jsx-stringify";
 import { Runtime } from "./lib/runtime";
 import { LocalFs } from './lib/vfs';
-import chokidar from 'chokidar';
 
-chokidar.watch('data', {
+const filesys = new LocalFs('data');
+
+chokidar.watch(filesys.fsBase, {
   ignoreInitial: true,
 }).on('all', (e, p) => {
   console.log(e, p);
 });
 
-const loader = new LocalFs('data');
-const root = loader.load();
+
+const root = filesys.load();
 
 
 const runtime = new Runtime(root, {
@@ -19,6 +21,9 @@ const runtime = new Runtime(root, {
 }, {
   console,
 });
+
+
+
 const boot = runtime.findAbsoluteModule('/a.tsx')!;
 boot.require();
 console.log(boot.exports.foo(3));
