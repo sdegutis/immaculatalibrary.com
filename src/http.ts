@@ -1,9 +1,10 @@
+import { IncomingHttpHeaders } from "http";
 import { URL } from "url";
 
 export interface RouteInput {
   method: Uppercase<string>;
   url: URL;
-  headers: { [name: Lowercase<string>]: string | string[] | undefined };
+  headers: IncomingHttpHeaders;
   body: Buffer;
 }
 
