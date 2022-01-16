@@ -1,3 +1,13 @@
+
+export type IntrinsicElements = {
+  [Tag in keyof HTMLElementTagNameMap]: (
+    { [Attr in keyof Omit<HTMLElementTagNameMap[Tag], 'children' | 'toString'>]?: string }
+    & { children?: any }
+  );
+};
+
+export type Element = string;
+
 const unary = new Set(['br', 'hr', 'input']);
 
 export function jsxCreateStringifiedElement(tag: string | Function | symbol, attrs: any, ...children: any[]) {
