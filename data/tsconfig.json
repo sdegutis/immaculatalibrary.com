@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "ES2020"
+    ],
+    "jsx": "preserve",
+    "noEmit": true,
+    "paths": {
+      "/*": [
+        "./*"
+      ],
+    }
+  }
+}
