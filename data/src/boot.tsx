@@ -5,6 +5,7 @@ import qux from './snippets/sub/c';
 import bcrypt from 'bcryptjs';
 import MarkdownIt from 'markdown-it';
 import { RouteHandler } from '../../src/http';
+import 'source-map-support/register';
 
 const markdown = new MarkdownIt({
   html: true,

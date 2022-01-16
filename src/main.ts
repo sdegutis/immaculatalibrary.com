@@ -1,5 +1,4 @@
 import chokidar from 'chokidar';
-import 'dotenv/config';
 import express from 'express';
 import 'source-map-support/register';
 import { URL, URLSearchParams } from 'url';

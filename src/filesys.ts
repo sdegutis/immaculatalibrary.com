@@ -15,6 +15,14 @@ export class Dir {
     realpath: string,
   ) { }
 
+  createFile(name: string, buffer: Buffer) {
+    throw new Error();
+  }
+
+  rename(newName: string) {
+    throw new Error();
+  }
+
 }
 
 export class File {
@@ -32,9 +40,13 @@ export class File {
     this.buffer = fs.readFileSync(realpath);
   }
 
-  replace(buffer: Buffer) {
-    this.buffer = buffer;
-    fs.writeFileSync(this.#realpath, buffer);
+  replace(newBuffer: Buffer) {
+    this.buffer = newBuffer;
+    fs.writeFileSync(this.#realpath, newBuffer);
+  }
+
+  rename(newName: string) {
+    throw new Error();
   }
 
 }
