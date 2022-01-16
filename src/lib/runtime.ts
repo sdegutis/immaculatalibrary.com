@@ -1,7 +1,7 @@
 import * as path from "path";
 import * as sucrase from 'sucrase';
 import vm from 'vm';
-import { Dir, File } from "./vfs";
+import { Dir, File } from "./filesys";
 
 type JsxCreateElement = (
   tag: string | Function | symbol,

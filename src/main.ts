@@ -2,9 +2,9 @@ import chokidar from 'chokidar';
 import 'source-map-support/register';
 import { jsxCreateStringifiedElement } from "./lib/jsx-stringify";
 import { Runtime } from "./lib/runtime";
-import { LocalFs } from './lib/vfs';
+import { FileSys } from './lib/filesys';
 
-const filesys = new LocalFs('data');
+const filesys = new FileSys('data');
 
 const buildSite = () => {
   const root = filesys.load();

@@ -26,7 +26,7 @@ export class File {
 
 }
 
-export class LocalFs {
+export class FileSys {
 
   constructor(public fsBase: string) { }
 
