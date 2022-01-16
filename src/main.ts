@@ -15,8 +15,11 @@ const buildSite = () => {
     console,
   });
 
-  const boot = runtime.findAbsoluteModule('/src/a.tsx')!;
+  const boot = runtime.findModule('/src/a.tsx')!;
   boot.require();
+
+
+
   console.log(boot.exports.foo(3));
   console.log(boot.exports.foo(9));
 };

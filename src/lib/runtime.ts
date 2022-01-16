@@ -30,16 +30,18 @@ export class Runtime {
     this.createModules(root);
   }
 
-  findAbsoluteModule(destPath: string) {
-    if (!destPath.endsWith('.tsx')) destPath += '.tsx';
-
+  findModule(absolutePath: string) {
     let dir: Dir = this.root;
-    const parts = destPath.split(path.posix.sep).slice(1);
+    const parts = absolutePath.split(path.posix.sep).slice(1);
     let part: string | undefined;
 
     while (part = parts.shift()) {
       if (parts.length === 0) {
-        const file = dir.files[part];
+        const file = (
+          dir.files[part] ??
+          dir.files[part + '.ts'] ??
+          dir.files[part + '.tsx']
+        );
         if (file) {
           const mod = this.modules.get(file);
           if (mod) return mod;
@@ -61,7 +63,7 @@ export class Runtime {
     }
 
     for (const file of Object.values(dir.files)) {
-      if (file.name.endsWith('.tsx')) {
+      if (file.name.match(/\.tsx?$/)) {
         this.modules.set(file, new Module(file, this));
       }
     }
@@ -127,7 +129,7 @@ class Module {
     const destPath = (toPath.startsWith('/')
       ? toPath
       : path.posix.join(path.posix.dirname(this.file.path), toPath));
-    const mod = this.#runtime.findAbsoluteModule(destPath);
+    const mod = this.#runtime.findModule(destPath);
     if (!mod) {
       throw new Error(`Can't find module at path: ${destPath}`);
     }
