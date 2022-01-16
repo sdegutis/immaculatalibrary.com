@@ -90,6 +90,7 @@ class Module {
         require: (path: string) => this.#require(path),
         exports: this.exports,
         __dir: this.file.parent!,
+        __file: this.file,
       };
 
       const sucraseOptions: sucrase.Options = {

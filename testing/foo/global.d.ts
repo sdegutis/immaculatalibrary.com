@@ -1,4 +1,5 @@
 declare const __dir: Dir;
+declare const __file: File;
 
 declare class Dir {
   files: { [name: string]: File };
