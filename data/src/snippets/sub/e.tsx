@@ -1,3 +1,3 @@
-import { bar } from "/src/a";
+import { bar } from "/src/boot";
 
 export const data = () => 123 * 3 + bar;

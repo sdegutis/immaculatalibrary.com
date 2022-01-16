@@ -15,7 +15,7 @@ const buildSite = () => {
     console,
   });
 
-  const boot = runtime.findModule('/src/a')!;
+  const boot = runtime.findModule('/src/boot')!;
   boot.require();
 
 
