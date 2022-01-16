@@ -6,29 +6,30 @@ import { LocalFs } from './lib/vfs';
 
 const filesys = new LocalFs('data');
 
+let timeout: NodeJS.Timeout | null = null;
+
+const buildSite = () => {
+  const root = filesys.load();
+
+  const runtime = new Runtime(root, {
+    jsxCreateElement: jsxCreateStringifiedElement,
+  }, {
+    console,
+  });
+
+  const boot = runtime.findAbsoluteModule('/a.tsx')!;
+  boot.require();
+  console.log(boot.exports.foo(3));
+  console.log(boot.exports.foo(9));
+};
+
 chokidar.watch(filesys.fsBase, {
-  ignoreInitial: true,
 }).on('all', (e, p) => {
-  console.log(e, p);
+  if (timeout) clearTimeout(timeout);
+  timeout = setTimeout(() => {
+    buildSite();
+  }, 100);
 });
-
-
-const root = filesys.load();
-
-
-const runtime = new Runtime(root, {
-  jsxCreateElement: jsxCreateStringifiedElement,
-}, {
-  console,
-});
-
-
-
-const boot = runtime.findAbsoluteModule('/a.tsx')!;
-boot.require();
-console.log(boot.exports.foo(3));
-console.log(boot.exports.foo(9));
-
 
 
 
