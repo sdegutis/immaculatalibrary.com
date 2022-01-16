@@ -22,8 +22,34 @@ interface RouteOutput {
 
 type RouteHandler = (input: RouteInput) => RouteOutput;
 
+class Site {
 
-let handler: RouteHandler | undefined;
+  handler: RouteHandler | undefined;
+  #filesys = new FileSys('data');
+  runtime: Runtime | undefined;
+
+  build() {
+    const root = this.#filesys.load();
+
+    this.runtime?.shutdown();
+    this.runtime = new Runtime(root, jsxCreateStringifiedElement);
+
+    const boot = this.runtime.findModule('/src/boot')!;
+    boot.require();
+    this.handler = boot.exports.routeHandler;
+  }
+
+}
+
+const site = new Site();
+
+let timeout: NodeJS.Timeout | null = null;
+chokidar.watch('data/src').on('all', (e, p) => {
+  if (timeout) clearTimeout(timeout);
+  timeout = setTimeout(() => {
+    site.build();
+  }, 100);
+});
 
 const port = 8080;
 const server = express();
@@ -37,9 +63,9 @@ server.use((req, res, next) => {
     return;
   }
 
-  if (!handler) return next();
+  if (!site.handler) return next();
 
-  const output = handler({
+  const output = site.handler({
     body: req.body,
     headers: req.headers,
     method: req.method,
@@ -58,40 +84,3 @@ server.listen(port, () => {
 
 
 
-const filesys = new FileSys('data');
-
-const buildSite = () => {
-  const root = filesys.load();
-
-  const runtime = new Runtime(root, {
-    jsxCreateElement: jsxCreateStringifiedElement,
-  }, {
-    console,
-  });
-
-  const boot = runtime.findModule('/src/boot')!;
-  boot.require();
-
-  handler = boot.exports.routeHandler;
-};
-
-let timeout: NodeJS.Timeout | null = null;
-chokidar.watch('data/src').on('all', (e, p) => {
-  if (timeout) clearTimeout(timeout);
-  timeout = setTimeout(() => {
-    buildSite();
-  }, 100);
-});
-
-
-// const MarkdownIt = require('markdown-it');
-// const markdown = new MarkdownIt({
-//   html: true,
-//   typographer: true,
-//   linkify: true,
-//   breaks: true,
-// });
-
-
-
-// const bcrypt = require('bcryptjs');

@@ -9,25 +9,36 @@ type JsxCreateElement = (
   ...children: any[]
 ) => any;
 
-interface RuntimeOptions {
-  jsxCreateElement?: JsxCreateElement;
-}
-
 export class Runtime {
 
   context;
-  jsxCreateElement: JsxCreateElement | undefined;
-
   modules = new Map<File, Module>();
+  timeouts: NodeJS.Timeout[] = [];
+  intervals: NodeJS.Timer[] = [];
 
   constructor(
     public root: Dir,
-    options: RuntimeOptions,
-    sandbox: { [global: string]: any },
+    public jsxCreateElement?: JsxCreateElement,
   ) {
-    this.jsxCreateElement = options.jsxCreateElement;
-    this.context = vm.createContext(sandbox);
+    this.context = vm.createContext({
+      console,
+      setTimeout: (fn: () => void, ms: number) => this.setTimeout(fn, ms),
+      setInterval: (fn: () => void, ms: number) => this.setInterval(fn, ms),
+    });
     this.createModules(root);
+  }
+
+  setTimeout(fn: () => void, ms: number) {
+    this.timeouts.push(setTimeout(fn, ms));
+  }
+
+  setInterval(fn: () => void, ms: number) {
+    this.intervals.push(setInterval(fn, ms));
+  }
+
+  shutdown() {
+    this.timeouts.forEach(clearTimeout);
+    this.intervals.forEach(clearInterval);
   }
 
   findModule(absolutePath: string) {

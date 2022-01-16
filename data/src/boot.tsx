@@ -1,11 +1,33 @@
-import * as fs from 'fs';
+import fs from 'fs';
 import { URL } from "url";
 import { inB } from "./b";
 import qux from './snippets/sub/c';
+import bcrypt from 'bcryptjs';
+import MarkdownIt from 'markdown-it';
+
+const markdown = new MarkdownIt({
+  html: true,
+  typographer: true,
+  linkify: true,
+  breaks: true,
+});
+
+console.log(typeof markdown);
+console.log(typeof bcrypt);
+
+
 
 console.log(['executing A', inB()]);
 
-console.log(fs);
+console.log(new URL(String(fs), 'http://localhost'));
+
+setTimeout(() => {
+  console.log('timeout')
+}, 1000);
+
+setInterval(() => {
+  console.log('interval')
+}, 1000);
 
 export const foo = (a: number) => ({ q: qux(), a, b: Math.random() });
 
@@ -16,18 +38,3 @@ export const routeHandler: RouteHandler = (input) => {
     body: input.url.toString(),
   }
 };
-
-interface RouteInput {
-  method: Uppercase<string>;
-  url: URL;
-  headers: { [name: Lowercase<string>]: string | string[] | undefined };
-  body: Buffer;
-}
-
-interface RouteOutput {
-  status?: number;
-  headers?: object;
-  body?: string | Buffer;
-}
-
-type RouteHandler = (input: RouteInput) => RouteOutput;
