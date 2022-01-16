@@ -12,9 +12,9 @@ type JsxCreateElement = (
 export class Runtime {
 
   context;
-  modules = new Map<File, Module>();
-  timeouts: NodeJS.Timeout[] = [];
-  intervals: NodeJS.Timer[] = [];
+  #modules = new Map<File, Module>();
+  #timeouts: NodeJS.Timeout[] = [];
+  #intervals: NodeJS.Timer[] = [];
 
   constructor(
     public root: Dir,
@@ -23,23 +23,23 @@ export class Runtime {
     this.context = vm.createContext({
       console,
       Buffer,
-      setTimeout: (fn: () => void, ms: number) => this.setTimeout(fn, ms),
-      setInterval: (fn: () => void, ms: number) => this.setInterval(fn, ms),
+      setTimeout: (fn: () => void, ms: number) => this.#setTimeout(fn, ms),
+      setInterval: (fn: () => void, ms: number) => this.#setInterval(fn, ms),
     });
-    this.createModules(root);
+    this.#createModules(root);
   }
 
-  setTimeout(fn: () => void, ms: number) {
-    this.timeouts.push(setTimeout(fn, ms));
+  #setTimeout(fn: () => void, ms: number) {
+    this.#timeouts.push(setTimeout(fn, ms));
   }
 
-  setInterval(fn: () => void, ms: number) {
-    this.intervals.push(setInterval(fn, ms));
+  #setInterval(fn: () => void, ms: number) {
+    this.#intervals.push(setInterval(fn, ms));
   }
 
   shutdown() {
-    this.timeouts.forEach(clearTimeout);
-    this.intervals.forEach(clearInterval);
+    this.#timeouts.forEach(clearTimeout);
+    this.#intervals.forEach(clearInterval);
   }
 
   findModule(absolutePath: string) {
@@ -55,7 +55,7 @@ export class Runtime {
           dir.files[part + '.tsx']
         );
         if (file) {
-          const mod = this.modules.get(file);
+          const mod = this.#modules.get(file);
           if (mod) return mod;
         }
       }
@@ -69,14 +69,14 @@ export class Runtime {
     return null;
   }
 
-  createModules(dir: Dir) {
+  #createModules(dir: Dir) {
     for (const subdir of Object.values(dir.subdirs)) {
-      this.createModules(subdir);
+      this.#createModules(subdir);
     }
 
     for (const file of Object.values(dir.files)) {
       if (file.name.match(/\.tsx?$/)) {
-        this.modules.set(file, new Module(file, this));
+        this.#modules.set(file, new Module(file, this));
       }
     }
   }
@@ -90,7 +90,7 @@ class Module {
   #runtime: Runtime;
 
   constructor(
-    public file: File,
+    private file: File,
     runtime: Runtime,
   ) {
     this.#runtime = runtime;

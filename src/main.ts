@@ -12,16 +12,16 @@ class Site {
 
   handler: RouteHandler | undefined;
   #filesys = new FileSys('data');
-  runtime: Runtime | undefined;
+  #runtime: Runtime | undefined;
 
   build() {
     console.log('Building site');
     const root = this.#filesys.load();
 
-    this.runtime?.shutdown();
-    this.runtime = new Runtime(root, jsxCreateStringifiedElement);
+    this.#runtime?.shutdown();
+    this.#runtime = new Runtime(root, jsxCreateStringifiedElement);
 
-    const boot = this.runtime.findModule('/src/boot')!;
+    const boot = this.#runtime.findModule('/src/boot')!;
     boot.require();
     this.handler = boot.exports.routeHandler;
   }
