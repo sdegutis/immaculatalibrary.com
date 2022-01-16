@@ -6,8 +6,6 @@ import { LocalFs } from './lib/vfs';
 
 const filesys = new LocalFs('data');
 
-let timeout: NodeJS.Timeout | null = null;
-
 const buildSite = () => {
   const root = filesys.load();
 
@@ -23,8 +21,8 @@ const buildSite = () => {
   console.log(boot.exports.foo(9));
 };
 
-chokidar.watch(filesys.fsBase, {
-}).on('all', (e, p) => {
+let timeout: NodeJS.Timeout | null = null;
+chokidar.watch(filesys.fsBase, {}).on('all', (e, p) => {
   if (timeout) clearTimeout(timeout);
   timeout = setTimeout(() => {
     buildSite();
