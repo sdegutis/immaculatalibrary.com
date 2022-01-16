@@ -3,9 +3,9 @@ import 'dotenv/config';
 import express from 'express';
 import 'source-map-support/register';
 import { URL, URLSearchParams } from 'url';
-import { FileSys } from './lib/filesys';
-import { jsxCreateStringifiedElement } from "./lib/jsx-stringify";
-import { Runtime } from "./lib/runtime";
+import { FileSys } from './filesys';
+import { jsxCreateStringifiedElement } from "./jsx-stringify";
+import { Runtime } from "./runtime";
 
 interface RouteInput {
   method: Uppercase<string>;
