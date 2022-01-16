@@ -18,13 +18,24 @@ export class Dir {
 
 export class File {
 
+  #realpath: string;
+  buffer: Buffer;
   constructor(
     public root: Dir,
     public path: string,
     public name: string,
     public parent: Dir | null,
-    public buffer: Buffer,
-  ) { }
+    realpath: string,
+  ) {
+    this.#realpath = realpath;
+    this.buffer = fs.readFileSync(realpath);
+  }
+
+  replace(buffer: Buffer) {
+    this.buffer = buffer;
+    console.log([this.#realpath, buffer.toString()]);
+    fs.writeFileSync(this.#realpath, buffer);
+  }
 
 }
 
@@ -47,8 +58,8 @@ export class FileSys {
     for (const name of files) {
       if (name.startsWith('.')) continue;
 
-      const fullpath = path.posix.join(this.fsBase, base, name);
-      const stat = fs.statSync(fullpath);
+      const realpath = path.posix.join(this.fsBase, base, name);
+      const stat = fs.statSync(realpath);
 
       if (stat.isDirectory()) {
         const child = this.#loadDir(path.posix.join(base, name), dir, root);
@@ -56,9 +67,7 @@ export class FileSys {
         dir.entries[name] = child;
       }
       else if (stat.isFile()) {
-        const buffer = fs.readFileSync(fullpath);
-
-        const child = new File(root, path.posix.join(base, name), name, dir, buffer);
+        const child = new File(root, path.posix.join(base, name), name, dir, realpath);
         dir.files[name] = child;
         dir.entries[name] = child;
       }

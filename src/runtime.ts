@@ -22,6 +22,7 @@ export class Runtime {
   ) {
     this.context = vm.createContext({
       console,
+      Buffer,
       setTimeout: (fn: () => void, ms: number) => this.setTimeout(fn, ms),
       setInterval: (fn: () => void, ms: number) => this.setInterval(fn, ms),
     });
