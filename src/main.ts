@@ -15,7 +15,7 @@ const buildSite = () => {
     console,
   });
 
-  const boot = runtime.findModule('/src/a.tsx')!;
+  const boot = runtime.findModule('/src/a')!;
   boot.require();
 
 
