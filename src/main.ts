@@ -41,6 +41,7 @@ chokidar.watch('data/src', { ignoreInitial: true }).on('all', (e, p) => {
   }, 100);
 });
 
+const baseUrl = 'https://www.immaculatalibrary.com/';
 const port = 8080;
 const server = express();
 server.set('trust proxy', 1);
@@ -57,7 +58,7 @@ server.use((req, res, next) => {
     body: req.body,
     headers: req.headers,
     method: req.method,
-    url: new URL(req.url, 'http://localhost:8080'),
+    url: new URL(req.url, baseUrl),
   });
 
   res.status(output.status ?? 200);
