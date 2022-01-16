@@ -15,14 +15,14 @@ const buildSite = () => {
     console,
   });
 
-  const boot = runtime.findAbsoluteModule('/a.tsx')!;
+  const boot = runtime.findAbsoluteModule('/src/a.tsx')!;
   boot.require();
   console.log(boot.exports.foo(3));
   console.log(boot.exports.foo(9));
 };
 
 let timeout: NodeJS.Timeout | null = null;
-chokidar.watch(filesys.fsBase, {}).on('all', (e, p) => {
+chokidar.watch('data/src').on('all', (e, p) => {
   if (timeout) clearTimeout(timeout);
   timeout = setTimeout(() => {
     buildSite();
