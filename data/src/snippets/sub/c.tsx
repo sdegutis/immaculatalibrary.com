@@ -1,6 +1,6 @@
 import { data } from "./d";
 
-const html = <a href="hi" style="" className="">in <>yes</>
+const html = <a href="hi" style="" class="hi">in <>yes</>
   <b>hi</b>
 </a>;
 export default () => html;

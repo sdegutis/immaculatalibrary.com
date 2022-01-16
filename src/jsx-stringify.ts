@@ -2,7 +2,7 @@
 export type IntrinsicElements = {
   [Tag in keyof HTMLElementTagNameMap]: (
     { [Attr in keyof Omit<HTMLElementTagNameMap[Tag], 'children' | 'toString'>]?: string }
-    & { children?: any }
+    & { children?: any, class?: string }
   );
 };
 
