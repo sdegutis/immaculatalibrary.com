@@ -1,10 +1,15 @@
+import { RouteHandler } from '../../src/http';
+
+import { spawnSync } from 'child_process';
+spawnSync('git ci -am "git from site"', { shell: true, stdio: 'inherit' });
+spawnSync('git push', { shell: true, stdio: 'inherit' });
+
 // import fs from 'fs';
 // import { URL } from "url";
 // import { inB } from "./b";
 // import qux from './snippets/sub/c';
 // import bcrypt from 'bcryptjs';
 // import MarkdownIt from 'markdown-it';
-// import { RouteHandler } from '../../src/http';
 // import 'source-map-support/register';
 
 // const markdown = new MarkdownIt({
