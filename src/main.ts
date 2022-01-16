@@ -9,9 +9,13 @@ import { Runtime } from "./runtime";
 
 class Site {
 
-  handler: RouteHandler | undefined;
+  handler!: RouteHandler;
   #filesys = new FileSys('data');
   #runtime: Runtime | undefined;
+
+  constructor() {
+    this.build();
+  }
 
   build() {
     console.log('Building site');
@@ -30,7 +34,7 @@ class Site {
 const site = new Site();
 
 let timeout: NodeJS.Timeout | null = null;
-chokidar.watch('data/src').on('all', (e, p) => {
+chokidar.watch('data/src', { ignoreInitial: true }).on('all', (e, p) => {
   if (timeout) clearTimeout(timeout);
   timeout = setTimeout(() => {
     site.build();
@@ -48,8 +52,6 @@ server.use((req, res, next) => {
     res.redirect(req.path.slice(0, -1));
     return;
   }
-
-  if (!site.handler) return next();
 
   const output = site.handler({
     body: req.body,
