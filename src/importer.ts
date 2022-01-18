@@ -1,14 +1,12 @@
 import * as fs from "fs";
 import Yaml from 'js-yaml';
 
-const rawItems = require('../imlib-backup-2022-01-18T13_31_41.688Z.json');
-
-// delete rawItems.$boot.$type;
-
+const rawItems = require('../../../../../Downloads/imlib-backup-2022-01-18T13_31_41.688Z.json');
 const items: any[] = Object.entries<any>(rawItems).map(([$id, data]) => ({ $id, ...data }));
 
 const staticItems = items.filter(it => it.$type === '73c941de-a7e9-4bce-98b1-9bb59ef57b65');
 const movieItems = items.filter(it => it.$type === '10a9ab1a-0665-4905-8c5c-2410739a7ad8');
+
 const snippetItems = items.filter(it => it.$type === '7493c4fd-eb27-4acb-9ce3-569624a82195');
 const bookItems = items.filter(it => it.$type === '13d55978-5a2d-4144-a32c-ba0ef7ad8020');
 const postItems = items.filter(it => it.$type === 'aca5fd0a-04a1-43e7-a625-b16c99cc41c9');
@@ -31,12 +29,39 @@ const remainder = items.filter(it =>
   !postItems.includes(it)
 );
 
-console.log(remainder[3])
-console.log(remainder.map(it => it.$name))
+// console.log(remainder[3])
+// console.log(remainder.map(it => it.$name))
 
+console.log(keysIn(categoryItems));
+console.log(categoryItems.length)
+
+function keysIn(items: any[]) {
+  const map = new Map<string, number>();
+  for (const it of items) {
+    for (const key of Object.keys(it)) {
+      map.set(key, (map.get(key) ?? 0) + 1);
+    }
+  }
+  return map;
+}
 
 // importPublic();
 // importMovies();
+// importCategories();
+
+function importCategories() {
+  for (const item of categoryItems) {
+    const header = Yaml.dump({
+      title: item.title,
+      shortTitle: item.shortTitle,
+      imageFilename: item.imageFilename,
+      books: item.books,
+    }, {
+      forceQuotes: true,
+    });
+    fs.writeFileSync(`data/data/categories/${item.slug}.md`, `---\n${header}---\n\n${item.description}`);
+  }
+}
 
 function importPublic() {
   for (const item of staticItems) {
@@ -53,8 +78,6 @@ function importPublic() {
 
 function importMovies() {
   for (const item of movieItems) {
-    // console.log('hmm')
-    // const buffer = Buffer.from(item.content, item.base64 ? 'base64' : 'utf8');
     const header = Yaml.dump({
       title: item.title,
       shortTitle: item.shortTitle,

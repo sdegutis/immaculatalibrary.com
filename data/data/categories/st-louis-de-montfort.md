@@ -1,0 +1,12 @@
+---
+title: 'St. Louis de Montfort'
+shortTitle: 'Louis de Montfort'
+imageFilename: '/img/st-louis-de-montfort-big.jpg'
+books:
+  - 'defense-of-true-devotion-to-mary'
+  - 'the-secret-of-mary'
+  - 'the-secret-of-sanctity-revealed'
+  - 'true-devotion-to-mary'
+---
+
+Although not as prolific as some other saints, St. Louis de Montfort has made such important contributions to true devotion to the Blessed Virgin Mary, that this page has been created to further propagate this devotion through these books.

@@ -1,0 +1,12 @@
+---
+title: 'St. John of the Cross'
+shortTitle: 'John of the Cross'
+imageFilename: '/img/st-john-of-the-cross-big.jpg'
+books:
+  - 'ascent-of-mount-carmel'
+  - 'dark-night-of-the-soul'
+  - 'living-flame-of-love'
+  - 'spiritual-canticle-of-the-soul'
+---
+
+Although well known throughout the Catholic Church, the writings of St. John of the Cross are probably not as well read. Being a Doctor of the Church, his famous writings deserve a page all their own.
