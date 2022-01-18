@@ -5,11 +5,13 @@ const html = <a href="hi" style="" class="hi">in <>yes</>
 </a>;
 export default () => html;
 
-console.log(__dir.parent!.files['bootstrapper.html']!.buffer.toString('utf8'));
-console.log(__dir.root.subdirs['data']!.files['test1.txt']!.buffer.toString('utf8'));
+// __file.root.subdirs['data']!.createFile('test2.txt', Buffer.from('great stuff\n\n seriusly'));
 
-const f = __dir.root.subdirs['data']!.files['test1.txt']!;
+// console.log(__file.parent.parent!.files['bootstrapper.html']!.buffer.toString('utf8'));
+// console.log(__file.root.subdirs['data']!.files['test1.txt']!.buffer.toString('utf8'));
 
-f.replace(Buffer.from('hello world!\n\nso cool'));
+// const f = __file.root.subdirs['data']!.files['test1.txt']!;
 
-console.log(data());
+// f.replace(Buffer.from('hello world!\n\nso cool!'));
+
+// console.log(data());

@@ -1,4 +1,3 @@
-const __dir: import('../src/filesys').Dir;
 const __file: import('../src/filesys').File;
 
 module JSX {
