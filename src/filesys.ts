@@ -54,6 +54,7 @@ export class Dir extends FsNode {
     const child = new File(this.realBase, name, this);
     child.buffer = buffer;
     fs.writeFileSync(child.realPath, buffer);
+    this.children.push(child);
   }
 
 }
