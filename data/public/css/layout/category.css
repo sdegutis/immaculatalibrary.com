@@ -1,0 +1,17 @@
+#category ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#category li {
+  margin-bottom: 1em;
+}
+
+#category li .blurb {
+  font-size: 80%;
+  margin-left: 2em;
+}
+
+#category li .author {
+  font-size: 80%;
+}

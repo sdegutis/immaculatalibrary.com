@@ -1,0 +1,41 @@
+.content h2.title {
+  margin-bottom: 0.25em;
+}
+
+.content p.subtitle {
+  font-weight: bold;
+  color: var(--bold-color);
+}
+
+.content .author {
+  font-weight: bold;
+  color: var(--bold-color);
+}
+
+.content .indent {
+  margin-left: 20px;
+}
+
+.content ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.content table.downloads {
+  border-collapse: collapse;
+}
+
+.content table.downloads td {
+  padding: 1em;
+  border: 1px solid var(--border-color);
+}
+
+.content table.downloads td.link {
+  white-space: nowrap;
+}
+
+ul.snippets-latest {
+  padding-left: 20px;
+  max-height: 700px;
+  overflow: auto;
+}

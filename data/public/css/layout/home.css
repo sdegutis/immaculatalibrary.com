@@ -1,0 +1,57 @@
+#home-hero {
+  background-image: url(/img/header.jpg);
+  background-size: cover;
+  background-position-y: center;
+  height: 230px;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  padding: 1em;
+  align-content: center;
+  justify-content: center;
+}
+
+@media (min-width: 600px) {
+  #home-hero {
+    height: 335px;
+  }
+}
+
+#home-hero {
+  font-family: "David Libre", serif;
+}
+
+#home-hero h1 {
+  color: inherit;
+  margin-bottom: 0;
+}
+
+#home-hero p {
+  font-variant: small-caps;
+  margin-bottom: 0;
+}
+
+#home-hero>div {
+  color: white;
+  font-size: 125%;
+  text-shadow: 0px 1px 7px #000;
+}
+
+@media (min-width: 600px) {
+  #home-hero>div {
+    font-size: 200%;
+  }
+}
+
+#home-hero>div>div {
+  display: inline-block;
+  background: #0007;
+  padding: 1em;
+}
+
+.home.content blockquote li {
+  list-style-type: none;
+}
+
+.home.content blockquote li p {
+  margin-bottom: 0;
+}

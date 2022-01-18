@@ -1,0 +1,102 @@
+#site-footer {
+  color: #999;
+  text-align: center;
+  margin: 3em 1em;
+}
+
+#recents {
+  background: var(--bgalt);
+  padding: 2em 0;
+}
+
+#recents > * > ul {
+  margin-bottom: 3em;
+}
+
+#posts {
+  display: grid;
+  gap: 1em;
+
+  list-style-type: none;
+  padding-left: 0;
+}
+
+@media (min-width: 400px) {
+  #posts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 600px) {
+  #posts {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+#posts .post-box {
+  padding: 1em;
+  background: var(--post-snippet-bg);
+  border-radius: 4px;
+  box-shadow: var(--post-snippet-shadow);
+}
+
+#posts .post-box {
+  padding-bottom: 1em;
+  border-bottom: 1px solid var(--border-color);
+}
+
+#posts .post-box > * {
+  display: block;
+}
+
+#posts .post-box .date {
+  margin-bottom: 1em;
+  font-size: 80%;
+}
+
+#posts .post-box .image {
+  max-width: 100%;
+}
+
+#posts .post-box .excerpt>*:last-child {
+  margin-bottom: 0;
+}
+
+.quicklinks {
+  list-style-type: none;
+  padding-left: 0;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 100px);
+  gap: 1em;
+}
+
+.quicklinks li {
+  display: inline;
+}
+
+.quicklinks a.link {
+  width: 100px;
+  height: 100px;
+  display: inline-grid;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.quicklinks a.link:hover {
+  text-decoration: underline;
+}
+
+.quicklinks a.link:hover > span {
+  background: #0007;
+}
+
+.quicklinks a.link > span {
+  background: #0003;
+  padding: 7px;
+  text-shadow: 0px 1px 3px #000;
+}

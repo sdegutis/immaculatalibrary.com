@@ -1,0 +1,68 @@
+html {
+  font-size: 14px;
+  font-family: "Martel", serif;
+  color: #333;
+  --border-color: #d3dde8;
+  --bold-color: #000;
+  --bgalt: #f0f0f0;
+  --post-snippet-bg: #fff;
+  --post-snippet-shadow: 0px 1px 5px #7772;
+  --blue-bg: #2af;
+  --admin-border-color: var(--blue-bg);
+  --admin-bg-color: #def;
+  --disclaimer-border-color: var(--blue-bg);
+  --disclaimer-bg-color: #def;
+}
+
+html.dark-mode {
+  background: #111;
+  --bgalt: #000;
+  color: #ccc;
+  --border-color: #2d343c;
+  --bold-color: #fff;
+  --post-snippet-bg: #111;
+  --post-snippet-shadow: 0px 0px 2px #fff7;
+  --blue-bg: #06f;
+  --admin-border-color: var(--blue-bg);
+  --admin-bg-color: #004;
+  --disclaimer-border-color: var(--blue-bg);
+  --disclaimer-bg-color: #004;
+}
+
+/* General resets and fixes */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+hr {
+  height: 1px;
+  background-color: var(--border-color);
+  border: 0;
+}
+
+ul, ol {
+  padding-left: revert;
+}
+
+input[type=text] {
+  border: 1px solid currentColor;
+  padding: 0.5em;
+  border-radius: 0.25em;
+  background: inherit;
+  color: inherit;
+  outline: none;
+  width: 100%;
+}
+
+input[type=text]:focus {
+  border-color: var(--blue-bg);
+}
+
+@media screen and (max-width: 767px) {
+  input[type=text] {
+    font-size: 16px;
+  }
+}

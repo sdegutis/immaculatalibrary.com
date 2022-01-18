@@ -1,0 +1,83 @@
+body {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 1em;
+  padding: 1em;
+  width: 100vw;
+  height: 100vh;
+  align-content: start;
+  /* overflow: auto; */
+}
+
+main {
+  overflow: auto;
+}
+
+#admin-header nav ul {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
+  gap: 1em;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+form.admin-form {
+  display: grid;
+  height: 100%;
+  gap: 2em;
+}
+
+#overall-area {
+  display: grid;
+  grid-template-columns: minmax(auto, 30em) minmax(auto, 25em) 1fr;
+  gap: 1em;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#overall-area>* {
+  max-height: 100%;
+  overflow: auto;
+  padding-right: 1em;
+}
+
+form.admin-form .admin-fields {
+  width: 100%;
+  display: grid;
+  align-items: baseline;
+  align-content: baseline;
+  gap: 0.5em;
+}
+
+form.admin-form .admin-field-title {
+  font-weight: bold;
+  color: var(--bold-color);
+}
+
+form :read-write {
+  background-color: inherit;
+  padding: 0.5em;
+}
+
+form button {
+  background-color: var(--admin-bg-color);
+  padding: 0.5em 1em;
+}
+
+form :is(:read-write, button, input[type=file], select) {
+  border: 1px solid var(--admin-border-color);
+  background: inherit;
+  color: inherit;
+  font: inherit;
+  outline: none;
+}
+
+form textarea {
+  min-height: 20em;
+}
+
+form :read-write.monospace {
+  font-family: monospace;
+}

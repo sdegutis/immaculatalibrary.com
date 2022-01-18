@@ -1,0 +1,37 @@
+h1, h2, h3, h4, hr, p, ul, ol, table, details, summary, form, .admin-box {
+  margin-bottom: 1em;
+}
+
+.container {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.spaced-main-content {
+  margin: 3em 0;
+}
+
+.split-page {
+  display: grid;
+  gap: 1em;
+}
+
+@media (min-width: 600px) {
+  .split-page {
+    grid-template-columns: 1fr 1fr;
+    gap: 3em;
+  }
+}
+
+.admin-box {
+  border: 1px solid var(--admin-border-color);
+  padding: 1em 1em 0;
+  background-color: var(--admin-bg-color);
+}
+
+details.info {
+  border: 1px solid var(--disclaimer-border-color);
+  padding: 1em 1em 0;
+  background-color: var(--disclaimer-bg-color);
+}
