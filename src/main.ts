@@ -7,6 +7,7 @@ import { FileSys } from './filesys';
 import { RouteHandler } from './http';
 import { jsxCreateStringifiedElement } from "./jsx-stringify";
 import { Runtime } from "./runtime";
+import Yaml from 'js-yaml';
 
 
 const items: any[] = (Object.entries<any>(
@@ -14,13 +15,43 @@ const items: any[] = (Object.entries<any>(
   .map(([$id, data]) => ({ $id, ...data }))
 );
 
-const staticItems = items.filter(it => !it.$boot && it.$type === '73c941de-a7e9-4bce-98b1-9bb59ef57b65');
-for (const item of staticItems) {
-  const buffer = Buffer.from(item.content, item.base64 ? 'base64' : 'utf8');
-  writeFileSync('data/public/' + item.path, buffer);
+function importPublic() {
+  const staticItems = items.filter(it => !it.$boot && it.$type === '73c941de-a7e9-4bce-98b1-9bb59ef57b65');
+  for (const item of staticItems) {
+    const buffer = Buffer.from(item.content, item.base64 ? 'base64' : 'utf8');
+    writeFileSync('data/public/' + item.path, buffer);
+  }
 }
 
-console.log(staticItems.map(it => it.path))
+function importMovies() {
+  const movieItems = (items
+    .filter(it => it.$type === '10a9ab1a-0665-4905-8c5c-2410739a7ad8')
+    .sort((a, b) =>
+      a.sortOrder < b.sortOrder ? -1 :
+        a.sortOrder > b.sortOrder ? 1 :
+          0));
+  console.log(movieItems.map(it => it.slug));
+  for (const item of movieItems) {
+    // console.log('hmm')
+    // const buffer = Buffer.from(item.content, item.base64 ? 'base64' : 'utf8');
+    const header = Yaml.dump({
+      title: item.title,
+      shortTitle: item.shortTitle,
+      year: item.year,
+      imageFilename: item.imageFilename,
+    }, {
+      forceQuotes: true,
+    });
+    writeFileSync(`data/data/movies/${item.slug}.md`, `---\n${header}---\n\n${item.description}`);
+  }
+}
+
+// importPublic();
+// importMovies();
+
+// const staticItems = items.filter(it => !it.$boot && it.$type === '73c941de-a7e9-4bce-98b1-9bb59ef57b65');
+// console.log(staticItems.length)
+// console.log(snippets.length)
 
 process.exit(0);
 
