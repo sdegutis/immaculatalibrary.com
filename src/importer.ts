@@ -6,11 +6,11 @@ const items: any[] = Object.entries<any>(rawItems).map(([$id, data]) => ({ $id, 
 
 const staticItems = items.filter(it => it.$type === '73c941de-a7e9-4bce-98b1-9bb59ef57b65');
 const movieItems = items.filter(it => it.$type === '10a9ab1a-0665-4905-8c5c-2410739a7ad8');
+const categoryItems = items.filter(it => it.$type === '51b0efc7-ed85-4e3c-b747-ae8c90c74038');
 
 const snippetItems = items.filter(it => it.$type === '7493c4fd-eb27-4acb-9ce3-569624a82195');
 const bookItems = items.filter(it => it.$type === '13d55978-5a2d-4144-a32c-ba0ef7ad8020');
 const postItems = items.filter(it => it.$type === 'aca5fd0a-04a1-43e7-a625-b16c99cc41c9');
-const categoryItems = items.filter(it => it.$type === '51b0efc7-ed85-4e3c-b747-ae8c90c74038');
 const pageItems = items.filter(it => it.$type === 'e805328c-26bc-4ee7-9a3e-a70e4ef8367e');
 
 console.log(snippetItems.length);
@@ -19,21 +19,21 @@ console.log(postItems.length);
 console.log(categoryItems.length);
 console.log(pageItems.length);
 
-const remainder = items.filter(it =>
-  !staticItems.includes(it) &&
-  !movieItems.includes(it) &&
-  !snippetItems.includes(it) &&
-  !bookItems.includes(it) &&
-  !categoryItems.includes(it) &&
-  !pageItems.includes(it) &&
-  !postItems.includes(it)
-);
+// const remainder = items.filter(it =>
+//   !staticItems.includes(it) &&
+//   !movieItems.includes(it) &&
+//   !snippetItems.includes(it) &&
+//   !bookItems.includes(it) &&
+//   !categoryItems.includes(it) &&
+//   !pageItems.includes(it) &&
+//   !postItems.includes(it)
+// );
 
 // console.log(remainder[3])
 // console.log(remainder.map(it => it.$name))
 
-console.log(keysIn(categoryItems));
-console.log(categoryItems.length)
+console.log(keysIn(snippetItems));
+console.log(snippetItems.length)
 
 function keysIn(items: any[]) {
   const map = new Map<string, number>();
