@@ -126,7 +126,7 @@ class Module {
       const { code } = sucrase.transform(rawCode, sucraseOptions);
 
       const runModule = vm.compileFunction(code, Object.keys(args), {
-        filename: path.join(...`data${this.file.path}`.split(path.posix.sep)),
+        filename: this.file.realPath,
         parsingContext: this.#runtime.context,
       });
 

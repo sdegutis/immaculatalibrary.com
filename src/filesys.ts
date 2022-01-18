@@ -1,18 +1,65 @@
 import fs from "fs";
 import path from "path";
 
-export class Dir {
-
-  files: { [name: string]: File } = Object.create(null);
-  subdirs: { [name: string]: Dir } = Object.create(null);
-  entries: { [name: string]: File | Dir } = Object.create(null);
+class FsNode {
 
   constructor(
-    public path: string,
+    public realBase: string,
     public name: string,
     public parent: Dir | null,
-    realpath: string,
   ) { }
+
+  get path() {
+    const parts: string[] = [];
+    for (let node: FsNode | Dir | null = this; node; node = node.parent) {
+      parts.unshift(node.name);
+    }
+    return path.posix.join('/', ...parts);
+  }
+
+  get realPath() {
+    return path.posix.join(this.realBase, this.path);
+  }
+
+  get root() {
+    if (!this.parent) return this as unknown as Dir;
+    let parent = this.parent;
+    while (parent.parent) parent = parent.parent;
+    return parent;
+  }
+
+}
+
+export class Dir extends FsNode {
+
+  get entries() {
+    return Object.fromEntries(this.children
+      .map(child => [child.name, child]));
+  }
+
+  get files() {
+    return Object.fromEntries(this.children
+      .filter((child => child instanceof File) as
+        (child: FsNode) => child is File)
+      .map(child => [child.name, child]));
+  }
+
+  get subdirs() {
+    return Object.fromEntries(this.children
+      .filter((child => child instanceof Dir) as
+        (child: FsNode) => child is Dir)
+      .map(child => [child.name, child]));
+  }
+
+  children: (File | Dir)[] = [];
+
+  constructor(
+    realBase: string,
+    name: string,
+    parent: Dir | null,
+  ) {
+    super(realBase, name, parent);
+  }
 
   createFile(name: string, buffer: Buffer) {
     throw new Error();
@@ -24,23 +71,21 @@ export class Dir {
 
 }
 
-export class File {
+export class File extends FsNode {
 
-  #realpath: string;
   buffer: Buffer;
   constructor(
-    public path: string,
-    public name: string,
-    public parent: Dir | null,
-    realpath: string,
+    realBase: string,
+    name: string,
+    parent: Dir | null,
   ) {
-    this.#realpath = realpath;
-    this.buffer = fs.readFileSync(realpath);
+    super(realBase, name, parent);
+    this.buffer = fs.readFileSync(this.realPath);
   }
 
   replace(newBuffer: Buffer) {
     this.buffer = newBuffer;
-    fs.writeFileSync(this.#realpath, newBuffer);
+    fs.writeFileSync(this.realPath, newBuffer);
   }
 
   rename(newName: string) {
@@ -58,11 +103,10 @@ export class FileSys {
   }
 
   #loadDir(base: string, parent: Dir | null) {
+    const dir = new Dir(this.fsBase, path.posix.basename(base), parent);
+
     const dirRealPath = path.posix.join(this.fsBase, base);
     const files = fs.readdirSync(dirRealPath);
-
-    const dir = new Dir(base, path.posix.basename(base), parent, dirRealPath);
-
     for (const name of files) {
       if (name.startsWith('.')) continue;
 
@@ -71,13 +115,11 @@ export class FileSys {
 
       if (stat.isDirectory()) {
         const child = this.#loadDir(path.posix.join(base, name), dir);
-        dir.subdirs[name] = child;
-        dir.entries[name] = child;
+        dir.children.push(child);
       }
       else if (stat.isFile()) {
-        const child = new File(path.posix.join(base, name), name, dir, fileRealPath);
-        dir.files[name] = child;
-        dir.entries[name] = child;
+        const child = new File(this.fsBase, name, dir);
+        dir.children.push(child);
       }
     }
 
