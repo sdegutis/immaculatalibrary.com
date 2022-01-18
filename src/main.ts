@@ -25,8 +25,14 @@ class Site {
     this.#runtime = new Runtime(root, jsxCreateStringifiedElement);
 
     const boot = this.#runtime.findModule('/src/boot')!;
-    boot.require();
-    this.handler = boot.exports.routeHandler;
+
+    try {
+      boot.require();
+      this.handler = boot.exports.routeHandler;
+    }
+    catch (e) {
+      console.error(e);
+    }
   }
 
 }

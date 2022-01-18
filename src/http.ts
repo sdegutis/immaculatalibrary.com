@@ -1,4 +1,4 @@
-import { IncomingHttpHeaders } from "http";
+import { IncomingHttpHeaders, OutgoingHttpHeaders } from "http";
 import { URL } from "url";
 
 export interface RouteInput {
@@ -10,7 +10,7 @@ export interface RouteInput {
 
 export interface RouteOutput {
   status?: number;
-  headers?: object;
+  headers?: OutgoingHttpHeaders;
   body?: string | Buffer;
 }
 
