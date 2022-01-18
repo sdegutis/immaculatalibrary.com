@@ -40,24 +40,15 @@ export class Dir extends FsNode {
     return ancestor;
   }
 
-  get entries() {
+  #entries<T extends Dir | File>(Subclass: { new(...args: any[]): T }): { [name: string]: T } {
     return Object.fromEntries(this.children
+      .filter((child => child instanceof Subclass) as
+        (child: FsNode) => child is T)
       .map(child => [child.name, child]));
   }
 
-  get files() {
-    return Object.fromEntries(this.children
-      .filter((child => child instanceof File) as
-        (child: FsNode) => child is File)
-      .map(child => [child.name, child]));
-  }
-
-  get subdirs() {
-    return Object.fromEntries(this.children
-      .filter((child => child instanceof Dir) as
-        (child: FsNode) => child is Dir)
-      .map(child => [child.name, child]));
-  }
+  get files() { return this.#entries(File); }
+  get subdirs() { return this.#entries(Dir); }
 
   createFile(name: string, buffer: Buffer) {
     const child = new File(this.realBase, name, this);
