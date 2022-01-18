@@ -21,13 +21,6 @@ class FsNode {
     return path.posix.join(this.realBase, this.path);
   }
 
-  get root() {
-    if (!this.parent) return this as unknown as Dir;
-    let parent = this.parent;
-    while (parent.parent) parent = parent.parent;
-    return parent;
-  }
-
 }
 
 export class Dir extends FsNode {
@@ -69,9 +62,18 @@ export class Dir extends FsNode {
     throw new Error();
   }
 
+  get root(): Dir {
+    if (!this.parent) return this;
+    let parent = this.parent;
+    while (parent.parent) parent = parent.parent;
+    return parent;
+  }
+
 }
 
 export class File extends FsNode {
+
+  declare parent: Dir;
 
   buffer: Buffer;
   constructor(
@@ -90,6 +92,10 @@ export class File extends FsNode {
 
   rename(newName: string) {
     throw new Error();
+  }
+
+  get root(): Dir {
+    return this.parent.root;
   }
 
 }
