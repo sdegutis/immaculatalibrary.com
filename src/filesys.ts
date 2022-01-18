@@ -21,27 +21,18 @@ class FsNode {
     return path.posix.join(this.realBase, this.path);
   }
 
+  rename(newName: string) {
+    const oldPath = this.realPath;
+    this.name = newName;
+    const newPath = this.realPath;
+    fs.renameSync(oldPath, newPath);
+  }
+
 }
 
 export class Dir extends FsNode {
 
   children: (File | Dir)[] = [];
-
-  constructor(
-    realBase: string,
-    name: string,
-    parent: Dir | null,
-  ) {
-    super(realBase, name, parent);
-  }
-
-  createFile(name: string, buffer: Buffer) {
-    throw new Error();
-  }
-
-  rename(newName: string) {
-    throw new Error();
-  }
 
   get root(): Dir {
     let ancestor: Dir = this;
@@ -50,23 +41,28 @@ export class Dir extends FsNode {
   }
 
   get entries() {
-    return this.#makeMap(this.children);
+    return Object.fromEntries(this.children
+      .map(child => [child.name, child]));
   }
 
   get files() {
-    return this.#makeMap(this.children
+    return Object.fromEntries(this.children
       .filter((child => child instanceof File) as
-        (child: FsNode) => child is File));
+        (child: FsNode) => child is File)
+      .map(child => [child.name, child]));
   }
 
   get subdirs() {
-    return this.#makeMap(this.children
+    return Object.fromEntries(this.children
       .filter((child => child instanceof Dir) as
-        (child: FsNode) => child is Dir));
+        (child: FsNode) => child is Dir)
+      .map(child => [child.name, child]));
   }
 
-  #makeMap<T extends FsNode>(children: T[]): { [name: string]: T } {
-    return Object.fromEntries(children.map(child => [child.name, child]));
+  createFile(name: string, buffer: Buffer) {
+    const child = new File(this.realBase, name, this);
+    child.buffer = buffer;
+    fs.writeFileSync(child.realPath, buffer);
   }
 
 }
@@ -74,24 +70,11 @@ export class Dir extends FsNode {
 export class File extends FsNode {
 
   declare parent: Dir;
-
-  buffer: Buffer;
-  constructor(
-    realBase: string,
-    name: string,
-    parent: Dir | null,
-  ) {
-    super(realBase, name, parent);
-    this.buffer = fs.readFileSync(this.realPath);
-  }
+  buffer!: Buffer;
 
   replace(newBuffer: Buffer) {
     this.buffer = newBuffer;
     fs.writeFileSync(this.realPath, newBuffer);
-  }
-
-  rename(newName: string) {
-    throw new Error();
   }
 
   get root(): Dir {
@@ -125,6 +108,7 @@ export class FileSys {
       }
       else if (stat.isFile()) {
         const child = new File(this.fsBase, name, dir);
+        child.buffer = fs.readFileSync(child.realPath);
         dir.children.push(child);
       }
     }
