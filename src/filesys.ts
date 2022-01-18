@@ -25,25 +25,6 @@ class FsNode {
 
 export class Dir extends FsNode {
 
-  get entries() {
-    return Object.fromEntries(this.children
-      .map(child => [child.name, child]));
-  }
-
-  get files() {
-    return Object.fromEntries(this.children
-      .filter((child => child instanceof File) as
-        (child: FsNode) => child is File)
-      .map(child => [child.name, child]));
-  }
-
-  get subdirs() {
-    return Object.fromEntries(this.children
-      .filter((child => child instanceof Dir) as
-        (child: FsNode) => child is Dir)
-      .map(child => [child.name, child]));
-  }
-
   children: (File | Dir)[] = [];
 
   constructor(
@@ -63,10 +44,29 @@ export class Dir extends FsNode {
   }
 
   get root(): Dir {
-    if (!this.parent) return this;
-    let parent = this.parent;
-    while (parent.parent) parent = parent.parent;
-    return parent;
+    let ancestor: Dir = this;
+    while (ancestor.parent) ancestor = ancestor.parent;
+    return ancestor;
+  }
+
+  get entries() {
+    return this.#makeMap(this.children);
+  }
+
+  get files() {
+    return this.#makeMap(this.children
+      .filter((child => child instanceof File) as
+        (child: FsNode) => child is File));
+  }
+
+  get subdirs() {
+    return this.#makeMap(this.children
+      .filter((child => child instanceof Dir) as
+        (child: FsNode) => child is Dir));
+  }
+
+  #makeMap<T extends FsNode>(children: T[]): { [name: string]: T } {
+    return Object.fromEntries(children.map(child => [child.name, child]));
   }
 
 }
