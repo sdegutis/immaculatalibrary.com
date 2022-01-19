@@ -48,6 +48,24 @@ function keysIn(items: any[]) {
 // importPublic();
 // importMovies();
 // importCategories();
+// importSnippets();
+
+function importSnippets() {
+  for (const item of snippetItems) {
+    const yyyymmdd = item.date.split('T')[0];
+    const header = Yaml.dump({
+      published: item.published,
+      date: yyyymmdd,
+      title: item.title,
+      slug: item.slug,
+      archiveLink: item.archiveLink,
+      bookSlug: item.bookSlug,
+    }, {
+      forceQuotes: true,
+    });
+    fs.writeFileSync(`data/data/snippets/${item.$id}.md`, `---\n${header}---\n\n${item.content}`);
+  }
+}
 
 function importCategories() {
   for (const item of categoryItems) {
