@@ -50,6 +50,23 @@ function keysIn(items: any[]) {
 // importCategories();
 // importSnippets();
 // importBooks();
+// importPosts();
+
+function importPosts() {
+  for (const item of postItems) {
+    const yyyymmdd = item.date.split('T')[0];
+
+    const meta: any = {
+      title: item.title,
+      imageFilename: item.imageFilename,
+      imageCaption: item.imageCaption,
+    };
+    if (item.draft) meta.draft = true;
+
+    const header = Yaml.dump(meta, { forceQuotes: true });
+    fs.writeFileSync(`data/data/posts/${yyyymmdd}-${item.slug}.md`, `---\n${header}---\n\n${item.content}`);
+  }
+}
 
 function importBooks() {
   for (const item of bookItems) {
