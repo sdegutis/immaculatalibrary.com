@@ -129,3 +129,88 @@ const home = {
   head: '<link rel="stylesheet" href="/css/layout/home.css"/>\r\n',
   '$name': 'Home'
 };
+
+
+
+
+
+const bookSnippetRandom = {
+  '$route': { '$eval': '() => `/book-snippets/random`' },
+  '$get': {
+    '$eval': '() => {\r\n' +
+      "  const { extract_page_number, format_date, reading_mins } = $site.named('helpers');\r\n" +
+      "  const snippet = this.randomElement($site.named('snippets').publishedSnippets);\r\n" +
+      '  const preview = this.derivePreview(2000, snippet.content);\r\n' +
+      '\r\n' +
+      '  return {\r\n' +
+      '    json: {\r\n' +
+      '      title: markdown.renderInline(snippet.title),\r\n' +
+      '      archiveLink: snippet.archiveLink,\r\n' +
+      '      pageNumber: extract_page_number(snippet.archiveLink),\r\n' +
+      '      book: {\r\n' +
+      '        title: snippet.book.title,\r\n' +
+      '        url: snippet.book.$route(),\r\n' +
+      '      },\r\n' +
+      '      url: snippet.$route(),\r\n' +
+      '      formattedDate: format_date(snippet.date),\r\n' +
+      '      readingMins: reading_mins(snippet.content),\r\n' +
+      '      preview: markdown.render(preview.content),\r\n' +
+      '      previewFull: markdown.render(preview.full),\r\n' +
+      '      hasPreview: preview.has,\r\n' +
+      '    }\r\n' +
+      '  };\r\n' +
+      '}'
+  },
+  randomElement: {
+    '$eval': '(array) => {\r\n' +
+      '  const i = Math.floor(Math.random() * array.length);\r\n' +
+      '  return array[i];\r\n' +
+      '}\r\n'
+  },
+  derivePreview: {
+    '$eval': '(count, string) => {\r\n' +
+      '  const paragraphs = string.trim().split(/(\\r?\\n>+ *\\r?\\n)/);\r\n' +
+      '\r\n' +
+      '  let running = 0;\r\n' +
+      '  for (let i = 0; i < paragraphs.length; i++) {\r\n' +
+      '    running += paragraphs[i].length\r\n' +
+      '    if (running > count) break;\r\n' +
+      '  }\r\n' +
+      '\r\n' +
+      '  return {\r\n' +
+      '    has: running < string.length - 1,\r\n' +
+      '    content: string.substring(0, running),\r\n' +
+      '    full: string,\r\n' +
+      '  };\r\n' +
+      '}'
+  },
+  '$type': '68529a38-9711-4b38-957c-6030c0d8dd08'
+};
+
+const bookSnippetSearch = {
+  '$route': { '$eval': '() => `/book-snippets/search`' },
+  '$post': {
+    '$eval': '(input) => {\r\n' +
+      "  const { format_date, reading_mins } = $site.named('helpers');\r\n" +
+      '  const searchTerm = input.json().searchTerm.toLowerCase();\r\n' +
+      '\r\n' +
+      "  const snippets = $site.named('snippets').publishedSnippets.filter(s => {\r\n" +
+      '    if (s.content.toLowerCase().includes(searchTerm)) return true;\r\n' +
+      '    if (s.title.toLowerCase().includes(searchTerm)) return true;\r\n' +
+      '    if (s.book.title.toLowerCase().includes(searchTerm)) return true;\r\n' +
+      '    if (s.book.author.toLowerCase().includes(searchTerm)) return true;\r\n' +
+      '  });\r\n' +
+      '\r\n' +
+      '  return {\r\n' +
+      '    json: snippets.map(snippet => ({\r\n' +
+      '      title: markdown.renderInline(snippet.title),\r\n' +
+      '      bookTitle: snippet.book.title,\r\n' +
+      '      url: snippet.$route(),\r\n' +
+      '      formattedDate: format_date(snippet.date),\r\n' +
+      '      readingMins: reading_mins(snippet.content),\r\n' +
+      '    }))\r\n' +
+      '  };\r\n' +
+      '}\r\n'
+  },
+  '$type': '68529a38-9711-4b38-957c-6030c0d8dd08'
+};

@@ -13,11 +13,11 @@ const bookItems = items.filter(it => it.$type === '13d55978-5a2d-4144-a32c-ba0ef
 const postItems = items.filter(it => it.$type === 'aca5fd0a-04a1-43e7-a625-b16c99cc41c9');
 const pageItems = items.filter(it => it.$type === 'e805328c-26bc-4ee7-9a3e-a70e4ef8367e');
 
-console.log(snippetItems.length);
-console.log(bookItems.length);
-console.log(postItems.length);
-console.log(categoryItems.length);
-console.log(pageItems.length);
+// console.log(snippetItems.length);
+// console.log(bookItems.length);
+// console.log(postItems.length);
+// console.log(categoryItems.length);
+// console.log(pageItems.length);
 
 // const remainder = items.filter(it =>
 //   !staticItems.includes(it) &&
@@ -31,9 +31,22 @@ console.log(pageItems.length);
 
 // console.log(remainder[3])
 // console.log(remainder.map(it => it.$name))
+// console.log(remainder.filter(it => !it.$name).map(it => `https://www.immaculatalibrary.com/admin3/edit?id=${it.$id}`))
 
-console.log(keysIn(pageItems));
-console.log(pageItems.length);
+// const specialIds = [
+//   'e871a97b-0ae9-4d99-9865-ebeeb149d21f',
+//   '48e99a73-6172-4cac-b506-02efe2ced048',
+//   '02e07010-86a0-40d4-9fc2-74d81a0e9d32',
+//   '9ca7825c-c70d-4dae-a96e-c832c7626e41',
+// ];
+
+// for (const id of specialIds) {
+//   console.log(rawItems[id]);
+// }
+
+
+// console.log(keysIn(pageItems));
+// console.log(pageItems.length);
 
 function keysIn(items: any[]) {
   const map = new Map<string, number>();
