@@ -22,6 +22,10 @@ class FsNode {
   }
 
   rename(newName: string) {
+    if (this.parent?.childrenByName[newName]) {
+      throw new Error("Cannot overwrite existing file.");
+    }
+
     const oldPath = this.realPath;
     this.name = newName;
     const newPath = this.realPath;
@@ -49,10 +53,15 @@ export class Dir extends FsNode {
   get files(): File[] { return this.children.filter(isFile); }
   get dirs(): Dir[] { return this.children.filter(isDir); }
 
+  get childrenByName() { return Object.fromEntries(this.children.map(c => [c.name, c])); }
   get filesByName() { return Object.fromEntries(this.files.map(c => [c.name, c])); }
   get dirsByName() { return Object.fromEntries(this.dirs.map(c => [c.name, c])); }
 
   createFile(name: string, buffer: Buffer) {
+    if (this.childrenByName[name]) {
+      throw new Error("Cannot overwrite existing file.");
+    }
+
     const child = new File(this.realBase, name, this);
     child.buffer = buffer;
     fs.writeFileSync(child.realPath, buffer);
