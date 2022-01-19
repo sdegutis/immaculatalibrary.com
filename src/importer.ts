@@ -32,8 +32,8 @@ console.log(pageItems.length);
 // console.log(remainder[3])
 // console.log(remainder.map(it => it.$name))
 
-console.log(keysIn(snippetItems));
-console.log(snippetItems.length)
+console.log(keysIn(bookItems));
+console.log(bookItems.length)
 
 function keysIn(items: any[]) {
   const map = new Map<string, number>();
@@ -49,6 +49,27 @@ function keysIn(items: any[]) {
 // importMovies();
 // importCategories();
 // importSnippets();
+// importBooks();
+
+function importBooks() {
+  for (const item of bookItems) {
+    const header = Yaml.dump({
+      title: item.title,
+      subtitle: item.subtitle,
+      dateAdded: item.dateAdded.split('T')[0],
+      author: item.author,
+      translator: item.translator,
+      score: item.score,
+      rating: item.rating,
+      files: item.files,
+      storeLinks: item.storeLinks,
+    }, {
+      forceQuotes: true,
+    });
+    fs.writeFileSync(`data/data/books/${item.slug}.md`, `---\n${header}---\n\n${item.description}`);
+  }
+}
+
 
 function importSnippets() {
   for (const item of snippetItems) {
