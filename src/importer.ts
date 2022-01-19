@@ -32,8 +32,8 @@ console.log(pageItems.length);
 // console.log(remainder[3])
 // console.log(remainder.map(it => it.$name))
 
-console.log(keysIn(postItems));
-console.log(postItems.length)
+console.log(keysIn(pageItems));
+console.log(pageItems.length);
 
 function keysIn(items: any[]) {
   const map = new Map<string, number>();
@@ -51,6 +51,31 @@ function keysIn(items: any[]) {
 // importSnippets();
 // importBooks();
 // importPosts();
+// importPages();
+
+function importPages() {
+  for (const item of pageItems) {
+    const meta: any = {
+      title: item.title,
+      image: item.image,
+    };
+    let path = item.path;
+    if (path === '') path = 'index.html';
+
+    let content, ext;
+    if (item.markdown) {
+      content = item.markdown;
+      path = path.replace(/\.html$/, '.md');
+    }
+    else {
+      console.log(item);
+      continue;
+    }
+
+    const header = Yaml.dump(meta, { forceQuotes: true });
+    fs.writeFileSync(`data/data/pages/${item.$name ?? path}`, `---\n${header}---\n\n${content}`);
+  }
+}
 
 function importPosts() {
   for (const item of postItems) {
