@@ -1,10 +1,15 @@
 
-export type IntrinsicElements = {
+export type IntrinsicElements = /* {
   [Tag in keyof HTMLElementTagNameMap]: (
     { [Attr in keyof Omit<HTMLElementTagNameMap[Tag], 'children' | 'toString'>]?: string }
     & { children?: any, class?: string }
   );
-};
+} & {
+    [Tag in keyof SVGElementTagNameMap]: (
+      { [Attr in keyof Omit<SVGElementTagNameMap[Tag], 'children' | 'toString'>]?: string }
+      & { children?: any, class?: string }
+    );
+  } & */ { [tag: string]: any };
 
 export type Element = string;
 

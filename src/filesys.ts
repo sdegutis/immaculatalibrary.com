@@ -28,7 +28,13 @@ class FsNode {
     fs.renameSync(oldPath, newPath);
   }
 
+  isFile(): this is File { return this instanceof File };
+  isDir(): this is Dir { return this instanceof Dir };
+
 }
+
+function isFile(child: FsNode): child is File { return child.isFile(); };
+function isDir(child: FsNode): child is Dir { return child.isDir(); };
 
 export class Dir extends FsNode {
 
@@ -40,15 +46,11 @@ export class Dir extends FsNode {
     return ancestor;
   }
 
-  #entries<T extends Dir | File>(Subclass: { new(...args: any[]): T }): { [name: string]: T } {
-    return Object.fromEntries(this.children
-      .filter((child => child instanceof Subclass) as
-        (child: FsNode) => child is T)
-      .map(child => [child.name, child]));
-  }
+  get files(): File[] { return this.children.filter(isFile); }
+  get dirs(): Dir[] { return this.children.filter(isDir); }
 
-  get files() { return this.#entries(File); }
-  get subdirs() { return this.#entries(Dir); }
+  get filesByName() { return Object.fromEntries(this.files.map(c => [c.name, c])); }
+  get dirsByName() { return Object.fromEntries(this.dirs.map(c => [c.name, c])); }
 
   createFile(name: string, buffer: Buffer) {
     const child = new File(this.realBase, name, this);

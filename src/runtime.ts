@@ -50,9 +50,9 @@ export class Runtime {
     while (part = parts.shift()) {
       if (parts.length === 0) {
         const file = (
-          dir.files[part] ??
-          dir.files[part + '.ts'] ??
-          dir.files[part + '.tsx']
+          dir.filesByName[part] ??
+          dir.filesByName[part + '.ts'] ??
+          dir.filesByName[part + '.tsx']
         );
         if (file) {
           const mod = this.#modules.get(file);
@@ -60,7 +60,7 @@ export class Runtime {
         }
       }
       else {
-        const subdir = dir.subdirs[part];
+        const subdir = dir.dirsByName[part];
         if (!subdir) break;
         dir = subdir;
       }
@@ -70,7 +70,7 @@ export class Runtime {
   }
 
   #createModules(dir: Dir) {
-    for (const subdir of Object.values(dir.subdirs)) {
+    for (const subdir of dir.dirs) {
       this.#createModules(subdir);
     }
 

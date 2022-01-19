@@ -53,9 +53,7 @@ const movieOrder = [
 ];
 
 
-
-
-({ isAdmin, title, image, description, head, content, pageContent, pageSidebar }) => {
+export const Template = ({ isAdmin, title, image, description, head, content, pageContent, pageSidebar }) => {
 
   const { reading_mins, format_date, excerpt } = $site.named('helpers');
 
