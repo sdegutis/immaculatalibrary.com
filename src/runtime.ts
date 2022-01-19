@@ -74,7 +74,7 @@ export class Runtime {
       this.#createModules(subdir);
     }
 
-    for (const file of Object.values(dir.files)) {
+    for (const file of dir.files) {
       if (file.name.match(/\.tsx?$/)) {
         this.#modules.set(file, new Module(file, this));
       }
