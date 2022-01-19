@@ -1,19 +1,19 @@
-import MarkdownIt from 'markdown-it';
 import 'source-map-support/register';
 import { RouteInput, RouteOutput } from '../../src/http';
+import { md } from './helpers';
 
-const markdown = new MarkdownIt({
-  html: true,
-  typographer: true,
-  linkify: true,
-  breaks: true,
-});
+for (const child of __file.root.subdirs['data']!.subdirs['snippets']!.children) {
+  const file = child;
+  console.log(file.name);
+}
+
+// TODO: redirect /index.html to /
 
 export function routeHandler(input: RouteInput): RouteOutput {
   return {
     headers: {
       'Content-Type': 'text/html',
     },
-    body: markdown.render(`### this is cool\n~~~js\n${input.url.toString()}~~~`),
+    body: md.render(`### this is cool\n~~~js\n${input.url.toString()}~~~`),
   }
 };

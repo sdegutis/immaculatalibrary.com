@@ -27,7 +27,9 @@ class Site {
     const boot = this.#runtime.findModule('/src/boot')!;
 
     try {
+      console.log('Loading boot module...');
       boot.require();
+      console.log('Done');
       this.handler = boot.exports.routeHandler;
     }
     catch (e) {
