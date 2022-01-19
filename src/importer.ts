@@ -32,8 +32,8 @@ console.log(pageItems.length);
 // console.log(remainder[3])
 // console.log(remainder.map(it => it.$name))
 
-console.log(keysIn(bookItems));
-console.log(bookItems.length)
+console.log(keysIn(postItems));
+console.log(postItems.length)
 
 function keysIn(items: any[]) {
   const map = new Map<string, number>();
@@ -70,21 +70,18 @@ function importBooks() {
   }
 }
 
-
 function importSnippets() {
   for (const item of snippetItems) {
     const yyyymmdd = item.date.split('T')[0];
     const header = Yaml.dump({
       published: item.published,
-      date: yyyymmdd,
       title: item.title,
-      slug: item.slug,
       archiveLink: item.archiveLink,
       bookSlug: item.bookSlug,
     }, {
       forceQuotes: true,
     });
-    fs.writeFileSync(`data/data/snippets/${item.$id}.md`, `---\n${header}---\n\n${item.content}`);
+    fs.writeFileSync(`data/data/snippets/${yyyymmdd}-${item.slug}.md`, `---\n${header}---\n\n${item.content}`);
   }
 }
 
