@@ -1,6 +1,7 @@
-import { sortBy } from "./helpers";
+import { md, sortBy } from "./helpers";
 import { File } from "/../src/filesys";
 import Yaml from 'js-yaml';
+import { RouteHandler } from "/../src/http";
 
 class Snippet {
 
@@ -69,6 +70,29 @@ class Snippet {
     });
     this.file.replace(Buffer.from(`---\n${header}---\n\n${this.markdownContent}`));
   }
+
+  addRoutes(routes: Map<string, RouteHandler>) {
+    const path = `GET /book-snippets/${this.date}-${this.slug}.html`;
+    routes.set(path, input => {
+      console.log(md.render(this.markdownContent))
+      return {
+        body: <>
+
+          {'<!DOCTYPE html>'}
+          <html lang="en">
+            <head>
+              <meta charset="UTF-8" />
+            </head>
+            <body>
+              {md.render(this.markdownContent)}
+            </body>
+          </html>
+
+        </>
+      }
+    });
+  }
+
 }
 
 export const allSnippets = (__file.root

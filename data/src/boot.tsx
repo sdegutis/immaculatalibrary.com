@@ -3,21 +3,36 @@ import { RouteHandler, RouteInput, RouteOutput } from '../../src/http';
 import { md } from './helpers';
 import { allSnippets } from './snippet';
 
-console.log(allSnippets.length);
+// console.log(allSnippets.length);
 
 const routes = new Map<string, RouteHandler>();
+
+for (const route of allSnippets) {
+  route.addRoutes(routes);
+}
 
 routes.set('GET /index.html', input => ({
   status: 302,
   headers: { 'Location': '/' },
 }));
 
-routes.set('GET /', wrapAuth(input => ({
-  headers: {
-    'Content-Type': 'text/html'
-  },
-  body: md.render(`### this is cool`)
-})));
+routes.set('GET /', wrapAuth(input => {
+  return {
+    headers: {
+      'Content-Type': 'text/html'
+    },
+    body: <ul>
+      {[...routes.entries()]
+        .filter(([path, handler]) => path.startsWith('GET '))
+        .map(([path, handler]) => {
+          path = path.replace(/^GET /, '');
+          return <li>
+            <a href={path}>{path}</a>
+          </li>;
+        })}
+    </ul>
+  };
+}));
 
 const page500 = {
   '$id': '6de8cf1e-a786-4b4d-bc24-5304c01cd8db',
