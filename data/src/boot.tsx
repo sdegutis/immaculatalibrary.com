@@ -1,7 +1,9 @@
 import 'source-map-support/register';
 import { RouteHandler, RouteInput, RouteOutput } from '../../src/http';
 import { md } from './helpers';
-import { Snippet } from './snippet';
+import { allSnippets } from './snippet';
+
+console.log(allSnippets.length);
 
 const routes = new Map<string, RouteHandler>();
 
