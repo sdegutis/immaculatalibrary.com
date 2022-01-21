@@ -68,6 +68,36 @@ export class Dir extends FsNode {
     this.children.push(child);
   }
 
+  find(toPath: string) {
+    const absolutePath = (toPath.startsWith('/')
+      ? toPath
+      : path.posix.join(this.path, toPath));
+
+    let dir: Dir = this.root;
+    const parts = absolutePath.split(path.posix.sep).slice(1);
+    let part: string | undefined;
+
+    while (undefined !== (part = parts.shift())) {
+      if (parts.length === 0) {
+        if (part === '') return dir;
+
+        return (
+          dir.filesByName[part] ??
+          dir.filesByName[part + '.ts'] ??
+          dir.filesByName[part + '.tsx'] ??
+          null
+        );
+      }
+      else {
+        const subdir = dir.dirsByName[part];
+        if (!subdir) break;
+        dir = subdir;
+      }
+    }
+
+    return null;
+  }
+
 }
 
 export class File extends FsNode {

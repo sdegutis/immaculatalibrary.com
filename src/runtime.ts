@@ -1,4 +1,3 @@
-import * as path from "path";
 import * as sucrase from 'sucrase';
 import vm from 'vm';
 import { Dir, File } from "./filesys";
@@ -40,32 +39,6 @@ export class Runtime {
   shutdown() {
     this.#timeouts.forEach(clearTimeout);
     this.#intervals.forEach(clearInterval);
-  }
-
-  find(absolutePath: string) {
-    let dir: Dir = this.root;
-    const parts = absolutePath.split(path.posix.sep).slice(1);
-    let part: string | undefined;
-
-    while (undefined !== (part = parts.shift())) {
-      if (parts.length === 0) {
-        if (part === '') return dir;
-
-        return (
-          dir.filesByName[part] ??
-          dir.filesByName[part + '.ts'] ??
-          dir.filesByName[part + '.tsx'] ??
-          null
-        );
-      }
-      else {
-        const subdir = dir.dirsByName[part];
-        if (!subdir) break;
-        dir = subdir;
-      }
-    }
-
-    return null;
   }
 
   #createModules(dir: Dir) {
@@ -137,20 +110,12 @@ class Module {
   }
 
   #require(toPath: string) {
-    let absolutePath: string;
-
-    if (toPath.startsWith('/')) {
-      absolutePath = toPath;
-    }
-    else if (toPath.startsWith('.')) {
-      absolutePath = path.posix.join(path.posix.dirname(this.file.path), toPath);
-    }
-    else {
+    if (!toPath.match(/^[./]/)) {
       return require(toPath);
     }
 
-    const file = this.#runtime.find(absolutePath);
-    if (!file) throw new Error(`Can't find file at path: ${absolutePath}`);
+    const file = this.file.parent.find(toPath);
+    if (!file) throw new Error(`Can't find file at path: ${toPath}`);
 
     const mod = file.isFile() && this.#runtime.modules.get(file);
     if (!mod) return file;

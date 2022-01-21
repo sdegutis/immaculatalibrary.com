@@ -24,7 +24,7 @@ class Site {
     this.#runtime?.shutdown();
     this.#runtime = new Runtime(root, jsxCreateStringifiedElement);
 
-    const bootFile = this.#runtime.find('/src/boot')! as unknown as File;
+    const bootFile = root.find('/src/boot')! as File;
     const boot = this.#runtime.modules.get(bootFile)!;
 
     try {
