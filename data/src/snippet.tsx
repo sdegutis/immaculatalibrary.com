@@ -1,14 +1,15 @@
+import Yaml from 'js-yaml';
 import { md, sortBy } from "./helpers";
 import { File } from "/../src/filesys";
-import Yaml from 'js-yaml';
 import { RouteHandler } from "/../src/http";
+import snippetsDir from '/data/snippets/';
 
 class Snippet {
 
   static from(file: File) {
     const [, date, slug] = file.name.match(/^(\d{4}-\d{2}-\d{2})-(.+?).md$/)!;
 
-    const fileContents = file.buffer.toString('utf8');
+    const fileContents = file.buffer.toString('utf8').replace(/\r\n/g, '\n');
     const [, frontmatter, markdownContent] = fileContents.match(/^---\n(.+?)\n---\n\n(.+?)$/s)!;
 
     const meta = Yaml.load(frontmatter!) as {
@@ -94,8 +95,6 @@ class Snippet {
 
 }
 
-export const allSnippets = (__file.root
-  .dirsByName['data']!
-  .dirsByName['snippets']!
+export const allSnippets = (snippetsDir
   .files.map(file => Snippet.from(file))
   .sort(sortBy(s => s.date)));
