@@ -114,6 +114,10 @@ export class File extends FsNode {
     return this.parent.root;
   }
 
+  get text() {
+    return this.buffer.toString('utf8');
+  }
+
 }
 
 export class FileSys {

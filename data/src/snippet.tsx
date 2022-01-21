@@ -9,7 +9,7 @@ class Snippet {
   static from(file: File) {
     const [, date, slug] = file.name.match(/^(\d{4}-\d{2}-\d{2})-(.+?).md$/)!;
 
-    const fileContents = file.buffer.toString('utf8').replace(/\r\n/g, '\n');
+    const fileContents = file.text.replace(/\r\n/g, '\n');
     const [, frontmatter, markdownContent] = fileContents.match(/^---\n(.+?)\n---\n\n(.+?)$/s)!;
 
     const meta = Yaml.load(frontmatter!) as {
@@ -31,7 +31,7 @@ class Snippet {
     );
   }
 
-  public preview;
+  public previewMarkdown;
   constructor(
     private file: File,
     public date: string,
@@ -42,7 +42,7 @@ class Snippet {
     public archiveLink: string,
     public bookSlug: string,
   ) {
-    this.preview = this.derivePreview(2000);
+    this.previewMarkdown = this.derivePreview(2000);
   }
 
   private derivePreview(count: number) {
@@ -54,10 +54,10 @@ class Snippet {
       if (running > count) break;
     }
 
-    return {
-      hasPreview: running < this.markdownContent.length - 1,
-      previewMarkdownContent: this.markdownContent.substring(0, running)
-    };
+    if (running < this.markdownContent.length - 1) {
+      return this.markdownContent.substring(0, running);
+    }
+    return null;
   }
 
   save() {
