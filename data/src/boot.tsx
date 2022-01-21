@@ -1,7 +1,9 @@
 import 'source-map-support/register';
 import { RouteHandler, RouteInput, RouteOutput } from '../../src/http';
-import { md } from './helpers';
 import { allSnippets } from './snippet';
+import View from './components/site-header/component';
+
+console.log(View);
 
 // console.log(allSnippets.length);
 

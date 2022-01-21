@@ -2,7 +2,7 @@ import chokidar from 'chokidar';
 import express from 'express';
 import 'source-map-support/register';
 import { URL, URLSearchParams } from 'url';
-import { FileSys } from './filesys';
+import { File, FileSys } from './filesys';
 import { RouteHandler } from './http';
 import { jsxCreateStringifiedElement } from "./jsx-stringify";
 import { Runtime } from "./runtime";
@@ -24,7 +24,8 @@ class Site {
     this.#runtime?.shutdown();
     this.#runtime = new Runtime(root, jsxCreateStringifiedElement);
 
-    const boot = this.#runtime.findModule('/src/boot')!;
+    const bootFile = this.#runtime.find('/src/boot')! as unknown as File;
+    const boot = this.#runtime.modules.get(bootFile)!;
 
     try {
       console.log('Loading boot module...');

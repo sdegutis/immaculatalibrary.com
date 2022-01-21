@@ -74,7 +74,6 @@ class Snippet {
   addRoutes(routes: Map<string, RouteHandler>) {
     const path = `GET /book-snippets/${this.date}-${this.slug}.html`;
     routes.set(path, input => {
-      console.log(md.render(this.markdownContent))
       return {
         body: <>
 

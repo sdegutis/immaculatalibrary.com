@@ -12,7 +12,7 @@ type JsxCreateElement = (
 export class Runtime {
 
   context;
-  #modules = new Map<File, Module>();
+  modules = new Map<File, Module>();
   #timeouts: NodeJS.Timeout[] = [];
   #intervals: NodeJS.Timer[] = [];
 
@@ -42,22 +42,21 @@ export class Runtime {
     this.#intervals.forEach(clearInterval);
   }
 
-  findModule(absolutePath: string) {
+  find(absolutePath: string) {
     let dir: Dir = this.root;
     const parts = absolutePath.split(path.posix.sep).slice(1);
     let part: string | undefined;
 
-    while (part = parts.shift()) {
+    while (undefined !== (part = parts.shift())) {
       if (parts.length === 0) {
-        const file = (
+        if (part === '') return dir;
+
+        return (
           dir.filesByName[part] ??
           dir.filesByName[part + '.ts'] ??
-          dir.filesByName[part + '.tsx']
+          dir.filesByName[part + '.tsx'] ??
+          null
         );
-        if (file) {
-          const mod = this.#modules.get(file);
-          if (mod) return mod;
-        }
       }
       else {
         const subdir = dir.dirsByName[part];
@@ -76,7 +75,7 @@ export class Runtime {
 
     for (const file of dir.files) {
       if (file.name.match(/\.tsx?$/)) {
-        this.#modules.set(file, new Module(file, this));
+        this.modules.set(file, new Module(file, this));
       }
     }
   }
@@ -150,10 +149,12 @@ class Module {
       return require(toPath);
     }
 
-    const mod = this.#runtime.findModule(absolutePath);
-    if (!mod) {
-      throw new Error(`Can't find module at path: ${absolutePath}`);
-    }
+    const file = this.#runtime.find(absolutePath);
+    if (!file) throw new Error(`Can't find file at path: ${absolutePath}`);
+
+    const mod = file.isFile() && this.#runtime.modules.get(file);
+    if (!mod) return file;
+
     return mod.require();
   }
 
