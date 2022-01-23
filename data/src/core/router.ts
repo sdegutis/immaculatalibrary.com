@@ -5,6 +5,8 @@ import { allPages } from "../model/page";
 import { allPosts, allPostsPage } from "../model/post";
 import { allSnippets } from "../model/snippet";
 import { homePage } from "../pages/home";
+import { randomBookPage } from "../pages/random-book";
+import { randomSnippetPage } from "../pages/random-snippet";
 import { makeSitemap } from "../pages/sitemap";
 import { staticFiles } from "./static";
 import { RouteHandler } from "/../src/http";
@@ -33,6 +35,8 @@ export function loadRoutes() {
   addRouteable(allMoviesPage);
   addRouteable(allPostsPage);
   addRouteable(allBooksPage);
+  addRouteable(randomBookPage);
+  addRouteable(randomSnippetPage);
   addRouteable(homePage);
 
   allSnippets.forEach(addRouteable);

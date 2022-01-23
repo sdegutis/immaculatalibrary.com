@@ -1,36 +1,4 @@
 
-const randomBook = {
-  path: '/random.html',
-  title: 'Random Book',
-  image: '/img/reference-big.jpg',
-  pageContent: () => {
-    const books = $site.named('books').$items;
-    const i = Math.floor(Math.random() * books.length);
-    const book = books[i];
-    return <>
-      <p><i>Redirecting...</i></p>
-      <script>{`document.addEventListener('DOMContentLoaded', () => { window.location.href = '${book.route}'; });`}</script>
-    </>;
-  },
-};
-
-const randomBookSnippet = {
-  path: '/random-book-snippet.html',
-  title: 'Random Book Snippet',
-  image: '/img/reference-big.jpg',
-  pageContent: () => {
-    const items = $site.named('snippets').publishedSnippets;
-    const i = Math.floor(Math.random() * items.length);
-    const item = items[i];
-    return <>
-      <p><i>Redirecting...</i></p>
-      <script>{`document.addEventListener('DOMContentLoaded', () => { window.location.href = '${item.route}'; });`}</script>
-    </>;
-  },
-}
-
-
-
 
 const bookSnippetRandom = {
   '$route': { '$eval': '() => `/book-snippets/random`' },
