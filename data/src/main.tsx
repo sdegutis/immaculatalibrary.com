@@ -6,6 +6,7 @@ import { allBooks } from './model/book';
 import { allCategories } from './model/category';
 import { allSnippets } from './model/snippet';
 import { notFoundPage } from './pages/404';
+import { errorPage } from './pages/500';
 
 for (const book of allBooks) {
   book.category = allCategories.find(cat => cat.bookSlugs.includes(book.slug))!;
@@ -24,7 +25,13 @@ export function routeHandler(input: RouteInput): RouteOutput {
   const handler = routes.get(key);
   let output: RouteOutput;
 
-  output = handler ? handler(input) : notFoundPage(input);
+  try {
+    output = handler ? handler(input) : notFoundPage(input);
+  }
+  catch (e) {
+    console.error(e);
+    output = errorPage(input);
+  }
 
   output.headers ??= {};
   output.headers['Strict-Transport-Security'] = 'max-age=15552000; includeSubDomains';
