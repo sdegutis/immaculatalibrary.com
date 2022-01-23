@@ -26,3 +26,4 @@ bookSlug: 'the-spirit-of-st-francis-de-sales'
 > He never allowed the conversion of a sinner to be despaired of, hoping on till death. "This life," he said, "is our pilgrim way, in which those who now stand may fall, and those who have fallen may, by grace, be set on their feet again." Nor even after death would he tolerate an unfavourable judgment being passed on any.
 > 
 > His reason for this was that as the original grace of justification was not given by way of merit, so neither could the grace of final perseverance be merited.
+

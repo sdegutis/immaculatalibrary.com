@@ -43,3 +43,4 @@ But God knows what's best for us. His ways are always perfect. That's why all ge
 Sin can never make us happy. From the beginning of creation, the temptation of man was that this or that sin will make us happy, starting with the apple in the Garden of Eden. But it's always a lie, and always comes from the father of lies, who cannot even promise us a minute of life, and whose only goal us our death and unhappiness.
 
 We *must* believe this. We must believe the Truth: that Jesus is the Way to have a happy Life. We must follow him, Love him, and do whatever he commands. Only then will we be truly happy, truly *blessed* by God, the source of all happiness, the Living Spring of Water that wells up inside us to eternal life, if we have it. We must wait until the birthing pains of temptation are over, and the Morning Star rises in our hearts. Then we will be *truly happy*.
+

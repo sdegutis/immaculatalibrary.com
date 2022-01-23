@@ -34,3 +34,4 @@ bookSlug: 'the-sinners-guide'
 > Remember that you are as a rock in the midst of the ocean. The winds and waves of the world will beat against you, but do you remain unshaken.
 > 
 > To do good and to suffer are, according to St. Bernard, the duties of the Christian life. The latter is the more difficult. Prepare yourself, then, to fulfil it with courage.
+

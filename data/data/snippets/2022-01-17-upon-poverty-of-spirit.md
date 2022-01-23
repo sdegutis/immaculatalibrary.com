@@ -28,3 +28,4 @@ bookSlug: 'the-spirit-of-st-francis-de-sales'
 > And never is this command more practically and worthily obeyed than when the man who has abandoned all his worldly goods for the sake of Christ, labours, not only in order to sustain his own life, but that he may have the wherewithal to give alms.
 > 
 > Thus did the Apostle glory when he said: *For such things as were needful for me, and them that are with me, these hands have furnished*. [Acts xx. 34.]
+

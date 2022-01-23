@@ -34,3 +34,4 @@ bookSlug: 'the-sinners-guide'
 > Examine all your propensities in this way, and you will easily discern what will be most profitable to you. Be always guided, however, in this respect, by the counsels of your superiors.
 > 
 > Thus we see that we are not always to choose what is best in itself, but what is best for us. Hence there are many excellent practices from which we would derive no advantage, either because they are above our strength or because God does not call us to embrace them. Then let us not soar above our state; let us aspire to what will strengthen us, not to what will overwhelm us. "Lift not up thy eyes to riches which thou canst not have," says Holy Scripture, "because they shall make themselves wings like those of an eagle, and shall fly towards heaven." [Prov. xxiii. 5.]
+

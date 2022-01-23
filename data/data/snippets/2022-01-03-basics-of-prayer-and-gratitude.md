@@ -30,3 +30,4 @@ bookSlug: 'the-sinners-guide'
 > Morning and evening, and at all times, we should render thanks to God for His many benefits, general and particular, of nature and of grace; but, above all, for the incomprehensible benefits of Redemption and the Blessed Sacrament of the altar.
 > 
 > Let us bear in mind that in all these blessings He sought only our welfare. He could expect nothing; He desired nothing from us. Out of pure love for us He gave us all.
+

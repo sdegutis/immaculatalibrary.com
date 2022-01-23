@@ -28,3 +28,4 @@ bookSlug: 'the-sinners-guide'
 > In like manner parents refuse their children the money they have accumulated only for them when they find they are squandering it in play and riotous living.
 > 
 > Thus are we treated by God, the sovereign Physician and most loving Father of us all, when He sends us trials and privations.
+

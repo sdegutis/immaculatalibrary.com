@@ -32,3 +32,4 @@ bookSlug: 'the-sinners-guide'
 > In traversing a rapid river you do not cross it in a direct line, for you would be borne beyond the place at which you wish to land. You go higher up the stream to have the advantage of the tide, and thus secure a safe passage to the point at which you desire to embark.
 > 
 > Do likewise in spiritual things. Aim higher than is necessary, so that if you fail you may at least reach the mark of what is indispensable for salvation.
+

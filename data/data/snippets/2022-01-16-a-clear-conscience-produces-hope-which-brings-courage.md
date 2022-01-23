@@ -18,3 +18,4 @@ bookSlug: 'the-sinners-guide'
 > This living hope works in the soul many marvellous effects, which increase according as the charity which accompanies it becomes more ardent.
 > 
 > The first of these effects is the strength which supports man under the labors of life by holding before his eyes the eternal reward reserved for him; for, in the opinion of the Saints, the stronger this hope of reward the greater is man's courage in overcoming obstacles in the path of virtue.
+

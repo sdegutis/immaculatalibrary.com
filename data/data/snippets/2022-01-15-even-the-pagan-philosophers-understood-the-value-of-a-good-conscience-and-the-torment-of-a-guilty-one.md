@@ -24,3 +24,4 @@ bookSlug: 'the-sinners-guide'
 > It was of this privilege that the Apostle spoke when he said: "Our glory is this: the testimony of our conscience, that in simplicity of heart and sincerity of God, and not in carnal wisdom, but in the grace of God, we have conversed in this world." [2 Cor. i. 12.]
 > 
 > We have endeavored to explain this privilege of virtue, but, despite all that could be said, there is nothing save experience that can give us a keen realization of it.
+

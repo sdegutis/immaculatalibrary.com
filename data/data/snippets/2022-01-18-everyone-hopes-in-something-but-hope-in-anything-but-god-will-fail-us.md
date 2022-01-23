@@ -28,3 +28,4 @@ bookSlug: 'the-sinners-guide'
 > Behold, then, dear Christian, how great is this privilege of hope, which, though it appear one with the special providence of which we have been treating, differs from it, nevertheless, as the effect differs from the cause.
 > 
 > For though the hope of the just proceeds from several causes, such as the goodness of God, the truth of His promises, the merits of Christ, yet its principal foundation is this paternal providence. It is this which excites our hope; for who could fail in confidence knowing the fatherly care that God has for us all?
+

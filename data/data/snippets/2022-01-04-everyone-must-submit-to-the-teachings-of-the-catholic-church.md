@@ -16,3 +16,4 @@ bookSlug: 'the-sinners-guide'
 > As the natural heat of our body is stimulated by that of the sun, and the healing powers of nature are aided by exterior remedies, so the light of grace is strengthened by the teaching and direction of the Church.
 > 
 > Whoever refuses, therefore, to humble himself and submit to her authority will render himself unworthy of any favor from God.
+

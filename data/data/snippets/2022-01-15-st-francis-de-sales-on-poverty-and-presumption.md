@@ -36,3 +36,4 @@ bookSlug: 'the-spirit-of-st-francis-de-sales'
 > This is why he wished for nothing but bare necessaries, fearing that superfluity might lead him into some excess.
 >
 > When I reminded him that if we had this superfluity we might give alms out of it, as it is written, *Of what remaineth give to the poor*, he replied, that we knew well enough what we ought to do; but that we did not know what we should do, and that it was always a species of presumption to imagine ourselves able to handle live coals without burning ourselves, seeing that even the Angel in the vision of the Prophet took them up with tongs!
+

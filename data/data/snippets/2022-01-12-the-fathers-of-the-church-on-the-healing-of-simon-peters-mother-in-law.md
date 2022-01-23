@@ -30,3 +30,4 @@ bookSlug: 'catena-aurea'
 > **Pseudo-Jerome**; For the fever means intemperance, from which, we the sons of the synagogue, by the hand of discipline, and by the lifting up of our desires, are healed, and minister to the will of Him who heals us.
 > 
 > **Theophyl**. But he has a fever who is angry, and in the unruliness of his anger stretches forth his hands to do hurt; but if reason restrains his hands, he will arise, and so serve reason.
+

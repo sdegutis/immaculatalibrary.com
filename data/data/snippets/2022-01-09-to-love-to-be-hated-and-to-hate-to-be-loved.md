@@ -12,3 +12,4 @@ bookSlug: 'the-spirit-of-st-francis-de-sales'
 > When he said that we ought to love to be hated, and hate to be loved, he was referring in the one case to the love which is in and for God alone, and in the other to that merely human love, which is full of danger, which robs God of His due, and of which, therefore, we should hate to be the object. He expresses himself thus:
 > 
 >> Those who have nothing naturally attractive about them are very fortunate, for they are well assured that the love which one bears them is excellent, being all for God's sake alone.
+

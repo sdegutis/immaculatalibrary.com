@@ -16,3 +16,4 @@ bookSlug: 'the-sinners-guide'
 > This is the highest degree of virtue, but it is not commanded us. A faithful servant of Christ will not, however, rest satisfied with the first degree, but will strive unceasingly to reach the second and even the third.
 > 
 > What we have said on this subject must not be interpreted to mean that we should rejoice at the sufferings of others. Oh! no; charity requires us to sympathize with others in affliction, especially with our kindred and with the Church. The mortifications we impose on ourselves must not be extended to others, but should render us even more considerate towards them.
+

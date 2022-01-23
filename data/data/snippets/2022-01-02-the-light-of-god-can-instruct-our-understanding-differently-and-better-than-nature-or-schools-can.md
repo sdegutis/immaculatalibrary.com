@@ -28,3 +28,4 @@ bookSlug: 'the-sinners-guide'
 > In the New Testament our Saviour tells us: "The Holy Ghost, whom the Father will send in My name, He will teach you all things, and bring all things to your mind, whatsoever I shall have said to you." [St. John xiv. 26.]
 > 
 > And again: "It is written in the prophets: And they shall all be taught of God. Every one that hath heard of the Father, and hath learned, cometh to Me." [St. John vi. 45.]
+

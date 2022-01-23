@@ -14,3 +14,4 @@ bookSlug: 'the-sinners-guide'
 > How incomprehensible is the ignorance of him who neither fears hell nor strives for Heaven; who feels no horror for sin; who disregards the menaces as well as the promises of God; who makes no preparation for death, which hourly seizes its victims; who does not see that momentary joys here are laying up for him eternal torments hereafter!
 > 
 > "They have not known or understood; they walk on in the darkness" [Ps. lxxxi. 5.] of sin through this life, and will pass from it to the eternal darkness of the life to come.
+

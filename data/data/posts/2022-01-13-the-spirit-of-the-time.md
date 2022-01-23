@@ -41,3 +41,4 @@ This is also why I post daily Book Snippets. Who wrote these books? They were mo
 So I encourage you, stick to what is true and approved.
 
 You might ask, what if something important happens? Trust me, if it's *really that important* for your life, then God will make sure you find out somehow, if you are always striving to do God's will, and if knowing this "important news" would be helpful for your salvation and not harmful to it.
+

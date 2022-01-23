@@ -87,3 +87,4 @@ And on that day, when we finally receive the full payment of our love for God, t
 Pray, hope, and don't worry. God is with you. God is in you. He is your strength. Trust in him. Say "Jesus, I trust in you." And "Lord, I believe, help my unbelief." And "increase our faith."
 
 Jesus asks, "and will God not hear the prayers of those who cry out to him day and night? He will vindicate them, and speedily. Nevertheless, when the Son of Man comes, will he find faith on earth?" Yes Jesus, you will find faith in us. We believe. We will wait patiently for you to help us in your way and in your time. We love you. Thank you for your great love. Help us to love you more. Amen.
+

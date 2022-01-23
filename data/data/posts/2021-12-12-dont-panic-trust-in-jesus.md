@@ -13,3 +13,4 @@ He knew bad things were going to happen to us. He said it would.
 But he also *conquered* those bad things, and *earned the right* to save us from them.
 
 So if we stick close to Jesus, he will rescue us from it all. And soon!
+

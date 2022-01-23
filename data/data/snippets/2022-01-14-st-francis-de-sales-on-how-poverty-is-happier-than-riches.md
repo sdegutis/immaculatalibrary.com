@@ -26,3 +26,4 @@ bookSlug: 'the-spirit-of-st-francis-de-sales'
 >> If, as the wise man tells us, *he that addeth knowledge addeth also labour*; much more is this the case with the man who heaps up riches. He is like the giants in the fable who piled up mountains, and then buried themselves under them.
 >>
 >> Remember the miserable man who, as the Gospel tells us, thought that he had many years before him in which to live at his ease, but to whom the heavenly voice said: *Thou fool, this night do they require thy soul of thee; and whose shall those things be which thou hast proided?* In truth happy is he only who lays up imperishable treasures in Heaven.
+

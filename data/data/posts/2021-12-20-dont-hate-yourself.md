@@ -55,3 +55,4 @@ But remember these words of Jesus: "What good is it to gain the *whole world* bu
 And remember these words of St. Paul: "He who gave up *His Own Son* for us, will he not also give us *all things* with him?"
 
 So don't worry, when you exchange bad morals for good ones, you lose the bad things you gained, but gain a hundred-fold even in this life, and eternal life in the age to come!
+

@@ -32,3 +32,4 @@ bookSlug: 'the-sinners-guide'
 > Happy they who are sufficiently advanced in love for God to know this jubilation! It is a knowledge which Plato with all his wisdom, and Demosthenes with all his eloquence, could never attain.
 > 
 > Since, then, God is the author of this joy, how great must be its strength and sweetness! For if His arm be so terrible when stretched forth to chastise, it is equally tender when extended to caress.
+

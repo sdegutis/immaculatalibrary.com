@@ -48,3 +48,4 @@ St. Michael Prayer --- *St. Michael the Archangel, defend us in battle; be our d
 ---
 
 [CatholicExorcism.org](https://www.catholicexorcism.org/) --- Official deliverance prayers, including ones suitable for use by the laity. But see their note about how the laity can safely pray these prayers, specifically about imprecatory vs deprecatory prayers, authority, and natural law.
+

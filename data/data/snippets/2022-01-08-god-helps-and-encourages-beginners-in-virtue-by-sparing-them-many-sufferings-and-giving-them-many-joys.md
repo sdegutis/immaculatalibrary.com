@@ -18,3 +18,4 @@ bookSlug: 'the-sinners-guide'
 > This is what God did for the children of Israel when He led them out of the land of Egypt: "When Pharao had sent out the people, the Lord led them not by way of the land of the Philistines, which is near, thinking lest perhaps they would repent, if they should see wars rise against them, and would return into Egypt." [Exod. xiii. 17.]
 > 
 > This same Providence which guided the Israelites continues daily to manifest like care for the faithful, bringing them out of the slavery of the world and leading them to the conquest of Heaven, the true promised land.
+

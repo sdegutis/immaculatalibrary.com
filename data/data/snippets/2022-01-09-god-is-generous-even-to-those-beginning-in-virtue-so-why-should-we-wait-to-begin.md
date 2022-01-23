@@ -20,3 +20,4 @@ bookSlug: 'the-sinners-guide'
 > Dear Christian, delay not an affair so important. Every moment is worth more to you than all the riches of the universe. Even though you attain this heavenly treasure, you will never cease to lament the time you have lost, and to cry out with St. Augustine: "Too late have I known Thee, too late have I loved Thee, O Beauty ever ancient and ever new!"
 > 
 > This illustrious penitent, though he unceasingly lamented the lateness of his conversion, gave himself to God with all his heart, and, therefore, won an immortal crown. Do you imitate him, and thus avoid the unhappy lot of lamenting not only the delay of your conversion, but even the loss of your crown.
+

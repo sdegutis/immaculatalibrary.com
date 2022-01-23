@@ -14,3 +14,4 @@ bookSlug: 'the-sinners-guide'
 > We do not counsel you to follow this rule so rigidly as to exclude good deeds that are public or profitable. Oh! no; that would be a reprehensible extreme, for very often there is great merit in overcoming the promptings of self-love to which these deeds expose us.
 > 
 > Our intention is only to warn you against the artifices of self-love, that you may ever distrust it, particularly when it presents itself under the mask of virtue.
+

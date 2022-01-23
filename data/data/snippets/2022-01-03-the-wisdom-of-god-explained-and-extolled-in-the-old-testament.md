@@ -30,3 +30,4 @@ bookSlug: 'the-sinners-guide'
 > Be not astonished at the effect of this wisdom, for it is not earthly, but divine. Is there anything of earth to be compared with it? "The finest gold shall not purchase it, neither shall silver be weighed in exchange for it. It cannot be compared with the most precious stone sardonyx, or the sapphire. The fear of the Lord is wisdom, and to depart from evil is understanding." [Job xxviii.]
 > 
 > And this wisdom increases in the just, for Solomon tells us: "The path of the just, as a shining light, goeth forwards and increaseth even to perfect day," [Prov. iv. 18.] the beginning of a blessed eternity, when God's wisdom and beauty will be revealed to us in all their brightness and power.
+

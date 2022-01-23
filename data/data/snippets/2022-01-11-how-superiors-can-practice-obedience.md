@@ -28,3 +28,4 @@ bookSlug: 'the-spirit-of-st-francis-de-sales'
 >> It is by this universal obedience to every creature that we become all things to all men in order that we may win all to Jesus Christ.
 >>
 >> It is by this that we take our neighbour, whoever he may be, for our superior, becoming servants for our Lord's sake.
+

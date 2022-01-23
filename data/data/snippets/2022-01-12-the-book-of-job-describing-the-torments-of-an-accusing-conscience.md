@@ -18,3 +18,4 @@ bookSlug: 'the-sinners-guide'
 > "Tribulation shall terrify him, and distress shall surround him, as a king that is prepared for the battle. For he hath stretched out his hand against God, and hath strengthened himself against the Almighty." [Job xv. 20-26.]
 > 
 > Thus does Holy Scripture portray the torments of which the heart of the sinner is both the theatre and the victim.
+

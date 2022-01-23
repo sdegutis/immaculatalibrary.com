@@ -14,3 +14,4 @@ bookSlug: 'the-spirit-of-st-francis-de-sales'
 > So happily did the Blessed Prelate succeed in this method of treatment, that sometimes the poor criminals whom he accompanied to their execution went to it as to a marriage feast, with joy and peace, such as they had never experienced in the whole course of their lawless and sinful lives, happier far so to die than to live on as they had done. He would say to them:
 > 
 >> It is by lovingly kissing the feet of God's justice that we most surely reach the embrace of His tender mercy. Above all things, we must be confident that they who trust in Him shall never be confounded.
+

@@ -58,13 +58,13 @@ function keysIn(items: any[]) {
   return map;
 }
 
-// importPublic();
-// importMovies();
-// importCategories();
-// importSnippets();
-// importBooks();
-// importPosts();
-// importPages();
+importPublic();
+importMovies();
+importCategories();
+importSnippets();
+importBooks();
+importPosts();
+importPages();
 
 function importPages() {
   for (const item of pageItems) {
@@ -86,7 +86,7 @@ function importPages() {
     }
 
     const header = Yaml.dump(meta, { forceQuotes: true });
-    fs.writeFileSync(`data/data/pages/${item.$name ?? path}`, `---\n${header}---\n\n${content}`);
+    fs.writeFileSync(`data/data/pages/${item.$name ?? path}`, `---\n${header}---\n\n${content}\n`);
   }
 }
 
@@ -102,7 +102,7 @@ function importPosts() {
     if (item.draft) meta.draft = true;
 
     const header = Yaml.dump(meta, { forceQuotes: true });
-    fs.writeFileSync(`data/data/posts/${yyyymmdd}-${item.slug}.md`, `---\n${header}---\n\n${item.content}`);
+    fs.writeFileSync(`data/data/posts/${yyyymmdd}-${item.slug}.md`, `---\n${header}---\n\n${item.content}\n`);
   }
 }
 
@@ -121,7 +121,7 @@ function importBooks() {
     }, {
       forceQuotes: true,
     });
-    fs.writeFileSync(`data/data/books/${item.slug}.md`, `---\n${header}---\n\n${item.description}`);
+    fs.writeFileSync(`data/data/books/${item.slug}.md`, `---\n${header}---\n\n${item.description}\n`);
   }
 }
 
@@ -136,7 +136,7 @@ function importSnippets() {
     }, {
       forceQuotes: true,
     });
-    fs.writeFileSync(`data/data/snippets/${yyyymmdd}-${item.slug}.md`, `---\n${header}---\n\n${item.content}`);
+    fs.writeFileSync(`data/data/snippets/${yyyymmdd}-${item.slug}.md`, `---\n${header}---\n\n${item.content}\n`);
   }
 }
 
@@ -150,7 +150,7 @@ function importCategories() {
     }, {
       forceQuotes: true,
     });
-    fs.writeFileSync(`data/data/categories/${item.slug}.md`, `---\n${header}---\n\n${item.description}`);
+    fs.writeFileSync(`data/data/categories/${item.slug}.md`, `---\n${header}---\n\n${item.description}\n`);
   }
 }
 
@@ -177,7 +177,7 @@ function importMovies() {
     }, {
       forceQuotes: true,
     });
-    fs.writeFileSync(`data/data/movies/${item.slug}.md`, `---\n${header}---\n\n${item.description}`);
+    fs.writeFileSync(`data/data/movies/${item.slug}.md`, `---\n${header}---\n\n${item.description}\n`);
   }
 }
 

@@ -34,3 +34,4 @@ bookSlug: 'the-sinners-guide'
 > Beware of despising those in authority, lest God should say to them, as He did to Samuel: "They have not rejected thee, but Me, that I should not reign over them." [1 Kings viii. 7.]
 > 
 > Serve them with truth and sincerity, that you may never hear the terrible words of the Apostle: "You have not lied to men, but to God," [Acts v. 4.] and that you may never incur the malediction which fell upon Ananias and Saphira for their duplicity.
+

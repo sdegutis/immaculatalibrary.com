@@ -30,3 +30,4 @@ bookSlug: 'the-spirit-of-st-francis-de-sales'
 > Again, when his steward was complaining of down-right distress, and of there being no money left, he said: "What are you troubling yourself about? We are now more like our Master, Who had not even where to lay His head, though as yet we are not reduced to such extremity as that." "But what are we to do?" persisted the steward. "My son," the Bishop answered, "we must live as we can, on whatever goods we have, that is all." "Truly," replied the other, "it is all very well to talk of living on our goods when there are none left to live upon!" "You do not understand me," returned the Bishop; "we must sell or pledge some of our furniture in order to live. Will not that, my good M.R., [Goerges Roland] be living on our goods?"
 > 
 > It was in this fashion that the Saint was accustomed to meet cheerfully money troubles, so unbearable to weaker characters.
+

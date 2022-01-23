@@ -20,3 +20,4 @@ bookSlug: 'the-sinners-guide'
 > "Some trust in chariots, and some in horses; but we will call upon the name of the Lord our God. They are bound, and have fallen; but we are risen, and are set upright." [Ps. xix. 8, 9.]
 > 
 > Thus we see that our hopes are realized according to that upon which they rest---in ruin and destruction, or in honor and victory.
+

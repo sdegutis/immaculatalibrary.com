@@ -26,3 +26,4 @@ bookSlug: 'the-sinners-guide'
 > We could cite many other passages from Scripture in proof of this truth, particularly from the Canticle of Canticles, where these divine consolations are represented, sometimes under the figure of generous wine which rejoices the heart of man, or as milk sweeter than honey, containing all strength, and filling the soul with life and joy.
 > 
 > But what we have said will suffice to prove to you the joys which are reserved for the good, and how far these heavenly consolations exceed the pleasures of this world. For what comparison can there be between light and darkness, between Christ and Belial? How can the happiness afforded by a creature be compared to that which is given by the Creator?
+

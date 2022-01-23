@@ -107,3 +107,4 @@ Hold fast to Jesus. Look to Jesus. Call on his name in time of tribulation and t
 > St. Michael the Archangel, defend us in battle. Be our protection against the wickedness and snares of the devil, may God rebuke him we humbly pray. And do thou, oh Prince of the Heavenly Hosts, by the power of God, cast into Hell Satan and all the evil spirits that prowl about the world, seeking the ruin of souls. Amen.
 
 <small>[All Bible quotes based on RSVCE, specifically the Truth and Life Dramatized Audio New Testament.]</small>
+

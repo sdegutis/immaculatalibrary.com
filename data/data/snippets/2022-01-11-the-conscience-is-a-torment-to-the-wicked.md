@@ -18,3 +18,4 @@ bookSlug: 'the-sinners-guide'
 > To these miseries let us add the fear of death, which never fails to haunt the wicked, unless they are utterly abandoned. What comfort can they have in reflecting on the uncertainty of life, the thought of the terrible account they must render, and the anticipation of eternal torments?
 > 
 > Consider the sentiments which such reflections must awaken in the sinner's breast, and you will form some idea of the torments of his conscience.
+

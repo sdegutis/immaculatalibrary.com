@@ -24,3 +24,4 @@ bookSlug: 'the-spirit-of-st-francis-de-sales'
 >> The people are lavishing their substance and the nobility their blood for the same cause. Remember the late wars, and tremble lest your ingratitude and disobedience should plunge you again into similar troubles.
 > 
 > Adding example to precept, he paid so heavy a tax upon a part of his own revenue that none could say he did not practise what he preached, and all those who had ventured to oppose him in the matter were not only effectually silenced, but covered with confusion and put to a just shame.
+

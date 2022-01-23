@@ -30,3 +30,4 @@ bookSlug: 'the-spirit-of-st-francis-de-sales'
 >> He would have made to them an abundant restitution of all that had been theirs, by gentle but effective means. They whose thoughts are fixed upon the Lord will be nourished by Him. The just are never forsaken nor reduced to beg their bread; they have only to lift their eyes and their hopes to God and He will give them meat in due season; for it is He who gives food to all flesh.
 >>
 >> Moreover, it is much easier to suffer hunger with patience than to preserve virtue in the midst of plenty. It is not every one who can say with the Apostle: I know how to abound, and I know how to suffer need. [Philipp. iv. 12.] A thousand fall on the left hand of adversity, but ten thousand on the right hand of prosperity; for iniquity is the outcome of luxury, and the sin of the cities of the plain had its origin in a superabundance of bread; that is to say, in their wealth. To be frugal and devout is to possess a great treasure.
+

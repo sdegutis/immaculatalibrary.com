@@ -34,3 +34,4 @@ bookSlug: 'the-spirit-of-st-francis-de-sales'
 >> Lastly, I look upon them as children of the Church, at least in disposition, since they are willing to be instructed; and as my brethren in hope, since they also are called to inherit eternal life. In the early days of the Church it was customary to give the title of brethren to catechumens, even before their baptism.
 > 
 > These reasons satisfied me and made me esteem highly the ingenious method suggested to him by the Holy Spirit to render these unruly and untaught souls docile and tractable.
+

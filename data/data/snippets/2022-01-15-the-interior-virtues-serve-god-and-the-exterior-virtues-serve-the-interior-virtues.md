@@ -32,3 +32,4 @@ bookSlug: 'the-sinners-guide'
 > Fasting, when performed in a state of grace, besides being a meritorious act of the virtue of temperance, as it is at all times, expiates our sins, subdues the inclinations of the flesh, repels our enemy, disposes us for prayer, pious reading, and meditation, and preserves us from the excesses, quarrels, and passions awakened by inordinate indulgence.
 > 
 > As for pious reading, the recitation of the Psalms, assisting at the divine office, and hearing sermons, it is evident that these acts of the virtue of religion are most efficacious in enlightening the understanding and inflaming the will with a desire for spiritual things.
+

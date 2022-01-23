@@ -28,3 +28,4 @@ bookSlug: 'catena-aurea'
 > **Bede**; Again, in a mystical sense, the setting of the sun signifies the passion of Him, who said, *As long as I am in the world, I am the light of the world*. And when the sun was going down, more demoniacs and sick persons were healed than before: because He who living in the flesh for a time taught a few Jews, has transmitted the gifts of faith and health to all the Gentiles throughout the world.
 > 
 > **Pseudo-Jerome**; But the door of the kingdom, morally, is repentance and faith, which works health for various diseases; for divers are the vices, with which the city of this world is sick.
+

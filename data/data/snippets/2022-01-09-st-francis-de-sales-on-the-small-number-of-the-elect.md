@@ -22,3 +22,4 @@ bookSlug: 'the-spirit-of-st-francis-de-sales'
 > Which really means that justifying grace is always being offered them, and this grace is inseparable from a lively faith and a burning charity. Add to this that He who begins the work in us is He who likewise perfects it.
 > 
 > We may believe that the call to christianity, which is the work of God, is always a perfect work, and therefore leads of itself to the end of all perfection, which is heavenly glory.
+

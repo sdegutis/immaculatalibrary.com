@@ -73,3 +73,4 @@ This is much easier to do when you have meditated often on the Passion. There ar
 * Read good books that talk about the Passion of Jesus or explain it, especially ones on this website
 
 Jesus said "it is not my Father's will that any of these little ones perish." God is not out to get us. And when we meditate more and more on the Passion, we will see God's love in every good or bad thing that happens to us, and all of it will be useful to make us love God more and more, until finally we're with God completely, first in this life and then the next.
+

@@ -15,3 +15,4 @@ If we've done wrong and are sorry, we can go to Jesus directly. But if we're too
 If things are going wrong in our lives, we have to trust that Mary is our good Mother, and will be by our side throughout all of it, giving us as much help, support, comfort, peace, and strength to handle it all with grace.
 
 And especially pray that you can handle it without falling into sin, the only thing which can separate us from God's love. Because if we have God's love, we're *safe from all bad things* in the long-term, and God will eventually undo **all** the bad that happens to us. So especially ask Mary to obtain grace to not sin! And she will.
+

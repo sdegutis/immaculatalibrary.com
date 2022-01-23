@@ -10,3 +10,4 @@ If you are serious about taking your devotion to God to the next level, this aud
 ***Tip:*** If you purchase the CDs, you can put them on any digital device (such as an iPhone), and have access to the whole audio bible for the rest of your life.
 
 ***Disclaimer:*** ImmaculataLibrary.com is not affiliated at all with the makers of Truth and Life, and receives absolutely no compensation for this advertisement. The editor simply wishes to share with other devout Catholics what he has found personally incredibly helpful.
+

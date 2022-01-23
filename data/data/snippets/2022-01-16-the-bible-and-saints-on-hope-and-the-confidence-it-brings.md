@@ -36,3 +36,4 @@ bookSlug: 'the-sinners-guide'
 > God told the children of Israel that every place upon which they set their feet should be theirs. So every salutary blessing upon which man fixes his hope will be granted to him. Hope, then, for all blessings, and you will obtain them.
 > 
 > Thus we see that this virtue is an imitation of the divine power; for, says St. Bernard, nothing so manifests the power of God as the omnipotence with which He invests those who hope in Him. Witness Josue, at whose command the sun stood still; or Ezechiel, who bade King Ezechias choose whether he would have the sun advance or go backward in his course, as a sign from God.
+

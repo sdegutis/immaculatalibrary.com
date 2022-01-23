@@ -20,3 +20,4 @@ bookSlug: 'the-sinners-guide'
 > The heretics of our day, endeavoring to avoid this error, fell into the opposite extreme, and preached contempt for exterior practices.
 > 
 > But the Catholic Church preserves a happy medium between both, and, while maintaining the superiority of the interior virtues, recognizes the merit and advantage of those that are exterior, just as in a well-governed commonwealth each one enjoys the merit and prerogatives which belong to him.
+

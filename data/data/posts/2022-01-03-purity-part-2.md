@@ -79,3 +79,4 @@ This principle is why you must avoid looking too much at anything beautiful, or 
 This principle is also why, the more we want to be pure, we must gaze upon the beauty of the *virtues* of Jesus, Mary, and Joseph, the Virgin Family, who never let one ounce of the world into their hearts.
 
 I've written enough about purity for you for now. Remember: pray intimately and regularly, do your daily holy reading, and keep your eyes from gazing for too long or too intently at physical beauty (even your own), and focus it on the spiritual beauties of the Angels and Saints, of the epic story that is truly happening all around us, and especially on the Divine Mysteries relating to the Incarnation and Redemption of your soul.
+

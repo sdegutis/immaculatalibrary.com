@@ -23,3 +23,4 @@ St. Paul says, "For what person knows a man's thoughts except the spirit of the 
 So if we want to know what God thinks, we should turn to the Saints and their writings, for these holy men and women were filled with the Spirit of God. They know how to interpret the Sacred Scriptures of the Church, which the Spirit of God coauthored. They know how to interpret the Sacred Tradition of the Church, which collectively they helped to pass down to all future generations in its purity through their writings.
 
 This website is dedicated to spreading a love of reading the lives and writings of the Saints, encouraging it to become a daily practice, and making it incredibly easy to do in this digital age. The home page always has random book snippets and the latest daily book snippets, posted out of the best of the best books available on this website, with topics chosen to be particularly relevant and helpful on trying to find the path to holiness in the present age.
+

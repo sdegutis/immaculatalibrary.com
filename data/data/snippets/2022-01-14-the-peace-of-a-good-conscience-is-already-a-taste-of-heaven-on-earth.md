@@ -22,3 +22,4 @@ bookSlug: 'the-sinners-guide'
 > The chief cause of this joy is the dignity and beauty of virtue, which, as Plato declares, is incomparably fair and lovely.
 > 
 > Finally, so great are the advantages of a good conscience that, according to St. Ambrose, they constitute in this life the happiness of the just.
+

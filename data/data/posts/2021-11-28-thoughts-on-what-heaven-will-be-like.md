@@ -98,3 +98,4 @@ We can see what kind of creatures God has created, and how *they too* have trans
 There's *so much new* about that life, we can barely scratch the surface by imagining it. All we know for sure is that it will be *amazing* for those who loved God in this life and refused to sin.
 
 > And he who sat upon the throne said, "Behold, I make all things new." Also he said, "Write this, for these words are trustworthy and true." (Revelation 21:5, RSVCE)
+

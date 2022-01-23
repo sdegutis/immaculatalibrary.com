@@ -28,3 +28,4 @@ bookSlug: 'the-sinners-guide'
 > St. Augustine says that though God is the Lord of all that exists, yet it is not every one who can say with the Psalmist: "O Lord! I am thy servant," [ Ps. cxv. 6.] but those only who have renounced their own will and consecrated themselves to His service.
 > 
 > There is, moreover, no better disposition for attaining the perfection of a Christian life. As God in His infinite goodness is ever ready to overwhelm us with His graces when we offer no obstacle to His merciful designs, whoever is perfectly confined to His will can justly expect an abundance of His favors. Yes, God will treat him with great liberality, and will make him, like another David, a man after His own Heart.
+

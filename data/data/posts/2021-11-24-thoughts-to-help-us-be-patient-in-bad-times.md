@@ -67,3 +67,4 @@ See how merciful he is! Aren't you *glad* he's merciful enough to give them and 
 One day, the bad things will all be over, and after a trillion years in Heaven, we'll look back on this *whole life*, or even the whole *history of humanity* as if it happened in the blink of an eye.
 
 By our patience, we are making Jesus happy. Let's be patient. Pray for the bad things to stop, do everything you can (except sin) to make them stop, but if they keep happening, put your heart *completely* in the very good hands of Jesus.
+

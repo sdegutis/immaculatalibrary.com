@@ -79,3 +79,4 @@ This is also why they preached the Gospel so often, went through so much pains, 
 This is also why they loved Mass so much, because being at Mass is *directly* serving God. And receiving Holy Communion is *directly receiving Jesus, God the Son* into our souls and hearts, where he remakes us into new creations, and gives us new hearts.
 
 All these things the Saints did, they did because they loved God. This love made them want to serve God and serve others. And through serving God and neighbor, they were made *happy.* God made sure of it. After all, He's always more generous towards us than we are towards Him!
+

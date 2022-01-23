@@ -30,3 +30,4 @@ bookSlug: 'the-sinners-guide'
 > As it is a difficult undertaking to acquire this virtue, we must earnestly ask it of God, especially in the Lord's Prayer, frequently repeating with fervor "Thy will be done on earth, as it is in Heaven."
 > 
 > Beg of Him to grant you grace to imitate on earth the purity and devotion with which the heavenly choirs bless and fulfil His adorable will.
+

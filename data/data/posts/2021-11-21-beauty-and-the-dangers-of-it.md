@@ -45,3 +45,4 @@ As St. John Paul II made St. Brother Albert say in his play "Our God's Brother,"
 And this beauty of the Son of Mary was not taken from her, but given *to* her, by virtue of her being his mother. So that some people who saw the Blessed Virgin Mary had said, if they weren't instructed well in the Catholic truths, they would have thought her a goddess!
 
 The Holy Spirit, through the words of St. Paul, reminds us, "He who gave us his only Son, will he not also give us all things with him?" Yes, God will give us *every* beautiful thing. In this life, only that which is good and helpful to lead us to the next life. But in the next life, *everything* beautiful will be ours. Even *God Himself,* the *Infinite Source of all Beauty,* will be ours.
+

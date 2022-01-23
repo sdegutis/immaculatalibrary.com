@@ -36,3 +36,4 @@ bookSlug: 'the-spirit-of-st-francis-de-sales'
 > Our Blessed Father added this simile to explain his meaning further:
 > 
 >> Obeying a harsh, irritating, and vexatious superior is like drawing clear water from a spring which flows through the jaws of a lion of bronze. It is like the riddle of Samson, *Out of the eater came forth meat*; it is hearing God's voice, and seeing God's will alone in that of a superior, even if the command be, as in the case of St. Peter, *Kill and eat;* [Acts x. 13.] it is to say with Job, *Although He should kill me, I will trust in Him.* [Job xiii. 15.]
+

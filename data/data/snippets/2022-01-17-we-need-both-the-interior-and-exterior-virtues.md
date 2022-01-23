@@ -30,3 +30,4 @@ bookSlug: 'the-sinners-guide'
 > Otherwise he will lose the first, without which he can reap no profit from the second. Let him ever bear in mind these words of Holy Scripture: "He that feareth God neglecteth nothing, and he that contemneth small things shall fall little by little." [Eccles. vii. 19, and Ecclus. xix. 1.]
 > 
 > The plague of gnats in Egypt was succeeded by that of flies. Beware, then, lest in despising the sting of gnats---that is, of small faults---you may fall a victim to flies---that is, to mortal sin. [Exod. viii.]
+

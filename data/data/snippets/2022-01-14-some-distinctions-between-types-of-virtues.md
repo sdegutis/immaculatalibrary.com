@@ -20,3 +20,4 @@ bookSlug: 'the-sinners-guide'
 > The exterior virtues are fasting, mortification, pious reading, vocal prayer, chanting of the Psalms, pilgrimages, hearing Mass, assisting at the offices of the Church, with all the outward ceremonies and practices of a Christian or religious life.
 > 
 > Though these virtues, like the others, have their seat in the soul, yet their action is always exterior, while the acts of the spiritual virtues, faith, hope, charity, humility, contemplation, contrition, or repentance, are often entirely within.
+

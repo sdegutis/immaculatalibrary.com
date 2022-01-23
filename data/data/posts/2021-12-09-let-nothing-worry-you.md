@@ -25,3 +25,4 @@ Since I can't find an original source of this quote anywhere on the internet, bu
 Although it's a kids movie, it is *very* inspiring, and seems extremely accurate (for an adaptation) from what I've researched. I highly recommend watching it today.
 
 Trust in the love and power of our Mother Mary, just as St. Juan Diego did! She will help us. Trust her.
+

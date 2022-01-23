@@ -30,3 +30,4 @@ bookSlug: 'the-spirit-of-st-francis-de-sales'
 > In a remarkable passage in Theotimus the Saint asks:
 > 
 >> Were there not heretics, who, to exalt charity towards the poor, deprecated charity towards God, ascribing man's whole salvation to almsdeeds, as St. Augustine witnesses?
+

@@ -18,3 +18,4 @@ bookSlug: 'the-sinners-guide'
 > Moreover, the exterior virtues, besides attracting more attention, excite more esteem than the practice of hope, charity, humility, fear of God or contempt for the world, though these interior virtues are more pleasing in the sight of God. "For man seeth those things that appear, but the Lord beholdeth the heart." [1 Kings. xvi. 7.]
 > 
 > Therefore, as love of praise is one of the strongest and most subtle passions, beware lest it cause you to seek the virtues which are most esteemed by men, to the neglect of the interior virtues, which are more acceptable to God.
+

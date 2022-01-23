@@ -26,3 +26,4 @@ bookSlug: 'the-spirit-of-st-francis-de-sales'
 >> I have proposed this example rather for your admiration than for your imitation, and that you may see of what means holy love makes use, in the hearts which are its own, in order to lead them to find rest in the very things which trouble those who are less devout.
 >>
 >> What I would say on the subject of servants is this; that, after all, they are our fellow-men and our humble brethren, whom charity obliges us to love as ourselves. Come, then, let us love them as ourselves, these dear yoke-fellows, who are so closely bound to us, who live under the same roof, and eat and drink of our substance. Let us treat them like ourselves, or as we should wish to be treated if we were in their place, and of their condition in life. That is the best way to deal with servants.
+

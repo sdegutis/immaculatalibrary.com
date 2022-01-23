@@ -96,3 +96,4 @@ and his Bride has made herself ready;
 > for the fine linen is the righteous deeds of the saints.
 >
 > And the angel said to me, "Write this: Blessed are those who are invited to the marriage supper of the Lamb." (Revelation 19:6, RSVCE)
+

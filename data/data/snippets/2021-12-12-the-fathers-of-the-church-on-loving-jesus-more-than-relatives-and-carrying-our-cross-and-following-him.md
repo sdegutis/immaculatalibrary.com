@@ -44,3 +44,4 @@ bookSlug: 'catena-aurea'
 > **Remig**. That is, he who in confession of My name in time of persecution despises this temporal world, its joys, and pleasures, shall find eternal salvation for his soul.
 > 
 > **Hilary**; Thus the gain of life brings death, the loss of life brings salvation; for by the sacrifice of this short life we gain the reward of immortality.
+

@@ -26,3 +26,4 @@ bookSlug: 'the-sinners-guide'
 > "Great," says Cicero, "is the power of conscience; nothing can more effectually condemn or acquit a man. It raises the innocent above all fear and keeps the guilty in perpetual alarm."
 > 
 > This is one of the eternal torments of the wicked, for it begins even in this life and will continue for ever in the life to come. It is the undying worm mentioned by Isaias. [lxvi. 24.]
+

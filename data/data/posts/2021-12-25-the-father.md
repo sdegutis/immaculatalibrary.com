@@ -65,3 +65,4 @@ And we must focus on St. Joseph, on his actions and omissions, so that we can le
 And we must focus on our earthly fathers, imitating their virtues and paying close attention to what they teach us about God.
 
 (All Bible quotes are RSVCE.)
+

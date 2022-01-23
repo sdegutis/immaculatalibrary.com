@@ -41,3 +41,4 @@ So, let's say you are imagining Jesus ascending to his Throne, to be seated at t
 These are just a few examples. Ask God, and he will help you to do this with each decade, every day.
 
 Do not worry about which kind of rosary you pick, or how you hold it, those details aren't important at all. And don't worry too much about your posture right now either; if you follow my advice, then this will come later.
+

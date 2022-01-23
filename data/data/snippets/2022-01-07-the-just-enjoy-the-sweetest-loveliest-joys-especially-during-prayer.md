@@ -22,3 +22,4 @@ bookSlug: 'the-sinners-guide'
 > "What have I, O Lord! in Heaven, and besides Thee what do I desire upon earth? For Thee my flesh and my heart hath fainted away; Thou art the God of my heart, and the God that is my portion for ever." [Ps. lxxii. 25, 26.]
 
 <sup>1</sup> <small>"Not that we would be unclothed, but that we would be further clothed" as St. Paul says. For the flesh is good, as God made all things good; but Original Sin has made it a source of anguish for us, since it so often tries to draw us away from God. We will feel such great relief when we are freed from that burden by the flesh becoming completely subordinate to the soul in the Resurrection of the Just.</small>
+

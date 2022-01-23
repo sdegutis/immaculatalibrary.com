@@ -24,3 +24,4 @@ bookSlug: 'the-spirit-of-st-francis-de-sales'
 > And in very truth he treated the members of his household, not as servants, but as his brothers and children. He was their elder brother or their father, rather than their---
 
 *Note from the site editor:* The chapter cuts off here at the end of this page. This was probably a mistake by the printer, since the next page does not skip a number. But the point is gotten across well enough. If you remind me, I may look for other copies of this book to find out how the chapter ends.
+

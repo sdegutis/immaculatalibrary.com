@@ -20,3 +20,4 @@ bookSlug: 'the-spirit-of-st-francis-de-sales'
 >> Yet, my brethren, believe me, and I assure you I lie not, if this man is not damned he has had the narrowest escape man ever had; and if he has been saved from eternal wreck, he owes to God *the handsomest votive candle that a person of his condition ever offered!*
 > 
 > As you may imagine, this *finale* did not draw many tears from the audience!
+

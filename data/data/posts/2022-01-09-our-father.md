@@ -53,3 +53,4 @@ Now, evil has its use in this life. For example, ever since sin entered the worl
 Because of this, being delivered from evil should be our last concern. God can bring good out of any bad thing, and the Cross is the Greatest Example of this. So if God can bring so much good out of *us crucifying the Son of God Himself*, surely he can bring good out of the things we have to endure that are far less.
 
 It's also the last prayer because it's going to happen last, at the end of time. On that day, we won't need any more prayers, because we will have *God With Us*, and *always*. He will wipe away every tear from our eyes. Pain and sorrow and death will be no more. Every evil will be cast into the lake of fire, and all the rest of us will rejoice with God forever, with *no more bad things ever happening again.* I'm pretty excited for that day.
+

@@ -20,3 +20,4 @@ bookSlug: 'the-sinners-guide'
 > This is the lesson which the Son of the Eternal Father taught when He said to St. Peter: "The chalice which My Father hath given Me, shall I not drink it?" [St. John xviii. 11.]
 > 
 > Were the chalice of suffering offered us by another hand we might with reason refuse it; but the knowledge that it is sent by the wisest and tenderest of fathers should suffice to make us accept it without hesitation.
+
