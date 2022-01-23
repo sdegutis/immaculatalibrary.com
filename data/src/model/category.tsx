@@ -1,7 +1,7 @@
 import categoriesDir from 'dir:/data/categories/';
-import Yaml from 'js-yaml';
 import { md, sortBy } from "../helpers";
 import { Routeable } from '../router';
+import { loadContentFile } from '../util/data-files';
 import { Container, Content, HeroImage } from '../view/page';
 import { Head, Html, SiteFooter, SiteHeader } from '../view/site';
 import { FsFile } from "/../src/filesys";
@@ -10,25 +10,20 @@ import { RouteInput, RouteOutput } from "/../src/http";
 class Category implements Routeable {
 
   static from(file: FsFile) {
-    const [, slug] = file.name.match(/^(.+?).md$/)!;
-
-    const fileContents = file.text.replace(/\r\n/g, '\n');
-    const [, frontmatter, markdownContent] = fileContents.match(/^---\n(.+?)\n---\n\n(.+?)$/s)!;
-
-    const meta = Yaml.load(frontmatter!) as {
+    const data = loadContentFile<{
       title: string,
       shortTitle: string,
       imageFilename: string,
       books: string[],
-    };
+    }>(file, 'slug');
 
     return new Category(
-      slug!,
-      markdownContent!,
-      meta.title,
-      meta.shortTitle,
-      meta.imageFilename,
-      meta.books,
+      data.slug,
+      data.markdownContent,
+      data.meta.title,
+      data.meta.shortTitle,
+      data.meta.imageFilename,
+      data.meta.books,
     );
   }
 

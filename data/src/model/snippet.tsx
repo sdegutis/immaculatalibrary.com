@@ -1,36 +1,30 @@
 import snippetsDir from 'dir:/data/snippets/';
-import Yaml from 'js-yaml';
 import { md, sortBy } from "../helpers";
 import { Routeable } from '../router';
+import { loadContentFile, saveContentFile } from '../util/data-files';
 import { Container, Content, HeroImage } from '../view/page';
 import { Head, Html, SiteFooter, SiteHeader } from '../view/site';
 import { FsFile } from "/../src/filesys";
 import { RouteInput, RouteOutput } from "/../src/http";
 
 class Snippet implements Routeable {
-
   static from(file: FsFile) {
-    const [, date, slug] = file.name.match(/^(\d{4}-\d{2}-\d{2})-(.+?).md$/)!;
-
-    const fileContents = file.text.replace(/\r\n/g, '\n');
-    const [, frontmatter, markdownContent] = fileContents.match(/^---\n(.+?)\n---\n\n(.+?)$/s)!;
-
-    const meta = Yaml.load(frontmatter!) as {
+    const data = loadContentFile<{
       published: boolean,
       title: string,
       archiveLink: string,
       bookSlug: string,
-    };
+    }>(file, 'date-slug');
 
     return new Snippet(
       file,
-      date!,
-      slug!,
-      markdownContent!,
-      meta.published,
-      meta.title,
-      meta.archiveLink,
-      meta.bookSlug,
+      data.date,
+      data.slug,
+      data.markdownContent,
+      data.meta.published,
+      data.meta.title,
+      data.meta.archiveLink,
+      data.meta.bookSlug,
     );
   }
 
@@ -64,15 +58,12 @@ class Snippet implements Routeable {
   }
 
   save() {
-    const header = Yaml.dump({
+    saveContentFile(this.file, {
       published: this.published,
       title: this.title,
       archiveLink: this.archiveLink,
       bookSlug: this.bookSlug,
-    }, {
-      forceQuotes: true,
-    });
-    this.file.replace(Buffer.from(`---\n${header}---\n\n${this.markdownContent}`));
+    }, this.markdownContent);
   }
 
   get route() {
