@@ -6,12 +6,12 @@ class FsNode {
   constructor(
     public realBase: string,
     public name: string,
-    public parent: Dir | null,
+    public parent: FsDir | null,
   ) { }
 
   get path() {
     const parts: string[] = [];
-    for (let node: FsNode | Dir | null = this; node; node = node.parent) {
+    for (let node: FsNode | FsDir | null = this; node; node = node.parent) {
       parts.unshift(node.name);
     }
     return path.posix.join('/', ...parts);
@@ -32,26 +32,26 @@ class FsNode {
     fs.renameSync(oldPath, newPath);
   }
 
-  isFile(): this is File { return this instanceof File };
-  isDir(): this is Dir { return this instanceof Dir };
+  isFile(): this is FsFile { return this instanceof FsFile };
+  isDir(): this is FsDir { return this instanceof FsDir };
 
 }
 
-function isFile(child: FsNode): child is File { return child.isFile(); };
-function isDir(child: FsNode): child is Dir { return child.isDir(); };
+function isFile(child: FsNode): child is FsFile { return child.isFile(); };
+function isDir(child: FsNode): child is FsDir { return child.isDir(); };
 
-export class Dir extends FsNode {
+export class FsDir extends FsNode {
 
-  children: (File | Dir)[] = [];
+  children: (FsFile | FsDir)[] = [];
 
-  get root(): Dir {
-    let ancestor: Dir = this;
+  get root(): FsDir {
+    let ancestor: FsDir = this;
     while (ancestor.parent) ancestor = ancestor.parent;
     return ancestor;
   }
 
-  get files(): File[] { return this.children.filter(isFile); }
-  get dirs(): Dir[] { return this.children.filter(isDir); }
+  get files(): FsFile[] { return this.children.filter(isFile); }
+  get dirs(): FsDir[] { return this.children.filter(isDir); }
 
   get childrenByName() { return Object.fromEntries(this.children.map(c => [c.name, c])); }
   get filesByName() { return Object.fromEntries(this.files.map(c => [c.name, c])); }
@@ -62,7 +62,7 @@ export class Dir extends FsNode {
       throw new Error("Cannot overwrite existing file.");
     }
 
-    const child = new File(this.realBase, name, this);
+    const child = new FsFile(this.realBase, name, this);
     child.buffer = buffer;
     fs.writeFileSync(child.realPath, buffer);
     this.children.push(child);
@@ -73,7 +73,7 @@ export class Dir extends FsNode {
       ? toPath
       : path.posix.join(this.path, toPath));
 
-    let dir: Dir = this.root;
+    let dir: FsDir = this.root;
     const parts = absolutePath.split(path.posix.sep).slice(1);
     let part: string | undefined;
 
@@ -100,9 +100,9 @@ export class Dir extends FsNode {
 
 }
 
-export class File extends FsNode {
+export class FsFile extends FsNode {
 
-  declare parent: Dir;
+  declare parent: FsDir;
   buffer!: Buffer;
 
   replace(newBuffer: Buffer) {
@@ -110,7 +110,7 @@ export class File extends FsNode {
     fs.writeFileSync(this.realPath, newBuffer);
   }
 
-  get root(): Dir {
+  get root(): FsDir {
     return this.parent.root;
   }
 
@@ -128,8 +128,8 @@ export class FileSys {
     return this.#loadDir('/', null);
   }
 
-  #loadDir(base: string, parent: Dir | null) {
-    const dir = new Dir(this.fsBase, path.posix.basename(base), parent);
+  #loadDir(base: string, parent: FsDir | null) {
+    const dir = new FsDir(this.fsBase, path.posix.basename(base), parent);
 
     const dirRealPath = path.posix.join(this.fsBase, base);
     const files = fs.readdirSync(dirRealPath);
@@ -144,7 +144,7 @@ export class FileSys {
         dir.children.push(child);
       }
       else if (stat.isFile()) {
-        const child = new File(this.fsBase, name, dir);
+        const child = new FsFile(this.fsBase, name, dir);
         child.buffer = fs.readFileSync(child.realPath);
         dir.children.push(child);
       }

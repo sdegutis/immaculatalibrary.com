@@ -3,13 +3,13 @@ import { md, sortBy } from "../helpers";
 import { Routeable } from '../router';
 import { Container, Content, HeroImage, SplitPage } from '../view/page';
 import { Head, Html, SiteFooter, SiteHeader } from '../view/site';
-import { File } from "/../src/filesys";
+import { FsFile } from "/../src/filesys";
 import { RouteInput, RouteOutput } from "/../src/http";
 import snippetsDir from '/data/snippets/';
 
 class Snippet implements Routeable {
 
-  static from(file: File) {
+  static from(file: FsFile) {
     const [, date, slug] = file.name.match(/^(\d{4}-\d{2}-\d{2})-(.+?).md$/)!;
 
     const fileContents = file.text.replace(/\r\n/g, '\n');
@@ -36,7 +36,7 @@ class Snippet implements Routeable {
 
   public previewMarkdown;
   constructor(
-    private file: File,
+    private file: FsFile,
     public date: string,
     public slug: string,
     public markdownContent: string,

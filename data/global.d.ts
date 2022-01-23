@@ -1,5 +1,5 @@
-const __file: import('../src/filesys').File;
-const __dir: import('../src/filesys').Dir;
+const __file: import('../src/filesys').FsFile;
+const __dir: import('../src/filesys').FsDir;
 
 module JSX {
   type IntrinsicElements = import('../src/jsx-stringify').IntrinsicElements;
@@ -7,11 +7,11 @@ module JSX {
 }
 
 module '*/' {
-  const dir: import('../src/filesys').Dir;
+  const dir: import('../src/filesys').FsDir;
   export default dir;
 }
 
 module '*' {
-  const file: import('../src/filesys').File;
+  const file: import('../src/filesys').FsFile;
   export default file;
 }

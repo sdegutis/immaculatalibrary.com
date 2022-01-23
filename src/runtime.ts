@@ -1,6 +1,6 @@
 import * as sucrase from 'sucrase';
 import vm from 'vm';
-import { Dir, File } from "./filesys";
+import { FsDir, FsFile } from "./filesys";
 
 type JsxCreateElement = (
   tag: string | Function | symbol,
@@ -11,12 +11,12 @@ type JsxCreateElement = (
 export class Runtime {
 
   context;
-  modules = new Map<File, Module>();
+  modules = new Map<FsFile, Module>();
   #timeouts: NodeJS.Timeout[] = [];
   #intervals: NodeJS.Timer[] = [];
 
   constructor(
-    public root: Dir,
+    public root: FsDir,
     public jsxCreateElement?: JsxCreateElement,
   ) {
     this.context = vm.createContext({
@@ -41,7 +41,7 @@ export class Runtime {
     this.#intervals.forEach(clearInterval);
   }
 
-  #createModules(dir: Dir) {
+  #createModules(dir: FsDir) {
     for (const subdir of dir.dirs) {
       this.#createModules(subdir);
     }
@@ -62,7 +62,7 @@ class Module {
   #runtime: Runtime;
 
   constructor(
-    private file: File,
+    private file: FsFile,
     runtime: Runtime,
   ) {
     this.#runtime = runtime;

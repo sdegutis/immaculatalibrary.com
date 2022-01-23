@@ -4,6 +4,7 @@ export interface Routeable {
   route: string;
   get: RouteHandler;
   post?: RouteHandler;
+  lastModifiedDate?: Date;
 }
 
 export const routes = new Map<string, RouteHandler>();
