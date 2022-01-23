@@ -4,6 +4,7 @@ import { RouteHandler, RouteInput, RouteOutput } from '../../src/http';
 import { allBooks } from './model/book';
 import { allCategories } from './model/category';
 import { allMovies } from './model/movie';
+import { allPages } from './model/page';
 import { allSnippets } from './model/snippet';
 import { addRouteable, routes } from './router';
 import { staticFiles } from './static';
@@ -18,6 +19,7 @@ staticFiles.forEach(addRouteable);
 allCategories.forEach(addRouteable);
 allBooks.forEach(addRouteable);
 allMovies.forEach(addRouteable);
+allPages.forEach(addRouteable);
 
 routes.set('GET /index.html', input => ({
   status: 302,
