@@ -3,7 +3,7 @@ import { allCategories } from "../model/category";
 import { allMovies, allMoviesPage } from "../model/movie";
 import { allPages } from "../model/page";
 import { allPosts, allPostsPage } from "../model/post";
-import { allSnippets, allSnippetsPage } from "../model/snippet";
+import { allSnippets, allSnippetsPage, bookSnippetSearch } from "../model/snippet";
 import { homePage } from "../pages/home";
 import { randomBookPage } from "../pages/random-book";
 import { bookSnippetRandom, randomSnippetPage } from "../pages/random-snippet";
@@ -20,12 +20,13 @@ export interface Routeable {
 
 const routes = new Map<string, RouteHandler>();
 
-const routeables: Routeable[] = [];
+const forSitemap: Routeable[] = [];
 
 function addRouteable(routeable: Routeable) {
-  routeables.push(routeable);
-
   if (routeable.get) {
+    if (!routeable.route.startsWith('/admin')) {
+      forSitemap.push(routeable);
+    }
     routes.set(`GET ${routeable.route}`, (input) => routeable.get!(input));
   }
 
@@ -42,6 +43,7 @@ export function loadRoutes() {
   addRouteable(bookSnippetRandom);
   addRouteable(randomBookPage);
   addRouteable(randomSnippetPage);
+  addRouteable(bookSnippetSearch);
   addRouteable(homePage);
 
   allSnippets.forEach(addRouteable);
@@ -57,7 +59,7 @@ export function loadRoutes() {
     headers: { 'Location': '/' },
   }));
 
-  addRouteable(makeSitemap(routeables));
+  addRouteable(makeSitemap(forSitemap));
 
   return routes;
 }

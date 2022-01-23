@@ -7,6 +7,7 @@ export function notFoundPage(input: RouteInput): RouteOutput {
   const title = 'Page not found';
   const image = '/img/404-big.jpg';
   return {
+    status: 404,
     body: <Html>
       <Head title={title} />
       <body>

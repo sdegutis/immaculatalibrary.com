@@ -7,6 +7,7 @@ export function errorPage(input: RouteInput): RouteOutput {
   const title = 'Something went wrong';
   const image = '/img/404-big.jpg';
   return {
+    status: 500,
     body: <Html>
       <Head title={title} />
       <body>

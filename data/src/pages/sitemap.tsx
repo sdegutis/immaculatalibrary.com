@@ -14,10 +14,6 @@ export function makeSitemap(routeables: Routeable[]): Routeable {
           }}
         >{'\n'}
           {[...routeables]
-            .filter((routeable) =>
-              routeable.get &&
-              !routeable.route.startsWith('/admin')
-            )
             .map((routeable) => <>
               <url>{'\n'}
                 <loc>https://www.immaculatalibrary.com{routeable.route}</loc>{'\n'}
