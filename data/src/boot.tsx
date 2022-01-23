@@ -1,9 +1,12 @@
+import mime from 'mime';
 import 'source-map-support/register';
 import { RouteHandler, RouteInput, RouteOutput } from '../../src/http';
 import { allSnippets } from './model/snippet';
 import { addRouteable, routes } from './router';
+import { staticFiles } from './static';
 
 allSnippets.forEach(addRouteable);
+staticFiles.forEach(addRouteable);
 
 routes.set('GET /index.html', input => ({
   status: 302,
@@ -45,13 +48,20 @@ const page404 = {
 export function routeHandler(input: RouteInput): RouteOutput {
   const key = `${input.method} ${input.url.pathname}`;
   const handler = routes.get(key);
-  if (handler) {
-    return handler(input);
-  }
-  return {
-    body: 'not found'
-  };
+  let output: RouteOutput;
+
+  output = handler ? handler(input) : notFoundPage(input);
+
+  output.headers ??= {};
+  output.headers['Strict-Transport-Security'] = 'max-age=15552000; includeSubDomains';
+  output.headers['Content-Type'] ??= mime.getType(input.url.pathname) ?? undefined;
+
+  return output;
 };
+
+function notFoundPage(input: RouteInput): RouteOutput {
+  return { body: 'Not found' };
+}
 
 function wrapAuth(handler: (input: RouteInput & { isAdmin: boolean }) => RouteOutput): RouteHandler {
   return input => {

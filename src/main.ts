@@ -56,6 +56,7 @@ const server = express();
 server.set('trust proxy', 1);
 server.set('query parser', (s: string) => new URLSearchParams(s ?? ''));
 server.use(express.raw({ type: '*/*', limit: '100mb' }));
+server.disable('x-powered-by');
 
 server.use((req, res, next) => {
   if (req.path.endsWith('/') && req.path !== '/') {
