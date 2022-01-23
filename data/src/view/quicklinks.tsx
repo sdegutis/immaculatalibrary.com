@@ -1,69 +1,73 @@
 import { allCategories } from "../model/category";
 import { allMovies } from "../model/movie";
+import { publishedPosts } from "../model/post";
+import { excerpt, format_date, md, reading_mins } from "../util/helpers";
 import { Component } from "./types";
 
-export const QuickLinks: Component<{}> = (attrs, children) => <>
+export const QuickLinks: Component<{}> = (attrs, children) => {
+  const recentPosts = publishedPosts.slice(0, 6);
 
-  <div id="recents">
-    <div class="container">
+  return <>
 
-      {/* <h2>Blog Posts</h2>
-              <p><a href="/posts.html">See all</a></p>
+    <div id="recents">
+      <div class="container">
 
-              <ul id="posts">
+        <h2>Blog Posts</h2>
+        <p><a href="/posts.html">See all</a></p>
 
-                {recentPosts.map(post => <>
-                  <li class="post-box">
-                    <a href={post.$route()}>
-                      <img class="image" src={post.imageFilename} />
-                    </a>
-                    <a class="title" href={post.$route()}>
-                      {post.title}
-                    </a>
-                    <span class="date">
-                      {format_date(post.date)} &bull;  {reading_mins(post.content)} min
-                    </span>
-                    <div class="excerpt">
-                      {markdown.render(excerpt(post.content))}
-                    </div>
-                  </li>
+        <ul id="posts">
 
-                </>)}
-              </ul> */}
+          {recentPosts.map(post => <>
+            <li class="post-box">
+              <a href={post.route}>
+                <img class="image" src={post.imageFilename} />
+              </a>
+              <a class="title" href={post.route}>
+                {post.title}
+              </a>
+              <span class="date">
+                {format_date(post.date)} &bull; {reading_mins(post.markdownContent)} min
+              </span>
+              <div class="excerpt">
+                {md.render(excerpt(post.markdownContent))}
+              </div>
+            </li>
 
-      <h2>Books</h2>
-      <ul class="quicklinks">
+          </>)}
+        </ul>
 
-        {allCategories.map(cat =>
-          <li>
+        <h2>Books</h2>
+        <ul class="quicklinks">
+
+          {allCategories.map(cat => <li>
             <a class="link" href={cat.route} style={`background-image: url(/img/${cat.slug}.jpg);`}>
               <span>{cat.shortTitle}</span>
             </a>
           </li>
-        )}
+          )}
 
-      </ul>
+        </ul>
 
-      <h2>Movies</h2>
-      <ul class="quicklinks">
+        <h2>Movies</h2>
+        <ul class="quicklinks">
 
-        {allMovies.map(movie =>
-          <li>
+          {allMovies.map(movie => <li>
             <a class="link" href={movie.route} style={`background-image: url(/img/movies/${movie.slug}-small.jpg);`}>
               <span>{movie.shortTitle}</span>
             </a>
           </li>
-        )}
+          )}
 
-        <li>
-          <a class="link" href="/audio-bible.html" style="background-image: url(/img/audiobible.png);">
-            <span>Audio Bible</span>
-          </a>
-        </li>
+          <li>
+            <a class="link" href="/audio-bible.html" style="background-image: url(/img/audiobible.png);">
+              <span>Audio Bible</span>
+            </a>
+          </li>
 
-      </ul>
+        </ul>
 
+      </div>
     </div>
-  </div>
 
-</>;
+  </>;
+};

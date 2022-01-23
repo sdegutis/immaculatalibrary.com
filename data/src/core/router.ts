@@ -2,6 +2,7 @@ import { allBooks } from "../model/book";
 import { allCategories } from "../model/category";
 import { allMovies, allMoviesPage } from "../model/movie";
 import { allPages } from "../model/page";
+import { allPosts, allPostsPage } from "../model/post";
 import { allSnippets } from "../model/snippet";
 import { homePage } from "../pages/home";
 import { makeSitemap } from "../pages/sitemap";
@@ -30,6 +31,7 @@ function addRouteable(routeable: Routeable) {
 
 export function loadRoutes() {
   addRouteable(allMoviesPage);
+  addRouteable(allPostsPage);
   addRouteable(homePage);
 
   allSnippets.forEach(addRouteable);
@@ -38,6 +40,7 @@ export function loadRoutes() {
   allBooks.forEach(addRouteable);
   allMovies.forEach(addRouteable);
   allPages.forEach(addRouteable);
+  allPosts.forEach(addRouteable);
 
   routes.set('GET /index.html', input => ({
     status: 302,
