@@ -238,7 +238,7 @@ export const allBooksPage: Routeable = {
             <main>
               <HeroImage image={image} />
               <Container>
-                <Content>
+                <div>
 
                   <h1>{title}</h1>
 
@@ -262,7 +262,7 @@ export const allBooksPage: Routeable = {
 
                   <script>{allBooksScript}</script>
 
-                </Content>
+                </div>
               </Container>
             </main>
             <QuickLinks />

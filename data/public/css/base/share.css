@@ -6,6 +6,7 @@ ul.share-buttons {
 
 ul.share-buttons li {
   display: inline;
+  margin-right: 0.2em;
 }
 
 ul.share-buttons .sr-only {

@@ -72,7 +72,7 @@ export class Post implements Routeable {
             <HeroImage image={this.imageFilename} />
             <Container>
               <Content>
-                <h1>{this.title}</h1>
+                <h1>{md.renderInline(this.title)}</h1>
 
                 <p class="date">
                   {format_date(this.date)} &bull; {reading_mins(this.markdownContent)} min

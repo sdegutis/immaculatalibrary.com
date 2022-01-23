@@ -1,3 +1,4 @@
+import * as luxon from 'luxon';
 import MarkdownIt from 'markdown-it';
 
 export const md = new MarkdownIt({
@@ -60,7 +61,7 @@ export function extract_page_number(archiveLink: string) {
 }
 
 export function format_date(date: string) {
-  return new Date(date).toLocaleDateString('en-EN', {
+  return luxon.DateTime.fromISO(date).toLocaleString({
     year: 'numeric',
     month: 'long',
     day: 'numeric',

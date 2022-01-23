@@ -1,5 +1,5 @@
 import snippetsDir from 'dir:/data/snippets/';
-import { LatestBookSnippets } from '../components/latest-snippets';
+import { LatestBookSnippets } from '../view/latest-snippets';
 import { Routeable } from '../core/router';
 import { loadContentFile, saveContentFile } from '../util/data-files';
 import { format_date, groupByDate, md, reading_mins, sortBy } from "../util/helpers";
@@ -135,7 +135,8 @@ export const allSnippetsPage: Routeable = {
             <main>
               <HeroImage image={image} />
               <Container>
-                <Content>
+
+                <div>
 
                   <h1>{title}</h1>
 
@@ -170,7 +171,8 @@ export const allSnippetsPage: Routeable = {
                     </>)}
                   </ul>
 
-                </Content>
+                </div>
+
               </Container>
             </main>
             <QuickLinks />

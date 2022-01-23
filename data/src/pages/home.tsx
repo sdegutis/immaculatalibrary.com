@@ -1,4 +1,4 @@
-import { LatestBookSnippets } from "../components/latest-snippets";
+import { LatestBookSnippets } from "../view/latest-snippets";
 import { Routeable } from "../core/router";
 import { QuickLinks } from "../view/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "../view/site";
