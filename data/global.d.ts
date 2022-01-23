@@ -6,12 +6,12 @@ module JSX {
   type Element = import('../src/jsx-stringify').Element;
 }
 
-module '*/' {
+module 'dir:*/' {
   const dir: import('../src/filesys').FsDir;
   export default dir;
 }
 
-module '*' {
+module 'file:*' {
   const file: import('../src/filesys').FsFile;
   export default file;
 }

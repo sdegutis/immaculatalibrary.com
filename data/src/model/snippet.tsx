@@ -1,3 +1,4 @@
+import snippetsDir from 'dir:/data/snippets/';
 import Yaml from 'js-yaml';
 import { md, sortBy } from "../helpers";
 import { Routeable } from '../router';
@@ -5,7 +6,6 @@ import { Container, Content, HeroImage, SplitPage } from '../view/page';
 import { Head, Html, SiteFooter, SiteHeader } from '../view/site';
 import { FsFile } from "/../src/filesys";
 import { RouteInput, RouteOutput } from "/../src/http";
-import snippetsDir from '/data/snippets/';
 
 class Snippet implements Routeable {
 

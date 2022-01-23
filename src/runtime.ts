@@ -73,7 +73,7 @@ class Module {
       const rawCode = this.file.buffer.toString('utf8');
 
       const args = {
-        require: (path: string) => this.#require(path),
+        require: (path: string) => this.#requireFromWithinModule(path),
         exports: this.exports,
         __dir: this.file.parent!,
         __file: this.file,
@@ -109,7 +109,8 @@ class Module {
     return this.exports;
   }
 
-  #require(toPath: string) {
+  #requireFromWithinModule(toPath: string) {
+    toPath = toPath.replace(/^(file|dir):/, '');
     if (!toPath.match(/^[./]/)) {
       return require(toPath);
     }
