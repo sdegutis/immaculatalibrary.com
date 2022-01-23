@@ -8,7 +8,7 @@ import { Head, Html, SiteFooter, SiteHeader } from '../view/site';
 import { FsFile } from "/../src/filesys";
 import { RouteInput, RouteOutput } from "/../src/http";
 
-class Snippet implements Routeable {
+export class Snippet implements Routeable {
   static from(file: FsFile) {
     const data = loadContentFile<{
       published: boolean,

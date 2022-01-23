@@ -1,14 +1,15 @@
 import categoriesDir from 'dir:/data/categories/';
-import { md, sortBy } from "../helpers";
+import { excerpt, md, rating, sortBy } from "../helpers";
 import { Routeable } from '../router';
 import { loadContentFile } from '../util/data-files';
 import { Container, Content, HeroImage } from '../view/page';
 import { QuickLinks } from '../view/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../view/site';
+import { Book } from './book';
 import { FsFile } from "/../src/filesys";
 import { RouteInput, RouteOutput } from "/../src/http";
 
-class Category implements Routeable {
+export class Category implements Routeable {
 
   static from(file: FsFile) {
     const data = loadContentFile<{
@@ -27,6 +28,8 @@ class Category implements Routeable {
       data.meta.books,
     );
   }
+
+  books: Book[] = [];
 
   constructor(
     public slug: string,
@@ -52,11 +55,32 @@ class Category implements Routeable {
           <SiteHeader />
           <main>
             <HeroImage image={this.imageFilename} />
-            <Container>
+            <Container sectionId='category'>
+
               <Content>
+
                 <h1>{this.title}</h1>
                 {md.render(this.markdownContent)}
+
+                <h2>Books</h2>
+                <ul>
+                  {this.books.map(book => {
+                    return <li>
+                      <div class="title">
+                        <a href={book.route}>{book.title}</a>
+                        {book.subtitle && <>: {book.subtitle}</>}
+                        {' '}
+                        {rating(book.rating)}
+                      </div>
+
+                      <div class="author">{book.author}</div>
+                      <div class="blurb content">{md.render(excerpt(book.markdownContent))}</div>
+                    </li>;
+                  })}
+                </ul>
+
               </Content>
+
             </Container>
           </main>
           <QuickLinks />
@@ -96,4 +120,4 @@ const categoryOrder = [
 
 export const allCategories = (categoriesDir
   .files.map(file => Category.from(file))
-  .sort(sortBy(c => categoryOrder.indexOf(c.slug).toString())));
+  .sort(sortBy(c => categoryOrder.indexOf(c.slug))));
