@@ -1,7 +1,7 @@
 import categoriesDir from 'dir:/data/categories/';
-import { excerpt, md, rating, sortBy } from "../util/helpers";
 import { Routeable } from '../core/router';
 import { loadContentFile } from '../util/data-files';
+import { excerpt, md, rating, sortBy } from "../util/helpers";
 import { Container, Content, HeroImage } from '../view/page';
 import { QuickLinks } from '../view/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../view/site';
@@ -25,7 +25,7 @@ export class Category implements Routeable {
       data.meta.title,
       data.meta.shortTitle,
       data.meta.imageFilename,
-      data.meta.books,
+      new Set(data.meta.books),
     );
   }
 
@@ -37,7 +37,7 @@ export class Category implements Routeable {
     public title: string,
     public shortTitle: string,
     public imageFilename: string,
-    public bookSlugs: string[],
+    public bookSlugs: Set<string>,
   ) { }
 
   get route() {

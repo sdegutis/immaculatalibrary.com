@@ -9,8 +9,12 @@ import { notFoundPage } from './pages/404';
 import { errorPage } from './pages/500';
 
 for (const book of allBooks) {
-  book.category = allCategories.find(cat => cat.bookSlugs.includes(book.slug))!;
-  book.category.books.push(book);
+  for (const cat of allCategories) {
+    if (cat.bookSlugs.has(book.slug)) {
+      book.category = cat;
+      cat.books.push(book);
+    }
+  }
 }
 
 for (const snippet of publishedSnippets) {
