@@ -7,6 +7,11 @@ export const md = new MarkdownIt({
   breaks: true,
 });
 
+export function randomElement<T>(array: T[]): T {
+  const i = Math.floor(Math.random() * array.length);
+  return array[i]!;
+}
+
 const repeat = (n: number) => Array.from(Array(n));
 export const rating = (n: number) => n ? <>
   <span class="rating-label">

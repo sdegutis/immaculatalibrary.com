@@ -25,10 +25,6 @@ const bookSnippetRandom = {
       }
     };
   },
-  randomElement: (array) => {
-    const i = Math.floor(Math.random() * array.length);
-    return array[i];
-  },
 };
 
 const bookSnippetSearch = {
