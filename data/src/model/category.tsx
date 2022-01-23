@@ -1,138 +1,103 @@
-// import snippetsDir from 'dir:/data/snippets/';
-// import Yaml from 'js-yaml';
-// import { md, sortBy } from "../helpers";
-// import { Routeable } from '../router';
-// import { Container, Content, HeroImage, SplitPage } from '../view/page';
-// import { Head, Html, SiteFooter, SiteHeader } from '../view/site';
-// import { FsFile } from "/../src/filesys";
-// import { RouteInput, RouteOutput } from "/../src/http";
+import categoriesDir from 'dir:/data/categories/';
+import Yaml from 'js-yaml';
+import { md, sortBy } from "../helpers";
+import { Routeable } from '../router';
+import { Container, Content, HeroImage } from '../view/page';
+import { Head, Html, SiteFooter, SiteHeader } from '../view/site';
+import { FsFile } from "/../src/filesys";
+import { RouteInput, RouteOutput } from "/../src/http";
 
-// class Category implements Routeable {
+class Category implements Routeable {
 
-//   static from(file: FsFile) {
-//     const [, date, slug] = file.name.match(/^(\d{4}-\d{2}-\d{2})-(.+?).md$/)!;
+  static from(file: FsFile) {
+    const [, slug] = file.name.match(/^(.+?).md$/)!;
 
-//     const fileContents = file.text.replace(/\r\n/g, '\n');
-//     const [, frontmatter, markdownContent] = fileContents.match(/^---\n(.+?)\n---\n\n(.+?)$/s)!;
+    const fileContents = file.text.replace(/\r\n/g, '\n');
+    const [, frontmatter, markdownContent] = fileContents.match(/^---\n(.+?)\n---\n\n(.+?)$/s)!;
 
-//     const meta = Yaml.load(frontmatter!) as {
-//       published: boolean,
-//       title: string,
-//       archiveLink: string,
-//       bookSlug: string,
-//     };
+    const meta = Yaml.load(frontmatter!) as {
+      title: string,
+      shortTitle: string,
+      imageFilename: string,
+      books: string[],
+    };
 
-//     return new Category(
-//       file,
-//       date!,
-//       slug!,
-//       markdownContent!,
-//       meta.published,
-//       meta.title,
-//       meta.archiveLink,
-//       meta.bookSlug,
-//     );
-//   }
+    return new Category(
+      slug!,
+      markdownContent!,
+      meta.title,
+      meta.shortTitle,
+      meta.imageFilename,
+      meta.books,
+    );
+  }
 
-//   public previewMarkdown;
-//   constructor(
-//     private file: FsFile,
-//     public date: string,
-//     public slug: string,
-//     public markdownContent: string,
-//     public published: boolean,
-//     public title: string,
-//     public archiveLink: string,
-//     public bookSlug: string,
-//   ) {
-//     this.previewMarkdown = this.derivePreview(2000);
-//   }
+  constructor(
+    public slug: string,
+    public markdownContent: string,
+    public title: string,
+    public shortTitle: string,
+    public imageFilename: string,
+    public bookSlugs: string[],
+  ) { }
 
-//   private derivePreview(count: number) {
-//     const paragraphs = this.markdownContent.trim().split(/(\r?\n>+ *\r?\n)/);
+  get route() {
+    return `/${this.slug}.html`;
+  }
 
-//     let running = 0;
-//     for (let i = 0; i < paragraphs.length; i++) {
-//       running += paragraphs[i]!.length;
-//       if (running > count) break;
-//     }
+  get(input: RouteInput): RouteOutput {
+    return {
+      body: <Html>
+        <Head title={this.title}>
+          <link rel="stylesheet" href="/css/layout/category.css" />
+          <link rel="stylesheet" href="/css/base/rating-label.css" />
+        </Head>
+        <body>
+          <SiteHeader />
+          <main>
+            <HeroImage image={this.imageFilename} />
+            <Container>
+              <Content>
+                <h1>{this.title}</h1>
+                {md.render(this.markdownContent)}
+              </Content>
+            </Container>
+          </main>
+          {/* <QuickLinks /> */}
+          <SiteFooter />
+        </body>
+      </Html>
+    }
+  }
 
-//     if (running < this.markdownContent.length - 1) {
-//       return this.markdownContent.substring(0, running);
-//     }
-//     return null;
-//   }
+}
 
-//   save() {
-//     const header = Yaml.dump({
-//       published: this.published,
-//       title: this.title,
-//       archiveLink: this.archiveLink,
-//       bookSlug: this.bookSlug,
-//     }, {
-//       forceQuotes: true,
-//     });
-//     this.file.replace(Buffer.from(`---\n${header}---\n\n${this.markdownContent}`));
-//   }
+const categoryOrder = [
+  'classics',
+  'devotion',
+  'instruction',
+  'reference',
+  'saints',
+  'mary',
+  'joseph',
+  'apologetics',
+  'blessed-sacrament',
+  'sacred-heart',
+  'holy-spirit',
+  'lourdes',
+  'st-francis-de-sales',
+  'st-alphonsus-de-liguori',
+  'st-catherine-of-siena',
+  'st-teresa-of-avila',
+  'st-john-of-the-cross',
+  'st-john-henry-newman',
+  'st-thomas-more',
+  'st-thomas-aquinas',
+  'st-louis-de-montfort',
+  'jesuits',
+  'fr-lasance',
+];
 
-//   get route() {
-//     return `/book-snippets/${this.date}-${this.slug}.html`;
-//   }
-
-//   image = '';
-
-//   get(input: RouteInput): RouteOutput {
-//     return {
-//       body: <Html>
-//         <Head title={this.title} />
-//         <body>
-//           <SiteHeader />
-//           <main>
-//             <HeroImage image={this.image} />
-//             <Container>
-//               <SplitPage>
-//                 <Content>
-//                   <h1>{this.title}</h1>
-//                   {md.render(this.markdownContent)}
-//                 </Content>
-//               </SplitPage>
-//             </Container>
-//           </main>
-//           {/* <QuickLinks /> */}
-//           <SiteFooter />
-//         </body>
-//       </Html>
-//     }
-//   }
-
-// }
-
-// const categoryOrder = [
-//   'classics',
-//   'devotion',
-//   'instruction',
-//   'reference',
-//   'saints',
-//   'mary',
-//   'joseph',
-//   'apologetics',
-//   'blessed-sacrament',
-//   'sacred-heart',
-//   'holy-spirit',
-//   'lourdes',
-//   'st-francis-de-sales',
-//   'st-alphonsus-de-liguori',
-//   'st-catherine-of-siena',
-//   'st-teresa-of-avila',
-//   'st-john-of-the-cross',
-//   'st-john-henry-newman',
-//   'st-thomas-more',
-//   'st-thomas-aquinas',
-//   'st-louis-de-montfort',
-//   'jesuits',
-//   'fr-lasance',
-// ];
-
-// export const allCategories = (snippetsDir
-//   .files.map(file => Category.from(file))
-//   .sort(sortBy(c => categoryOrder.indexOf(c).toString())));
+export const allCategories = (categoriesDir
+  .files.map(file => Category.from(file))
+  .sort(sortBy(c => categoryOrder.indexOf(c.slug).toString())));

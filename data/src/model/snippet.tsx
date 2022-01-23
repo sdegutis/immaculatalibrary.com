@@ -2,7 +2,7 @@ import snippetsDir from 'dir:/data/snippets/';
 import Yaml from 'js-yaml';
 import { md, sortBy } from "../helpers";
 import { Routeable } from '../router';
-import { Container, Content, HeroImage, SplitPage } from '../view/page';
+import { Container, Content, HeroImage } from '../view/page';
 import { Head, Html, SiteFooter, SiteHeader } from '../view/site';
 import { FsFile } from "/../src/filesys";
 import { RouteInput, RouteOutput } from "/../src/http";
@@ -90,12 +90,10 @@ class Snippet implements Routeable {
           <main>
             <HeroImage image={this.image} />
             <Container>
-              <SplitPage>
-                <Content>
-                  <h1>{this.title}</h1>
-                  {md.render(this.markdownContent)}
-                </Content>
-              </SplitPage>
+              <Content>
+                <h1>{this.title}</h1>
+                {md.render(this.markdownContent)}
+              </Content>
             </Container>
           </main>
           {/* <QuickLinks /> */}

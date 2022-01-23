@@ -1,12 +1,14 @@
 import mime from 'mime';
 import 'source-map-support/register';
 import { RouteHandler, RouteInput, RouteOutput } from '../../src/http';
+import { allCategories } from './model/category';
 import { allSnippets } from './model/snippet';
 import { addRouteable, routes } from './router';
 import { staticFiles } from './static';
 
 allSnippets.forEach(addRouteable);
 staticFiles.forEach(addRouteable);
+allCategories.forEach(addRouteable);
 
 routes.set('GET /index.html', input => ({
   status: 302,
