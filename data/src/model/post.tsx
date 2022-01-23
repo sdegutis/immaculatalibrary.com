@@ -1,7 +1,7 @@
 import postsdir from 'dir:/data/posts/';
 import { Routeable } from '../core/router';
 import { loadContentFile } from '../util/data-files';
-import { excerpt, format_date, md, reading_mins, shareLinks, sortBy } from "../util/helpers";
+import { excerpt, format_date, md, reading_mins, sortBy } from "../util/helpers";
 import { Container, Content, HeroImage } from '../view/page';
 import { QuickLinks } from '../view/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../view/site';

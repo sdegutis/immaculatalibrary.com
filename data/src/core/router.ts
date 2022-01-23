@@ -1,4 +1,4 @@
-import { allBooks } from "../model/book";
+import { allBooks, allBooksPage } from "../model/book";
 import { allCategories } from "../model/category";
 import { allMovies, allMoviesPage } from "../model/movie";
 import { allPages } from "../model/page";
@@ -32,6 +32,7 @@ function addRouteable(routeable: Routeable) {
 export function loadRoutes() {
   addRouteable(allMoviesPage);
   addRouteable(allPostsPage);
+  addRouteable(allBooksPage);
   addRouteable(homePage);
 
   allSnippets.forEach(addRouteable);

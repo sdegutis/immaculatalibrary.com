@@ -1,11 +1,10 @@
 import snippetsDir from 'dir:/data/snippets/';
 import { Routeable } from '../core/router';
 import { loadContentFile, saveContentFile } from '../util/data-files';
-import { format_date, md, reading_mins, sortBy } from "../util/helpers";
+import { md, sortBy } from "../util/helpers";
 import { Container, Content, HeroImage } from '../view/page';
 import { QuickLinks } from '../view/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../view/site';
-import { Component } from '../view/types';
 import { Book } from './book';
 import { FsFile } from "/../src/filesys";
 import { RouteInput, RouteOutput } from "/../src/http";
