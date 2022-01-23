@@ -8,6 +8,7 @@ import { allPages } from './model/page';
 import { allSnippets } from './model/snippet';
 import { homePage } from './pages/home';
 import { addRouteable, routes } from './router';
+import { makeSitemap } from './pages/sitemap';
 import { staticFiles } from './static';
 
 for (const book of allBooks) {
@@ -34,6 +35,8 @@ routes.set('GET /index.html', input => ({
   status: 302,
   headers: { 'Location': '/' },
 }));
+
+addRouteable(makeSitemap());
 
 // routes.set('GET /', wrapAuth(input => {
 //   return {
