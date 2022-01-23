@@ -6,15 +6,22 @@ import { allCategories } from './model/category';
 import { allMovies, allMoviesPage } from './model/movie';
 import { allPages } from './model/page';
 import { allSnippets } from './model/snippet';
+import { homePage } from './pages/home';
 import { addRouteable, routes } from './router';
 import { staticFiles } from './static';
 
 for (const book of allBooks) {
-  book.category = allCategories.find(c => c.bookSlugs.includes(book.slug))!;
+  book.category = allCategories.find(cat => cat.bookSlugs.includes(book.slug))!;
   book.category.books.push(book);
 }
 
+for (const snippet of allSnippets) {
+  snippet.book = allBooks.find(book => book.slug.includes(snippet.bookSlug))!;
+  snippet.book.snippets.push(snippet);
+}
+
 addRouteable(allMoviesPage);
+addRouteable(homePage);
 
 allSnippets.forEach(addRouteable);
 staticFiles.forEach(addRouteable);
@@ -28,23 +35,23 @@ routes.set('GET /index.html', input => ({
   headers: { 'Location': '/' },
 }));
 
-routes.set('GET /', wrapAuth(input => {
-  return {
-    headers: {
-      'Content-Type': 'text/html'
-    },
-    body: <ul>
-      {[...routes.entries()]
-        .filter(([path, handler]) => path.startsWith('GET '))
-        .map(([path, handler]) => {
-          path = path.replace(/^GET /, '');
-          return <li>
-            <a href={path}>{path}</a>
-          </li>;
-        })}
-    </ul>
-  };
-}));
+// routes.set('GET /', wrapAuth(input => {
+//   return {
+//     headers: {
+//       'Content-Type': 'text/html'
+//     },
+//     body: <ul>
+//       {[...routes.entries()]
+//         .filter(([path, handler]) => path.startsWith('GET '))
+//         .map(([path, handler]) => {
+//           path = path.replace(/^GET /, '');
+//           return <li>
+//             <a href={path}>{path}</a>
+//           </li>;
+//         })}
+//     </ul>
+//   };
+// }));
 
 const page500 = {
   path: '/500.html',

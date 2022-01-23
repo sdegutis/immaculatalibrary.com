@@ -44,8 +44,6 @@ const randomBookSnippet = {
 }
 
 const home = {
-  '$id': 'be038978-1342-4304-b106-58ac107f158d',
-  '$type': 'e805328c-26bc-4ee7-9a3e-a70e4ef8367e',
   content: {
     '$eval': '() => {\r\n' +
       "  const { LatestBookSnippets } = $site.named('snippets');\r\n" +
@@ -108,7 +106,6 @@ const home = {
   description: 'Free Catholic Digital Resources',
   image: '/img/header.jpg',
   head: '<link rel="stylesheet" href="/css/layout/home.css"/>\r\n',
-  '$name': 'Home'
 };
 
 

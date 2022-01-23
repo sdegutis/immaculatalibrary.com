@@ -1,11 +1,12 @@
 import booksDir from 'dir:/data/books/';
-import { md, sortBy } from "../util/helpers";
 import { Routeable } from '../router';
 import { loadContentFile } from '../util/data-files';
+import { md, sortBy } from "../util/helpers";
 import { Container, Content, HeroImage } from '../view/page';
 import { QuickLinks } from '../view/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../view/site';
 import { Category } from './category';
+import { Snippet } from './snippet';
 import { FsFile } from "/../src/filesys";
 import { RouteInput, RouteOutput } from "/../src/http";
 
@@ -68,6 +69,7 @@ export class Book implements Routeable {
   ) { }
 
   category!: Category;
+  snippets: Snippet[] = [];
 
   get route() {
     return `/books/${this.slug}.html`;
