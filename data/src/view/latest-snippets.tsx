@@ -36,7 +36,7 @@ export const LatestBookSnippets: Component<{}> = (attrs, children) => {
     <ul class="snippets-latest">
       {groups.map(([date, group]) => <>
         <li>
-          <h4>{format_date(date)}</h4>
+          <h4>{date}</h4>
           <ul>
             {group.map(snippet => <>
               <li>

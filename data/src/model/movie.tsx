@@ -1,7 +1,7 @@
 import moviesDir from 'dir:/data/movies/';
 import { Routeable } from '../core/router';
 import { loadContentFile } from '../util/data-files';
-import { md, shareLinks, sortBy } from "../util/helpers";
+import { md, ShareLinks, sortBy } from "../util/helpers";
 import { Container, Content, HeroImage } from '../view/page';
 import { QuickLinks } from '../view/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../view/site';
@@ -58,7 +58,7 @@ export class Movie implements Routeable {
               <Content>
                 <h1>{this.displayTitle}</h1>
                 {md.render(this.markdownContent)}
-                {shareLinks}
+                <ShareLinks />
               </Content>
               <MoviesSidebar />
             </Container>

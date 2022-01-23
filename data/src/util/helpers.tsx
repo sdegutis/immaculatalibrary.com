@@ -1,5 +1,6 @@
 import * as luxon from 'luxon';
 import MarkdownIt from 'markdown-it';
+import { Component } from '../view/types';
 
 export const md = new MarkdownIt({
   html: true,
@@ -39,7 +40,7 @@ export const rating = (n: number) => n ? <>
   </span>
 </> : '';
 
-export const shareLinks = <>
+export const ShareLinks: Component<{}> = () => <>
   <ul class="share-buttons" data-source="simplesharingbuttons.com">
     <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fimmaculatalibrary.com%2F&quote=" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&quote=' + encodeURIComponent(document.URL)); return false;"><img alt="Share on Facebook" src="/img/share/Facebook.svg" /></a></li>
     <li><a href="https://twitter.com/intent/tweet?source=https%3A%2F%2Fimmaculatalibrary.com%2F&text=:%20https%3A%2F%2Fimmaculatalibrary.com%2F" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img alt="Tweet" src="/img/share/Twitter.svg" /></a></li>

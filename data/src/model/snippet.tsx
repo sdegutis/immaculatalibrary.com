@@ -1,8 +1,8 @@
 import snippetsDir from 'dir:/data/snippets/';
-import { LatestBookSnippets } from '../view/latest-snippets';
 import { Routeable } from '../core/router';
 import { loadContentFile, saveContentFile } from '../util/data-files';
-import { format_date, groupByDate, md, reading_mins, sortBy } from "../util/helpers";
+import { extract_page_number, format_date, groupByDate, md, reading_mins, ShareLinks, sortBy } from "../util/helpers";
+import { LatestBookSnippets } from '../view/latest-snippets';
 import { Container, Content, HeroImage } from '../view/page';
 import { QuickLinks } from '../view/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../view/site';
@@ -82,7 +82,9 @@ export class Snippet implements Routeable {
   get(input: RouteInput): RouteOutput {
     return {
       body: <Html>
-        <Head title={this.title} />
+        <Head title={this.title}>
+          <link rel="stylesheet" href="/css/layout/book-snippet.css" />
+        </Head>
         <body>
           <SiteHeader />
           <main>
@@ -90,7 +92,13 @@ export class Snippet implements Routeable {
             <Container>
               <Content>
                 <h1>{this.title}</h1>
+
+                <p>{format_date(this.date)} &bull; {reading_mins(this.markdownContent)} min</p>
+                <p>From <a href={this.book.route}>{this.book.title}</a>, page <a href={this.archiveLink}>{extract_page_number(this.archiveLink)}</a></p>
+
                 {md.render(this.markdownContent)}
+
+                <ShareLinks />
               </Content>
               <div>
                 <LatestBookSnippets />
@@ -108,11 +116,10 @@ export class Snippet implements Routeable {
 
 export const allSnippets = (snippetsDir
   .files.map(file => Snippet.from(file))
-  .sort(sortBy(s => s.date)));
+  .sort(sortBy(s => s.route)));
 
 export const publishedSnippets = (allSnippets
   .filter(s => s.published)
-  .sort(sortBy(s => s.date))
   .reverse());
 
 export const allSnippetsPage: Routeable = {
@@ -156,7 +163,7 @@ export const allSnippetsPage: Routeable = {
                   <ul id="snippets-all">
                     {groups.map(([date, group]) => <>
                       <li>
-                        <h4>{format_date(date)}</h4>
+                        <h4>{date}</h4>
                         <ul>
                           {group.map(snippet => <>
                             <li class="snippet">

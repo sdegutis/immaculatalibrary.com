@@ -1,7 +1,7 @@
 import booksDir from 'dir:/data/books/';
 import { Routeable } from '../core/router';
 import { loadContentFile } from '../util/data-files';
-import { excerpt, md, rating, shareLinks, sortBy, striptags } from "../util/helpers";
+import { excerpt, md, rating, ShareLinks, sortBy, striptags } from "../util/helpers";
 import { Container, Content, HeroImage } from '../view/page';
 import { QuickLinks } from '../view/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../view/site';
@@ -161,7 +161,7 @@ export class Book implements Routeable {
                   </details>
                 </p>
 
-                {shareLinks}
+                <ShareLinks />
               </Content>
 
               <div>

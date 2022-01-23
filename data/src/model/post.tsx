@@ -1,7 +1,7 @@
 import postsdir from 'dir:/data/posts/';
 import { Routeable } from '../core/router';
 import { loadContentFile } from '../util/data-files';
-import { excerpt, format_date, md, reading_mins, sortBy } from "../util/helpers";
+import { excerpt, format_date, md, reading_mins, ShareLinks, sortBy } from "../util/helpers";
 import { Container, Content, HeroImage } from '../view/page';
 import { QuickLinks } from '../view/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../view/site';
@@ -79,6 +79,8 @@ export class Post implements Routeable {
                 </p>
 
                 {md.render(this.markdownContent)}
+
+                <ShareLinks />
               </Content>
             </Container>
           </main>
@@ -93,11 +95,10 @@ export class Post implements Routeable {
 
 export const allPosts = (postsdir
   .files.map(file => Post.from(file))
-  .sort(sortBy(s => s.date)));
+  .sort(sortBy(s => s.route)));
 
 export const publishedPosts = (allPosts
   .filter(s => !s.draft)
-  .sort(sortBy(s => s.date))
   .reverse());
 
 export const allPostsPage: Routeable = {

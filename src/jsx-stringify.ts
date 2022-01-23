@@ -23,12 +23,16 @@ export function jsxCreateStringifiedElement(tag: string | Function | symbol, att
   }
 
   const childrenString = (children
+    .flat()
     .filter(c =>
       c !== null &&
       c !== undefined &&
       c !== false)
-    .flat()
     .join(''));
+
+  if (children.flat().includes(false)) {
+    debugger
+  }
 
   if (typeof tag === 'symbol') {
     if (tag.description === 'fragment') {
