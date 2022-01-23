@@ -1,10 +1,11 @@
 import Yaml from 'js-yaml';
-import { md, sortBy } from "./helpers";
+import { md, sortBy } from "../helpers";
+import { Routeable } from '../router';
 import { File } from "/../src/filesys";
-import { RouteHandler } from "/../src/http";
+import { RouteInput, RouteOutput } from "/../src/http";
 import snippetsDir from '/data/snippets/';
 
-class Snippet {
+class Snippet implements Routeable {
 
   static from(file: File) {
     const [, date, slug] = file.name.match(/^(\d{4}-\d{2}-\d{2})-(.+?).md$/)!;
@@ -72,25 +73,24 @@ class Snippet {
     this.file.replace(Buffer.from(`---\n${header}---\n\n${this.markdownContent}`));
   }
 
-  addRoutes(routes: Map<string, RouteHandler>) {
-    const path = `GET /book-snippets/${this.date}-${this.slug}.html`;
-    routes.set(path, input => {
-      return {
-        body: <>
+  get route() {
+    return `/book-snippets/${this.date}-${this.slug}.html`;
+  }
 
-          {'<!DOCTYPE html>'}
-          <html lang="en">
-            <head>
-              <meta charset="UTF-8" />
-            </head>
-            <body>
-              {md.render(this.markdownContent)}
-            </body>
-          </html>
-
-        </>
-      }
-    });
+  get(input: RouteInput): RouteOutput {
+    return {
+      body: <>
+        {'<!DOCTYPE html>'}
+        <html lang="en">
+          <head>
+            <meta charset="UTF-8" />
+          </head>
+          <body>
+            {md.render(this.markdownContent)}
+          </body>
+        </html>
+      </>
+    }
   }
 
 }
@@ -98,3 +98,7 @@ class Snippet {
 export const allSnippets = (snippetsDir
   .files.map(file => Snippet.from(file))
   .sort(sortBy(s => s.date)));
+
+export function publishedSnippets() {
+  return allSnippets.filter(s => s.published);
+}

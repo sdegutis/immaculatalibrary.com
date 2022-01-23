@@ -53,11 +53,9 @@ const movieOrder = [
 ];
 
 
-export const Template = ({ isAdmin, title, image, description, head, content, pageContent, pageSidebar }) => {
+export const SiteTemplate = ({ isAdmin, title, image, description, head, content, pageContent, pageSidebar }) => {
 
   const { reading_mins, format_date, excerpt } = $site.named('helpers');
-
-  const recentPosts = $site.named('posts').publishedPosts.slice(0, 6);
 
   return <>
     {'<!DOCTYPE html>'}
@@ -149,7 +147,7 @@ export const Template = ({ isAdmin, title, image, description, head, content, pa
           <div id="recents">
             <div class="container">
 
-              <h2>Letters</h2>
+              {/* <h2>Blog Posts</h2>
               <p><a href="/posts.html">See all</a></p>
 
               <ul id="posts">
@@ -171,7 +169,7 @@ export const Template = ({ isAdmin, title, image, description, head, content, pa
                   </li>
 
                 </>)}
-              </ul>
+              </ul> */}
 
               <h2>Books</h2>
               <ul class="quicklinks">

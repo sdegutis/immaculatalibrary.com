@@ -20,82 +20,80 @@ const adminPanel = {
       '  </>;\r\n' +
       '}'
   },
-  Template: {
-    '$eval': '(attrs, children) => {\r\n' +
-      '  return <>\r\n' +
-      '\r\n' +
-      "    {'<!DOCTYPE html>'}\r\n" +
-      '    <html lang="en">\r\n' +
-      '\r\n' +
-      '      <head>\r\n' +
-      '        <meta charset="UTF-8" />\r\n' +
-      '        <meta name="viewport" content="width=device-width, initial-scale=1.0" />\r\n' +
-      '        <title>Admin - Immaculata Library</title>\r\n' +
-      '        <script src="/js/dark-mode.js"></script>\r\n' +
-      '        <link rel="stylesheet" href="/css/base/base.css" />\r\n' +
-      '        <link rel="stylesheet" href="/css/base/fonts.css" />\r\n' +
-      '        <link rel="stylesheet" href="/css/base/typography.css" />\r\n' +
-      '        <link rel="stylesheet" href="/css/base/layout.css" />\r\n' +
-      '        <link rel="stylesheet" href="/css/layout/admin.css" />\r\n' +
-      '      </head>\r\n' +
-      '\r\n' +
-      '      <body>\r\n' +
-      '\r\n' +
-      '        <header id="admin-header">\r\n' +
-      '          <nav>\r\n' +
-      '            <ul>\r\n' +
-      '              <li><a href="/">Site</a></li>\r\n' +
-      '              <li><a href="/admin-panel">Admin</a></li>\r\n' +
-      '              <li><a href="/admin-panel/logout">Logout</a></li>\r\n' +
-      '              <li><a href="#" id="dark-mode-toggle" data-lightmode="Light mode" data-darkmode="Dark mode"></a></li>\r\n' +
-      '            </ul>\r\n' +
-      '          </nav>\r\n' +
-      '        </header>\r\n' +
-      '\r\n' +
-      '        <main>\r\n' +
-      '          {children}\r\n' +
-      '        </main>\r\n' +
-      '\r\n' +
-      '      </body>\r\n' +
-      '    </html>\r\n' +
-      '\r\n' +
-      '  </>;\r\n' +
-      '}\r\n'
+  Template: (attrs, children) => {
+    return <>
+
+      {'<!DOCTYPE html>'}
+      <html lang="en">
+
+        <head>
+          <meta charset="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>Admin - Immaculata Library</title>
+          <script src="/js/dark-mode.js"></script>
+          <link rel="stylesheet" href="/css/base/base.css" />
+          <link rel="stylesheet" href="/css/base/fonts.css" />
+          <link rel="stylesheet" href="/css/base/typography.css" />
+          <link rel="stylesheet" href="/css/base/layout.css" />
+          <link rel="stylesheet" href="/css/layout/admin.css" />
+        </head>
+
+        <body>
+
+          <header id="admin-header">
+            <nav>
+              <ul>
+                <li><a href="/">Site</a></li>
+                <li><a href="/admin-panel">Admin</a></li>
+                <li><a href="/admin-panel/logout">Logout</a></li>
+                <li><a href="#" id="dark-mode-toggle" data-lightmode="Light mode" data-darkmode="Dark mode"></a></li>
+              </ul>
+            </nav>
+          </header>
+
+          <main>
+            {children}
+          </main>
+
+        </body>
+      </html>
+
+    </>;
   },
   '$post': {
-    '$eval': '(input) => {\r\n' +
-      '  const login = this.login(input);\r\n' +
-      '  if (login) return login;\r\n' +
-      '\r\n' +
-      '  const form = input.form();\r\n' +
-      "  const action = form.get('action');\r\n" +
-      "  if (action === 'new-book-snippet') {\r\n" +
-      "    const url = form.get('url');\r\n" +
-      "    const archiveLink = url.trim().replace(/\\/mode\\/(1|2)up/, '');\r\n" +
-      '    const archiveId = archiveLink.match(/https:\\/\\/archive.org\\/details\\/(.+?)\\/page\\//)[1];\r\n' +
-      '\r\n' +
-      "    const book = $site.named('books').$items.find(book => book.files.map(f => f.archiveId).includes(archiveId));\r\n" +
-      '    // return !!book;\r\n' +
-      '\r\n' +
-      '    const id = $site.create({\r\n' +
-      "      $type: $site.named('snippets').$id,\r\n" +
-      '      bookSlug: book.slug,\r\n' +
-      '      archiveLink,\r\n' +
-      "      slug: '',\r\n" +
-      "      title: '',\r\n" +
-      "      content: '',\r\n" +
-      "      date: 'zzz',\r\n" +
-      '    });\r\n' +
-      '    $site.rebuild();\r\n' +
-      '\r\n' +
-      '    return {\r\n' +
-      "      redirect: this.$items.find(it => it.role === 'snippets').$route() + '?id=' + id,\r\n" +
-      '    };\r\n' +
-      '  }\r\n' +
-      '  else {\r\n' +
-      "    return 'Unknown action';\r\n" +
-      '  }\r\n' +
-      '}\r\n'
+    '$eval': (input) => {
+      const login = this.login(input);
+      if (login) return login;
+
+      const form = input.form();
+      const action = form.get('action');
+      if (action === 'new-book-snippet') {
+        const url = form.get('url');
+        const archiveLink = url.trim().replace(/\/mode\/(1|2)up/, '');
+        const archiveId = archiveLink.match(/https:\/\/archive.org\/details\/(.+?)\/page\//)[1];
+
+        const book = $site.named('books').$items.find(book => book.files.map(f => f.archiveId).includes(archiveId));
+        // return !!book;
+
+        const id = $site.create({
+          $type: $site.named('snippets').$id,
+          bookSlug: book.slug,
+          archiveLink,
+          slug: '',
+          title: '',
+          content: '',
+          date: 'zzz',
+        });
+        $site.rebuild();
+
+        return {
+          redirect: this.$items.find(it => it.role === 'snippets').$route() + '?id=' + id,
+        };
+      }
+      else {
+        return 'Unknown action';
+      }
+    }
   },
   login: {
     '$eval': '(input) => {\r\n' +
