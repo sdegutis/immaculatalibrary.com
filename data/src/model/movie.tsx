@@ -1,4 +1,4 @@
-import categoriesDir from 'dir:/data/categories/';
+import moviesDir from 'dir:/data/movies/';
 import { md, sortBy } from "../helpers";
 import { Routeable } from '../router';
 import { loadContentFile } from '../util/data-files';
@@ -8,23 +8,23 @@ import { Head, Html, SiteFooter, SiteHeader } from '../view/site';
 import { FsFile } from "/../src/filesys";
 import { RouteInput, RouteOutput } from "/../src/http";
 
-class Category implements Routeable {
+class Movie implements Routeable {
 
   static from(file: FsFile) {
     const data = loadContentFile<{
       title: string,
       shortTitle: string,
+      year: string,
       imageFilename: string,
-      books: string[],
     }>(file, 'slug');
 
-    return new Category(
+    return new Movie(
       data.slug,
       data.markdownContent,
       data.meta.title,
       data.meta.shortTitle,
+      data.meta.year,
       data.meta.imageFilename,
-      data.meta.books,
     );
   }
 
@@ -33,20 +33,18 @@ class Category implements Routeable {
     public markdownContent: string,
     public title: string,
     public shortTitle: string,
+    public year: string,
     public imageFilename: string,
-    public bookSlugs: string[],
   ) { }
 
   get route() {
-    return `/${this.slug}.html`;
+    return `/movies/${this.slug}.html`;
   }
 
   get(input: RouteInput): RouteOutput {
     return {
       body: <Html>
         <Head title={this.title}>
-          <link rel="stylesheet" href="/css/layout/category.css" />
-          <link rel="stylesheet" href="/css/base/rating-label.css" />
         </Head>
         <body>
           <SiteHeader />
@@ -68,32 +66,33 @@ class Category implements Routeable {
 
 }
 
-const categoryOrder = [
-  'classics',
-  'devotion',
-  'instruction',
-  'reference',
-  'saints',
-  'mary',
-  'joseph',
-  'apologetics',
-  'blessed-sacrament',
-  'sacred-heart',
-  'holy-spirit',
-  'lourdes',
-  'st-francis-de-sales',
-  'st-alphonsus-de-liguori',
-  'st-catherine-of-siena',
-  'st-teresa-of-avila',
-  'st-john-of-the-cross',
-  'st-john-henry-newman',
-  'st-thomas-more',
-  'st-thomas-aquinas',
-  'st-louis-de-montfort',
-  'jesuits',
-  'fr-lasance',
+const movieOrder = [
+  'passion-of-the-christ',
+  'a-man-for-all-seasons',
+  'saints-and-heroes',
+  'ignatius-of-loyola',
+  'our-gods-brother',
+  'blessed-duns-scotus',
+  'the-13th-day',
+  'bernadette',
+  'saint-maria-soledad',
+  'st-pedro-poveda',
+  'don-bosco',
+  'flowers-of-st-francis',
+  'the-jewellers-shop',
+  'monsieur-vincent',
+  'miracle-of-saint-therese',
+  'restless-heart',
+  'the-passion-of-joan-of-arc',
+  'mother-teresa',
+  'passion-of-bernadette',
+  'padre-pio',
+  'john-xxiii-pope-of-peace',
+  'paul-vi-pope-in-the-tempest',
+  'pope-john-paul-ii',
+  'saint-john-baptist-de-la-salle'
 ];
 
-export const allCategories = (categoriesDir
-  .files.map(file => Category.from(file))
-  .sort(sortBy(c => categoryOrder.indexOf(c.slug).toString())));
+export const allMovies = (moviesDir
+  .files.map(file => Movie.from(file))
+  .sort(sortBy(m => movieOrder.indexOf(m.slug).toString())));

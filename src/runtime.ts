@@ -70,6 +70,8 @@ class Module {
 
   require() {
     if (!this.#ran) {
+      this.#ran = true;
+
       const rawCode = this.file.buffer.toString('utf8');
 
       const args = {
@@ -103,8 +105,6 @@ class Module {
       });
 
       runModule(...Object.values(args));
-
-      this.#ran = true;
     }
     return this.exports;
   }

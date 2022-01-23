@@ -1,31 +1,6 @@
+import { allCategories } from "../model/category";
+import { allMovies } from "../model/movie";
 import { Component } from "./types";
-
-const movieOrder = [
-  'passion-of-the-christ',
-  'a-man-for-all-seasons',
-  'saints-and-heroes',
-  'ignatius-of-loyola',
-  'our-gods-brother',
-  'blessed-duns-scotus',
-  'the-13th-day',
-  'bernadette',
-  'saint-maria-soledad',
-  'st-pedro-poveda',
-  'don-bosco',
-  'flowers-of-st-francis',
-  'the-jewellers-shop',
-  'monsieur-vincent',
-  'miracle-of-saint-therese',
-  'restless-heart',
-  'the-passion-of-joan-of-arc',
-  'mother-teresa',
-  'passion-of-bernadette',
-  'padre-pio',
-  'john-xxiii-pope-of-peace',
-  'paul-vi-pope-in-the-tempest',
-  'pope-john-paul-ii',
-  'saint-john-baptist-de-la-salle'
-];
 
 export const QuickLinks: Component<{}> = (attrs, children) => <>
 
@@ -59,9 +34,9 @@ export const QuickLinks: Component<{}> = (attrs, children) => <>
       <h2>Books</h2>
       <ul class="quicklinks">
 
-        {$site.named('categories').$items.map(cat =>
+        {allCategories.map(cat =>
           <li>
-            <a class="link" href={cat.$route()} style={`background-image: url(/img/${cat.slug}.jpg);`}>
+            <a class="link" href={cat.route} style={`background-image: url(/img/${cat.slug}.jpg);`}>
               <span>{cat.shortTitle}</span>
             </a>
           </li>
@@ -72,9 +47,9 @@ export const QuickLinks: Component<{}> = (attrs, children) => <>
       <h2>Movies</h2>
       <ul class="quicklinks">
 
-        {$site.named('movies').$items.map(movie =>
+        {allMovies.map(movie =>
           <li>
-            <a class="link" href={movie.$route()} style={`background-image: url(/img/movies/${movie.slug}-small.jpg);`}>
+            <a class="link" href={movie.route} style={`background-image: url(/img/movies/${movie.slug}-small.jpg);`}>
               <span>{movie.shortTitle}</span>
             </a>
           </li>

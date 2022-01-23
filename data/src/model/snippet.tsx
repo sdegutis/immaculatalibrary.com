@@ -3,6 +3,7 @@ import { md, sortBy } from "../helpers";
 import { Routeable } from '../router';
 import { loadContentFile, saveContentFile } from '../util/data-files';
 import { Container, Content, HeroImage } from '../view/page';
+import { QuickLinks } from '../view/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../view/site';
 import { FsFile } from "/../src/filesys";
 import { RouteInput, RouteOutput } from "/../src/http";
@@ -87,7 +88,7 @@ class Snippet implements Routeable {
               </Content>
             </Container>
           </main>
-          {/* <QuickLinks /> */}
+          <QuickLinks />
           <SiteFooter />
         </body>
       </Html>
