@@ -1,10 +1,11 @@
 import moviesDir from 'dir:/data/movies/';
-import { md, shareLinks, sortBy } from "../util/helpers";
 import { Routeable } from '../router';
 import { loadContentFile } from '../util/data-files';
+import { md, shareLinks, sortBy } from "../util/helpers";
 import { Container, Content, HeroImage } from '../view/page';
 import { QuickLinks } from '../view/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../view/site';
+import { Component } from '../view/types';
 import { FsFile } from "/../src/filesys";
 import { RouteInput, RouteOutput } from "/../src/http";
 
@@ -59,13 +60,7 @@ export class Movie implements Routeable {
                 {md.render(this.markdownContent)}
                 {shareLinks}
               </Content>
-              <div>
-                <ul>
-                  {allMovies.map(movie => <li>
-                    <a href={movie.route}>{movie.title}</a> ({movie.year})
-                  </li>)}
-                </ul>
-              </div>
+              <MoviesSidebar />
             </Container>
           </main>
           <QuickLinks />
@@ -107,3 +102,50 @@ const movieOrder = [
 export const allMovies = (moviesDir
   .files.map(file => Movie.from(file))
   .sort(sortBy(m => movieOrder.indexOf(m.slug))));
+
+const MoviesSidebar: Component<{}> = (attrs, children) => <>
+  <div>
+    <ul>
+      {allMovies.map(movie => <li>
+        <a href={movie.route}>{movie.title}</a> ({movie.year})
+      </li>)}
+    </ul>
+  </div>
+</>;
+
+export const allMoviesPage: Routeable = {
+  route: `/movies.html`,
+  get: (input) => {
+    const title = 'Holy Movies';
+    const image = '/img/movies-big.jpg';
+    return {
+      body: <>
+        <Html>
+          <Head title={title}>
+          </Head>
+          <body>
+            <SiteHeader />
+            <main>
+              <HeroImage image={image} />
+              <Container>
+                <Content>
+                  <h1>{title}</h1>
+                  <p>
+                    Books are not the only way to experience the
+                    lives of the saints! Movies can be a great way
+                    to increase our devotion and love for God through
+                    his Saints. This page contains a roughly priotized
+                    list of recommended and reviewed Catholic movies.
+                  </p>
+                </Content>
+                <MoviesSidebar />
+              </Container>
+            </main>
+            <QuickLinks />
+            <SiteFooter />
+          </body>
+        </Html>
+      </>
+    };
+  },
+};

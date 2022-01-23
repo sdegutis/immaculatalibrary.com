@@ -3,7 +3,7 @@ import 'source-map-support/register';
 import { RouteHandler, RouteInput, RouteOutput } from '../../src/http';
 import { allBooks } from './model/book';
 import { allCategories } from './model/category';
-import { allMovies } from './model/movie';
+import { allMovies, allMoviesPage } from './model/movie';
 import { allPages } from './model/page';
 import { allSnippets } from './model/snippet';
 import { addRouteable, routes } from './router';
@@ -13,6 +13,8 @@ for (const book of allBooks) {
   book.category = allCategories.find(c => c.bookSlugs.includes(book.slug))!;
   book.category.books.push(book);
 }
+
+addRouteable(allMoviesPage);
 
 allSnippets.forEach(addRouteable);
 staticFiles.forEach(addRouteable);
