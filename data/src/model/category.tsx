@@ -1,5 +1,5 @@
 import categoriesDir from 'dir:/data/categories/';
-import { excerpt, md, rating, sortBy } from "../helpers";
+import { excerpt, md, rating, sortBy } from "../util/helpers";
 import { Routeable } from '../router';
 import { loadContentFile } from '../util/data-files';
 import { Container, Content, HeroImage } from '../view/page';
