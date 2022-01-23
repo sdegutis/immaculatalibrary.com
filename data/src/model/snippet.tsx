@@ -1,4 +1,5 @@
 import snippetsDir from 'dir:/data/snippets/';
+import { LatestBookSnippets } from '../components/latest-snippets';
 import { Routeable } from '../core/router';
 import { loadContentFile, saveContentFile } from '../util/data-files';
 import { md, sortBy } from "../util/helpers";
@@ -91,6 +92,9 @@ export class Snippet implements Routeable {
                 <h1>{this.title}</h1>
                 {md.render(this.markdownContent)}
               </Content>
+              <div>
+                <LatestBookSnippets />
+              </div>
             </Container>
           </main>
           <QuickLinks />
