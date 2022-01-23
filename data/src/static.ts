@@ -10,7 +10,6 @@ class StaticFile implements Routeable {
   route;
   constructor(private file: File) {
     this.route = file.path.replace(/^\/public/, '');
-    console.log(this.route)
   }
 
   get(): RouteOutput {
