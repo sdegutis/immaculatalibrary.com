@@ -1,5 +1,5 @@
 import booksDir from 'dir:/data/books/';
-import { Routeable } from '../router';
+import { Routeable } from '../core/router';
 import { loadContentFile } from '../util/data-files';
 import { md, sortBy } from "../util/helpers";
 import { Container, Content, HeroImage } from '../view/page';

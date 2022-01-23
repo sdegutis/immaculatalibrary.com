@@ -1,6 +1,6 @@
 import pagesDir from 'dir:/data/pages/';
 import { md } from "../util/helpers";
-import { Routeable } from '../router';
+import { Routeable } from '../core/router';
 import { loadContentFile } from '../util/data-files';
 import { Container, Content, HeroImage } from '../view/page';
 import { QuickLinks } from '../view/quicklinks';

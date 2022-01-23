@@ -1,4 +1,4 @@
-import publicDir from 'dir:../public/';
+import publicDir from 'dir:../../public/';
 import { Routeable } from './router';
 import { FsDir, FsFile } from '/../src/filesys';
 import { RouteOutput } from '/../src/http';

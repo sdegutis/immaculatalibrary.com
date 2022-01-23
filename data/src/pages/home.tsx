@@ -1,5 +1,5 @@
 import { LatestBookSnippets } from "../model/snippet";
-import { Routeable } from "../router";
+import { Routeable } from "../core/router";
 import { QuickLinks } from "../view/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "../view/site";
 

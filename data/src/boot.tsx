@@ -1,15 +1,11 @@
 import mime from 'mime';
 import 'source-map-support/register';
 import { RouteHandler, RouteInput, RouteOutput } from '../../src/http';
+import { loadRoutes } from './core/router';
 import { allBooks } from './model/book';
 import { allCategories } from './model/category';
-import { allMovies, allMoviesPage } from './model/movie';
-import { allPages } from './model/page';
 import { allSnippets } from './model/snippet';
-import { homePage } from './pages/home';
-import { addRouteable, routes } from './router';
-import { makeSitemap } from './pages/sitemap';
-import { staticFiles } from './static';
+import { notFoundPage } from './pages/404';
 
 for (const book of allBooks) {
   book.category = allCategories.find(cat => cat.bookSlugs.includes(book.slug))!;
@@ -21,54 +17,7 @@ for (const snippet of allSnippets) {
   snippet.book.snippets.push(snippet);
 }
 
-addRouteable(allMoviesPage);
-addRouteable(homePage);
-
-allSnippets.forEach(addRouteable);
-staticFiles.forEach(addRouteable);
-allCategories.forEach(addRouteable);
-allBooks.forEach(addRouteable);
-allMovies.forEach(addRouteable);
-allPages.forEach(addRouteable);
-
-routes.set('GET /index.html', input => ({
-  status: 302,
-  headers: { 'Location': '/' },
-}));
-
-addRouteable(makeSitemap());
-
-// routes.set('GET /', wrapAuth(input => {
-//   return {
-//     headers: {
-//       'Content-Type': 'text/html'
-//     },
-//     body: <ul>
-//       {[...routes.entries()]
-//         .filter(([path, handler]) => path.startsWith('GET '))
-//         .map(([path, handler]) => {
-//           path = path.replace(/^GET /, '');
-//           return <li>
-//             <a href={path}>{path}</a>
-//           </li>;
-//         })}
-//     </ul>
-//   };
-// }));
-
-const page500 = {
-  path: '/500.html',
-  title: 'Something went wrong',
-  image: '/img/404-big.jpg',
-  pageContent: () => <p>Sorry, this page had an error. Try again later.</p>
-};
-
-const page404 = {
-  path: '/404.html',
-  title: 'Page not found',
-  image: '/img/404-big.jpg',
-  pageContent: () => <p>Sorry, couldn't find this page.</p>
-};
+const routes = loadRoutes();
 
 export function routeHandler(input: RouteInput): RouteOutput {
   const key = `${input.method} ${input.url.pathname}`;
@@ -83,10 +32,6 @@ export function routeHandler(input: RouteInput): RouteOutput {
 
   return output;
 };
-
-function notFoundPage(input: RouteInput): RouteOutput {
-  return { body: 'Not found' };
-}
 
 function wrapAuth(handler: (input: RouteInput & { isAdmin: boolean }) => RouteOutput): RouteHandler {
   return input => {

@@ -1,5 +1,5 @@
 import snippetsDir from 'dir:/data/snippets/';
-import { Routeable } from '../router';
+import { Routeable } from '../core/router';
 import { loadContentFile, saveContentFile } from '../util/data-files';
 import { format_date, md, reading_mins, sortBy } from "../util/helpers";
 import { Container, Content, HeroImage } from '../view/page';

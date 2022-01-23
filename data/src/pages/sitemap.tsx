@@ -1,6 +1,6 @@
-import { Routeable, routeables } from "../router";
+import { Routeable } from "../core/router";
 
-export function makeSitemap(): Routeable {
+export function makeSitemap(routeables: Routeable[]): Routeable {
   return {
     route: '/sitemap.xml',
     get: (input) => ({
