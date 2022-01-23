@@ -57,7 +57,7 @@ export function striptags(s: string) {
 }
 
 export function excerpt(s: string) {
-  return s.split(/\r?\n\r?\n/)[0];
+  return s.split(/\r?\n\r?\n/)[0]!;
 }
 
 export function sortBy<T>(fn: (o: T) => string | number) {

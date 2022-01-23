@@ -4,7 +4,7 @@ import { RouteHandler, RouteInput, RouteOutput } from '../../src/http';
 import { loadRoutes } from './core/router';
 import { allBooks } from './model/book';
 import { allCategories } from './model/category';
-import { allSnippets } from './model/snippet';
+import { publishedSnippets } from './model/snippet';
 import { notFoundPage } from './pages/404';
 import { errorPage } from './pages/500';
 
@@ -13,7 +13,7 @@ for (const book of allBooks) {
   book.category.books.push(book);
 }
 
-for (const snippet of allSnippets) {
+for (const snippet of publishedSnippets) {
   snippet.book = allBooks.find(book => book.slug.includes(snippet.bookSlug))!;
   snippet.book.snippets.push(snippet);
 }
