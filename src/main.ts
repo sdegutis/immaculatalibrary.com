@@ -24,14 +24,14 @@ class Site {
     this.#runtime?.shutdown();
     this.#runtime = new Runtime(root, jsxCreateStringifiedElement);
 
-    const bootFile = root.find('/src/boot')! as FsFile;
-    const boot = this.#runtime.modules.get(bootFile)!;
+    const mainFile = root.find('/src/main')! as FsFile;
+    const mainModule = this.#runtime.modules.get(mainFile)!;
 
     try {
       console.log('Loading boot module...');
-      boot.require();
+      mainModule.require();
       console.log('Done');
-      this.handler = boot.exports.routeHandler;
+      this.handler = mainModule.exports.routeHandler;
     }
     catch (e) {
       console.error(e);
