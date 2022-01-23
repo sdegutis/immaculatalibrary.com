@@ -2,7 +2,7 @@ import snippetsDir from 'dir:/data/snippets/';
 import { LatestBookSnippets } from '../components/latest-snippets';
 import { Routeable } from '../core/router';
 import { loadContentFile, saveContentFile } from '../util/data-files';
-import { md, sortBy } from "../util/helpers";
+import { format_date, groupByDate, md, reading_mins, sortBy } from "../util/helpers";
 import { Container, Content, HeroImage } from '../view/page';
 import { QuickLinks } from '../view/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../view/site';
@@ -114,3 +114,95 @@ export const publishedSnippets = (allSnippets
   .filter(s => s.published)
   .sort(sortBy(s => s.date))
   .reverse());
+
+export const allSnippetsPage: Routeable = {
+  route: `/book-snippets.html`,
+  get: (input) => {
+
+    const title = 'Book Snippets';
+    const image = '/img/reference-big.jpg';
+    const groups = Object.entries(groupByDate(publishedSnippets));
+
+    return {
+      body: <>
+        <Html>
+          <Head title={title}>
+            <script src="/js/search-book-snippets.js" defer></script>
+            <link rel="stylesheet" href="/css/layout/book-snippets.css" />
+          </Head>
+          <body>
+            <SiteHeader />
+            <main>
+              <HeroImage image={image} />
+              <Container>
+                <Content>
+
+                  <h1>{title}</h1>
+
+                  <p>
+                    Not sure what to read?<br />
+                    Try a <a href="/random-book-snippet.html" target="_blank">Random Book Snippet</a>.</p>
+                  <hr />
+
+                  <p>
+                    Search:<br />
+                    <input type="text" id="search-book-snippets-field" />
+                  </p>
+
+                  <div id="search-results"></div>
+                  <hr />
+
+                  <ul id="snippets-all">
+                    {groups.map(([date, group]) => <>
+                      <li>
+                        <h4>{format_date(date)}</h4>
+                        <ul>
+                          {group.map(snippet => <>
+                            <li class="snippet">
+                              <p>
+                                <a href={snippet.route}>{md.renderInline(snippet.title)}</a>
+                                <br /> {reading_mins(snippet.markdownContent)} min &mdash; {snippet.book.title}
+                              </p>
+                            </li>
+                          </>)}
+                        </ul>
+                      </li>
+                    </>)}
+                  </ul>
+
+                </Content>
+              </Container>
+            </main>
+            <QuickLinks />
+            <SiteFooter />
+          </body>
+        </Html>
+      </>
+    };
+  },
+};
+
+export const bookSnippetSearch: Routeable = {
+  route: '/book-snippets/search',
+  post: (input) => {
+    const searchTerm = JSON.parse(input.body.toString('utf8')).searchTerm.toLowerCase();
+
+    const snippets = publishedSnippets.filter(s => {
+      if (s.markdownContent.toLowerCase().includes(searchTerm)) return true;
+      if (s.title.toLowerCase().includes(searchTerm)) return true;
+      if (s.book.title.toLowerCase().includes(searchTerm)) return true;
+      if (s.book.author.toLowerCase().includes(searchTerm)) return true;
+      return false;
+    });
+
+    return {
+      body: JSON.stringify(snippets.map(snippet => ({
+        title: md.renderInline(snippet.title),
+        bookTitle: snippet.book.title,
+        url: snippet.route,
+        formattedDate: format_date(snippet.date),
+        readingMins: reading_mins(snippet.markdownContent),
+      })))
+    };
+  }
+};

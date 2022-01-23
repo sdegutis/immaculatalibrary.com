@@ -12,6 +12,16 @@ export function randomElement<T>(array: T[]): T {
   return array[i]!;
 }
 
+export function groupByDate<T extends { date: string }>(array: T[]) {
+  const groups: Record<string, T[]> = Object.create(null);
+  for (const o of array) {
+    const d = format_date(o.date);
+    if (!groups[d]) groups[d] = [];
+    groups[d]!.push(o);
+  }
+  return groups;
+}
+
 const repeat = (n: number) => Array.from(Array(n));
 export const rating = (n: number) => n ? <>
   <span class="rating-label">

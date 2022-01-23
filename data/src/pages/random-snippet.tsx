@@ -1,6 +1,6 @@
 import { Routeable } from "../core/router";
-import { allSnippets } from "../model/snippet";
-import { randomElement } from "../util/helpers";
+import { allSnippets, publishedSnippets } from "../model/snippet";
+import { extract_page_number, format_date, md, randomElement, reading_mins } from "../util/helpers";
 
 export const randomSnippetPage: Routeable = {
   route: '/random-book-snippet.html',
@@ -12,3 +12,27 @@ export const randomSnippetPage: Routeable = {
     }
   },
 }
+
+export const bookSnippetRandom: Routeable = {
+  route: '/book-snippets/random',
+  get: (input) => {
+    const snippet = randomElement(publishedSnippets);
+    return {
+      body: JSON.stringify({
+        title: md.renderInline(snippet.title),
+        archiveLink: snippet.archiveLink,
+        pageNumber: extract_page_number(snippet.archiveLink),
+        book: {
+          title: snippet.book.title,
+          url: snippet.book.route,
+        },
+        url: snippet.route,
+        formattedDate: format_date(snippet.date),
+        readingMins: reading_mins(snippet.markdownContent),
+        preview: md.render(snippet.previewMarkdown ?? snippet.markdownContent),
+        previewFull: md.render(snippet.markdownContent),
+        hasPreview: !!snippet.previewMarkdown,
+      })
+    };
+  }
+};

@@ -3,17 +3,17 @@ import { allCategories } from "../model/category";
 import { allMovies, allMoviesPage } from "../model/movie";
 import { allPages } from "../model/page";
 import { allPosts, allPostsPage } from "../model/post";
-import { allSnippets } from "../model/snippet";
+import { allSnippets, allSnippetsPage } from "../model/snippet";
 import { homePage } from "../pages/home";
 import { randomBookPage } from "../pages/random-book";
-import { randomSnippetPage } from "../pages/random-snippet";
+import { bookSnippetRandom, randomSnippetPage } from "../pages/random-snippet";
 import { makeSitemap } from "../pages/sitemap";
 import { staticFiles } from "./static";
 import { RouteHandler } from "/../src/http";
 
 export interface Routeable {
   route: string;
-  get: RouteHandler;
+  get?: RouteHandler;
   post?: RouteHandler;
   lastModifiedDate?: Date;
 }
@@ -25,7 +25,10 @@ const routeables: Routeable[] = [];
 function addRouteable(routeable: Routeable) {
   routeables.push(routeable);
 
-  routes.set(`GET ${routeable.route}`, (input) => routeable.get(input));
+  if (routeable.get) {
+    routes.set(`GET ${routeable.route}`, (input) => routeable.get!(input));
+  }
+
   if (routeable.post) {
     routes.set(`POST ${routeable.route}`, (input) => routeable.post!(input));
   }
@@ -35,6 +38,8 @@ export function loadRoutes() {
   addRouteable(allMoviesPage);
   addRouteable(allPostsPage);
   addRouteable(allBooksPage);
+  addRouteable(allSnippetsPage);
+  addRouteable(bookSnippetRandom);
   addRouteable(randomBookPage);
   addRouteable(randomSnippetPage);
   addRouteable(homePage);

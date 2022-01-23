@@ -1,16 +1,6 @@
-import { publishedSnippets, Snippet } from "../model/snippet";
-import { format_date, md, reading_mins } from "../util/helpers";
+import { publishedSnippets } from "../model/snippet";
+import { format_date, groupByDate, md, reading_mins } from "../util/helpers";
 import { Component } from "../view/types";
-
-function groupByDate(snippets: Snippet[]) {
-  const groups: Record<string, Snippet[]> = Object.create(null);
-  for (const s of snippets) {
-    const d = format_date(s.date);
-    if (!groups[d]) groups[d] = [];
-    groups[d]!.push(s);
-  }
-  return groups;
-}
 
 const latestBookSnippetsStyle = `
 ul.snippets-latest {
