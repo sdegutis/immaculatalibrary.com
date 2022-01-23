@@ -8,7 +8,7 @@ Sometimes we can be in the middle of very sad times in our lives. There's nothin
 
 During these times, God is trying to draw even closer to us. He wants us to know that the bad things are temporary, but that they're inevitable, they can't be avoided.
 
-It's all because we have free will. Because we have this freedom, we are free to do either good or bad, right or wrong. Which means this life is going to be fill of both good things and bad things.
+It's all because we have free will. Because we have this freedom, we are free to do either good or bad, right or wrong. Which means this life is going to be full of both good things and bad things.
 
 This freedom is necessary. Without it, the words "I love you" would be meaningless. And ultimately, this life is a test of who will *love.* We are made for love, because *God is love,* and God made us.
 

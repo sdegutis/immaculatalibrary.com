@@ -2,6 +2,7 @@
 title: 'The safest spot in the universe'
 imageFilename: 'https://images.unsplash.com/photo-1492176273113-2d51f47b23b0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1469&q=80'
 imageCaption: 'Photo by <a href="https://unsplash.com/@marcojodoin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Marc-Olivier Jodoin</a> on <a href="https://unsplash.com/s/photos/hope?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>'
+draft: true
 ---
 
 When times are bad, trust that God will never let them get *too* bad. Stay close to Jesus, and trust that even now, he is helping you through the storm.

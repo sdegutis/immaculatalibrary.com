@@ -2,6 +2,7 @@
 title: 'Let nothing worry you'
 imageFilename: 'https://www.vmcdn.ca/f/files/glaciermedia/import/lmp-all/1314761-john-paul-ii-pope-canonization-of-juan-diego.jpg;w=960'
 imageCaption: 'St. Juan Diego with the Blessed Virgin Mary'
+draft: true
 ---
 
 These words of Mary to St. Juan Diego in 1531 were meant for all of us also:

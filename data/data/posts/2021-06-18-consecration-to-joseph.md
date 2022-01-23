@@ -2,6 +2,7 @@
 title: 'Consecration to Joseph'
 imageFilename: '/img/posts/joseph-1.jpg'
 imageCaption: 'Photo by <a href="https://unsplash.com/@sergeisushchik?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sergei Sushchik</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>'
+draft: true
 ---
 
 During this Year of St. Joseph, it's fitting to consider consecrating ourselves to St. Joseph along with Mary.

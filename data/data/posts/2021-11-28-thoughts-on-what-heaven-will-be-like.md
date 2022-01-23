@@ -2,6 +2,7 @@
 title: 'Thoughts on what Heaven will be like'
 imageFilename: 'https://images.unsplash.com/photo-1475319122043-5ca9eeceefaf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'
 imageCaption: 'Photo by <a href="https://unsplash.com/@cant89?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Davide Cantelli</a> on <a href="https://unsplash.com/s/photos/heaven?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>'
+draft: true
 ---
 
 The goal of this life is to be convinced that the Love of God is worth not sinning. And one of the best rewards we will receive, if we believe this and put it into practice faithfully until death, is Heaven. So it's helpful to think about Heaven and what it will be like.

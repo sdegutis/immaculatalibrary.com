@@ -2,6 +2,7 @@
 title: 'The Spirit of the Time'
 imageFilename: 'https://www.catholicdigest.com/wp-content/uploads/2018/05/Jean_II_Restout_-_Pentec%C3%B4te.jpg'
 imageCaption: ''
+draft: true
 ---
 
 I appeal to you, do not read Catholic news. It is very much not good for you. And avoid listening to those who call themselves Traditional Catholics, to their commentary on Catholic news and events.

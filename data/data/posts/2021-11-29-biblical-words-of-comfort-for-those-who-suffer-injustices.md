@@ -2,6 +2,7 @@
 title: 'Biblical words of comfort for those who suffer injustices'
 imageFilename: 'https://cdn.britannica.com/66/188166-050-CF9FE26D/The-Raising-of-Lazarus-canvas-collection-Jean-1711.jpg'
 imageCaption: 'Jesus raising Lazarus from the dead'
+draft: true
 ---
 
 When you feel like you can't handle any more of the difficulties God is putting in your life, don't despair. Jesus is going to rescue you from it soon. Here are some of the promises from the Bible to comfort and reassure you:

@@ -2,6 +2,7 @@
 title: 'Jesuits, Anglicans, and new books'
 imageFilename: '/img/posts/aaron-burden-y02jEX_B0O0-unsplash.jpg'
 imageCaption: 'Photo by <a href="https://unsplash.com/@aaronburden?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Aaron Burden</a> on <a href="https://unsplash.com/s/photos/writing?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>'
+draft: true
 ---
 
 Several new books have been added over the weekend, which are related to the history of English Catholic books.

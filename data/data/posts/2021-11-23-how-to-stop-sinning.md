@@ -2,6 +2,7 @@
 title: 'How to stop sinning'
 imageFilename: 'https://images.unsplash.com/photo-1455133031464-31897e50faaa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80'
 imageCaption: 'Photo by <a href="https://unsplash.com/@currentcoast?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Joshua Davis</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>'
+draft: true
 ---
 
 If you're upset because you can't stop committing sins, take the following steps:

@@ -2,6 +2,7 @@
 title: 'Love, Family, and Discerning Marriage'
 imageFilename: 'https://images.unsplash.com/photo-1554047310-ab6170fc7b10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'
 imageCaption: 'Photo by <a href="https://unsplash.com/@redaquamedia?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Denny Müller</a> on <a href="https://unsplash.com/s/photos/marriage-rings?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>'
+draft: true
 ---
 
 There are 3 possible vocations: single life, consecrated life, and married life. But you have to understand these three well in order to know whether you're called to one of them! To undertand the other two vocation types, I think you first have to understand marriage, what it is, and what it's not.

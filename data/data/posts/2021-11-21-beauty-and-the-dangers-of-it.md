@@ -2,6 +2,7 @@
 title: 'Beauty, and the dangers of it'
 imageFilename: 'https://images.unsplash.com/photo-1480623826718-27e89ac63a4f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'
 imageCaption: 'Photo by <a href="https://unsplash.com/@brookecagle?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Brooke Cagle</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>'
+draft: true
 ---
 
 Everyone loves beauty. But when we don't understand what beauty is for, or what to do with it, we often end up sinning, offending God by that very beauty that has its source in Him.

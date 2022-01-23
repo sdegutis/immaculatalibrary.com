@@ -2,6 +2,7 @@
 title: 'The importance and benefit of daily holy reading'
 imageFilename: 'https://images.unsplash.com/photo-1519884705082-b505c3001e63?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80'
 imageCaption: 'Photo by <a href="https://unsplash.com/@svalenas?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sergiu Vălenaș</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>'
+draft: true
 ---
 
 The saints practiced and strongly recommended daily reading of holy books. Here are how some examples of how these very Saints profited from holy reading, and how it even turned them into Saints.

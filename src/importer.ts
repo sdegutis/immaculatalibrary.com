@@ -1,7 +1,7 @@
 import * as fs from "fs";
 import Yaml from 'js-yaml';
 
-const rawItems = require('../../../../../Downloads/imlib-backup-2022-01-18T13_31_41.688Z.json');
+const rawItems = require('../../../../../Downloads/imlib-backup-2022-01-23T22_24_25.779Z.json');
 const items: any[] = Object.entries<any>(rawItems).map(([$id, data]) => ({ $id, ...data }));
 
 const staticItems = items.filter(it => it.$type === '73c941de-a7e9-4bce-98b1-9bb59ef57b65');

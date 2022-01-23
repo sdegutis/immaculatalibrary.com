@@ -2,6 +2,7 @@
 title: 'Courage in the Storm'
 imageFilename: 'https://images.unsplash.com/photo-1524679166686-04237b4667b4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2071&q=80'
 imageCaption: 'Photo by <a href="https://unsplash.com/@tdederichs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Torsten Dederichs</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>'
+draft: true
 ---
 
 Sometimes life gets hard. Like, *really* hard. And you're just not sure what to do. Or whether you can handle it. But there is hope.

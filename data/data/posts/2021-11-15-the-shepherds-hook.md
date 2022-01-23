@@ -2,6 +2,7 @@
 title: 'The shepherd''s hook'
 imageFilename: 'https://images.unsplash.com/photo-1488048924544-c818a467dacd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80'
 imageCaption: 'Photo by <a href="https://unsplash.com/@patrick_schneider?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Patrick Schneider</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>'
+draft: true
 ---
 
 Guilt can be overwhelming. Sometimes we are overwhelmed with our failures, our sins, and our past mistakes. But the good news is, that's precisely what Jesus came to save us from!

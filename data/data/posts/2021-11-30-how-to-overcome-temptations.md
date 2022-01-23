@@ -2,6 +2,7 @@
 title: 'How to overcome temptations'
 imageFilename: 'https://images.unsplash.com/photo-1496989981497-27d69cdad83e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=931&q=80'
 imageCaption: 'Photo by <a href="https://unsplash.com/@jeremyperkins?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jeremy Perkins</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>'
+draft: true
 ---
 
 Evil is light a black hole. The more you stare at it, or the closer you get, the more you are pulled in. There's only one way to avoid getting sucked into this black hole: cling fast to God.
