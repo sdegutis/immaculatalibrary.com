@@ -1,4 +1,6 @@
+import { createHash } from 'crypto';
 import publicDir from 'dir:../../public/';
+import { AuthedInput } from '../pages/admin';
 import { Routeable } from './router';
 import { FsDir, FsFile } from '/../src/filesys';
 import { RouteOutput } from '/../src/http';
@@ -7,15 +9,22 @@ export const staticFiles: StaticFile[] = [];
 
 class StaticFile implements Routeable {
 
+  etag;
   route;
   constructor(private file: FsFile) {
     this.route = file.path.replace(/^\/public/, '');
+    this.etag = `"${createHash('sha256').update(file.buffer).digest().toString('base64')}"`;
   }
 
-  get(): RouteOutput {
+  get(input: AuthedInput): RouteOutput {
+    if (input.headers['if-none-match'] === this.etag) {
+      return { status: 304 };
+    }
+
     return {
       headers: {
-        'Cache-Control': `max-age=${3 * 24 * 60 * 60}`,
+        'Cache-Control': `max-age=${60 * 60 * 24 * 1}`,
+        'ETag': this.etag,
       },
       body: this.file.buffer,
     };
