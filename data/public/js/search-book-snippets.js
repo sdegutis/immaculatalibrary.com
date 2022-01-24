@@ -13,13 +13,9 @@ async function searchBookSnippets() {
   let results = null;
 
   if (searchTerm) {
-    const response = await fetch('/book-snippets/search', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        searchTerm,
-      }),
-    });
+    const url = new URL('/book-snippets/search', location.href);
+    url.searchParams.set('searchTerm', searchTerm);
+    const response = await fetch(url);
     results = await response.json();
   }
 

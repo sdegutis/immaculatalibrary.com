@@ -194,8 +194,8 @@ export const allSnippetsPage: Routeable = {
 
 export const bookSnippetSearch: Routeable = {
   route: '/book-snippets/search',
-  post: (input) => {
-    const searchTerm = JSON.parse(input.body.toString('utf8')).searchTerm.toLowerCase();
+  get: (input) => {
+    const searchTerm = input.url.searchParams.get('searchTerm')!.toLowerCase();
 
     const snippets = publishedSnippets.filter(s => {
       if (s.markdownContent.toLowerCase().includes(searchTerm)) return true;

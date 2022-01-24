@@ -16,7 +16,7 @@ type AuthedRouteHandler = (input: AuthedInput) => RouteOutput;
 
 export interface Routeable {
   route: string;
-  get?: AuthedRouteHandler;
+  get: AuthedRouteHandler;
   post?: AuthedRouteHandler;
   lastModifiedDate?: Date;
 }
@@ -26,12 +26,10 @@ const routes = new Map<string, AuthedRouteHandler>();
 const forSitemap: Routeable[] = [];
 
 function addRouteable(routeable: Routeable) {
-  if (routeable.get) {
-    if (!routeable.route.startsWith('/admin')) {
-      forSitemap.push(routeable);
-    }
-    addRoute(`GET ${routeable.route}`, (input) => routeable.get!(input));
+  if (!routeable.route.startsWith('/admin')) {
+    forSitemap.push(routeable);
   }
+  addRoute(`GET ${routeable.route}`, (input) => routeable.get!(input));
 
   if (routeable.post) {
     addRoute(`POST ${routeable.route}`, (input) => routeable.post!(input));
