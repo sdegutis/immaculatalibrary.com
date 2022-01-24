@@ -30,12 +30,20 @@ function addRouteable(routeable: Routeable) {
     if (!routeable.route.startsWith('/admin')) {
       forSitemap.push(routeable);
     }
-    routes.set(`GET ${routeable.route}`, (input) => routeable.get!(input));
+    addRoute(`GET ${routeable.route}`, (input) => routeable.get!(input));
   }
 
   if (routeable.post) {
-    routes.set(`POST ${routeable.route}`, (input) => routeable.post!(input));
+    addRoute(`POST ${routeable.route}`, (input) => routeable.post!(input));
   }
+}
+
+function addRoute(route: string, handler: AuthedRouteHandler) {
+  if (routes.has(route)) {
+    throw new Error(`Duplicate route: ${route}`);
+  }
+
+  routes.set(route, handler);
 }
 
 export function loadRoutes() {
