@@ -1,6 +1,6 @@
 import mime from 'mime';
 import 'source-map-support/register';
-import { RouteHandler, RouteInput, RouteOutput } from '../../src/http';
+import { RouteInput, RouteOutput } from '../../src/http';
 import { loadRoutes } from './core/router';
 import { allBooks } from './model/book';
 import { allCategories } from './model/category';
@@ -43,9 +43,3 @@ export function routeHandler(input: RouteInput): RouteOutput {
 
   return output;
 };
-
-function wrapAuth(handler: (input: RouteInput & { isAdmin: boolean }) => RouteOutput): RouteHandler {
-  return input => {
-    return handler({ ...input, isAdmin: false });
-  };
-}

@@ -1,6 +1,8 @@
 const __file: import('../src/filesys').FsFile;
 const __dir: import('../src/filesys').FsDir;
 
+function restartSite(): void;
+
 module JSX {
   type IntrinsicElements = import('../src/jsx-stringify').IntrinsicElements;
   type Element = import('../src/jsx-stringify').Element;

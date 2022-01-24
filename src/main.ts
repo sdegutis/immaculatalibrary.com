@@ -27,6 +27,8 @@ class Site {
     const mainFile = root.find('/src/main')! as FsFile;
     const mainModule = this.#runtime.modules.get(mainFile)!;
 
+    this.#runtime.context['restartSite'] = restartSite;
+
     try {
       console.log('Loading boot module...');
       mainModule.require();
@@ -42,12 +44,16 @@ class Site {
 
 const site = new Site();
 
+function restartSite() {
+  console.log('restartSite(): starting...');
+  site.build();
+  console.log('restartSite(): done');
+}
+
 let timeout: NodeJS.Timeout | null = null;
 chokidar.watch('data/src', { ignoreInitial: true }).on('all', (e, p) => {
   if (timeout) clearTimeout(timeout);
-  timeout = setTimeout(() => {
-    site.build();
-  }, 100);
+  timeout = setTimeout(restartSite, 100);
 });
 
 const baseUrl = 'https://www.immaculatalibrary.com/';

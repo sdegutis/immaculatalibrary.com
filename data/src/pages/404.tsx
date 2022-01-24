@@ -14,7 +14,7 @@ export function notFoundPage(input: RouteInput): RouteOutput {
         <SiteHeader />
         <main>
           <HeroImage image={image} />
-          <Container sectionId='category'>
+          <Container>
 
             <Content>
               <h1>{title}</h1>

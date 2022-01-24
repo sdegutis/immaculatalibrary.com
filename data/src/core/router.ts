@@ -4,6 +4,7 @@ import { allMovies, allMoviesPage } from "../model/movie";
 import { allPages } from "../model/page";
 import { allPosts, allPostsPage } from "../model/post";
 import { allSnippets, allSnippetsPage, bookSnippetSearch } from "../model/snippet";
+import { adminPages } from "../pages/admin";
 import { homePage } from "../pages/home";
 import { randomBookPage } from "../pages/random-book";
 import { bookSnippetRandom, randomSnippetPage } from "../pages/random-snippet";
@@ -46,6 +47,7 @@ export function loadRoutes() {
   addRouteable(bookSnippetSearch);
   addRouteable(homePage);
 
+  adminPages.forEach(addRouteable);
   allSnippets.forEach(addRouteable);
   staticFiles.forEach(addRouteable);
   allCategories.forEach(addRouteable);
