@@ -35,12 +35,12 @@ export function routeHandler(input: RouteInput): RouteOutput {
       output = discoverAuth(handler)(input);
     }
     else {
-      output = notFoundPage(input);
+      output = discoverAuth(notFoundPage)(input);
     }
   }
   catch (e) {
     console.error(e);
-    output = errorPage(input);
+    output = discoverAuth(errorPage)(input);
   }
 
   output.headers ??= {};

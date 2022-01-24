@@ -98,7 +98,6 @@ export const SiteHeader: Component<{ user: User | null }> = (attrs, children) =>
     <header>
       <nav class="container" style='display: flex; gap: 0.5em'>
         <a href={restartSiteRoute.route}>Restart</a>
-        <a href={pullChangesRoute.route}>Pull</a>
         <a href={logoutRoute.route}>Logout</a>
       </nav>
     </header>
