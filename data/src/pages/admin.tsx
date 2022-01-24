@@ -18,7 +18,7 @@ type User = {
   access: 'all';
 };
 
-type AuthedInput = RouteInput & {
+export type AuthedInput = RouteInput & {
   user: User | null;
 };
 
