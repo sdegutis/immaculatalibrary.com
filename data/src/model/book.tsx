@@ -170,7 +170,7 @@ export class Book implements Routeable {
                 <ul class="snippets-latest">
                   {this.snippets.length > 0
                     ? <>
-                      {[...this.snippets].reverse().map(bookSnippet => <>
+                      {[...this.snippets].map(bookSnippet => <>
                         <li>
                           <p>
                             <a href={bookSnippet.route}>{md.renderInline(bookSnippet.title)}</a>

@@ -30,10 +30,6 @@ export function jsxCreateStringifiedElement(tag: string | Function | symbol, att
       c !== false)
     .join(''));
 
-  if (children.flat().includes(false)) {
-    debugger
-  }
-
   if (typeof tag === 'symbol') {
     if (tag.description === 'fragment') {
       return childrenString;

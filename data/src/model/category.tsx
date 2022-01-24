@@ -55,31 +55,36 @@ export class Category implements Routeable {
           <SiteHeader />
           <main>
             <HeroImage image={this.imageFilename} />
-            <Container sectionId='category'>
+            <Container>
 
-              <Content>
+              <div>
 
                 <h1>{this.title}</h1>
-                {md.render(this.markdownContent)}
 
-                <h2>Books</h2>
-                <ul>
-                  {this.books.map(book => {
-                    return <li>
-                      <div class="title">
-                        <a href={book.route}>{book.title}</a>
-                        {book.subtitle && <>: {book.subtitle}</>}
-                        {' '}
-                        {rating(book.rating)}
-                      </div>
+                <Content>
+                  {md.render(this.markdownContent)}
+                </Content>
 
-                      <div class="author">{book.author}</div>
-                      <div class="blurb content">{md.render(excerpt(book.markdownContent))}</div>
-                    </li>;
-                  })}
-                </ul>
+                <section id='category'>
+                  <h2>Books</h2>
+                  <ul>
+                    {this.books.map(book => {
+                      return <li>
+                        <div class="title">
+                          <a href={book.route}>{book.title}</a>
+                          {book.subtitle && <>: {book.subtitle}</>}
+                          {' '}
+                          {rating(book.rating)}
+                        </div>
 
-              </Content>
+                        <div class="author">{book.author}</div>
+                        <div class="blurb content">{md.render(excerpt(book.markdownContent))}</div>
+                      </li>;
+                    })}
+                  </ul>
+                </section>
+
+              </div>
 
             </Container>
           </main>
