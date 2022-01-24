@@ -1,4 +1,4 @@
-import { pullChangesRoute, restartSiteRoute, User } from "../pages/admin";
+import { loginRoute, logoutRoute, pullChangesRoute, restartSiteRoute, User } from "../pages/admin";
 import { Component } from "./types";
 
 export const Html: Component<{}> = (attrs, children) => <>
@@ -99,6 +99,7 @@ export const SiteHeader: Component<{ user: User | null }> = (attrs, children) =>
       <nav class="container" style='display: flex; gap: 0.5em'>
         <a href={restartSiteRoute.route}>Restart</a>
         <a href={pullChangesRoute.route}>Pull</a>
+        <a href={logoutRoute.route}>Logout</a>
       </nav>
     </header>
   </>}
@@ -112,6 +113,8 @@ export const SiteFooter: Component<{}> = (attrs, children) => <>
       <a href="mailto:immaculatalibrary@gmail.com">Contact</a>
       {' | '}
       <a href="#" id="dark-mode-toggle" data-lightmode="Light mode" data-darkmode="Dark mode"></a>
+      {' | '}
+      <a href={loginRoute.route}>Login</a>
     </p>
   </footer>
   <script>

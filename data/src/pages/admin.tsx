@@ -2,6 +2,9 @@ import bcrypt from 'bcryptjs';
 import { spawnSync } from 'child_process';
 import usersFile from 'file:/data/users.json';
 import { Routeable } from "../core/router";
+import { Container, Content, HeroImage } from '../view/page';
+import { QuickLinks } from '../view/quicklinks';
+import { Head, Html, SiteFooter, SiteHeader } from '../view/site';
 import { RouteHandler, RouteInput, RouteOutput } from "/../src/http";
 
 export function pullChangesFromGithub() {
@@ -41,10 +44,28 @@ export function discoverAuth(handler: (input: AuthedInput) => RouteOutput): Rout
 function guardAuth(handler: RouteHandler): RouteHandler {
   return discoverAuth(input => {
     if (input.user?.access !== 'all') {
+      const image = '/img/821px-Pope-peter_pprubens.jpg';
+
       return {
         status: 401,
-        body: 'Not authorized.',
         headers: { 'WWW-Authenticate': 'Basic realm="example"' },
+        body: <Html>
+          <Head />
+          <body>
+            <SiteHeader user={input.user} />
+            <main>
+              <HeroImage image={image} />
+              <Container>
+                <Content>
+                  <h1>Not Authorized</h1>
+                  <p>This page is restricted.</p>
+                </Content>
+              </Container>
+            </main>
+            <QuickLinks />
+            <SiteFooter />
+          </body>
+        </Html>,
       };
     }
 
@@ -74,7 +95,33 @@ export const pullChangesRoute: Routeable = {
   })
 };
 
+export const loginRoute: Routeable = {
+  route: '/login',
+  get: guardAuth((input) => {
+    console.log(input.headers)
+    return {
+      status: 302,
+      headers: { 'Location': input.headers.referer ?? '/' },
+    };
+  })
+};
+
+export const logoutRoute: Routeable = {
+  route: '/admin/logout',
+  get: guardAuth((input) => {
+    return {
+      status: 401,
+      headers: {
+        'WWW-Authenticate': 'Basic realm="example"',
+        'Location': input.headers.referer,
+      },
+    };
+  })
+};
+
 export const adminPages: Routeable[] = [
   restartSiteRoute,
   pullChangesRoute,
+  loginRoute,
+  logoutRoute,
 ];
