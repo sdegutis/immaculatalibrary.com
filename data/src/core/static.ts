@@ -14,6 +14,9 @@ class StaticFile implements Routeable {
 
   get(): RouteOutput {
     return {
+      headers: {
+        'Cache-Control': `max-age=${3 * 24 * 60 * 60}`,
+      },
       body: this.file.buffer,
     };
   }
