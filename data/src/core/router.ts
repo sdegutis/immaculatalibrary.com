@@ -4,22 +4,24 @@ import { allMovies, allMoviesPage } from "../model/movie";
 import { allPages } from "../model/page";
 import { allPosts, allPostsPage } from "../model/post";
 import { allSnippets, allSnippetsPage, bookSnippetSearch } from "../model/snippet";
-import { adminPages } from "../pages/admin";
+import { adminPages, AuthedInput } from "../pages/admin";
 import { homePage } from "../pages/home";
 import { randomBookPage } from "../pages/random-book";
 import { bookSnippetRandom, randomSnippetPage } from "../pages/random-snippet";
 import { makeSitemap } from "../pages/sitemap";
 import { staticFiles } from "./static";
-import { RouteHandler } from "/../src/http";
+import { RouteOutput } from "/../src/http";
+
+type AuthedRouteHandler = (input: AuthedInput) => RouteOutput;
 
 export interface Routeable {
   route: string;
-  get?: RouteHandler;
-  post?: RouteHandler;
+  get?: AuthedRouteHandler;
+  post?: AuthedRouteHandler;
   lastModifiedDate?: Date;
 }
 
-const routes = new Map<string, RouteHandler>();
+const routes = new Map<string, AuthedRouteHandler>();
 
 const forSitemap: Routeable[] = [];
 

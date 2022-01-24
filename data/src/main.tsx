@@ -7,6 +7,7 @@ import { allCategories } from './model/category';
 import { publishedSnippets } from './model/snippet';
 import { notFoundPage } from './pages/404';
 import { errorPage } from './pages/500';
+import { discoverAuth } from './pages/admin';
 
 for (const book of allBooks) {
   for (const cat of allCategories) {
@@ -30,7 +31,12 @@ export function routeHandler(input: RouteInput): RouteOutput {
   let output: RouteOutput;
 
   try {
-    output = handler ? handler(input) : notFoundPage(input);
+    if (handler) {
+      output = discoverAuth(handler)(input);
+    }
+    else {
+      output = notFoundPage(input);
+    }
   }
   catch (e) {
     console.error(e);

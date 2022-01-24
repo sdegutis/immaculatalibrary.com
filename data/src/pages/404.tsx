@@ -1,9 +1,10 @@
 import { Container, Content, HeroImage } from "../view/page";
 import { QuickLinks } from "../view/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "../view/site";
-import { RouteInput, RouteOutput } from "/../src/http";
+import { AuthedInput } from "./admin";
+import { RouteOutput } from "/../src/http";
 
-export function notFoundPage(input: RouteInput): RouteOutput {
+export function notFoundPage(input: AuthedInput): RouteOutput {
   const title = 'Page not found';
   const image = '/img/404-big.jpg';
   return {
@@ -11,7 +12,7 @@ export function notFoundPage(input: RouteInput): RouteOutput {
     body: <Html>
       <Head title={title} />
       <body>
-        <SiteHeader />
+        <SiteHeader user={input.user} />
         <main>
           <HeroImage image={image} />
           <Container>

@@ -1,3 +1,4 @@
+import { pullChangesRoute, restartSiteRoute, User } from "../pages/admin";
 import { Component } from "./types";
 
 export const Html: Component<{}> = (attrs, children) => <>
@@ -71,7 +72,7 @@ export const Head: Component<{ imagePath?: string, title?: string, description?:
   </head>
 </>;
 
-export const SiteHeader: Component<{}> = (attrs, children) => <>
+export const SiteHeader: Component<{ user: User | null }> = (attrs, children) => <>
   <header id="site-header">
     <nav class="container">
       <a href="/">Immaculata Library</a>
@@ -93,6 +94,14 @@ export const SiteHeader: Component<{}> = (attrs, children) => <>
       </ul>
     </nav>
   </header>
+  {attrs.user && <>
+    <header>
+      <nav class="container" style='display: flex; gap: 0.5em'>
+        <a href={restartSiteRoute.route}>Restart</a>
+        <a href={pullChangesRoute.route}>Pull</a>
+      </nav>
+    </header>
+  </>}
 </>;
 
 export const SiteFooter: Component<{}> = (attrs, children) => <>

@@ -1,12 +1,13 @@
 import postsdir from 'dir:/data/posts/';
 import { Routeable } from '../core/router';
+import { AuthedInput } from '../pages/admin';
 import { loadContentFile } from '../util/data-files';
 import { excerpt, format_date, md, reading_mins, ShareLinks, sortBy } from "../util/helpers";
 import { Container, Content, HeroImage } from '../view/page';
 import { QuickLinks } from '../view/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../view/site';
 import { FsFile } from "/../src/filesys";
-import { RouteInput, RouteOutput } from "/../src/http";
+import { RouteOutput } from "/../src/http";
 
 export class Post implements Routeable {
   static from(file: FsFile) {
@@ -60,14 +61,14 @@ export class Post implements Routeable {
     return `/posts/${this.date}-${this.slug}.html`;
   }
 
-  get(input: RouteInput): RouteOutput {
+  get(input: AuthedInput): RouteOutput {
     return {
       body: <Html>
         <Head title={this.title}>
           <link rel="stylesheet" href="/css/layout/post.css" />
         </Head>
         <body>
-          <SiteHeader />
+          <SiteHeader user={input.user} />
           <main>
             <HeroImage image={this.imageFilename} />
             <Container>
@@ -113,7 +114,7 @@ export const allPostsPage: Routeable = {
             <link rel="stylesheet" href="/css/layout/posts.css" />
           </Head>
           <body>
-            <SiteHeader />
+            <SiteHeader user={input.user} />
             <main>
               <HeroImage image={image} />
               <Container split={false}>

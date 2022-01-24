@@ -1,5 +1,6 @@
 import booksDir from 'dir:/data/books/';
 import { Routeable } from '../core/router';
+import { AuthedInput } from '../pages/admin';
 import { loadContentFile } from '../util/data-files';
 import { excerpt, md, rating, ShareLinks, sortBy, striptags } from "../util/helpers";
 import { Container, Content, HeroImage } from '../view/page';
@@ -8,7 +9,7 @@ import { Head, Html, SiteFooter, SiteHeader } from '../view/site';
 import { Category } from './category';
 import { Snippet } from './snippet';
 import { FsFile } from "/../src/filesys";
-import { RouteInput, RouteOutput } from "/../src/http";
+import { RouteOutput } from "/../src/http";
 
 export class Book implements Routeable {
 
@@ -75,7 +76,7 @@ export class Book implements Routeable {
     return `/books/${this.slug}.html`;
   }
 
-  get(input: RouteInput): RouteOutput {
+  get(input: AuthedInput): RouteOutput {
     return {
       body: <Html>
         <Head title={this.title} description={striptags(excerpt(this.markdownContent))}>
@@ -83,7 +84,7 @@ export class Book implements Routeable {
           <link rel="stylesheet" href="/css/base/rating-label.css" />
         </Head>
         <body>
-          <SiteHeader />
+          <SiteHeader user={input.user} />
           <main>
             <HeroImage image={this.category.imageFilename} />
             <Container>
@@ -234,7 +235,7 @@ export const allBooksPage: Routeable = {
           <Head title={title}>
           </Head>
           <body>
-            <SiteHeader />
+            <SiteHeader user={input.user} />
             <main>
               <HeroImage image={image} />
               <Container>

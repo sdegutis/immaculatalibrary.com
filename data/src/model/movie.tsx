@@ -1,5 +1,6 @@
 import moviesDir from 'dir:/data/movies/';
 import { Routeable } from '../core/router';
+import { AuthedInput } from '../pages/admin';
 import { loadContentFile } from '../util/data-files';
 import { md, ShareLinks, sortBy } from "../util/helpers";
 import { Container, Content, HeroImage } from '../view/page';
@@ -7,7 +8,7 @@ import { QuickLinks } from '../view/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../view/site';
 import { Component } from '../view/types';
 import { FsFile } from "/../src/filesys";
-import { RouteInput, RouteOutput } from "/../src/http";
+import { RouteOutput } from "/../src/http";
 
 export class Movie implements Routeable {
 
@@ -45,13 +46,13 @@ export class Movie implements Routeable {
     return `/movies/${this.slug}.html`;
   }
 
-  get(input: RouteInput): RouteOutput {
+  get(input: AuthedInput): RouteOutput {
     return {
       body: <Html>
         <Head title={this.displayTitle}>
         </Head>
         <body>
-          <SiteHeader />
+          <SiteHeader user={input.user} />
           <main>
             <HeroImage image={this.imageFilename} />
             <Container>
@@ -124,7 +125,7 @@ export const allMoviesPage: Routeable = {
           <Head title={title}>
           </Head>
           <body>
-            <SiteHeader />
+            <SiteHeader user={input.user} />
             <main>
               <HeroImage image={image} />
               <Container>

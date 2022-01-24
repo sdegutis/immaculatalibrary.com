@@ -1,5 +1,5 @@
-import { LatestBookSnippets } from "../view/latest-snippets";
 import { Routeable } from "../core/router";
+import { LatestBookSnippets } from "../view/latest-snippets";
 import { QuickLinks } from "../view/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "../view/site";
 
@@ -16,7 +16,7 @@ export const homePage: Routeable = {
             <link rel="stylesheet" href="/css/layout/home.css" />
           </Head>
           <body>
-            <SiteHeader />
+            <SiteHeader user={input.user} />
 
             <main>
 

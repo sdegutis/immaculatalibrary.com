@@ -1,12 +1,13 @@
 import pagesDir from 'dir:/data/pages/';
-import { md } from "../util/helpers";
 import { Routeable } from '../core/router';
+import { AuthedInput } from '../pages/admin';
 import { loadContentFile } from '../util/data-files';
+import { md } from "../util/helpers";
 import { Container, Content, HeroImage } from '../view/page';
 import { QuickLinks } from '../view/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../view/site';
 import { FsFile } from "/../src/filesys";
-import { RouteInput, RouteOutput } from "/../src/http";
+import { RouteOutput } from "/../src/http";
 
 export class Page implements Routeable {
 
@@ -35,13 +36,13 @@ export class Page implements Routeable {
     return `/${this.slug}.html`;
   }
 
-  get(input: RouteInput): RouteOutput {
+  get(input: AuthedInput): RouteOutput {
     return {
       body: <Html>
         <Head title={this.title}>
         </Head>
         <body>
-          <SiteHeader />
+          <SiteHeader user={input.user} />
           <main>
             <HeroImage image={this.imageFilename} />
             <Container>

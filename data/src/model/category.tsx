@@ -1,5 +1,6 @@
 import categoriesDir from 'dir:/data/categories/';
 import { Routeable } from '../core/router';
+import { AuthedInput } from '../pages/admin';
 import { loadContentFile } from '../util/data-files';
 import { excerpt, md, rating, sortBy } from "../util/helpers";
 import { Container, Content, HeroImage } from '../view/page';
@@ -7,7 +8,7 @@ import { QuickLinks } from '../view/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../view/site';
 import { Book } from './book';
 import { FsFile } from "/../src/filesys";
-import { RouteInput, RouteOutput } from "/../src/http";
+import { RouteOutput } from "/../src/http";
 
 export class Category implements Routeable {
 
@@ -44,7 +45,7 @@ export class Category implements Routeable {
     return `/${this.slug}.html`;
   }
 
-  get(input: RouteInput): RouteOutput {
+  get(input: AuthedInput): RouteOutput {
     return {
       body: <Html>
         <Head title={this.title}>
@@ -52,7 +53,7 @@ export class Category implements Routeable {
           <link rel="stylesheet" href="/css/base/rating-label.css" />
         </Head>
         <body>
-          <SiteHeader />
+          <SiteHeader user={input.user} />
           <main>
             <HeroImage image={this.imageFilename} />
             <Container>
