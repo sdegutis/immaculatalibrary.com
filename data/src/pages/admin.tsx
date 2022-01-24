@@ -26,6 +26,8 @@ export type AuthedInput = RouteInput & {
 const users: User[] = JSON.parse(usersFile.buffer.toString('utf8'));
 
 function isAdmin(input: RouteInput) {
+  return false;
+
   const matched = input.headers.authorization?.match(/^Basic (.+)$/);
   if (matched?.[1]) {
     const userpass = Buffer.from(matched[1], 'base64').toString('utf8');

@@ -7,6 +7,8 @@ import { RouteOutput } from '/../src/http';
 
 export const staticFiles: StaticFile[] = [];
 
+const MAX_AGE_HOURS = 3;
+
 class StaticFile implements Routeable {
 
   etag;
@@ -18,7 +20,7 @@ class StaticFile implements Routeable {
 
   get(input: AuthedInput): RouteOutput {
     const headers = {
-      'Cache-Control': `max-age=${60 * 60 * 24 * 1}`,
+      'Cache-Control': `max-age=${60 * 60 * MAX_AGE_HOURS}`,
       'ETag': this.etag,
     };
 
