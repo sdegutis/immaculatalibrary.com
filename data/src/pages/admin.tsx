@@ -1,10 +1,16 @@
 import bcrypt from 'bcryptjs';
+import { spawnSync } from 'child_process';
 import usersFile from 'file:/data/users.json';
-import { pullChangesFromGithub } from '../core/restart';
 import { Routeable } from "../core/router";
 import { Head, Html } from "../view/site";
 import { Component } from '../view/types';
 import { RouteHandler, RouteInput, RouteOutput } from "/../src/http";
+
+export function pullChangesFromGithub() {
+  console.log('pullChangesFromGithub(): starting...');
+  spawnSync('git pull', { shell: true, stdio: 'inherit' });
+  console.log('pullChangesFromGithub(): done');
+}
 
 type User = {
   auth: string;

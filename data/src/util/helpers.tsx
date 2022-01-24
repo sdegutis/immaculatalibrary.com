@@ -1,3 +1,4 @@
+import { randomInt } from 'crypto';
 import * as luxon from 'luxon';
 import MarkdownIt from 'markdown-it';
 import { Component } from '../view/types';
@@ -10,8 +11,7 @@ export const md = new MarkdownIt({
 });
 
 export function randomElement<T>(array: T[]): T {
-  const i = Math.floor(Math.random() * array.length);
-  return array[i]!;
+  return array[randomInt(array.length)]!;
 }
 
 export function groupByDate<T extends { date: string }>(array: T[]) {
