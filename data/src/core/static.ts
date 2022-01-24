@@ -17,16 +17,21 @@ class StaticFile implements Routeable {
   }
 
   get(input: AuthedInput): RouteOutput {
+    const headers = {
+      'Cache-Control': `max-age=${60 * 60 * 24 * 1}`,
+      'ETag': this.etag,
+    };
+
     if (input.headers['if-none-match'] === this.etag) {
-      return { status: 304 };
+      return {
+        status: 304,
+        headers,
+      };
     }
 
     return {
-      headers: {
-        'Cache-Control': `max-age=${60 * 60 * 24 * 1}`,
-        'ETag': this.etag,
-      },
       body: this.file.buffer,
+      headers,
     };
   }
 
