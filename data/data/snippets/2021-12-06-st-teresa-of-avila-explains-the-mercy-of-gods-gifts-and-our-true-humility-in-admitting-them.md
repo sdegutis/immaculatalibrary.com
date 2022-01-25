@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'St. Teresa of Avila explains the mercy of God''s gifts and our true humility in admitting them'
+title: 'St. Teresa of Avila explains the mercy of God’s gifts and our true humility in admitting them'
 archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/70?view=theater'
 bookSlug: 'life-of-st-teresa-of-avila'
 ---

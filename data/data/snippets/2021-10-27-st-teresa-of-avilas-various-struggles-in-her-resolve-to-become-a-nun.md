@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'St. Teresa of Avila''s various struggles in her resolve to become a nun'
+title: 'St. Teresa of Avila’s various struggles in her resolve to become a nun'
 archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/15?view=theater'
 bookSlug: 'life-of-st-teresa-of-avila'
 ---

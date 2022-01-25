@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'God''s Curses on Sinful Nations, and Examples from the Bible and History'
+title: 'God’s Curses on Sinful Nations, and Examples from the Bible and History'
 archiveLink: 'https://archive.org/details/sinnersguide00luis/page/222?view=theater'
 bookSlug: 'the-sinners-guide'
 ---

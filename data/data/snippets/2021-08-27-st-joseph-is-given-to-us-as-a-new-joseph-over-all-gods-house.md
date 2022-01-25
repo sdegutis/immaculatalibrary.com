@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'St. Joseph is given to us as a new Joseph over all God''s house'
+title: 'St. Joseph is given to us as a new Joseph over all God’s house'
 archiveLink: 'https://archive.org/details/st.-josephs-life-virtues-privileges-power/page/349?view=theater'
 bookSlug: 'st-joseph-life-his-virtues-his-privileges-his-power'
 ---

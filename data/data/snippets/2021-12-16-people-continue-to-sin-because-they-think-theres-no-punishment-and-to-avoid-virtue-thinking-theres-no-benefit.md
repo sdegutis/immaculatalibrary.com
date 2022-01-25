@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'People continue to sin because they think there''s no punishment, and to avoid virtue thinking there''s no benefit'
+title: 'People continue to sin because they think there’s no punishment, and to avoid virtue thinking there’s no benefit'
 archiveLink: 'https://archive.org/details/sinnersguide00luis/page/121?view=theater'
 bookSlug: 'the-sinners-guide'
 ---

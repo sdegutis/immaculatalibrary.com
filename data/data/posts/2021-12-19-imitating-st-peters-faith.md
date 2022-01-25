@@ -1,5 +1,5 @@
 ---
-title: 'Imitating St. Peter''s faith'
+title: 'Imitating St. Peter’s faith'
 imageFilename: 'https://images.unsplash.com/photo-1449710146567-1e282fa41f2f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'
 imageCaption: 'Photo by <a href="https://unsplash.com/@timmarshall?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Tim Marshall</a> on <a href="https://unsplash.com/s/photos/raging-sea?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>'
 draft: true

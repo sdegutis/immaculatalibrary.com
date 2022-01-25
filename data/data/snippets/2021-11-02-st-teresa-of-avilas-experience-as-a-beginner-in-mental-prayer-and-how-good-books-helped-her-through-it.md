@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'St. Teresa of Avila''s experience as a beginner in mental prayer, and how good books helped her through it'
+title: 'St. Teresa of Avila’s experience as a beginner in mental prayer, and how good books helped her through it'
 archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/22?view=theater'
 bookSlug: 'life-of-st-teresa-of-avila'
 ---

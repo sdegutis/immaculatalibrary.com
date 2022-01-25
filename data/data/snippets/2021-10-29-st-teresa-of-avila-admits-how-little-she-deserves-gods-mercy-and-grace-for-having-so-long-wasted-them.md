@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'St. Teresa of Avila admits how little she deserves God''s mercy and grace for having so long wasted them'
+title: 'St. Teresa of Avila admits how little she deserves God’s mercy and grace for having so long wasted them'
 archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/18?view=theater'
 bookSlug: 'life-of-st-teresa-of-avila'
 ---

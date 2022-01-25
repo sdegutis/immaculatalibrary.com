@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'St. Thomas More''s thorough refutation of the Act of Supremacy'
+title: 'St. Thomas More’s thorough refutation of the Act of Supremacy'
 archiveLink: 'https://archive.org/details/lifeofsirthomasm00ropeuoft/page/90?view=theater'
 bookSlug: 'life-of-sir-thomas-more-by-william-roper'
 ---

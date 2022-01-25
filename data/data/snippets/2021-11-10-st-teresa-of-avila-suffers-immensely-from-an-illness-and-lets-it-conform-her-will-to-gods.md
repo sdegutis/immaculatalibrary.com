@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'St. Teresa of Avila suffers immensely from an illness and lets it conform her will to God''s'
+title: 'St. Teresa of Avila suffers immensely from an illness and lets it conform her will to God’s'
 archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/30?view=theater'
 bookSlug: 'life-of-st-teresa-of-avila'
 ---

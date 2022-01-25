@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'God''s Justice often punishes sin even in this life'
+title: 'God’s Justice often punishes sin even in this life'
 archiveLink: 'https://archive.org/details/sinnersguide00luis/page/295?view=theater'
 bookSlug: 'the-sinners-guide'
 ---

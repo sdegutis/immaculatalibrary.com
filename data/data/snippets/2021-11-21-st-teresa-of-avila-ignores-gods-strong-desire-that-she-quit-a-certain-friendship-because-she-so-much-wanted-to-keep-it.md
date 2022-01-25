@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'St. Teresa of Avila ignores God''s strong desire that she quit a certain friendship, because she so much wanted to keep it'
+title: 'St. Teresa of Avila ignores God’s strong desire that she quit a certain friendship, because she so much wanted to keep it'
 archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/45?view=theater'
 bookSlug: 'life-of-st-teresa-of-avila'
 ---

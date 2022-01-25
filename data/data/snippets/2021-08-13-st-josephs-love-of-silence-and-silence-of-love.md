@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'St. Joseph''s love of silence and silence of love'
+title: 'St. Joseph’s love of silence and silence of love'
 archiveLink: 'https://archive.org/details/lifegloriesofstj00thomuoft/page/384?view=theater'
 bookSlug: 'the-life-and-glories-of-st-joseph'
 ---

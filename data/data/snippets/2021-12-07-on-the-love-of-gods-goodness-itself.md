@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'On the love of God''s goodness itself'
+title: 'On the love of God’s goodness itself'
 archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/61?view=theater'
 bookSlug: 'the-spirit-of-st-francis-de-sales'
 ---

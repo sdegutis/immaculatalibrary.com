@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'Since the Fathers of the Church admitted the Pope''s Supremacy, so can we, despite insults'
+title: 'Since the Fathers of the Church admitted the Pope’s Supremacy, so can we, despite insults'
 archiveLink: 'https://archive.org/details/life-and-writings-of-st-thomas-more/page/301?view=theater'
 bookSlug: 'life-and-writings-of-sir-thomas-more'
 ---

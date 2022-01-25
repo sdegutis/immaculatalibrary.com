@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'Those who Love Sin should be moved at least by Fear of God''s Providence being Armed Against Them'
+title: 'Those who Love Sin should be moved at least by Fear of God’s Providence being Armed Against Them'
 archiveLink: 'https://archive.org/details/sinnersguide00luis/page/141?view=theater'
 bookSlug: 'the-sinners-guide'
 ---

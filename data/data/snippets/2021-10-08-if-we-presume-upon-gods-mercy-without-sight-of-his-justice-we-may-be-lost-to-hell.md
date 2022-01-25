@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'If we presume upon God''s Mercy without sight of His Justice, we may be lost to Hell'
+title: 'If we presume upon God’s Mercy without sight of His Justice, we may be lost to Hell'
 archiveLink: 'https://archive.org/details/sinnersguide00luis/page/270?view=theater'
 bookSlug: 'the-sinners-guide'
 ---

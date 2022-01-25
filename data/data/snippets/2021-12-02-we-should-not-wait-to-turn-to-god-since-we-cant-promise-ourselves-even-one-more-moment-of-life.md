@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'We should not wait to turn to God, since we can''t promise ourselves even one more moment of life'
+title: 'We should not wait to turn to God, since we can’t promise ourselves even one more moment of life'
 archiveLink: 'https://archive.org/details/sinnersguide00luis/page/238?view=theater'
 bookSlug: 'the-sinners-guide'
 ---

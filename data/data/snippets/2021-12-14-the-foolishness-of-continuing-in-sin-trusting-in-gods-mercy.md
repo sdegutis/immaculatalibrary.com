@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'The foolishness of continuing in sin, trusting in God''s mercy'
+title: 'The foolishness of continuing in sin, trusting in God’s mercy'
 archiveLink: 'https://archive.org/details/sinnersguide00luis/page/264?view=theater'
 bookSlug: 'the-sinners-guide'
 ---

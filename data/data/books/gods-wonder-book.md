@@ -8,7 +8,7 @@ score: 0
 rating: 0
 files:
   - archiveId: 'godswonderbook00elleuoft'
-    pdfFile: 'God''s Wonder Book.pdf'
+    pdfFile: 'God’s Wonder Book.pdf'
 storeLinks: []
 ---
 

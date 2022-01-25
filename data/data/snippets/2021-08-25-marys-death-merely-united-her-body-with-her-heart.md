@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'Mary''s death merely united her body with her heart'
+title: 'Mary’s death merely united her body with her heart'
 archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/482?view=theater'
 bookSlug: 'the-glories-of-mary'
 ---

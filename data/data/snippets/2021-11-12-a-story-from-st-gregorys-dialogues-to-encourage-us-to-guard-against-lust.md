@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'A story from St. Gregory''s Dialogues to encourage us to guard against Lust'
+title: 'A story from St. Gregory’s Dialogues to encourage us to guard against Lust'
 archiveLink: 'https://archive.org/details/sinnersguide00luis/page/351'
 bookSlug: 'the-sinners-guide'
 ---

@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'We must trust both in God''s goodness and our weakness'
+title: 'We must trust both in God’s goodness and our weakness'
 archiveLink: 'https://archive.org/details/the-spiritual-combat-dornin-edition/page/110?view=theater'
 bookSlug: 'the-spiritual-combat'
 ---

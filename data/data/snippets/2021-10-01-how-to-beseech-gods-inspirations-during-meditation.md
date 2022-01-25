@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'How to Beseech God''s Inspirations during Meditation'
+title: 'How to Beseech God’s Inspirations during Meditation'
 archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/52?view=theater'
 bookSlug: 'introduction-to-the-devout-life'
 ---

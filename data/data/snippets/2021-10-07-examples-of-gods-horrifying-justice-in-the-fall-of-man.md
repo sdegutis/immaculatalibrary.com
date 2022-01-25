@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'Examples of God''s Horrifying Justice in the Fall of Man'
+title: 'Examples of God’s Horrifying Justice in the Fall of Man'
 archiveLink: 'https://archive.org/details/sinnersguide00luis/page/267?view=theater'
 bookSlug: 'the-sinners-guide'
 ---

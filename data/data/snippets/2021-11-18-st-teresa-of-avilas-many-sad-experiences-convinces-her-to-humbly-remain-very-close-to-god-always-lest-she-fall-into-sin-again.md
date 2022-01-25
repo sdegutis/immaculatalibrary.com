@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'St. Teresa of Avila''s many sad experiences convinces her to humbly remain very close to God always, lest she fall into sin again'
+title: 'St. Teresa of Avila’s many sad experiences convinces her to humbly remain very close to God always, lest she fall into sin again'
 archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/39?view=theater'
 bookSlug: 'life-of-st-teresa-of-avila'
 ---

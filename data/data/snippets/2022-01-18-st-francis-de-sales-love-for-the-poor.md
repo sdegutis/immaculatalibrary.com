@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'St. Francis de Sales'' love for the poor'
+title: 'St. Francis de Sales’ love for the poor'
 archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/138?view=theater'
 bookSlug: 'the-spirit-of-st-francis-de-sales'
 ---

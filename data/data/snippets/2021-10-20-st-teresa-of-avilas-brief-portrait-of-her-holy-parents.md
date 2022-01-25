@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'St. Teresa of Avila''s brief portrait of her holy parents'
+title: 'St. Teresa of Avila’s brief portrait of her holy parents'
 archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/2?view=theater'
 bookSlug: 'life-of-st-teresa-of-avila'
 ---

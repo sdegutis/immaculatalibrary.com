@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'St. Teresa of Avila explains how people don''t fully give themselves to God and yet expect to have Him fully'
+title: 'St. Teresa of Avila explains how people don’t fully give themselves to God and yet expect to have Him fully'
 archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/77?view=theater'
 bookSlug: 'life-of-st-teresa-of-avila'
 ---

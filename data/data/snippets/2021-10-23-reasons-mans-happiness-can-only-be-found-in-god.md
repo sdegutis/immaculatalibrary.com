@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'Reasons man''s happiness can only be found in God'
+title: 'Reasons man’s happiness can only be found in God'
 archiveLink: 'https://archive.org/details/sinnersguide00luis/page/306?view=theater'
 bookSlug: 'the-sinners-guide'
 ---

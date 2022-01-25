@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'St. Teresa of Avila''s purpose for writing her autobiography'
+title: 'St. Teresa of Avila’s purpose for writing her autobiography'
 archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/1?view=theater'
 bookSlug: 'life-of-st-teresa-of-avila'
 ---

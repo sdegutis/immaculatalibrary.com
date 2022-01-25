@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'Mary''s glory is not dimmed by sin or lacking in potential merit'
+title: 'Mary’s glory is not dimmed by sin or lacking in potential merit'
 archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/506?view=theater'
 bookSlug: 'the-glories-of-mary'
 ---

@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'An Example of God''s Terrifying Justice in the Fall of the Angels'
+title: 'An Example of God’s Terrifying Justice in the Fall of the Angels'
 archiveLink: 'https://archive.org/details/sinnersguide00luis/page/266?view=theater'
 bookSlug: 'the-sinners-guide'
 ---

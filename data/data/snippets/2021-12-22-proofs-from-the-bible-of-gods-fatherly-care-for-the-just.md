@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'Proofs from the Bible of God''s Fatherly Care for the Just'
+title: 'Proofs from the Bible of God’s Fatherly Care for the Just'
 archiveLink: 'https://archive.org/details/sinnersguide00luis/page/132?view=theater'
 bookSlug: 'the-sinners-guide'
 ---

@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'Not only the Glorious Angels but also The Lord of Glory Himself came to glorify Mary''s Glorious Entrance into Heaven'
+title: 'Not only the Glorious Angels but also The Lord of Glory Himself came to glorify Mary’s Glorious Entrance into Heaven'
 archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/497?view=theater'
 bookSlug: 'the-glories-of-mary'
 ---

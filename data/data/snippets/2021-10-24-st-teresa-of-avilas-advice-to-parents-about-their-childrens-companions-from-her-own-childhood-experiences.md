@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'St. Teresa of Avila''s advice to parents about their children''s companions from her own childhood experiences'
+title: 'St. Teresa of Avila’s advice to parents about their children’s companions from her own childhood experiences'
 archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/8?view=theater'
 bookSlug: 'life-of-st-teresa-of-avila'
 ---

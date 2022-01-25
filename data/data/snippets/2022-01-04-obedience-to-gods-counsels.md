@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'Obedience to God''s Counsels'
+title: 'Obedience to God’s Counsels'
 archiveLink: 'https://archive.org/details/sinnersguide00luis/page/437?view=theater'
 bookSlug: 'the-sinners-guide'
 ---

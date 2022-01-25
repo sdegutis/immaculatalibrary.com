@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'Some of the devil''s strategies'
+title: 'Some of the devil’s strategies'
 archiveLink: 'https://archive.org/details/the-spiritual-combat-dornin-edition/page/107?view=theater'
 bookSlug: 'the-spiritual-combat'
 ---

@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'Hopeless evildoer saved by the Blessed Virgin''s intercession'
+title: 'Hopeless evildoer saved by the Blessed Virgin’s intercession'
 archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/471?view=theater'
 bookSlug: 'the-glories-of-mary'
 ---

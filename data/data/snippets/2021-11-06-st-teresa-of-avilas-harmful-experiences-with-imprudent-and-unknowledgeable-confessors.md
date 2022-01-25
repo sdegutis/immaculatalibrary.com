@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'St. Teresa of Avila''s harmful experiences with imprudent and unknowledgeable confessors'
+title: 'St. Teresa of Avila’s harmful experiences with imprudent and unknowledgeable confessors'
 archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/26?view=theater'
 bookSlug: 'life-of-st-teresa-of-avila'
 ---

@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'How God rewarded St. Teresa of Avila''s holy reading and good desires in the beginning of her devout life'
+title: 'How God rewarded St. Teresa of Avila’s holy reading and good desires in the beginning of her devout life'
 archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/23?view=theater'
 bookSlug: 'life-of-st-teresa-of-avila'
 ---

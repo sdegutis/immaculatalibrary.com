@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'St. Augustine''s conversion shows us that God''s grace is within everyone''s reach'
+title: 'St. Augustine’s conversion shows us that God’s grace is within everyone’s reach'
 archiveLink: 'https://archive.org/details/sinnersguide00luis/page/288/mode/1up?view=theater'
 bookSlug: 'the-sinners-guide'
 ---

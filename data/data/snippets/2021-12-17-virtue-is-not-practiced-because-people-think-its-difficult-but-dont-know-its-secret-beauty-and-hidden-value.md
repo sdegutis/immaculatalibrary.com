@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'Virtue is not practiced because people think it''s difficult, but don''t know its secret beauty and hidden value'
+title: 'Virtue is not practiced because people think it’s difficult, but don’t know its secret beauty and hidden value'
 archiveLink: 'https://archive.org/details/sinnersguide00luis/page/123?view=theater'
 bookSlug: 'the-sinners-guide'
 ---

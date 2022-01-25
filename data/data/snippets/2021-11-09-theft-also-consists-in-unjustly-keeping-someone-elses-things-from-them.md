@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'Theft also consists in unjustly keeping someone else''s things from them'
+title: 'Theft also consists in unjustly keeping someone else’s things from them'
 archiveLink: 'https://archive.org/details/sinnersguide00luis/page/341?view=theater'
 bookSlug: 'the-sinners-guide'
 ---

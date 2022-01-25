@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'Peace comes from our virtue, mastery over our desires, the gift of spiritual consolations, and confidence in God''s loving protection'
+title: 'Peace comes from our virtue, mastery over our desires, the gift of spiritual consolations, and confidence in God’s loving protection'
 archiveLink: 'https://archive.org/details/sinnersguide00luis/page/202?view=theater'
 bookSlug: 'the-sinners-guide'
 ---

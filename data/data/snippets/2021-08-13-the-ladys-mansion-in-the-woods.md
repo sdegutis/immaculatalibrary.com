@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'The Lady''s Mansion in the Woods'
+title: 'The Lady’s Mansion in the Woods'
 archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/453?view=theater'
 bookSlug: 'the-glories-of-mary'
 ---

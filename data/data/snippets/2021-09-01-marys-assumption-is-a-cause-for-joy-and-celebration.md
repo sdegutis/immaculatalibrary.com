@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'Mary''s Assumption is a cause for Joy and Celebration'
+title: 'Mary’s Assumption is a cause for Joy and Celebration'
 archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/496?view=theater'
 bookSlug: 'the-glories-of-mary'
 ---

@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'God''s love is behind everything bad that happens to us'
+title: 'God’s love is behind everything bad that happens to us'
 archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/57?view=theater'
 bookSlug: 'the-spirit-of-st-francis-de-sales'
 ---

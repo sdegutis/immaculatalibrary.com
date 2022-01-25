@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'St. Teresa of Avila''s illness leads her to a Book on Prayer and Recollection'
+title: 'St. Teresa of Avila’s illness leads her to a Book on Prayer and Recollection'
 archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/19?view=theater'
 bookSlug: 'life-of-st-teresa-of-avila'
 ---

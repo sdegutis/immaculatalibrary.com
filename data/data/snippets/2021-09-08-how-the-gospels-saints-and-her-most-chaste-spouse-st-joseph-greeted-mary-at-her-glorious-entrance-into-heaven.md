@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'How the Gospel''s Saints and her Most Chaste Spouse St. Joseph greeted Mary at her Glorious Entrance into Heaven'
+title: 'How the Gospel’s Saints and her Most Chaste Spouse St. Joseph greeted Mary at her Glorious Entrance into Heaven'
 archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/503?view=theater'
 bookSlug: 'the-glories-of-mary'
 ---

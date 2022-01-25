@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'Mary''s sacrifice co-redeemed us with Jesus'
+title: 'Mary’s sacrifice co-redeemed us with Jesus'
 archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/467?view=theater'
 bookSlug: 'the-glories-of-mary'
 ---

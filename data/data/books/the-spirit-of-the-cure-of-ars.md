@@ -2,7 +2,7 @@
 title: 'The Spirit Of The Cure Of Ars'
 subtitle: ''
 dateAdded: '2020-10-08'
-author: 'M. L''Abbe Monnin'
+author: 'M. L’Abbe Monnin'
 translator: ''
 score: 0
 rating: 0

@@ -1,5 +1,5 @@
 ---
-title: 'Don''t hate yourself'
+title: 'Don’t hate yourself'
 imageFilename: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/StJohnsAshfield_StainedGlass_GoodShepherd_Portrait.jpg/1280px-StJohnsAshfield_StainedGlass_GoodShepherd_Portrait.jpg'
 imageCaption: '"I am the Good Shepherd"'
 draft: true

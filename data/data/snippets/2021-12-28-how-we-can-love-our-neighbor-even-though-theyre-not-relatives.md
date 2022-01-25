@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'How we can love our neighbor even though they''re not relatives'
+title: 'How we can love our neighbor even though they’re not relatives'
 archiveLink: 'https://archive.org/details/sinnersguide00luis/page/426?view=theater'
 bookSlug: 'the-sinners-guide'
 ---

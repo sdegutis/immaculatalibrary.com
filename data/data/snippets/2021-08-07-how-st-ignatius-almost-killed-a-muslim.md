@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'An example of St. Ignatius''s early struggles with discernment'
+title: 'An example of St. Ignatius’s early struggles with discernment'
 archiveLink: 'https://archive.org/details/stignatiusautobi00ignauoft/page/n45?view=theater'
 bookSlug: 'the-autobiography-of-st-ignatius-of-loyola'
 ---

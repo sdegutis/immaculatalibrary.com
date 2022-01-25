@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'St. Teresa of Avila''s father dies'
+title: 'St. Teresa of Avila’s father dies'
 archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/50?view=theater'
 bookSlug: 'life-of-st-teresa-of-avila'
 ---

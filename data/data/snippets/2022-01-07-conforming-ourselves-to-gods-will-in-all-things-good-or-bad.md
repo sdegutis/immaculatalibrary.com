@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'Conforming ourselves to God''s will in all things, good or bad'
+title: 'Conforming ourselves to God’s will in all things, good or bad'
 archiveLink: 'https://archive.org/details/sinnersguide00luis/page/441?view=theater'
 bookSlug: 'the-sinners-guide'
 ---

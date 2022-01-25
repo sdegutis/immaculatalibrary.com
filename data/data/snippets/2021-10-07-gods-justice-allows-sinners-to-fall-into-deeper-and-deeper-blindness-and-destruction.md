@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'God''s Justice allows sinners to fall into deeper and deeper blindness and destruction'
+title: 'God’s Justice allows sinners to fall into deeper and deeper blindness and destruction'
 archiveLink: 'https://archive.org/details/sinnersguide00luis/page/269?view=theater'
 bookSlug: 'the-sinners-guide'
 ---

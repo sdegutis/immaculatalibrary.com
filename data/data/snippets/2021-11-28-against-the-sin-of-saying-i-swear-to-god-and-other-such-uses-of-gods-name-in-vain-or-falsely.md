@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'Against the sin of saying "I swear to God" and other such uses of God''s name in vain or falsely'
+title: 'Against the sin of saying "I swear to God" and other such uses of God’s name in vain or falsely'
 archiveLink: 'https://archive.org/details/sinnersguide00luis/page/374?view=theater'
 bookSlug: 'the-sinners-guide'
 ---

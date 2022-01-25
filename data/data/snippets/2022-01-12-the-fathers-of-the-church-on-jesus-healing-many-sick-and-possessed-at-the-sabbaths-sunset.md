@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'The Fathers of the Church on Jesus healing many sick and possessed at the Sabbath''s sunset'
+title: 'The Fathers of the Church on Jesus healing many sick and possessed at the Sabbath’s sunset'
 archiveLink: 'https://archive.org/details/catenaaureacomm02thom/page/n40?view=theater'
 bookSlug: 'catena-aurea'
 ---

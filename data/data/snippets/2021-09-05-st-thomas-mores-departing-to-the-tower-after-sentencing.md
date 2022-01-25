@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'St. Thomas More''s farewell to his daughter after sentencing'
+title: 'St. Thomas More’s farewell to his daughter after sentencing'
 archiveLink: 'https://archive.org/details/lifeofsirthomasm00ropeuoft/page/95?view=theater'
 bookSlug: 'life-of-sir-thomas-more-by-william-roper'
 ---

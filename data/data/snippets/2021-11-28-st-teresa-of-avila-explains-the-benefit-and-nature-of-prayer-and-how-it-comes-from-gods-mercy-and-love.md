@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'St. Teresa of Avila explains the benefit and nature of Prayer and how it comes from God''s mercy and love'
+title: 'St. Teresa of Avila explains the benefit and nature of Prayer and how it comes from God’s mercy and love'
 archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/58?view=theater'
 bookSlug: 'life-of-st-teresa-of-avila'
 ---

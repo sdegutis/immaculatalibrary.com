@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'Prayers for St. Joseph''s patronage'
+title: 'Prayers for St. Joseph’s patronage'
 archiveLink: 'https://archive.org/details/st.-josephs-life-virtues-privileges-power/page/346?view=theater'
 bookSlug: 'st-joseph-life-his-virtues-his-privileges-his-power'
 ---

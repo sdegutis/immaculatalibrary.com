@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'St. Teresa of Avila increases her resignation to God''s will through intense suffering and a long paralysis'
+title: 'St. Teresa of Avila increases her resignation to God’s will through intense suffering and a long paralysis'
 archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/33?view=theater'
 bookSlug: 'life-of-st-teresa-of-avila'
 ---

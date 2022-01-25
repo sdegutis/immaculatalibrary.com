@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'The Fathers of the Church on the healing of Simon Peter''s mother-in-law'
+title: 'The Fathers of the Church on the healing of Simon Peter’s mother-in-law'
 archiveLink: 'https://archive.org/details/catenaaureacomm02thom/page/n38/mode/1up?view=theater'
 bookSlug: 'catena-aurea'
 ---

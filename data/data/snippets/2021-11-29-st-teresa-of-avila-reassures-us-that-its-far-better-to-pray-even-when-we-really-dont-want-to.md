@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'St. Teresa of Avila reassures us that it''s far better to pray, even when we really don''t want to'
+title: 'St. Teresa of Avila reassures us that it’s far better to pray, even when we really don’t want to'
 archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/60?view=theater'
 bookSlug: 'life-of-st-teresa-of-avila'
 ---

@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'Although there''s not much hope in death-bed repentances, there is Hope now while we still have time to turn to God and away from sin'
+title: 'Although there’s not much hope in death-bed repentances, there is Hope now while we still have time to turn to God and away from sin'
 archiveLink: 'https://archive.org/details/sinnersguide00luis/page/262?view=theater'
 bookSlug: 'the-sinners-guide'
 ---

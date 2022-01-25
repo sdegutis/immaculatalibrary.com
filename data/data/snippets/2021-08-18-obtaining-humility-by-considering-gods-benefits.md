@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'Obtaining Humility by Considering God''s Benefits'
+title: 'Obtaining Humility by Considering God’s Benefits'
 archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/106?view=theater'
 bookSlug: 'introduction-to-the-devout-life'
 ---
