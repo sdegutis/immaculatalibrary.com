@@ -11,7 +11,7 @@ import { Runtime } from "./runtime";
 class Site {
 
   handler!: RouteHandler;
-  #filesys = new FileSys('data');
+  filesys = new FileSys('app');
   #runtime: Runtime | undefined;
   persisted = Object.create(null);
 
@@ -21,7 +21,7 @@ class Site {
 
   build() {
     console.log('Building site');
-    const root = this.#filesys.load();
+    const root = this.filesys.load();
 
     this.#runtime?.shutdown();
     this.#runtime = new Runtime(this.persisted, root, jsxCreateStringifiedElement);
@@ -53,7 +53,7 @@ function restartSite() {
 }
 
 let timeout: NodeJS.Timeout | null = null;
-chokidar.watch('data', { ignoreInitial: true }).on('all', (e, p) => {
+chokidar.watch(site.filesys.fsBase, { ignoreInitial: true }).on('all', (e, p) => {
   if (timeout) clearTimeout(timeout);
   timeout = setTimeout(restartSite, 100);
 });
