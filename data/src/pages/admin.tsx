@@ -1,17 +1,9 @@
-import bcrypt from 'bcryptjs';
-import { spawnSync } from 'child_process';
 import usersFile from 'file:/data/users.json';
 import { Routeable } from "../core/router";
 import { Container, Content, HeroImage } from '../view/page';
 import { QuickLinks } from '../view/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../view/site';
 import { RouteHandler, RouteInput, RouteOutput } from "/../src/http";
-
-export function pullChangesFromGithub() {
-  console.log('pullChangesFromGithub(): starting...');
-  spawnSync('git pull', { shell: true, stdio: 'inherit' });
-  console.log('pullChangesFromGithub(): done');
-}
 
 export type User = {
   auth: string;
@@ -26,14 +18,12 @@ export type AuthedInput = RouteInput & {
 const users: User[] = JSON.parse(usersFile.buffer.toString('utf8'));
 
 function isAdmin(input: RouteInput) {
-  return false;
-
-  const matched = input.headers.authorization?.match(/^Basic (.+)$/);
-  if (matched?.[1]) {
-    const userpass = Buffer.from(matched[1], 'base64').toString('utf8');
-    const user = users.find(existing => bcrypt.compareSync(userpass, existing.auth));
-    if (user) return user;
-  }
+  // const matched = input.headers.authorization?.match(/^Basic (.+)$/);
+  // if (matched?.[1]) {
+  //   const userpass = Buffer.from(matched[1], 'base64').toString('utf8');
+  //   const user = users.find(existing => bcrypt.compareSync(userpass, existing.auth));
+  //   if (user) return user;
+  // }
   return null;
 }
 
@@ -86,17 +76,6 @@ export const restartSiteRoute: Routeable = {
   })
 };
 
-export const pullChangesRoute: Routeable = {
-  route: '/admin/pull',
-  get: guardAuth((input) => {
-    pullChangesFromGithub();
-    return {
-      status: 302,
-      headers: { 'Location': input.headers.referer },
-    };
-  })
-};
-
 export const loginRoute: Routeable = {
   route: '/login',
   get: guardAuth((input) => {
@@ -123,7 +102,6 @@ export const logoutRoute: Routeable = {
 
 export const adminPages: Routeable[] = [
   restartSiteRoute,
-  pullChangesRoute,
   loginRoute,
   logoutRoute,
 ];

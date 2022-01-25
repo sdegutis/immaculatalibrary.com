@@ -7,6 +7,8 @@ import { RouteHandler } from './http';
 import { jsxCreateStringifiedElement } from "./jsx-stringify";
 import { Runtime } from "./runtime";
 
+process.env.TZ = 'America/Chicago';
+
 class Site {
 
   handler!: RouteHandler;

@@ -1,4 +1,4 @@
-import { loginRoute, logoutRoute, pullChangesRoute, restartSiteRoute, User } from "../pages/admin";
+import { loginRoute, logoutRoute, restartSiteRoute, User } from "../pages/admin";
 import { Component } from "./types";
 
 export const Html: Component<{}> = (attrs, children) => <>
