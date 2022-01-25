@@ -17,11 +17,12 @@ persisted.sessions ??= new Map<string, Session>();
 
 export function enrichAuth(handler: (input: EnrichedInput) => RouteOutput): RouteHandler {
   return input => {
-    const cookieKvs = input.headers.cookie?.split('; ');
-    const cookiePairs = cookieKvs?.map(kv => kv.split('=') as [string, string]);
-    const cookies = cookiePairs && Object.fromEntries(cookiePairs);
-    const isAdmin = (!!cookies?.['wwwiii'] && persisted.sessions.get(cookies['wwwiii'])?.isAdmin) ?? false;
-    return handler({ ...input, session: persisted.sessions.get(cookies['wwwiii']) });
+    return handler({ ...input, session: null });
+    // const cookieKvs = input.headers.cookie?.split('; ');
+    // const cookiePairs = cookieKvs?.map(kv => kv.split('=') as [string, string]);
+    // const cookies = cookiePairs && Object.fromEntries(cookiePairs);
+    // const isAdmin = (!!cookies?.['wwwiii'] && persisted.sessions.get(cookies['wwwiii'])?.isAdmin) ?? false;
+    // return handler({ ...input, session: persisted.sessions.get(cookies['wwwiii']) });
   };
 }
 
