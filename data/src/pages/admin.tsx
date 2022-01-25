@@ -17,19 +17,19 @@ persisted.sessions ??= new Map<string, Session>();
 
 export function enrichAuth(handler: (input: EnrichedInput) => RouteOutput): RouteHandler {
   return input => {
-    return handler({ ...input, session: null });
-    // const cookieKvs = input.headers.cookie?.split('; ');
-    // const cookiePairs = cookieKvs?.map(kv => kv.split('=') as [string, string]);
-    // const cookies = cookiePairs && Object.fromEntries(cookiePairs);
-    // const isAdmin = (!!cookies?.['wwwiii'] && persisted.sessions.get(cookies['wwwiii'])?.isAdmin) ?? false;
-    // return handler({ ...input, session: persisted.sessions.get(cookies['wwwiii']) });
+    const cookieKvs = input.headers.cookie?.split('; ');
+    const cookiePairs = cookieKvs?.map(kv => kv.split('=') as [string, string]);
+    const cookies = cookiePairs && Object.fromEntries(cookiePairs);
+    const sessionId = cookies?.['wwwiii'] || null;
+    const session = sessionId ? persisted.sessions.get(sessionId) ?? null : null;
+    return handler({ ...input, session });
   };
 }
 
 function guardAuth(handler: RouteHandler): RouteHandler {
   return enrichAuth(input => {
-    if (input.isAdmin) {
-      return notAllowedResponse();
+    if (!input.session?.isAdmin) {
+      return notAllowedResponse(input);
     }
 
     return handler(input);
@@ -68,7 +68,7 @@ export const loginRoute: Routeable = {
       }
     }
 
-    return notAllowedResponse();
+    return notAllowedResponse(input);
   }
 };
 
@@ -78,8 +78,8 @@ export const logoutRoute: Routeable = {
     return {
       status: 302,
       headers: {
-        'Location': '/hmm',
-        'Set-Cookie': `wwwiii=foo; max-age=0`,
+        'Location': '/',
+        'Set-Cookie': `wwwiii=; Max-Age=1; Path=/`,
       }
     };
   }
@@ -91,7 +91,7 @@ export const adminPages: Routeable[] = [
   logoutRoute,
 ];
 
-function notAllowedResponse() {
+function notAllowedResponse(input: EnrichedInput) {
   const image = '/img/821px-Pope-peter_pprubens.jpg';
   return {
     status: 401,
@@ -99,7 +99,7 @@ function notAllowedResponse() {
     body: <Html>
       <Head />
       <body>
-        <SiteHeader isAdmin={false} />
+        <SiteHeader input={input} />
         <main>
           <HeroImage image={image} />
           <Container>

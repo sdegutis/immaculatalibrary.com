@@ -26,8 +26,6 @@ for (const snippet of publishedSnippets) {
 const routes = loadRoutes();
 
 export function routeHandler(input: RouteInput): RouteOutput {
-  // console.log(input.headers)
-
   const key = `${input.method} ${input.url.pathname}`;
   const handler = routes.get(key);
   let output: RouteOutput;
