@@ -53,7 +53,7 @@ function restartSite() {
 }
 
 let timeout: NodeJS.Timeout | null = null;
-chokidar.watch('data/src', { ignoreInitial: true }).on('all', (e, p) => {
+chokidar.watch('data', { ignoreInitial: true }).on('all', (e, p) => {
   if (timeout) clearTimeout(timeout);
   timeout = setTimeout(restartSite, 100);
 });
