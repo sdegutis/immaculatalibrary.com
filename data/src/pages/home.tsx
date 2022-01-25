@@ -16,7 +16,7 @@ export const homePage: Routeable = {
             <link rel="stylesheet" href="/css/layout/home.css" />
           </Head>
           <body>
-            <SiteHeader user={input.user} />
+            <SiteHeader input={input} />
 
             <main>
 

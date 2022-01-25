@@ -3,6 +3,14 @@ const __dir: import('../src/filesys').FsDir;
 
 function restartSite(): void;
 
+interface Session {
+  isAdmin: boolean;
+}
+
+const persisted: {
+  sessions: Map<string, Session>;
+};
+
 module JSX {
   type IntrinsicElements = import('../src/jsx-stringify').IntrinsicElements;
   type Element = import('../src/jsx-stringify').Element;

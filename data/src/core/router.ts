@@ -4,7 +4,7 @@ import { allMovies, allMoviesPage } from "../model/movie";
 import { allPages } from "../model/page";
 import { allPosts, allPostsPage } from "../model/post";
 import { allSnippets, allSnippetsPage, bookSnippetSearch } from "../model/snippet";
-import { adminPages, AuthedInput } from "../pages/admin";
+import { adminPages, EnrichedInput } from "../pages/admin";
 import { homePage } from "../pages/home";
 import { randomBookPage } from "../pages/random-book";
 import { bookSnippetRandom, randomSnippetPage } from "../pages/random-snippet";
@@ -12,7 +12,7 @@ import { makeSitemap } from "../pages/sitemap";
 import { staticFiles } from "./static";
 import { RouteOutput } from "/../src/http";
 
-type AuthedRouteHandler = (input: AuthedInput) => RouteOutput;
+type AuthedRouteHandler = (input: EnrichedInput) => RouteOutput;
 
 export interface Routeable {
   route: string;

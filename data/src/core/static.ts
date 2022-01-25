@@ -1,6 +1,6 @@
 import { createHash } from 'crypto';
 import publicDir from 'dir:../../public/';
-import { AuthedInput } from '../pages/admin';
+import { EnrichedInput } from '../pages/admin';
 import { Routeable } from './router';
 import { FsDir, FsFile } from '/../src/filesys';
 import { RouteOutput } from '/../src/http';
@@ -18,7 +18,7 @@ class StaticFile implements Routeable {
     this.etag = `"${createHash('sha256').update(file.buffer).digest().toString('base64')}"`;
   }
 
-  get(input: AuthedInput): RouteOutput {
+  get(input: EnrichedInput): RouteOutput {
     const headers = {
       'Cache-Control': `max-age=${60 * 60 * MAX_AGE_HOURS}`,
       'ETag': this.etag,

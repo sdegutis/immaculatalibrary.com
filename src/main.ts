@@ -1,4 +1,5 @@
 import chokidar from 'chokidar';
+import 'dotenv/config';
 import express from 'express';
 import 'source-map-support/register';
 import { URL, URLSearchParams } from 'url';
@@ -7,13 +8,12 @@ import { RouteHandler } from './http';
 import { jsxCreateStringifiedElement } from "./jsx-stringify";
 import { Runtime } from "./runtime";
 
-process.env.TZ = 'America/Chicago';
-
 class Site {
 
   handler!: RouteHandler;
   #filesys = new FileSys('data');
   #runtime: Runtime | undefined;
+  persisted = Object.create(null);
 
   constructor() {
     this.build();
@@ -24,7 +24,7 @@ class Site {
     const root = this.#filesys.load();
 
     this.#runtime?.shutdown();
-    this.#runtime = new Runtime(root, jsxCreateStringifiedElement);
+    this.#runtime = new Runtime(this.persisted, root, jsxCreateStringifiedElement);
 
     const mainFile = root.find('/src/main')! as FsFile;
     const mainModule = this.#runtime.modules.get(mainFile)!;
@@ -58,12 +58,10 @@ chokidar.watch('data/src', { ignoreInitial: true }).on('all', (e, p) => {
   timeout = setTimeout(restartSite, 100);
 });
 
-const baseUrl = 'https://www.immaculatalibrary.com/';
-const port = 8080;
+const baseUrl = process.env['BASE_URL'];
 const server = express();
 server.set('trust proxy', 1);
 server.set('query parser', (s: string) => new URLSearchParams(s ?? ''));
-// server.use(express.raw({ type: '*/*', limit: '100mb' }));
 server.disable('x-powered-by');
 
 server.use((req, res, next) => {
@@ -84,6 +82,6 @@ server.use((req, res, next) => {
   res.end(output.body ?? '');
 });
 
-server.listen(port, () => {
-  console.log(`Running on http://localhost:${port}`);
+server.listen(8080, () => {
+  console.log(`Running on http://localhost:8080`);
 });

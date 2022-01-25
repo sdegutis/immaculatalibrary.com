@@ -1,6 +1,6 @@
 import postsdir from 'dir:/data/posts/';
 import { Routeable } from '../core/router';
-import { AuthedInput } from '../pages/admin';
+import { EnrichedInput } from '../pages/admin';
 import { loadContentFile } from '../util/data-files';
 import { excerpt, format_date, md, reading_mins, ShareLinks, sortBy } from "../util/helpers";
 import { Container, Content, HeroImage } from '../view/page';
@@ -61,14 +61,14 @@ export class Post implements Routeable {
     return `/posts/${this.date}-${this.slug}.html`;
   }
 
-  get(input: AuthedInput): RouteOutput {
+  get(input: EnrichedInput): RouteOutput {
     return {
       body: <Html>
         <Head title={this.title}>
           <link rel="stylesheet" href="/css/layout/post.css" />
         </Head>
         <body>
-          <SiteHeader user={input.user} />
+          <SiteHeader input={input} />
           <main>
             <HeroImage image={this.imageFilename} />
             <Container>
@@ -114,7 +114,7 @@ export const allPostsPage: Routeable = {
             <link rel="stylesheet" href="/css/layout/posts.css" />
           </Head>
           <body>
-            <SiteHeader user={input.user} />
+            <SiteHeader input={input} />
             <main>
               <HeroImage image={image} />
               <Container split={false}>

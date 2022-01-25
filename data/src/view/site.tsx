@@ -1,4 +1,4 @@
-import { loginRoute, logoutRoute, restartSiteRoute, User } from "../pages/admin";
+import { EnrichedInput, loginRoute, logoutRoute, restartSiteRoute } from "../pages/admin";
 import { Component } from "./types";
 
 export const Html: Component<{}> = (attrs, children) => <>
@@ -72,7 +72,7 @@ export const Head: Component<{ imagePath?: string, title?: string, description?:
   </head>
 </>;
 
-export const SiteHeader: Component<{ user: User | null }> = (attrs, children) => <>
+export const SiteHeader: Component<{ input: EnrichedInput }> = (attrs, children) => <>
   <header id="site-header">
     <nav class="container">
       <a href="/">Immaculata Library</a>
@@ -94,7 +94,7 @@ export const SiteHeader: Component<{ user: User | null }> = (attrs, children) =>
       </ul>
     </nav>
   </header>
-  {attrs.user && <>
+  {attrs.input.session?.isAdmin && <>
     <header>
       <nav class="container" style='display: flex; gap: 0.5em'>
         <a href={restartSiteRoute.route}>Restart Now</a>

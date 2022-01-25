@@ -16,10 +16,12 @@ export class Runtime {
   #intervals: NodeJS.Timer[] = [];
 
   constructor(
+    private persisted: any,
     public root: FsDir,
     public jsxCreateElement?: JsxCreateElement,
   ) {
     this.context = vm.createContext({
+      persisted,
       console,
       Buffer,
       setTimeout: (fn: () => void, ms: number) => this.#setTimeout(fn, ms),

@@ -7,7 +7,7 @@ import { allCategories } from './model/category';
 import { publishedSnippets } from './model/snippet';
 import { notFoundPage } from './pages/404';
 import { errorPage } from './pages/500';
-import { discoverAuth } from './pages/admin';
+import { enrichAuth } from './pages/admin';
 
 for (const book of allBooks) {
   for (const cat of allCategories) {
@@ -26,21 +26,23 @@ for (const snippet of publishedSnippets) {
 const routes = loadRoutes();
 
 export function routeHandler(input: RouteInput): RouteOutput {
+  // console.log(input.headers)
+
   const key = `${input.method} ${input.url.pathname}`;
   const handler = routes.get(key);
   let output: RouteOutput;
 
   try {
     if (handler) {
-      output = discoverAuth(handler)(input);
+      output = enrichAuth(handler)(input);
     }
     else {
-      output = discoverAuth(notFoundPage)(input);
+      output = enrichAuth(notFoundPage)(input);
     }
   }
   catch (e) {
     console.error(e);
-    output = discoverAuth(errorPage)(input);
+    output = enrichAuth(errorPage)(input);
   }
 
   output.headers ??= {};

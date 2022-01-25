@@ -1,10 +1,10 @@
 import { Container, Content, HeroImage } from "../view/page";
 import { QuickLinks } from "../view/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "../view/site";
-import { AuthedInput } from "./admin";
+import { EnrichedInput } from "./admin";
 import { RouteOutput } from "/../src/http";
 
-export function errorPage(input: AuthedInput): RouteOutput {
+export function errorPage(input: EnrichedInput): RouteOutput {
   const title = 'Something went wrong';
   const image = '/img/404-big.jpg';
   return {
@@ -12,7 +12,7 @@ export function errorPage(input: AuthedInput): RouteOutput {
     body: <Html>
       <Head title={title} />
       <body>
-        <SiteHeader user={input.user} />
+        <SiteHeader input={input} />
         <main>
           <HeroImage image={image} />
           <Container>

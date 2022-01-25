@@ -1,6 +1,6 @@
 import pagesDir from 'dir:/data/pages/';
 import { Routeable } from '../core/router';
-import { AuthedInput } from '../pages/admin';
+import { EnrichedInput } from '../pages/admin';
 import { loadContentFile } from '../util/data-files';
 import { md } from "../util/helpers";
 import { Container, Content, HeroImage } from '../view/page';
@@ -36,13 +36,13 @@ export class Page implements Routeable {
     return `/${this.slug}.html`;
   }
 
-  get(input: AuthedInput): RouteOutput {
+  get(input: EnrichedInput): RouteOutput {
     return {
       body: <Html>
         <Head title={this.title}>
         </Head>
         <body>
-          <SiteHeader user={input.user} />
+          <SiteHeader input={input} />
           <main>
             <HeroImage image={this.imageFilename} />
             <Container>

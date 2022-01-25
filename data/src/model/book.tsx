@@ -1,6 +1,6 @@
 import booksDir from 'dir:/data/books/';
 import { Routeable } from '../core/router';
-import { AuthedInput } from '../pages/admin';
+import { EnrichedInput } from '../pages/admin';
 import { loadContentFile } from '../util/data-files';
 import { excerpt, md, rating, ShareLinks, sortBy, striptags } from "../util/helpers";
 import { Container, Content, HeroImage } from '../view/page';
@@ -76,7 +76,7 @@ export class Book implements Routeable {
     return `/books/${this.slug}.html`;
   }
 
-  get(input: AuthedInput): RouteOutput {
+  get(input: EnrichedInput): RouteOutput {
     return {
       body: <Html>
         <Head title={this.title} description={striptags(excerpt(this.markdownContent))}>
@@ -84,7 +84,7 @@ export class Book implements Routeable {
           <link rel="stylesheet" href="/css/base/rating-label.css" />
         </Head>
         <body>
-          <SiteHeader user={input.user} />
+          <SiteHeader input={input} />
           <main>
             <HeroImage image={this.category.imageFilename} />
             <Container>
@@ -235,7 +235,7 @@ export const allBooksPage: Routeable = {
           <Head title={title}>
           </Head>
           <body>
-            <SiteHeader user={input.user} />
+            <SiteHeader input={input} />
             <main>
               <HeroImage image={image} />
               <Container>

@@ -1,6 +1,6 @@
 import snippetsDir from 'dir:/data/snippets/';
 import { Routeable } from '../core/router';
-import { AuthedInput } from '../pages/admin';
+import { EnrichedInput } from '../pages/admin';
 import { loadContentFile, saveContentFile } from '../util/data-files';
 import { extract_page_number, format_date, groupByDate, md, reading_mins, ShareLinks, sortBy } from "../util/helpers";
 import { LatestBookSnippets } from '../view/latest-snippets';
@@ -80,14 +80,14 @@ export class Snippet implements Routeable {
     return this.book.category.imageFilename;
   }
 
-  get(input: AuthedInput): RouteOutput {
+  get(input: EnrichedInput): RouteOutput {
     return {
       body: <Html>
         <Head title={this.title}>
           <link rel="stylesheet" href="/css/layout/book-snippet.css" />
         </Head>
         <body>
-          <SiteHeader user={input.user} />
+          <SiteHeader input={input} />
           <main>
             <HeroImage image={this.image} />
             <Container>
@@ -139,7 +139,7 @@ export const allSnippetsPage: Routeable = {
             <link rel="stylesheet" href="/css/layout/book-snippets.css" />
           </Head>
           <body>
-            <SiteHeader user={input.user} />
+            <SiteHeader input={input} />
             <main>
               <HeroImage image={image} />
               <Container>
