@@ -12,8 +12,8 @@ const persisted: {
 };
 
 module JSX {
-  type IntrinsicElements = import('../src/jsx-stringify').IntrinsicElements;
-  type Element = import('../src/jsx-stringify').Element;
+  type IntrinsicElements = import('../src/jsx').IntrinsicElements;
+  type Element = import('../src/jsx').Element;
 }
 
 module 'dir:*/' {

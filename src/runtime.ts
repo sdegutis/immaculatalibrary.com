@@ -16,7 +16,7 @@ export class Runtime {
   #intervals: NodeJS.Timer[] = [];
 
   constructor(
-    private persisted: any,
+    persisted: any,
     public root: FsDir,
     public jsxCreateElement?: JsxCreateElement,
   ) {
