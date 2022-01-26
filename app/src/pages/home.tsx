@@ -88,7 +88,7 @@ const redirectHomePageRoute: Routeable = {
   })
 };
 
-export const homeRoutes = [
+export const homeRoutes: Routeable[] = [
   homePage,
   redirectHomePageRoute
 ];

@@ -175,7 +175,7 @@ export class Book implements Routeable {
                       {[...this.snippets].map(bookSnippet => <>
                         <li>
                           <p>
-                            <a href={bookSnippet.route}>{md.renderInline(bookSnippet.title)}</a>
+                            <a href={bookSnippet.view.route}>{md.renderInline(bookSnippet.title)}</a>
                           </p>
                         </li>
                       </>)}
@@ -276,7 +276,7 @@ export const allBooksPage: Routeable = {
   },
 };
 
-export const bookRoutes = [
+export const bookRoutes: Routeable[] = [
   allBooksPage,
   randomBookPage,
   ...allBooks,

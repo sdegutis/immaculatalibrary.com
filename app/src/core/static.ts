@@ -50,4 +50,4 @@ function addStaticFiles(dir: FsDir) {
 
 addStaticFiles(publicDir);
 
-export const staticFileRoutes = staticFiles;
+export const staticFileRoutes: Routeable[] = staticFiles;

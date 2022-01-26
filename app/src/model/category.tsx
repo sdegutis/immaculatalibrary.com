@@ -128,4 +128,4 @@ export const allCategories = (categoriesDir
   .files.map(file => Category.from(file))
   .sort(sortBy(c => categoryOrder.indexOf(c.slug))));
 
-export const allCategoryRoutes = allCategories;
+export const allCategoryRoutes: Routeable[] = allCategories;

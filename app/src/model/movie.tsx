@@ -151,7 +151,7 @@ const allMoviesPage: Routeable = {
   },
 };
 
-export const movieRoutes = [
+export const movieRoutes: Routeable[] = [
   allMoviesPage,
   ...allMovies,
 ];

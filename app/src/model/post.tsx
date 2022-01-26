@@ -96,7 +96,7 @@ export class Post implements Routeable {
 
 export const allPosts = (postsdir
   .files.map(file => Post.from(file))
-  .sort(sortBy(s => s.route)));
+  .sort(sortBy(post => post.route)));
 
 export const publishedPosts = (allPosts
   .filter(s => !s.draft)
@@ -153,7 +153,7 @@ export const allPostsPage: Routeable = {
   },
 };
 
-export const postRoutes = [
+export const postRoutes: Routeable[] = [
   allPostsPage,
   ...allPosts,
 ];

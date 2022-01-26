@@ -64,4 +64,4 @@ export class Page implements Routeable {
 export const allPages = (pagesDir
   .files.map(file => Page.from(file)));
 
-export const allPageRoutes = allPages;
+export const allPageRoutes: Routeable[] = allPages;
