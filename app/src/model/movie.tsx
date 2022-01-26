@@ -46,7 +46,9 @@ export class Movie implements Routeable {
     return `/movies/${this.slug}.html`;
   }
 
-  get(input: EnrichedInput): RouteOutput {
+  method = 'GET' as const;
+
+  handle(input: EnrichedInput): RouteOutput {
     return {
       body: <Html>
         <Head title={this.displayTitle}>
@@ -116,7 +118,8 @@ const MoviesSidebar: Component<{}> = (attrs, children) => <>
 
 const allMoviesPage: Routeable = {
   route: `/movies.html`,
-  get: (input) => {
+  method: 'GET',
+  handle: (input) => {
     const title = 'Holy Movies';
     const image = '/img/movies-big.jpg';
     return {

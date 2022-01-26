@@ -38,7 +38,8 @@ function guardAuth(handler: RouteHandler): RouteHandler {
 
 export const loginRoute: Routeable = {
   route: '/login',
-  get: (input) => {
+  method: 'GET',
+  handle: (input) => {
     const matched = input.headers.authorization?.match(/^Basic (.+)$/);
     if (matched?.[1]) {
       const userpass = Buffer.from(matched[1], 'base64').toString('utf8');
@@ -63,7 +64,8 @@ export const loginRoute: Routeable = {
 
 export const logoutRoute: Routeable = {
   route: '/admin/logout',
-  get: (input) => {
+  method: 'GET',
+  handle: (input) => {
     return {
       status: 302,
       headers: {

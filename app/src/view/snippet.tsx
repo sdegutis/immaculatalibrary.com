@@ -16,7 +16,9 @@ export class SnippetRoute implements Routeable {
     return `/book-snippets/${this.snippet.date}-${this.snippet.slug}.html`;
   }
 
-  get(input: EnrichedInput): RouteOutput {
+  method = 'GET' as const;
+
+  handle(input: EnrichedInput): RouteOutput {
     return {
       body: <Html>
         <Head title={this.snippet.title}>

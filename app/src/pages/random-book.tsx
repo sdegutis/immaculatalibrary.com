@@ -4,7 +4,8 @@ import { randomElement } from "../util/helpers";
 
 export const randomBookPage: Routeable = {
   route: '/random.html',
-  get: (input) => {
+  method: 'GET',
+  handle: (input) => {
     const book = randomElement(allBooks);
     return {
       status: 302,

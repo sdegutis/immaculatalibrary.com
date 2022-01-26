@@ -18,7 +18,9 @@ class StaticFile implements Routeable {
     this.etag = `"${createHash('sha256').update(file.buffer).digest().toString('base64')}"`;
   }
 
-  get(input: EnrichedInput): RouteOutput {
+  method = 'GET' as const;
+
+  handle(input: EnrichedInput): RouteOutput {
     const headers = {
       'Cache-Control': `max-age=${60 * 60 * MAX_AGE_HOURS}`,
       'ETag': this.etag,

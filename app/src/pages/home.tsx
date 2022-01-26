@@ -5,7 +5,8 @@ import { Head, Html, SiteFooter, SiteHeader } from "../view/site";
 
 export const homePage: Routeable = {
   route: `/`,
-  get: (input) => {
+  method: 'GET',
+  handle: (input) => {
     return {
       body: <>
         <Html>
@@ -82,7 +83,8 @@ export const homePage: Routeable = {
 
 const redirectHomePageRoute: Routeable = {
   route: '/index.html',
-  get: (input) => ({
+  method: 'GET',
+  handle: (input) => ({
     status: 302,
     headers: { 'Location': '/' },
   })

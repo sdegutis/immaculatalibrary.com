@@ -77,7 +77,9 @@ export class Book implements Routeable {
     return `/books/${this.slug}.html`;
   }
 
-  get(input: EnrichedInput): RouteOutput {
+  method = 'GET' as const;
+
+  handle(input: EnrichedInput): RouteOutput {
     return {
       body: <Html>
         <Head title={this.title} description={striptags(excerpt(this.markdownContent))}>
@@ -227,7 +229,8 @@ function searchSnippets(el) {
 
 export const allBooksPage: Routeable = {
   route: `/books.html`,
-  get: (input) => {
+  method: 'GET',
+  handle: (input) => {
     const title = 'All Books';
     const image = '/img/reference-big.jpg';
     return {

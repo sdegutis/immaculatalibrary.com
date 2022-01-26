@@ -7,7 +7,8 @@ import { Head, Html, SiteFooter, SiteHeader } from "./site";
 
 export const allSnippetsPage: Routeable = {
   route: `/book-snippets.html`,
-  get: (input) => {
+  method: 'GET',
+  handle: (input) => {
 
     const title = 'Book Snippets';
     const image = '/img/reference-big.jpg';
@@ -76,7 +77,8 @@ export const allSnippetsPage: Routeable = {
 
 export const bookSnippetSearch: Routeable = {
   route: '/book-snippets/search',
-  get: (input) => {
+  method: 'GET',
+  handle: (input) => {
     const searchTerm = input.url.searchParams.get('searchTerm')!.toLowerCase();
 
     const snippets = publishedSnippets.filter(s => {

@@ -3,7 +3,8 @@ import { Routeable } from "../core/router";
 export function makeSitemap(routeables: Routeable[]): Routeable {
   return {
     route: '/sitemap.xml',
-    get: (input) => ({
+    method: 'GET',
+    handle: (input) => ({
       body: <>
         {'<?xml version="1.0" encoding="UTF-8"?>\n'}
         <urlset

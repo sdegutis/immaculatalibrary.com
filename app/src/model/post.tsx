@@ -61,7 +61,9 @@ export class Post implements Routeable {
     return `/posts/${this.date}-${this.slug}.html`;
   }
 
-  get(input: EnrichedInput): RouteOutput {
+  method = 'GET' as const;
+
+  handle(input: EnrichedInput): RouteOutput {
     return {
       body: <Html>
         <Head title={this.title}>
@@ -104,7 +106,8 @@ export const publishedPosts = (allPosts
 
 export const allPostsPage: Routeable = {
   route: `/posts.html`,
-  get: (input) => {
+  method: 'GET',
+  handle: (input) => {
     const title = 'All Blog Posts';
     const image = '/img/reference-big.jpg';
     return {

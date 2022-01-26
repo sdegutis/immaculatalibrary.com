@@ -36,7 +36,9 @@ export class Page implements Routeable {
     return `/${this.slug}.html`;
   }
 
-  get(input: EnrichedInput): RouteOutput {
+  method = 'GET' as const;
+
+  handle(input: EnrichedInput): RouteOutput {
     return {
       body: <Html>
         <Head title={this.title}>

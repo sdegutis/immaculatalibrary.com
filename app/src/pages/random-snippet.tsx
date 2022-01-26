@@ -4,7 +4,8 @@ import { extract_page_number, format_date, md, randomElement, reading_mins } fro
 
 export const randomSnippetPage: Routeable = {
   route: '/random-book-snippet.html',
-  get: (input) => {
+  method: 'GET',
+  handle: (input) => {
     const snippet = randomElement(allSnippets);
     return {
       status: 302,
@@ -15,7 +16,8 @@ export const randomSnippetPage: Routeable = {
 
 export const bookSnippetRandom: Routeable = {
   route: '/book-snippets/random',
-  get: (input) => {
+  method: 'GET',
+  handle: (input) => {
     const snippet = randomElement(publishedSnippets);
     return {
       body: JSON.stringify({
