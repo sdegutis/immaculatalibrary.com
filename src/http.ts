@@ -33,11 +33,7 @@ export function startServer(baseUrl: string, port: number, site: Site) {
     }
 
     const url = new URL(req.url, baseUrl);
-    console.log(url.host)
-    console.log(url.hostname)
-
-    if (url.hostname !== 'localhost' && !url.hostname.startsWith('www')) {
-      url.hostname = 'www' + url.hostname;
+    if (url.hostname !== req.hostname) {
       res.redirect(url.href);
       return;
     }
