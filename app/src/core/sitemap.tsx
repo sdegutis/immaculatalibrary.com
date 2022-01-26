@@ -1,4 +1,4 @@
-import { Routeable } from "../core/router";
+import { Routeable } from "./router";
 
 export function makeSitemap(routeables: Routeable[]): Routeable {
   return {
