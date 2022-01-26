@@ -1,7 +1,7 @@
 import { Routeable } from "../core/router";
-import { LatestBookSnippets } from "../view/latest-snippets";
-import { QuickLinks } from "../view/quicklinks";
-import { Head, Html, SiteFooter, SiteHeader } from "../view/site";
+import { LatestBookSnippets } from "../view/components/latest-snippets";
+import { QuickLinks } from "../view/components/quicklinks";
+import { Head, Html, SiteFooter, SiteHeader } from "../view/components/site";
 
 export const homePage: Routeable = {
   route: `/`,

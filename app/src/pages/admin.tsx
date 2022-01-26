@@ -2,9 +2,9 @@ import * as bcrypt from 'bcryptjs';
 import { randomUUID } from 'crypto';
 import usersFile from 'file:/data/users.json';
 import { Routeable } from "../core/router";
-import { Container, Content, HeroImage } from '../view/page';
-import { QuickLinks } from '../view/quicklinks';
-import { Head, Html, SiteFooter, SiteHeader } from '../view/site';
+import { Container, Content, HeroImage } from '../view/components/page';
+import { QuickLinks } from '../view/components/quicklinks';
+import { Head, Html, SiteFooter, SiteHeader } from '../view/components/site';
 import { RouteHandler, RouteInput, RouteOutput } from '/src/http';
 
 const users: string[] = JSON.parse(usersFile.buffer.toString('utf8'));

@@ -3,8 +3,8 @@ import { Routeable } from '../core/router';
 import { bookSnippetRandom, randomSnippetPage } from '../pages/random-snippet';
 import { loadContentFile, saveContentFile } from '../util/data-files';
 import { sortBy } from "../util/helpers";
-import { allSnippetsPage, bookSnippetSearch } from '../view/all-snippets';
-import { SnippetRoute } from '../view/snippet';
+import { allSnippetsPage, bookSnippetSearch } from '../view/pages/all-snippets';
+import { SnippetRoute } from '../view/pages/snippet';
 import { Book } from './book';
 import { FsFile } from "/src/filesys";
 

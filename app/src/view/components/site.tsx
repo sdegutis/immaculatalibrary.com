@@ -1,5 +1,4 @@
-import { EnrichedInput, loginRoute, logoutRoute } from "../pages/admin";
-import { Component } from "./types";
+import { EnrichedInput, loginRoute, logoutRoute } from "../../pages/admin";
 
 export const Html: Component<{}> = (attrs, children) => <>
   {'<!DOCTYPE html>'}

@@ -1,8 +1,7 @@
-import { allCategories } from "../model/category";
-import { allMovies } from "../model/movie";
-import { publishedPosts } from "../model/post";
-import { excerpt, format_date, md, reading_mins } from "../util/helpers";
-import { Component } from "./types";
+import { allCategories } from "../../model/category";
+import { allMovies } from "../../model/movie";
+import { publishedPosts } from "../../model/post";
+import { excerpt, format_date, md, reading_mins } from "../../util/helpers";
 
 export const QuickLinks: Component<{}> = (attrs, children) => {
   const recentPosts = publishedPosts.slice(0, 6);

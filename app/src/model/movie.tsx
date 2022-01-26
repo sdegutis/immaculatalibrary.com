@@ -3,10 +3,9 @@ import { Routeable } from '../core/router';
 import { EnrichedInput } from '../pages/admin';
 import { loadContentFile } from '../util/data-files';
 import { md, ShareLinks, sortBy } from "../util/helpers";
-import { Container, Content, HeroImage } from '../view/page';
-import { QuickLinks } from '../view/quicklinks';
-import { Head, Html, SiteFooter, SiteHeader } from '../view/site';
-import { Component } from '../view/types';
+import { Container, Content, HeroImage } from '../view/components/page';
+import { QuickLinks } from '../view/components/quicklinks';
+import { Head, Html, SiteFooter, SiteHeader } from '../view/components/site';
 import { FsFile } from "/src/filesys";
 import { RouteOutput } from "/src/http";
 

@@ -1,5 +1,3 @@
-import { Component } from "./types";
-
 export const HeroImage: Component<{ image: string }> = (attrs, children) => <>
   <section id="page-hero" style={`background-image: url(${attrs.image});`}></section>
 </>;

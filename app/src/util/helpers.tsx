@@ -1,7 +1,6 @@
 import { randomInt } from 'crypto';
 import * as luxon from 'luxon';
 import MarkdownIt from 'markdown-it';
-import { Component } from '../view/types';
 
 export const md = new MarkdownIt({
   html: true,

@@ -23,3 +23,5 @@ declare module 'file:*' {
   const file: import('./src/filesys').FsFile;
   export default file;
 }
+
+type Component<T extends Record<string, any>> = (attrs: T, children: any) => string;

@@ -1,6 +1,5 @@
-import { publishedSnippets } from "../model/snippet";
-import { groupByDate, md, reading_mins } from "../util/helpers";
-import { Component } from "./types";
+import { publishedSnippets } from "../../model/snippet";
+import { groupByDate, md, reading_mins } from "../../util/helpers";
 
 const latestBookSnippetsStyle = `
 ul.snippets-latest {

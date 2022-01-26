@@ -1,11 +1,11 @@
-import { Routeable } from "../core/router";
-import { Snippet } from "../model/snippet";
-import { EnrichedInput } from "../pages/admin";
-import { extract_page_number, format_date, md, reading_mins, ShareLinks } from "../util/helpers";
-import { LatestBookSnippets } from "./latest-snippets";
-import { Container, Content, HeroImage } from "./page";
-import { QuickLinks } from "./quicklinks";
-import { Head, Html, SiteFooter, SiteHeader } from "./site";
+import { Routeable } from "../../core/router";
+import { Snippet } from "../../model/snippet";
+import { EnrichedInput } from "../../pages/admin";
+import { extract_page_number, format_date, md, reading_mins, ShareLinks } from "../../util/helpers";
+import { LatestBookSnippets } from "../components/latest-snippets";
+import { Container, Content, HeroImage } from "../components/page";
+import { QuickLinks } from "../components/quicklinks";
+import { Head, Html, SiteFooter, SiteHeader } from "../components/site";
 import { RouteOutput } from "/src/http";
 
 export class SnippetRoute implements Routeable {
