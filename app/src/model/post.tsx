@@ -152,3 +152,8 @@ export const allPostsPage: Routeable = {
     };
   },
 };
+
+export const postRoutes = [
+  allPostsPage,
+  ...allPosts,
+];

@@ -1,15 +1,13 @@
-import { allBooks, allBooksPage } from "../model/book";
-import { allCategories } from "../model/category";
-import { allMovies, allMoviesPage } from "../model/movie";
-import { allPages } from "../model/page";
-import { allPosts, allPostsPage } from "../model/post";
-import { allSnippets, allSnippetsPage, bookSnippetSearch } from "../model/snippet";
-import { adminPages, EnrichedInput } from "../pages/admin";
-import { homePage } from "../pages/home";
-import { randomBookPage } from "../pages/random-book";
-import { bookSnippetRandom, randomSnippetPage } from "../pages/random-snippet";
+import { bookRoutes } from "../model/book";
+import { allCategoryRoutes } from "../model/category";
+import { movieRoutes } from "../model/movie";
+import { allPageRoutes } from "../model/page";
+import { postRoutes } from "../model/post";
+import { snippetRoutes } from "../model/snippet";
+import { adminPageRoutes, EnrichedInput } from "../pages/admin";
+import { homeRoutes } from "../pages/home";
 import { makeSitemap } from "../pages/sitemap";
-import { staticFiles } from "./static";
+import { staticFileRoutes } from "./static";
 import { RouteOutput } from "/../src/http";
 
 type AuthedRouteHandler = (input: EnrichedInput) => RouteOutput;
@@ -21,11 +19,11 @@ export interface Routeable {
   lastModifiedDate?: Date;
 }
 
-const routes = new Map<string, AuthedRouteHandler>();
+const allRoutes = new Map<string, AuthedRouteHandler>();
 
 const forSitemap: Routeable[] = [];
 
-function addRouteable(routeable: Routeable) {
+export function addRouteable(routeable: Routeable) {
   if (!routeable.route.startsWith('/admin')) {
     forSitemap.push(routeable);
   }
@@ -37,39 +35,25 @@ function addRouteable(routeable: Routeable) {
 }
 
 function addRoute(route: string, handler: AuthedRouteHandler) {
-  if (routes.has(route)) {
+  if (allRoutes.has(route)) {
     throw new Error(`Duplicate route: ${route}`);
   }
 
-  routes.set(route, handler);
+  allRoutes.set(route, handler);
 }
 
 export function loadRoutes() {
-  addRouteable(allMoviesPage);
-  addRouteable(allPostsPage);
-  addRouteable(allBooksPage);
-  addRouteable(allSnippetsPage);
-  addRouteable(bookSnippetRandom);
-  addRouteable(randomBookPage);
-  addRouteable(randomSnippetPage);
-  addRouteable(bookSnippetSearch);
-  addRouteable(homePage);
-
-  adminPages.forEach(addRouteable);
-  allSnippets.forEach(addRouteable);
-  staticFiles.forEach(addRouteable);
-  allCategories.forEach(addRouteable);
-  allBooks.forEach(addRouteable);
-  allMovies.forEach(addRouteable);
-  allPages.forEach(addRouteable);
-  allPosts.forEach(addRouteable);
-
-  routes.set('GET /index.html', input => ({
-    status: 302,
-    headers: { 'Location': '/' },
-  }));
+  adminPageRoutes.forEach(addRouteable);
+  staticFileRoutes.forEach(addRouteable);
+  allCategoryRoutes.forEach(addRouteable);
+  homeRoutes.forEach(addRouteable);
+  allPageRoutes.forEach(addRouteable);
+  postRoutes.forEach(addRouteable);
+  snippetRoutes.forEach(addRouteable);
+  movieRoutes.forEach(addRouteable);
+  bookRoutes.forEach(addRouteable);
 
   addRouteable(makeSitemap(forSitemap));
 
-  return routes;
+  return allRoutes;
 }

@@ -1,6 +1,7 @@
 import snippetsDir from 'dir:/data/snippets/';
 import { Routeable } from '../core/router';
 import { EnrichedInput } from '../pages/admin';
+import { bookSnippetRandom, randomSnippetPage } from '../pages/random-snippet';
 import { loadContentFile, saveContentFile } from '../util/data-files';
 import { extract_page_number, format_date, groupByDate, md, reading_mins, ShareLinks, sortBy } from "../util/helpers";
 import { LatestBookSnippets } from '../view/latest-snippets';
@@ -216,3 +217,11 @@ export const bookSnippetSearch: Routeable = {
     };
   }
 };
+
+export const snippetRoutes = [
+  allSnippetsPage,
+  bookSnippetRandom,
+  randomSnippetPage,
+  bookSnippetSearch,
+  ...allSnippets,
+];

@@ -79,3 +79,16 @@ export const homePage: Routeable = {
     };
   },
 };
+
+const redirectHomePageRoute: Routeable = {
+  route: '/index.html',
+  get: (input) => ({
+    status: 302,
+    headers: { 'Location': '/' },
+  })
+};
+
+export const homeRoutes = [
+  homePage,
+  redirectHomePageRoute
+];

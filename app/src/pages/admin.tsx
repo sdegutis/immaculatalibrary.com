@@ -36,17 +36,6 @@ function guardAuth(handler: RouteHandler): RouteHandler {
   });
 }
 
-export const restartSiteRoute: Routeable = {
-  route: '/admin/restart',
-  get: guardAuth((input) => {
-    restartSite();
-    return {
-      status: 302,
-      headers: { 'Location': input.headers.referer },
-    };
-  })
-};
-
 export const loginRoute: Routeable = {
   route: '/login',
   get: (input) => {
@@ -85,8 +74,7 @@ export const logoutRoute: Routeable = {
   }
 };
 
-export const adminPages: Routeable[] = [
-  restartSiteRoute,
+export const adminPageRoutes: Routeable[] = [
   loginRoute,
   logoutRoute,
 ];
@@ -95,7 +83,7 @@ function notAllowedResponse(input: EnrichedInput) {
   const image = '/img/821px-Pope-peter_pprubens.jpg';
   return {
     status: 401,
-    headers: { 'WWW-Authenticate': 'Basic realm="example"' },
+    headers: { 'WWW-Authenticate': 'Basic realm="Responsibility"' },
     body: <Html>
       <Head />
       <body>

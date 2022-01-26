@@ -1,8 +1,6 @@
 const __file: import('../src/filesys').FsFile;
 const __dir: import('../src/filesys').FsDir;
 
-function restartSite(): void;
-
 interface Session {
   isAdmin: boolean;
 }

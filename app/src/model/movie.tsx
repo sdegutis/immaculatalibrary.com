@@ -114,7 +114,7 @@ const MoviesSidebar: Component<{}> = (attrs, children) => <>
   </div>
 </>;
 
-export const allMoviesPage: Routeable = {
+const allMoviesPage: Routeable = {
   route: `/movies.html`,
   get: (input) => {
     const title = 'Holy Movies';
@@ -150,3 +150,8 @@ export const allMoviesPage: Routeable = {
     };
   },
 };
+
+export const movieRoutes = [
+  allMoviesPage,
+  ...allMovies,
+];

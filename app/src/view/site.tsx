@@ -1,4 +1,4 @@
-import { EnrichedInput, loginRoute, logoutRoute, restartSiteRoute } from "../pages/admin";
+import { EnrichedInput, loginRoute, logoutRoute } from "../pages/admin";
 import { Component } from "./types";
 
 export const Html: Component<{}> = (attrs, children) => <>
@@ -97,7 +97,6 @@ export const SiteHeader: Component<{ input: EnrichedInput }> = (attrs, children)
   {attrs.input.session?.isAdmin && <>
     <header>
       <nav class="container" style='display: flex; gap: 0.5em'>
-        <a href={restartSiteRoute.route}>Restart Now</a>
         <a href={logoutRoute.route}>Logout</a>
       </nav>
     </header>
