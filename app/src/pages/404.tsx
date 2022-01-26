@@ -2,7 +2,7 @@ import { Container, Content, HeroImage } from "../view/page";
 import { QuickLinks } from "../view/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "../view/site";
 import { EnrichedInput } from "./admin";
-import { RouteOutput } from "/../src/http";
+import { RouteOutput } from "/src/http";
 
 export function notFoundPage(input: EnrichedInput): RouteOutput {
   const title = 'Page not found';

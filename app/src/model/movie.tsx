@@ -7,8 +7,8 @@ import { Container, Content, HeroImage } from '../view/page';
 import { QuickLinks } from '../view/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../view/site';
 import { Component } from '../view/types';
-import { FsFile } from "/../src/filesys";
-import { RouteOutput } from "/../src/http";
+import { FsFile } from "/src/filesys";
+import { RouteOutput } from "/src/http";
 
 export class Movie implements Routeable {
 

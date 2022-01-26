@@ -6,7 +6,7 @@ import { sortBy } from "../util/helpers";
 import { allSnippetsPage, bookSnippetSearch } from '../view/all-snippets';
 import { SnippetRoute } from '../view/snippet';
 import { Book } from './book';
-import { FsFile } from "/../src/filesys";
+import { FsFile } from "/src/filesys";
 
 export class Snippet {
   static from(file: FsFile) {

@@ -6,7 +6,7 @@ import { LatestBookSnippets } from "./latest-snippets";
 import { Container, Content, HeroImage } from "./page";
 import { QuickLinks } from "./quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "./site";
-import { RouteOutput } from "/../src/http";
+import { RouteOutput } from "/src/http";
 
 export class SnippetRoute implements Routeable {
 

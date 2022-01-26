@@ -1,8 +1,8 @@
+import { RouteOutput } from "/src/http";
 import { Container, Content, HeroImage } from "../view/page";
 import { QuickLinks } from "../view/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "../view/site";
 import { EnrichedInput } from "./admin";
-import { RouteOutput } from "/../src/http";
 
 export function errorPage(input: EnrichedInput): RouteOutput {
   const title = 'Something went wrong';

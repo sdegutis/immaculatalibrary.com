@@ -9,8 +9,8 @@ import { QuickLinks } from '../view/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../view/site';
 import { Category } from './category';
 import { Snippet } from './snippet';
-import { FsFile } from "/../src/filesys";
-import { RouteOutput } from "/../src/http";
+import { FsFile } from '/src/filesys';
+import { RouteOutput } from '/src/http';
 
 export class Book implements Routeable {
 

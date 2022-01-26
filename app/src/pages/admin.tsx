@@ -5,7 +5,7 @@ import { Routeable } from "../core/router";
 import { Container, Content, HeroImage } from '../view/page';
 import { QuickLinks } from '../view/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../view/site';
-import { RouteHandler, RouteInput, RouteOutput } from "/../src/http";
+import { RouteHandler, RouteInput, RouteOutput } from '/src/http';
 
 const users: string[] = JSON.parse(usersFile.buffer.toString('utf8'));
 

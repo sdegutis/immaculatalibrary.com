@@ -8,7 +8,7 @@ import { adminPageRoutes, EnrichedInput } from "../pages/admin";
 import { homeRoutes } from "../pages/home";
 import { makeSitemap } from "../pages/sitemap";
 import { staticFileRoutes } from "./static";
-import { RouteOutput } from "/../src/http";
+import { RouteOutput } from "/src/http";
 
 type AuthedRouteHandler = (input: EnrichedInput) => RouteOutput;
 

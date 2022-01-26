@@ -5,7 +5,7 @@
   "main": "out/main.js",
   "scripts": {
     "build": "tsc",
-    "watch": "tsc --watch",
+    "watch": "tsc --build --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

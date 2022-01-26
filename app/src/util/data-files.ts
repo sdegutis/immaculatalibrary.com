@@ -1,5 +1,5 @@
 import Yaml from 'js-yaml';
-import { FsFile } from "/../src/filesys";
+import { FsFile } from "/src/filesys";
 
 interface Output<T> {
   slug: string;
