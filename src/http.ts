@@ -32,11 +32,21 @@ export function startServer(baseUrl: string, port: number, site: Site) {
       return;
     }
 
+    const url = new URL(req.url, baseUrl);
+    console.log(url.host)
+    console.log(url.hostname)
+
+    if (url.hostname !== 'localhost' && !url.hostname.startsWith('www')) {
+      url.hostname = 'www' + url.hostname;
+      res.redirect(url.href);
+      return;
+    }
+
     const output = site.handler({
       body: req.body,
       headers: req.headers,
       method: req.method,
-      url: new URL(req.url, baseUrl),
+      url,
     });
 
     res.status(output.status ?? 200);
