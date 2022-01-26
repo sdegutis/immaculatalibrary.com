@@ -41,7 +41,7 @@ export const LatestBookSnippets: Component<{}> = (attrs, children) => {
             {group.map(snippet => <>
               <li>
                 <p>
-                  <a href={snippet.route}>{md.renderInline(snippet.title)}</a>
+                  <a href={snippet.view.route}>{md.renderInline(snippet.title)}</a>
                   <br /> {reading_mins(snippet.markdownContent)} min &mdash; {snippet.book.title}
                 </p>
               </li>

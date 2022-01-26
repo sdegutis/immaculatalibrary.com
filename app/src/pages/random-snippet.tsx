@@ -8,7 +8,7 @@ export const randomSnippetPage: Routeable = {
     const snippet = randomElement(allSnippets);
     return {
       status: 302,
-      headers: { 'Location': snippet.route },
+      headers: { 'Location': snippet.view.route },
     }
   },
 }
@@ -26,7 +26,7 @@ export const bookSnippetRandom: Routeable = {
           title: snippet.book.title,
           url: snippet.book.route,
         },
-        url: snippet.route,
+        url: snippet.view.route,
         formattedDate: format_date(snippet.date),
         readingMins: reading_mins(snippet.markdownContent),
         preview: md.render(snippet.previewMarkdown ?? snippet.markdownContent),
