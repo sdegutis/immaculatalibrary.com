@@ -19,7 +19,9 @@ export type EnrichedInput = RouteInput & {
 
 persisted.sessions ??= new Map<string, Session>();
 
-export function enrichAuth(handler: (input: EnrichedInput) => RouteOutput): RouteHandler {
+type EnrichedRouteHandler = (input: EnrichedInput) => RouteOutput;
+
+export function enrichAuth(handler: EnrichedRouteHandler): RouteHandler {
   return input => {
     const cookieKvs = input.headers.cookie?.split('; ');
     const cookiePairs = cookieKvs?.map(kv => kv.split('=') as [string, string]);
@@ -30,7 +32,7 @@ export function enrichAuth(handler: (input: EnrichedInput) => RouteOutput): Rout
   };
 }
 
-export function guardAuth(handler: RouteHandler): RouteHandler {
+export function guardAuth(handler: EnrichedRouteHandler): EnrichedRouteHandler {
   return enrichAuth(input => {
     if (!input.session?.isAdmin) {
       return notAllowedResponse(input);
