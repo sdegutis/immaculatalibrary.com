@@ -1,5 +1,6 @@
+import * as process from 'process';
 import * as sucrase from 'sucrase';
-import { pathToFileURL } from 'url';
+import { pathToFileURL, URL, URLSearchParams } from 'url';
 import vm from 'vm';
 import { FsDir, FsFile } from "./filesys";
 
@@ -25,6 +26,9 @@ export class Runtime {
       persisted,
       console,
       Buffer,
+      URL,
+      URLSearchParams,
+      process,
       setTimeout: (fn: () => void, ms: number) => this.#setTimeout(fn, ms),
       setInterval: (fn: () => void, ms: number) => this.#setInterval(fn, ms),
     });

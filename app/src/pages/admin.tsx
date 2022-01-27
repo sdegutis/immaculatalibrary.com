@@ -2,6 +2,7 @@ import * as bcrypt from 'bcryptjs';
 import { randomUUID } from 'crypto';
 import usersFile from 'file:/data/users.json';
 import { Routeable } from "../core/router";
+import { sameSiteReferer } from '../util/helpers';
 import { Container, Content, HeroImage } from '../view/components/page';
 import { QuickLinks } from '../view/components/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../view/components/site';
@@ -51,7 +52,7 @@ export const loginRoute: Routeable = {
         return {
           status: 302,
           headers: {
-            'Location': '/',
+            'Location': sameSiteReferer(input)?.href ?? '/',
             'Set-Cookie': `wwwiii=${sessionid}`,
           }
         };
@@ -69,7 +70,7 @@ export const logoutRoute: Routeable = {
     return {
       status: 302,
       headers: {
-        'Location': '/',
+        'Location': sameSiteReferer(input)?.href ?? '/',
         'Set-Cookie': `wwwiii=; Max-Age=1; Path=/`,
       }
     };
