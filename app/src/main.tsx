@@ -4,10 +4,10 @@ import { RouteInput, RouteOutput } from '../../src/http';
 import { loadRoutes } from './core/router';
 import { allBooks } from './model/book';
 import { allCategories } from './model/category';
-import { publishedSnippets } from './model/snippet';
 import { notFoundPage } from './pages/404';
 import { errorPage } from './pages/500';
 import { enrichAuth } from './pages/admin';
+import { publishedSnippets } from './snippets';
 
 for (const book of allBooks) {
   for (const cat of allCategories) {

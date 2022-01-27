@@ -1,11 +1,11 @@
 import snippetsDir from 'dir:/data/snippets/';
 import { Routeable } from '../core/router';
-import { bookSnippetRandom, randomSnippetPage } from '../pages/random-snippet';
+import { Book } from '../model/book';
 import { loadContentFile, saveContentFile } from '../util/data-files';
 import { sortBy } from "../util/helpers";
-import { allSnippetsPage, bookSnippetSearch } from '../view/pages/all-snippets';
-import { SnippetRoute } from '../view/pages/snippet';
-import { Book } from './book';
+import { bookSnippetRandom, randomSnippetPage } from './random';
+import { allSnippetsPage, bookSnippetSearch } from './view-all';
+import { SnippetRoute } from './view-one';
 import { FsFile } from "/src/filesys";
 
 export const snippetRoutes: Routeable[] = [

@@ -2,13 +2,13 @@ import booksDir from 'dir:/data/books/';
 import { Routeable } from '../core/router';
 import { EnrichedInput } from '../pages/admin';
 import { randomBookPage } from '../pages/random-book';
+import { Snippet } from '../snippets';
 import { loadContentFile } from '../util/data-files';
 import { excerpt, md, rating, ShareLinks, sortBy, striptags } from "../util/helpers";
 import { Container, Content, HeroImage } from '../view/components/page';
 import { QuickLinks } from '../view/components/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../view/components/site';
 import { Category } from './category';
-import { Snippet } from './snippet';
 import { FsFile } from '/src/filesys';
 import { RouteOutput } from '/src/http';
 

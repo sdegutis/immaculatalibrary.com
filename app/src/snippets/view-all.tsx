@@ -1,9 +1,9 @@
-import { Routeable } from "../../core/router";
-import { publishedSnippets } from "../../model/snippet";
-import { format_date, groupByDate, md, reading_mins } from "../../util/helpers";
-import { Container, HeroImage } from "../components/page";
-import { QuickLinks } from "../components/quicklinks";
-import { Head, Html, SiteFooter, SiteHeader } from "../components/site";
+import { publishedSnippets } from ".";
+import { Routeable } from "../core/router";
+import { format_date, groupByDate, md, reading_mins } from "../util/helpers";
+import { Container, HeroImage } from "../view/components/page";
+import { QuickLinks } from "../view/components/quicklinks";
+import { Head, Html, SiteFooter, SiteHeader } from "../view/components/site";
 
 export const allSnippetsPage: Routeable = {
   route: `/book-snippets.html`,
