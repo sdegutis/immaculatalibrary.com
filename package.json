@@ -4,7 +4,7 @@
   "description": "A simple TypeScript web framework",
   "main": "out/main.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc --build",
     "watch": "tsc --build --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
