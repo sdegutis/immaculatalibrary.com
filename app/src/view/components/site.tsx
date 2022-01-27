@@ -71,7 +71,7 @@ export const Head: Component<{ imagePath?: string, title?: string, description?:
   </head>
 </>;
 
-export const SiteHeader: Component<{ input: EnrichedInput }> = (attrs, children) => <>
+export const SiteHeader: Component<{}> = (attrs, children) => <>
   <header id="site-header">
     <nav class="container">
       <a href="/">Immaculata Library</a>
@@ -93,16 +93,9 @@ export const SiteHeader: Component<{ input: EnrichedInput }> = (attrs, children)
       </ul>
     </nav>
   </header>
-  {attrs.input.session?.isAdmin && <>
-    <header>
-      <nav class="container" style='display: flex; gap: 0.5em'>
-        <a href={logoutRoute.route}>Logout</a>
-      </nav>
-    </header>
-  </>}
 </>;
 
-export const SiteFooter: Component<{}> = (attrs, children) => <>
+export const SiteFooter: Component<{ input: EnrichedInput }> = (attrs, children) => <>
   <footer id="site-footer">
     <p>
       {new Date().getFullYear()} ImmaculataLibrary.com &copy; All Rights Reserved
@@ -111,7 +104,11 @@ export const SiteFooter: Component<{}> = (attrs, children) => <>
       {' | '}
       <a href="#" id="dark-mode-toggle" data-lightmode="Light mode" data-darkmode="Dark mode"></a>
       {' | '}
-      <a href={loginRoute.route}>Login</a>
+      {attrs.input.session?.isAdmin ? <>
+        <a href={logoutRoute.route}>Logout</a>
+      </> : <>
+        <a href={loginRoute.route}>Login</a>
+      </>}
     </p>
   </footer>
   <script>

@@ -12,7 +12,7 @@ export function errorPage(input: EnrichedInput): RouteOutput {
     body: <Html>
       <Head title={title} />
       <body>
-        <SiteHeader input={input} />
+        <SiteHeader />
         <main>
           <HeroImage image={image} />
           <Container>
@@ -25,7 +25,7 @@ export function errorPage(input: EnrichedInput): RouteOutput {
           </Container>
         </main>
         <QuickLinks />
-        <SiteFooter />
+        <SiteFooter input={input} />
       </body>
     </Html>
   };

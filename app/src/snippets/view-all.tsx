@@ -22,7 +22,7 @@ export const allSnippetsPage: Routeable = {
             <link rel="stylesheet" href="/css/layout/book-snippets.css" />
           </Head>
           <body>
-            <SiteHeader input={input} />
+            <SiteHeader />
             <main>
               <HeroImage image={image} />
               <Container>
@@ -67,7 +67,7 @@ export const allSnippetsPage: Routeable = {
               </Container>
             </main>
             <QuickLinks />
-            <SiteFooter />
+            <SiteFooter input={input} />
           </body>
         </Html>
       </>

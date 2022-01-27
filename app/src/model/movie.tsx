@@ -53,7 +53,7 @@ export class Movie implements Routeable {
         <Head title={this.displayTitle}>
         </Head>
         <body>
-          <SiteHeader input={input} />
+          <SiteHeader />
           <main>
             <HeroImage image={this.imageFilename} />
             <Container>
@@ -66,7 +66,7 @@ export class Movie implements Routeable {
             </Container>
           </main>
           <QuickLinks />
-          <SiteFooter />
+          <SiteFooter input={input} />
         </body>
       </Html>
     }
@@ -127,7 +127,7 @@ const allMoviesPage: Routeable = {
           <Head title={title}>
           </Head>
           <body>
-            <SiteHeader input={input} />
+            <SiteHeader />
             <main>
               <HeroImage image={image} />
               <Container>
@@ -145,7 +145,7 @@ const allMoviesPage: Routeable = {
               </Container>
             </main>
             <QuickLinks />
-            <SiteFooter />
+            <SiteFooter input={input} />
           </body>
         </Html>
       </>

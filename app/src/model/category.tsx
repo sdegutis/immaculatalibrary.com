@@ -55,7 +55,7 @@ export class Category implements Routeable {
           <link rel="stylesheet" href="/css/base/rating-label.css" />
         </Head>
         <body>
-          <SiteHeader input={input} />
+          <SiteHeader />
           <main>
             <HeroImage image={this.imageFilename} />
             <Container>
@@ -92,7 +92,7 @@ export class Category implements Routeable {
             </Container>
           </main>
           <QuickLinks />
-          <SiteFooter />
+          <SiteFooter input={input} />
         </body>
       </Html>
     }

@@ -17,7 +17,7 @@ export const homePage: Routeable = {
             <link rel="stylesheet" href="/css/layout/home.css" />
           </Head>
           <body>
-            <SiteHeader input={input} />
+            <SiteHeader />
 
             <main>
 
@@ -73,7 +73,7 @@ export const homePage: Routeable = {
             </main>
 
             <QuickLinks />
-            <SiteFooter />
+            <SiteFooter input={input} />
           </body>
         </Html>
       </>

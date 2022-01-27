@@ -89,7 +89,7 @@ function notAllowedResponse(input: EnrichedInput) {
     body: <Html>
       <Head />
       <body>
-        <SiteHeader input={input} />
+        <SiteHeader />
         <main>
           <HeroImage image={image} />
           <Container>
@@ -100,7 +100,7 @@ function notAllowedResponse(input: EnrichedInput) {
           </Container>
         </main>
         <QuickLinks />
-        <SiteFooter />
+        <SiteFooter input={input} />
       </body>
     </Html>,
   };

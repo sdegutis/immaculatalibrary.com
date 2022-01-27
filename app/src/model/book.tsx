@@ -87,7 +87,7 @@ export class Book implements Routeable {
           <link rel="stylesheet" href="/css/base/rating-label.css" />
         </Head>
         <body>
-          <SiteHeader input={input} />
+          <SiteHeader />
           <main>
             <HeroImage image={this.category.imageFilename} />
             <Container>
@@ -194,7 +194,7 @@ export class Book implements Routeable {
             </Container>
           </main>
           <QuickLinks />
-          <SiteFooter />
+          <SiteFooter input={input} />
         </body>
       </Html>
     }
@@ -239,7 +239,7 @@ export const allBooksPage: Routeable = {
           <Head title={title}>
           </Head>
           <body>
-            <SiteHeader input={input} />
+            <SiteHeader />
             <main>
               <HeroImage image={image} />
               <Container>
@@ -271,7 +271,7 @@ export const allBooksPage: Routeable = {
               </Container>
             </main>
             <QuickLinks />
-            <SiteFooter />
+            <SiteFooter input={input} />
           </body>
         </Html>
       </>

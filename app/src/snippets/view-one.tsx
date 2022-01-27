@@ -25,7 +25,7 @@ export class SnippetRoute implements Routeable {
           <link rel="stylesheet" href="/css/layout/book-snippet.css" />
         </Head>
         <body>
-          <SiteHeader input={input} />
+          <SiteHeader />
           <main>
             <HeroImage image={this.snippet.image} />
             <Container>
@@ -45,7 +45,7 @@ export class SnippetRoute implements Routeable {
             </Container>
           </main>
           <QuickLinks />
-          <SiteFooter />
+          <SiteFooter input={input} />
         </body>
       </Html>
     }

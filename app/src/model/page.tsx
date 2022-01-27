@@ -44,7 +44,7 @@ export class Page implements Routeable {
         <Head title={this.title}>
         </Head>
         <body>
-          <SiteHeader input={input} />
+          <SiteHeader />
           <main>
             <HeroImage image={this.imageFilename} />
             <Container>
@@ -55,7 +55,7 @@ export class Page implements Routeable {
             </Container>
           </main>
           <QuickLinks />
-          <SiteFooter />
+          <SiteFooter input={input} />
         </body>
       </Html>
     }

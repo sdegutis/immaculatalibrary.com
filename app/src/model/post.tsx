@@ -70,7 +70,7 @@ export class Post implements Routeable {
           <link rel="stylesheet" href="/css/layout/post.css" />
         </Head>
         <body>
-          <SiteHeader input={input} />
+          <SiteHeader />
           <main>
             <HeroImage image={this.imageFilename} />
             <Container>
@@ -88,7 +88,7 @@ export class Post implements Routeable {
             </Container>
           </main>
           <QuickLinks />
-          <SiteFooter />
+          <SiteFooter input={input} />
         </body>
       </Html>
     }
@@ -117,7 +117,7 @@ export const allPostsPage: Routeable = {
             <link rel="stylesheet" href="/css/layout/posts.css" />
           </Head>
           <body>
-            <SiteHeader input={input} />
+            <SiteHeader />
             <main>
               <HeroImage image={image} />
               <Container split={false}>
@@ -148,7 +148,7 @@ export const allPostsPage: Routeable = {
               </Container>
             </main>
             <QuickLinks />
-            <SiteFooter />
+            <SiteFooter input={input} />
           </body>
         </Html>
       </>
