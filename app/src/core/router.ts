@@ -8,7 +8,6 @@ import { homeRoutes } from "../pages/home";
 import { snippetRoutes } from "../snippets";
 import { makeSitemap } from "./sitemap";
 import { staticFileRoutes } from "./static";
-import { RouteOutput } from "/src/http";
 
 type AuthedRouteHandler = (input: EnrichedInput) => RouteOutput;
 

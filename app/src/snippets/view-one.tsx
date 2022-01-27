@@ -6,7 +6,6 @@ import { Container, Content, HeroImage } from "../view/components/page";
 import { QuickLinks } from "../view/components/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "../view/components/site";
 import { LatestBookSnippets } from "./latest-list";
-import { RouteOutput } from "/src/http";
 
 export class SnippetRoute implements Routeable {
 
@@ -31,6 +30,10 @@ export class SnippetRoute implements Routeable {
             <Container>
               <Content>
                 <h1>{this.snippet.title}</h1>
+
+                {input.session?.isAdmin && <>
+                  <h3>Edit</h3>
+                </>}
 
                 <p>{format_date(this.snippet.date)} &bull; {reading_mins(this.snippet.markdownContent)} min</p>
                 <p>From <a href={this.snippet.book.route}>{this.snippet.book.title}</a>, page <a href={this.snippet.archiveLink}>{extract_page_number(this.snippet.archiveLink)}</a></p>

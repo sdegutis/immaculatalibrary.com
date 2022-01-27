@@ -6,7 +6,6 @@ import { sortBy } from "../util/helpers";
 import { bookSnippetRandom, randomSnippetPage } from './random';
 import { allSnippetsPage, bookSnippetSearch } from './view-all';
 import { SnippetRoute } from './view-one';
-import { FsFile } from "/src/filesys";
 
 export const snippetRoutes: Routeable[] = [
   allSnippetsPage,

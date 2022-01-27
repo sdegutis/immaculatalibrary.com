@@ -7,8 +7,6 @@ import { Container, Content, HeroImage } from '../view/components/page';
 import { QuickLinks } from '../view/components/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../view/components/site';
 import { Book } from './book';
-import { FsFile } from "/src/filesys";
-import { RouteOutput } from "/src/http";
 
 export class Category implements Routeable {
 

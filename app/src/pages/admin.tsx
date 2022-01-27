@@ -6,7 +6,6 @@ import { sameSiteReferer } from '../util/helpers';
 import { Container, Content, HeroImage } from '../view/components/page';
 import { QuickLinks } from '../view/components/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../view/components/site';
-import { RouteHandler, RouteInput, RouteOutput } from '/src/http';
 
 const users: string[] = JSON.parse(usersFile.buffer.toString('utf8'));
 
@@ -47,7 +46,9 @@ export const loginRoute: Routeable = {
       const isValid = users.some(existing => bcrypt.compareSync(userpass, existing));
       if (isValid) {
         const sessionid = randomUUID();
-        persisted.sessions.set(sessionid, { isAdmin: true });
+        persisted.sessions.set(sessionid, {
+          isAdmin: true
+        });
 
         return {
           status: 302,

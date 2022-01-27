@@ -1,6 +1,5 @@
 import mime from 'mime';
 import 'source-map-support/register';
-import { RouteInput, RouteOutput } from '../../src/http';
 import { loadRoutes } from './core/router';
 import { allBooks } from './model/book';
 import { allCategories } from './model/category';

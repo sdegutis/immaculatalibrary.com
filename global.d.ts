@@ -1,5 +1,12 @@
-declare const __file: import('./src/filesys').FsFile;
-declare const __dir: import('./src/filesys').FsDir;
+declare type RouteHandler = import('./src/http').RouteHandler;
+declare type RouteInput = import('./src/http').RouteInput;
+declare type RouteOutput = import('./src/http').RouteOutput;
+
+declare type FsFile = import('./src/filesys').FsFile;
+declare type FsDir = import('./src/filesys').FsDir;
+
+declare const __file: FsFile;
+declare const __dir: FsDir;
 
 interface Session {
   isAdmin: boolean;
@@ -15,12 +22,12 @@ declare module JSX {
 }
 
 declare module 'dir:*/' {
-  const dir: import('./src/filesys').FsDir;
+  const dir: FsDir;
   export default dir;
 }
 
 declare module 'file:*' {
-  const file: import('./src/filesys').FsFile;
+  const file: FsFile;
   export default file;
 }
 

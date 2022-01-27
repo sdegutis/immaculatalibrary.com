@@ -2,8 +2,6 @@ import { createHash } from 'crypto';
 import publicDir from 'dir:../../public/';
 import { EnrichedInput } from '../pages/admin';
 import { Routeable } from './router';
-import { FsDir, FsFile } from '/src/filesys';
-import { RouteOutput } from '/src/http';
 
 export const staticFiles: StaticFile[] = [];
 
