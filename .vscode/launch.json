@@ -11,6 +11,10 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
+      "resolveSourceMapLocations": [
+        "${workspaceFolder}/**",
+        "!**/node_modules/**"
+      ],
       "program": "${workspaceFolder}\\out\\main.js",
       "outFiles": [
         "${workspaceFolder}/**/*.js"

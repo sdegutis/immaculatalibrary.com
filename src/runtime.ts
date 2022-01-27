@@ -1,4 +1,5 @@
 import * as sucrase from 'sucrase';
+import { pathToFileURL } from 'url';
 import vm from 'vm';
 import { FsDir, FsFile } from "./filesys";
 
@@ -83,10 +84,16 @@ class Module {
         __file: this.file,
       };
 
+      const filePath = pathToFileURL(this.file.realPath);
+
       const sucraseOptions: sucrase.Options = {
         transforms: ['typescript', 'imports'],
         disableESTransforms: true,
         production: true,
+        filePath: filePath.href,
+        sourceMapOptions: {
+          compiledFilename: this.file.realPath,
+        }
       };
 
       if (this.#runtime.jsxCreateElement) {
@@ -99,10 +106,11 @@ class Module {
         sucraseOptions.jsxFragmentPragma = '_JSX.fragment';
       }
 
-      const { code } = sucrase.transform(rawCode, sucraseOptions);
-
-      const runModule = vm.compileFunction(code, Object.keys(args), {
-        filename: this.file.realPath,
+      const { code, sourceMap } = sucrase.transform(rawCode, sucraseOptions);
+      const sourceMapBase64 = Buffer.from(JSON.stringify(sourceMap!)).toString('base64url');
+      const sourceMapUrlStr = `\n//# sourceMappingURL=data:application/json;base64,${sourceMapBase64}`;
+      const runModule = vm.compileFunction(code + sourceMapUrlStr, Object.keys(args), {
+        filename: filePath.href,
         parsingContext: this.#runtime.context,
       });
 
