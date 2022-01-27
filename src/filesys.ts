@@ -85,6 +85,8 @@ export class FsDir extends FsNode {
           dir.filesByName[part] ??
           dir.filesByName[part + '.ts'] ??
           dir.filesByName[part + '.tsx'] ??
+          dir.dirsByName[part]?.filesByName['index.ts'] ??
+          dir.dirsByName[part]?.filesByName['index.tsx'] ??
           null
         );
       }
