@@ -1,7 +1,7 @@
 import snippetsDir from 'dir:/data/snippets/';
 import Yaml from 'js-yaml';
 import * as luxon from 'luxon';
-import { Routeable } from '../core/router';
+import { addRouteable, Routeable } from '../core/router';
 import { Book } from '../model/book';
 import { loadContentFile, saveContentFile } from '../util/data-files';
 import { sortBy } from "../util/helpers";
@@ -63,8 +63,6 @@ export class Snippet {
     snippetRoutes.push(this.view);
     snippetRoutes.push(this.clone);
 
-    console.log('added my route');
-
     this.id = `${this.date}-${this.slug}`;
     snippetsById.set(this.id, this);
   }
@@ -115,7 +113,9 @@ export class Snippet {
     const buffer = Buffer.from(`---\n${header}---\n\n${newData.markdownContent}`);
     const file = snippetsDir.createFile(`${date}-${newData.slug}.md`, buffer);
     const newSnippet = Snippet.from(file);
+    newSnippet.book = this.book;
     newSnippet.save();
+    addRouteable(newSnippet.view);
     return newSnippet;
   }
 

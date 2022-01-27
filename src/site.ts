@@ -1,4 +1,3 @@
-import chokidar from 'chokidar';
 import 'dotenv/config';
 import 'source-map-support/register';
 import { FileSys, FsFile } from './filesys';
@@ -9,11 +8,12 @@ import { Runtime } from "./runtime";
 export class Site {
 
   handler!: RouteHandler;
-  #filesys = new FileSys('app');
+  #filesys;
   #runtime: Runtime | undefined;
   #persisted = Object.create(null);
 
-  constructor() {
+  constructor(path: string) {
+    this.#filesys = new FileSys(path);
     this.build();
   }
 
@@ -38,14 +38,6 @@ export class Site {
     catch (e) {
       console.error(e);
     }
-  }
-
-  restartOnSourceChanges() {
-    let timeout: NodeJS.Timeout | null = null;
-    chokidar.watch(this.#filesys.fsBase, { ignoreInitial: true }).on('all', (e, p) => {
-      if (timeout) clearTimeout(timeout);
-      timeout = setTimeout(() => this.build(), 100);
-    });
   }
 
 }
