@@ -8,6 +8,13 @@ import { SnippetRoute } from '../view/pages/snippet';
 import { Book } from './book';
 import { FsFile } from "/src/filesys";
 
+export const snippetRoutes: Routeable[] = [
+  allSnippetsPage,
+  bookSnippetRandom,
+  randomSnippetPage,
+  bookSnippetSearch,
+];
+
 export class Snippet {
   static from(file: FsFile) {
     const data = loadContentFile<{
@@ -44,6 +51,8 @@ export class Snippet {
   ) {
     this.previewMarkdown = this.derivePreview(2000);
     this.view = new SnippetRoute(this);
+
+    snippetRoutes.push(this.view);
   }
 
   private derivePreview(count: number) {
@@ -85,11 +94,3 @@ export const allSnippets = (snippetsDir
 export const publishedSnippets = (allSnippets
   .filter(s => s.published)
   .reverse());
-
-export const snippetRoutes: Routeable[] = [
-  allSnippetsPage,
-  bookSnippetRandom,
-  randomSnippetPage,
-  bookSnippetSearch,
-  ...allSnippets.map(s => s.view),
-];
