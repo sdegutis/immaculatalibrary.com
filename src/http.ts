@@ -23,6 +23,7 @@ export type RouteHandler = (input: RouteInput) => RouteOutput;
 export function startServer(baseUrl: string, port: number, site: Site) {
   const server = express();
   server.set('trust proxy', 1);
+  server.use(express.raw({ type: '*/*' }));
   server.set('query parser', (s: string) => new URLSearchParams(s ?? ''));
   server.disable('x-powered-by');
 

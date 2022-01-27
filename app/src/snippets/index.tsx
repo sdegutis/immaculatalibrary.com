@@ -1,9 +1,11 @@
 import snippetsDir from 'dir:/data/snippets/';
+import Yaml from 'js-yaml';
+import * as luxon from 'luxon';
 import { Routeable } from '../core/router';
 import { Book } from '../model/book';
 import { loadContentFile, saveContentFile } from '../util/data-files';
 import { sortBy } from "../util/helpers";
-import { cloneSnippetPage } from './clone';
+import { CloneSnippetPage } from './clone';
 import { bookSnippetRandom, randomSnippetPage } from './random';
 import { allSnippetsPage, bookSnippetSearch } from './view-all';
 import { SnippetRoute } from './view-one';
@@ -13,7 +15,6 @@ export const snippetRoutes: Routeable[] = [
   bookSnippetRandom,
   randomSnippetPage,
   bookSnippetSearch,
-  cloneSnippetPage,
 ];
 
 export const snippetsById = new Map<string, Snippet>();
@@ -41,6 +42,7 @@ export class Snippet {
 
   id;
   view;
+  clone;
 
   public previewMarkdown;
   constructor(
@@ -54,9 +56,14 @@ export class Snippet {
     public bookSlug: string,
   ) {
     this.previewMarkdown = this.derivePreview(2000);
+
     this.view = new SnippetRoute(this);
+    this.clone = new CloneSnippetPage(this);
 
     snippetRoutes.push(this.view);
+    snippetRoutes.push(this.clone);
+
+    console.log('added my route');
 
     this.id = `${this.date}-${this.slug}`;
     snippetsById.set(this.id, this);
@@ -90,6 +97,26 @@ export class Snippet {
 
   get image() {
     return this.book.category.imageFilename;
+  }
+
+  createClone(newData: {
+    archiveLink: string,
+    slug: string,
+    title: string,
+    markdownContent: string,
+  }): Snippet {
+    const date = luxon.DateTime.now().toISODate();
+    const header = Yaml.dump({
+      published: true,
+      title: newData.title,
+      archiveLink: newData.archiveLink,
+      bookSlug: this.bookSlug,
+    });
+    const buffer = Buffer.from(`---\n${header}---\n\n${newData.markdownContent}`);
+    const file = snippetsDir.createFile(`${date}-${newData.slug}.md`, buffer);
+    const newSnippet = Snippet.from(file);
+    newSnippet.save();
+    return newSnippet;
   }
 
 }

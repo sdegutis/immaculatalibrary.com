@@ -1,66 +1,42 @@
 const md = markdownit({ typographer: true, html: true, linkify: true, breaks: true });
 
-const markdownSourceEl = document.getElementById('markdown-src');
-const markdownPreviewEl = document.getElementById('markdown-preview');
-const previewArea = document.getElementById('preview-area');
+const titleInput = document.querySelector('input[name=title]');
+const slugInput = document.querySelector('input[name=slug]');
+const contentInput = document.querySelector('textarea[name=markdownContent]');
+const previewArea = document.getElementById('previewarea');
 
-const bookSnippetIdEl = document.querySelector('input[name=id]');
-const bookSnippetId = bookSnippetIdEl.value;
-const published = ('published' in bookSnippetIdEl.dataset);
-const archiveLink = document.querySelector('input[name=archiveLink]').value;
+const slugify = str => str.toLowerCase().replace(/ /g, '-').replace(/[^a-z0-9-]/g, '');
 
-const saveThrottled = throttle(save, 5000);
+titleInput.addEventListener('input', (e) => {
+  slugInput.value = slugify(titleInput.value);
+});
 
-function previewContent(userEdit) {
-  const end = previewArea.scrollHeight - previewArea.offsetHeight;
-  const isAtBottom = previewArea.scrollTop >= (end - 20);
+let wordWrap = true;
 
-  const html = md.render(markdownSourceEl.value);
-  markdownPreviewEl.innerHTML = html;
+const editor = monaco.editor.create(document.getElementById('editorarea'), {
+  value: '',
+  theme: 'vs-dark',
+  language: 'markdown',
+  wordWrap: 'on',
+  tabSize: 2,
+});
 
-  if (userEdit && !published) {
-    saveThrottled();
-  }
-
-  if (isAtBottom) {
-    previewArea.scrollTo({
-      top: previewArea.scrollHeight,
-      behavior: userEdit ? 'smooth' : 'auto',
+editor.addAction({
+  id: 'toggle-word-wrap',
+  label: 'Toggle word wrap',
+  keybindings: [monaco.KeyMod.Alt | monaco.KeyCode.KeyZ],
+  precondition: null,
+  keybindingContext: null,
+  run: () => {
+    wordWrap = !wordWrap;
+    editor.updateOptions({
+      wordWrap: wordWrap ? 'on' : 'off',
     });
   }
-}
+});
 
-markdownSourceEl.addEventListener('input', previewContent.bind(null, true));
-previewContent(false);
-
-async function save() {
-  const res = await fetch(`/admin-panel/book-snippet?id=${bookSnippetId}`, {
-    method: 'PUT',
-    body: markdownSourceEl.value,
-  });
-  const mins = await res.json();
-  document.getElementById('reading-mins').innerText = `${mins} mins`;
-}
-
-function throttle(fn, delay) {
-  let timer = null;
-  return (...args) => {
-    if (!timer) {
-      timer = setTimeout(() => {
-        fn(...args);
-        timer = null;
-      }, delay);
-    }
-  };
-}
-
-const slugInput = document.querySelector('input[name=slug]');
-const titleInput = document.querySelector('input[name=title]');
-
-if (!slugInput.value) {
-  const slugify = str => str.toLowerCase().replace(/ /g, '-').replace(/[^a-z0-9-]/g, '');
-
-  titleInput.addEventListener('input', (e) => {
-    slugInput.value = slugify(titleInput.value);
-  });
-}
+editor.getModel().onDidChangeContent(() => {
+  const content = editor.getModel().getValue();
+  contentInput.value = content;
+  previewArea.innerHTML = md.render(content);
+});

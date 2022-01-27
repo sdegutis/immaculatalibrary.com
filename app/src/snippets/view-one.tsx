@@ -1,11 +1,10 @@
 import { Snippet } from ".";
-import { Routeable } from "../core/router";
+import { Routeable, RouteMethod } from "../core/router";
 import { EnrichedInput } from "../pages/admin";
 import { extract_page_number, format_date, md, reading_mins, ShareLinks } from "../util/helpers";
 import { Container, Content, HeroImage } from "../view/components/page";
 import { QuickLinks } from "../view/components/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "../view/components/site";
-import { makeCloneRouteFor } from "./clone";
 import { LatestBookSnippets } from "./latest-list";
 
 export class SnippetRoute implements Routeable {
@@ -16,7 +15,7 @@ export class SnippetRoute implements Routeable {
     return `/book-snippets/${this.snippet.date}-${this.snippet.slug}.html`;
   }
 
-  method = 'GET' as const;
+  method: RouteMethod = 'GET';
 
   handle(input: EnrichedInput): RouteOutput {
     return {
@@ -33,7 +32,7 @@ export class SnippetRoute implements Routeable {
                 <h1>{this.snippet.title}</h1>
 
                 {input.session?.isAdmin && <>
-                  <a href={makeCloneRouteFor(this.snippet)}>Clone</a>
+                  <a href={this.snippet.clone.route}>Make Next</a>
                 </>}
 
                 <p>{format_date(this.snippet.date)} &bull; {reading_mins(this.snippet.markdownContent)} min</p>

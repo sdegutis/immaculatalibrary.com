@@ -32,16 +32,6 @@ export function enrichAuth(handler: EnrichedRouteHandler): RouteHandler {
   };
 }
 
-export function guardAuth(handler: EnrichedRouteHandler): EnrichedRouteHandler {
-  return enrichAuth(input => {
-    if (!input.session?.isAdmin) {
-      return notAllowedResponse(input);
-    }
-
-    return handler(input);
-  });
-}
-
 export const loginRoute: Routeable = {
   route: '/login',
   method: 'GET',
@@ -66,7 +56,7 @@ export const loginRoute: Routeable = {
       }
     }
 
-    return notAllowedResponse(input);
+    return notAllowedResponse(input, true);
   }
 };
 
@@ -89,11 +79,13 @@ export const adminPageRoutes: Routeable[] = [
   logoutRoute,
 ];
 
-function notAllowedResponse(input: EnrichedInput) {
+export function notAllowedResponse(input: EnrichedInput, login = false) {
   const image = '/img/821px-Pope-peter_pprubens.jpg';
   return {
     status: 401,
-    headers: { 'WWW-Authenticate': 'Basic realm="Responsibility"' },
+    headers: (login
+      ? { 'WWW-Authenticate': 'Basic realm="Responsibility"' }
+      : {}),
     body: <Html>
       <Head />
       <body>

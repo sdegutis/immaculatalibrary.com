@@ -9,16 +9,18 @@ import { snippetRoutes } from "../snippets";
 import { makeSitemap } from "./sitemap";
 import { staticFileRoutes } from "./static";
 
-type AuthedRouteHandler = (input: EnrichedInput) => RouteOutput;
+type EnrichedRouteHandler = (input: EnrichedInput) => RouteOutput;
+
+export type RouteMethod = 'GET' | 'POST';
 
 export interface Routeable {
   route: string;
-  method: 'GET' | 'POST';
-  handle: AuthedRouteHandler;
+  method: RouteMethod;
+  handle: EnrichedRouteHandler;
   lastModifiedDate?: Date;
 }
 
-const allRoutes = new Map<string, AuthedRouteHandler>();
+const allRoutes = new Map<string, EnrichedRouteHandler>();
 
 const forSitemap: Routeable[] = [];
 
@@ -30,7 +32,7 @@ export function addRouteable(routeable: Routeable) {
   addRoute(`${routeable.method} ${routeable.route}`, (input) => routeable.handle(input));
 }
 
-function addRoute(route: string, handler: AuthedRouteHandler) {
+function addRoute(route: string, handler: EnrichedRouteHandler) {
   if (allRoutes.has(route)) {
     throw new Error(`Duplicate route: ${route}`);
   }

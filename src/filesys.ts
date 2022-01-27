@@ -66,6 +66,8 @@ export class FsDir extends FsNode {
     child.buffer = buffer;
     fs.writeFileSync(child.realPath, buffer);
     this.children.push(child);
+
+    return child;
   }
 
   find(toPath: string) {
