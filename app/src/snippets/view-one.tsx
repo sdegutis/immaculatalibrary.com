@@ -5,6 +5,7 @@ import { extract_page_number, format_date, md, reading_mins, ShareLinks } from "
 import { Container, Content, HeroImage } from "../view/components/page";
 import { QuickLinks } from "../view/components/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "../view/components/site";
+import { makeCloneRouteFor } from "./clone";
 import { LatestBookSnippets } from "./latest-list";
 
 export class SnippetRoute implements Routeable {
@@ -32,7 +33,7 @@ export class SnippetRoute implements Routeable {
                 <h1>{this.snippet.title}</h1>
 
                 {input.session?.isAdmin && <>
-                  <h3>Edit</h3>
+                  <a href={makeCloneRouteFor(this.snippet)}>Clone</a>
                 </>}
 
                 <p>{format_date(this.snippet.date)} &bull; {reading_mins(this.snippet.markdownContent)} min</p>

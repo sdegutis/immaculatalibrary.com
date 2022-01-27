@@ -3,6 +3,7 @@ import { Routeable } from '../core/router';
 import { Book } from '../model/book';
 import { loadContentFile, saveContentFile } from '../util/data-files';
 import { sortBy } from "../util/helpers";
+import { cloneSnippetPage } from './clone';
 import { bookSnippetRandom, randomSnippetPage } from './random';
 import { allSnippetsPage, bookSnippetSearch } from './view-all';
 import { SnippetRoute } from './view-one';
@@ -12,7 +13,10 @@ export const snippetRoutes: Routeable[] = [
   bookSnippetRandom,
   randomSnippetPage,
   bookSnippetSearch,
+  cloneSnippetPage,
 ];
+
+export const snippetsById = new Map<string, Snippet>();
 
 export class Snippet {
   static from(file: FsFile) {
@@ -35,6 +39,7 @@ export class Snippet {
     );
   }
 
+  id;
   view;
 
   public previewMarkdown;
@@ -52,6 +57,9 @@ export class Snippet {
     this.view = new SnippetRoute(this);
 
     snippetRoutes.push(this.view);
+
+    this.id = `${this.date}-${this.slug}`;
+    snippetsById.set(this.id, this);
   }
 
   private derivePreview(count: number) {
