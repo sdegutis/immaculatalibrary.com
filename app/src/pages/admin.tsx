@@ -9,6 +9,10 @@ import { Head, Html, SiteFooter, SiteHeader } from '../view/components/site';
 
 const users: string[] = JSON.parse(usersFile.buffer.toString('utf8'));
 
+interface Session {
+  isAdmin: boolean;
+}
+
 export type EnrichedInput = RouteInput & {
   session: Session | null;
 };
@@ -26,7 +30,7 @@ export function enrichAuth(handler: (input: EnrichedInput) => RouteOutput): Rout
   };
 }
 
-function guardAuth(handler: RouteHandler): RouteHandler {
+export function guardAuth(handler: RouteHandler): RouteHandler {
   return enrichAuth(input => {
     if (!input.session?.isAdmin) {
       return notAllowedResponse(input);

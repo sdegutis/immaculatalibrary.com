@@ -31,6 +31,7 @@
   },
   "include": [
     "./app/src/**/*.ts",
+    "./app/src/**/*.d.ts",
     "./app/src/**/*.tsx",
     "./global.d.ts"
   ],

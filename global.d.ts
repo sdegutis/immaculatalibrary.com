@@ -8,14 +8,6 @@ declare type FsDir = import('./src/filesys').FsDir;
 declare const __file: FsFile;
 declare const __dir: FsDir;
 
-interface Session {
-  isAdmin: boolean;
-}
-
-declare const persisted: {
-  sessions: Map<string, Session>;
-};
-
 declare module JSX {
   export type IntrinsicElements = import('./src/jsx').IntrinsicElements;
   export type Element = import('./src/jsx').Element;
