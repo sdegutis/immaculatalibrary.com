@@ -8,6 +8,7 @@ import { Snippet, snippetRoutes } from "./snippet";
 import { RouteOutput } from "/src/http";
 
 export const adminCssPage = HashedStaticFile.fromFile(__dir.filesByName['admin.css']!);
+export const newBookSnippetScript = HashedStaticFile.fromFile(__dir.filesByName['new-book-snippet.js']!);
 
 export class CloneSnippetPage implements Routeable {
 
@@ -69,7 +70,7 @@ export class CloneSnippetPage implements Routeable {
             <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.31.1/min/vs/loader.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.31.1/min/vs/editor/editor.main.nls.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.31.1/min/vs/editor/editor.main.js"></script>
-            <script src="/js/new-book-snippet.js"></script>
+            <script src={newBookSnippetScript.route}></script>
 
           </body>
         </Html>
