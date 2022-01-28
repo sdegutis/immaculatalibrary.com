@@ -48,6 +48,10 @@ form :is(input, textarea, button) {
   padding: 3px;
 }
 
+form :read-write:focus {
+  background-color: #fff1;
+}
+
 iframe {
   width: 100%;
   height: 100%;

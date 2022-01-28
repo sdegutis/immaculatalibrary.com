@@ -40,7 +40,7 @@ export class CloneSnippetPage implements Routeable {
             <main>
               <div id='left-panel'>
                 <form method='POST' action={this.update.route}>
-                  <span>Link</span>    <input autocomplete='off' name='archiveLink' value={this.snippet.archiveLink} />
+                  <span>Link</span>    <input autocomplete='off' name='archiveLink' value={this.snippet.archiveLink} autofocus />
                   <span>Title</span>   <input autocomplete='off' name='title' />
                   <span>Slug</span>    <input autocomplete='off' name='slug' />
                   <span>Content</span> <textarea name='markdownContent' />
