@@ -1,4 +1,4 @@
-import { Routeable } from "../core/router";
+import { addRouteable, Routeable } from "../core/router";
 import { LatestBookSnippets } from "../snippets/latest-list";
 import { QuickLinks } from "../view/components/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "../view/components/site";
@@ -90,7 +90,7 @@ const redirectHomePageRoute: Routeable = {
   })
 };
 
-export const homeRoutes: Routeable[] = [
+[
   homePage,
   redirectHomePageRoute
-];
+].forEach(addRouteable);

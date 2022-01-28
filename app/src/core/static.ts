@@ -2,7 +2,7 @@ import { createHash } from 'crypto';
 import publicDir from 'dir:../../public/';
 import path from 'path';
 import { EnrichedInput } from '../pages/admin';
-import { Routeable, RouteMethod } from './router';
+import { addRouteable, Routeable, RouteMethod } from './router';
 
 export const staticFiles: StaticFile[] = [];
 
@@ -51,7 +51,7 @@ function addStaticFiles(dir: FsDir) {
 
 addStaticFiles(publicDir);
 
-export const staticFileRoutes: Routeable[] = staticFiles;
+staticFiles.forEach(addRouteable);
 
 export class HashedStaticFile implements Routeable {
 

@@ -1,10 +1,10 @@
-import { Routeable, RouteMethod } from "../core/router";
+import { addRouteable, Routeable, RouteMethod } from "../core/router";
 import { HashedStaticFile } from "../core/static";
 import { EnrichedInput, notAllowedResponse } from "../pages/admin";
 import { md } from "../util/helpers";
 import { Content } from "../view/components/page";
 import { Head, Html } from "../view/components/site";
-import { Snippet, snippetRoutes } from "./snippet";
+import { Snippet } from "./snippet";
 import { RouteOutput } from "/src/http";
 
 export const adminCssPage = HashedStaticFile.fromFile(__dir.filesByName['admin.css']!);
@@ -15,7 +15,7 @@ export class CloneSnippetPage implements Routeable {
   update;
   constructor(private snippet: Snippet) {
     this.update = new UpdateSnippetPage(snippet);
-    snippetRoutes.push(this.update);
+    addRouteable(this.update);
   }
 
   method: RouteMethod = 'GET';

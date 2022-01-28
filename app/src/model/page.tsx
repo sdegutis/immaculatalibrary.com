@@ -1,5 +1,5 @@
 import pagesDir from 'dir:/data/pages/';
-import { Routeable } from '../core/router';
+import { addRouteable, Routeable } from '../core/router';
 import { EnrichedInput } from '../pages/admin';
 import { loadContentFile } from '../util/data-files';
 import { md } from "../util/helpers";
@@ -64,4 +64,4 @@ export class Page implements Routeable {
 export const allPages = (pagesDir
   .files.map(file => Page.from(file)));
 
-export const allPageRoutes: Routeable[] = allPages;
+allPages.forEach(addRouteable);

@@ -1,5 +1,5 @@
 import categoriesDir from 'dir:/data/categories/';
-import { Routeable } from '../core/router';
+import { addRouteable, Routeable } from '../core/router';
 import { EnrichedInput } from '../pages/admin';
 import { loadContentFile } from '../util/data-files';
 import { excerpt, md, rating, sortBy } from "../util/helpers";
@@ -128,4 +128,4 @@ export const allCategories = (categoriesDir
   .files.map(file => Category.from(file))
   .sort(sortBy(c => categoryOrder.indexOf(c.slug))));
 
-export const allCategoryRoutes: Routeable[] = allCategories;
+allCategories.forEach(addRouteable);

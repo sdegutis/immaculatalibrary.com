@@ -1,5 +1,5 @@
 import moviesDir from 'dir:/data/movies/';
-import { Routeable } from '../core/router';
+import { addRouteable, Routeable } from '../core/router';
 import { EnrichedInput } from '../pages/admin';
 import { loadContentFile } from '../util/data-files';
 import { md, ShareLinks, sortBy } from "../util/helpers";
@@ -151,7 +151,7 @@ const allMoviesPage: Routeable = {
   },
 };
 
-export const movieRoutes: Routeable[] = [
+[
   allMoviesPage,
   ...allMovies,
-];
+].forEach(addRouteable);

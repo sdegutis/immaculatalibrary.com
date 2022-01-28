@@ -1,7 +1,7 @@
 import * as bcrypt from 'bcryptjs';
 import { randomUUID } from 'crypto';
 import usersFile from 'file:/data/users.json';
-import { Routeable } from "../core/router";
+import { addRouteable, Routeable } from "../core/router";
 import { sameSiteReferer } from '../util/helpers';
 import { Container, Content, HeroImage } from '../view/components/page';
 import { QuickLinks } from '../view/components/quicklinks';
@@ -74,10 +74,10 @@ export const logoutRoute: Routeable = {
   }
 };
 
-export const adminPageRoutes: Routeable[] = [
+[
   loginRoute,
   logoutRoute,
-];
+].forEach(addRouteable);
 
 export function notAllowedResponse(input: EnrichedInput, login = false) {
   const image = '/img/821px-Pope-peter_pprubens.jpg';

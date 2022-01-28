@@ -1,5 +1,5 @@
 import postsdir from 'dir:/data/posts/';
-import { Routeable } from '../core/router';
+import { addRouteable, Routeable } from '../core/router';
 import { EnrichedInput } from '../pages/admin';
 import { loadContentFile } from '../util/data-files';
 import { excerpt, format_date, md, reading_mins, ShareLinks, sortBy } from "../util/helpers";
@@ -154,7 +154,7 @@ export const allPostsPage: Routeable = {
   },
 };
 
-export const postRoutes: Routeable[] = [
+[
   allPostsPage,
   ...allPosts,
-];
+].forEach(addRouteable);

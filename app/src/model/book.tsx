@@ -1,5 +1,5 @@
 import booksDir from 'dir:/data/books/';
-import { Routeable } from '../core/router';
+import { addRouteable, Routeable } from '../core/router';
 import { EnrichedInput } from '../pages/admin';
 import { randomBookPage } from '../pages/random-book';
 import { Snippet } from '../snippets/snippet';
@@ -277,8 +277,8 @@ export const allBooksPage: Routeable = {
   },
 };
 
-export const bookRoutes: Routeable[] = [
+[
   allBooksPage,
   randomBookPage,
   ...allBooks,
-];
+].forEach(addRouteable);

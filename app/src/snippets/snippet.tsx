@@ -1,7 +1,7 @@
 import snippetsDir from 'dir:/data/snippets/';
 import Yaml from 'js-yaml';
 import * as luxon from 'luxon';
-import { addRouteable, Routeable } from '../core/router';
+import { addRouteable } from '../core/router';
 import { Book } from '../model/book';
 import { loadContentFile, saveContentFile } from '../util/data-files';
 import { sortBy } from "../util/helpers";
@@ -10,14 +10,14 @@ import { bookSnippetRandom, randomSnippetPage } from './random';
 import { allSnippetsPage, bookSnippetSearch } from './view-all';
 import { SnippetRoute } from './view-one';
 
-export const snippetRoutes: Routeable[] = [
+[
   allSnippetsPage,
   bookSnippetRandom,
   randomSnippetPage,
   bookSnippetSearch,
   adminCssPage,
   newBookSnippetScript,
-];
+].forEach(addRouteable);
 
 export const snippetsById = new Map<string, Snippet>();
 
@@ -62,8 +62,8 @@ export class Snippet {
     this.view = new SnippetRoute(this);
     this.clone = new CloneSnippetPage(this);
 
-    snippetRoutes.push(this.view);
-    snippetRoutes.push(this.clone);
+    addRouteable(this.view);
+    addRouteable(this.clone);
 
     this.id = `${this.date}-${this.slug}`;
     snippetsById.set(this.id, this);

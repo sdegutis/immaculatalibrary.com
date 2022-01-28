@@ -1,13 +1,5 @@
-import { bookRoutes } from "../model/book";
-import { allCategoryRoutes } from "../model/category";
-import { movieRoutes } from "../model/movie";
-import { allPageRoutes } from "../model/page";
-import { postRoutes } from "../model/post";
-import { adminPageRoutes, EnrichedInput } from "../pages/admin";
-import { homeRoutes } from "../pages/home";
-import { snippetRoutes } from "../snippets/snippet";
+import { EnrichedInput } from "../pages/admin";
 import { makeSitemap } from "./sitemap";
-import { staticFileRoutes } from "./static";
 
 type EnrichedRouteHandler = (input: EnrichedInput) => RouteOutput;
 
@@ -41,17 +33,6 @@ function addRoute(route: string, handler: EnrichedRouteHandler) {
 }
 
 export function loadRoutes() {
-  adminPageRoutes.forEach(addRouteable);
-  staticFileRoutes.forEach(addRouteable);
-  allCategoryRoutes.forEach(addRouteable);
-  homeRoutes.forEach(addRouteable);
-  allPageRoutes.forEach(addRouteable);
-  postRoutes.forEach(addRouteable);
-  snippetRoutes.forEach(addRouteable);
-  movieRoutes.forEach(addRouteable);
-  bookRoutes.forEach(addRouteable);
-
   addRouteable(makeSitemap(forSitemap));
-
   return allRoutes;
 }

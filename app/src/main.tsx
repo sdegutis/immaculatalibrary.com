@@ -1,6 +1,7 @@
 import mime from 'mime';
 import 'source-map-support/register';
 import { loadRoutes } from './core/router';
+import './load';
 import { allBooks } from './model/book';
 import { allCategories } from './model/category';
 import { notFoundPage } from './pages/404';
