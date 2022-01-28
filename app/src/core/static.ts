@@ -64,7 +64,6 @@ export class HashedStaticFile implements Routeable {
   constructor(private buffer: Buffer, filename: string) {
     const { name, ext } = path.parse(filename);
     const hash = createHash('sha256').update(buffer).digest().toString('base64url');
-    console.log(hash);
     this.route = `/superstatic/${name}.${hash}${ext}`;
     this.etag = `"${hash}"`;
   }
