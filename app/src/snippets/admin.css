@@ -1,14 +1,51 @@
-form.admin-form {
+body {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr);
+}
+
+main {
+  margin: 1em;
+  display: grid;
+  gap: 1em;
+  grid-template-columns: 15fr 20fr 15fr 30fr;
+}
+
+main>* {
+  overflow: auto;
+}
+
+#left-panel {
+  display: grid;
+  grid-template-rows: auto auto;
+  overflow: auto;
+  padding-right: 1em;
+}
+
+#left-panel>* {
+  overflow: auto;
+}
+
+form {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 0.25em;
   padding: 0.25em;
 }
 
-form.admin-form :is(input, textarea, button) {
+form :is(input, textarea, button) {
   background-color: inherit;
   color: inherit;
   border: 1px solid #17f;
   outline: none;
   padding: 3px;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
 }
