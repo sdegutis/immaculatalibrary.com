@@ -5,10 +5,16 @@ import { startServer } from './http';
 import { Site } from './site';
 
 const formatter = new Intl.DateTimeFormat('en-US', {
-  timeStyle: 'medium',
-  dateStyle: 'short',
-  // fractionalSecondDigits: 3,
-});
+  day: 'numeric',
+  month: '2-digit',
+  year: 'numeric',
+  hour12: true,
+  hour: 'numeric',
+  minute: '2-digit',
+  second: '2-digit',
+  hourCycle: 'h12',
+  fractionalSecondDigits: 3,
+} as Intl.DateTimeFormatOptions & { fractionalSecondDigits?: 0 | 1 | 2 | 3 });
 
 wrapLog('log');
 wrapLog('error');
