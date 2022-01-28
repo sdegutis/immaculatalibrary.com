@@ -6,7 +6,7 @@ import { allCategories } from './model/category';
 import { notFoundPage } from './pages/404';
 import { errorPage } from './pages/500';
 import { enrichAuth } from './pages/admin';
-import { publishedSnippets } from './snippets';
+import { publishedSnippets } from './snippets/snippet';
 
 for (const book of allBooks) {
   for (const cat of allCategories) {

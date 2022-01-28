@@ -5,7 +5,7 @@ import { allPageRoutes } from "../model/page";
 import { postRoutes } from "../model/post";
 import { adminPageRoutes, EnrichedInput } from "../pages/admin";
 import { homeRoutes } from "../pages/home";
-import { snippetRoutes } from "../snippets";
+import { snippetRoutes } from "../snippets/snippet";
 import { makeSitemap } from "./sitemap";
 import { staticFileRoutes } from "./static";
 

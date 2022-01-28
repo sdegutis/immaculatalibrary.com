@@ -2,7 +2,7 @@ import booksDir from 'dir:/data/books/';
 import { Routeable } from '../core/router';
 import { EnrichedInput } from '../pages/admin';
 import { randomBookPage } from '../pages/random-book';
-import { Snippet } from '../snippets';
+import { Snippet } from '../snippets/snippet';
 import { loadContentFile } from '../util/data-files';
 import { excerpt, md, rating, ShareLinks, sortBy, striptags } from "../util/helpers";
 import { Container, Content, HeroImage } from '../view/components/page';

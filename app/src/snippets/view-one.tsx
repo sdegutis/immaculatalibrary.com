@@ -1,4 +1,3 @@
-import { Snippet } from ".";
 import { Routeable, RouteMethod } from "../core/router";
 import { EnrichedInput } from "../pages/admin";
 import { extract_page_number, format_date, md, reading_mins, ShareLinks } from "../util/helpers";
@@ -6,6 +5,7 @@ import { Container, Content, HeroImage } from "../view/components/page";
 import { QuickLinks } from "../view/components/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "../view/components/site";
 import { LatestBookSnippets } from "./latest-list";
+import { Snippet } from "./snippet";
 
 export class SnippetRoute implements Routeable {
 

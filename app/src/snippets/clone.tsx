@@ -1,9 +1,9 @@
-import { Snippet, snippetRoutes } from ".";
 import { Routeable, RouteMethod } from "../core/router";
 import { EnrichedInput, notAllowedResponse } from "../pages/admin";
 import { md } from "../util/helpers";
 import { Content } from "../view/components/page";
 import { Head, Html } from "../view/components/site";
+import { Snippet, snippetRoutes } from "./snippet";
 
 export class CloneSnippetPage implements Routeable {
 
