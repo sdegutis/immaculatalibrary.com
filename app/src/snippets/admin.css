@@ -5,7 +5,7 @@ form.admin-form {
   padding: 0.25em;
 }
 
-form.admin-form :is(input,textarea,button) {
+form.admin-form :is(input, textarea, button) {
   background-color: inherit;
   color: inherit;
   border: 1px solid #17f;
