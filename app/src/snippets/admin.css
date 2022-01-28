@@ -1,0 +1,14 @@
+form.admin-form {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.25em;
+  padding: 0.25em;
+}
+
+form.admin-form :is(input,textarea,button) {
+  background-color: inherit;
+  color: inherit;
+  border: 1px solid #17f;
+  outline: none;
+  padding: 3px;
+}

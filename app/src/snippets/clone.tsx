@@ -1,9 +1,13 @@
 import { Routeable, RouteMethod } from "../core/router";
+import { HashedStaticFile } from "../core/static";
 import { EnrichedInput, notAllowedResponse } from "../pages/admin";
 import { md } from "../util/helpers";
 import { Content } from "../view/components/page";
 import { Head, Html } from "../view/components/site";
 import { Snippet, snippetRoutes } from "./snippet";
+import { RouteOutput } from "/src/http";
+
+export const adminCssPage = HashedStaticFile.fromFile(__dir.filesByName['admin.css']!);
 
 export class CloneSnippetPage implements Routeable {
 
@@ -26,6 +30,7 @@ export class CloneSnippetPage implements Routeable {
       body: <>
         <Html>
           <Head>
+            <link rel='stylesheet' href={adminCssPage.route} />
             <script
               src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/12.2.0/markdown-it.min.js"
               integrity="sha512-cTQeM/op796Fp1ZUxfech8gSMLT/HvrXMkRGdGZGQnbwuq/obG0UtcL04eByVa99qJik7WlnlQOr5/Fw5B36aw=="
@@ -35,7 +40,7 @@ export class CloneSnippetPage implements Routeable {
           <body style='padding:0;margin:0;width:100vw;height:100vh;overflow:hidden;display:grid;grid-template-rows:minmax(0,1fr)'>
             <main style='margin:1em;display:grid;gap:1em;grid-template-columns:15fr 20fr 15fr 30fr'>
               <div style='display:grid;grid-template-rows:auto auto;overflow:auto;padding-right:1em'>
-                <form method='POST' action={this.update.route} style='display:grid; grid-template-columns:auto 1fr; gap:0.25em; padding:0.25em; border: 1px solid red'>
+                <form method='POST' action={this.update.route} class='admin-form'>
                   <span>Link</span>    <input name='archiveLink' value={this.snippet.archiveLink} />
                   <span>Slug</span>    <input name='slug' />
                   <span>Title</span>   <input name='title' />

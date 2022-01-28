@@ -5,7 +5,7 @@ import { addRouteable, Routeable } from '../core/router';
 import { Book } from '../model/book';
 import { loadContentFile, saveContentFile } from '../util/data-files';
 import { sortBy } from "../util/helpers";
-import { CloneSnippetPage } from './clone';
+import { adminCssPage, CloneSnippetPage } from './clone';
 import { bookSnippetRandom, randomSnippetPage } from './random';
 import { allSnippetsPage, bookSnippetSearch } from './view-all';
 import { SnippetRoute } from './view-one';
@@ -15,6 +15,7 @@ export const snippetRoutes: Routeable[] = [
   bookSnippetRandom,
   randomSnippetPage,
   bookSnippetSearch,
+  adminCssPage,
 ];
 
 export const snippetsById = new Map<string, Snippet>();

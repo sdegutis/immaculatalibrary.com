@@ -1,7 +1,8 @@
 import { createHash } from 'crypto';
 import publicDir from 'dir:../../public/';
+import path from 'path';
 import { EnrichedInput } from '../pages/admin';
-import { Routeable } from './router';
+import { Routeable, RouteMethod } from './router';
 
 export const staticFiles: StaticFile[] = [];
 
@@ -51,3 +52,33 @@ function addStaticFiles(dir: FsDir) {
 addStaticFiles(publicDir);
 
 export const staticFileRoutes: Routeable[] = staticFiles;
+
+export class HashedStaticFile implements Routeable {
+
+  static fromFile(file: FsFile) {
+    return new HashedStaticFile(file.buffer, file.name);
+  }
+
+  etag;
+  route;
+  constructor(private buffer: Buffer, filename: string) {
+    const { name, ext } = path.parse(filename);
+    const hash = createHash('sha256').update(buffer).digest().toString('base64url');
+    console.log(hash);
+    this.route = `/superstatic/${name}.${hash}${ext}`;
+    this.etag = `"${hash}"`;
+  }
+
+  method: RouteMethod = 'GET';
+
+  handle(input: EnrichedInput) {
+    const headers = { 'ETag': this.etag, 'Cache-Control': `max-age=${60 * 60 * 24 * 7 * 52}, immutable` };
+
+    if (input.headers['if-none-match'] === this.etag) {
+      return { status: 304, headers };
+    }
+
+    return { body: this.buffer, headers };
+  }
+
+}
