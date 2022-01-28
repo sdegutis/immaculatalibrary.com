@@ -1,4 +1,3 @@
-import postsdir from 'dir:/data/posts/';
 import { addRouteable, Routeable, RouteMethod } from '../core/router';
 import { EnrichedInput } from '../pages/admin';
 import { loadContentFile } from '../util/data-files';
@@ -6,6 +5,7 @@ import { excerpt, format_date, md, reading_mins, ShareLinks, sortBy } from "../u
 import { Container, Content, HeroImage } from '../view/components/page';
 import { QuickLinks } from '../view/components/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../view/components/site';
+import postsdir from '/data/posts/';
 
 export class Post implements Routeable {
   static from(file: FsFile) {

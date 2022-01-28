@@ -1,4 +1,3 @@
-import categoriesDir from 'dir:/data/categories/';
 import { addRouteable, Routeable, RouteMethod } from '../core/router';
 import { EnrichedInput } from '../pages/admin';
 import { loadContentFile } from '../util/data-files';
@@ -7,6 +6,7 @@ import { Container, Content, HeroImage } from '../view/components/page';
 import { QuickLinks } from '../view/components/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../view/components/site';
 import { Book } from './book';
+import categoriesDir from '/data/categories/';
 
 export class Category implements Routeable {
 

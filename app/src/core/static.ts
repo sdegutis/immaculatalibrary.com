@@ -1,6 +1,6 @@
 import { createHash } from 'crypto';
-import publicDir from 'dir:../../public/';
 import path from 'path';
+import publicDir from '../../public/';
 import { EnrichedInput } from '../pages/admin';
 import { addRouteable, Routeable, RouteMethod } from './router';
 
@@ -81,4 +81,16 @@ export class HashedStaticFile implements Routeable {
     return { body: this.buffer, headers };
   }
 
+}
+
+const map = new Map<FsFile, string>();
+
+export function staticRouteFor(file: FsFile): string {
+  let s = map.get(file);
+  if (!s) {
+    const f = HashedStaticFile.fromFile(file);
+    addRouteable(f);
+    map.set(file, s = f.route);
+  }
+  return s;
 }

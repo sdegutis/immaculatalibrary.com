@@ -124,7 +124,6 @@ class Module {
   }
 
   #requireFromWithinModule(toPath: string) {
-    toPath = toPath.replace(/^(file|dir):/, '');
     if (!toPath.match(/^[./]/)) {
       return require(toPath);
     }

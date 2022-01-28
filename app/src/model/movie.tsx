@@ -1,4 +1,3 @@
-import moviesDir from 'dir:/data/movies/';
 import { addRouteable, Routeable, RouteMethod } from '../core/router';
 import { EnrichedInput } from '../pages/admin';
 import { loadContentFile } from '../util/data-files';
@@ -6,6 +5,7 @@ import { md, ShareLinks, sortBy } from "../util/helpers";
 import { Container, Content, HeroImage } from '../view/components/page';
 import { QuickLinks } from '../view/components/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../view/components/site';
+import moviesDir from '/data/movies/';
 
 export class Movie implements Routeable {
 

@@ -13,12 +13,22 @@ declare module JSX {
   export type Element = import('./src/jsx').Element;
 }
 
-declare module 'dir:*/' {
+declare module '*/' {
   const dir: FsDir;
   export default dir;
 }
 
-declare module 'file:*' {
+declare module '*.css' {
+  const file: FsFile;
+  export default file;
+}
+
+declare module '*.js' {
+  const file: FsFile;
+  export default file;
+}
+
+declare module '*.json' {
   const file: FsFile;
   export default file;
 }

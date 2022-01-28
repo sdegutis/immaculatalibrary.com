@@ -1,4 +1,3 @@
-import booksDir from 'dir:/data/books/';
 import { addRouteable, Routeable, RouteMethod } from '../core/router';
 import { EnrichedInput } from '../pages/admin';
 import { randomBookPage } from '../pages/random-book';
@@ -9,6 +8,7 @@ import { Container, Content, HeroImage } from '../view/components/page';
 import { QuickLinks } from '../view/components/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../view/components/site';
 import { Category } from './category';
+import booksDir from '/data/books/';
 
 export class Book implements Routeable {
 

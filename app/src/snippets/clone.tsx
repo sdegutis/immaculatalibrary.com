@@ -1,14 +1,12 @@
 import { addRouteable, Routeable, RouteMethod } from "../core/router";
-import { HashedStaticFile } from "../core/static";
+import { staticRouteFor } from "../core/static";
 import { EnrichedInput, notAllowedResponse } from "../pages/admin";
 import { md } from "../util/helpers";
 import { Content } from "../view/components/page";
 import { Head, Html } from "../view/components/site";
+import adminCssPage from './admin.css';
+import newBookSnippetScript from './new-book-snippet.js';
 import { Snippet } from "./snippet";
-import { RouteOutput } from "/src/http";
-
-export const adminCssPage = HashedStaticFile.fromFile(__dir.filesByName['admin.css']!);
-export const newBookSnippetScript = HashedStaticFile.fromFile(__dir.filesByName['new-book-snippet.js']!);
 
 export class CloneSnippetPage implements Routeable {
 
@@ -31,7 +29,7 @@ export class CloneSnippetPage implements Routeable {
       body: <>
         <Html>
           <Head>
-            <link rel='stylesheet' href={adminCssPage.route} />
+            <link rel='stylesheet' href={staticRouteFor(adminCssPage)} />
             <script
               src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/12.2.0/markdown-it.min.js"
               integrity="sha512-cTQeM/op796Fp1ZUxfech8gSMLT/HvrXMkRGdGZGQnbwuq/obG0UtcL04eByVa99qJik7WlnlQOr5/Fw5B36aw=="
@@ -70,7 +68,7 @@ export class CloneSnippetPage implements Routeable {
             <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.31.1/min/vs/loader.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.31.1/min/vs/editor/editor.main.nls.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.31.1/min/vs/editor/editor.main.js"></script>
-            <script src={newBookSnippetScript.route}></script>
+            <script src={staticRouteFor(newBookSnippetScript)}></script>
 
           </body>
         </Html>

@@ -1,4 +1,3 @@
-import pagesDir from 'dir:/data/pages/';
 import { addRouteable, Routeable, RouteMethod } from '../core/router';
 import { EnrichedInput } from '../pages/admin';
 import { loadContentFile } from '../util/data-files';
@@ -6,6 +5,7 @@ import { md } from "../util/helpers";
 import { Container, Content, HeroImage } from '../view/components/page';
 import { QuickLinks } from '../view/components/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../view/components/site';
+import pagesDir from '/data/pages/';
 
 export class Page implements Routeable {
 

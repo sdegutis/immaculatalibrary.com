@@ -1,22 +1,20 @@
-import snippetsDir from 'dir:/data/snippets/';
 import Yaml from 'js-yaml';
 import * as luxon from 'luxon';
 import { addRouteable } from '../core/router';
 import { Book } from '../model/book';
 import { loadContentFile, saveContentFile } from '../util/data-files';
 import { sortBy } from "../util/helpers";
-import { adminCssPage, CloneSnippetPage, newBookSnippetScript } from './clone';
+import { CloneSnippetPage } from './clone';
 import { bookSnippetRandom, randomSnippetPage } from './random';
 import { allSnippetsPage, bookSnippetSearch } from './view-all';
 import { SnippetRoute } from './view-one';
+import snippetsDir from '/data/snippets/';
 
 [
   allSnippetsPage,
   bookSnippetRandom,
   randomSnippetPage,
   bookSnippetSearch,
-  adminCssPage,
-  newBookSnippetScript,
 ].forEach(addRouteable);
 
 export const snippetsById = new Map<string, Snippet>();
