@@ -48,7 +48,6 @@ export class CloneSnippetPage implements Routeable {
                   <button>Create</button>
                 </form>
                 <Content>
-                  <h1>{this.snippet.title}</h1>
                   {md.render(this.snippet.markdownContent)}
                 </Content>
               </div>
