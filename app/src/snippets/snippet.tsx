@@ -115,7 +115,6 @@ export class Snippet {
     const newSnippet = Snippet.from(file);
     newSnippet.book = this.book;
     newSnippet.save();
-    addRouteable(newSnippet.view);
     return newSnippet;
   }
 
