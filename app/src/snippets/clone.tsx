@@ -33,7 +33,7 @@ export class CloneSnippetPage implements Routeable {
               referrerpolicy="no-referrer"></script>
           </Head>
           <body style='padding:0;margin:0;width:100vw;height:100vh;overflow:hidden;display:grid;grid-template-rows:minmax(0,1fr)'>
-            <main style='margin:1em;display:grid;gap:1em;grid-template-columns:1fr 1fr 1fr 1fr'>
+            <main style='margin:1em;display:grid;gap:1em;grid-template-columns:15fr 20fr 15fr 30fr'>
               <div style='display:grid;grid-template-rows:auto auto;overflow:auto;padding-right:1em'>
                 <form method='POST' action={this.update.route} style='display:grid; grid-template-columns:auto 1fr; gap:0.25em; padding:0.25em; border: 1px solid red'>
                   <span>Link</span>    <input name='archiveLink' value={this.snippet.archiveLink} />
@@ -48,14 +48,11 @@ export class CloneSnippetPage implements Routeable {
                   {md.render(this.snippet.markdownContent)}
                 </Content>
               </div>
-              <div style='overflow:auto' id='editorarea'>
-              </div>
-              <div style='overflow:auto'>
-                <div style='overflow:auto;padding-right:1em'>
-                  <Content>
-                    <div id='previewarea'></div>
-                  </Content>
-                </div>
+              <div style='overflow:auto' id='editorarea'></div>
+              <div style='overflow:auto;padding-right:1em'>
+                <Content>
+                  <div id='previewarea'></div>
+                </Content>
               </div>
               <div style='overflow:auto'>
                 <iframe style='width:100%;height:100%' src={this.snippet.archiveLink}></iframe>
