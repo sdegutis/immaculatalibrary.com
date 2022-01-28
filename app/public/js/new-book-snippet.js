@@ -1,4 +1,9 @@
-const md = markdownit({ typographer: true, html: true, linkify: true, breaks: true });
+const md = markdownit({
+  typographer: true,
+  html: true,
+  linkify: true,
+  breaks: true
+});
 
 const titleInput = document.querySelector('input[name=title]');
 const slugInput = document.querySelector('input[name=slug]');
