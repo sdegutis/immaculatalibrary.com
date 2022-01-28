@@ -1,5 +1,5 @@
 import pagesDir from 'dir:/data/pages/';
-import { addRouteable, Routeable } from '../core/router';
+import { addRouteable, Routeable, RouteMethod } from '../core/router';
 import { EnrichedInput } from '../pages/admin';
 import { loadContentFile } from '../util/data-files';
 import { md } from "../util/helpers";
@@ -34,7 +34,7 @@ export class Page implements Routeable {
     return `/${this.slug}.html`;
   }
 
-  method = 'GET' as const;
+  method: RouteMethod = 'GET';
 
   handle(input: EnrichedInput): RouteOutput {
     return {

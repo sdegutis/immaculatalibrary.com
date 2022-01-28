@@ -17,7 +17,7 @@ class StaticFile implements Routeable {
     this.etag = `"${createHash('sha256').update(file.buffer).digest().toString('base64')}"`;
   }
 
-  method = 'GET' as const;
+  method: RouteMethod = 'GET';
 
   handle(input: EnrichedInput): RouteOutput {
     const headers = {

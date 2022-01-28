@@ -1,5 +1,5 @@
 import postsdir from 'dir:/data/posts/';
-import { addRouteable, Routeable } from '../core/router';
+import { addRouteable, Routeable, RouteMethod } from '../core/router';
 import { EnrichedInput } from '../pages/admin';
 import { loadContentFile } from '../util/data-files';
 import { excerpt, format_date, md, reading_mins, ShareLinks, sortBy } from "../util/helpers";
@@ -59,7 +59,7 @@ export class Post implements Routeable {
     return `/posts/${this.date}-${this.slug}.html`;
   }
 
-  method = 'GET' as const;
+  method: RouteMethod = 'GET';
 
   handle(input: EnrichedInput): RouteOutput {
     return {

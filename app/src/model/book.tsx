@@ -1,5 +1,5 @@
 import booksDir from 'dir:/data/books/';
-import { addRouteable, Routeable } from '../core/router';
+import { addRouteable, Routeable, RouteMethod } from '../core/router';
 import { EnrichedInput } from '../pages/admin';
 import { randomBookPage } from '../pages/random-book';
 import { Snippet } from '../snippets/snippet';
@@ -75,7 +75,7 @@ export class Book implements Routeable {
     return `/books/${this.slug}.html`;
   }
 
-  method = 'GET' as const;
+  method: RouteMethod = 'GET';
 
   handle(input: EnrichedInput): RouteOutput {
     return {

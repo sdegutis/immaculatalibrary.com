@@ -1,5 +1,5 @@
 import moviesDir from 'dir:/data/movies/';
-import { addRouteable, Routeable } from '../core/router';
+import { addRouteable, Routeable, RouteMethod } from '../core/router';
 import { EnrichedInput } from '../pages/admin';
 import { loadContentFile } from '../util/data-files';
 import { md, ShareLinks, sortBy } from "../util/helpers";
@@ -43,7 +43,7 @@ export class Movie implements Routeable {
     return `/movies/${this.slug}.html`;
   }
 
-  method = 'GET' as const;
+  method: RouteMethod = 'GET';
 
   handle(input: EnrichedInput): RouteOutput {
     return {
