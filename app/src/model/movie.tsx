@@ -57,6 +57,10 @@ export class Movie implements Routeable {
             <Container>
               <Content>
                 <h1>{this.displayTitle}</h1>
+                <p><i><b>Note:</b> These reviews are a bit out of date.
+                  I'm planning to update them this weekend.
+                  If I haven't removed this notice by then,
+                  please email me and remind me!</i></p>
                 {md.render(this.markdownContent)}
                 <ShareLinks />
               </Content>
