@@ -1,4 +1,5 @@
-import { Routeable, RouteMethod } from "../core/router";
+import { addRouteable, Routeable, RouteMethod } from "../core/router";
+import { HashedStaticFile } from "../core/static";
 import { EnrichedInput } from "../pages/admin";
 import { extract_page_number, format_date, md, reading_mins, ShareLinks } from "../util/helpers";
 import { Container, Content, HeroImage } from "../view/components/page";
@@ -6,6 +7,9 @@ import { QuickLinks } from "../view/components/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "../view/components/site";
 import { LatestBookSnippets } from "./latest-list";
 import { Snippet } from "./snippet";
+
+export const snippetCss = HashedStaticFile.fromFile(__dir.filesByName['snippet.css']!);
+addRouteable(snippetCss);
 
 export class SnippetRoute implements Routeable {
 
@@ -21,7 +25,7 @@ export class SnippetRoute implements Routeable {
     return {
       body: <Html>
         <Head title={this.snippet.title}>
-          <link rel="stylesheet" href="/css/layout/book-snippet.css" />
+          <link rel="stylesheet" href={snippetCss.route} />
         </Head>
         <body>
           <SiteHeader />
@@ -32,7 +36,7 @@ export class SnippetRoute implements Routeable {
                 <h1>{this.snippet.title}</h1>
 
                 {input.session?.isAdmin && <>
-                  <a href={this.snippet.clone.route}>Make Next</a>
+                  <a id='make-new-button' href={this.snippet.clone.route}>Make Next</a>
                 </>}
 
                 <p>{format_date(this.snippet.date)} &bull; {reading_mins(this.snippet.markdownContent)} min</p>
