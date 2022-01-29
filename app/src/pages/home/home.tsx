@@ -2,8 +2,11 @@ import { addRouteable, Routeable } from "../../core/router";
 import { LatestBookSnippets } from "../../snippets/latest-list";
 import { QuickLinks } from "../../view/components/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "../../view/components/site";
+import headerImage from './header.jpg';
 import randomBookSnippetScript from './random-book-snippet.js';
 import { staticRouteFor } from "/src/core/static";
+
+export const mainSiteHeaderImagePath = staticRouteFor(headerImage);
 
 export const homePage: Routeable = {
   route: `/`,
@@ -14,7 +17,7 @@ export const homePage: Routeable = {
         <Html>
           <Head
             description="Free Catholic Digital Resources"
-            imagePath="/img/header.jpg"
+            imagePath={mainSiteHeaderImagePath}
           >
             <link rel="stylesheet" href="/css/layout/home.css" />
           </Head>
@@ -23,7 +26,7 @@ export const homePage: Routeable = {
 
             <main>
 
-              <section id="home-hero">
+              <section id="home-hero" style={`background-image: url(${mainSiteHeaderImagePath})`}>
                 <div></div>
                 <div>
                   <div>
