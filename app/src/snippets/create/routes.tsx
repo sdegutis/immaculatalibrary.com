@@ -1,12 +1,12 @@
-import { addRouteable, Routeable, RouteMethod } from "../core/router";
-import { staticRouteFor } from "../core/static";
-import { EnrichedInput, notAllowedResponse } from "../pages/admin";
-import { md } from "../util/helpers";
-import { Content } from "../view/components/page";
-import { Head, Html } from "../view/components/site";
+import { addRouteable, Routeable, RouteMethod } from "../../core/router";
+import { staticRouteFor } from "../../core/static";
+import { EnrichedInput, notAllowedResponse } from "../../pages/admin";
+import { md } from "../../util/helpers";
+import { Content } from "../../view/components/page";
+import { Head, Html } from "../../view/components/site";
+import { Snippet } from "../snippet";
 import adminCssPage from './admin.css';
 import newBookSnippetScript from './new-book-snippet.js';
-import { Snippet } from "./snippet";
 
 export class CloneSnippetPage implements Routeable {
 

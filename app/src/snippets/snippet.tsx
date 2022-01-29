@@ -4,7 +4,7 @@ import { addRouteable } from '../core/router';
 import { Book } from '../model/book';
 import { loadContentFile, saveContentFile } from '../util/data-files';
 import { sortBy } from "../util/helpers";
-import { CloneSnippetPage } from './clone';
+import { CloneSnippetPage } from './create/routes';
 import { bookSnippetRandom, randomSnippetPage } from './random';
 import { allSnippetsPage, bookSnippetSearch } from './view-all';
 import { SnippetRoute } from './view-one';
