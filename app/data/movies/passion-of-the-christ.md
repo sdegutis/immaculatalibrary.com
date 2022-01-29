@@ -13,7 +13,7 @@ imageFilename: '/img/movies/passion-of-the-christ.jpg'
 
 ### Overview
 
-The last 12 hours of Jesus Christ, starting with the Agony in the Garden and ending with the Crucifixion and a glimpse of the Resurrection. Also contains almost all the 14 Stations of the Cross.
+The last 12 hours of Jesus Christ, starting with the Agony in the Garden and ending with the Crucifixion and a glimpse of the Resurrection. Contains almost all the 14 Stations of the Cross, and all 5 Sorrowful Mysteries of the Rosary.
 
 ### Review
 
@@ -21,4 +21,10 @@ This isn't quite a movie, it's more of a devotion. Don't watch this for entertai
 
 ### Caveats
 
-Some parts could be skipped over safely without harm to devotion, such as the final Judas scene and the demonic scenes and jump-scares. In general, not appropriate for anyone younger than teenagers.
+* Many scenes with Judas have demons
+* Many scenes with Judas have jump-scares
+* Suicide scene with Judas
+* Graphic scourging of Jesus revealing bones
+* Creepy scenes with Satan
+
+In general, not appropriate for anyone younger than teenagers.

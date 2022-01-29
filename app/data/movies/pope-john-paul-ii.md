@@ -7,8 +7,8 @@ imageFilename: '/img/movies/pope-john-paul-ii.jpg'
 
 ### Links
 
-* Info at [IMDB](https://www.imdb.com/title/tt0475999/)
 * Watch on [FORMED](https://watch.formed.org/pope-john-paul-ii-1)
+* Info at [IMDB](https://www.imdb.com/title/tt0475999/)
 
 ### Overview
 
@@ -20,4 +20,10 @@ Interesting, exciting, and inspiring and moving at times.
 
 ### Caveats
 
-Not family friendly! Shows a graphic murder and other violence. I have absolutely no idea how accurate any of this movie is, and if it's mostly fiction, or rewritten history, then that would be bad at worst, or useless at best. There is one scene in which John Paul II's childhood friend tells a story of how young Karol said that it doesn't matter whether a person is Jewish or Catholic, a conversation which may not have actually happened, and has strong potential to lead to serious and damaging indifferentism in impressionable viewers.
+Not family friendly!
+
+Shows a graphic murder and other violence.
+
+There is one scene in which John Paul II's childhood friend tells a story of how young Karol said that it doesn't matter whether a person is Jewish or Catholic, a conversation which may not have actually happened, and has strong potential to lead to serious and damaging indifferentism in impressionable viewers.
+
+I have absolutely no idea how accurate any of this movie is, and if it's mostly fiction, or rewritten history, then that would be bad at worst, or useless at best.

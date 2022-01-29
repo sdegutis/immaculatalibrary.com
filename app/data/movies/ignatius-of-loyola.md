@@ -19,4 +19,13 @@ The few scenes where the filmmakers had no choice but to guess are very well cho
 
 ### Caveats
 
-Not appropriate for young children! Deals with mature themes such as prostitution, suicide, extreme guilt and self-punishment, and had two gory scenes involving the amputation of his leg.
+Not appropriate for anyone younger than older teens!
+
+* Shows disgusting terribly broken leg
+* Graphic amputation of broken bone
+* Suicide theme at beginning and end
+* Prostitution scene near middle
+* Visuals of burning at the stake
+* Imminent threat of death to pre-Jesuits
+* Theme of extreme guilt
+* Graphic self-flogging by Ignatius

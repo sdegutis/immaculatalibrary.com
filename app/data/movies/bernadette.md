@@ -20,4 +20,4 @@ Much more faithful to the actual events than the earlier movie "Song of Bernadet
 
 ### Caveats
 
-Generally very family friendly.
+Very family friendly. Even the interrogation scene is tempered and quickly remedied by those who receive Bernadette again.

@@ -21,4 +21,6 @@ Generally interesting. only available in Italian, but has English subtitles.
 
 ### Caveats
 
-I have absolutely no idea how accurate any of this movie is, and if it's mostly fiction, or rewritten history, then that would be bad at worst, or useless at best. Not suitable for children.
+Not suitable for children.
+
+I have absolutely no idea how accurate any of this movie is, and if it's mostly fiction, or rewritten history, then that would be bad at worst, or useless at best.

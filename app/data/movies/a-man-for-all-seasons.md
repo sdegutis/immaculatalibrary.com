@@ -17,8 +17,11 @@ The last 7 years of the life of St. Thomas More, centering on the conflict betwe
 
 ### Review
 
-Amazing movie that does justice to St. Thomas More's life, principles, integrity, understanding of conscience, of law, and of religion. Takes good portions of its dialogue straight from official sources, and takes very few liberties, but ones that seem very true to his spirit.
+Amazing movie that does justice to St. Thomas More's life, principles, integrity, understanding of conscience, of law, and of religion. Takes good portions of its dialogue straight from official sources, and takes very few liberties, but ones that seem very true to his spirit based on books we have by him and about him.
 
 ### Caveats
 
-Generally family friendly, although some of the ending parts may be too emotional for younger viewers, especially the in-jail family reunion and the execution.
+* The jail scene is too emotional for young kids.
+* The execution would traumatize young kids.
+
+The rest of it is family friendly.

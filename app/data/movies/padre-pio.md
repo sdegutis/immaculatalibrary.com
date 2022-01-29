@@ -21,4 +21,8 @@ Interesting and inspiring movie.
 
 ### Caveats
 
-A few scenes might be inappropriate for children younger than teenagers. Padre Pio exorcizes a possessed woman. Shortly afterwards, he's physically attacked by invisible demons. Later, a man admits to a plot to commit murder.
+Overall not appropriate for children:
+
+* Padre Pio exorcizes a possessed woman
+* He's physically attacked by invisible demons
+* A man admits to preparing to commit murder

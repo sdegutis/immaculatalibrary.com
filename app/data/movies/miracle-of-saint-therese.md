@@ -20,4 +20,7 @@ It does a great job at showing the spirit of this great Saint and Doctor of the 
 
 ### Caveats
 
-Nothing questionable in this film, although there is a storm scene near the end that could be too much for very young viewers, and the death of her mother near the beginning can be a bit much too, though it is dealt with quickly and reverently.
+* She's told her mother is dead near the beginning
+* An intense dialogue during a storm near the end
+
+Other than this, very family friendly.

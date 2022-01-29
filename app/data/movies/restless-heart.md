@@ -21,4 +21,6 @@ It's nearly impossible to do St. Augustine's Confessions justice in movie form, 
 
 ### Caveats
 
-Not very family friendly due to much highly emotional content and some violence. Several scenes near the beginning are too sensual and not appropriate for many people.
+Not very family friendly due to much highly emotional content and some violence.
+
+Several scenes near the beginning are too sensual and not appropriate for most people.

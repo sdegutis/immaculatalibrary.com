@@ -20,4 +20,6 @@ Interesting film. Seems to be accurate based on what we have learned about her.
 
 ### Caveats
 
-There is a graphic scene near the end that shows her treating a woman with breast cancer. Other mature themes make this movie inappropriate for viewers younger than teenagers.
+* Graphic treating of breast cancer near end
+* Discussion of temptations to lust
+* Discussion of self-flogging

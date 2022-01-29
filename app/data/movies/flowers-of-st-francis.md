@@ -19,4 +19,11 @@ Very good and inspiring. Can't attest to literal accuracy, but seems to capture 
 
 ### Caveats
 
-Few scenes of violence that may be too much for very young children, such as an almost-execution of Juniper and the audible harming of an animal. In Italian.
+Much of it is not appropriate for younger kids:
+
+* Juniper is beaten and almost executed
+* A pig is dismembered
+
+Also:
+
+* It's only in Italian with subtitles

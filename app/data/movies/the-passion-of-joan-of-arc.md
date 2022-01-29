@@ -21,4 +21,13 @@ Excellent instrumental music and cinematography make this a very moving film.
 
 ### Caveats
 
-This movie is probably unsuitable for anyone younger than teens, having intense psychological torture, visual blood letting, vivid threat of physical torture, the sight of a dead woman, and the thorough burning of St. Joan at the stake. It also contains visual breast feeding near the beginning of the execution scene, which parents may want to censor or discuss when watching with teenagers.
+For adults only:
+
+* Extremely intense close-up shots throughout
+* Intense psychological torture
+* Visual blood letting
+* Vivid threat of physical torture
+* The sight of a dead woman near the end
+* The thorough burning of St. Joan at the stake
+
+It also contains visual breast feeding near the beginning of the execution scene, which parents may want to censor or discuss when watching with their children.

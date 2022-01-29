@@ -21,4 +21,9 @@ The movie was generally inspiring and enjoyable.
 
 ### Caveats
 
-It's generally very family friendly, except for one scene with a few men hanging from trees as the saint begins traveling on a road near the end of the movie. Also, I cannot yet attest to the accuracy of it, since I know very little about his actual life.
+It's generally okay for children, except:
+
+* Scene with hanged men on trees (1:06:00)
+* Destruction of school (from 0:48:00 to 0:49:00)
+
+Also, I cannot yet attest to the accuracy of it, since I know very little about his actual life.

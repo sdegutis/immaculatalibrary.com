@@ -19,4 +19,15 @@ Very good and inspiring. Seems very accurate.
 
 ### Caveats
 
-A few brief scenes of gore near the middle may be too much for young children. Some mature themes. In French.
+Overall best for teens and up:
+
+* Brief scenes of gore near middle
+* Very mature themes
+* Discussion of abandoned and tortured babies
+* Some saintly arguing with bad nuns
+
+It also contains visual breast feeding near the middle, which parents may want to censor or discuss when watching with their children.
+
+Also:
+
+* Only in French, with subtitles.

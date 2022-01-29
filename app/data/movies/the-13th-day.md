@@ -7,8 +7,8 @@ imageFilename: '/img/movies/the-13th-day.jpg'
 
 ### Links
 
-* Info at [IMDB](https://www.imdb.com/title/tt1615865/)
 * Watch on [FORMED](https://watch.formed.org/the-13th-day)
+* Info at [IMDB](https://www.imdb.com/title/tt1615865/)
 * Buy on [Amazon](https://www.amazon.com/13th-Day-Jane-Lesley/dp/B002LDCZCU)
 
 ### Overview
@@ -21,4 +21,9 @@ Personally my favorite of all Fatima movies, with an especially beautiful miracl
 
 ### Caveats
 
-Mostly okay for people of all ages, but general persecutions, a diabolic vision shortly after the first visitation, and the vision of Hell and the future, are definitely too much for young children.
+Too intense for young kids.
+
+* General persecution of three children
+* Diabolic vision shortly after first apparition
+* Vision of Hell and the future
+* Intense interrogation

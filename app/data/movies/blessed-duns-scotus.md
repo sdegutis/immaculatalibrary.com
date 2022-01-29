@@ -8,6 +8,7 @@ imageFilename: '/img/movies/blessed-duns-scotus.jpg'
 
 ### Links
 
+* Watch on [FORMED](https://watch.formed.org/blessed-duns-scotus-defender-of-the-immaculate-conception/videos/blessed-duns-scotus-defender-of-the-immaculate-conception)
 * Info at [IMDB](https://www.imdb.com/title/tt1872050/)
 * Buy at [Ignatius Press](https://www.ignatius.com/Blessed-Duns-Scotus-P35.aspx)
 
@@ -19,12 +20,13 @@ Touches on some basic points of the life of Blessed John Duns Scotus, including 
 
 Very inspiring and interesting movie about this saint. Very theological throughout. Has a love story intertwined which emphasizes the importance of discernment of vocation. Excellent score, really really great music throughout.
 
-### Caveats
-
-One scene has bits of reenacted passion of the Christ interspersed, which starts off with the scourging. This scene is low-quality and not very scary for older viewers, but comes out of nowhere and can be startling for all, and confusing/scary for younger viewers. It starts when Scotus's student William is discussing with him his confusion about the day's lessons, about 20 minutes in.
-
----
-
 > "Got the best theme song in the world" - Samantha
 
 > "He must be *removed* from this university" - David quoting the movie
+
+### Caveats
+
+Very family friendly (with a few exceptions below), but young kids will be bored.
+
+* Sudden scourging of Jesus at 16:04
+* Potentially confusing philosophical dialogue
