@@ -2,6 +2,7 @@ import { allCategories } from "../../model/category";
 import { allMovies } from "../../model/movie";
 import { publishedPosts } from "../../model/post";
 import { excerpt, format_date, md, reading_mins } from "../../util/helpers";
+import { audioBibleImageSmall } from "/src/pages/audiobible/audiobible";
 
 export const QuickLinks: Component<{}> = (attrs, children) => {
   const recentPosts = publishedPosts.slice(0, 6);
@@ -58,7 +59,7 @@ export const QuickLinks: Component<{}> = (attrs, children) => {
           )}
 
           <li>
-            <a class="link" href="/audio-bible.html" style="background-image: url(/img/audiobible.jpg);">
+            <a class="link" href="/audio-bible.html" style={`background-image: url(${audioBibleImageSmall});`}>
               <span>Audio Bible</span>
             </a>
           </li>

@@ -28,6 +28,11 @@ declare module '*.js' {
   export default file;
 }
 
+declare module '*.jpg' {
+  const file: FsFile;
+  export default file;
+}
+
 declare module '*.json' {
   const file: FsFile;
   export default file;
