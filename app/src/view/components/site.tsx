@@ -1,4 +1,5 @@
 import { EnrichedInput, loginRoute, logoutRoute } from "../../pages/admin";
+import { DarkModeButton, darkModeScript } from "../dark-mode/button";
 
 export const Html: Component<{}> = (attrs, children) => <>
   {'<!DOCTYPE html>'}
@@ -18,7 +19,7 @@ export const Head: Component<{ imagePath?: string, title?: string, description?:
     <meta property="og:image" content={`http://immaculatalibrary.com${attrs.imagePath}`} />
     <meta name="description" content={attrs.description ?? "Free Digital Catholic Books"} />
 
-    <script src="/js/dark-mode.js"></script>
+    <script src={darkModeScript}></script>
     <link rel="stylesheet" href="/css/base/base.css" />
     <link rel="stylesheet" href="/css/base/header.css" />
     <link rel="stylesheet" href="/css/base/footer.css" />
@@ -102,7 +103,7 @@ export const SiteFooter: Component<{ input: EnrichedInput }> = (attrs, children)
       {' | '}
       <a href="mailto:immaculatalibrary@gmail.com">Contact</a>
       {' | '}
-      <a href="#" id="dark-mode-toggle" data-lightmode="Light mode" data-darkmode="Dark mode"></a>
+      <DarkModeButton />
       {' | '}
       {attrs.input.session?.isAdmin ? <>
         <a href={logoutRoute.route}>Logout</a>
