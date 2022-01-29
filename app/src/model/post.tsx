@@ -31,7 +31,6 @@ export class Post implements Routeable {
     const data = loadContentFile<{
       draft: boolean,
       title: string,
-      imageFilename: string,
       imageCaption: string,
     }>(file);
 
