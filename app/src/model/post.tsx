@@ -1,7 +1,7 @@
 import { addRouteable, Routeable, RouteMethod } from '../core/router';
 import { EnrichedInput } from '../pages/admin';
 import { loadContentFile } from '../util/data-files';
-import { excerpt, format_date, md, reading_mins, ShareLinks, sortBy } from "../util/helpers";
+import { excerpt, format_date, md, reading_mins, sortBy } from "../util/helpers";
 import { Container, Content, HeroImage } from '../view/components/page';
 import { QuickLinks } from '../view/components/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../view/components/site';
@@ -80,8 +80,6 @@ export class Post implements Routeable {
                 </p>
 
                 {md.render(this.markdownContent)}
-
-                <ShareLinks />
               </Content>
             </Container>
           </main>

@@ -2,7 +2,7 @@ import { addRouteable, Routeable, RouteMethod } from '../core/router';
 import { staticRouteFor } from '../core/static';
 import { EnrichedInput } from '../pages/admin';
 import { loadContentFile } from '../util/data-files';
-import { md, ShareLinks, sortBy } from "../util/helpers";
+import { md, sortBy } from "../util/helpers";
 import { Container, Content, HeroImage } from '../view/components/page';
 import { QuickLinks } from '../view/components/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../view/components/site';
@@ -66,7 +66,6 @@ export class Movie implements Routeable {
                 <h1>{this.displayTitle}</h1>
                 {this.subtitle && <h4><i>{this.subtitle}</i></h4>}
                 {md.render(this.markdownContent)}
-                <ShareLinks />
               </Content>
               <MoviesSidebar />
             </Container>

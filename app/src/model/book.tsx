@@ -3,7 +3,7 @@ import { EnrichedInput } from '../pages/admin';
 import { randomBookPage } from '../pages/random-book';
 import { Snippet } from '../snippets/snippet';
 import { loadContentFile } from '../util/data-files';
-import { excerpt, md, rating, ShareLinks, sortBy, striptags } from "../util/helpers";
+import { excerpt, md, rating, sortBy, striptags } from "../util/helpers";
 import { Container, Content, HeroImage } from '../view/components/page';
 import { QuickLinks } from '../view/components/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../view/components/site';
@@ -163,7 +163,6 @@ export class Book implements Routeable {
                   </details>
                 </p>
 
-                <ShareLinks />
               </Content>
 
               <div>
