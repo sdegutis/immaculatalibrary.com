@@ -1,7 +1,9 @@
-import { addRouteable, Routeable } from "../core/router";
-import { LatestBookSnippets } from "../snippets/latest-list";
-import { QuickLinks } from "../view/components/quicklinks";
-import { Head, Html, SiteFooter, SiteHeader } from "../view/components/site";
+import { addRouteable, Routeable } from "../../core/router";
+import { LatestBookSnippets } from "../../snippets/latest-list";
+import { QuickLinks } from "../../view/components/quicklinks";
+import { Head, Html, SiteFooter, SiteHeader } from "../../view/components/site";
+import randomBookSnippetScript from './random-book-snippet.js';
+import { staticRouteFor } from "/src/core/static";
 
 export const homePage: Routeable = {
   route: `/`,
@@ -64,7 +66,7 @@ export const homePage: Routeable = {
                       <noscript>Enable JavaScript to see a random book snippet</noscript>
                       <div id="random-book-snippet" class="content"></div>
                     </div>
-                    <script src="/js/home.js"></script>
+                    <script src={staticRouteFor(randomBookSnippetScript)}></script>
 
                   </div>
                 </section>
@@ -90,7 +92,5 @@ const redirectHomePageRoute: Routeable = {
   })
 };
 
-[
-  homePage,
-  redirectHomePageRoute
-].forEach(addRouteable);
+addRouteable(homePage);
+addRouteable(redirectHomePageRoute);
