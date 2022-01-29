@@ -1,11 +1,10 @@
 ---
 title: 'John XXIII'
 shortTitle: 'John XXIII'
+subtitle: Pope of Peace
 year: '2002'
 imageFilename: '/img/movies/john-xxiii-pope-of-peace.jpg'
 ---
-
-#### Pope of Peace
 
 ### Links
 

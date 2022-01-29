@@ -1,11 +1,10 @@
 ---
 title: 'Paul VI'
 shortTitle: 'Paul VI'
+subtitle: Pope in the Tempest
 year: '2008'
 imageFilename: '/img/movies/paul-vi-pope-in-the-tempest.jpg'
 ---
-
-#### Pope in the Tempest
 
 ### Links
 

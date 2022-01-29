@@ -1,11 +1,10 @@
 ---
 title: 'Don Bosco'
 shortTitle: 'Don Bosco'
+subtitle: The True Story of the Apostle of Youth
 year: '1988'
 imageFilename: '/img/movies/don-bosco.jpg'
 ---
-
-#### The True Story of the Apostle of Youth
 
 ### Links
 

@@ -1,11 +1,10 @@
 ---
 title: 'Padre Pio'
 shortTitle: 'Padre Pio'
+subtitle: Between Heaven and Earth
 year: '2000'
 imageFilename: '/img/movies/padre-pio.jpg'
 ---
-
-#### Between Heaven and Earth
 
 ### Links
 

@@ -13,6 +13,7 @@ export class Movie implements Routeable {
     const data = loadContentFile<{
       title: string,
       shortTitle: string,
+      subtitle: string | undefined,
       year: string,
       imageFilename: string,
     }>(file, 'slug');
@@ -22,6 +23,7 @@ export class Movie implements Routeable {
       data.markdownContent,
       data.meta.title,
       data.meta.shortTitle,
+      data.meta.subtitle,
       data.meta.year,
       data.meta.imageFilename,
     );
@@ -33,6 +35,7 @@ export class Movie implements Routeable {
     public markdownContent: string,
     public title: string,
     public shortTitle: string,
+    public subtitle: string | undefined,
     public year: string,
     public imageFilename: string,
   ) {
@@ -57,6 +60,7 @@ export class Movie implements Routeable {
             <Container>
               <Content>
                 <h1>{this.displayTitle}</h1>
+                {this.subtitle && <h4><i>{this.subtitle}</i></h4>}
                 {md.render(this.markdownContent)}
                 <ShareLinks />
               </Content>

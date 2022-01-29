@@ -1,11 +1,10 @@
 ---
 title: 'Blessed Duns Scotus'
 shortTitle: 'Blessed Duns Scotus'
+subtitle: Defender of the Immaculate Conception
 year: '2011'
 imageFilename: '/img/movies/blessed-duns-scotus.jpg'
 ---
-
-#### Defender of the Immaculate Conception
 
 ### Links
 
