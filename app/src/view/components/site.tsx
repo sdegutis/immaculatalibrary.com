@@ -1,4 +1,4 @@
-import { EnrichedInput, loginRoute, logoutRoute } from "../../pages/admin";
+import { EnrichedInput, loginRoute, logoutRoute } from "../../pages/auth/login";
 import { DarkModeButton, darkModeScript } from "../dark-mode/button";
 import { fontsCssRoute } from "/src/font/fonts";
 

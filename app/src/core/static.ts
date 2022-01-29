@@ -1,7 +1,7 @@
 import { createHash } from 'crypto';
 import path from 'path';
 import publicDir from '../../public/';
-import { EnrichedInput } from '../pages/admin';
+import { EnrichedInput } from '../pages/auth/login';
 import { addRouteable, Routeable, RouteMethod } from './router';
 
 export const staticFiles: StaticFile[] = [];
