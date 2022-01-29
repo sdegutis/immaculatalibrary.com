@@ -5,6 +5,8 @@ year: '1988'
 imageFilename: '/img/movies/bernadette.jpg'
 ---
 
+### Links
+
 * Info at [IMDB](https://www.imdb.com/title/tt0092639/)
 * Watch on [FORMED](https://watch.formed.org/bernadette-1)
 

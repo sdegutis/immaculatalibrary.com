@@ -7,6 +7,8 @@ imageFilename: '/img/movies/blessed-duns-scotus.jpg'
 
 #### Defender of the Immaculate Conception
 
+### Links
+
 * Info at [IMDB](https://www.imdb.com/title/tt1872050/)
 * Buy at [Ignatius Press](https://www.ignatius.com/Blessed-Duns-Scotus-P35.aspx)
 

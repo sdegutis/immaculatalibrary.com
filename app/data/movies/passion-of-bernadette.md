@@ -5,6 +5,8 @@ year: '1990'
 imageFilename: '/img/movies/passion-of-bernadette.jpg'
 ---
 
+### Links
+
 * Info at [IMDB](https://www.imdb.com/title/tt0338330/)
 * Watch on [FORMED](https://watch.formed.org/the-passion-of-bernadette)
 

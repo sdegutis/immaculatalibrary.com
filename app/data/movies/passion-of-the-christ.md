@@ -5,6 +5,8 @@ year: '2004'
 imageFilename: '/img/movies/passion-of-the-christ.jpg'
 ---
 
+### Links
+
 * Info at [IMDB](https://www.imdb.com/title/tt0335345/)
 * Buy DVD at [Amazon](https://www.amazon.com/Passion-Christ-Widescreen-Jim-Caviezel/dp/B00028HBKM)
 * Watch on [Amazon Prime](https://www.amazon.com/Passion-Christ-Jim-Caviezel/dp/B08BC1V9VR)

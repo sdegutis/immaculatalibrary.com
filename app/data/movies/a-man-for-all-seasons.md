@@ -5,6 +5,8 @@ year: '1966'
 imageFilename: '/img/movies/a-man-for-all-seasons.jpg'
 ---
 
+### Links
+
 * Info at [IMDB](https://www.imdb.com/title/tt0060665/)
 * Buy DVD at [Amazon](https://www.amazon.com/Man-All-Seasons-Special/dp/B000LPR6GA)
 * Watch on [Amazon Prime](https://www.amazon.com/Man-All-Seasons-Paul-Scofield/dp/B001OD65MO)

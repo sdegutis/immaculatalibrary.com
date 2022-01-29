@@ -7,6 +7,8 @@ imageFilename: '/img/movies/the-jewellers-shop.jpg'
 
 #### A Modern Mystery by Pope John Paul II
 
+### Links
+
 * Info at [IMDB](https://www.imdb.com/title/tt0094787/)
 * Buy DVD at [Amazon](https://www.amazon.com/Jewellers-Shop-Burt-Lancaster/dp/B000MTEKG4)
 * Watch on [FORMED](https://watch.formed.org/the-jeweller-s-shop-a-modern-mystery-by-pope-john-paul-ii)

@@ -7,6 +7,8 @@ imageFilename: '/img/movies/saint-john-baptist-de-la-salle.jpg'
 
 #### Patron Saint of Teachers
 
+### Links
+
 * Buy DVD at [Amazon](https://www.amazon.com/Saint-John-Baptist-Salle-Teachers/dp/B0041OOW8M)
 * Watch on [FORMED](https://watch.formed.org/saint-john-baptist-de-la-salle-patron-saint-of-teachers)
 
