@@ -37,7 +37,7 @@ function step3() {
 
     const realDirPath = file.realPath.slice(0, -3);
 
-    const imagePath = path.join('app', 'public', 'img', 'movies', `${movieName}-big.jpg`);
+    const imagePath = path.join('app', 'public', 'img', `${movieName}-big.jpg`);
     const newFilePath = path.join(realDirPath, 'image-big.jpg');
 
     copyFileSync(imagePath, newFilePath);
@@ -52,7 +52,7 @@ function step4() {
 
     const realDirPath = file.realPath.slice(0, -3);
 
-    const imagePath = path.join('app', 'public', 'img', 'movies', `${movieName}.jpg`);
+    const imagePath = path.join('app', 'public', 'img', `${movieName}.jpg`);
     const newFilePath = path.join(realDirPath, 'image-small.jpg');
 
     copyFileSync(imagePath, newFilePath);
