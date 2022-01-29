@@ -1,11 +1,12 @@
-import { Container, Content, HeroImage } from "../view/components/page";
-import { QuickLinks } from "../view/components/quicklinks";
-import { Head, Html, SiteFooter, SiteHeader } from "../view/components/site";
-import { EnrichedInput } from "./admin";
+import { Container, Content, HeroImage } from "../../view/components/page";
+import { QuickLinks } from "../../view/components/quicklinks";
+import { Head, Html, SiteFooter, SiteHeader } from "../../view/components/site";
+import { EnrichedInput } from "../admin";
+import { staticRouteFor } from "/src/core/static";
 
 export function errorPage(input: EnrichedInput): RouteOutput {
   const title = 'Something went wrong';
-  const image = '/img/404-big.jpg';
+  const image = staticRouteFor(__dir.filesByName['404.jpg']!);
   return {
     status: 500,
     body: <Html>
