@@ -2,7 +2,7 @@ import { addRouteable, Routeable, RouteMethod } from '../core/router';
 import { staticRouteFor } from '../core/static';
 import { EnrichedInput } from '../pages/admin';
 import { loadContentFile } from '../util/data-files';
-import { md, sortBy } from "../util/helpers";
+import { md, randomElement, sortBy } from "../util/helpers";
 import { Container, Content, HeroImage } from '../view/components/page';
 import { QuickLinks } from '../view/components/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../view/components/site';
@@ -125,7 +125,7 @@ const allMoviesPage: Routeable = {
   method: 'GET',
   handle: (input) => {
     const title = 'Holy Movies';
-    const image = '/img/movies-big.jpg';
+    const image = randomElement(allMovies).bigImage;
     return {
       body: <>
         <Html>
