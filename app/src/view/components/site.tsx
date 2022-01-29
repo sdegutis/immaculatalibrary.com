@@ -17,7 +17,7 @@ export const Head: Component<{ imagePath?: string, title?: string, description?:
     <title>{attrs.title && `${attrs.title} - `}Immaculata Library</title>
     <meta property="og:title" content={'Immaculata Library' + (attrs.title ? `: ${attrs.title}` : '')} />
     <meta property="og:locale" content="en_US" />
-    <meta property="og:image" content={`http://immaculatalibrary.com${attrs.imagePath}`} />
+    <meta property="og:image" content={`https://www.immaculatalibrary.com${attrs.imagePath}`} />
     <meta name="description" content={attrs.description ?? "Free Digital Catholic Books"} />
 
     <script src={darkModeScript}></script>
