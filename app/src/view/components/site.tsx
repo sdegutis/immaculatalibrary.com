@@ -1,5 +1,6 @@
 import { EnrichedInput, loginRoute, logoutRoute } from "../../pages/admin";
 import { DarkModeButton, darkModeScript } from "../dark-mode/button";
+import { fontsCssRoute } from "/src/font/fonts";
 
 export const Html: Component<{}> = (attrs, children) => <>
   {'<!DOCTYPE html>'}
@@ -23,7 +24,7 @@ export const Head: Component<{ imagePath?: string, title?: string, description?:
     <link rel="stylesheet" href="/css/base/base.css" />
     <link rel="stylesheet" href="/css/base/header.css" />
     <link rel="stylesheet" href="/css/base/footer.css" />
-    <link rel="stylesheet" href="/css/base/fonts.css" />
+    <link rel="stylesheet" href={fontsCssRoute} />
     <link rel="stylesheet" href="/css/base/page-hero.css" />
     <link rel="stylesheet" href="/css/base/layout.css" />
     <link rel="stylesheet" href="/css/base/typography.css" />
