@@ -10,8 +10,14 @@ imageFilename: '/img/movies/saint-maria-soledad.jpg'
 * Info at [IMDB](https://www.imdb.com/title/tt4671772/)
 * Watch on [FORMED](https://watch.formed.org/saint-maria-soledad-foundress-of-the-sister-servants-of-mary)
 
-**Overview**: Movie about St. Maria Soledad who helped the sick at night. Shows her trials and struggles and persevering faith.
+### Overview
 
-**Review**: Interesting and inspiring movie.
+Movie about St. Maria Soledad who helped the sick at night. Shows her trials and struggles and persevering faith.
 
-**Caveats**: Contains a few intense emotional scenes, some rough language with a modern day sick man, and young children won't understand any of the movie. Best for older children and above.
+### Review
+
+Interesting and inspiring movie.
+
+### Caveats
+
+Contains a few intense emotional scenes, some rough language with a modern day sick man, and young children won't understand any of the movie. Best for older children and above.

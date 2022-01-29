@@ -11,8 +11,14 @@ imageFilename: '/img/movies/the-jewellers-shop.jpg'
 * Buy DVD at [Amazon](https://www.amazon.com/Jewellers-Shop-Burt-Lancaster/dp/B000MTEKG4)
 * Watch on [FORMED](https://watch.formed.org/the-jeweller-s-shop-a-modern-mystery-by-pope-john-paul-ii)
 
-**Overview**: Movie based on a play by St. John Paul II, showing his vision of the permanence of marriage, the ideal of self-sacrifice both inside and outside marriage, and the resoluteness and selflessness of true love.
+### Overview
 
-**Review**: Can be very inspiring and encouraging, heartwarming and moving.
+Movie based on a play by St. John Paul II, showing his vision of the permanence of marriage, the ideal of self-sacrifice both inside and outside marriage, and the resoluteness and selflessness of true love.
 
-**Caveats**: Can be too confusing and emotional for younger viewers.
+### Review
+
+Can be very inspiring and encouraging, heartwarming and moving.
+
+### Caveats
+
+Can be too confusing and emotional for younger viewers.

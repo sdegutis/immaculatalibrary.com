@@ -7,8 +7,14 @@ imageFilename: '/img/movies/monsieur-vincent.jpg'
 
 * Info at [IMDB](https://www.imdb.com/title/tt0039632/)
 
-**Overview**: Biopic of St. Vincent de Paul, of how he founded the Society of St. Vincent de Paul, and his motivations and reflections.
+### Overview
 
-**Review**: Very good and inspiring. Seems very accurate.
+Biopic of St. Vincent de Paul, of how he founded the Society of St. Vincent de Paul, and his motivations and reflections.
 
-**Caveats**: A few brief scenes of gore near the middle may be too much for young children. Some mature themes. In French.
+### Review
+
+Very good and inspiring. Seems very accurate.
+
+### Caveats
+
+A few brief scenes of gore near the middle may be too much for young children. Some mature themes. In French.

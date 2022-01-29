@@ -10,8 +10,14 @@ imageFilename: '/img/movies/don-bosco.jpg'
 * Info at [IMDB](https://www.imdb.com/title/tt0095051/)
 * Watch on [FORMED](https://watch.formed.org/don-bosco-the-true-story-of-the-apostle-of-youth)
 
-**Overview**: A very well made movie that tells the basic story of St. Don Bosco and his compassion for the abandoned youth of Turin, Italy.
+### Overview
 
-**Review**: Shows his courage and virtues, some of his persecutions, some miracles of God's Divine Providence, and mentions his dreams. Overall very well done.
+A very well made movie that tells the basic story of St. Don Bosco and his compassion for the abandoned youth of Turin, Italy.
 
-**Caveats**: Very family friendly, but with some rough language near the middle, and some splashing in a river that goes on too long.
+### Review
+
+Shows his courage and virtues, some of his persecutions, some miracles of God's Divine Providence, and mentions his dreams. Overall very well done.
+
+### Caveats
+
+Very family friendly, but with some rough language near the middle, and some splashing in a river that goes on too long.

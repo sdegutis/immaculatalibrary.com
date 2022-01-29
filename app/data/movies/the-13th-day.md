@@ -9,8 +9,14 @@ imageFilename: '/img/movies/the-13th-day.jpg'
 * Watch on [FORMED](https://watch.formed.org/the-13th-day)
 * Buy on [Amazon](https://www.amazon.com/13th-Day-Jane-Lesley/dp/B002LDCZCU)
 
-**Overview**: The most accurate, beautiful, and moving film about Fatima. Made by independent filmmakers, so it has its strengths and weaknesses.
+### Overview
 
-**Review**: Personally my favorite of all Fatima movies, with an especially beautiful miracle scene and general scenes of the Blessed Virgin.
+The most accurate, beautiful, and moving film about Fatima. Made by independent filmmakers, so it has its strengths and weaknesses.
 
-**Caveats**: Mostly okay for people of all ages, but general persecutions, a diabolic vision shortly after the first visitation, and the vision of Hell and the future, are definitely too much for young children.
+### Review
+
+Personally my favorite of all Fatima movies, with an especially beautiful miracle scene and general scenes of the Blessed Virgin.
+
+### Caveats
+
+Mostly okay for people of all ages, but general persecutions, a diabolic vision shortly after the first visitation, and the vision of Hell and the future, are definitely too much for young children.
