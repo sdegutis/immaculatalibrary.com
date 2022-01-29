@@ -11,7 +11,7 @@
     "moduleResolution": "Node",
     "paths": {
       "/*": [
-        "./*"
+        "./app/*"
       ],
     },
     "forceConsistentCasingInFileNames": true, /* Ensure that casing is correct in imports. */
