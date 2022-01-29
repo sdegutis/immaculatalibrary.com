@@ -1,4 +1,5 @@
 import { addRouteable, Routeable, RouteMethod } from '../core/router';
+import { staticRouteFor } from '../core/static';
 import { EnrichedInput } from '../pages/admin';
 import { loadContentFile } from '../util/data-files';
 import { excerpt, md, rating, sortBy } from "../util/helpers";
@@ -8,23 +9,27 @@ import { Head, Html, SiteFooter, SiteHeader } from '../view/components/site';
 import { Book } from './book';
 import categoriesDir from '/data/categories/';
 
-
 export class Category implements Routeable {
 
-  static from(file: FsFile) {
+  static from(dir: FsDir) {
+    const file = dir.filesByName['content.md']!;
+
     const data = loadContentFile<{
       title: string,
       shortTitle: string,
-      imageFilename: string,
       books: string[],
     }>(file, 'slug');
 
+    const imageBig = staticRouteFor(dir.filesByName['image-big.jpg']!);
+    const imageSmall = staticRouteFor(dir.filesByName['image-small.jpg']!);
+
     return new Category(
-      data.slug,
+      dir.name,
       data.markdownContent,
       data.meta.title,
       data.meta.shortTitle,
-      data.meta.imageFilename,
+      imageBig,
+      imageSmall,
       new Set(data.meta.books),
     );
   }
@@ -36,7 +41,8 @@ export class Category implements Routeable {
     public markdownContent: string,
     public title: string,
     public shortTitle: string,
-    public imageFilename: string,
+    public imageBig: string,
+    public imageSmall: string,
     public bookSlugs: Set<string>,
   ) { }
 
@@ -56,7 +62,7 @@ export class Category implements Routeable {
         <body>
           <SiteHeader />
           <main>
-            <HeroImage image={this.imageFilename} />
+            <HeroImage image={this.imageBig} />
             <Container>
 
               <div>
@@ -126,7 +132,11 @@ const categoryOrder = [
 ];
 
 export const allCategories = (categoriesDir
-  .files.map(file => Category.from(file))
+  .dirs.map(dir => Category.from(dir))
   .sort(sortBy(c => categoryOrder.indexOf(c.slug))));
 
 allCategories.forEach(addRouteable);
+
+export function referenceImage() {
+  return allCategories.find(cat => cat.slug === 'reference')!.imageBig;
+}

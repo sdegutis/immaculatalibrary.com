@@ -5,6 +5,7 @@ import { excerpt, format_date, md, reading_mins, sortBy } from "../util/helpers"
 import { Container, Content, HeroImage } from '../view/components/page';
 import { QuickLinks } from '../view/components/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../view/components/site';
+import { referenceImage } from './category';
 import postsdir from '/data/posts/';
 
 export class Post implements Routeable {
@@ -105,7 +106,7 @@ export const allPostsPage: Routeable = {
   method: 'GET',
   handle: (input) => {
     const title = 'All Blog Posts';
-    const image = '/img/reference-big.jpg';
+    const image = referenceImage();
     return {
       body: <>
         <Html>

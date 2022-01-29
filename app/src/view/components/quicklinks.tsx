@@ -39,7 +39,7 @@ export const QuickLinks: Component<{}> = (attrs, children) => {
         <ul class="quicklinks">
 
           {allCategories.map(cat => <li>
-            <a class="link" href={cat.route} style={`background-image: url(/img/${cat.slug}.jpg);`}>
+            <a class="link" href={cat.route} style={`background-image: url(${cat.imageSmall});`}>
               <span>{cat.shortTitle}</span>
             </a>
           </li>

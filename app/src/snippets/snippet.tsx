@@ -94,7 +94,7 @@ export class Snippet {
   book!: Book;
 
   get image() {
-    return this.book.category.imageFilename;
+    return this.book.category.imageBig;
   }
 
   createClone(newData: {

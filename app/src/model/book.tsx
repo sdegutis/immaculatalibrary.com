@@ -7,7 +7,7 @@ import { excerpt, md, rating, sortBy, striptags } from "../util/helpers";
 import { Container, Content, HeroImage } from '../view/components/page';
 import { QuickLinks } from '../view/components/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../view/components/site';
-import { Category } from './category';
+import { Category, referenceImage } from './category';
 import booksDir from '/data/books/';
 
 export class Book implements Routeable {
@@ -87,7 +87,7 @@ export class Book implements Routeable {
         <body>
           <SiteHeader />
           <main>
-            <HeroImage image={this.category.imageFilename} />
+            <HeroImage image={this.category.imageBig} />
             <Container>
               <Content>
 
@@ -229,7 +229,7 @@ export const allBooksPage: Routeable = {
   method: 'GET',
   handle: (input) => {
     const title = 'All Books';
-    const image = '/img/reference-big.jpg';
+    const image = referenceImage();
     return {
       body: <>
         <Html>

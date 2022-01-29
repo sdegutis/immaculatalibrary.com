@@ -1,5 +1,6 @@
 import { Routeable } from "../core/router";
 import { staticRouteFor } from "../core/static";
+import { referenceImage } from "../model/category";
 import { format_date, groupByDate, md, reading_mins } from "../util/helpers";
 import { Container, HeroImage } from "../view/components/page";
 import { QuickLinks } from "../view/components/quicklinks";
@@ -13,7 +14,7 @@ export const allSnippetsPage: Routeable = {
   handle: (input) => {
 
     const title = 'Book Snippets';
-    const image = '/img/reference-big.jpg';
+    const image = referenceImage();
     const groups = Object.entries(groupByDate(publishedSnippets));
 
     return {
