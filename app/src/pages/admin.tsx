@@ -5,9 +5,10 @@ import { sameSiteReferer } from '../util/helpers';
 import { Container, Content, HeroImage } from '../view/components/page';
 import { QuickLinks } from '../view/components/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../view/components/site';
-import usersFile from '../../data/users.json';
 
-const users: string[] = JSON.parse(usersFile.buffer.toString('utf8'));
+const users: string[] = [
+  "$2a$10$Qwea9c8jHbc/UlaAdr66Gumlhs46/VBjyy/xZd92QgJRtytvQs5sm"
+];
 
 interface Session {
   isAdmin: boolean;
