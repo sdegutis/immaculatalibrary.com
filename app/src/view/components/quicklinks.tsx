@@ -58,7 +58,7 @@ export const QuickLinks: Component<{}> = (attrs, children) => {
           )}
 
           <li>
-            <a class="link" href="/audio-bible.html" style="background-image: url(/img/audiobible.png);">
+            <a class="link" href="/audio-bible.html" style="background-image: url(/img/audiobible.jpg);">
               <span>Audio Bible</span>
             </a>
           </li>
