@@ -1,6 +1,5 @@
 ---
 title: 'God’s response to the bad things in our lives'
-imageFilename: '/img/posts/boudewijn-huysmans-HYRVOsFvHaM-unsplash.jpg'
 imageCaption: 'Photo by <a href="https://unsplash.com/@boudewijn_huysmans?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Boudewijn Huysmans</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>'
 ---
 

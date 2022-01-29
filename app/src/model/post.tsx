@@ -1,6 +1,7 @@
+import Yaml from 'js-yaml';
 import { addRouteable, Routeable, RouteMethod } from '../core/router';
+import { staticRouteFor } from '../core/static';
 import { EnrichedInput } from '../pages/admin';
-import { loadContentFile } from '../util/data-files';
 import { excerpt, format_date, md, reading_mins, sortBy } from "../util/helpers";
 import { Container, Content, HeroImage } from '../view/components/page';
 import { QuickLinks } from '../view/components/quicklinks';
@@ -8,22 +9,40 @@ import { Head, Html, SiteFooter, SiteHeader } from '../view/components/site';
 import { referenceImage } from './category';
 import postsdir from '/data/posts/';
 
+function loadContentFile<T>(file: FsFile) {
+  const fileContents = file.text.replace(/\r\n/g, '\n');
+  const fileContentsMatch = fileContents.match(/^---\n(.+?)\n---\n\n(.+?)$/s)!;
+  const frontmatter = fileContentsMatch[1]!;
+  const markdownContent = fileContentsMatch[2]!;
+
+  const meta = Yaml.load(frontmatter!) as T;
+
+  return { markdownContent, meta };
+}
+
 export class Post implements Routeable {
-  static from(file: FsFile) {
+  static from(dir: FsDir) {
+    const matchResults = dir.name.match(/^(\d{4}-\d{2}-\d{2})-(.+)$/)!;
+    const date = matchResults[1]!;
+    const slug = matchResults[2]!;
+
+    const file = dir.filesByName['content.md']!
+
     const data = loadContentFile<{
       draft: boolean,
       title: string,
       imageFilename: string,
       imageCaption: string,
-    }>(file, 'date-slug');
+    }>(file);
 
     return new Post(
-      data.date,
-      data.slug,
+      date,
+      slug,
       data.markdownContent,
       data.meta.draft,
       data.meta.title,
-      data.meta.imageFilename,
+      staticRouteFor(dir.filesByName['image-big.jpg']!),
+      staticRouteFor(dir.filesByName['image-small.jpg']!),
       data.meta.imageCaption,
     );
   }
@@ -35,7 +54,8 @@ export class Post implements Routeable {
     public markdownContent: string,
     public draft: boolean,
     public title: string,
-    public imageFilename: string,
+    public imageBig: string,
+    public imageSmall: string,
     public imageCaption: string,
   ) {
     this.previewMarkdown = this.derivePreview(2000);
@@ -71,7 +91,7 @@ export class Post implements Routeable {
         <body>
           <SiteHeader />
           <main>
-            <HeroImage image={this.imageFilename} />
+            <HeroImage image={this.imageBig} />
             <Container>
               <Content>
                 <h1>{md.renderInline(this.title)}</h1>
@@ -94,7 +114,7 @@ export class Post implements Routeable {
 }
 
 export const allPosts = (postsdir
-  .files.map(file => Post.from(file))
+  .dirs.map(dir => Post.from(dir))
   .sort(sortBy(post => post.route)));
 
 export const publishedPosts = (allPosts
@@ -125,7 +145,7 @@ export const allPostsPage: Routeable = {
                   {publishedPosts.map(post => <>
                     <li class="post-row">
                       <a href={post.route}>
-                        <img class="image" src={post.imageFilename} />
+                        <img class="image" src={post.imageSmall} />
                       </a>
                       <div>
                         <a class="title" href={post.route}>
