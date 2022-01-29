@@ -1,4 +1,5 @@
 import { addRouteable, Routeable, RouteMethod } from '../core/router';
+import { staticRouteFor } from '../core/static';
 import { EnrichedInput } from '../pages/admin';
 import { loadContentFile } from '../util/data-files';
 import { md, ShareLinks, sortBy } from "../util/helpers";
@@ -9,23 +10,25 @@ import moviesDir from '/data/movies/';
 
 export class Movie implements Routeable {
 
-  static from(file: FsFile) {
+  static from(dir: FsDir) {
+    const file = dir.filesByName['content.md']!;
+
     const data = loadContentFile<{
       title: string,
       shortTitle: string,
       subtitle: string | undefined,
       year: string,
-      imageFilename: string,
     }>(file, 'slug');
 
     return new Movie(
-      data.slug,
+      dir.name,
       data.markdownContent,
       data.meta.title,
       data.meta.shortTitle,
       data.meta.subtitle,
       data.meta.year,
-      data.meta.imageFilename,
+      staticRouteFor(dir.filesByName['image-big.jpg']!),
+      staticRouteFor(dir.filesByName['image-small.jpg']!),
     );
   }
 
@@ -37,7 +40,8 @@ export class Movie implements Routeable {
     public shortTitle: string,
     public subtitle: string | undefined,
     public year: string,
-    public imageFilename: string,
+    public bigImage: string,
+    public smallImage: string,
   ) {
     this.displayTitle = `${this.title} (${this.year})`;
   }
@@ -56,7 +60,7 @@ export class Movie implements Routeable {
         <body>
           <SiteHeader />
           <main>
-            <HeroImage image={this.imageFilename} />
+            <HeroImage image={this.bigImage} />
             <Container>
               <Content>
                 <h1>{this.displayTitle}</h1>
@@ -104,7 +108,7 @@ const movieOrder = [
 ];
 
 export const allMovies = (moviesDir
-  .files.map(file => Movie.from(file))
+  .dirs.map(dir => Movie.from(dir))
   .sort(sortBy(m => movieOrder.indexOf(m.slug))));
 
 const MoviesSidebar: Component<{}> = (attrs, children) => <>
