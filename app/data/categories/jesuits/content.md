@@ -1,7 +1,6 @@
 ---
 title: 'Lives of the First Jesuits'
 shortTitle: 'Jesuits'
-imageFilename: '/img/jesuits-big.jpg'
 books:
   - 'life-of-st-aloysius-gonzaga'
   - 'the-autobiography-of-st-ignatius-of-loyola'

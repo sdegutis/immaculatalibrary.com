@@ -1,7 +1,6 @@
 ---
 title: 'St. Thomas More'
 shortTitle: 'Thomas More'
-imageFilename: '/img/st-thomas-more-big.jpg'
 books:
   - 'four-last-things-by-st-thomas-more'
   - 'life-and-writings-of-sir-thomas-more'

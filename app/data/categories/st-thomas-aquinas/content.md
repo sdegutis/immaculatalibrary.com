@@ -1,7 +1,6 @@
 ---
 title: 'St. Thomas Aquinas'
 shortTitle: 'Thomas Aquinas'
-imageFilename: '/img/st-thomas-aquinas-big.jpg'
 books:
   - 'catechism-of-the-summa-theologica'
   - 'catena-aurea'

@@ -2,7 +2,6 @@
 title: 'Bernadette'
 shortTitle: 'Bernadette'
 year: '1988'
-imageFilename: '/img/movies/bernadette.jpg'
 ---
 
 ### Links

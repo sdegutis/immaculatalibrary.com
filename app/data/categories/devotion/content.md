@@ -1,7 +1,6 @@
 ---
 title: 'Growing in Devotion'
 shortTitle: 'Devotion'
-imageFilename: '/img/devotion-big.jpg'
 books:
   - 'abandonment-to-divine-providence'
   - 'ascent-of-mount-carmel'

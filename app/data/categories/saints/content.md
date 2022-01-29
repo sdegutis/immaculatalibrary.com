@@ -1,7 +1,6 @@
 ---
 title: 'Lives of the Saints'
 shortTitle: 'Saints'
-imageFilename: '/img/saints-big.jpg'
 books:
   - 'a-memoir-of-mother-elizabeth-seton'
   - 'a-sketch-of-the-life-and-works-of-the-venerable-don-bosco-apostle-of-youth'

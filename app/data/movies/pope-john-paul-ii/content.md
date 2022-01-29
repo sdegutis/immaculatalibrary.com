@@ -2,7 +2,6 @@
 title: 'Pope John Paul II'
 shortTitle: 'Pope John Paul II'
 year: '2005'
-imageFilename: '/img/movies/pope-john-paul-ii.jpg'
 ---
 
 ### Links

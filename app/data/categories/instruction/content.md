@@ -1,7 +1,6 @@
 ---
 title: 'Learning the Devout Life'
 shortTitle: 'Instruction'
-imageFilename: '/img/instruction-big.jpg'
 books:
   - 'a-treatise-on-bringing-children-to-jesus-christ'
   - 'blessed-sacrament-book'

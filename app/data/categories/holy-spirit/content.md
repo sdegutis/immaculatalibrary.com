@@ -1,7 +1,6 @@
 ---
 title: 'Holy Spirit Books'
 shortTitle: 'Holy Spirit'
-imageFilename: '/img/holy-spirit-big.jpg'
 books:
   - 'fountain-of-living-water'
   - 'glories-of-the-holy-ghost'

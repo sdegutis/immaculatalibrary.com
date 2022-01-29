@@ -2,7 +2,6 @@
 title: 'Miracle of Saint Therese'
 shortTitle: 'Miracle of Saint Therese'
 year: '1959'
-imageFilename: '/img/movies/miracle-of-saint-therese.jpg'
 ---
 
 ### Links

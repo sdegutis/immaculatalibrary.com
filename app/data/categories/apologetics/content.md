@@ -1,7 +1,6 @@
 ---
 title: 'Catholic Apologetics'
 shortTitle: 'Apologetics'
-imageFilename: '/img/apologetics-big.jpg'
 books:
   - 'apologetica'
   - 'catechism-of-the-summa-theologica'

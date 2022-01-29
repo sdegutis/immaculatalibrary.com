@@ -1,7 +1,6 @@
 ---
 title: 'Devotion to The Blessed Sacrament'
 shortTitle: 'Blessed Sacrament'
-imageFilename: '/img/blessed-sacrament-big.jpg'
 books:
   - 'blessed-sacrament-book'
   - 'manual-of-adoration-of-the-most-blessed-sacrament'

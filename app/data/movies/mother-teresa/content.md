@@ -2,7 +2,6 @@
 title: 'Mother Teresa'
 shortTitle: 'Mother Teresa'
 year: '2003'
-imageFilename: '/img/movies/mother-teresa.jpg'
 ---
 
 ### Links

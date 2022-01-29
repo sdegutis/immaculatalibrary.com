@@ -2,7 +2,6 @@
 title: 'Passion of Bernadette'
 shortTitle: 'Passion of Bernadette'
 year: '1990'
-imageFilename: '/img/movies/passion-of-bernadette.jpg'
 ---
 
 ### Links

@@ -2,7 +2,6 @@
 title: 'A Man For All Seasons'
 shortTitle: 'A Man For All Seasons'
 year: '1966'
-imageFilename: '/img/movies/a-man-for-all-seasons.jpg'
 ---
 
 ### Links

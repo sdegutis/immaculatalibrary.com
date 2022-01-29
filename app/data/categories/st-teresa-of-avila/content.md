@@ -1,7 +1,6 @@
 ---
 title: 'St. Teresa of Avila'
 shortTitle: 'Teresa of Avila'
-imageFilename: '/img/st-teresa-of-avila-big.jpg'
 books:
   - 'interior-castle'
   - 'life-of-st-teresa-of-avila'

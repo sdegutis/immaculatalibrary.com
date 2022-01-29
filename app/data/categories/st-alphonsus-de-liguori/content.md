@@ -1,7 +1,6 @@
 ---
 title: 'St. Alphonsus de Liguori'
 shortTitle: 'Alphonsus de Liguori'
-imageFilename: '/img/st-alphonsus-de-liguori-big.jpg'
 books:
   - 'preparation-for-death-by-st-alphonsus-de-liguori'
   - 'the-ascetical-works-vol02-the-way-of-salvation-and-of-perfection-by-st-alphonsus-de-liguori'

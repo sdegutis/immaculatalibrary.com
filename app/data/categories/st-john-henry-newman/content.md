@@ -1,7 +1,6 @@
 ---
 title: 'St. John Henry Newman'
 shortTitle: 'John Henry Newman'
-imageFilename: '/img/st-john-henry-newman-big.jpg'
 books:
   - 'meditations-and-devotions'
   - 'parochial-and-plain-sermons-by-st-john-henry-newman'

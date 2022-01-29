@@ -3,7 +3,6 @@ title: 'The Jeweller’s Shop'
 shortTitle: 'The Jeweller’s Shop'
 subtitle: A Modern Mystery by Pope John Paul II
 year: '1988'
-imageFilename: '/img/movies/the-jewellers-shop.jpg'
 ---
 
 ### Links

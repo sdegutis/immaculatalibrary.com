@@ -1,7 +1,6 @@
 ---
 title: 'Catholic Reference Books'
 shortTitle: 'Reference'
-imageFilename: '/img/reference-big.jpg'
 books:
   - 'catena-aurea'
   - 'catholic-dictionary'

@@ -2,7 +2,6 @@
 title: 'The 13th Day'
 shortTitle: 'The 13th Day'
 year: '2009'
-imageFilename: '/img/movies/the-13th-day.jpg'
 ---
 
 ### Links

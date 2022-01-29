@@ -2,7 +2,6 @@
 title: 'Saints and Heroes Collection'
 shortTitle: 'Saints and Heroes Collection'
 year: '1988-1995'
-imageFilename: '/img/movies/saints-and-heroes.jpg'
 ---
 
 ### Links

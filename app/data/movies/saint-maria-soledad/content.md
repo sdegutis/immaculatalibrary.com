@@ -3,7 +3,6 @@ title: 'Saint Maria Soledad'
 shortTitle: 'Saint Maria Soledad'
 subtitle: Foundress of the Sister Servants of Mary
 year: '2016'
-imageFilename: '/img/movies/saint-maria-soledad.jpg'
 ---
 
 ### Links

@@ -2,7 +2,6 @@
 title: 'Flowers of St. Francis'
 shortTitle: 'Flowers of St. Francis'
 year: '1950'
-imageFilename: '/img/movies/flowers-of-st-francis.jpg'
 ---
 
 ### Links

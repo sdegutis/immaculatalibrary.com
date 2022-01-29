@@ -2,7 +2,6 @@
 title: 'The Passion of Joan of Arc'
 shortTitle: 'The Passion of Joan of Arc'
 year: '1928'
-imageFilename: '/img/movies/the-passion-of-joan-of-arc.jpg'
 ---
 
 ### Links

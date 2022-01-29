@@ -2,7 +2,6 @@
 title: 'St. Pedro Poveda'
 shortTitle: 'St. Pedro Poveda'
 year: '2016'
-imageFilename: '/img/movies/st-pedro-poveda.jpg'
 ---
 
 ### Links

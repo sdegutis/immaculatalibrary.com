@@ -1,7 +1,6 @@
 ---
 title: 'St. John of the Cross'
 shortTitle: 'John of the Cross'
-imageFilename: '/img/st-john-of-the-cross-big.jpg'
 books:
   - 'ascent-of-mount-carmel'
   - 'dark-night-of-the-soul'

@@ -1,7 +1,6 @@
 ---
 title: 'Fr. Lasance'
 shortTitle: 'Fr. Lasance'
-imageFilename: '/img/fr-lasance-big.jpg'
 books:
   - 'blessed-sacrament-book'
   - 'catholic-girls-guide'

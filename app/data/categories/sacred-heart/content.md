@@ -1,7 +1,6 @@
 ---
 title: 'Sacred Heart Books'
 shortTitle: 'Sacred Heart'
-imageFilename: '/img/sacred-heart-big.jpg'
 books:
   - 'devotion-to-the-sacred-heart-of-jesus'
   - 'imitation-of-the-sacred-heart-of-jesus'

@@ -1,7 +1,6 @@
 ---
 title: 'St. Joseph'
 shortTitle: 'Joseph'
-imageFilename: '/img/joseph-big.jpg'
 books:
   - 'saint-joseph-of-jesus-and-mary'
   - 'st-joseph-life-his-virtues-his-privileges-his-power'

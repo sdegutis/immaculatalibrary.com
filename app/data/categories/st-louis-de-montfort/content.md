@@ -1,7 +1,6 @@
 ---
 title: 'St. Louis de Montfort'
 shortTitle: 'Louis de Montfort'
-imageFilename: '/img/st-louis-de-montfort-big.jpg'
 books:
   - 'defense-of-true-devotion-to-mary'
   - 'the-secret-of-mary'

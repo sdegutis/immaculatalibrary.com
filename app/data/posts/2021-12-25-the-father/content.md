@@ -1,6 +1,5 @@
 ---
 title: 'The Father'
-imageFilename: 'https://exgfjtswhb-flywheel.netdna-ssl.com/wp-content/uploads/2021/05/trinity-1.jpeg'
 imageCaption: 'The Holy Trinity'
 ---
 

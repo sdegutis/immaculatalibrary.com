@@ -2,7 +2,6 @@
 title: 'Monsieur Vincent'
 shortTitle: 'Monsieur Vincent'
 year: '1947'
-imageFilename: '/img/movies/monsieur-vincent.jpg'
 ---
 
 ### Links

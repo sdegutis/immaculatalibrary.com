@@ -1,7 +1,6 @@
 ---
 title: 'The Blessed Virgin Mary'
 shortTitle: 'Mary'
-imageFilename: '/img/mary-big.jpg'
 books:
   - 'devotion-to-the-blessed-virgin'
   - 'lourdes-by-rev-msgr-benson'

@@ -1,7 +1,6 @@
 ---
 title: 'Catholic Classics'
 shortTitle: 'Classics'
-imageFilename: '/img/classics-big.jpg'
 books:
   - 'abandonment-to-divine-providence'
   - 'ascent-of-mount-carmel'

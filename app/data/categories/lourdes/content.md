@@ -1,7 +1,6 @@
 ---
 title: 'Lourdes'
 shortTitle: 'Lourdes'
-imageFilename: '/img/lourdes-big.jpg'
 books:
   - 'lourdes-a-history-of-its-apparations-and-cures'
   - 'lourdes-by-rev-msgr-benson'

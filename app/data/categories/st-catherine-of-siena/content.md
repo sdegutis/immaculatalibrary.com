@@ -1,7 +1,6 @@
 ---
 title: 'St. Catherine of Siena'
 shortTitle: 'Catherine of Siena'
-imageFilename: '/img/st-catherine-of-siena-big.jpg'
 books:
   - 'life-of-st-catherine-of-siena'
   - 'the-dialogue-of-st-catherine-of-siena'

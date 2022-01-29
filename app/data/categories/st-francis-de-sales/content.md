@@ -1,7 +1,6 @@
 ---
 title: 'St. Francis de Sales'
 shortTitle: 'Francis de Sales'
-imageFilename: '/img/st-francis-de-sales-big.jpg'
 books:
   - 'catholic-controversy'
   - 'introduction-to-the-devout-life'
