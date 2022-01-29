@@ -1,3 +1,5 @@
+import { copyFileSync, mkdirSync, rmSync } from 'fs';
+import path from 'path/posix';
 import { addRouteable, Routeable, RouteMethod } from '../core/router';
 import { EnrichedInput } from '../pages/admin';
 import { loadContentFile } from '../util/data-files';
@@ -7,6 +9,66 @@ import { QuickLinks } from '../view/components/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../view/components/site';
 import { Book } from './book';
 import categoriesDir from '/data/categories/';
+
+function step1() {
+
+  for (const file of categoriesDir.files) {
+    const newPath = file.realPath.slice(0, -3);
+    mkdirSync(newPath);
+  }
+}
+
+function step2() {
+
+  for (const file of categoriesDir.files) {
+    const realDirPath = file.realPath.slice(0, -3);
+
+    const newFilePath = path.join(realDirPath, 'content.md');
+
+    copyFileSync(file.realPath, newFilePath);
+  }
+
+}
+
+function step3() {
+
+  for (const file of categoriesDir.files) {
+    const movieName = file.name.slice(0, -3);
+
+    const realDirPath = file.realPath.slice(0, -3);
+
+    const imagePath = path.join('app', 'public', 'img', 'movies', `${movieName}-big.jpg`);
+    const newFilePath = path.join(realDirPath, 'image-big.jpg');
+
+    copyFileSync(imagePath, newFilePath);
+  }
+
+}
+
+function step4() {
+
+  for (const file of categoriesDir.files) {
+    const movieName = file.name.slice(0, -3);
+
+    const realDirPath = file.realPath.slice(0, -3);
+
+    const imagePath = path.join('app', 'public', 'img', 'movies', `${movieName}.jpg`);
+    const newFilePath = path.join(realDirPath, 'image-small.jpg');
+
+    copyFileSync(imagePath, newFilePath);
+  }
+
+}
+
+function step5() {
+
+
+  for (const file of categoriesDir.files) {
+    rmSync(file.realPath);
+  }
+
+}
+
 
 export class Category implements Routeable {
 
