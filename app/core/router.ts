@@ -7,7 +7,7 @@ export type RouteMethod = 'GET' | 'POST';
 
 export type RouteMeta = {
   lastModifiedDate?: Date;
-  restricted?: boolean;
+  public?: boolean;
 };
 
 export interface Routeable {
@@ -22,7 +22,7 @@ const allRoutes = new Map<string, EnrichedRouteHandler>();
 const forSitemap: Routeable[] = [];
 
 export function addRouteable(routeable: Routeable) {
-  if (routeable.method === 'GET' && !routeable.meta?.restricted) {
+  if (routeable.method === 'GET' && (routeable.meta?.public ?? true)) {
     forSitemap.push(routeable);
   }
 

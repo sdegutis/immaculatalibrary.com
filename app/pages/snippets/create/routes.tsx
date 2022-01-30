@@ -16,7 +16,7 @@ export class CloneSnippetPage implements Routeable {
     addRouteable(this.update);
   }
 
-  meta?: RouteMeta = { restricted: true };
+  meta?: RouteMeta = { public: false };
   method: RouteMethod = 'GET';
 
   get route() {
@@ -82,7 +82,7 @@ export class UpdateSnippetPage implements Routeable {
 
   constructor(private snippet: Snippet) { }
 
-  meta?: RouteMeta = { restricted: true };
+  meta?: RouteMeta = { public: false };
   method: RouteMethod = 'POST';
 
   get route() {
