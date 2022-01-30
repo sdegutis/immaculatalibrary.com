@@ -1,16 +1,10 @@
-import { EnrichedInput } from '../auth/login';
-import { Container } from '../components/container/container';
-import { Content } from '../components/content/content';
-import { HeroImage } from '../components/hero-image/hero-image';
-import { QuickLinks } from '../components/quicklinks';
-import { Head, Html, SiteFooter, SiteHeader } from '../components/site';
-import { addRouteable, Routeable, RouteMethod } from '../core/router';
-import { staticRouteFor } from '../util/static';
+import { ViewMovieRoute } from '../pages/movies/view-movies/view-movies';
 import { loadContentFile } from '../util/data-files';
-import { md, randomElement, sortBy } from "../util/helpers";
+import { sortBy } from "../util/helpers";
+import { staticRouteFor } from '../util/static';
 import moviesDir from '/data/movies/';
 
-export class Movie implements Routeable {
+export class Movie {
 
   static from(dir: FsDir) {
     const file = dir.filesByName['content.md']!;
@@ -34,6 +28,8 @@ export class Movie implements Routeable {
     );
   }
 
+  view;
+
   displayTitle;
   constructor(
     public slug: string,
@@ -46,37 +42,7 @@ export class Movie implements Routeable {
     public smallImage: string,
   ) {
     this.displayTitle = `${this.title} (${this.year})`;
-  }
-
-  get route() {
-    return `/movies/${this.slug}.html`;
-  }
-
-  method: RouteMethod = 'GET';
-
-  handle(input: EnrichedInput): RouteOutput {
-    return {
-      body: <Html>
-        <Head title={this.displayTitle}>
-        </Head>
-        <body>
-          <SiteHeader />
-          <main>
-            <HeroImage image={this.bigImage} />
-            <Container spaced split>
-              <Content>
-                <h1>{this.displayTitle}</h1>
-                {this.subtitle && <h4><i>{this.subtitle}</i></h4>}
-                {md.render(this.markdownContent)}
-              </Content>
-              <MoviesSidebar />
-            </Container>
-          </main>
-          <QuickLinks />
-          <SiteFooter input={input} />
-        </body>
-      </Html>
-    }
+    this.view = new ViewMovieRoute(this);
   }
 
 }
@@ -112,56 +78,3 @@ const movieOrder = [
 export const allMovies = (moviesDir
   .dirs.map(dir => Movie.from(dir))
   .sort(sortBy(m => movieOrder.indexOf(m.slug))));
-
-const MoviesSidebar: Component<{}> = (attrs, children) => <>
-  <div>
-    <ul>
-      {allMovies.map(movie => <li>
-        <a href={movie.route}>{movie.title}</a> ({movie.year})
-      </li>)}
-    </ul>
-  </div>
-</>;
-
-const allMoviesPage: Routeable = {
-  route: `/movies.html`,
-  method: 'GET',
-  handle: (input) => {
-    const title = 'Holy Movies';
-    const image = randomElement(allMovies).bigImage;
-    return {
-      body: <>
-        <Html>
-          <Head title={title}>
-          </Head>
-          <body>
-            <SiteHeader />
-            <main>
-              <HeroImage image={image} />
-              <Container spaced split>
-                <Content>
-                  <h1>{title}</h1>
-                  <p>
-                    Books are not the only way to experience the
-                    lives of the saints! Movies can be a great way
-                    to increase our devotion and love for God through
-                    his Saints. This page contains a roughly priotized
-                    list of recommended and reviewed Catholic movies.
-                  </p>
-                </Content>
-                <MoviesSidebar />
-              </Container>
-            </main>
-            <QuickLinks />
-            <SiteFooter input={input} />
-          </body>
-        </Html>
-      </>
-    };
-  },
-};
-
-[
-  allMoviesPage,
-  ...allMovies,
-].forEach(addRouteable);

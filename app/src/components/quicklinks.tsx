@@ -55,7 +55,7 @@ export const QuickLinks: Component<{}> = (attrs, children) => {
         <ul class="quicklinks">
 
           {allMovies.map(movie => <li>
-            <a class="link" href={movie.route} style={`background-image: url(${movie.smallImage});`}>
+            <a class="link" href={movie.view.route} style={`background-image: url(${movie.smallImage});`}>
               <span>{movie.shortTitle}</span>
             </a>
           </li>
