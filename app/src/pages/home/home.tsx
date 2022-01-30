@@ -1,8 +1,9 @@
-import { addRouteable, Routeable } from "../../core/router";
-import { LatestBookSnippets } from "../../snippets/latest-list";
 import { QuickLinks } from "../../components/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "../../components/site";
-import headerImage from './header.jpg';
+import { addRouteable, Routeable } from "../../core/router";
+import { LatestBookSnippets } from "../../snippets/latest-list";
+import cssFile from './home.css';
+import headerImage from './home.jpg';
 import randomBookSnippetScript from './random-book-snippet.js';
 import { staticRouteFor } from "/src/core/static";
 
@@ -19,7 +20,7 @@ export const homePage: Routeable = {
             description="Free Catholic Digital Resources"
             imagePath={mainSiteHeaderImagePath}
           >
-            <link rel="stylesheet" href="/css/layout/home.css" />
+            <link rel="stylesheet" href={staticRouteFor(cssFile)} />
           </Head>
           <body>
             <SiteHeader />
