@@ -3,7 +3,7 @@ import { addRouteable, Routeable, RouteMethod } from '../core/router';
 import { Snippet } from '../snippets/snippet';
 import { loadContentFile } from '../util/data-files';
 import { excerpt, md, sortBy, striptags } from "../util/helpers";
-import { Rating } from '../util/rating';
+import { Rating } from '../util/rating/rating';
 import { Container, Content, HeroImage } from '../view/components/page';
 import { QuickLinks } from '../view/components/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../view/components/site';
@@ -83,7 +83,6 @@ export class Book implements Routeable {
       body: <Html>
         <Head title={this.title} description={striptags(excerpt(this.markdownContent))}>
           <link rel="stylesheet" href="/css/layout/book.css" />
-          <link rel="stylesheet" href="/css/base/rating-label.css" />
         </Head>
         <body>
           <SiteHeader />
