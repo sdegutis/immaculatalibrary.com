@@ -1,7 +1,7 @@
 import mime from 'mime';
 import 'source-map-support/register';
 import { loadRoutes } from './core/router';
-import './load';
+import './core/load';
 import { allBooks } from './model/book';
 import { allCategories } from './model/category';
 import { enrichAuth } from './auth/login';
