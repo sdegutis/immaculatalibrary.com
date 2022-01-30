@@ -75,7 +75,7 @@ export class Snippet {
       if (running > count) break;
     }
 
-    if (running < this.markdownContent.length - 1) {
+    if (running < this.markdownContent.trim().length - 1) {
       return this.markdownContent.substring(0, running);
     }
     return null;
