@@ -3,7 +3,7 @@ import { HeroImage } from "../../../components/hero-image/hero-image";
 import { QuickLinks } from "../../../components/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "../../../components/site";
 import { addRouteable, Routeable } from "../../../core/router";
-import { publishedSnippets } from "../../../model/models";
+import { allSnippets } from "../../../model/models";
 import { format_date, groupByDate, md, reading_mins } from "../../../util/helpers";
 import { staticRouteFor } from "../../../util/static";
 import { referenceImage } from "../../category/view-category";
@@ -16,7 +16,7 @@ const allSnippetsPage: Routeable = {
 
     const title = 'Book Snippets';
     const image = referenceImage();
-    const groups = Object.entries(groupByDate(publishedSnippets));
+    const groups = Object.entries(groupByDate(allSnippets));
 
     return {
       body: <>
@@ -85,7 +85,7 @@ const bookSnippetSearch: Routeable = {
   handle: (input) => {
     const searchTerm = input.url.searchParams.get('searchTerm')!.toLowerCase();
 
-    const snippets = publishedSnippets.filter(s => {
+    const snippets = allSnippets.filter(s => {
       if (s.markdownContent.toLowerCase().includes(searchTerm)) return true;
       if (s.title.toLowerCase().includes(searchTerm)) return true;
       if (s.book.title.toLowerCase().includes(searchTerm)) return true;

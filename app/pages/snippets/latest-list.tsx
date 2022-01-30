@@ -1,4 +1,4 @@
-import { publishedSnippets } from "../../model/models";
+import { allSnippets } from "../../model/models";
 import { groupByDate, md, reading_mins } from "../../util/helpers";
 
 const latestBookSnippetsStyle = `
@@ -20,7 +20,7 @@ ul.snippets-latest > li li {
 `;
 
 export const LatestBookSnippets: Component<{}> = (attrs, children) => {
-  const recentBookSnippets = publishedSnippets.slice(0, 9);
+  const recentBookSnippets = allSnippets.slice(0, 9);
   const groups = Object.entries(groupByDate(recentBookSnippets));
 
   return <>
@@ -28,7 +28,7 @@ export const LatestBookSnippets: Component<{}> = (attrs, children) => {
 
     <h3>Latest book snippets</h3>
     <p>
-      <a href="/book-snippets.html">See all {publishedSnippets.length}</a>
+      <a href="/book-snippets.html">See all {allSnippets.length}</a>
       {' | '}
       <a href='/random-book-snippet.html'>Random Book Snippet</a>
     </p>

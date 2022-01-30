@@ -70,9 +70,7 @@ export const allBooks = (booksDir
 
 export const allSnippets = (snippetsDir
   .files.map(file => Snippet.from(file))
-  .sort(sortBy(s => s.view.route)));
-
-export const publishedSnippets = (allSnippets
+  .sort(sortBy(s => s.view.route))
   .filter(s => s.published)
   .reverse());
 
@@ -86,8 +84,6 @@ export const allMovies = (moviesDir
 
 export const allPosts = (postsDir
   .dirs.map(dir => Post.from(dir))
-  .sort(sortBy(post => post.date)));
-
-export const publishedPosts = (allPosts
+  .sort(sortBy(post => post.date))
   .filter(s => !s.draft)
   .reverse());

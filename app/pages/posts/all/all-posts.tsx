@@ -3,7 +3,7 @@ import { HeroImage } from '../../../components/hero-image/hero-image';
 import { QuickLinks } from '../../../components/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../../../components/site';
 import { addRouteable, Routeable } from '../../../core/router';
-import { publishedPosts } from "../../../model/models";
+import { allPosts } from "../../../model/models";
 import { excerpt, format_date, md, reading_mins } from '../../../util/helpers';
 import { staticRouteFor } from "../../../util/static";
 import cssFile from './posts.css';
@@ -29,7 +29,7 @@ const allPostsPage: Routeable = {
                 <h1>{title}</h1>
 
                 <ul class="all-blog-posts">
-                  {publishedPosts.map(post => <>
+                  {allPosts.map(post => <>
                     <li class="post-row">
                       <a href={post.view.route}>
                         <img class="image" src={post.imageSmall} />
