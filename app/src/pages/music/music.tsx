@@ -1,10 +1,11 @@
+import { Container, Content } from "../../components/page";
+import { QuickLinks } from "../../components/quicklinks";
+import { Head, Html, SiteFooter, SiteHeader } from "../../components/site";
 import imageFile from './music.jpg';
+import { HeroImage } from '/src/components/hero-image/hero-image';
 import { addRouteable, Routeable } from "/src/core/router";
 import { staticRouteFor } from "/src/core/static";
 import { md } from "/src/util/helpers";
-import { Container, Content, HeroImage } from "../../components/page";
-import { QuickLinks } from "../../components/quicklinks";
-import { Head, Html, SiteFooter, SiteHeader } from "../../components/site";
 
 export const audioBibleImage = staticRouteFor(imageFile);
 

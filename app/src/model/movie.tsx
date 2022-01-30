@@ -1,11 +1,12 @@
-import { addRouteable, Routeable, RouteMethod } from '../core/router';
-import { staticRouteFor } from '../core/static';
 import { EnrichedInput } from '../auth/login';
-import { loadContentFile } from '../util/data-files';
-import { md, randomElement, sortBy } from "../util/helpers";
-import { Container, Content, HeroImage } from '../components/page';
+import { HeroImage } from '../components/hero-image/hero-image';
+import { Container, Content } from '../components/page';
 import { QuickLinks } from '../components/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../components/site';
+import { addRouteable, Routeable, RouteMethod } from '../core/router';
+import { staticRouteFor } from '../core/static';
+import { loadContentFile } from '../util/data-files';
+import { md, randomElement, sortBy } from "../util/helpers";
 import moviesDir from '/data/movies/';
 
 export class Movie implements Routeable {

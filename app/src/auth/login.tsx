@@ -1,6 +1,7 @@
 import * as bcrypt from 'bcryptjs';
 import { randomUUID } from 'crypto';
-import { Container, Content, HeroImage } from '../components/page';
+import { HeroImage } from '../components/hero-image/hero-image';
+import { Container, Content } from '../components/page';
 import { QuickLinks } from '../components/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../components/site';
 import { addRouteable, Routeable } from "../core/router";

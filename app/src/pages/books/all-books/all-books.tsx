@@ -1,6 +1,7 @@
 import { referenceImage } from '../../category/view-category';
 import allBooksScript from './search-books.js';
-import { Container, HeroImage } from "/src/components/page";
+import { HeroImage } from '/src/components/hero-image/hero-image';
+import { Container } from "/src/components/page";
 import { QuickLinks } from "/src/components/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "/src/components/site";
 import { addRouteable, Routeable } from "/src/core/router";

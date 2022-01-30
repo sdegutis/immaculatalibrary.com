@@ -1,7 +1,8 @@
-import { Container, Content, HeroImage } from "../../components/page";
+import { EnrichedInput } from "../../auth/login";
+import { Container, Content } from "../../components/page";
 import { QuickLinks } from "../../components/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "../../components/site";
-import { EnrichedInput } from "../../auth/login";
+import { HeroImage } from "/src/components/hero-image/hero-image";
 import { staticRouteFor } from "/src/core/static";
 
 export function notFoundPage(input: EnrichedInput): RouteOutput {

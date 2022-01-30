@@ -1,7 +1,3 @@
-export const HeroImage: Component<{ image: string }> = (attrs, children) => <>
-  <section id="page-hero" style={`background-image: url(${attrs.image});`}></section>
-</>;
-
 export const Container: Component<{ spaced?: boolean, split?: boolean }> = (attrs, children) => {
   const cssClass: string[] = [];
   if (attrs.spaced ?? true) cssClass.push('spaced-main-content');

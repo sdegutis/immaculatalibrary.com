@@ -1,4 +1,4 @@
-import { Container, HeroImage } from "../../../components/page";
+import { Container } from "../../../components/page";
 import { QuickLinks } from "../../../components/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "../../../components/site";
 import { Routeable } from "../../../core/router";
@@ -7,6 +7,7 @@ import { publishedSnippets } from "../../../model/snippet";
 import { format_date, groupByDate, md, reading_mins } from "../../../util/helpers";
 import { referenceImage } from "../../category/view-category";
 import searchBookSnippetsScript from './search-book-snippets.js';
+import { HeroImage } from "/src/components/hero-image/hero-image";
 
 export const allSnippetsPage: Routeable = {
   route: `/book-snippets.html`,

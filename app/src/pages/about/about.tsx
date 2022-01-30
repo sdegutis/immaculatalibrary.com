@@ -1,9 +1,10 @@
-import { mainSiteHeaderImagePath } from '../home/home';
-import { addRouteable, Routeable } from "/src/core/router";
-import { md } from "/src/util/helpers";
-import { Container, Content, HeroImage } from "../../components/page";
+import { Container, Content } from "../../components/page";
 import { QuickLinks } from "../../components/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "../../components/site";
+import { mainSiteHeaderImagePath } from '../home/home';
+import { HeroImage } from '/src/components/hero-image/hero-image';
+import { addRouteable, Routeable } from "/src/core/router";
+import { md } from "/src/util/helpers";
 
 const title = 'About Immaculata Library';
 
