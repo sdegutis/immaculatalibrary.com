@@ -5,14 +5,13 @@ import { Book } from '../model/book';
 import { loadContentFile, saveContentFile } from '../util/data-files';
 import { sortBy } from "../util/helpers";
 import { CloneSnippetPage } from './create/routes';
-import { bookSnippetRandom, randomSnippetPage } from './random';
+import { randomSnippetPage } from './random';
 import { allSnippetsPage, bookSnippetSearch } from './view-all';
 import { SnippetRoute } from './view-one';
 import snippetsDir from '/data/snippets/';
 
 [
   allSnippetsPage,
-  bookSnippetRandom,
   randomSnippetPage,
   bookSnippetSearch,
 ].forEach(addRouteable);
