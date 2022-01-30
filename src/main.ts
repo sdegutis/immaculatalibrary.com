@@ -1,5 +1,6 @@
 import chokidar from 'chokidar';
 import 'dotenv/config';
+import * as path from 'path';
 import 'source-map-support/register';
 import { startServer } from './http';
 import { Site } from './site';
@@ -20,15 +21,16 @@ wrapLog('log');
 wrapLog('error');
 
 const site = new Site('app');
-onFsChanges('app', 100, () => site.build());
+onFsChanges('app', 100, (path) => site.fileChanged(path));
 
 startServer(process.env['BASE_URL']!, 8080, site);
 
-function onFsChanges(path: string, msTimeout: number, fn: () => void) {
+function onFsChanges(fromPath: string, msTimeout: number, fn: (path: string) => void) {
   let timeout: NodeJS.Timeout | null = null;
-  chokidar.watch(path, { ignoreInitial: true }).on('all', (e, p) => {
+  chokidar.watch(fromPath, { ignoreInitial: true }).on('all', (e, p) => {
+    const updatedPath = p.split(path.win32.sep).join(path.posix.sep);
     if (timeout) clearTimeout(timeout);
-    timeout = setTimeout(fn, msTimeout);
+    timeout = setTimeout(() => fn(updatedPath), msTimeout);
   });
 }
 
