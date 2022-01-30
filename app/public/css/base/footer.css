@@ -1,15 +1,9 @@
-#site-footer {
-  color: #999;
-  text-align: center;
-  margin: 3em 1em;
-}
-
 #recents {
   background: var(--bgalt);
   padding: 2em 0;
 }
 
-#recents > * > ul {
+#recents>*>ul {
   margin-bottom: 3em;
 }
 
@@ -45,7 +39,7 @@
   border-bottom: 1px solid var(--border-color);
 }
 
-#posts .post-box > * {
+#posts .post-box>* {
   display: block;
 }
 
@@ -91,11 +85,11 @@
   text-decoration: underline;
 }
 
-.quicklinks a.link:hover > span {
+.quicklinks a.link:hover>span {
   background: #0007;
 }
 
-.quicklinks a.link > span {
+.quicklinks a.link>span {
   background: #0003;
   padding: 7px;
   text-shadow: 0px 1px 3px #000;

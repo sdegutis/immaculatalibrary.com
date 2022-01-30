@@ -62,7 +62,7 @@ export const SiteHeader: Component<{}> = (attrs, children) => <>
 </>;
 
 export const SiteFooter: Component<{ input: EnrichedInput }> = (attrs, children) => <>
-  <footer id="site-footer">
+  <footer style='color:#999; text-align:center; margin:3em 1em'>
     <p>
       {new Date().getFullYear()} ImmaculataLibrary.com &copy; All Rights Reserved
       {' | '}
