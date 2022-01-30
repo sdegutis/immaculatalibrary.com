@@ -9,6 +9,10 @@ import { errorPage } from './pages/errors/500';
 const routes = loadRoutes();
 
 export function routeHandler(input: RouteInput): RouteOutput {
+  if (input.url.pathname.endsWith('/') && input.url.pathname !== '/') {
+    return { status: 302, headers: { 'Location': input.url.pathname.slice(0, -1) } };
+  }
+
   const key = `${input.method} ${input.url.pathname}`;
   const handler = routes.get(key);
   let output: RouteOutput;

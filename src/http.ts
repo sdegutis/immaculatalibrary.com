@@ -1,57 +1,57 @@
 import 'dotenv/config';
-import express from 'express';
-import { IncomingHttpHeaders, OutgoingHttpHeaders } from "http";
+import * as http from "http";
 import 'source-map-support/register';
-import { URL, URLSearchParams } from 'url';
+import { URL } from 'url';
 import { Site } from './site';
 
 export interface RouteInput {
   method: Uppercase<string>;
   url: URL;
-  headers: IncomingHttpHeaders;
+  headers: http.IncomingHttpHeaders;
   body: Buffer;
 }
 
 export interface RouteOutput {
   status?: number;
-  headers?: OutgoingHttpHeaders;
+  headers?: http.OutgoingHttpHeaders;
   body?: string | Buffer;
 }
 
 export type RouteHandler = (input: RouteInput) => RouteOutput;
 
 export function startServer(baseUrl: string, port: number, site: Site) {
-  const server = express();
-  server.set('trust proxy', 1);
-  server.use(express.raw({ type: '*/*' }));
-  server.set('query parser', (s: string) => new URLSearchParams(s ?? ''));
-  server.disable('x-powered-by');
+  const server = http.createServer((req, res) => {
+    let chunks: Buffer[] = [];
+    req.on('data', (data: Buffer) => chunks.push(data));
+    req.on('end', () => {
+      const url = new URL(req.url!, baseUrl);
 
-  server.use((req, res) => {
-    if (req.path.endsWith('/') && req.path !== '/') {
-      res.redirect(req.path.slice(0, -1));
-      return;
-    }
+      if (req.headers['host'] !== url.host) {
+        res.statusCode = 302;
+        res.setHeader('Location', url.href);
+        res.end();
+        return;
+      }
 
-    const url = new URL(req.url, baseUrl);
-    if (url.hostname !== req.hostname) {
-      res.redirect(url.href);
-      return;
-    }
+      const input: RouteInput = {
+        url,
+        body: Buffer.concat(chunks),
+        method: req.method!,
+        headers: req.headers,
+      };
 
-    const output = site.handler({
-      body: req.body,
-      headers: req.headers,
-      method: req.method,
-      url,
+      const output = site.handler(input);
+
+      res.statusCode = output.status ?? 200;
+      for (const [k, v] of Object.entries(output.headers ?? {})) {
+        if (typeof v === 'string') {
+          res.setHeader(k, v);
+        }
+      }
+      res.end(output.body ?? '');
     });
-
-    res.status(output.status ?? 200);
-    res.set(output.headers ?? {});
-    res.end(output.body ?? '');
   });
 
-  server.listen(port, () => {
-    console.log(`Running on http://localhost:${port}`);
-  });
+  server.listen(port);
+  console.log(`Running on http://localhost:${port}`);
 }
