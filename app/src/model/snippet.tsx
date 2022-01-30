@@ -4,10 +4,10 @@ import { addRouteable } from '../core/router';
 import { Book } from './book';
 import { loadContentFile, saveContentFile } from '../util/data-files';
 import { sortBy } from "../util/helpers";
-import { CloneSnippetPage } from '../snippets/create/routes';
-import { randomSnippetPage } from '../snippets/random';
-import { allSnippetsPage, bookSnippetSearch } from '../snippets/all/snippets';
-import { SnippetRoute } from '../snippets/one/snippet';
+import { CloneSnippetPage } from '../pages/snippets/create/routes';
+import { randomSnippetPage } from '../pages/snippets/random';
+import { allSnippetsPage, bookSnippetSearch } from '../pages/snippets/all/snippets';
+import { SnippetRoute } from '../pages/snippets/one/snippet';
 import snippetsDir from '/data/snippets/';
 
 [

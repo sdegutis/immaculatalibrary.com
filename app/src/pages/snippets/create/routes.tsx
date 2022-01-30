@@ -1,10 +1,10 @@
-import { EnrichedInput, notAllowedResponse } from "../../auth/login";
-import { Content } from "../../components/page";
-import { Head, Html } from "../../components/site";
-import { addRouteable, Routeable, RouteMeta, RouteMethod } from "../../core/router";
-import { staticRouteFor } from "../../core/static";
-import { Snippet } from "../../model/snippet";
-import { md } from "../../util/helpers";
+import { EnrichedInput, notAllowedResponse } from "../../../auth/login";
+import { Content } from "../../../components/page";
+import { Head, Html } from "../../../components/site";
+import { addRouteable, Routeable, RouteMeta, RouteMethod } from "../../../core/router";
+import { staticRouteFor } from "../../../core/static";
+import { Snippet } from "../../../model/snippet";
+import { md } from "../../../util/helpers";
 import adminCssPage from './clone-style.css';
 import newBookSnippetScript from './new-book-snippet.js';
 
