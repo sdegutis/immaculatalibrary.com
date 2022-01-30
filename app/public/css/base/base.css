@@ -41,6 +41,14 @@ h1, h2, h3, h4, hr, p, ul, ol, table, details, summary, form {
   margin-bottom: 1em;
 }
 
+h1, h2, h3, h4, h5, h6, b, strong {
+  color: var(--bold-color);
+}
+
+a {
+  color: #19f;
+}
+
 hr {
   height: 1px;
   background-color: var(--border-color);
