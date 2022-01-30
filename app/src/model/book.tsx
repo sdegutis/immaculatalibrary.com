@@ -8,7 +8,7 @@ import { Container, Content, HeroImage } from '../components/page';
 import { QuickLinks } from '../components/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../components/site';
 import { Category, referenceImage } from './category';
-import { randomBookPage } from './random-book';
+import { randomBookPage } from '../pages/books/random-book';
 import booksDir from '/data/books/';
 
 export class Book implements Routeable {
