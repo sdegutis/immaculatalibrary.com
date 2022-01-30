@@ -15,8 +15,6 @@ import snippetsDir from './data/';
   bookSnippetSearch,
 ].forEach(addRouteable);
 
-export const snippetsById = new Map<string, Snippet>();
-
 export class Snippet {
   static from(file: FsFile) {
     const data = loadContentFile<{
@@ -62,7 +60,8 @@ export class Snippet {
     addRouteable(this.clone);
 
     this.id = `${this.date}-${this.slug}`;
-    snippetsById.set(this.id, this);
+
+
   }
 
   private derivePreview(count: number) {
