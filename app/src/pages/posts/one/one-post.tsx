@@ -3,6 +3,7 @@ import { Container, Content, HeroImage } from "/src/components/page";
 import { QuickLinks } from "/src/components/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "/src/components/site";
 import { addRouteable, Routeable, RouteMethod } from "/src/core/router";
+import { staticRouteFor } from "/src/core/static";
 import { Post } from "/src/model/post";
 import { format_date, md, reading_mins } from "/src/util/helpers";
 
@@ -22,7 +23,7 @@ export class ViewPostPage implements Routeable {
     return {
       body: <Html>
         <Head title={this.post.title}>
-          <link rel="stylesheet" href="/css/layout/post.css" />
+          <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['post.css']!)} />
         </Head>
         <body>
           <SiteHeader />

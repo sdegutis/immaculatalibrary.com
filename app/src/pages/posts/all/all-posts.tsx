@@ -1,7 +1,9 @@
+import cssFile from './posts.css';
 import { Container, HeroImage } from "/src/components/page";
 import { QuickLinks } from "/src/components/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "/src/components/site";
 import { addRouteable, Routeable } from "/src/core/router";
+import { staticRouteFor } from "/src/core/static";
 import { referenceImage } from "/src/model/category";
 import { publishedPosts } from "/src/model/post";
 import { excerpt, format_date, md, reading_mins } from "/src/util/helpers";
@@ -16,7 +18,7 @@ export const allPostsPage: Routeable = {
       body: <>
         <Html>
           <Head title={title}>
-            <link rel="stylesheet" href="/css/layout/posts.css" />
+            <link rel="stylesheet" href={staticRouteFor(cssFile)} />
           </Head>
           <body>
             <SiteHeader />
