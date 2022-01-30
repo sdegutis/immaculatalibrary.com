@@ -91,8 +91,3 @@ export const allPosts = (postsDir
 export const publishedPosts = (allPosts
   .filter(s => !s.draft)
   .reverse());
-
-for (const snippet of publishedSnippets) {
-  snippet.book = allBooks.find(book => book.slug.includes(snippet.bookSlug))!;
-  snippet.book.snippets.push(snippet);
-}

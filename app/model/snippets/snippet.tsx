@@ -7,6 +7,7 @@ import { SnippetRoute } from '../../pages/snippets/one/snippet';
 import { randomSnippetPage } from '../../pages/snippets/random';
 import { loadContentFile, saveContentFile } from '../../util/data-files';
 import { Book } from '../books/book';
+import { allBooks } from '../models';
 import snippetsDir from './data/';
 
 [
@@ -61,6 +62,8 @@ export class Snippet {
 
     this.id = `${this.date}-${this.slug}`;
 
+    this.book = allBooks.find(book => book.slug.includes(this.bookSlug))!;
+    this.book.snippets.push(this);
 
   }
 
