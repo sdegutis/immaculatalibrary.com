@@ -1,13 +1,14 @@
-import { addRouteable, Routeable, RouteMethod } from '../core/router';
 import { EnrichedInput } from '../auth/login';
-import { randomBookPage } from './random-book';
+import { addRouteable, Routeable, RouteMethod } from '../core/router';
 import { Snippet } from '../snippets/snippet';
 import { loadContentFile } from '../util/data-files';
-import { excerpt, md, rating, sortBy, striptags } from "../util/helpers";
+import { excerpt, md, sortBy, striptags } from "../util/helpers";
+import { Rating } from '../util/rating';
 import { Container, Content, HeroImage } from '../view/components/page';
 import { QuickLinks } from '../view/components/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../view/components/site';
 import { Category, referenceImage } from './category';
+import { randomBookPage } from './random-book';
 import booksDir from '/data/books/';
 
 export class Book implements Routeable {
@@ -94,7 +95,7 @@ export class Book implements Routeable {
                 <h1>{this.title}</h1>
                 <p class="subtitle">{this.subtitle}</p>
                 <p>By <span class="author">{this.author}</span></p>
-                <p>{rating(this.rating)}</p>
+                <p><Rating n={this.rating} /></p>
                 {md.render(this.markdownContent)}
 
                 <h4>Read now:</h4>

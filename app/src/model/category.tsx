@@ -1,8 +1,9 @@
+import { EnrichedInput } from '../auth/login';
 import { addRouteable, Routeable, RouteMethod } from '../core/router';
 import { staticRouteFor } from '../core/static';
-import { EnrichedInput } from '../auth/login';
 import { loadContentFile } from '../util/data-files';
-import { excerpt, md, rating, sortBy } from "../util/helpers";
+import { excerpt, md, sortBy } from "../util/helpers";
+import { Rating } from '../util/rating';
 import { Container, Content, HeroImage } from '../view/components/page';
 import { QuickLinks } from '../view/components/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../view/components/site';
@@ -82,7 +83,7 @@ export class Category implements Routeable {
                           <a href={book.route}>{book.title}</a>
                           {book.subtitle && <>: {book.subtitle}</>}
                           {' '}
-                          {rating(book.rating)}
+                          <Rating n={book.rating} />
                         </div>
 
                         <div class="author">{book.author}</div>
