@@ -1,6 +1,6 @@
 import { addRouteable, Routeable, RouteMethod } from '../core/router';
 import { EnrichedInput } from '../auth/login';
-import { randomBookPage } from '../pages/random-book';
+import { randomBookPage } from './random-book';
 import { Snippet } from '../snippets/snippet';
 import { loadContentFile } from '../util/data-files';
 import { excerpt, md, rating, sortBy, striptags } from "../util/helpers";
