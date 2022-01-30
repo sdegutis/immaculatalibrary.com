@@ -3,7 +3,6 @@ doRandomBookSnippet();
 document.getElementById('refresh-random-book-snippet').addEventListener('click', (e) => {
   e.preventDefault();
   doRandomBookSnippet();
-  gtag('event', 'click_random_snippet', { 'event_category': 'Random Book Snippet', 'event_label': 'Homepage Random Book Snippet' });
 });
 
 function doRandomBookSnippet() {
