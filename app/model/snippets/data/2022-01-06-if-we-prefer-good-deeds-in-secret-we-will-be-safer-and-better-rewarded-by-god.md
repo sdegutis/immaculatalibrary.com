@@ -1,7 +1,7 @@
 ---
 published: true
 title: 'If we prefer good deeds in secret, our souls will be safer and better rewarded by God'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/441/mode/1up?view=theater'
+archiveLink: 'https://archive.org/details/sinnersguide00luis/page/441?view=theater'
 bookSlug: 'the-sinners-guide'
 ---
 

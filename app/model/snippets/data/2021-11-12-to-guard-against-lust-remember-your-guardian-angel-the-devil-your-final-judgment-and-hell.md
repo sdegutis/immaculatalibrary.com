@@ -1,7 +1,7 @@
 ---
 published: true
 title: 'To guard against Lust, remember your Guardian Angel, the Devil, your final Judgment, and Hell'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/350/mode/1up'
+archiveLink: 'https://archive.org/details/sinnersguide00luis/page/350'
 bookSlug: 'the-sinners-guide'
 ---
 
