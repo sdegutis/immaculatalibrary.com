@@ -8,5 +8,4 @@ import "../pages/home/random";
 import "../pages/movies/all-movies/all-movies";
 import "../pages/music/music";
 import "../pages/posts/all/all-posts";
-import "../util/static";
 
