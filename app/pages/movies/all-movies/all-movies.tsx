@@ -4,7 +4,7 @@ import { HeroImage } from "../../../components/hero-image/hero-image";
 import { QuickLinks } from "../../../components/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "../../../components/site";
 import { addRouteable, Routeable } from "../../../core/router";
-import { allMovies } from "../../../model/movies/movie";
+import { allMovies } from "../../../model/models";
 import { randomElement } from "../../../util/helpers";
 import { MoviesSidebar } from "../movies-sidebar";
 

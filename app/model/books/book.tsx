@@ -2,10 +2,8 @@ import { addRouteable } from '../../core/router';
 import { ViewBookRoute } from '../../pages/books/one-book/view-book';
 import { randomBookPage } from '../../pages/books/random-book';
 import { loadContentFile } from '../../util/data-files';
-import { sortBy } from "../../util/helpers";
 import { Category } from '../categories/category';
 import { Snippet } from '../snippets/snippet';
-import booksDir from './data/';
 
 export class Book {
 
@@ -73,9 +71,5 @@ export class Book {
   snippets: Snippet[] = [];
 
 }
-
-export const allBooks = (booksDir
-  .files.map(file => Book.from(file))
-  .sort(sortBy(b => `${b.dateAdded} ${b.slug}`)));
 
 addRouteable(randomBookPage);

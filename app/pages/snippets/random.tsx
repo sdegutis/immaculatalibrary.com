@@ -1,6 +1,6 @@
 import { Routeable } from "../../core/router";
+import { allSnippets } from "../../model/models";
 import { randomElement } from "../../util/helpers";
-import { allSnippets } from "../../model/snippets/snippet";
 
 export const randomSnippetPage: Routeable = {
   route: '/random-book-snippet.html',

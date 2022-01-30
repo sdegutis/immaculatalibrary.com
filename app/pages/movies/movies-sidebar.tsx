@@ -1,4 +1,4 @@
-import { allMovies } from "../../model/movies/movie";
+import { allMovies } from "../../model/models";
 
 export const MoviesSidebar: Component<{}> = (attrs, children) => <>
   <div>

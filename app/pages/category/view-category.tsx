@@ -6,7 +6,8 @@ import { QuickLinks } from "../../components/quicklinks";
 import { Rating } from "../../components/rating/rating";
 import { Head, Html, SiteFooter, SiteHeader } from "../../components/site";
 import { addRouteable, Routeable, RouteMethod } from "../../core/router";
-import { allCategories, Category } from "../../model/categories/category";
+import { Category } from "../../model/categories/category";
+import { allCategories } from "../../model/models";
 import { excerpt, md } from "../../util/helpers";
 import { staticRouteFor } from "../../util/static";
 

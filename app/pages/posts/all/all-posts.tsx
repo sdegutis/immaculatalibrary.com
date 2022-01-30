@@ -3,7 +3,7 @@ import { HeroImage } from '../../../components/hero-image/hero-image';
 import { QuickLinks } from '../../../components/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../../../components/site';
 import { addRouteable, Routeable } from '../../../core/router';
-import { publishedPosts } from "../../../model/posts/post";
+import { publishedPosts } from "../../../model/models";
 import { excerpt, format_date, md, reading_mins } from '../../../util/helpers';
 import { staticRouteFor } from "../../../util/static";
 import cssFile from './posts.css';

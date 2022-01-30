@@ -3,7 +3,7 @@ import { HeroImage } from '../../../components/hero-image/hero-image';
 import { QuickLinks } from '../../../components/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../../../components/site';
 import { addRouteable, Routeable } from '../../../core/router';
-import { allBooks } from "../../../model/books/book";
+import { allBooks } from "../../../model/models";
 import { staticRouteFor } from '../../../util/static';
 import { referenceImage } from '../../category/view-category';
 import allBooksScript from './search-books.js';

@@ -1,9 +1,7 @@
-import { staticRouteFor } from "../util/static";
-import { allCategories } from "../model/categories/category";
-import { allMovies } from "../model/movies/movie";
-import { publishedPosts } from "../model/posts/post";
-import { excerpt, format_date, md, reading_mins } from "../util/helpers";
+import { allCategories, allMovies, publishedPosts } from "../model/models";
 import { audioBibleImageSmall } from "../pages/audiobible/audiobible";
+import { excerpt, format_date, md, reading_mins } from "../util/helpers";
+import { staticRouteFor } from "../util/static";
 
 export const QuickLinks: Component<{}> = (attrs, children) => {
   const recentPosts = publishedPosts.slice(0, 6);

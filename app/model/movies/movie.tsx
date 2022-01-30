@@ -1,8 +1,6 @@
 import { ViewMovieRoute } from '../../pages/movies/view-movies/view-movies';
 import { loadContentFile } from '../../util/data-files';
-import { sortBy } from "../../util/helpers";
 import { staticRouteFor } from '../../util/static';
-import moviesDir from './data/';
 
 export class Movie {
 
@@ -46,35 +44,3 @@ export class Movie {
   }
 
 }
-
-const movieOrder = [
-  'passion-of-the-christ',
-  'a-man-for-all-seasons',
-  'a-man-for-all-seasons-charlton-heston',
-  'saints-and-heroes',
-  'ignatius-of-loyola',
-  'our-gods-brother',
-  'blessed-duns-scotus',
-  'the-13th-day',
-  'bernadette',
-  'saint-maria-soledad',
-  'st-pedro-poveda',
-  'don-bosco',
-  'flowers-of-st-francis',
-  'the-jewellers-shop',
-  'monsieur-vincent',
-  'miracle-of-saint-therese',
-  'restless-heart',
-  'the-passion-of-joan-of-arc',
-  'mother-teresa',
-  'passion-of-bernadette',
-  'padre-pio',
-  'john-xxiii-pope-of-peace',
-  'paul-vi-pope-in-the-tempest',
-  'pope-john-paul-ii',
-  'saint-john-baptist-de-la-salle',
-];
-
-export const allMovies = (moviesDir
-  .dirs.map(dir => Movie.from(dir))
-  .sort(sortBy(m => movieOrder.indexOf(m.slug))));

@@ -1,13 +1,12 @@
 import Yaml from 'js-yaml';
 import * as luxon from 'luxon';
 import { addRouteable } from '../../core/router';
-import { Book } from '../books/book';
-import { loadContentFile, saveContentFile } from '../../util/data-files';
-import { sortBy } from "../../util/helpers";
-import { CloneSnippetPage } from '../../pages/snippets/create/routes';
-import { randomSnippetPage } from '../../pages/snippets/random';
 import { allSnippetsPage, bookSnippetSearch } from '../../pages/snippets/all/snippets';
+import { CloneSnippetPage } from '../../pages/snippets/create/routes';
 import { SnippetRoute } from '../../pages/snippets/one/snippet';
+import { randomSnippetPage } from '../../pages/snippets/random';
+import { loadContentFile, saveContentFile } from '../../util/data-files';
+import { Book } from '../books/book';
 import snippetsDir from './data/';
 
 [
@@ -118,11 +117,3 @@ export class Snippet {
   }
 
 }
-
-export const allSnippets = (snippetsDir
-  .files.map(file => Snippet.from(file))
-  .sort(sortBy(s => s.view.route)));
-
-export const publishedSnippets = (allSnippets
-  .filter(s => s.published)
-  .reverse());

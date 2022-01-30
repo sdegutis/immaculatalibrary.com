@@ -1,8 +1,6 @@
 import Yaml from 'js-yaml';
-import { staticRouteFor } from '../../util/static';
 import { ViewPostPage } from '../../pages/posts/one/one-post';
-import { sortBy } from "../../util/helpers";
-import postsdir from './data/';
+import { staticRouteFor } from '../../util/static';
 
 function loadContentFile<T>(file: FsFile) {
   const fileContents = file.text.replace(/\r\n/g, '\n');
@@ -75,11 +73,3 @@ export class Post {
   }
 
 }
-
-export const allPosts = (postsdir
-  .dirs.map(dir => Post.from(dir))
-  .sort(sortBy(post => post.date)));
-
-export const publishedPosts = (allPosts
-  .filter(s => !s.draft)
-  .reverse());
