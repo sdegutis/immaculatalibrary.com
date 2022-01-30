@@ -1,4 +1,5 @@
 import { EnrichedInput, loginRoute, logoutRoute } from "../auth/login";
+import { staticRouteFor } from "../core/static";
 import { mainSiteHeaderImagePath } from "../pages/home/home";
 import { DarkModeButton, darkModeScript } from "./dark-mode/button";
 import { Meta } from "./meta/meta";
@@ -24,7 +25,7 @@ export const Head: Component<{ imagePath?: string, title?: string, description?:
     <meta name="description" content={attrs.description ?? "Free Digital Catholic Books"} />
 
     <script src={darkModeScript}></script>
-    <link rel="stylesheet" href="/css/base/base.css" />
+    <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['site.css']!)} />
     <link rel="stylesheet" href={fontsCssRoute} />
 
     <Meta />
