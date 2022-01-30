@@ -8,6 +8,7 @@ import { addRouteable, Routeable, RouteMeta, RouteMethod } from "../../../core/r
 import { Snippet } from "../../../model/snippets/snippet";
 import { extract_page_number, format_date, md, reading_mins } from "../../../util/helpers";
 import { HashedStaticFile } from "../../../util/static";
+import { AdminButton } from "../admin-button/admin-button";
 import { LatestBookSnippets } from "../latest-list";
 
 export const snippetCss = HashedStaticFile.fromFile(__dir.filesByName['snippet.css']!);
@@ -44,7 +45,7 @@ export class SnippetRoute implements Routeable {
                 <h1>{this.snippet.title}</h1>
 
                 {input.session?.isAdmin && <>
-                  <a id='make-new-button' href={this.snippet.clone.route}>Make Next</a>
+                  <AdminButton href={this.snippet.clone.route}>Make Next</AdminButton>
                 </>}
 
                 <p>{format_date(this.snippet.date)} &bull; {reading_mins(this.snippet.markdownContent)} min</p>
