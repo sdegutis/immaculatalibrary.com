@@ -26,5 +26,9 @@ function reflectDarkMode() {
 }
 
 function isDarkMode() {
-  return localStorage.getItem('dark-mode') === '1';
+  const stored = localStorage.getItem('dark-mode');
+  if (stored === null) {
+    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+  }
+  return stored === '1';
 }
