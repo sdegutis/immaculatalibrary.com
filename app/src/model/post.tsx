@@ -1,7 +1,7 @@
 import Yaml from 'js-yaml';
 import { addRouteable, Routeable, RouteMethod } from '../core/router';
 import { staticRouteFor } from '../core/static';
-import { EnrichedInput } from '../pages/auth/login';
+import { EnrichedInput } from '../auth/login';
 import { excerpt, format_date, md, reading_mins, sortBy } from "../util/helpers";
 import { Container, Content, HeroImage } from '../view/components/page';
 import { QuickLinks } from '../view/components/quicklinks';

@@ -1,5 +1,5 @@
 import { addRouteable, Routeable, RouteMethod } from '../core/router';
-import { EnrichedInput } from '../pages/auth/login';
+import { EnrichedInput } from '../auth/login';
 import { loadContentFile } from '../util/data-files';
 import { md } from "../util/helpers";
 import { Container, Content, HeroImage } from '../view/components/page';

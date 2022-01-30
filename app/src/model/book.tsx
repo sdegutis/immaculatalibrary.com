@@ -1,5 +1,5 @@
 import { addRouteable, Routeable, RouteMethod } from '../core/router';
-import { EnrichedInput } from '../pages/auth/login';
+import { EnrichedInput } from '../auth/login';
 import { randomBookPage } from '../pages/random-book';
 import { Snippet } from '../snippets/snippet';
 import { loadContentFile } from '../util/data-files';

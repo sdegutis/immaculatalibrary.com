@@ -1,6 +1,6 @@
 import { addRouteable, Routeable, RouteMethod } from "../../core/router";
 import { staticRouteFor } from "../../core/static";
-import { EnrichedInput, notAllowedResponse } from "../../pages/auth/login";
+import { EnrichedInput, notAllowedResponse } from "../../auth/login";
 import { md } from "../../util/helpers";
 import { Content } from "../../view/components/page";
 import { Head, Html } from "../../view/components/site";

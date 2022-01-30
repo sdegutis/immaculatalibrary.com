@@ -1,7 +1,7 @@
 import { randomInt } from 'crypto';
 import * as luxon from 'luxon';
 import MarkdownIt from 'markdown-it';
-import { EnrichedInput } from '../pages/auth/login';
+import { EnrichedInput } from '../auth/login';
 
 export const md = new MarkdownIt({
   html: true,

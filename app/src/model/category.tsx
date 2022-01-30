@@ -1,6 +1,6 @@
 import { addRouteable, Routeable, RouteMethod } from '../core/router';
 import { staticRouteFor } from '../core/static';
-import { EnrichedInput } from '../pages/auth/login';
+import { EnrichedInput } from '../auth/login';
 import { loadContentFile } from '../util/data-files';
 import { excerpt, md, rating, sortBy } from "../util/helpers";
 import { Container, Content, HeroImage } from '../view/components/page';

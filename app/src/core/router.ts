@@ -1,4 +1,4 @@
-import { EnrichedInput } from "../pages/auth/login";
+import { EnrichedInput } from "../auth/login";
 import { makeSitemap } from "./sitemap";
 
 type EnrichedRouteHandler = (input: EnrichedInput) => RouteOutput;

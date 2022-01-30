@@ -1,6 +1,6 @@
 import { addRouteable, Routeable, RouteMethod } from "../core/router";
 import { HashedStaticFile } from "../core/static";
-import { EnrichedInput } from "../pages/auth/login";
+import { EnrichedInput } from "../auth/login";
 import { extract_page_number, format_date, md, reading_mins } from "../util/helpers";
 import { Container, Content, HeroImage } from "../view/components/page";
 import { QuickLinks } from "../view/components/quicklinks";

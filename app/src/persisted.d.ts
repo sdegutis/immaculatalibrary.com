@@ -1,3 +1,3 @@
 declare const persisted: {
-  sessions: Map<string, import('./pages/auth/login').Session>;
+  sessions: Map<string, import('./auth/login').Session>;
 };

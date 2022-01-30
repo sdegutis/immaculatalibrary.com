@@ -4,7 +4,7 @@ import { loadRoutes } from './core/router';
 import './load';
 import { allBooks } from './model/book';
 import { allCategories } from './model/category';
-import { enrichAuth } from './pages/auth/login';
+import { enrichAuth } from './auth/login';
 import { notFoundPage } from './pages/errors/404';
 import { errorPage } from './pages/errors/500';
 import { publishedSnippets } from './snippets/snippet';

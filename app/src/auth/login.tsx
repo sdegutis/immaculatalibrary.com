@@ -1,10 +1,10 @@
 import * as bcrypt from 'bcryptjs';
 import { randomUUID } from 'crypto';
-import { addRouteable, Routeable } from "../../core/router";
-import { sameSiteReferer } from '../../util/helpers';
-import { Container, Content, HeroImage } from '../../view/components/page';
-import { QuickLinks } from '../../view/components/quicklinks';
-import { Head, Html, SiteFooter, SiteHeader } from '../../view/components/site';
+import { addRouteable, Routeable } from "../core/router";
+import { sameSiteReferer } from '../util/helpers';
+import { Container, Content, HeroImage } from '../view/components/page';
+import { QuickLinks } from '../view/components/quicklinks';
+import { Head, Html, SiteFooter, SiteHeader } from '../view/components/site';
 import { staticRouteFor } from '/src/core/static';
 
 const users: string[] = [
