@@ -82,6 +82,7 @@ export class Movie implements Routeable {
 const movieOrder = [
   'passion-of-the-christ',
   'a-man-for-all-seasons',
+  'a-man-for-all-seasons-charlton-heston',
   'saints-and-heroes',
   'ignatius-of-loyola',
   'our-gods-brother',
