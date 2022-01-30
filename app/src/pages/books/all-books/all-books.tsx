@@ -1,3 +1,4 @@
+import { referenceImage } from '../../category/view-category';
 import allBooksScript from './search-books.js';
 import { Container, HeroImage } from "/src/components/page";
 import { QuickLinks } from "/src/components/quicklinks";
@@ -5,7 +6,6 @@ import { Head, Html, SiteFooter, SiteHeader } from "/src/components/site";
 import { addRouteable, Routeable } from "/src/core/router";
 import { staticRouteFor } from '/src/core/static';
 import { allBooks } from "/src/model/book";
-import { referenceImage } from "/src/model/category";
 
 const allBooksPage: Routeable = {
   route: `/books.html`,

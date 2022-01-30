@@ -3,9 +3,9 @@ import { QuickLinks } from "../../../components/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "../../../components/site";
 import { Routeable } from "../../../core/router";
 import { staticRouteFor } from "../../../core/static";
-import { referenceImage } from "../../../model/category";
 import { publishedSnippets } from "../../../model/snippet";
 import { format_date, groupByDate, md, reading_mins } from "../../../util/helpers";
+import { referenceImage } from "../../category/view-category";
 import searchBookSnippetsScript from './search-book-snippets.js';
 
 export const allSnippetsPage: Routeable = {
