@@ -83,9 +83,10 @@ export class Snippet {
     return this.book.category.imageBig;
   }
 
-  createClone(newData: {
+  static create(newData: {
     archiveLink: string,
     slug: string,
+    bookSlug: string,
     title: string,
     markdownContent: string,
   }): Snippet {
@@ -94,7 +95,7 @@ export class Snippet {
       published: true,
       title: newData.title,
       archiveLink: newData.archiveLink,
-      bookSlug: this.bookSlug,
+      bookSlug: newData.bookSlug,
     });
     const buffer = Buffer.from(`---\n${header}---\n\n${newData.markdownContent}`);
     const file = snippetsDir.createFile(`${date}-${newData.slug}.md`, buffer);

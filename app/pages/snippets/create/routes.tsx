@@ -55,6 +55,7 @@ export class CloneSnippetPage implements Routeable {
               <div id='left-panel'>
                 <form method='POST' action={this.update.route}>
                   <span>Link</span>    <input autocomplete='off' name='archiveLink' value={this.snippet.archiveLink} autofocus />
+                  <span>Book</span>    <input autocomplete='off' name='bookSlug' value={this.snippet.bookSlug} />
                   <span>Title</span>   <input autocomplete='off' name='title' />
                   <span>Slug</span>    <input autocomplete='off' name='slug' />
                   <span>Content</span> <textarea name='markdownContent' />
@@ -103,9 +104,10 @@ export class UpdateSnippetPage implements Routeable {
     if (!input.session?.isAdmin) return notAllowedResponse(input);
 
     const params = new URLSearchParams(input.body.toString('utf8'));
-    const newSnippet = this.snippet.createClone({
+    const newSnippet = Snippet.create({
       archiveLink: params.get('archiveLink')!,
       slug: params.get('slug')!,
+      bookSlug: params.get('bookSlug')!,
       title: params.get('title')!,
       markdownContent: params.get('markdownContent')!,
     });
