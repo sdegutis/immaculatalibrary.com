@@ -4,7 +4,7 @@ import { Content } from "../../../components/content/content";
 import { HeroImage } from "../../../components/hero-image/hero-image";
 import { QuickLinks } from "../../../components/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "../../../components/site";
-import { addRouteable, Routeable, RouteMethod } from "../../../core/router";
+import { addRouteable, Routeable, RouteMeta, RouteMethod } from "../../../core/router";
 import { Snippet } from "../../../model/snippets/snippet";
 import { extract_page_number, format_date, md, reading_mins } from "../../../util/helpers";
 import { HashedStaticFile } from "../../../util/static";
@@ -15,7 +15,13 @@ addRouteable(snippetCss);
 
 export class SnippetRoute implements Routeable {
 
-  constructor(private snippet: Snippet) { }
+  constructor(private snippet: Snippet) {
+    this.meta = {
+      lastModifiedDate: snippet.date,
+    };
+  }
+
+  meta?: RouteMeta;
 
   get route() {
     return `/book-snippets/${this.snippet.date}-${this.snippet.slug}.html`;

@@ -6,7 +6,7 @@ type EnrichedRouteHandler = (input: EnrichedInput) => RouteOutput;
 export type RouteMethod = 'GET' | 'POST';
 
 export type RouteMeta = {
-  lastModifiedDate?: Date;
+  lastModifiedDate?: string;
   public?: boolean;
 };
 
