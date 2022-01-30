@@ -1,5 +1,7 @@
 import { EnrichedInput, loginRoute, logoutRoute } from "../auth/login";
+import { mainSiteHeaderImagePath } from "../pages/home/home";
 import { DarkModeButton, darkModeScript } from "./dark-mode/button";
+import { Meta } from "./meta/meta";
 import { fontsCssRoute } from "/src/font/fonts";
 
 export const Html: Component<{}> = (attrs, children) => <>
@@ -29,10 +31,7 @@ export const Head: Component<{ imagePath?: string, title?: string, description?:
     <link rel="stylesheet" href="/css/base/layout.css" />
     <link rel="stylesheet" href="/css/base/typography.css" />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
+    <Meta />
 
     {children}
   </head>
