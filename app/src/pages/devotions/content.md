@@ -1,8 +1,3 @@
----
-title: 'Devotions'
-image: '/img/adoration-big.jpg'
----
-
 ### Online Mass
 
 If God valued Mass and the Eucharist so much that he miraculously allowed St. Clare of Assisi to remotely participate in Mass on her wall while she was too sick to go, then surely God sees some value in it! And I do believe he will bless us for participating remotely.
@@ -48,4 +43,3 @@ St. Michael Prayer --- *St. Michael the Archangel, defend us in battle; be our d
 ---
 
 [CatholicExorcism.org](https://www.catholicexorcism.org/) --- Official deliverance prayers, including ones suitable for use by the laity. But see their note about how the laity can safely pray these prayers, specifically about imprecatory vs deprecatory prayers, authority, and natural law.
-
