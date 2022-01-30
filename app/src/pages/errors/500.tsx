@@ -1,6 +1,6 @@
-import { Container, Content, HeroImage } from "../../view/components/page";
-import { QuickLinks } from "../../view/components/quicklinks";
-import { Head, Html, SiteFooter, SiteHeader } from "../../view/components/site";
+import { Container, Content, HeroImage } from "../../components/page";
+import { QuickLinks } from "../../components/quicklinks";
+import { Head, Html, SiteFooter, SiteHeader } from "../../components/site";
 import { EnrichedInput } from "../../auth/login";
 import { staticRouteFor } from "/src/core/static";
 

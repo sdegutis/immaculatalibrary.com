@@ -2,9 +2,9 @@ import { Routeable } from "../core/router";
 import { staticRouteFor } from "../core/static";
 import { referenceImage } from "../model/category";
 import { format_date, groupByDate, md, reading_mins } from "../util/helpers";
-import { Container, HeroImage } from "../view/components/page";
-import { QuickLinks } from "../view/components/quicklinks";
-import { Head, Html, SiteFooter, SiteHeader } from "../view/components/site";
+import { Container, HeroImage } from "../components/page";
+import { QuickLinks } from "../components/quicklinks";
+import { Head, Html, SiteFooter, SiteHeader } from "../components/site";
 import searchBookSnippetsScript from './search-book-snippets.js';
 import { publishedSnippets } from "./snippet";
 

@@ -3,9 +3,9 @@ import { staticRouteFor } from '../core/static';
 import { EnrichedInput } from '../auth/login';
 import { loadContentFile } from '../util/data-files';
 import { md, randomElement, sortBy } from "../util/helpers";
-import { Container, Content, HeroImage } from '../view/components/page';
-import { QuickLinks } from '../view/components/quicklinks';
-import { Head, Html, SiteFooter, SiteHeader } from '../view/components/site';
+import { Container, Content, HeroImage } from '../components/page';
+import { QuickLinks } from '../components/quicklinks';
+import { Head, Html, SiteFooter, SiteHeader } from '../components/site';
 import moviesDir from '/data/movies/';
 
 export class Movie implements Routeable {

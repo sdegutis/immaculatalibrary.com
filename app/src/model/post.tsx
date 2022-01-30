@@ -3,9 +3,9 @@ import { addRouteable, Routeable, RouteMethod } from '../core/router';
 import { staticRouteFor } from '../core/static';
 import { EnrichedInput } from '../auth/login';
 import { excerpt, format_date, md, reading_mins, sortBy } from "../util/helpers";
-import { Container, Content, HeroImage } from '../view/components/page';
-import { QuickLinks } from '../view/components/quicklinks';
-import { Head, Html, SiteFooter, SiteHeader } from '../view/components/site';
+import { Container, Content, HeroImage } from '../components/page';
+import { QuickLinks } from '../components/quicklinks';
+import { Head, Html, SiteFooter, SiteHeader } from '../components/site';
 import { referenceImage } from './category';
 import postsdir from '/data/posts/';
 

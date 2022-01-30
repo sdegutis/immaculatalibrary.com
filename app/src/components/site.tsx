@@ -1,5 +1,5 @@
-import { EnrichedInput, loginRoute, logoutRoute } from "../../auth/login";
-import { DarkModeButton, darkModeScript } from "../dark-mode/button";
+import { EnrichedInput, loginRoute, logoutRoute } from "../auth/login";
+import { DarkModeButton, darkModeScript } from "./dark-mode/button";
 import { fontsCssRoute } from "/src/font/fonts";
 
 export const Html: Component<{}> = (attrs, children) => <>

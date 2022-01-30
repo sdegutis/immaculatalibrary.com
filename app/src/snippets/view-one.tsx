@@ -2,9 +2,9 @@ import { addRouteable, Routeable, RouteMethod } from "../core/router";
 import { HashedStaticFile } from "../core/static";
 import { EnrichedInput } from "../auth/login";
 import { extract_page_number, format_date, md, reading_mins } from "../util/helpers";
-import { Container, Content, HeroImage } from "../view/components/page";
-import { QuickLinks } from "../view/components/quicklinks";
-import { Head, Html, SiteFooter, SiteHeader } from "../view/components/site";
+import { Container, Content, HeroImage } from "../components/page";
+import { QuickLinks } from "../components/quicklinks";
+import { Head, Html, SiteFooter, SiteHeader } from "../components/site";
 import { LatestBookSnippets } from "./latest-list";
 import { Snippet } from "./snippet";
 

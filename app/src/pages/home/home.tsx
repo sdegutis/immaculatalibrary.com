@@ -1,7 +1,7 @@
 import { addRouteable, Routeable } from "../../core/router";
 import { LatestBookSnippets } from "../../snippets/latest-list";
-import { QuickLinks } from "../../view/components/quicklinks";
-import { Head, Html, SiteFooter, SiteHeader } from "../../view/components/site";
+import { QuickLinks } from "../../components/quicklinks";
+import { Head, Html, SiteFooter, SiteHeader } from "../../components/site";
 import headerImage from './header.jpg';
 import randomBookSnippetScript from './random-book-snippet.js';
 import { staticRouteFor } from "/src/core/static";

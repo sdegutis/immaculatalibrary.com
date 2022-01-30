@@ -3,10 +3,10 @@ import { addRouteable, Routeable, RouteMethod } from '../core/router';
 import { staticRouteFor } from '../core/static';
 import { loadContentFile } from '../util/data-files';
 import { excerpt, md, sortBy } from "../util/helpers";
-import { Rating } from '../util/rating/rating';
-import { Container, Content, HeroImage } from '../view/components/page';
-import { QuickLinks } from '../view/components/quicklinks';
-import { Head, Html, SiteFooter, SiteHeader } from '../view/components/site';
+import { Rating } from '../components/rating/rating';
+import { Container, Content, HeroImage } from '../components/page';
+import { QuickLinks } from '../components/quicklinks';
+import { Head, Html, SiteFooter, SiteHeader } from '../components/site';
 import { Book } from './book';
 import categoriesDir from '/data/categories/';
 

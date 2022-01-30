@@ -1,9 +1,9 @@
 import { mainSiteHeaderImagePath } from '../home/home';
 import { addRouteable, Routeable } from "/src/core/router";
 import { md } from "/src/util/helpers";
-import { Container, Content, HeroImage } from "/src/view/components/page";
-import { QuickLinks } from "/src/view/components/quicklinks";
-import { Head, Html, SiteFooter, SiteHeader } from "/src/view/components/site";
+import { Container, Content, HeroImage } from "../../components/page";
+import { QuickLinks } from "../../components/quicklinks";
+import { Head, Html, SiteFooter, SiteHeader } from "../../components/site";
 
 const title = 'About Immaculata Library';
 
