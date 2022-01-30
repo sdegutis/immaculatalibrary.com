@@ -7,7 +7,7 @@ import "./pages/about/about";
 import "./pages/audiobible/audiobible";
 import "./pages/devotions/devotions";
 import "./pages/home/home";
-import "./pages/home/randon-book-snippet";
+import "./pages/home/random";
 import "./pages/music/music";
-import "./snippets/snippet";
+import "./model/snippet";
 

@@ -1,6 +1,6 @@
 import { EnrichedInput } from '../auth/login';
 import { addRouteable, Routeable, RouteMethod } from '../core/router';
-import { Snippet } from '../snippets/snippet';
+import { Snippet } from './snippet';
 import { loadContentFile } from '../util/data-files';
 import { excerpt, md, sortBy, striptags } from "../util/helpers";
 import { Rating } from '../components/rating/rating';

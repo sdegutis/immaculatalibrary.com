@@ -1,5 +1,5 @@
+import { publishedSnippets } from "../../model/snippet";
 import { addRouteable, Routeable } from "/src/core/router";
-import { publishedSnippets } from "/src/snippets/snippet";
 import { extract_page_number, format_date, md, randomElement, reading_mins } from "/src/util/helpers";
 
 const bookSnippetRandom: Routeable = {

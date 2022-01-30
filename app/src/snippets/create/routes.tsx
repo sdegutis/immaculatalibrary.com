@@ -4,7 +4,7 @@ import { EnrichedInput, notAllowedResponse } from "../../auth/login";
 import { md } from "../../util/helpers";
 import { Content } from "../../components/page";
 import { Head, Html } from "../../components/site";
-import { Snippet } from "../snippet";
+import { Snippet } from "../../model/snippet";
 import adminCssPage from './admin.css';
 import newBookSnippetScript from './new-book-snippet.js';
 

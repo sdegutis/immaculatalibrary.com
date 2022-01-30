@@ -7,7 +7,7 @@ import { allCategories } from './model/category';
 import { enrichAuth } from './auth/login';
 import { notFoundPage } from './pages/errors/404';
 import { errorPage } from './pages/errors/500';
-import { publishedSnippets } from './snippets/snippet';
+import { publishedSnippets } from './model/snippet';
 
 for (const book of allBooks) {
   for (const cat of allCategories) {
