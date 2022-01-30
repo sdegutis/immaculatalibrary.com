@@ -3,23 +3,8 @@ import 'source-map-support/register';
 import { enrichAuth } from './auth/login';
 import './core/load';
 import { loadRoutes } from './core/router';
-import { allBooks, allCategories, publishedSnippets } from './model/models';
 import { notFoundPage } from './pages/errors/404';
 import { errorPage } from './pages/errors/500';
-
-for (const book of allBooks) {
-  for (const cat of allCategories) {
-    if (cat.bookSlugs.has(book.slug)) {
-      book.category = cat;
-      cat.books.push(book);
-    }
-  }
-}
-
-for (const snippet of publishedSnippets) {
-  snippet.book = allBooks.find(book => book.slug.includes(snippet.bookSlug))!;
-  snippet.book.snippets.push(snippet);
-}
 
 const routes = loadRoutes();
 
