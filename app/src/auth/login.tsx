@@ -65,6 +65,7 @@ export const loginRoute: Routeable = {
 export const logoutRoute: Routeable = {
   route: '/admin/logout',
   method: 'GET',
+  meta: { restricted: true },
   handle: (input) => {
     return {
       status: 302,

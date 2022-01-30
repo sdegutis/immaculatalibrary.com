@@ -5,11 +5,16 @@ type EnrichedRouteHandler = (input: EnrichedInput) => RouteOutput;
 
 export type RouteMethod = 'GET' | 'POST';
 
+export type RouteMeta = {
+  lastModifiedDate?: Date;
+  restricted?: boolean;
+};
+
 export interface Routeable {
   route: string;
   method: RouteMethod;
   handle: EnrichedRouteHandler;
-  lastModifiedDate?: Date;
+  meta?: RouteMeta;
 }
 
 const allRoutes = new Map<string, EnrichedRouteHandler>();
@@ -17,7 +22,7 @@ const allRoutes = new Map<string, EnrichedRouteHandler>();
 const forSitemap: Routeable[] = [];
 
 export function addRouteable(routeable: Routeable) {
-  if (routeable.method === 'GET' && !routeable.route.startsWith('/admin')) {
+  if (routeable.method === 'GET' && !routeable.meta?.restricted) {
     forSitemap.push(routeable);
   }
 

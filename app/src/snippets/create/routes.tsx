@@ -1,11 +1,11 @@
-import { addRouteable, Routeable, RouteMethod } from "../../core/router";
-import { staticRouteFor } from "../../core/static";
 import { EnrichedInput, notAllowedResponse } from "../../auth/login";
-import { md } from "../../util/helpers";
 import { Content } from "../../components/page";
 import { Head, Html } from "../../components/site";
+import { addRouteable, Routeable, RouteMeta, RouteMethod } from "../../core/router";
+import { staticRouteFor } from "../../core/static";
 import { Snippet } from "../../model/snippet";
-import adminCssPage from './admin.css';
+import { md } from "../../util/helpers";
+import adminCssPage from './clone-style.css';
 import newBookSnippetScript from './new-book-snippet.js';
 
 export class CloneSnippetPage implements Routeable {
@@ -16,10 +16,11 @@ export class CloneSnippetPage implements Routeable {
     addRouteable(this.update);
   }
 
+  meta?: RouteMeta = { restricted: true };
   method: RouteMethod = 'GET';
 
   get route() {
-    return `/admin/clone-book-snippet/${this.snippet.date}-${this.snippet.slug}`;
+    return `/clone-book-snippet/${this.snippet.date}-${this.snippet.slug}`;
   }
 
   handle(input: EnrichedInput): RouteOutput {
@@ -81,10 +82,11 @@ export class UpdateSnippetPage implements Routeable {
 
   constructor(private snippet: Snippet) { }
 
+  meta?: RouteMeta = { restricted: true };
   method: RouteMethod = 'POST';
 
   get route() {
-    return `/admin/clone-book-snippet/${this.snippet.date}-${this.snippet.slug}`;
+    return `/clone-book-snippet/${this.snippet.date}-${this.snippet.slug}`;
   }
 
   handle(input: EnrichedInput): RouteOutput {
