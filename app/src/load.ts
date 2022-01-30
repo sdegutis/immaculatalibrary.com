@@ -6,6 +6,7 @@ import "./model/post";
 import "./model/snippet";
 import "./pages/about/about";
 import "./pages/audiobible/audiobible";
+import "./pages/books/all-books/all-books";
 import "./pages/devotions/devotions";
 import "./pages/home/home";
 import "./pages/home/random";
