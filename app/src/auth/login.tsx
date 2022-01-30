@@ -1,10 +1,10 @@
 import * as bcrypt from 'bcryptjs';
 import { randomUUID } from 'crypto';
-import { addRouteable, Routeable } from "../core/router";
-import { sameSiteReferer } from '../util/helpers';
 import { Container, Content, HeroImage } from '../components/page';
 import { QuickLinks } from '../components/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../components/site';
+import { addRouteable, Routeable } from "../core/router";
+import { sameSiteReferer } from '../util/helpers';
 import { staticRouteFor } from '/src/core/static';
 
 const users: string[] = [
@@ -63,7 +63,7 @@ export const loginRoute: Routeable = {
 };
 
 export const logoutRoute: Routeable = {
-  route: '/admin/logout',
+  route: '/logout',
   method: 'GET',
   meta: { restricted: true },
   handle: (input) => {
