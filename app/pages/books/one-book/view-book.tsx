@@ -9,6 +9,7 @@ import { addRouteable, Routeable, RouteMethod } from "../../../core/router";
 import { Book } from "../../../model/books/book";
 import { excerpt, md, striptags } from "../../../util/helpers";
 import { staticRouteFor } from "../../../util/static";
+import { AdminButton } from "../../snippets/admin-button/admin-button";
 
 export class ViewBookRoute implements Routeable {
 
@@ -56,6 +57,10 @@ export class ViewBookRoute implements Routeable {
                       {file.archiveId && <>
                         <td class="link">
                           <a href={`https://archive.org/details/${file.archiveId}?view=theater`} target="_blank">Read online</a>
+                          {input.session?.isAdmin && <>
+                            <br />
+                            <AdminButton href={''}>New Snippet</AdminButton>
+                          </>}
                         </td>
                       </>}
                     </tr>
