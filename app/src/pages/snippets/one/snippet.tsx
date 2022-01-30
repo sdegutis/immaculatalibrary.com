@@ -1,5 +1,5 @@
 import { EnrichedInput } from "../../../auth/login";
-import { Container, Content } from "../../../components/page";
+import { Container, Content } from "../../../components/container/container";
 import { QuickLinks } from "../../../components/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "../../../components/site";
 import { addRouteable, Routeable, RouteMethod } from "../../../core/router";
@@ -32,7 +32,7 @@ export class SnippetRoute implements Routeable {
           <SiteHeader />
           <main>
             <HeroImage image={this.snippet.image} />
-            <Container>
+            <Container spaced split>
               <Content>
                 <h1>{this.snippet.title}</h1>
 

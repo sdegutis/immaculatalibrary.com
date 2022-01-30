@@ -1,7 +1,7 @@
 import { referenceImage } from '../../category/view-category';
 import allBooksScript from './search-books.js';
 import { HeroImage } from '/src/components/hero-image/hero-image';
-import { Container } from "/src/components/page";
+import { Container } from "../../../components/container/container";
 import { QuickLinks } from "/src/components/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "/src/components/site";
 import { addRouteable, Routeable } from "/src/core/router";
@@ -23,7 +23,7 @@ const allBooksPage: Routeable = {
             <SiteHeader />
             <main>
               <HeroImage image={image} />
-              <Container>
+              <Container spaced split>
                 <div>
 
                   <h1>{title}</h1>

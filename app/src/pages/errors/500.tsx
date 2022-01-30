@@ -1,5 +1,5 @@
 import { EnrichedInput } from "../../auth/login";
-import { Container, Content } from "../../components/page";
+import { Container, Content } from "../../components/container/container";
 import { QuickLinks } from "../../components/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "../../components/site";
 import { HeroImage } from "/src/components/hero-image/hero-image";
@@ -16,7 +16,7 @@ export function errorPage(input: EnrichedInput): RouteOutput {
         <SiteHeader />
         <main>
           <HeroImage image={image} />
-          <Container>
+          <Container spaced split>
 
             <Content>
               <h1>{title}</h1>

@@ -1,6 +1,6 @@
 import { EnrichedInput } from "/src/auth/login";
 import { HeroImage } from "/src/components/hero-image/hero-image";
-import { Container, Content } from "/src/components/page";
+import { Container, Content } from "../../../components/container/container";
 import { QuickLinks } from "/src/components/quicklinks";
 import { Rating } from "/src/components/rating/rating";
 import { Head, Html, SiteFooter, SiteHeader } from "/src/components/site";
@@ -31,7 +31,7 @@ export class ViewBookRoute implements Routeable {
           <SiteHeader />
           <main>
             <HeroImage image={this.book.category.imageBig} />
-            <Container>
+            <Container spaced split>
               <Content>
 
                 <h1>{this.book.title}</h1>

@@ -1,4 +1,4 @@
-import { Container } from "../../../components/page";
+import { Container } from "../../../components/container/container";
 import { QuickLinks } from "../../../components/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "../../../components/site";
 import { Routeable } from "../../../core/router";
@@ -29,7 +29,7 @@ export const allSnippetsPage: Routeable = {
             <SiteHeader />
             <main>
               <HeroImage image={image} />
-              <Container>
+              <Container spaced split>
 
                 <div>
 

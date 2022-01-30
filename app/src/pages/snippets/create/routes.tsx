@@ -1,5 +1,5 @@
 import { EnrichedInput, notAllowedResponse } from "../../../auth/login";
-import { Content } from "../../../components/page";
+import { Content } from "../../../components/container/container";
 import { Head, Html } from "../../../components/site";
 import { addRouteable, Routeable, RouteMeta, RouteMethod } from "../../../core/router";
 import { staticRouteFor } from "../../../core/static";

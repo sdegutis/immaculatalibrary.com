@@ -1,6 +1,6 @@
 import { EnrichedInput } from '../auth/login';
 import { HeroImage } from '../components/hero-image/hero-image';
-import { Container, Content } from '../components/page';
+import { Container, Content } from '../components/container/container';
 import { QuickLinks } from '../components/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../components/site';
 import { addRouteable, Routeable, RouteMethod } from '../core/router';
@@ -62,7 +62,7 @@ export class Movie implements Routeable {
           <SiteHeader />
           <main>
             <HeroImage image={this.bigImage} />
-            <Container>
+            <Container spaced split>
               <Content>
                 <h1>{this.displayTitle}</h1>
                 {this.subtitle && <h4><i>{this.subtitle}</i></h4>}
@@ -137,7 +137,7 @@ const allMoviesPage: Routeable = {
             <SiteHeader />
             <main>
               <HeroImage image={image} />
-              <Container>
+              <Container spaced split>
                 <Content>
                   <h1>{title}</h1>
                   <p>

@@ -1,4 +1,4 @@
-import { Container, Content } from "../../components/page";
+import { Container, Content } from "../../components/container/container";
 import { QuickLinks } from "../../components/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "../../components/site";
 import imageFileBig from './audiobible-big.jpg';
@@ -27,7 +27,7 @@ const page: Routeable = {
           <SiteHeader />
           <main>
             <HeroImage image={audioBibleImageBig} />
-            <Container>
+            <Container spaced split>
               <Content>
                 <h1>{title}</h1>
                 {htmlContent}

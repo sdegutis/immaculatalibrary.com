@@ -1,0 +1,21 @@
+.container {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.spaced-main-content {
+  margin: 3em 0;
+}
+
+.split-page {
+  display: grid;
+  gap: 1em;
+}
+
+@media (min-width: 600px) {
+  .split-page {
+    grid-template-columns: 1fr 1fr;
+    gap: 3em;
+  }
+}

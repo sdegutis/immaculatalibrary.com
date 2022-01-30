@@ -1,7 +1,7 @@
 import * as bcrypt from 'bcryptjs';
 import { randomUUID } from 'crypto';
 import { HeroImage } from '../components/hero-image/hero-image';
-import { Container, Content } from '../components/page';
+import { Container, Content } from '../components/container/container';
 import { QuickLinks } from '../components/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../components/site';
 import { addRouteable, Routeable } from "../core/router";
@@ -96,7 +96,7 @@ export function notAllowedResponse(input: EnrichedInput, login = false) {
         <SiteHeader />
         <main>
           <HeroImage image={image} />
-          <Container>
+          <Container spaced split>
             <Content>
               <h1>Not Authorized</h1>
               <p>This page is restricted.</p>
