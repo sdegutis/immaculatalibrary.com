@@ -77,7 +77,7 @@ export class Snippet {
     }, this.markdownContent);
   }
 
-  book!: Book;
+  book: Book;
 
   get image() {
     return this.book.category.imageBig;
@@ -99,7 +99,6 @@ export class Snippet {
     const buffer = Buffer.from(`---\n${header}---\n\n${newData.markdownContent}`);
     const file = snippetsDir.createFile(`${date}-${newData.slug}.md`, buffer);
     const newSnippet = Snippet.from(file);
-    newSnippet.book = this.book;
     newSnippet.save();
     return newSnippet;
   }
