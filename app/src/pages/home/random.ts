@@ -14,7 +14,7 @@ const bookSnippetRandom: Routeable = {
         pageNumber: extract_page_number(snippet.archiveLink),
         book: {
           title: snippet.book.title,
-          url: snippet.book.route,
+          url: snippet.book.view.route,
         },
         url: snippet.view.route,
         formattedDate: format_date(snippet.date),

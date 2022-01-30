@@ -1,12 +1,12 @@
 import { EnrichedInput } from '../auth/login';
+import { Container, Content, HeroImage } from '../components/page';
+import { QuickLinks } from '../components/quicklinks';
+import { Rating } from '../components/rating/rating';
+import { Head, Html, SiteFooter, SiteHeader } from '../components/site';
 import { addRouteable, Routeable, RouteMethod } from '../core/router';
 import { staticRouteFor } from '../core/static';
 import { loadContentFile } from '../util/data-files';
 import { excerpt, md, sortBy } from "../util/helpers";
-import { Rating } from '../components/rating/rating';
-import { Container, Content, HeroImage } from '../components/page';
-import { QuickLinks } from '../components/quicklinks';
-import { Head, Html, SiteFooter, SiteHeader } from '../components/site';
 import { Book } from './book';
 import categoriesDir from '/data/categories/';
 
@@ -79,7 +79,7 @@ export class Category implements Routeable {
                     {this.books.map(book => {
                       return <li>
                         <div class="title">
-                          <a href={book.route}>{book.title}</a>
+                          <a href={book.view.route}>{book.title}</a>
                           {book.subtitle && <>: {book.subtitle}</>}
                           {' '}
                           <Rating n={book.rating} />

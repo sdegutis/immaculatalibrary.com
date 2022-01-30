@@ -1,12 +1,12 @@
-import { addRouteable, Routeable, RouteMethod } from "../../../core/router";
-import { HashedStaticFile } from "../../../core/static";
 import { EnrichedInput } from "../../../auth/login";
-import { extract_page_number, format_date, md, reading_mins } from "../../../util/helpers";
 import { Container, Content, HeroImage } from "../../../components/page";
 import { QuickLinks } from "../../../components/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "../../../components/site";
-import { LatestBookSnippets } from "../latest-list";
+import { addRouteable, Routeable, RouteMethod } from "../../../core/router";
+import { HashedStaticFile } from "../../../core/static";
 import { Snippet } from "../../../model/snippet";
+import { extract_page_number, format_date, md, reading_mins } from "../../../util/helpers";
+import { LatestBookSnippets } from "../latest-list";
 
 export const snippetCss = HashedStaticFile.fromFile(__dir.filesByName['snippet.css']!);
 addRouteable(snippetCss);
@@ -40,7 +40,7 @@ export class SnippetRoute implements Routeable {
                 </>}
 
                 <p>{format_date(this.snippet.date)} &bull; {reading_mins(this.snippet.markdownContent)} min</p>
-                <p>From <a href={this.snippet.book.route}>{this.snippet.book.title}</a>, page <a href={this.snippet.archiveLink}>{extract_page_number(this.snippet.archiveLink)}</a></p>
+                <p>From <a href={this.snippet.book.view.route}>{this.snippet.book.title}</a>, page <a href={this.snippet.archiveLink}>{extract_page_number(this.snippet.archiveLink)}</a></p>
 
                 {md.render(this.snippet.markdownContent)}
 

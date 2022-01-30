@@ -9,7 +9,7 @@ export const randomBookPage: Routeable = {
     const book = randomElement(allBooks);
     return {
       status: 302,
-      headers: { 'Location': book.route },
+      headers: { 'Location': book.view.route },
     };
   },
 }
