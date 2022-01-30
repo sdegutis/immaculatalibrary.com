@@ -34,3 +34,5 @@ bookSlug: 'the-sinners-guide'
 > The work of the pilot who stands at the helm is no less necessary than that of the sailors who manage the ropes and sails.
 >
 > We must not judge of an action by the labor it requires, but by its value and the effects it produces. Thus, you would not say that the work of a laborer is more important in a commonwealth than that of the statesman who wisely directs the government.
+>
+> If we seriously weigh these considerations we shall learn to respect all vocations. We shall not reproach the hand for not being the foot, nor the foot for not being the hand. We shall understand the truth of the Apostle's words when he tells us that the beauty and perfection of the body result from the diversity of its members.
