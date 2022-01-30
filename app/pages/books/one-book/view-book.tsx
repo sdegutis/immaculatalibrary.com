@@ -44,9 +44,9 @@ export class ViewBookRoute implements Routeable {
 
                 <h4>Read now:</h4>
                 <table class="downloads">
-                  {this.book.files.map(file => <>
+                  {this.book.archiveFiles.map(file => <>
                     <tr>
-                      {this.book.files.length > 1 && <>
+                      {this.book.archiveFiles.length > 1 && <>
                         <td>
                           {file.pdfFile.replace('.pdf', '')}
                         </td>
@@ -59,7 +59,7 @@ export class ViewBookRoute implements Routeable {
                           <a href={`https://archive.org/details/${file.archiveId}?view=theater`} target="_blank">Read online</a>
                           {input.session?.isAdmin && <>
                             <br />
-                            <AdminButton href={''}>New Snippet</AdminButton>
+                            <AdminButton href={file.page.route}>New Snippet</AdminButton>
                           </>}
                         </td>
                       </>}

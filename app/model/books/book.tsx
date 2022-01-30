@@ -1,4 +1,5 @@
 import { ViewBookRoute } from '../../pages/books/one-book/view-book';
+import { NewSnippetPage } from '../../pages/snippets/create/routes';
 import { loadContentFile } from '../../util/data-files';
 import { Category } from '../categories/category';
 import { Snippet } from '../snippets/snippet';
@@ -42,6 +43,8 @@ export class Book {
 
   view;
 
+  archiveFiles;
+
   constructor(
     public slug: string,
     public markdownContent: string,
@@ -63,6 +66,10 @@ export class Book {
     }[],
   ) {
     this.view = new ViewBookRoute(this);
+    this.archiveFiles = this.files.map(file => ({
+      ...file,
+      page: new NewSnippetPage(file.archiveId, this.slug),
+    }));
   }
 
   category!: Category;

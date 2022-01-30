@@ -71,8 +71,69 @@ export class CloneSnippetPage implements Routeable {
                   <div id='previewarea'></div>
                 </Content>
               </div>
-              <div>
+              <div style='overflow:hidden'>
                 <iframe src={this.snippet.archiveLink}></iframe>
+              </div>
+            </main>
+
+            <script src={staticRouteFor(newBookSnippetScript)}></script>
+
+          </body>
+        </Html>
+      </>
+    };
+  }
+
+}
+
+export class NewSnippetPage implements Routeable {
+
+  update;
+  route;
+  archiveLink;
+  constructor(private archiveSlug: string, private bookSlug: string) {
+    this.route = `/new-book-snippet/${bookSlug}/${archiveSlug}`;
+    this.update = new CreateSnippetRoute(this.route);
+    this.archiveLink = `https://archive.org/details/${archiveSlug}?view=theater`;
+    addRouteable(this);
+  }
+
+  meta?: RouteMeta = { public: false };
+  method: RouteMethod = 'GET';
+
+  handle(input: EnrichedInput): RouteOutput {
+    if (!input.session?.isAdmin) return notAllowedResponse(input);
+
+    return {
+      body: <>
+        <Html>
+          <Head>
+            <link rel='stylesheet' href={staticRouteFor(adminCssPage)} />
+            <MarkdownClientSide />
+            <MonacoClientSide />
+          </Head>
+          <body>
+            <main>
+              <div id='left-panel'>
+                <form method='POST' action={this.update.route}>
+                  <span>Page</span>    <input autocomplete='off' name='archivePage' autofocus />
+                  <span>Link</span>    <input autocomplete='off' name='archiveSlug' value={this.archiveSlug} />
+                  <span>Book</span>    <input autocomplete='off' name='bookSlug' value={this.bookSlug} />
+                  <span>Title</span>   <input autocomplete='off' name='title' />
+                  <span>Slug</span>    <input autocomplete='off' name='slug' />
+                  <span>Content</span> <textarea name='markdownContent' />
+                  <span />
+                  <button>Create</button>
+                </form>
+              </div>
+              <div id='editorarea'></div>
+              <div style='padding-right:1em'>
+                <Content>
+                  <div id='previewarea'></div>
+                </Content>
+              </div>
+              <div style='overflow:hidden'>
+                <iframe src={this.archiveLink}></iframe>
               </div>
             </main>
 
