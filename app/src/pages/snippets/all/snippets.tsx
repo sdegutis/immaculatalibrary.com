@@ -3,7 +3,7 @@ import { QuickLinks } from "../../../components/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "../../../components/site";
 import { Routeable } from "../../../core/router";
 import { staticRouteFor } from "../../../util/static";
-import { publishedSnippets } from "../../../model/snippet";
+import { publishedSnippets } from "../../../model/snippets/snippet";
 import { format_date, groupByDate, md, reading_mins } from "../../../util/helpers";
 import { referenceImage } from "../../category/view-category";
 import searchBookSnippetsScript from './search-book-snippets.js';

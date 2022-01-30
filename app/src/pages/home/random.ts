@@ -1,4 +1,4 @@
-import { publishedSnippets } from "../../model/snippet";
+import { publishedSnippets } from "../../model/snippets/snippet";
 import { addRouteable, Routeable } from "/src/core/router";
 import { extract_page_number, format_date, md, randomElement, reading_mins } from "/src/util/helpers";
 

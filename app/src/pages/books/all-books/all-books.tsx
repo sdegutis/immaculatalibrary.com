@@ -6,7 +6,7 @@ import { QuickLinks } from "/src/components/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "/src/components/site";
 import { addRouteable, Routeable } from "/src/core/router";
 import { staticRouteFor } from '../../../util/static';
-import { allBooks } from "/src/model/book";
+import { allBooks } from "../../../model/books/book";
 
 const allBooksPage: Routeable = {
   route: `/books.html`,

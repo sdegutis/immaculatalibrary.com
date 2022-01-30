@@ -1,7 +1,7 @@
 import { staticRouteFor } from "../util/static";
-import { allCategories } from "../model/category";
-import { allMovies } from "../model/movie";
-import { publishedPosts } from "../model/post";
+import { allCategories } from "../model/categories/category";
+import { allMovies } from "../model/movies/movie";
+import { publishedPosts } from "../model/posts/post";
 import { excerpt, format_date, md, reading_mins } from "../util/helpers";
 import { audioBibleImageSmall } from "/src/pages/audiobible/audiobible";
 

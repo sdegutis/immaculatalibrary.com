@@ -7,7 +7,7 @@ import { Rating } from "/src/components/rating/rating";
 import { Head, Html, SiteFooter, SiteHeader } from "/src/components/site";
 import { addRouteable, Routeable, RouteMethod } from "/src/core/router";
 import { staticRouteFor } from "../../util/static";
-import { allCategories, Category } from "/src/model/category";
+import { allCategories, Category } from "../../model/categories/category";
 import { excerpt, md } from "/src/util/helpers";
 
 export class ViewCategory implements Routeable {

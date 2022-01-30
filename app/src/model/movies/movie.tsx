@@ -1,7 +1,7 @@
-import { ViewMovieRoute } from '../pages/movies/view-movies/view-movies';
-import { loadContentFile } from '../util/data-files';
-import { sortBy } from "../util/helpers";
-import { staticRouteFor } from '../util/static';
+import { ViewMovieRoute } from '../../pages/movies/view-movies/view-movies';
+import { loadContentFile } from '../../util/data-files';
+import { sortBy } from "../../util/helpers";
+import { staticRouteFor } from '../../util/static';
 import moviesDir from '/data/movies/';
 
 export class Movie {

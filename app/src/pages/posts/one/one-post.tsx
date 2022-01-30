@@ -6,7 +6,7 @@ import { QuickLinks } from "/src/components/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "/src/components/site";
 import { addRouteable, Routeable, RouteMethod } from "/src/core/router";
 import { staticRouteFor } from "../../../util/static";
-import { Post } from "/src/model/post";
+import { Post } from "../../../model/posts/post";
 import { format_date, md, reading_mins } from "/src/util/helpers";
 
 export class ViewPostPage implements Routeable {

@@ -5,7 +5,7 @@ import { HeroImage } from "/src/components/hero-image/hero-image";
 import { QuickLinks } from "/src/components/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "/src/components/site";
 import { addRouteable, Routeable } from "/src/core/router";
-import { allMovies } from "/src/model/movie";
+import { allMovies } from "../../../model/movies/movie";
 import { randomElement } from "/src/util/helpers";
 
 const allMoviesPage: Routeable = {

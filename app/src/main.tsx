@@ -2,12 +2,12 @@ import mime from 'mime';
 import 'source-map-support/register';
 import { loadRoutes } from './core/router';
 import './core/load';
-import { allBooks } from './model/book';
-import { allCategories } from './model/category';
+import { allBooks } from './model/books/book';
+import { allCategories } from './model/categories/category';
 import { enrichAuth } from './auth/login';
 import { notFoundPage } from './pages/errors/404';
 import { errorPage } from './pages/errors/500';
-import { publishedSnippets } from './model/snippet';
+import { publishedSnippets } from './model/snippets/snippet';
 
 for (const book of allBooks) {
   for (const cat of allCategories) {

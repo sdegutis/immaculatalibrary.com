@@ -1,8 +1,8 @@
-import { staticRouteFor } from '../util/static';
-import { ViewCategory } from '../pages/category/view-category';
-import { loadContentFile } from '../util/data-files';
-import { sortBy } from "../util/helpers";
-import { Book } from './book';
+import { staticRouteFor } from '../../util/static';
+import { ViewCategory } from '../../pages/category/view-category';
+import { loadContentFile } from '../../util/data-files';
+import { sortBy } from "../../util/helpers";
+import { Book } from '../books/book';
 import categoriesDir from '/data/categories/';
 
 export class Category {

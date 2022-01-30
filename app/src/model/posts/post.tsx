@@ -1,7 +1,7 @@
 import Yaml from 'js-yaml';
-import { staticRouteFor } from '../util/static';
-import { ViewPostPage } from '../pages/posts/one/one-post';
-import { sortBy } from "../util/helpers";
+import { staticRouteFor } from '../../util/static';
+import { ViewPostPage } from '../../pages/posts/one/one-post';
+import { sortBy } from "../../util/helpers";
 import postsdir from '/data/posts/';
 
 function loadContentFile<T>(file: FsFile) {

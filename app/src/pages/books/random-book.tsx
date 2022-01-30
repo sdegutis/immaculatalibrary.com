@@ -1,5 +1,5 @@
 import { Routeable } from "../../core/router";
-import { allBooks } from "../../model/book";
+import { allBooks } from "../../model/books/book";
 import { randomElement } from "../../util/helpers";
 
 export const randomBookPage: Routeable = {

@@ -1,13 +1,13 @@
 import Yaml from 'js-yaml';
 import * as luxon from 'luxon';
-import { addRouteable } from '../core/router';
-import { Book } from './book';
-import { loadContentFile, saveContentFile } from '../util/data-files';
-import { sortBy } from "../util/helpers";
-import { CloneSnippetPage } from '../pages/snippets/create/routes';
-import { randomSnippetPage } from '../pages/snippets/random';
-import { allSnippetsPage, bookSnippetSearch } from '../pages/snippets/all/snippets';
-import { SnippetRoute } from '../pages/snippets/one/snippet';
+import { addRouteable } from '../../core/router';
+import { Book } from '../books/book';
+import { loadContentFile, saveContentFile } from '../../util/data-files';
+import { sortBy } from "../../util/helpers";
+import { CloneSnippetPage } from '../../pages/snippets/create/routes';
+import { randomSnippetPage } from '../../pages/snippets/random';
+import { allSnippetsPage, bookSnippetSearch } from '../../pages/snippets/all/snippets';
+import { SnippetRoute } from '../../pages/snippets/one/snippet';
 import snippetsDir from '/data/snippets/';
 
 [

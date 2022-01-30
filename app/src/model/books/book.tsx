@@ -1,10 +1,10 @@
-import { addRouteable } from '../core/router';
-import { ViewBookRoute } from '../pages/books/one-book/view-book';
-import { randomBookPage } from '../pages/books/random-book';
-import { loadContentFile } from '../util/data-files';
-import { sortBy } from "../util/helpers";
-import { Category } from './category';
-import { Snippet } from './snippet';
+import { addRouteable } from '../../core/router';
+import { ViewBookRoute } from '../../pages/books/one-book/view-book';
+import { randomBookPage } from '../../pages/books/random-book';
+import { loadContentFile } from '../../util/data-files';
+import { sortBy } from "../../util/helpers";
+import { Category } from '../categories/category';
+import { Snippet } from '../snippets/snippet';
 import booksDir from '/data/books/';
 
 export class Book {
