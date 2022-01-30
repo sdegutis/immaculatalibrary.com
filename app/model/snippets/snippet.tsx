@@ -28,7 +28,6 @@ export class Snippet {
     );
   }
 
-  id;
   view;
   clone;
 
@@ -48,11 +47,8 @@ export class Snippet {
     this.view = new SnippetRoute(this);
     this.clone = new CloneSnippetPage(this);
 
-    this.id = `${this.date}-${this.slug}`;
-
     this.book = allBooks.find(book => book.slug.includes(this.bookSlug))!;
     this.book.snippets.push(this);
-
   }
 
   private derivePreview(count: number) {
