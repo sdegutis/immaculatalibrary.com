@@ -25,7 +25,6 @@ export const Head: Component<{ imagePath?: string, title?: string, description?:
     <script src={darkModeScript}></script>
     <link rel="stylesheet" href="/css/base/base.css" />
     <link rel="stylesheet" href="/css/base/header.css" />
-    <link rel="stylesheet" href="/css/base/footer.css" />
     <link rel="stylesheet" href={fontsCssRoute} />
     <link rel="stylesheet" href="/css/base/page-hero.css" />
     <link rel="stylesheet" href="/css/base/layout.css" />

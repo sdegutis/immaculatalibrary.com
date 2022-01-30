@@ -1,3 +1,4 @@
+import { staticRouteFor } from "../core/static";
 import { allCategories } from "../model/category";
 import { allMovies } from "../model/movie";
 import { publishedPosts } from "../model/post";
@@ -8,6 +9,8 @@ export const QuickLinks: Component<{}> = (attrs, children) => {
   const recentPosts = publishedPosts.slice(0, 6);
 
   return <>
+
+    <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['quicklinks.css']!)} />
 
     <div id="recents">
       <div class="container">
