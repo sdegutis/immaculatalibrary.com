@@ -1,12 +1,7 @@
 import Yaml from 'js-yaml';
-import { addRouteable, Routeable, RouteMethod } from '../core/router';
 import { staticRouteFor } from '../core/static';
-import { EnrichedInput } from '../auth/login';
-import { excerpt, format_date, md, reading_mins, sortBy } from "../util/helpers";
-import { Container, Content, HeroImage } from '../components/page';
-import { QuickLinks } from '../components/quicklinks';
-import { Head, Html, SiteFooter, SiteHeader } from '../components/site';
-import { referenceImage } from './category';
+import { ViewPostPage } from '../pages/posts/one/one-post';
+import { sortBy } from "../util/helpers";
 import postsdir from '/data/posts/';
 
 function loadContentFile<T>(file: FsFile) {
@@ -20,7 +15,7 @@ function loadContentFile<T>(file: FsFile) {
   return { markdownContent, meta };
 }
 
-export class Post implements Routeable {
+export class Post {
   static from(dir: FsDir) {
     const matchResults = dir.name.match(/^(\d{4}-\d{2}-\d{2})-(.+)$/)!;
     const date = matchResults[1]!;
@@ -46,6 +41,8 @@ export class Post implements Routeable {
     );
   }
 
+  view;
+
   public previewMarkdown;
   constructor(
     public date: string,
@@ -58,6 +55,8 @@ export class Post implements Routeable {
     public imageCaption: string,
   ) {
     this.previewMarkdown = this.derivePreview(2000);
+
+    this.view = new ViewPostPage(this);
   }
 
   private derivePreview(count: number) {
@@ -75,104 +74,12 @@ export class Post implements Routeable {
     return null;
   }
 
-  get route() {
-    return `/posts/${this.date}-${this.slug}.html`;
-  }
-
-  method: RouteMethod = 'GET';
-
-  handle(input: EnrichedInput): RouteOutput {
-    return {
-      body: <Html>
-        <Head title={this.title}>
-          <link rel="stylesheet" href="/css/layout/post.css" />
-        </Head>
-        <body>
-          <SiteHeader />
-          <main>
-            <HeroImage image={this.imageBig} />
-            <Container>
-              <Content>
-                <h1>{md.renderInline(this.title)}</h1>
-
-                <p class="date">
-                  {format_date(this.date)} &bull; {reading_mins(this.markdownContent)} min
-                </p>
-
-                {md.render(this.markdownContent)}
-              </Content>
-            </Container>
-          </main>
-          <QuickLinks />
-          <SiteFooter input={input} />
-        </body>
-      </Html>
-    }
-  }
-
 }
 
 export const allPosts = (postsdir
   .dirs.map(dir => Post.from(dir))
-  .sort(sortBy(post => post.route)));
+  .sort(sortBy(post => post.date)));
 
 export const publishedPosts = (allPosts
   .filter(s => !s.draft)
   .reverse());
-
-export const allPostsPage: Routeable = {
-  route: `/posts.html`,
-  method: 'GET',
-  handle: (input) => {
-    const title = 'All Blog Posts';
-    const image = referenceImage();
-    return {
-      body: <>
-        <Html>
-          <Head title={title}>
-            <link rel="stylesheet" href="/css/layout/posts.css" />
-          </Head>
-          <body>
-            <SiteHeader />
-            <main>
-              <HeroImage image={image} />
-              <Container split={false}>
-
-                <h1>{title}</h1>
-
-                <ul class="all-blog-posts">
-                  {publishedPosts.map(post => <>
-                    <li class="post-row">
-                      <a href={post.route}>
-                        <img class="image" src={post.imageSmall} />
-                      </a>
-                      <div>
-                        <a class="title" href={post.route}>
-                          {post.title}
-                        </a>
-                        <span class="date">
-                          {format_date(post.date)} &bull; {reading_mins(post.markdownContent)} min
-                        </span>
-                        <div class="excerpt">
-                          {md.render(excerpt(post.markdownContent))}
-                        </div>
-                      </div>
-                    </li>
-                  </>)}
-                </ul>
-
-              </Container>
-            </main>
-            <QuickLinks />
-            <SiteFooter input={input} />
-          </body>
-        </Html>
-      </>
-    };
-  },
-};
-
-[
-  allPostsPage,
-  ...allPosts,
-].forEach(addRouteable);
