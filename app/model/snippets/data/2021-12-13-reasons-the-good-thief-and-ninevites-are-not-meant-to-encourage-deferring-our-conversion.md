@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Reasons the Good Thief and Ninevites are not meant to encourage deferring our conversion'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/260?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Reasons the Good Thief and Ninevites are not meant to encourage deferring our conversion
+archiveSlug: sinnersguide00luis
+archivePage: '260'
+bookSlug: the-sinners-guide
 ---
 
 > You will perhaps urge in opposition to all this that the good thief was saved at the last hour.

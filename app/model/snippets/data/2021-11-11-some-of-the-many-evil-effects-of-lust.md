@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Some of the many evil effects of Lust'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/346?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Some of the many evil effects of Lust
+archiveSlug: sinnersguide00luis
+archivePage: '346'
+bookSlug: the-sinners-guide
 ---
 
 > Learn, too, how many sins spring from this one vice; for during this long captivity of the soul how often is God offended by thoughts, words, and desires, if not by actions?

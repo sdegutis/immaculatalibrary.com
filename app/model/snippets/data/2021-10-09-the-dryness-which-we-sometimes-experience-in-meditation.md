@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The dryness which we sometimes experience in Meditation'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/59?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: The dryness which we sometimes experience in Meditation
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '59'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > CHAPTER IX.

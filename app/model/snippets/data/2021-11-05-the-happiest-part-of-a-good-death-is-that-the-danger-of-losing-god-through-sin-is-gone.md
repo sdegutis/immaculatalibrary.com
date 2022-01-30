@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The happiest part of a good death is that the danger of losing God through sin is gone'
-archiveLink: 'https://archive.org/details/preparationforde00ligu/page/75?view=theater'
-bookSlug: 'preparation-for-death-by-st-alphonsus-de-liguori'
+title: The happiest part of a good death is that the danger of losing God through sin is gone
+archiveSlug: preparationforde00ligu
+archivePage: '75'
+bookSlug: preparation-for-death-by-st-alphonsus-de-liguori
 ---
 
 > "God shall wipe away all tears from their eyes; and death shall be no more"---Apoc. xxi. 4.

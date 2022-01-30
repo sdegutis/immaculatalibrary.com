@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Conscience'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/164?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Conscience
+archiveSlug: sinnersguide00luis
+archivePage: '164'
+bookSlug: the-sinners-guide
 ---
 
 > *CHAPTER XVI.*

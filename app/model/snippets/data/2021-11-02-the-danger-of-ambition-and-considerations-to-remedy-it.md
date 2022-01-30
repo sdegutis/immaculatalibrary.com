@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The danger of ambition, and considerations to remedy it'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/328?view=theater'
-bookSlug: 'the-sinners-guide'
+title: The danger of ambition, and considerations to remedy it
+archiveSlug: sinnersguide00luis
+archivePage: '328'
+bookSlug: the-sinners-guide
 ---
 
 > Be mindful also, O ambitious man! of the dangers to which you expose yourself by seeking to command others.

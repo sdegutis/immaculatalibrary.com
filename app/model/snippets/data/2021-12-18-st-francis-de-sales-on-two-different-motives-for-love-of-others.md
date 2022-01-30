@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Francis de Sales on two different motives for love of others'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/77?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: St. Francis de Sales on two different motives for love of others
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '77'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > *UPON THE PURE LOVE OF OUR NEIGHBOUR.*

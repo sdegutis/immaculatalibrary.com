@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Joseph, the God of God'
-archiveLink: 'https://archive.org/details/lifegloriesofstj00thomuoft/page/357?view=theater'
-bookSlug: 'the-life-and-glories-of-st-joseph'
+title: St. Joseph, the God of God
+archiveSlug: lifegloriesofstj00thomuoft
+archivePage: '357'
+bookSlug: the-life-and-glories-of-st-joseph
 ---
 
 > Joseph, then, accepted and used the authority given to him over Jesus, but with fear and trepidation, to use Origen's expression.

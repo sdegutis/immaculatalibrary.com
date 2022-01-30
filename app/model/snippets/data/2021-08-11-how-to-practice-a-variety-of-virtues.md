@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'How to practice a variety of virtues'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/90?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: How to practice a variety of virtues
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '90'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > *The choice we ought to make as to the practice of the Virtues.*

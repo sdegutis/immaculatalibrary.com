@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Since the Fathers of the Church admitted the Pope’s Supremacy, so can we, despite insults'
-archiveLink: 'https://archive.org/details/life-and-writings-of-st-thomas-more/page/301?view=theater'
-bookSlug: 'life-and-writings-of-sir-thomas-more'
+title: Since the Fathers of the Church admitted the Pope’s Supremacy, so can we, despite insults
+archiveSlug: life-and-writings-of-st-thomas-more
+archivePage: '301'
+bookSlug: life-and-writings-of-sir-thomas-more
 ---
 
 > The words Papist and Popish had been very early imported into the Lutheran controversy, and were used where there was not the most distant reference to the Pope.

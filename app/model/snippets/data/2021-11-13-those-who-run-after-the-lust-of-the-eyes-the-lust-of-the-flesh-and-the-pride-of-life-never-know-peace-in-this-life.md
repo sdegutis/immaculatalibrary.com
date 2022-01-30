@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Those who run after the lust of the eyes, the lust of the flesh, and the pride of life, never know peace in this life'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/196?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Those who run after the lust of the eyes, the lust of the flesh, and the pride of life, never know peace in this life
+archiveSlug: sinnersguide00luis
+archivePage: '196'
+bookSlug: the-sinners-guide
 ---
 
 > We will first consider the agitation and anxiety of the sinner, in order more keenly to appreciate the blessing of holy peace.

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The middle of this maze of Business is Hell and many fall into it suddenly and unexpectedly'
-archiveLink: 'https://archive.org/details/a-dialogue-of-comfort-against-tribulation-by-st-thomas-more/page/172?view=theater'
-bookSlug: 'a-dialogue-of-comfort-against-tribulation'
+title: The middle of this maze of Business is Hell and many fall into it suddenly and unexpectedly
+archiveSlug: a-dialogue-of-comfort-against-tribulation-by-st-thomas-more
+archivePage: '172'
+bookSlug: a-dialogue-of-comfort-against-tribulation
 ---
 
 > But now hath this maze a centre or middle place, into which sometime they be conveyed suddenly when they ween they were not yet far from the brink.

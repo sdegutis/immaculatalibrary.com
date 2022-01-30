@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Resolutions and Prayers of Conformity to the Will of God'
-archiveLink: 'https://archive.org/details/st.-josephs-life-virtues-privileges-power/page/357?view=theater'
-bookSlug: 'st-joseph-life-his-virtues-his-privileges-his-power'
+title: Resolutions and Prayers of Conformity to the Will of God
+archiveSlug: st.-josephs-life-virtues-privileges-power
+archivePage: '357'
+bookSlug: st-joseph-life-his-virtues-his-privileges-his-power
 ---
 
 > *Practical Resolution.*

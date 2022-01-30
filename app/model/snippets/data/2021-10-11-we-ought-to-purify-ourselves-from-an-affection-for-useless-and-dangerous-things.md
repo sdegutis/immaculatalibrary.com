@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'We ought to purify ourselves from an affection for useless and dangerous things'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/43?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: We ought to purify ourselves from an affection for useless and dangerous things
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '43'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > CHAPTER XXIII.

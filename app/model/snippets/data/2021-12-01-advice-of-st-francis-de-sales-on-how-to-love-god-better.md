@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Advice of St. Francis de Sales on how to love God better'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/51?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: Advice of St. Francis de Sales on how to love God better
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '51'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > You ask me, my sisters, how we can discover whether or not we are making any progress towards perfection. I cannot do better than consult our oracle, Blessed Francis, and answer you in his own words, taken from his eighth Conference.

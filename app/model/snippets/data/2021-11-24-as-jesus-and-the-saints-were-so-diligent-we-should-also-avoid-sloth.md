@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'As Jesus and the Saints were so diligent, we should also avoid Sloth'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/368?view=theater'
-bookSlug: 'the-sinners-guide'
+title: As Jesus and the Saints were so diligent, we should also avoid Sloth
+archiveSlug: sinnersguide00luis
+archivePage: '368'
+bookSlug: the-sinners-guide
 ---
 
 > CHAPTER XXXVI.

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'How St. Francis de Sales obeyed superiors and encouraged others to do the same'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/127?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: How St. Francis de Sales obeyed superiors and encouraged others to do the same
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '127'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > *AN INSTANCE OF OUR SAINT'S OBEDIENCE.*

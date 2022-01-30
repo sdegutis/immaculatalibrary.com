@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The many wonderful Effects of Grace in the Soul'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/145?view=theater'
-bookSlug: 'the-sinners-guide'
+title: The many wonderful Effects of Grace in the Soul
+archiveSlug: sinnersguide00luis
+archivePage: '145'
+bookSlug: the-sinners-guide
 ---
 
 > From what has been said we can judge of the effects of grace in a soul.

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Joseph, Protector of Christ'
-archiveLink: 'https://archive.org/details/st.-josephs-life-virtues-privileges-power/page/286?view=theater'
-bookSlug: 'st-joseph-life-his-virtues-his-privileges-his-power'
+title: St. Joseph, Protector of Christ
+archiveSlug: st.-josephs-life-virtues-privileges-power
+archivePage: '286'
+bookSlug: st-joseph-life-his-virtues-his-privileges-his-power
 ---
 
 > Oh, how sublime and heavenly was the mission of St. Joseph! Jesus was God, and therefore could protect Himself; but no, He prefers the services of St. Joseph.

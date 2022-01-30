@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The happiness of this life is brief'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/292?view=theater'
-bookSlug: 'the-sinners-guide'
+title: The happiness of this life is brief
+archiveSlug: sinnersguide00luis
+archivePage: '292'
+bookSlug: the-sinners-guide
 ---
 
 > As to the first of these, who will say that that is enduring which at best must end with the brief career of man on earth? Ah! we all know the shortness of human life, for how few attain even a hundred years?

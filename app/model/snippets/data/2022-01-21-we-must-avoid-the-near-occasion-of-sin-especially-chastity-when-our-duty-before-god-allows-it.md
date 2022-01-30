@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'We must avoid the near occasion of sin, especially chastity, when our duty before God allows it'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/141?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: We must avoid the near occasion of sin, especially chastity, when our duty before God allows it
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '141'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > *UPON CHARITY AND CHASTITY.*

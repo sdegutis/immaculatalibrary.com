@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Reasons against quitting our sins later instead of now'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/243?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Reasons against quitting our sins later instead of now
+archiveSlug: sinnersguide00luis
+archivePage: '243'
+bookSlug: the-sinners-guide
 ---
 
 > But let us suppose that you will not be disappointed, that you will live to do penance.

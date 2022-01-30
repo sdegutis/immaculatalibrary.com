@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'When we obey our superiors, we obey God'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/450?view=theater'
-bookSlug: 'the-sinners-guide'
+title: When we obey our superiors, we obey God
+archiveSlug: sinnersguide00luis
+archivePage: '450'
+bookSlug: the-sinners-guide
 ---
 
 > *CHAPTER XLIII.*

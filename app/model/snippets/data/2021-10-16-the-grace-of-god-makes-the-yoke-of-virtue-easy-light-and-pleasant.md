@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The grace of God makes the yoke of virtue easy, light, and pleasant'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/284?view=theater'
-bookSlug: 'the-sinners-guide'
+title: The grace of God makes the yoke of virtue easy, light, and pleasant
+archiveSlug: sinnersguide00luis
+archivePage: '284'
+bookSlug: the-sinners-guide
 ---
 
 > Reflect on these truths, and you will soon understand the Scriptures where they seem to speak in contradictory terms of the ease or difficulty of practising virtue.

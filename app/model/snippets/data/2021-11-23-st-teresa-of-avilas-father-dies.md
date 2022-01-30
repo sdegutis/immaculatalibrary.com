@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Teresa of Avila’s father dies'
-archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/50?view=theater'
-bookSlug: 'life-of-st-teresa-of-avila'
+title: St. Teresa of Avila’s father dies
+archiveSlug: lifeofstteresaof00tereuoft
+archivePage: '50'
+bookSlug: life-of-st-teresa-of-avila
 ---
 
 > My father was not the only person whom I prevailed upon to practise prayer, though I was walking in vanity myself.

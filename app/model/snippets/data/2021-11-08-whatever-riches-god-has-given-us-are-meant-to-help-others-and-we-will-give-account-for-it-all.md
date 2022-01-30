@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Whatever riches God has given us are meant to help others, and we will give account for it all'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/339?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Whatever riches God has given us are meant to help others, and we will give account for it all
+archiveSlug: sinnersguide00luis
+archivePage: '339'
+bookSlug: the-sinners-guide
 ---
 
 > Again, I would remind you that God, as a wise and sovereign Ruler, has appointed some of His children the depositaries of His power and the dispensers of His benefits, to guide and maintain the others.

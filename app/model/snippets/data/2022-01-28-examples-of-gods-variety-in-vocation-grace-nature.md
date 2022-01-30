@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Examples of God''s variety in vocation, grace, nature'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/473?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Examples of God's variety in vocation, grace, nature
+archiveSlug: sinnersguide00luis
+archivePage: '473'
+bookSlug: the-sinners-guide
 ---
 
 > This diversity is due partly to nature and partly to grace.

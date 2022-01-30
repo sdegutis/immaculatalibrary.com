@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Mary was Queen of Martyrs'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/515?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: Mary was Queen of Martyrs
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '515'
+bookSlug: the-glories-of-mary
 ---
 
 > DISCOURSE IX.

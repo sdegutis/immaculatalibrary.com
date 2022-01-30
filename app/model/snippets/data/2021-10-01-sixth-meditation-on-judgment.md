@@ -1,8 +1,9 @@
 ---
 published: true
 title: 'Sixth Meditation: On Judgment'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/27?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '27'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > CHAPTER XIV.

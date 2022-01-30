@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Francis de Sales on correcting others gently'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/80?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: St. Francis de Sales on correcting others gently
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '80'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > *UPON FRATERNAL CORRECTION.*

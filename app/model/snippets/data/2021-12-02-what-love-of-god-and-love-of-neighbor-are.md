@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'What Love of God and Love of Neighbor are'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/53?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: What Love of God and Love of Neighbor are
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '53'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > UPON WHAT IT IS TO LOVE GOD TRULY.

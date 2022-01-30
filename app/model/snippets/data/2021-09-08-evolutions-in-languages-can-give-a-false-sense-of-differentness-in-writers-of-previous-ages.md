@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Evolutions in languages can give a false sense of differentness in writers of previous ages'
-archiveLink: 'https://archive.org/details/life-and-writings-of-st-thomas-more/page/n21?view=theater'
-bookSlug: 'life-and-writings-of-sir-thomas-more'
+title: Evolutions in languages can give a false sense of differentness in writers of previous ages
+archiveSlug: life-and-writings-of-st-thomas-more
+archivePage: n21
+bookSlug: life-and-writings-of-sir-thomas-more
 ---
 
 > One singular result is inevitable from this method of presenting my materials.

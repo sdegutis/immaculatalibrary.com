@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The Light of God can instruct our Understanding differently and better than Nature or Schools can'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/150?view=theater'
-bookSlug: 'the-sinners-guide'
+title: The Light of God can instruct our Understanding differently and better than Nature or Schools can
+archiveSlug: sinnersguide00luis
+archivePage: '150'
+bookSlug: the-sinners-guide
 ---
 
 > Grace, as you have already learned, causes God to dwell in our souls; and as God, in the words of St. John, is "the true Light, which enlighteneth every man that cometh into this world," [St. John i. 9.] the purer a soul is the brighter will this Light shine in her, just as glass, according as it is clearer, reflects more strongly the rays of the sun.

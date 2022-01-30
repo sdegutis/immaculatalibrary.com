@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Proofs from the Bible of God’s Fatherly Care for the Just'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/132?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Proofs from the Bible of God’s Fatherly Care for the Just
+archiveSlug: sinnersguide00luis
+archivePage: '132'
+bookSlug: the-sinners-guide
 ---
 
 > As the greatest reward of the Christian in this life is God's fatherly care, and as our joy and confidence must increase in proportion to our faith in this providence, we shall add here a few passages from Scripture in proof of this doctrine.

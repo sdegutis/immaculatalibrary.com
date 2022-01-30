@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The Church Fathers on Hating our Relatives'
-archiveLink: 'https://archive.org/details/catenaaureacomme04thom/page/516?view=theater'
-bookSlug: 'catena-aurea'
+title: The Church Fathers on Hating our Relatives
+archiveSlug: catenaaureacomme04thom
+archivePage: '516'
+bookSlug: catena-aurea
 ---
 
 > 25\. And there went great multitudes with Him: and He turned, and said unto them,

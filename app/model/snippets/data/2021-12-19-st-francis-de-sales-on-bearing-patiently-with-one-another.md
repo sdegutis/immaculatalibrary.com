@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Francis de Sales on bearing patiently with one another'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/79?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: St. Francis de Sales on bearing patiently with one another
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '79'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > *UPON BEARING WITH ONE ANOTHER.*

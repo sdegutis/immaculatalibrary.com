@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Seven stories of being saved by the Rosary'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/716?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: Seven stories of being saved by the Rosary
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '716'
+bookSlug: the-glories-of-mary
 ---
 
 > 69.---The devout author of the book in honor of the most holy Rosary, entitled, "The Secret of every Grace," relates that St. Vincent Ferrer once said to a man dying in despair: "Why will you ruin yourself when Jesus Christ wishes to eave you?" And he answered, that in spite of Christ he would be damned. The saint replied: "And you, in spite of yourself, shall be saved." He began to recite the Rosary with the persons of the house, and behold, the sick man asked to make his confession, made it weeping, and then died.

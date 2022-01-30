@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Modesty in words, and respect towards others'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/175?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: Modesty in words, and respect towards others
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '175'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > Chapter XXVII.

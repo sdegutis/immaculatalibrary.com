@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'We must treat of our affairs with diligence, but without eagerness or solicitude.'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/126?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: We must treat of our affairs with diligence, but without eagerness or solicitude.
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '126'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > That care and diligence wherewith we ought to attend to our affairs must never be confounded with anxiety and solicitude.

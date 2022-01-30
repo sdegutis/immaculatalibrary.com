@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The necessity of a Guide to conduct us on the way of Devotion'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/8?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: The necessity of a Guide to conduct us on the way of Devotion
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '8'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > CHAPTER IV.

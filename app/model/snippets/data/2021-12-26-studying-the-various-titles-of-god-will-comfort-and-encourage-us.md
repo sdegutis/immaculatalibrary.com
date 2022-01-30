@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Studying the various titles of God will comfort and encourage us'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/137?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Studying the various titles of God will comfort and encourage us
+archiveSlug: sinnersguide00luis
+archivePage: '137'
+bookSlug: the-sinners-guide
 ---
 
 > God is our Shepherd, because He guides us; He is also our King, because He protects us; our Master, because He instructs us; our Physician, because He heals us; and our Guardian, because He watches over us.

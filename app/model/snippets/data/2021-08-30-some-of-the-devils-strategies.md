@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Some of the devil’s strategies'
-archiveLink: 'https://archive.org/details/the-spiritual-combat-dornin-edition/page/107?view=theater'
-bookSlug: 'the-spiritual-combat'
+title: Some of the devil’s strategies
+archiveSlug: the-spiritual-combat-dornin-edition
+archivePage: '107'
+bookSlug: the-spiritual-combat
 ---
 
 > CHAPTER XXVII.

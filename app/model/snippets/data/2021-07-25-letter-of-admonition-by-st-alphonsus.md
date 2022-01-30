@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Letter of admonition by St. Alphonsus de Liguori'
-archiveLink: 'https://archive.org/details/alphonsusworks18liguuoft/page/n367?view=theater'
-bookSlug: 'the-ascetical-works-vol18-letters-by-st-alphonsus-de-liguori'
+title: Letter of admonition by St. Alphonsus de Liguori
+archiveSlug: alphonsusworks18liguuoft
+archivePage: n367
+bookSlug: the-ascetical-works-vol18-letters-by-st-alphonsus-de-liguori
 ---
 
 > **To the Fathers and Brothers of the Congregation of the Most Holy Redeemer.**

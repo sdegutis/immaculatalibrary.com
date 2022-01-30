@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Lazarus’s Resurrection shows the strength of God’s grace needed to save us from strong habits of sin'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/242?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Lazarus’s Resurrection shows the strength of God’s grace needed to save us from strong habits of sin
+archiveSlug: sinnersguide00luis
+archivePage: '242'
+bookSlug: the-sinners-guide
 ---
 
 > But among all these obstacles the greatest is the tyranny of evil habits. Would that I could make you understand the power with which they bind us!

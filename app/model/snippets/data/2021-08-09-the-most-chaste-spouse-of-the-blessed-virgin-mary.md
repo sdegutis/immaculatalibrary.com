@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The Most Chaste Spouse of the Blessed Virgin Mary'
-archiveLink: 'https://archive.org/details/st.-josephs-life-virtues-privileges-power/page/310?view=theater'
-bookSlug: 'st-joseph-life-his-virtues-his-privileges-his-power'
+title: The Most Chaste Spouse of the Blessed Virgin Mary
+archiveSlug: st.-josephs-life-virtues-privileges-power
+archivePage: '310'
+bookSlug: st-joseph-life-his-virtues-his-privileges-his-power
 ---
 
 > *St. Joseph the Chaste Spouse of the Blessed Virgin.*

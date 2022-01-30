@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The error of thinking we are saintly, and how to avoid it'
-archiveLink: 'https://archive.org/details/the-spiritual-combat-dornin-edition/page/113?view=theater'
-bookSlug: 'the-spiritual-combat'
+title: The error of thinking we are saintly, and how to avoid it
+archiveSlug: the-spiritual-combat-dornin-edition
+archivePage: '113'
+bookSlug: the-spiritual-combat
 ---
 
 > CHAPTER XXX.

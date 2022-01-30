@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Gluttony attempts to conquer us from within, and Jesus gave us an example of conquering it'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/358?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Gluttony attempts to conquer us from within, and Jesus gave us an example of conquering it
+archiveSlug: sinnersguide00luis
+archivePage: '358'
+bookSlug: the-sinners-guide
 ---
 
 > CHAPTER XXXIV.

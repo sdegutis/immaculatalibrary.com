@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Of sadness'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/241?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: Of sadness
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '241'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > *Of Sadness.*

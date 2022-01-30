@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Mary was raised incomparably higher than all angels and saints'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/505?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: Mary was raised incomparably higher than all angels and saints
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '505'
+bookSlug: the-glories-of-mary
 ---
 
 > *Second Point.*---If the human mind, says St. Bernard, cannot attain to comprehend the immense glory which God has prepared in heaven for those who have loved him on earth, as the apostle declares, who will ever attain to comprehend what he has prepared for her who bore him?

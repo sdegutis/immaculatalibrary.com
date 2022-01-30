@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'How Modesty preserves the sweet perfume of our Virtues'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/144?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: How Modesty preserves the sweet perfume of our Virtues
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '144'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > *UPON MODESTY.*

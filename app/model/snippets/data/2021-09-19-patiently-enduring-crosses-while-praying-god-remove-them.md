@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Patiently enduring Crosses while praying God remove them'
-archiveLink: 'https://archive.org/details/wisdomandwitofbl00moreuoft/page/51?view=theater'
-bookSlug: 'wisdom-and-wit-of-blessed-thomas-more'
+title: Patiently enduring Crosses while praying God remove them
+archiveSlug: wisdomandwitofbl00moreuoft
+archivePage: '51'
+bookSlug: wisdom-and-wit-of-blessed-thomas-more
 ---
 
 > `May We Seek to Remove Crosses?`

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Some distinctions between types of virtues'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/454?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Some distinctions between types of virtues
+archiveSlug: sinnersguide00luis
+archivePage: '454'
+bookSlug: the-sinners-guide
 ---
 
 > *CHAPTER XLIV.*

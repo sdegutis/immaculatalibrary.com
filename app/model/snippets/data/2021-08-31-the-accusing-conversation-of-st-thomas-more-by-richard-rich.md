@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The accusing conversation of St. Thomas More by Richard Rich'
-archiveLink: 'https://archive.org/details/lifeofsirthomasm00ropeuoft/page/82?view=theater'
-bookSlug: 'life-of-sir-thomas-more-by-william-roper'
+title: The accusing conversation of St. Thomas More by Richard Rich
+archiveSlug: lifeofsirthomasm00ropeuoft
+archivePage: '82'
+bookSlug: life-of-sir-thomas-more-by-william-roper
 ---
 
 > Not long after came to him the Lord Chancellor, the Dukes of Norfolk and Suffolk, with Master Secretary, and certain other of the privy council, at two several times by all policies possible procuring him either precisely to confess the Supremacy, or precisely to deny it, whereunto, as appeareth by his examinations in the said great book, they could never bring him.

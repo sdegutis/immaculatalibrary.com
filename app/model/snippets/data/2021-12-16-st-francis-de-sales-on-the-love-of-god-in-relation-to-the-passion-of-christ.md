@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Francis de Sales on the Love of God in relation to the Passion of Christ'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/74?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: St. Francis de Sales on the Love of God in relation to the Passion of Christ
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '74'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > SOME THOUGHTS OF BLESSED FRANCIS ON THE PASSION.

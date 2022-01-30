@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Our Continual Dying, according to St. Thomas More'
-archiveLink: 'https://archive.org/details/fourlastthings00more/page/41?view=theater'
-bookSlug: 'four-last-things-by-st-thomas-more'
+title: Our Continual Dying, according to St. Thomas More
+archiveSlug: fourlastthings00more
+archivePage: '41'
+bookSlug: four-last-things-by-st-thomas-more
 ---
 
 > And surely me thinketh that in likewise a man is not only dying, that is to say, going in his way out of this life, while he lieth drawing on, but also all the while that he is going toward his end, which is by all the whole time of his life, since the first moment to the last finished, that is, to wit, sith the first moment in which he began to live until the last moment of his life, or rather the first in which he is full dead.

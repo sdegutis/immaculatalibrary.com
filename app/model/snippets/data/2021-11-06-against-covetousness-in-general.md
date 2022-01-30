@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Against Covetousness in General'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/334?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Against Covetousness in General
+archiveSlug: sinnersguide00luis
+archivePage: '334'
+bookSlug: the-sinners-guide
 ---
 
 > CHAPTER XXXI.

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The last letter of St. Thomas More to his daughter the day before his martyrdom'
-archiveLink: 'https://archive.org/details/lifeofsirthomasm00ropeuoft/page/n196?view=theater'
-bookSlug: 'life-of-sir-thomas-more-by-william-roper'
+title: The last letter of St. Thomas More to his daughter the day before his martyrdom
+archiveSlug: lifeofsirthomasm00ropeuoft
+archivePage: n196
+bookSlug: life-of-sir-thomas-more-by-william-roper
 ---
 
 > *Sir Thomas More was beheaded at the Tower-hill, In London, on Tuesday, the sixth day of July, in the year of our Lord 1535, and in the xxvii. year of the Reign of King Henry VIII. And on the day next before, being Monday, and the fifth day of July, he wrote with a coal a letter to his daughter Mistress Roper, and sent it to her (which was the last thing that ever he wrote), the copy whereof here followeth.*

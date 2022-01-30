@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'How temptations begin to become sinful'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/230?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: How temptations begin to become sinful
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '230'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > *How temptation and delectation may become sinful.*

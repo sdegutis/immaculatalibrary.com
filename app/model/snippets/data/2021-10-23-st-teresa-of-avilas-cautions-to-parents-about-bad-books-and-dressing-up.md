@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Teresa of Avila cautions parents about bad books and dressing up'
-archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/6?view=theater'
-bookSlug: 'life-of-st-teresa-of-avila'
+title: St. Teresa of Avila cautions parents about bad books and dressing up
+archiveSlug: lifeofstteresaof00tereuoft
+archivePage: '6'
+bookSlug: life-of-st-teresa-of-avila
 ---
 
 > ### CHAPTER II.

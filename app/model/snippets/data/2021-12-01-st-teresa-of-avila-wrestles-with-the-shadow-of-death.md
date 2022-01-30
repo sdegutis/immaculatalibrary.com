@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Teresa of Avila wrestles with the shadow of death'
-archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/64?view=theater'
-bookSlug: 'life-of-st-teresa-of-avila'
+title: St. Teresa of Avila wrestles with the shadow of death
+archiveSlug: lifeofstteresaof00tereuoft
+archivePage: '64'
+bookSlug: life-of-st-teresa-of-avila
 ---
 
 > Then there was the torture of sermons, and that not a slight one; for I was very fond of them.

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The final accusation, defense, and condemnation of St. Thomas More'
-archiveLink: 'https://archive.org/details/lifeofsirthomasm00ropeuoft/page/85?view=theater'
-bookSlug: 'life-of-sir-thomas-more-by-william-roper'
+title: The final accusation, defense, and condemnation of St. Thomas More
+archiveSlug: lifeofsirthomasm00ropeuoft
+archivePage: '85'
+bookSlug: life-of-sir-thomas-more-by-william-roper
 ---
 
 > When Sir Thomas More was brought from the Tower to Westminster Hall to answer to the indictment, and at the King's Bench bar there before the judges arraigned, he openly told them that he would upon that indictment have abiden in law, but that he thereby should have been driven to confess of himself the matter indeed, that was the denial of the king's supremacy, which he protested was untrue.

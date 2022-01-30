@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Joseph, a Saint for our age'
-archiveLink: 'https://archive.org/details/st.-josephs-life-virtues-privileges-power/page/253?view=theater'
-bookSlug: 'st-joseph-life-his-virtues-his-privileges-his-power'
+title: St. Joseph, a Saint for our age
+archiveSlug: st.-josephs-life-virtues-privileges-power
+archivePage: '253'
+bookSlug: st-joseph-life-his-virtues-his-privileges-his-power
 ---
 
 > From the very beginning, for great work, the Almighty has usually selected weak instruments to carry out His designs; and hence the candid observer must attribute the success, not to human wisdom or power, but to God alone.

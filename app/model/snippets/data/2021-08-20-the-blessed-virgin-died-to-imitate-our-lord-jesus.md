@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The Blessed Virgin died to imitate Our Lord Jesus'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/475?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: The Blessed Virgin died to imitate Our Lord Jesus
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '475'
+bookSlug: the-glories-of-mary
 ---
 
 > On this day the Church proposes to us to celebrate two solemn observances in honor of Mary: one, her happy departure from this earth; the other, her glorious assumption into heaven. In the present discourse we shall speak of her departure from this earth, and in the next of her assumption.

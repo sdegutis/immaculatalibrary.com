@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'How the Devil distracts in Darkness with Business of the Flesh'
-archiveLink: 'https://archive.org/details/a-dialogue-of-comfort-against-tribulation-by-st-thomas-more/page/171?view=theater'
-bookSlug: 'a-dialogue-of-comfort-against-tribulation'
+title: How the Devil distracts in Darkness with Business of the Flesh
+archiveSlug: a-dialogue-of-comfort-against-tribulation-by-st-thomas-more
+archivePage: '171'
+bookSlug: a-dialogue-of-comfort-against-tribulation
 ---
 
 > CHAPTER XVIII.

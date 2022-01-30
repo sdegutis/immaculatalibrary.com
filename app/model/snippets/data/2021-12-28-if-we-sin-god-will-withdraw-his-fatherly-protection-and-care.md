@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'If we sin, God will withdraw his Fatherly Protection and Care'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/140?view=theater'
-bookSlug: 'the-sinners-guide'
+title: If we sin, God will withdraw his Fatherly Protection and Care
+archiveSlug: sinnersguide00luis
+archivePage: '140'
+bookSlug: the-sinners-guide
 ---
 
 > If unmoved by the loving providence of God towards the just, at least be not insensible to the rigor with which He punishes the wicked, to whom His justice is meted out according to their own measure.

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'If we wait to turn to God until later, our sins will be even heavier'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/241?view=theater'
-bookSlug: 'the-sinners-guide'
+title: If we wait to turn to God until later, our sins will be even heavier
+archiveSlug: sinnersguide00luis
+archivePage: '241'
+bookSlug: the-sinners-guide
 ---
 
 > Can you, then, doubt that you only increase the difficulties of your conversion by deferring it?

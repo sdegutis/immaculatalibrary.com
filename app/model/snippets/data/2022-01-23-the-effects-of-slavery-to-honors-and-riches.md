@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The effects of slavery to Honors and Riches'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/187?view=theater'
-bookSlug: 'the-sinners-guide'
+title: The effects of slavery to Honors and Riches
+archiveSlug: sinnersguide00luis
+archivePage: '187'
+bookSlug: the-sinners-guide
 ---
 
 > But this is not the only vice which reduces man to slavery. Study one who is a victim to pride or ambition, and see how eagerly he grasps at honors, how he makes them the end of all his actions.

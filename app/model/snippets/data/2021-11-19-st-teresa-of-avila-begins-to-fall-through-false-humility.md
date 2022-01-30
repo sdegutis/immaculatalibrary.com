@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Teresa of Avila begins to fall through false humility'
-archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/41?view=theater'
-bookSlug: 'life-of-st-teresa-of-avila'
+title: St. Teresa of Avila begins to fall through false humility
+archiveSlug: lifeofstteresaof00tereuoft
+archivePage: '41'
+bookSlug: life-of-st-teresa-of-avila
 ---
 
 > CHAPTER VII.

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Joseph’s Supernatural Wisdom'
-archiveLink: 'https://archive.org/details/lifegloriesofstj00thomuoft/page/381?view=theater'
-bookSlug: 'the-life-and-glories-of-st-joseph'
+title: Joseph’s Supernatural Wisdom
+archiveSlug: lifegloriesofstj00thomuoft
+archivePage: '381'
+bookSlug: the-life-and-glories-of-st-joseph
 ---
 
 > The supernatural light which Joseph received along with this eminent faith endowed his soul with the most singular prudence and wisdom, gifts which in the natural order he had already possessed in a remarkable degree; for this exalted prudence and wisdom was, indeed, requisite in one to whom was intrusted a higher office than was ever confided to the very angels themselves.

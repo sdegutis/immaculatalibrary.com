@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Teresa of Avila explains the benefit and nature of Prayer and how it comes from God’s mercy and love'
-archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/58?view=theater'
-bookSlug: 'life-of-st-teresa-of-avila'
+title: St. Teresa of Avila explains the benefit and nature of Prayer and how it comes from God’s mercy and love
+archiveSlug: lifeofstteresaof00tereuoft
+archivePage: '58'
+bookSlug: life-of-st-teresa-of-avila
 ---
 
 > When I was ill, I was well with God. I contrived that those about me should be so, too, and I made supplications to our Lord for this grace, and spoke frequently of Him.

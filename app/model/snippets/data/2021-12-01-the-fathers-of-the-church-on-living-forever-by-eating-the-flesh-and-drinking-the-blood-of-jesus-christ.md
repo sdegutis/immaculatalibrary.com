@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The Fathers of the Church on living forever by Eating the Flesh and Drinking the Blood of Jesus Christ'
-archiveLink: 'https://archive.org/details/catenaaureacomme04thom/page/242?view=theater'
-bookSlug: 'catena-aurea'
+title: The Fathers of the Church on living forever by Eating the Flesh and Drinking the Blood of Jesus Christ
+archiveSlug: catenaaureacomme04thom
+archivePage: '242'
+bookSlug: catena-aurea
 ---
 
 > 55\. For my flesh is meat indeed, and my blood is drink indeed.

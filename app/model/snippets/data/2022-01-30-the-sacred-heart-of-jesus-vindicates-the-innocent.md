@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The Sacred Heart of Jesus vindicates the innocent'
-archiveLink: 'https://archive.org/details/thesacredheartan00kelluoft/page/174?view=theater'
-bookSlug: 'the-sacred-heart-anecdotes-and-examples'
+title: The Sacred Heart of Jesus vindicates the innocent
+archiveSlug: thesacredheartan00kelluoft
+archivePage: '174'
+bookSlug: the-sacred-heart-anecdotes-and-examples
 ---
 
 > 56\.---How Innocence comes to Light.

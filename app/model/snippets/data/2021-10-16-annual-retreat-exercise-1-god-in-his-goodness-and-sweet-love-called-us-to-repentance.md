@@ -1,8 +1,9 @@
 ---
 published: true
 title: 'Annual Retreat Exercise #1: God in his goodness and sweet love called us to repentance'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/264?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '264'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > Consider by what means you were induced to make your protestation. Ah! how good and gracious was God to you at that time?

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The happiness of this life is subject to innumerable sudden changes'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/293?view=theater'
-bookSlug: 'the-sinners-guide'
+title: The happiness of this life is subject to innumerable sudden changes
+archiveSlug: sinnersguide00luis
+archivePage: '293'
+bookSlug: the-sinners-guide
 ---
 
 > Consider also the innumerable changes to which human happiness is exposed in this valley of tears, this land of exile, this tempestuous sea which we call the world.

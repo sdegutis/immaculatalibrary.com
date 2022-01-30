@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Those with greater charity prefer humiliations to honors'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/153?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: Those with greater charity prefer humiliations to honors
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '153'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > 7\. Next he considered that the highest, or more properly speaking, deepest degree of humility is that of taking pleasure and even delight in humiliations, reputing them to be in truth the greatest of honours, and of being just as much ill-content with honours as vain persons are with contempt and contumely.

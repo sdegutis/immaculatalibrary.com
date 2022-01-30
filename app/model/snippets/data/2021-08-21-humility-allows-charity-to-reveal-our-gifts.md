@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Humility allows charity to reveal our gifts'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/110?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: Humility allows charity to reveal our gifts
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '110'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > To imagine we know what we know not is very great folly; to desire to be supposed to know that of which we are ignorant is intolerable vanity.

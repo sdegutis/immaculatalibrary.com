@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'An example of St. Ignatius’s early struggles with discernment'
-archiveLink: 'https://archive.org/details/stignatiusautobi00ignauoft/page/n45?view=theater'
-bookSlug: 'the-autobiography-of-st-ignatius-of-loyola'
+title: An example of St. Ignatius’s early struggles with discernment
+archiveSlug: stignatiusautobi00ignauoft
+archivePage: n45
+bookSlug: the-autobiography-of-st-ignatius-of-loyola
 ---
 
 > While he journeyed on, a Saracen mounted on a horse came up with him. In the course of the conversation mention was made of the Blessed Virgin.

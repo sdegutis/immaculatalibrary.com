@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Humility comes from knowledge of ourselves, pride from ignorance of ourselves'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/330?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Humility comes from knowledge of ourselves, pride from ignorance of ourselves
+archiveSlug: sinnersguide00luis
+archivePage: '330'
+bookSlug: the-sinners-guide
 ---
 
 > `Section II.`

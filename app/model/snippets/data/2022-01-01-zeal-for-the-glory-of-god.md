@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Zeal for the Glory of God'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/433?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Zeal for the Glory of God
+archiveSlug: sinnersguide00luis
+archivePage: '433'
+bookSlug: the-sinners-guide
 ---
 
 > *Section V.*

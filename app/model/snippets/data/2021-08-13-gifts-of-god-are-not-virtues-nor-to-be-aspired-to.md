@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Gifts of God are not virtues, nor to be aspired to'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/97?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: Gifts of God are not virtues, nor to be aspired to
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '97'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > There are certain things which many esteem as virtues, though in reality they are not: I mean ecstasies or raptures, insensibilities, impassibilities, deifical unions, elevations, transformations, and such like perfections, treated of in certain books, which promise to elevate the soul to a contemplation purely intellectual, to the essential application of the spirit to a supernatural life.

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Mary’s death merely united her body with her heart'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/482?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: Mary’s death merely united her body with her heart
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '482'
+bookSlug: the-glories-of-mary
 ---
 
 > *Second Point.*---But let us now see what were the circumstances of her happy death.

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Devotions, Angels, and Saints'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/74?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: Devotions, Angels, and Saints
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '74'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > ### Chapter XV.

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'We must love God, not fear him'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/55?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: We must love God, not fear him
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '55'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > ALL FOR LOVE OF GOD.

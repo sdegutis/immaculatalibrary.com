@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Examples and Effects of False Devotion'
-archiveLink: 'https://archive.org/details/the-spiritual-combat-dornin-edition/page/8?view=theater'
-bookSlug: 'the-spiritual-combat'
+title: Examples and Effects of False Devotion
+archiveSlug: the-spiritual-combat-dornin-edition
+archivePage: '8'
+bookSlug: the-spiritual-combat
 ---
 
 > But the case is far different with those who ignorantly place their devotion in exterior works, which frequently are the cause of their perdition, and of worse consequence than manifest crimes; not that they are in themselves pernicious, but only from a wrong application.---Their attachment to such works is so great, that they utterly neglect to watch the secret motions of their hearts, but giving them full scope, leave them exposed to their own corruption and the wiles of the Devil.

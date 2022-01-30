@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The liberty we gain by subduing the flesh to reason'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/193?view=theater'
-bookSlug: 'the-sinners-guide'
+title: The liberty we gain by subduing the flesh to reason
+archiveSlug: sinnersguide00luis
+archivePage: '193'
+bookSlug: the-sinners-guide
 ---
 
 > Besides these two divine favors there is another means by which the liberty of the just is regained.

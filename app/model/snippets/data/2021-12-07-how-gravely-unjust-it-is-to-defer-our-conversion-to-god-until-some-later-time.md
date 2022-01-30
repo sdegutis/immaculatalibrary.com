@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'How gravely unjust it is to defer our conversion to God until some later time'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/246?view=theater'
-bookSlug: 'the-sinners-guide'
+title: How gravely unjust it is to defer our conversion to God until some later time
+archiveSlug: sinnersguide00luis
+archivePage: '246'
+bookSlug: the-sinners-guide
 ---
 
 > But apart from all these considerations, if you have any sense of justice or honesty will not the benefits you have received and the rewards you are promised induce you to be less sparing in the service of so liberal a Master?

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'A profession of renewed loyalty toward God, to be made after a General Confession'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/38?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: A profession of renewed loyalty toward God, to be made after a General Confession
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '38'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > CHAPTER XX.

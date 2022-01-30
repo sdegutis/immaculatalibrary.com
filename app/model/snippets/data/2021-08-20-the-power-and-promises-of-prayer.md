@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The Power and Promises of Prayer'
-archiveLink: 'https://archive.org/details/st.-josephs-life-virtues-privileges-power/page/333?view=theater'
-bookSlug: 'st-joseph-life-his-virtues-his-privileges-his-power'
+title: The Power and Promises of Prayer
+archiveSlug: st.-josephs-life-virtues-privileges-power
+archivePage: '333'
+bookSlug: st-joseph-life-his-virtues-his-privileges-his-power
 ---
 
 > "Ask, and it shall be given you: seek, and you shall find: knock, and it shall be opened to you. For everyone that asketh, receiveth: and he that seeketh, findeth: and to him that knocketh, it shall be opened" (Matt. vii. 7,8).

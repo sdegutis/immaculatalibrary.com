@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Other counsels touching Discourse'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/188?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: Other counsels touching Discourse
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '188'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > Chapter XXX.

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'A clear conscience and its effects helps free us from slavery to sin'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/193?view=theater'
-bookSlug: 'the-sinners-guide'
+title: A clear conscience and its effects helps free us from slavery to sin
+archiveSlug: sinnersguide00luis
+archivePage: '193'
+bookSlug: the-sinners-guide
 ---
 
 > A second source of this liberty is the joy of a good conscience and the spiritual consolations experienced by the just.

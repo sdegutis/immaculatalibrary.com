@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The Church Fathers on John 7:44-50'
-archiveLink: 'https://archive.org/details/catenaaureacomme04thom/page/415?view=theater'
-bookSlug: 'catena-aurea'
+title: The Church Fathers on John 7:44-50
+archiveSlug: catenaaureacomme04thom
+archivePage: '415'
+bookSlug: catena-aurea
 ---
 
 > 44\. Jesus cried and said. He that believeth on me, believeth not on me, but on him that sent me.

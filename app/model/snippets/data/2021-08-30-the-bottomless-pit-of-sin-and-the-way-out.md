@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The bottomless pit of sin, and the way out'
-archiveLink: 'https://archive.org/details/the-spiritual-combat-dornin-edition/page/108?view=theater'
-bookSlug: 'the-spiritual-combat'
+title: The bottomless pit of sin, and the way out
+archiveSlug: the-spiritual-combat-dornin-edition
+archivePage: '108'
+bookSlug: the-spiritual-combat
 ---
 
 > CHAPTER XXVIII.

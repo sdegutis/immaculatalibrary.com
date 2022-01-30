@@ -1,8 +1,9 @@
 ---
 published: true
 title: 'Annual Retreat Exercise #9: Consideration of the excellence of virtue'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/275?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '275'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > ### CHAPTER XI.

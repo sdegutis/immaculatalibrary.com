@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Not riches themselves, but our disposition to riches, is what profits or harms our souls'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/340?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Not riches themselves, but our disposition to riches, is what profits or harms our souls
+archiveSlug: sinnersguide00luis
+archivePage: '340'
+bookSlug: the-sinners-guide
 ---
 
 > Remember also that it is not poverty but the love of poverty which is a virtue. Hence all who voluntarily forsake wealth bear a striking resemblance to our Saviour, who, being rich with the riches of God, became poor for love of us.

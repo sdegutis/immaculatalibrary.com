@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Francis de Sales on Love of God being greater than Faith and Hope'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/70?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: St. Francis de Sales on Love of God being greater than Faith and Hope
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '70'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > *How Charity excels both Faith and Hope.*

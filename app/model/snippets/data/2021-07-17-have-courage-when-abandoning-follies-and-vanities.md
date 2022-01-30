@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Have courage when abandoning follies and vanities'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/222?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: Have courage when abandoning follies and vanities
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '222'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > *We must always have courage.*

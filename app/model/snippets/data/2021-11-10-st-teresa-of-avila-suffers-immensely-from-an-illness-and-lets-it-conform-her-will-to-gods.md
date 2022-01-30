@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Teresa of Avila suffers immensely from an illness and lets it conform her will to God’s'
-archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/30?view=theater'
-bookSlug: 'life-of-st-teresa-of-avila'
+title: St. Teresa of Avila suffers immensely from an illness and lets it conform her will to God’s
+archiveSlug: lifeofstteresaof00tereuoft
+archivePage: '30'
+bookSlug: life-of-st-teresa-of-avila
 ---
 
 > I remained three months in that place, in the most grievous sufferings; for the treatment was too severe for my constitution. In two months---so strong were the medicines---my life was nearly worn out; and the severity of the pain in the heart, for the cure of which I was there, was much more keen: it seemed to me, now and then, as if it had been seized by sharp teeth. So great was the torment that it was feared it might end in madness.

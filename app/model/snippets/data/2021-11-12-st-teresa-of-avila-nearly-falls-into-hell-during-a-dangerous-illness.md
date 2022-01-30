@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Teresa of Avila nearly falls into Hell during a dangerous illness'
-archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/31?view=theater'
-bookSlug: 'life-of-st-teresa-of-avila'
+title: St. Teresa of Avila nearly falls into Hell during a dangerous illness
+archiveSlug: lifeofstteresaof00tereuoft
+archivePage: '31'
+bookSlug: life-of-st-teresa-of-avila
 ---
 
 > The feast of our Lady, in August, came round; from April until then I had been in great pain, but I more especially during the last three months.

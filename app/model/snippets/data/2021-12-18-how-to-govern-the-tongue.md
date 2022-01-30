@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'How to govern the Tongue'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/407?view=theater'
-bookSlug: 'the-sinners-guide'
+title: How to govern the Tongue
+archiveSlug: sinnersguide00luis
+archivePage: '407'
+bookSlug: the-sinners-guide
 ---
 
 > *Section V.*

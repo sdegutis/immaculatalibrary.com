@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Of supporting injuries; and who is proved to be truly patient.'
-archiveLink: 'https://archive.org/details/followingofchris00thom/page/182?view=theater'
-bookSlug: 'imitation-of-christ'
+title: Of supporting injuries; and who is proved to be truly patient.
+archiveSlug: followingofchris00thom
+archivePage: '182'
+bookSlug: imitation-of-christ
 ---
 
 > 1\. What is it thou sayest, my Son? Cease to complain, considering my passion, and that of other saints:

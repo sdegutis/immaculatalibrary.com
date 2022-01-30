@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Precursor Saints of the Sacred Heart'
-archiveLink: 'https://archive.org/details/thesacredheartan00kelluoft/page/17?view=theater'
-bookSlug: 'the-sacred-heart-anecdotes-and-examples'
+title: Precursor Saints of the Sacred Heart
+archiveSlug: thesacredheartan00kelluoft
+archivePage: '17'
+bookSlug: the-sacred-heart-anecdotes-and-examples
 ---
 
 > The devotion to the Sacred Heart of Jesus has always existed since the very foundation of the Church. It began on Calvary when the Heart of our dear Redeemer was pierced through for our sakes. Truly it can be said that in the silent solitude of Ephesus, Mary and the beloved disciple were the first clients of that adorable Heart, and no other creature, not even the angels or the greatest saints ever understood, as they did, all the anguish that Mary's heart suffered when the cruel lance pierced the side of Jesus.

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'True vs vain friendships'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/154?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: True vs vain friendships
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '154'
+bookSlug: introduction-to-the-devout-life
 ---
 
 This is part of an [Anthology of the Saints](/anthologies.html) on [Friendship, Love, and Marriage](/anthologies/friendship-love-and-marriage.html).

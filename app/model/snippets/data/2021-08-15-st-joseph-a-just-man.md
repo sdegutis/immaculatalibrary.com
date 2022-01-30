@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Joseph, a Just man'
-archiveLink: 'https://archive.org/details/st.-josephs-life-virtues-privileges-power/page/319?view=theater'
-bookSlug: 'st-joseph-life-his-virtues-his-privileges-his-power'
+title: St. Joseph, a Just man
+archiveSlug: st.-josephs-life-virtues-privileges-power
+archivePage: '319'
+bookSlug: st-joseph-life-his-virtues-his-privileges-his-power
 ---
 
 > "Whereupon Joseph her husband, being a just man, and not willing publicly to expose her, was minded to put her away privately" (Matt. i. 19).

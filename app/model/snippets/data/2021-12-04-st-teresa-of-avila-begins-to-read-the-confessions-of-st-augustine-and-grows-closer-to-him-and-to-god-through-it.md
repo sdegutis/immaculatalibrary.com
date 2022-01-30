@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Teresa of Avila begins to read the Confessions of St. Augustine and grows closer to him and to God through it'
-archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/68?view=theater'
-bookSlug: 'life-of-st-teresa-of-avila'
+title: St. Teresa of Avila begins to read the Confessions of St. Augustine and grows closer to him and to God through it
+archiveSlug: lifeofstteresaof00tereuoft
+archivePage: '68'
+bookSlug: life-of-st-teresa-of-avila
 ---
 
 > At this time, the Confessions of St. Augustine were given me. Our Lord seems to have so ordained it, for I did not seek them myself, neither had I ever seen them before.

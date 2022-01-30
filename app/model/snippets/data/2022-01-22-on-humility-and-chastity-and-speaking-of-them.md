@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'On Humility and Chastity, and speaking of them'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/143?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: On Humility and Chastity, and speaking of them
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '143'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > *UPON CHASTITY AND HUMILITY.*

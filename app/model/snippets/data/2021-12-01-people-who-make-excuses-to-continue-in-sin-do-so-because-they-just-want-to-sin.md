@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'People who make excuses to continue in sin do so because they just want to sin'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/237?view=theater'
-bookSlug: 'the-sinners-guide'
+title: People who make excuses to continue in sin do so because they just want to sin
+archiveSlug: sinnersguide00luis
+archivePage: '237'
+bookSlug: the-sinners-guide
 ---
 
 > CHAPTER XXIV.

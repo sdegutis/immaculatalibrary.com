@@ -1,8 +1,9 @@
 ---
 published: true
 title: 'Annual Retreat Exercise #5: An examination of the state of our soul towards our neighbour'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/271?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '271'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > CHAPTER VI.

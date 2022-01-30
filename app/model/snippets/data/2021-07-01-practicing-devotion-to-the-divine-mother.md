@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Practicing Devotion to the Divine Mother'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/643?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: Practicing Devotion to the Divine Mother
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '643'
+bookSlug: the-glories-of-mary
 ---
 
 > VARIOUS PRACTICES OF DEVOTION TO THE DIVINE MOTHER.

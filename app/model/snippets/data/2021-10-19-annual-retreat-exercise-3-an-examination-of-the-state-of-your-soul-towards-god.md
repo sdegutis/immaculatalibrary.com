@@ -1,8 +1,9 @@
 ---
 published: true
 title: 'Annual Retreat Exercise #3: An examination of the state of your soul towards God'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/268?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '268'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > CHAPTER IV.

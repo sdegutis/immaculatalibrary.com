@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Francis de Sales on the Fire of Love and of Charity'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/65?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: St. Francis de Sales on the Fire of Love and of Charity
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '65'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > UPON THE CHARACTER OF A TRUE CHRISTIAN.

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'An Example of Meditating on Christ’s Passion'
-archiveLink: 'https://archive.org/details/the-spiritual-combat-dornin-edition/page/169?view=theater'
-bookSlug: 'the-spiritual-combat'
+title: An Example of Meditating on Christ’s Passion
+archiveSlug: the-spiritual-combat-dornin-edition
+archivePage: '169'
+bookSlug: the-spiritual-combat
 ---
 
 > CHAPTER XLVI.

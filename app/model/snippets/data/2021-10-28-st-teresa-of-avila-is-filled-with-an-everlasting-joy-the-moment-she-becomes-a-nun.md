@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Teresa of Avila is filled with an everlasting joy the moment she becomes a nun'
-archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/16?view=theater'
-bookSlug: 'life-of-st-teresa-of-avila'
+title: St. Teresa of Avila is filled with an everlasting joy the moment she becomes a nun
+archiveSlug: lifeofstteresaof00tereuoft
+archivePage: '16'
+bookSlug: life-of-st-teresa-of-avila
 ---
 
 > CHAPTER IV.

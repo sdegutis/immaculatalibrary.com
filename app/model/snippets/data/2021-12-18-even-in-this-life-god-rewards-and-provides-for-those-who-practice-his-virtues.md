@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Even in this life, God rewards and provides for those who practice His Virtues'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/124?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Even in this life, God rewards and provides for those who practice His Virtues
+archiveSlug: sinnersguide00luis
+archivePage: '124'
+bookSlug: the-sinners-guide
 ---
 
 > If you still tell me that the path of virtue is rugged, that its duties are difficult, I beg you to consider the abundant and powerful aids which God gives you.

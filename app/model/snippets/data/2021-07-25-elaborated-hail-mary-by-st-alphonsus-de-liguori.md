@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Elaborated “Hail Mary” by St. Alphonsus de Liguori'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/434?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: Elaborated “Hail Mary” by St. Alphonsus de Liguori
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '434'
+bookSlug: the-glories-of-mary
 ---
 
 > Oh immaculate and holy Virgin! oh creature the most humble and the greatest before God! thou wast so small in thy own eyes, but so great in the eyes of thy Lord, that he exalted thee even to choose thee for his mother, and therefore to make thee queen of heaven and of earth.

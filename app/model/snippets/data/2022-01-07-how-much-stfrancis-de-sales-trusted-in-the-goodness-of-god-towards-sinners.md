@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'How much St.Francis de Sales trusted in the goodness of God towards sinners'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/120?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: How much St.Francis de Sales trusted in the goodness of God towards sinners
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '120'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > With regard to this subject he related to me an amusing incident which occurred whilst he was a missioner in the Chablais.

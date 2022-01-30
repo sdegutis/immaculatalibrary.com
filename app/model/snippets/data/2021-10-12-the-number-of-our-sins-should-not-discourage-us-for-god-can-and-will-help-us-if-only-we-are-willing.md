@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The number of our sins should not discourage us, for God can and will help us if only we are willing'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/278?view=theater'
-bookSlug: 'the-sinners-guide'
+title: The number of our sins should not discourage us, for God can and will help us if only we are willing
+archiveSlug: sinnersguide00luis
+archivePage: '278'
+bookSlug: the-sinners-guide
 ---
 
 > But, perhaps, you will still object that your sins are so numerous that God must refuse you His grace.

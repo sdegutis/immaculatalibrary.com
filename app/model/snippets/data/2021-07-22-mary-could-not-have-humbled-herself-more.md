@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Mary could not have humbled herself more'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/410?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: Mary could not have humbled herself more
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '410'
+bookSlug: the-glories-of-mary
 ---
 
 > *Mary could not humble herself more than she did in the incarnation of the Word. On the other hand, God could not exalt her more than he has exalted her.*

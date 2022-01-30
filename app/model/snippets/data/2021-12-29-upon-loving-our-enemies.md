@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Upon Loving our Enemies'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/99?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: Upon Loving our Enemies
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '99'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > *UPON LOVING OUR ENEMIES.*

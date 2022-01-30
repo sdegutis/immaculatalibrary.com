@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Lust is a most fierce enemy, that stains our souls, defiles our bodies, and ruins our neighbor'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/344?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Lust is a most fierce enemy, that stains our souls, defiles our bodies, and ruins our neighbor
+archiveSlug: sinnersguide00luis
+archivePage: '344'
+bookSlug: the-sinners-guide
 ---
 
 > CHAPTER XXXII.

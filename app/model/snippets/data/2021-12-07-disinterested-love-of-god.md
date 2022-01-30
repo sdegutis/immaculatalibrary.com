@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'A Short Story of the Disinterested Love of God'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/64?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: A Short Story of the Disinterested Love of God
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '64'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > DISINTERESTED LOVE OF GOD.

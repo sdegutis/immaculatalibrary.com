@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The hardship of Virtue is less than the suffering of Hell, or the efforts of the Saints'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/281?view=theater'
-bookSlug: 'the-sinners-guide'
+title: The hardship of Virtue is less than the suffering of Hell, or the efforts of the Saints
+archiveSlug: sinnersguide00luis
+archivePage: '281'
+bookSlug: the-sinners-guide
 ---
 
 > But let us suppose that the path of virtue is sown with difficulties and hardships. Will this prove that you ought not to walk in it? Oh! no.

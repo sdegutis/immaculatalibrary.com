@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Even the pagan philosophers understood the value of a good conscience, and the torment of a guilty one'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/170?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Even the pagan philosophers understood the value of a good conscience, and the torment of a guilty one
+archiveSlug: sinnersguide00luis
+archivePage: '170'
+bookSlug: the-sinners-guide
 ---
 
 > The ancient philosophers, as we have seen, though deprived of the light of faith, knew the torments of a guilty conscience.

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The sweetness of God overwhelms the souls of the Just with Joy'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/158?view=theater'
-bookSlug: 'the-sinners-guide'
+title: The sweetness of God overwhelms the souls of the Just with Joy
+archiveSlug: sinnersguide00luis
+archivePage: '158'
+bookSlug: the-sinners-guide
 ---
 
 > We are told that St. Ephrem was frequently so overcome with the strength of this divine sweetness that he was forced to cry out: "Withdraw from me a little, O Lord! for my body faints under the weight of Thy delights."

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Spared Hell by Hail Marys'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/692?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: Spared Hell by Hail Marys
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '692'
+bookSlug: the-glories-of-mary
 ---
 
 > 19.---A certain baron who led a very sinful life was accidentally visited in his castle by a religious, who, enlightened by God, begged him to assemble together all his servants.

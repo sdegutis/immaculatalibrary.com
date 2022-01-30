@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Francis de Sales giving advice on discerning marriage'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/113?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: St. Francis de Sales giving advice on discerning marriage
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '113'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > *ANOTHER INSTANCE OF BLESSED FRANCIS’ GENTLENESS WITH HIS OWN SERVANTS.*

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The greatness and littleness of human life'
-archiveLink: 'https://archive.org/details/a1261873smrn04newmuoft/page/n229?view=theater'
-bookSlug: 'parochial-and-plain-sermons-by-st-john-henry-newman'
+title: The greatness and littleness of human life
+archiveSlug: a1261873smrn04newmuoft
+archivePage: n229
+bookSlug: parochial-and-plain-sermons-by-st-john-henry-newman
 ---
 
 **Note:** This book does not have any approbations (Nihil obstat and Imprimatur). However, it was a sermon of St. John Henry Newman.

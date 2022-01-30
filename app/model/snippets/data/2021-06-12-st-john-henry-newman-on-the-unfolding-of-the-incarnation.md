@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The unfolding of the Incarnation and Mary’s role'
-archiveLink: 'https://archive.org/details/st-john-henry-newmans-reply-to-dr-puseys-eirenicon/page/92?view=theater'
-bookSlug: 'st-john-henry-newman-reply-to-eirenicon'
+title: The unfolding of the Incarnation and Mary’s role
+archiveSlug: st-john-henry-newmans-reply-to-dr-puseys-eirenicon
+archivePage: '92'
+bookSlug: st-john-henry-newman-reply-to-eirenicon
 ---
 
 > It is in this way that the revealed doctrine of the Incarnation exerted a stronger and a broader influence on Christians, as they more and more apprehended and mastered its meaning and its bearings.

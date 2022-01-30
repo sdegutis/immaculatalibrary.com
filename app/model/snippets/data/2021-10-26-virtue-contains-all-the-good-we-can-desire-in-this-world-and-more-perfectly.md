@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Virtue contains all the good we can desire in this world, and more perfectly'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/312?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Virtue contains all the good we can desire in this world, and more perfectly
+archiveSlug: sinnersguide00luis
+archivePage: '312'
+bookSlug: the-sinners-guide
 ---
 
 > As there is no good which is not included in virtue, we must regard it as an universal good, comparable only to God Himself.

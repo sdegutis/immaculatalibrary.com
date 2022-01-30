@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Examples of how St. Francis de Sales handled fault-finding in others'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/84?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: Examples of how St. Francis de Sales handled fault-finding in others
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '84'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > *UPON FINDING EXCUSES FOR THE FAULTS OF OUR FELLOW-MEN.*

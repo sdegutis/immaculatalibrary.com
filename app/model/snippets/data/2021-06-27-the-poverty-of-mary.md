@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Of the Poverty of Mary'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/629?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: Of the Poverty of Mary
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '629'
+bookSlug: the-glories-of-mary
 ---
 
 > SECTION VII.

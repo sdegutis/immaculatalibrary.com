@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Mary always obtains what is asked of her'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/442?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: Mary always obtains what is asked of her
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '442'
+bookSlug: the-glories-of-mary
 ---
 
 > *Second Point.*---And why should Jesus Christ ever have placed in the hands of this his mother all the riches of the mercies which he wishes to use for our benefit, if not that she may enrich with them all her servants who love and honor her, and with confidence recur to her?

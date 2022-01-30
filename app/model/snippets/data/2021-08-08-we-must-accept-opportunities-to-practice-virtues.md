@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'We must accept opportunities to practice virtues'
-archiveLink: 'https://archive.org/details/the-spiritual-combat-dornin-edition/page/140?view=theater'
-bookSlug: 'the-spiritual-combat'
+title: We must accept opportunities to practice virtues
+archiveSlug: the-spiritual-combat-dornin-edition
+archivePage: '140'
+bookSlug: the-spiritual-combat
 ---
 
 > We have already shewn, that in the way to perfection, we must continually advance without making the least stop. Watch, therefore, over yourself, that no opportunity of acquiring any virtue be ever neglected. Be careful never to avoid, as many do, what is contrary to the vitiated affections of nature, since it is by struggling with them that we attain the most heroic virtues.

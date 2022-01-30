@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Reasons man’s happiness can only be found in God'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/306?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Reasons man’s happiness can only be found in God
+archiveSlug: sinnersguide00luis
+archivePage: '306'
+bookSlug: the-sinners-guide
 ---
 
 > It now remains for us to prove that true happiness can only be found in God. Were men convinced of this they would cease to pursue the pleasures of this world. My intention is to prove this important truth less by the authorities and testimonies of faith than by arguments drawn from reason.

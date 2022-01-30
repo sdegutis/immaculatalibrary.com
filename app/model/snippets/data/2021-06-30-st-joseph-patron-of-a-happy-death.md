@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Joseph, Patron of a Happy Death'
-archiveLink: 'https://archive.org/details/st.-josephs-life-virtues-privileges-power/page/257?view=theater'
-bookSlug: 'st-joseph-life-his-virtues-his-privileges-his-power'
+title: St. Joseph, Patron of a Happy Death
+archiveSlug: st.-josephs-life-virtues-privileges-power
+archivePage: '257'
+bookSlug: st-joseph-life-his-virtues-his-privileges-his-power
 ---
 
 > In the age of fierce warfare against the Spouse of Christ on earth, Divine Providence has proclaimed St. Joseph Patron of the Universal Church; but at all times St. Joseph has been the Patron of a happy death.

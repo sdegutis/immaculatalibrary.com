@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Mary and the Martyrdom of Patience'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/636?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: Mary and the Martyrdom of Patience
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '636'
+bookSlug: the-glories-of-mary
 ---
 
 > SECTION IX.

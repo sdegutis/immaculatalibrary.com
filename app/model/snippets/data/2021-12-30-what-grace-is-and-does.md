@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'What Grace is and does'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/144?view=theater'
-bookSlug: 'the-sinners-guide'
+title: What Grace is and does
+archiveSlug: sinnersguide00luis
+archivePage: '144'
+bookSlug: the-sinners-guide
 ---
 
 > *CHAPTER XIII.*

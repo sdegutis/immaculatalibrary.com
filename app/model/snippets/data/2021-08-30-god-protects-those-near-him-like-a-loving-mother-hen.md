@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'God protects those near him like a loving mother hen'
-archiveLink: 'https://archive.org/details/a-dialogue-of-comfort-against-tribulation-by-st-thomas-more/page/112'
-bookSlug: 'a-dialogue-of-comfort-against-tribulation'
+title: God protects those near him like a loving mother hen
+archiveSlug: a-dialogue-of-comfort-against-tribulation-by-st-thomas-more
+archivePage: '112'
+bookSlug: a-dialogue-of-comfort-against-tribulation
 ---
 
 > Then goeth the verse farther, and saith unto such a faithful man, *et sub pennis ejus sperabis,*---thy hope shall be under his feathers; that is, to wit, for the good hope thou hast in his help, he will take thee so near him into his protection, that as the hen, to keep her young chickens from the kite, nestleth them together under her own wings: so fro the devil's claws, the ravenous kite of this dark air, the God of heaven will gather his faithful trusting folk near unto his own sides, and set them in surety very well and warm under the covering of his own heavenly wings.

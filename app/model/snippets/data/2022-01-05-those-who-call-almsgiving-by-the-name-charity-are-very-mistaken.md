@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Those who call Almsgiving by the name "Charity" are very mistaken'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/116?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: Those who call Almsgiving by the name "Charity" are very mistaken
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '116'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > *UPON ALMSGIVING.*

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'God hates virtues and sacrifices not motivated by Love of God'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/464?view=theater'
-bookSlug: 'the-sinners-guide'
+title: God hates virtues and sacrifices not motivated by Love of God
+archiveSlug: sinnersguide00luis
+archivePage: '464'
+bookSlug: the-sinners-guide
 ---
 
 > In still stronger language the prophet again denounces exterior practices that are not actuated by interior virtue: "He that sacrificeth an ox, is as if he slew a man; he that killeth a sheep in sacrifice, as if he should brain a dog; he that offereth an oblation, as if he should offer swines' blood; he that remembereth incense, as if he should bless an idol." [Isaias i. 16, 17, 18.]

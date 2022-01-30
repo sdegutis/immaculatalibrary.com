@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Mary surpassed the Martyrs in offering Jesus'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/464?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: Mary surpassed the Martyrs in offering Jesus
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '464'
+bookSlug: the-glories-of-mary
 ---
 
 > And hence Mary, in the passion of Jesus was silent when he was unjustly accused; she said nothing to Pilate, who was inclined to liberate him, for he had already known his innocence; but she only appeared in the public to be present at the great sacrifice, which was to be offered on Calvary.

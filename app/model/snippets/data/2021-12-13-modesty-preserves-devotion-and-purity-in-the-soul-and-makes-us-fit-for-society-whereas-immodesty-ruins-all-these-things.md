@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Modesty preserves devotion and purity in the soul, and makes us fit for society; whereas immodesty ruins all these things'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/397?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Modesty preserves devotion and purity in the soul, and makes us fit for society; whereas immodesty ruins all these things
+archiveSlug: sinnersguide00luis
+archivePage: '397'
+bookSlug: the-sinners-guide
 ---
 
 > Another fruit which we derive from this exterior modesty is a greater facility in preserving the recollection, devotion, and purity of the soul.

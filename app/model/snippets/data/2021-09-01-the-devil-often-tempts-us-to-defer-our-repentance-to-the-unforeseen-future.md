@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The devil often tempts us to defer our repentance to the unforeseen future'
-archiveLink: 'https://archive.org/details/the-spiritual-combat-dornin-edition/page/109?view=theater'
-bookSlug: 'the-spiritual-combat'
+title: The devil often tempts us to defer our repentance to the unforeseen future
+archiveSlug: the-spiritual-combat-dornin-edition
+archivePage: '109'
+bookSlug: the-spiritual-combat
 ---
 
 > *The inventions of the Devil to prevent the entire Conversion of such, as, convinced of the bad state of their conscience, have some thoughts of amending their lives. How it happens that their good designs are frequently ineffectual.*

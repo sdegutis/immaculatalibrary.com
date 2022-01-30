@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Mary’s Assumption is a cause for Joy and Celebration'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/496?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: Mary’s Assumption is a cause for Joy and Celebration
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '496'
+bookSlug: the-glories-of-mary
 ---
 
 > It would seem just that the holy Church, on this day of the Assumption of Mary to heaven, should rather invite us to weep than to rejoice, since our sweet mother has quitted this earth, and left us bereft of her sweet presence, as St. Bernard says: It seems that we should rather weep than exult.

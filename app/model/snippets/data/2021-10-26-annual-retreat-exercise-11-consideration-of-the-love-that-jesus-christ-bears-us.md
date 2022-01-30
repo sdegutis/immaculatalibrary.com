@@ -1,8 +1,9 @@
 ---
 published: true
 title: 'Annual Retreat Exercise #11: Consideration of the love that Jesus Christ bears us'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/278?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '278'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > ### CHAPTER XIII.

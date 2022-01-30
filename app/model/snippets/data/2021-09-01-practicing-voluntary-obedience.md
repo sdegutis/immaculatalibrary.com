@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Practicing Voluntary Obedience'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/130?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: Practicing Voluntary Obedience
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '130'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > We call that obedience voluntary which we practise of our own choice, and which is not imposed upon us by another.

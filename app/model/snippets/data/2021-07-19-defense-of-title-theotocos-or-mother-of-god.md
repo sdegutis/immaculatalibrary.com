@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Defense of title “Theotocos” or “Mother of God”'
-archiveLink: 'https://archive.org/details/st-john-henry-newmans-reply-to-dr-puseys-eirenicon/page/67?view=theater'
-bookSlug: 'st-john-henry-newman-reply-to-eirenicon'
+title: Defense of title “Theotocos” or “Mother of God”
+archiveSlug: st-john-henry-newmans-reply-to-dr-puseys-eirenicon
+archivePage: '67'
+bookSlug: st-john-henry-newman-reply-to-eirenicon
 ---
 
 > Now I have said all I mean to say on what I have called the rudimental teaching of Antiquity about the Blessed Virgin; but after all I have not insisted on the highest view of her prerogatives, which the Fathers have taught us. You, my dear Friend, who know so well the ancient controversies and Councils, may have been surprised why I should not have yet spoken of her as the Theotocos;---but I wished to show on how broad a basis her greatness rests, independent of that wonderful title; and again I have been loth to enlarge upon the force of a word, which is rather matter for devotional thought than for polemical dispute. However, I might as well not write on my subject at all, as altogether be silent upon it.

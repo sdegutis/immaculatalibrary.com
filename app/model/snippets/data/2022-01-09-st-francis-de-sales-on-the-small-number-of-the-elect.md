@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Francis de Sales on the small number of the Elect'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/122?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: St. Francis de Sales on the small number of the Elect
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '122'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > *UPON THE SMALL NUMBER OF THE ELECT.*

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Teresa of Avila describes being drawn by God away from spiritual dangers'
-archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/69?view=theater'
-bookSlug: 'life-of-st-teresa-of-avila'
+title: St. Teresa of Avila describes being drawn by God away from spiritual dangers
+archiveSlug: lifeofstteresaof00tereuoft
+archivePage: '69'
+bookSlug: life-of-st-teresa-of-avila
 ---
 
 > A desire to spend more time with Him began to grow within me, and also to withdraw from the occasions of sin: for as soon as I had done so, I turned lovingly to His Majesty at once.

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Love of God makes virtue and self-sacrifice easy and pleasant'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/279?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Love of God makes virtue and self-sacrifice easy and pleasant
+archiveSlug: sinnersguide00luis
+archivePage: '279'
+bookSlug: the-sinners-guide
 ---
 
 > Moreover, call to mind the assistance which charity affords us in the pursuit of virtue. Charity, or the love of God, renders the law sweet and delightful; for, as St. Augustine says, love knows no fatigue.

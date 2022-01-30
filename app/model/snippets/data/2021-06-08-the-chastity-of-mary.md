@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Of the Chastity of Mary'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/623?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: Of the Chastity of Mary
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '623'
+bookSlug: the-glories-of-mary
 ---
 
 This is part of an [Anthology of the Saints](/anthologies.html) on [Friendship, Love, and Marriage](/anthologies/friendship-love-and-marriage.html).

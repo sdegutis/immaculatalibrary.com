@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Differences between false and true devotion'
-archiveLink: 'https://archive.org/details/the-spiritual-combat-dornin-edition/page/5?view=theater'
-bookSlug: 'the-spiritual-combat'
+title: Differences between false and true devotion
+archiveSlug: the-spiritual-combat-dornin-edition
+archivePage: '5'
+bookSlug: the-spiritual-combat
 ---
 
 > If you seek, O Christian Soul, to attain to the highest pitch of Evangelical perfection, and unite yourself so closely with God as to become one Spirit with him; it is requisite in order to succeed in a design the most sublime that can be expressed or imagined, that you be first acquainted with the true nature and perfection of Spirituality.

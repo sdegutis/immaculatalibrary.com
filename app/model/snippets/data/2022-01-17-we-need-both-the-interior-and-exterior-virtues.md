@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'We need both the interior and exterior virtues'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/459?view=theater'
-bookSlug: 'the-sinners-guide'
+title: We need both the interior and exterior virtues
+archiveSlug: sinnersguide00luis
+archivePage: '459'
+bookSlug: the-sinners-guide
 ---
 
 > *CHAPTER XLV.*

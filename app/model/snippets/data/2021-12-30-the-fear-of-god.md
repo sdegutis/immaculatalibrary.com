@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The Fear of God'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/430?view=theater'
-bookSlug: 'the-sinners-guide'
+title: The Fear of God
+archiveSlug: sinnersguide00luis
+archivePage: '430'
+bookSlug: the-sinners-guide
 ---
 
 > *Section III.*

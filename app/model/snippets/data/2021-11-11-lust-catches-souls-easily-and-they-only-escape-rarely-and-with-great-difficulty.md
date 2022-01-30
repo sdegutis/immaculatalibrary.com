@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Lust catches souls easily and they only escape rarely and with great difficulty'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/345?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Lust catches souls easily and they only escape rarely and with great difficulty
+archiveSlug: sinnersguide00luis
+archivePage: '345'
+bookSlug: the-sinners-guide
 ---
 
 > This treacherous vice begins in pleasure, but ends in an abyss of bitterness and remorse.

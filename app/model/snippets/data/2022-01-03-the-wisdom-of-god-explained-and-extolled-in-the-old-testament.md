@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The Wisdom of God explained and extolled in the Old Testament'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/151?view=theater'
-bookSlug: 'the-sinners-guide'
+title: The Wisdom of God explained and extolled in the Old Testament
+archiveSlug: sinnersguide00luis
+archivePage: '151'
+bookSlug: the-sinners-guide
 ---
 
 > Numerous are the passages in the Old Testament which promise this wisdom to the just.

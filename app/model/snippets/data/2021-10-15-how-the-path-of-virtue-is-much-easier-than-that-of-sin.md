@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'How the path of virtue is much easier than that of sin'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/282?view=theater'
-bookSlug: 'the-sinners-guide'
+title: How the path of virtue is much easier than that of sin
+archiveSlug: sinnersguide00luis
+archivePage: '282'
+bookSlug: the-sinners-guide
 ---
 
 > Though we acknowledge that in every condition of life there are trials and difficulties, yet the path of the wicked is far more thickly strewn with hardships than is that of the just.

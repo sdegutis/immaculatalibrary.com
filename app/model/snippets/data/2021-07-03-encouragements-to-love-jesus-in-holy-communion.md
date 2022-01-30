@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Encouragements to love Jesus in Holy Communion'
-archiveLink: 'https://archive.org/details/BlessedSacramentBook/page/n639?view=theater'
-bookSlug: 'blessed-sacrament-book'
+title: Encouragements to love Jesus in Holy Communion
+archiveSlug: BlessedSacramentBook
+archivePage: n639
+bookSlug: blessed-sacrament-book
 ---
 
 > ***The Voice of Christ***

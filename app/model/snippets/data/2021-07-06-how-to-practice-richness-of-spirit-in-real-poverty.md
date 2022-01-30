@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'How to practice Richness of Spirit in real Poverty'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/143?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: How to practice Richness of Spirit in real Poverty
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '143'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > Chapter XVI.

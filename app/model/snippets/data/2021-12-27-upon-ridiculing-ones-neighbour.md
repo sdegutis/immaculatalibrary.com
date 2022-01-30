@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Upon ridiculing one’s neighbour'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/95?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: Upon ridiculing one’s neighbour
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '95'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > *Upon ridiculing one's neighbour.*

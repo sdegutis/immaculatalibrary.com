@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Thomas More’s farewell to his daughter after sentencing'
-archiveLink: 'https://archive.org/details/lifeofsirthomasm00ropeuoft/page/95?view=theater'
-bookSlug: 'life-of-sir-thomas-more-by-william-roper'
+title: St. Thomas More’s farewell to his daughter after sentencing
+archiveSlug: lifeofsirthomasm00ropeuoft
+archivePage: '95'
+bookSlug: life-of-sir-thomas-more-by-william-roper
 ---
 
 > Now, after his arraignment, departed he from the bar to the Tower again, led by Sir William Kingston, a tall, strong, and comely knight, Constable of the Tower, and his very dear friend.

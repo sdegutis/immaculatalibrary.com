@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Francis de Sales on loving poverty in practice'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/139?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: St. Francis de Sales on loving poverty in practice
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '139'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > *UPON THE CHRISTIAN VIEW OF POVERTY.*

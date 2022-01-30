@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Teresa of Avila avoids the sin of detraction and encourages others to do the same'
-archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/35?view=theater'
-bookSlug: 'life-of-st-teresa-of-avila'
+title: St. Teresa of Avila avoids the sin of detraction and encourages others to do the same
+archiveSlug: lifeofstteresaof00tereuoft
+archivePage: '35'
+bookSlug: life-of-st-teresa-of-avila
 ---
 
 > It was a great thing for me to have had the grace of prayer which God had wrought in me; it made me understand what it is to love Him.

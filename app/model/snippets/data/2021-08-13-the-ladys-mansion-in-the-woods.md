@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The Lady’s Mansion in the Woods'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/453?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: The Lady’s Mansion in the Woods
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '453'
+bookSlug: the-glories-of-mary
 ---
 
 > It is related in the Franciscan chronicles, that two religious of that order, who were going to visit a sanctuary of the Virgin, were overtaken by night in a great wood, where they became bewildered and so troubled that they knew not what to do.

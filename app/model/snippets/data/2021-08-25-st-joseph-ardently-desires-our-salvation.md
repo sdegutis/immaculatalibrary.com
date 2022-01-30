@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Joseph ardently desires our Salvation'
-archiveLink: 'https://archive.org/details/st.-josephs-life-virtues-privileges-power/page/344?view=theater'
-bookSlug: 'st-joseph-life-his-virtues-his-privileges-his-power'
+title: St. Joseph ardently desires our Salvation
+archiveSlug: st.-josephs-life-virtues-privileges-power
+archivePage: '344'
+bookSlug: st-joseph-life-his-virtues-his-privileges-his-power
 ---
 
 > "There is no beauty in him, nor comeliness. ... despised, and the most abject of men, a man of sorrows. ... He hath borne our infirmities and carried our sorrows: and we have thought him as it were a leper, and as one struck by God ... he was wounded for our iniquities, he was bruised for our sins" (Isai. liii. 5).

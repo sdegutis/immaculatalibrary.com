@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Being faithful in things great and small'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/196?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: Being faithful in things great and small
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '196'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > Chapter XXXV.

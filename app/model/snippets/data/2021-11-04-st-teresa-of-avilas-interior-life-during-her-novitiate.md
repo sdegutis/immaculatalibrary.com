@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Teresa of Avila’s interior life during her novitiate'
-archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/24?view=theater'
-bookSlug: 'life-of-st-teresa-of-avila'
+title: St. Teresa of Avila’s interior life during her novitiate
+archiveSlug: lifeofstteresaof00tereuoft
+archivePage: '24'
+bookSlug: life-of-st-teresa-of-avila
 ---
 
 > CHAPTER V.

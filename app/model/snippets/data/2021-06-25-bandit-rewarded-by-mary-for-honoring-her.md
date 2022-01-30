@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Bandit rewarded by Mary for honoring her'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/722?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: Bandit rewarded by Mary for honoring her
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '722'
+bookSlug: the-glories-of-mary
 ---
 
 > 84.---A young woman in the Papal States, who was very devout towards Mary, met in a certain place a chief of banditti.

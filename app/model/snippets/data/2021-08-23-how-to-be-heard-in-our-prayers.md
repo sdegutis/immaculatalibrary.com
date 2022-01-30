@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'How to be heard in our prayers'
-archiveLink: 'https://archive.org/details/st.-josephs-life-virtues-privileges-power/page/338?view=theater'
-bookSlug: 'st-joseph-life-his-virtues-his-privileges-his-power'
+title: How to be heard in our prayers
+archiveSlug: st.-josephs-life-virtues-privileges-power
+archivePage: '338'
+bookSlug: st-joseph-life-his-virtues-his-privileges-his-power
 ---
 
 > "You ask, and receive not, because you ask amiss" (James, iv. 3).

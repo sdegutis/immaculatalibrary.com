@@ -1,8 +1,9 @@
 ---
 published: true
 title: 'Annual Retreat Exercise #4: An examination of our state with regard to ourselves'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/270?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '270'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > CHAPTER V.

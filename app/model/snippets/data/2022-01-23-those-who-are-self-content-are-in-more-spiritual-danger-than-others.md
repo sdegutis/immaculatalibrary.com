@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Those who are self-content are in more spiritual danger than others'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/467?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Those who are self-content are in more spiritual danger than others
+archiveSlug: sinnersguide00luis
+archivePage: '467'
+bookSlug: the-sinners-guide
 ---
 
 > You marvel, doubtless, why a soul that is cold should be less displeasing to God than one that is luke-warm.

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The Perpetual Virginity of St. Joseph'
-archiveLink: 'https://archive.org/details/st.-josephs-life-virtues-privileges-power/page/211?view=theater'
-bookSlug: 'st-joseph-life-his-virtues-his-privileges-his-power'
+title: The Perpetual Virginity of St. Joseph
+archiveSlug: st.-josephs-life-virtues-privileges-power
+archivePage: '211'
+bookSlug: st-joseph-life-his-virtues-his-privileges-his-power
 ---
 
 This is part of an [Anthology of the Saints](/anthologies.html) on [Friendship, Love, and Marriage](/anthologies/friendship-love-and-marriage.html).

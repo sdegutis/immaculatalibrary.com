@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'That Pride is the chief sin, and reflections on what it has done to Lucifer and his army'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/324?view=theater'
-bookSlug: 'the-sinners-guide'
+title: That Pride is the chief sin, and reflections on what it has done to Lucifer and his army
+archiveSlug: sinnersguide00luis
+archivePage: '324'
+bookSlug: the-sinners-guide
 ---
 
 > The first and most formidable of these enemies is pride, that inordinate desire of our own excellence, which spiritual writers universally regard as the father and king of all the other vices.

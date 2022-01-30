@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Thomas More’s thorough refutation of the Act of Supremacy'
-archiveLink: 'https://archive.org/details/lifeofsirthomasm00ropeuoft/page/90?view=theater'
-bookSlug: 'life-of-sir-thomas-more-by-william-roper'
+title: St. Thomas More’s thorough refutation of the Act of Supremacy
+archiveSlug: lifeofsirthomasm00ropeuoft
+archivePage: '90'
+bookSlug: life-of-sir-thomas-more-by-william-roper
 ---
 
 > And incontinent upon their verdict the Lord Chancellor, for that matter Chief Commissioner, beginning to proceed in judgment against him, Sir Thomas More said unto him:

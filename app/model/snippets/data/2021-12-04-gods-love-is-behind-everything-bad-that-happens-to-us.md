@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'God’s love is behind everything bad that happens to us'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/57?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: God’s love is behind everything bad that happens to us
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '57'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > You find some difficulty, it seems, my sisters, in understanding how all things, as St. Paul says, [Rom. viii. 28.] whether good, bad, or indifferent, can in the end work together for good to those who love God.

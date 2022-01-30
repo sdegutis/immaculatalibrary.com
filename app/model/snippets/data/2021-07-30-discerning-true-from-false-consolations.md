@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Discerning true from false consolations'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/248?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: Discerning true from false consolations
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '248'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > But you will perhaps ask me, since there are sensible consolations which are good, because they come from God, and others unprofitable, dangerous, and even pernicious, that proceed either from nature or from the enemy, how shall I be able to distinguish the one from the other, or know those that are evil or unprofitable from those that are good?

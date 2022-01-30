@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'God wills to work through Mary'
-archiveLink: 'https://archive.org/details/nd931927116/page/n20?view=theater'
-bookSlug: 'the-secret-of-sanctity-revealed'
+title: God wills to work through Mary
+archiveSlug: nd931927116
+archivePage: n20
+bookSlug: the-secret-of-sanctity-revealed
 ---
 
 > I avow, with all the Church, that Mary, being but a mere creature that has come from the hands of the Most High, is, in comparison with His Infinite Majesty, less than an atom; or rather she is nothing at all, because He only is "He who is," and thus by consequence that grand Lord, always independent and sufficient to Himself, never had, and has not now, any absolute need of the Holy Virgin for the accomplishment of His will, and for the manifestation of His glory. He has but to will, in order to do everything.

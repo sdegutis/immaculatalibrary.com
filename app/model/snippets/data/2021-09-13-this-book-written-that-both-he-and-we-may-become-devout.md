@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'This Book Written that Both He and We May Become Devout'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/n15?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: This Book Written that Both He and We May Become Devout
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: n15
+bookSlug: introduction-to-the-devout-life
 ---
 
 > It is true, dear reader, that I here write of a devout life, without being myself devout---yet certainly not without a desire of becoming so, and that it is this affection towards it which encourages me to instruct thee.

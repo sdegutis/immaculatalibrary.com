@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'How to benefit from the Holy Mass'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/72?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: How to benefit from the Holy Mass
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '72'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > Chapter XIV.

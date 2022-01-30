@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The old man and the new man'
-archiveLink: 'https://archive.org/details/libraryofstfranc01fran_0/page/302?view=theater'
-bookSlug: 'treatise-on-the-love-of-god'
+title: The old man and the new man
+archiveSlug: libraryofstfranc01fran_0
+archivePage: '302'
+bookSlug: treatise-on-the-love-of-god
 ---
 
 > And who sees not, I pray you, Theotimus, that it is the ecstasy of life and operation that the great Apostle principally speaks of when he says: *I live now, not I, but Christ liveth in me;* for he himself explains it in other terms to the Romans, saying that: *Our old man is crucified with him,* that we are *dead to sin* with him, and that we are also risen with him to *walk in newness of life, that we may serve sin no longer.*

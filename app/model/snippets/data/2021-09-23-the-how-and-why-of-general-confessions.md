@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The How and Why of General Confessions'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/12?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: The How and Why of General Confessions
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '12'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > CHAPTER VI.

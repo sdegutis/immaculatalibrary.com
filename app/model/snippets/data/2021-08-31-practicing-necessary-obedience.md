@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Practicing Necessary Obedience'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/129?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: Practicing Necessary Obedience
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '129'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > There are two sorts of obedience, the one necessary, the other voluntary.

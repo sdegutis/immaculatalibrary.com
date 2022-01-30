@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Agnes spared tortures by her angel'
-archiveLink: 'https://archive.org/details/lifeofstagnesvir00smituoft/page/54?view=theater'
-bookSlug: 'life-of-st-agnes-virgin-and-martyr'
+title: St. Agnes spared tortures by her angel
+archiveSlug: lifeofstagnesvir00smituoft
+archivePage: '54'
+bookSlug: life-of-st-agnes-virgin-and-martyr
 ---
 
 > The sentence had been spoken in a frenzy of vindictive passion, and straightway the shameless ruffians rushed forward to execute the orders of Symphronius. Rough hands are laid on Agnes to prepare her for the ignominious journey through the streets of Rome.

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The Reformation of the Will'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/412?view=theater'
-bookSlug: 'the-sinners-guide'
+title: The Reformation of the Will
+archiveSlug: sinnersguide00luis
+archivePage: '412'
+bookSlug: the-sinners-guide
 ---
 
 > *Section VII.*

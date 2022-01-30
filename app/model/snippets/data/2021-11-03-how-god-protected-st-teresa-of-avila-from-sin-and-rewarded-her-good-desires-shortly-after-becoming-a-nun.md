@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'How God rewarded St. Teresa of Avila’s holy reading and good desires in the beginning of her devout life'
-archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/23?view=theater'
-bookSlug: 'life-of-st-teresa-of-avila'
+title: How God rewarded St. Teresa of Avila’s holy reading and good desires in the beginning of her devout life
+archiveSlug: lifeofstteresaof00tereuoft
+archivePage: '23'
+bookSlug: life-of-st-teresa-of-avila
 ---
 
 > It seemed to me, in these beginnings of which I am speaking, that there could be no danger capable of withdrawing me from so great a blessing, if I had but books, and could have remained alone; and I believe that, by the grace of God, it would have been so, if I had had a master or any one to warn me against those occasions of sin in the beginning, and, if I fell, to bring me quickly out of them.

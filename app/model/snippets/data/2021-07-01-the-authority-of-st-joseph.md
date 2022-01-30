@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The authority of St. Joseph'
-archiveLink: 'https://archive.org/details/lifegloriesofstj00thomuoft/page/356?view=theater'
-bookSlug: 'the-life-and-glories-of-st-joseph'
+title: The authority of St. Joseph
+archiveSlug: lifegloriesofstj00thomuoft
+archivePage: '356'
+bookSlug: the-life-and-glories-of-st-joseph
 ---
 
 > It implies no derogation from the dignity and supereminence of the holy Mother of God to affirm that, as regards the authority to command Jesus and rule His actions exteriorly, Joseph had received higher powers than even Mary herself; for this is only according to the order appointed by God, to which the Holy Family entirely conformed.

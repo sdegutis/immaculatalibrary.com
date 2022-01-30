@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Purity is not Chastity'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/142?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: Purity is not Chastity
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '142'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > *UPON PURITY OF HEART.*

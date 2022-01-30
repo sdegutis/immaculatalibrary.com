@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'We must keep peace of soul admist spiritual battles'
-archiveLink: 'https://archive.org/details/the-spiritual-combat-dornin-edition/page/98?view=theater'
-bookSlug: 'the-spiritual-combat'
+title: We must keep peace of soul admist spiritual battles
+archiveSlug: the-spiritual-combat-dornin-edition
+archivePage: '98'
+bookSlug: the-spiritual-combat
 ---
 
 > ### CHAPTER XXV.

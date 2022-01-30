@@ -1,8 +1,9 @@
 ---
 published: true
 title: 'Annual Retreat Exercise #2: How and when to do the second part of the annual spiritual exercises'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/266?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '266'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > CHAPTER III.

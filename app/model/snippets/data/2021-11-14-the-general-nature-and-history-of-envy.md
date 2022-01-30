@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The general nature and history of Envy'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/353?view=theater'
-bookSlug: 'the-sinners-guide'
+title: The general nature and history of Envy
+archiveSlug: sinnersguide00luis
+archivePage: '353'
+bookSlug: the-sinners-guide
 ---
 
 > CHAPTER XXXIII.

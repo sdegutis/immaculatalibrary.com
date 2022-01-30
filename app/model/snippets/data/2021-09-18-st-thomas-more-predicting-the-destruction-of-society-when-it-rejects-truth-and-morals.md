@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Thomas More predicting the destruction of society when it rejects truth and morals'
-archiveLink: 'https://archive.org/details/life-and-writings-of-st-thomas-more/page/274?view=theater'
-bookSlug: 'life-and-writings-of-sir-thomas-more'
+title: St. Thomas More predicting the destruction of society when it rejects truth and morals
+archiveSlug: life-and-writings-of-st-thomas-more
+archivePage: '274'
+bookSlug: life-and-writings-of-sir-thomas-more
 ---
 
 > We have already seen in the last chapter that Sir Thomas More was moved to his opposition to the new doctrines by his keen prevision of their consequences, as well religious as social.

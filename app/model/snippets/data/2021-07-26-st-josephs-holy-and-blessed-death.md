@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Joseph’s holy and blessed death'
-archiveLink: 'https://archive.org/details/st.-josephs-life-virtues-privileges-power/page/155?view=theater'
-bookSlug: 'st-joseph-life-his-virtues-his-privileges-his-power'
+title: St. Joseph’s holy and blessed death
+archiveSlug: st.-josephs-life-virtues-privileges-power
+archivePage: '155'
+bookSlug: st-joseph-life-his-virtues-his-privileges-his-power
 ---
 
 > At death we covet the prayers of holy souls to help us on the passage to eternity; happy the death of St. Joseph, who was helped and comforted by the hands and prayers of the Blessed Virgin herself.

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Teresa of Avila’s illness leads her to a Book on Prayer and Recollection'
-archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/19?view=theater'
-bookSlug: 'life-of-st-teresa-of-avila'
+title: St. Teresa of Avila’s illness leads her to a Book on Prayer and Recollection
+archiveSlug: lifeofstteresaof00tereuoft
+archivePage: '19'
+bookSlug: life-of-st-teresa-of-avila
 ---
 
 > The change in the habits of my life, and in my food, proved hurtful to my health; and though my happiness was great, that was not enough. The fainting-fits began to be more frequent, and my heart was so seriously affected that every one who saw it was alarmed; and I had also many other ailments.

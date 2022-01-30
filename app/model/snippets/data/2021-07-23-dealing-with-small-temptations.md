@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Dealing with small temptations'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/234?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: Dealing with small temptations
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '234'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > *We must resist small temptations.*

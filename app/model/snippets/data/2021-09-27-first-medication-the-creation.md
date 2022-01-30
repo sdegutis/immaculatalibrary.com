@@ -1,8 +1,9 @@
 ---
 published: true
 title: 'First Meditation: The Creation'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/17?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '17'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > CHAPTER IX.

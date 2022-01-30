@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Mary is Crowned by the the Father, Son, and Holy Spirit, as Queen of Heaven and Earth'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/504?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: Mary is Crowned by the the Father, Son, and Holy Spirit, as Queen of Heaven and Earth
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '504'
+bookSlug: the-glories-of-mary
 ---
 
 > Then all the angels came to salute her, and she, the great queen, thanked all for the assistance they had given her on earth, especially thanking the Archangel St. Gabriel, who was the happy ambassador of all her glories, when he came to announce to her that she was to be made mother of God.

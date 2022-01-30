@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'God entrusted His own Divine Son to one man'
-archiveLink: 'https://archive.org/details/st.-josephs-life-virtues-privileges-power/page/189?view=theater'
-bookSlug: 'st-joseph-life-his-virtues-his-privileges-his-power'
+title: God entrusted His own Divine Son to one man
+archiveSlug: st.-josephs-life-virtues-privileges-power
+archivePage: '189'
+bookSlug: st-joseph-life-his-virtues-his-privileges-his-power
 ---
 
 > But we have a still greater reason, a more profound source, for the holiness of St. Joseph, and that is, his relation, his heavenly mission, his intimate connection with Jesus Christ, our Blessed Saviour.

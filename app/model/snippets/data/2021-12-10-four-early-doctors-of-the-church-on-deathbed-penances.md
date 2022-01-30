@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Four Fathers and Doctors of the Church on deathbed penances'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/251?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Four Fathers and Doctors of the Church on deathbed penances
+archiveSlug: sinnersguide00luis
+archivePage: '251'
+bookSlug: the-sinners-guide
 ---
 
 > St. Ambrose, in his book on Penance, which some attribute to St. Augustine, treats of this subject at great length. Here is one of the many excellent things he tells us:

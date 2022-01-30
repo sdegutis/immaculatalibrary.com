@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'True devotion must penetrate the heart'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/245?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: True devotion must penetrate the heart
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '245'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > I say, therefore, that devotion does not always consist in that sweetness, delight, consolation, or sensible tenderness of heart, which moves us to tears, and gives us a certain agreeable and savoury satisfaction in certain spiritual exercises; no, Philothea, for there are many souls who experience these tendernesses and consolations, and nevertheless are very vicious, and consequently have not a true love of God, much less true devotion.

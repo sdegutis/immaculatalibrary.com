@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Grace enables us to know what we ought to do and not to do, and to act accordingly'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/148?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Grace enables us to know what we ought to do and not to do, and to act accordingly
+archiveSlug: sinnersguide00luis
+archivePage: '148'
+bookSlug: the-sinners-guide
 ---
 
 > *CHAPTER XIV.*

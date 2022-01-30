@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'An example of the emptiness of the happiness of this world from King Solomon'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/309?view=theater'
-bookSlug: 'the-sinners-guide'
+title: An example of the emptiness of the happiness of this world from King Solomon
+archiveSlug: sinnersguide00luis
+archivePage: '309'
+bookSlug: the-sinners-guide
 ---
 
 > Observe further how much more accessible man is to misery than to happiness in this life; for but one ungratified desire suffices to make him miserable, and so many things are required to make him happy.

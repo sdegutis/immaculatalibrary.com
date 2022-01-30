@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Teresa of Avila’s many sad experiences convinces her to humbly remain very close to God always, lest she fall into sin again'
-archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/39?view=theater'
-bookSlug: 'life-of-st-teresa-of-avila'
+title: St. Teresa of Avila’s many sad experiences convinces her to humbly remain very close to God always, lest she fall into sin again
+archiveSlug: lifeofstteresaof00tereuoft
+archivePage: '39'
+bookSlug: life-of-st-teresa-of-avila
 ---
 
 > May it please our Lord that I have not done amiss in venturing to speak about St. Joseph; for, though I publicly profess my devotion to him, I have always failed in my service to him and imitation of him.

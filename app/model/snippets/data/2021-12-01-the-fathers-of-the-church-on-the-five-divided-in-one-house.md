@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The Fathers of the Church on the Five Divided in One House'
-archiveLink: 'https://archive.org/details/catenaaureacomme03thom/page/466?view=theater'
-bookSlug: 'catena-aurea'
+title: The Fathers of the Church on the Five Divided in One House
+archiveSlug: catenaaureacomme03thom
+archivePage: '466'
+bookSlug: catena-aurea
 ---
 
 > 49\. I am come to send fire on the earth; and what will I, if it be already kindled?

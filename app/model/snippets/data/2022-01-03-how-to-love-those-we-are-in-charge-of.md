@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'How to love those we are in charge of'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/109?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: How to love those we are in charge of
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '109'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > His opinion was that masters, as a rule, commit many grave faults with regard to their servants, by treating them with harshness and severity. Such conduct is quite unworthy of christians, and, in them, worse even than the behaviour of pagans in olden times to their slaves.

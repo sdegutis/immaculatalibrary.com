@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Poverty of Spirit to be observed by the Rich'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/135?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: Poverty of Spirit to be observed by the Rich
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '135'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > Chapter XIV.

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The three degrees of Obedience'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/449?view=theater'
-bookSlug: 'the-sinners-guide'
+title: The three degrees of Obedience
+archiveSlug: sinnersguide00luis
+archivePage: '449'
+bookSlug: the-sinners-guide
 ---
 
 > Let us observe, in conclusion, that theologians distinguish three degrees in this virtue.

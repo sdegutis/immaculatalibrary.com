@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Joseph likely raised body and soul'
-archiveLink: 'https://archive.org/details/st.-josephs-life-virtues-privileges-power/page/155?view=theater'
-bookSlug: 'st-joseph-life-his-virtues-his-privileges-his-power'
+title: St. Joseph likely raised body and soul
+archiveSlug: st.-josephs-life-virtues-privileges-power
+archivePage: '155'
+bookSlug: st-joseph-life-his-virtues-his-privileges-his-power
 ---
 
 > At the death of Our Blessed Lord, we know from the Gospel that many of the Saints arose from their graves, and appeared in the streets of Jerusalem. St. Matthew says: "And the veil of the temple was rent in two from the top even to the bottom, and the earth quaked, and the rocks were rent: And the graves were opened, and the bodies of the saints that had slept arose. And coming out of the tombs after his resurrection came into the holy city and appeared to many" (Matt, xxvii. 51).

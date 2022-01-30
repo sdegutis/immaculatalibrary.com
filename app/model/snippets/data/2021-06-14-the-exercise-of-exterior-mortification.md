@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The Exercise of Exterior Mortification'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/162?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: The Exercise of Exterior Mortification
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '162'
+bookSlug: introduction-to-the-devout-life
 ---
 
 This is part of an [Anthology of the Saints](/anthologies.html) on [Friendship, Love, and Marriage](/anthologies/friendship-love-and-marriage.html).

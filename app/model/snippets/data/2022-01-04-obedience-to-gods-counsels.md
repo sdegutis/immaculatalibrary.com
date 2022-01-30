@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Obedience to God’s Counsels'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/437?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Obedience to God’s Counsels
+archiveSlug: sinnersguide00luis
+archivePage: '437'
+bookSlug: the-sinners-guide
 ---
 
 > *Section IX.*

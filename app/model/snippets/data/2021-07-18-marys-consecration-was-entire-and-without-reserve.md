@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Mary’s consecration was entire and without reserve'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/398?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: Mary’s consecration was entire and without reserve
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '398'
+bookSlug: the-glories-of-mary
 ---
 
 > *Point Second.*---The enlightened infant well knew that God does not accept a divided heart, but wishes it entirely consecrated to his love, according to the precept he has given: "Thou shalt love the Lord thy God with thy whole heart." Hence, from the first moment of her existence, she began to love God with all her strength, and gave herself wholly to him.

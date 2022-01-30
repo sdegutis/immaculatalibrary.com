@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The advice in this book are not too numerous in practice'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/282?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: The advice in this book are not too numerous in practice
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '282'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > CHAPTER XVII.

@@ -1,8 +1,9 @@
 ---
 published: true
 title: 'Pride makes us displeasing to everyone: the good, the bad, and even ourselves'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/329?view=theater'
-bookSlug: 'the-sinners-guide'
+archiveSlug: sinnersguide00luis
+archivePage: '329'
+bookSlug: the-sinners-guide
 ---
 
 > Again, O proud man! I would ask you to remember that your pride is displeasing to all---to God, Who resists the proud and gives His grace to the humble; [St. James iv. 6.] to the humble, who hold in horror all that savors of arrogance; and to the proud themselves, who naturally hate all who claim to be greater than they.

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Of the Obedience of Mary'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/632?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: Of the Obedience of Mary
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '632'
+bookSlug: the-glories-of-mary
 ---
 
 > SECTION VIII.

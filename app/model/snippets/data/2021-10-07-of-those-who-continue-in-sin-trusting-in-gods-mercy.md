@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Of Those who Continue in Sin trusting in God’s Mercy'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/264?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Of Those who Continue in Sin trusting in God’s Mercy
+archiveSlug: sinnersguide00luis
+archivePage: '264'
+bookSlug: the-sinners-guide
 ---
 
 > CHAPTER XXVI.

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'What to do after having fallen into sin'
-archiveLink: 'https://archive.org/details/the-spiritual-combat-dornin-edition/page/104?view=theater'
-bookSlug: 'the-spiritual-combat'
+title: What to do after having fallen into sin
+archiveSlug: the-spiritual-combat-dornin-edition
+archivePage: '104'
+bookSlug: the-spiritual-combat
 ---
 
 > When you perceive yourself wounded, that is, fallen into any sin, whether through frailty, or deliberately through malice, be not too much cast down; do not abandon yourself to grief and immoderate vexation; but, addressing yourself to God, say with a great but humble confidence---I am now convinced, O my God, that I am nothing---for what can be expected from so blind and wretched a creature as I am, but sin and folly? Dwell on this thought in order to your greater confusion, and a lively sorrow for your fault.

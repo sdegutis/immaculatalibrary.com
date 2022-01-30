@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Humility cannot be in knowledge only, but must also be in the will'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/151?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: Humility cannot be in knowledge only, but must also be in the will
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '151'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > *UPON VARIOUS DEGREES OF HUMILITY.*

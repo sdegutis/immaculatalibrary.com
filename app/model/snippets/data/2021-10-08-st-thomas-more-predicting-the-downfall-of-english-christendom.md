@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Thomas More foretelling the downfall of English Christendom'
-archiveLink: 'https://archive.org/details/life-and-writings-of-st-thomas-more/page/277?view=theater'
-bookSlug: 'life-and-writings-of-sir-thomas-more'
+title: St. Thomas More foretelling the downfall of English Christendom
+archiveSlug: life-and-writings-of-st-thomas-more
+archivePage: '277'
+bookSlug: life-and-writings-of-sir-thomas-more
 ---
 
 > Roper tells us:

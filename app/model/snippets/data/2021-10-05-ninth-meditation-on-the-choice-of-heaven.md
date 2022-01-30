@@ -1,8 +1,9 @@
 ---
 published: true
 title: 'Ninth Meditation: On the choice of Heaven'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/32?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '32'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > CHAPTER XVII.

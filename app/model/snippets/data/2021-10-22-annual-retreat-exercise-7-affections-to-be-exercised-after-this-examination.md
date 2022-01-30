@@ -1,8 +1,9 @@
 ---
 published: true
 title: 'Annual Retreat Exercise #7: Affections to be exercised after this examination'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/273?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '273'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > CHAPTER VIII.

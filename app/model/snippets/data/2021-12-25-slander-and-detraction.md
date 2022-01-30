@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Slander and Detraction'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/90?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: Slander and Detraction
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '90'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > *UPON SLANDER AND DETRACTION.*

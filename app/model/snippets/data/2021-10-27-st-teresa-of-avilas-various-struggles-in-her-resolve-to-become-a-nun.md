@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Teresa of Avila’s various struggles in her resolve to become a nun'
-archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/15?view=theater'
-bookSlug: 'life-of-st-teresa-of-avila'
+title: St. Teresa of Avila’s various struggles in her resolve to become a nun
+archiveSlug: lifeofstteresaof00tereuoft
+archivePage: '15'
+bookSlug: life-of-st-teresa-of-avila
 ---
 
 > The struggle lasted three months. I used to press this reason against myself: The trials and sufferings of living as a nun cannot be greater than those of purgatory, and I have well deserved to be in hell. It is not much to spend the rest of my life as if I were in purgatory, and then go straight to Heaven---which was what I desired. I was more influenced by servile fear, I think, than by love, to enter religion.

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Using prudence when discerning virtues to practice'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/95?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: Using prudence when discerning virtues to practice
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '95'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > *Continuation of the former discourse on the choice of virtues.*

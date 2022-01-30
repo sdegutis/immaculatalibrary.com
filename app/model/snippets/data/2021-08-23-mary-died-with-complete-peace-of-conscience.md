@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Mary died with complete peace of conscience'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/478?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: Mary died with complete peace of conscience
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '478'
+bookSlug: the-glories-of-mary
 ---
 
 > Secondly, peace of conscience renders the death of the just precious.

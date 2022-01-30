@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Examples of God’s Horrifying Justice in the Fall of Man'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/267?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Examples of God’s Horrifying Justice in the Fall of Man
+archiveSlug: sinnersguide00luis
+archivePage: '267'
+bookSlug: the-sinners-guide
 ---
 
 > Consider also the fall of man, which would have been no less terrible than that of the Angels, if it had not been repaired.

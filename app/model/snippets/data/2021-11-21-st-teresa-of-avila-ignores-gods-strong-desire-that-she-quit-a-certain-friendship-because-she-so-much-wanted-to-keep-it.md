@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Teresa of Avila ignores God’s strong desire that she quit a certain friendship, because she so much wanted to keep it'
-archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/45?view=theater'
-bookSlug: 'life-of-st-teresa-of-avila'
+title: St. Teresa of Avila ignores God’s strong desire that she quit a certain friendship, because she so much wanted to keep it
+archiveSlug: lifeofstteresaof00tereuoft
+archivePage: '45'
+bookSlug: life-of-st-teresa-of-avila
 ---
 
 > So, then, when I began to indulge in these conversations, I did not think, seeing they were customary, that my soul must be injured and dissipated, as I afterwards found it must be, by such conversations.

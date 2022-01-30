@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Joseph was Confirmed in Grace'
-archiveLink: 'https://archive.org/details/st.-josephs-life-virtues-privileges-power/page/198?view=theater'
-bookSlug: 'st-joseph-life-his-virtues-his-privileges-his-power'
+title: St. Joseph was Confirmed in Grace
+archiveSlug: st.-josephs-life-virtues-privileges-power
+archivePage: '198'
+bookSlug: st-joseph-life-his-virtues-his-privileges-his-power
 ---
 
 > Section IV.

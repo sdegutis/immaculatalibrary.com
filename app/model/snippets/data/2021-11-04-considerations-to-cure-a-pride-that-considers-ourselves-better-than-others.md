@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Considerations to cure a pride that considers ourselves better than others'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/331?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Considerations to cure a pride that considers ourselves better than others
+archiveSlug: sinnersguide00luis
+archivePage: '331'
+bookSlug: the-sinners-guide
 ---
 
 > But there are some who, though humbled at the sight of their failings, are nevertheless excited to pride when they examine the lives of others whom they consider less virtuous than themselves.

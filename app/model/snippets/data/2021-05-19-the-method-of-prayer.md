@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The Method of Prayer'
-archiveLink: 'https://archive.org/details/meditationsforla00jarriala/page/176?view=theater'
-bookSlug: 'meditations-for-layfolk'
+title: The Method of Prayer
+archiveSlug: meditationsforla00jarriala
+archivePage: '176'
+bookSlug: meditations-for-layfolk
 ---
 
 > (I) The whole doctrine of prayer from its practical standpoint can be summed up by saying that it is talking to God as a friend talks with a friend. That is, indeed, the best test of my prayers. Should I venture to talk to anyone I was fond of in the way I talk to God? We read in Scripture of God walking and talking with Adam in the cool of the evening, and we say to ourselves, That is perfect prayer. What does it matter in what shape God appeared, or whether He appeared at all! At least imagination grasps what the sacred author intended. Or, again, when we find it written of Enoch that "he walked with God till God took him," we say, again, that our ideal of prayer could not be better described. Or lastly, for the quotations could be multiplied to any extent, when we first come across this wonderful sentence, are we not immediately conscious of what is meant: "God spoke to Moses, face to face, as a man is wont to speak to his friend." Now here we have in a very brief epitome all that, from a practical point of view, we need to know about prayer. It is simply the converse between my soul and God, to be carried on in precisely the same fashion of language and the same pregnant silences that characterize my own talks with my friends. These must be the models by which I individually test the value and the sincerity of my prayers. Nothing else will do, nor will anything else for long hold or attract me. Prayers will ultimately bore me unless I carefully follow out these directions. First, then, the matter of prayer is originated by the mind out of the articles of faith, and the result is that the heart leaps up to love God in consequence, and this love itself is expressed in the simple language and silences of friendship.

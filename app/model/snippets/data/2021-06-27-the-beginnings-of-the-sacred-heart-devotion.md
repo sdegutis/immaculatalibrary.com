@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The beginnings of the Sacred Heart devotion'
-archiveLink: 'https://archive.org/details/thesacredheartan00kelluoft/page/22?view=theater'
-bookSlug: 'the-sacred-heart-anecdotes-and-examples'
+title: The beginnings of the Sacred Heart devotion
+archiveSlug: thesacredheartan00kelluoft
+archivePage: '22'
+bookSlug: the-sacred-heart-anecdotes-and-examples
 ---
 
 > The middle of the seventeenth century was the time appointed by God to open this fountain of His mercy, in order to regenerate man, who, on account of his perverse ways, was on the verge of perdition.

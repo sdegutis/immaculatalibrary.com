@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Our duty to God, and how to generally fulfill it'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/429?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Our duty to God, and how to generally fulfill it
+archiveSlug: sinnersguide00luis
+archivePage: '429'
+bookSlug: the-sinners-guide
 ---
 
 > *CHAPTER XLII.*

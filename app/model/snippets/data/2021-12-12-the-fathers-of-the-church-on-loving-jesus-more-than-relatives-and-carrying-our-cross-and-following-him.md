@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The Fathers of the Church on Loving Jesus more than relatives, and Carrying our Cross and Following Him'
-archiveLink: 'https://archive.org/details/catenaaureacomme01thom/page/397?view=theater'
-bookSlug: 'catena-aurea'
+title: The Fathers of the Church on Loving Jesus more than relatives, and Carrying our Cross and Following Him
+archiveSlug: catenaaureacomme01thom
+archivePage: '397'
+bookSlug: catena-aurea
 ---
 
 > 37. He that loveth father or mother more than me is not worthy of me: and he that loveth son or daughter more than me is not worthy of me.

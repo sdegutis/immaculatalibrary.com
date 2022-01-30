@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The emptiness of non-Christian Philosophy'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/76?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: The emptiness of non-Christian Philosophy
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '76'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > UPON THE VANITY OF HEATHEN PHILOSOPHY.

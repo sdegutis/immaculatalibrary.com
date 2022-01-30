@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The effects of slavery to Lust'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/186?view=theater'
-bookSlug: 'the-sinners-guide'
+title: The effects of slavery to Lust
+archiveSlug: sinnersguide00luis
+archivePage: '186'
+bookSlug: the-sinners-guide
 ---
 
 > Not unfrequently the gratification of man's inordinate desires, so far from satisfying him, only creates other more violent passions, as we learn from the example of Amnon, the wicked son of David, who could neither eat nor rest because of his love for Thamar; but he no sooner obtained possession of her than he hated her even more intensely than he had loved her. [2 Kings xiii.]

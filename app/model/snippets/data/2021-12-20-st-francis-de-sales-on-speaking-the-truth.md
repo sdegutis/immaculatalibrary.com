@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Francis de Sales on speaking the Truth'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/82?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: St. Francis de Sales on speaking the Truth
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '82'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > I replied:

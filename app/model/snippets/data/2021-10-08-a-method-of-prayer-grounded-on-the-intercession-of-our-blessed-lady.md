@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'A method of Prayer grounded on the intercession of our Blessed Lady'
-archiveLink: 'https://archive.org/details/the-spiritual-combat-dornin-edition/page/172?view=theater'
-bookSlug: 'the-spiritual-combat'
+title: A method of Prayer grounded on the intercession of our Blessed Lady
+archiveSlug: the-spiritual-combat-dornin-edition
+archivePage: '172'
+bookSlug: the-spiritual-combat
 ---
 
 > CHAPTER XLVIII.

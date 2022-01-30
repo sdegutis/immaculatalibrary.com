@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'How and when we can judge others'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/88?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: How and when we can judge others
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '88'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > How, then, you will say, is it lawful to have judges and courts of justice, since man may not judge his neighbour? I will try to answer this objection in Blessed Francis' own words:

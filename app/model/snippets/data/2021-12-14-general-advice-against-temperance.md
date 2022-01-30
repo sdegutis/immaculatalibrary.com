@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'General advice against Temperance'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/399?view=theater'
-bookSlug: 'the-sinners-guide'
+title: General advice against Temperance
+archiveSlug: sinnersguide00luis
+archivePage: '399'
+bookSlug: the-sinners-guide
 ---
 
 > Section III.

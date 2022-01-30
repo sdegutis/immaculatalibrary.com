@@ -1,8 +1,9 @@
 ---
 published: true
 title: 'On Considerations: the second part of the Meditation'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/54?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '54'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > CHAPTER V.

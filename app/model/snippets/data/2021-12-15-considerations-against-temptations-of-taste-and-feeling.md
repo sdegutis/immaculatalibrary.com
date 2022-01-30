@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Considerations against Temptations of Taste and Feeling'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/401?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Considerations against Temptations of Taste and Feeling
+archiveSlug: sinnersguide00luis
+archivePage: '401'
+bookSlug: the-sinners-guide
 ---
 
 > Bemember, moreover, that of all the pleasures of the senses those of taste and feeling are the lowest.

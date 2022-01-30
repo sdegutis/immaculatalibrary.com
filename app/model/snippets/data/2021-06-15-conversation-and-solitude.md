@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Conversation and Solitude'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/168?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: Conversation and Solitude
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '168'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > Chapter XXIV.

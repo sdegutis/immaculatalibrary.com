@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Teresa of Avila begins to pray after many years of avoiding it'
-archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/57?view=theater'
-bookSlug: 'life-of-st-teresa-of-avila'
+title: St. Teresa of Avila begins to pray after many years of avoiding it
+archiveSlug: lifeofstteresaof00tereuoft
+archivePage: '57'
+bookSlug: life-of-st-teresa-of-avila
 ---
 
 > CHAPTER VIII.

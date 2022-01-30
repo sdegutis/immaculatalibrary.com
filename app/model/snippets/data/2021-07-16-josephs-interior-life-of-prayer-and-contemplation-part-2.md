@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Joseph’s Interior Life of Prayer and Contemplation (part 2)'
-archiveLink: 'https://archive.org/details/lifegloriesofstj00thomuoft/page/372?view=theater'
-bookSlug: 'the-life-and-glories-of-st-joseph'
+title: Joseph’s Interior Life of Prayer and Contemplation (part 2)
+archiveSlug: lifegloriesofstj00thomuoft
+archivePage: '372'
+bookSlug: the-life-and-glories-of-st-joseph
 ---
 
 > In order to taste the sweetness of contemplation, it was necessary for Arsenius, that solitary so famous in ecclesiastical history, to retire into the desert. "Fly, Arsenius; leave the world, and keep silence," were the words by which the angel called him from the imperial court into solitude. But Joseph, toiling in his workshop, making laborious journeys, and daily treating for the purposes of his trade with persons of various classes, had his spirit always perfectly united to God and hidden in a mysterious solitude.

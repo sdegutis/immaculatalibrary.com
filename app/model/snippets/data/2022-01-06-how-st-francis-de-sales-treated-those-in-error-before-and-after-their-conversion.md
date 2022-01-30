@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'How St. Francis de Sales treated those in error before and after their conversion'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/117?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: How St. Francis de Sales treated those in error before and after their conversion
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '117'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > *OUR SAINT'S HOPEFULNESS IN REGARD TO THE CONVERSION OF SINNERS.*

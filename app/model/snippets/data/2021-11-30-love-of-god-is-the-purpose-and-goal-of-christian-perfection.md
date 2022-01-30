@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Love of God is the purpose and goal of Christian Perfection'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/50?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: Love of God is the purpose and goal of Christian Perfection
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '50'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > CHARITY THE SHORT ROAD TO PERFECTION.

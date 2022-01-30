@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The Effects of this Profession of Renewed Loyalty toward God'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/40?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: The Effects of this Profession of Renewed Loyalty toward God
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '40'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > CHAPTER XXI.

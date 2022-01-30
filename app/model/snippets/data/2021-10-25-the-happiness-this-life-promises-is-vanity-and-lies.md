@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The happiness this life promises is vanity and lies'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/310?view=theater'
-bookSlug: 'the-sinners-guide'
+title: The happiness this life promises is vanity and lies
+archiveSlug: sinnersguide00luis
+archivePage: '310'
+bookSlug: the-sinners-guide
 ---
 
 > How long, then, O sons of men! will you be dull of heart? Why will you love vanity and seek after lies? [Ps. iv. 3.]

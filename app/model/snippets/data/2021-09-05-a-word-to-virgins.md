@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'A Word to Virgins.'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/217?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: A Word to Virgins.
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '217'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > O virgins, I have only three words to say to you, for the rest you will find elsewhere.

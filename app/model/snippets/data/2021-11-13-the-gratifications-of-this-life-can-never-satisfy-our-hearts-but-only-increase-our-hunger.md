@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The gratifications of this life can never satisfy our hearts, but only increase our hunger'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/198?view=theater'
-bookSlug: 'the-sinners-guide'
+title: The gratifications of this life can never satisfy our hearts, but only increase our hunger
+archiveSlug: sinnersguide00luis
+archivePage: '198'
+bookSlug: the-sinners-guide
 ---
 
 > This is the miserable condition which David described when he said: "They wandered in a wilderness, in a place without water. They were hungry and thirsty; their soul fainted in them." [Ps. cvi. 4, 5.]

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Necessity of Prayer in order to save our Souls'
-archiveLink: 'https://archive.org/details/alphonsusworks15liguuoft/page/n313?view=theater'
-bookSlug: 'the-ascetical-works-vol25-preaching-by-st-alphonsus-de-liguori'
+title: Necessity of Prayer in order to save our Souls
+archiveSlug: alphonsusworks15liguuoft
+archivePage: n313
+bookSlug: the-ascetical-works-vol25-preaching-by-st-alphonsus-de-liguori
 ---
 
 (This chapter was intended by St. Alphonsus de Liguori for preachers, but contains instruction that may be generally useful to intermediately-catechized Catholics.)

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Souls are often purged painfully from false peace, to turn them towards true peace'
-archiveLink: 'https://archive.org/details/darknightofsoul00sain/page/104?view=theater'
-bookSlug: 'dark-night-of-the-soul'
+title: Souls are often purged painfully from false peace, to turn them towards true peace
+archiveSlug: darknightofsoul00sain
+archivePage: '104'
+bookSlug: dark-night-of-the-soul
 ---
 
 > For this night is drawing the spirit away from its ordinary and common sense of things, that it may draw it towards the divine sense, which is a stranger and an alien to all human ways; so much so that the soul seems to be carried out of itself.

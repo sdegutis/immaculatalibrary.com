@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Prayer to the Blessed Virgin from her Assumption'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/495?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: Prayer to the Blessed Virgin from her Assumption
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '495'
+bookSlug: the-glories-of-mary
 ---
 
 > Oh, our most sweet Lady and Mother, thou hast already left the earth, and hast reached the kingdom, where thou sittest as queen over all the choirs of angels, as the holy Church sings: She was exalted about the choirs of angels in the celestial kingdoms.

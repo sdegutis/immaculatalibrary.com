@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The Rosary and the reformed abbey'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/683?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: The Rosary and the reformed abbey
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '683'
+bookSlug: the-glories-of-mary
 ---
 
 > The daughter of a certain prince had entered a monastery, where the discipline was so relaxed, that, although she was a young person of good dispositions, she advanced but little in virtue.

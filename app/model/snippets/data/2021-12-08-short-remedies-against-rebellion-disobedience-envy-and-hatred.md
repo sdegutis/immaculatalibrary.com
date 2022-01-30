@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Short remedies against rebellion, disobedience, envy, and hatred'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/388?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Short remedies against rebellion, disobedience, envy, and hatred
+archiveSlug: sinnersguide00luis
+archivePage: '388'
+bookSlug: the-sinners-guide
 ---
 
 > Rebellion and Disobedience argue: Why should you be subject to those who are your inferiors? It is your place to command and theirs to obey, for they are inferior to you in wisdom and virtue. It suffices to obey the laws of God; you have no need to be bound by the commands of man.

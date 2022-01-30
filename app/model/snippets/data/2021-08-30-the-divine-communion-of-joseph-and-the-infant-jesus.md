@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The divine communion of Joseph and the Infant Jesus'
-archiveLink: 'https://archive.org/details/lifegloriesofstj00thomuoft/page/386?view=theater'
-bookSlug: 'the-life-and-glories-of-st-joseph'
+title: The divine communion of Joseph and the Infant Jesus
+archiveSlug: lifegloriesofstj00thomuoft
+archivePage: '386'
+bookSlug: the-life-and-glories-of-st-joseph
 ---
 
 > Another powerful source of love is mutual knowledge. Without some kind of knowledge there can, properly, be no love; and, generally speaking, those love our Lord best who have the greatest knowledge of His perfections.

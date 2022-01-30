@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Teresa of Avila struggles internally because refuses to let go of either love of the world or love of God'
-archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/52?view=theater'
-bookSlug: 'life-of-st-teresa-of-avila'
+title: St. Teresa of Avila struggles internally because refuses to let go of either love of the world or love of God
+archiveSlug: lifeofstteresaof00tereuoft
+archivePage: '52'
+bookSlug: life-of-st-teresa-of-avila
 ---
 
 > This Dominican father, who was a very good man, fearing God, did me a very great service; for I confessed to him.

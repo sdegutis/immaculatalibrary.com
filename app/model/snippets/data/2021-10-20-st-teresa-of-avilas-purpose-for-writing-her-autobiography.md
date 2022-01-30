@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Teresa of Avila’s purpose for writing her autobiography'
-archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/1?view=theater'
-bookSlug: 'life-of-st-teresa-of-avila'
+title: St. Teresa of Avila’s purpose for writing her autobiography
+archiveSlug: lifeofstteresaof00tereuoft
+archivePage: '1'
+bookSlug: life-of-st-teresa-of-avila
 ---
 
 > As I have been commanded and left at liberty to describe at length my way of prayer, and the workings of the grace of our Lord within me, I could wish that I had been allowed at the same time to speak distinctly and in detail of my grievous sins and wicked life.

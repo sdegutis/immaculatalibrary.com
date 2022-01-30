@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'We must begin the Spiritual Life with Purification and Courage'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/10?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: We must begin the Spiritual Life with Purification and Courage
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '10'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > CHAPTER V.

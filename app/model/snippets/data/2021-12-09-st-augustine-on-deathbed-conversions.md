@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Augustine on deathbed conversions'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/249?view=theater'
-bookSlug: 'the-sinners-guide'
+title: St. Augustine on deathbed conversions
+archiveSlug: sinnersguide00luis
+archivePage: '249'
+bookSlug: the-sinners-guide
 ---
 
 > CHAPTER XXV.

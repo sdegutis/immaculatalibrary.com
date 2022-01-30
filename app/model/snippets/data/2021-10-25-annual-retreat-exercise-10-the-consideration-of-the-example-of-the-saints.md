@@ -1,8 +1,9 @@
 ---
 published: true
 title: 'Annual Retreat Exercise #10: Consideration of the example of the Saints'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/276?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '276'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > ### CHAPTER XII.

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The True Liberty of the Just'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/179?view=theater'
-bookSlug: 'the-sinners-guide'
+title: The True Liberty of the Just
+archiveSlug: sinnersguide00luis
+archivePage: '179'
+bookSlug: the-sinners-guide
 ---
 
 > CHAPTER XVIII.

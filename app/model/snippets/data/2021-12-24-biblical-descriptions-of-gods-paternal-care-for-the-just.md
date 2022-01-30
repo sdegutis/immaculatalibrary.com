@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Biblical descriptions of God’s Paternal Care for the Just'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/134?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Biblical descriptions of God’s Paternal Care for the Just
+archiveSlug: sinnersguide00luis
+archivePage: '134'
+bookSlug: the-sinners-guide
 ---
 
 > Numerous are the titles which the Holy Scriptures use to express God's providence.

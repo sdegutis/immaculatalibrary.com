@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'When St. Joseph most probably died'
-archiveLink: 'https://archive.org/details/st.-josephs-life-virtues-privileges-power/page/150?view=theater'
-bookSlug: 'st-joseph-life-his-virtues-his-privileges-his-power'
+title: When St. Joseph most probably died
+archiveSlug: st.-josephs-life-virtues-privileges-power
+archivePage: '150'
+bookSlug: st-joseph-life-his-virtues-his-privileges-his-power
 ---
 
 > Where, and at what age, the holy soul of St. Joseph winged its flight to the bosom of Abraham, we know not for certain, as the Gospel is silent. […]

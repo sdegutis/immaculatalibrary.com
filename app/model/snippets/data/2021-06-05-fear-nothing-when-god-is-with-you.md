@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Fear nothing when God is with you'
-archiveLink: 'https://archive.org/details/letterstopersons00franuoft/page/n328?view=theater'
-bookSlug: 'letters-to-persons-in-the-world'
+title: Fear nothing when God is with you
+archiveSlug: letterstopersons00franuoft
+archivePage: n328
+bookSlug: letters-to-persons-in-the-world
 ---
 
 > I beseech you for the honour of God, my child, be not afraid of God, for he does not wish to do you any harm: love him strongly, for he wishes to do you much good.

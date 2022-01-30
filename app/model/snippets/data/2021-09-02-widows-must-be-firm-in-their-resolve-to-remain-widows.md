@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Widows must be Firm in their Resolve to Remain Widows'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/212?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: Widows must be Firm in their Resolve to Remain Widows
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '212'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > CHAPTER XXXIX.

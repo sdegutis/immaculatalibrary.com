@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Short remedies against the 7 deadly sins during temptation'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/385?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Short remedies against the 7 deadly sins during temptation
+archiveSlug: sinnersguide00luis
+archivePage: '385'
+bookSlug: the-sinners-guide
 ---
 
 > CHAPTER XXXIX.

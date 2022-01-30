@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Some reasons why the death of sinners is most terrible'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/227?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Some reasons why the death of sinners is most terrible
+archiveSlug: sinnersguide00luis
+archivePage: '227'
+bookSlug: the-sinners-guide
 ---
 
 > CHAPTER XXIII.

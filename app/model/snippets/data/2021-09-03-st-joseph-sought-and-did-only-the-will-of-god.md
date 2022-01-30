@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Joseph Sought and Did Only the Will of God'
-archiveLink: 'https://archive.org/details/st.-josephs-life-virtues-privileges-power/page/354?view=theater'
-bookSlug: 'st-joseph-life-his-virtues-his-privileges-his-power'
+title: St. Joseph Sought and Did Only the Will of God
+archiveSlug: st.-josephs-life-virtues-privileges-power
+archivePage: '354'
+bookSlug: st-joseph-life-his-virtues-his-privileges-his-power
 ---
 
 > "An Angel of the Lord appeared in sleep to Joseph, saying: Arise and take the child and his mother and fly into Egypt ... Who arose and took the child and his mother by night, and retired into Egypt. ... An Angel of the Lord appeared in sleep to Joseph in Egypt, saying: Arise and take the child and his mother, and go into the land of Israel ... Who arose and took the child and his mother and came into the land of Israel" (Matt. ii. 13-21).

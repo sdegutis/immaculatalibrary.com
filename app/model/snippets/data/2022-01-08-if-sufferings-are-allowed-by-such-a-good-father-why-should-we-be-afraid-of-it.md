@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'If sufferings are allowed by such a Good Father, why should we be afraid of it?'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/444?view=theater'
-bookSlug: 'the-sinners-guide'
+title: If sufferings are allowed by such a Good Father, why should we be afraid of it?
+archiveSlug: sinnersguide00luis
+archivePage: '444'
+bookSlug: the-sinners-guide
 ---
 
 > *Section X.*

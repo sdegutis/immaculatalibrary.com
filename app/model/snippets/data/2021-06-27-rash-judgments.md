@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Rash judgments'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/176?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: Rash judgments
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '176'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > Chapter XXVIII.

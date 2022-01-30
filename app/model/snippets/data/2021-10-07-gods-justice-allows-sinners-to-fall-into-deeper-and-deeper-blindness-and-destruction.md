@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'God’s Justice allows sinners to fall into deeper and deeper blindness and destruction'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/269?view=theater'
-bookSlug: 'the-sinners-guide'
+title: God’s Justice allows sinners to fall into deeper and deeper blindness and destruction
+archiveSlug: sinnersguide00luis
+archivePage: '269'
+bookSlug: the-sinners-guide
 ---
 
 > Another subject to which I would call your serious attention is the state of the world. Reflect on this, and you will begin to realize the rigors of God's justice.

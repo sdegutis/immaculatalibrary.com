@@ -1,8 +1,9 @@
 ---
 published: true
 title: '"Unknown Forces" to explain the Supernatural'
-archiveLink: 'https://archive.org/details/lourdesahistory00bertuoft/page/n175?view=theater'
-bookSlug: 'lourdes-a-history-of-its-apparations-and-cures'
+archiveSlug: lourdesahistory00bertuoft
+archivePage: n175
+bookSlug: lourdes-a-history-of-its-apparations-and-cures
 ---
 
 > We now reach the last resource of our adversaries. The man who no longer knows what to reply to others and to himself, and yet is determined not to acknowledge supernatural causes, takes refuge under the convenient shelter of unknown forces.

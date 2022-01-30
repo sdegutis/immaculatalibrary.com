@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Teresa of Avila recounting being sent to a monastery at about age 16'
-archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/10?view=theater'
-bookSlug: 'life-of-st-teresa-of-avila'
+title: St. Teresa of Avila recounting being sent to a monastery at about age 16
+archiveSlug: lifeofstteresaof00tereuoft
+archivePage: '10'
+bookSlug: life-of-st-teresa-of-avila
 ---
 
 > In the beginning these conversations did me harm---I believe so. The fault was perhaps not hers, but mine; for afterwards my own wickedness was enough to lead me astray, together with the servants about me, whom I found ready enough for all evil. If any one of these had given me good advice I might perhaps have profited by it; but they were blinded by interest, as I was by passion.

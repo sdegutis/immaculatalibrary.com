@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The Visitation of Mary is a source of blessings'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/436?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: The Visitation of Mary is a source of blessings
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '436'
+bookSlug: the-glories-of-mary
 ---
 
 > Happy is that house esteemed which is visited by some royal personage, both for the honor it receives from him, and the advantages it hopes for; but more happy should that soul be called which is visited by the queen of the world, most holy Mary, who cannot but fill with mercies and graces those blessed souls whom she deigns to visit with her favors.

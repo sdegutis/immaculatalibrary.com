@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'An example of true humility in the life of St. Francis de Sales'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/148?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: An example of true humility in the life of St. Francis de Sales
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '148'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > It happened once that a certain simple-minded woman told our saint bluntly that what she had heard of him had caused her to loose all esteem for him. Blessed Francis replied quietly that her straightforward words only increased his fatherly affection for her, as they were an evidence of great candour, a virtue he highly respected.

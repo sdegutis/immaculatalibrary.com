@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The Fathers of the Church on Jesus healing many sick and possessed at the Sabbath’s sunset'
-archiveLink: 'https://archive.org/details/catenaaureacomm02thom/page/n40?view=theater'
-bookSlug: 'catena-aurea'
+title: The Fathers of the Church on Jesus healing many sick and possessed at the Sabbath’s sunset
+archiveSlug: catenaaureacomm02thom
+archivePage: n40
+bookSlug: catena-aurea
 ---
 
 >> 32\. And at even, when the sun did set, they brought unto him all that were diseased, and them that were possessed with devils.

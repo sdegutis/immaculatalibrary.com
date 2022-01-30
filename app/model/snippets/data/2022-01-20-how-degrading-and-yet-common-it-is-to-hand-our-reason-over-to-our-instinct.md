@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'How degrading and yet common it is to hand our reason over to our instinct!'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/182?view=theater'
-bookSlug: 'the-sinners-guide'
+title: How degrading and yet common it is to hand our reason over to our instinct!
+archiveSlug: sinnersguide00luis
+archivePage: '182'
+bookSlug: the-sinners-guide
 ---
 
 > Our souls may be considered as consisting of two parts, which theologians call the superior and the inferior part.

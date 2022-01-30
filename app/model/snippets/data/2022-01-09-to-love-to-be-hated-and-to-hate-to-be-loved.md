@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'To love to be hated, and to hate to be loved'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/123?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: To love to be hated, and to hate to be loved
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '123'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > *TO LOVE TO BE HATED, AND TO HATE TO BE LOVED.*

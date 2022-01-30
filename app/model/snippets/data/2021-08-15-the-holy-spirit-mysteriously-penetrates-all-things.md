@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The Holy Spirit mysteriously penetrates all things'
-archiveLink: 'https://archive.org/details/parochialplainse0002newm/page/217?view=theater'
-bookSlug: 'parochial-and-plain-sermons-by-st-john-henry-newman'
+title: The Holy Spirit mysteriously penetrates all things
+archiveSlug: parochialplainse0002newm
+archivePage: '217'
+bookSlug: parochial-and-plain-sermons-by-st-john-henry-newman
 ---
 
 > God the Son has graciously vouchsafed to reveal the Father to His creatures from without; God the Holy Ghost, by inward communications.

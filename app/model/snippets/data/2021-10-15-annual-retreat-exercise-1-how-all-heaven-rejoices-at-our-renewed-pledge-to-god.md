@@ -1,8 +1,9 @@
 ---
 published: true
 title: 'Annual Retreat Exercise #1: How all Heaven rejoices at our renewed pledge to God'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/264?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '264'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > Consider to whom you have made this protestation; for it is to God. If our word given to men bind us strictly, how much more so those we have given to God. "It is to Thee, O Lord," said David, "my heart hath spoken it, my heart hath sent forth this good word. Oh! I will never forget it." (Ps. xliv.)

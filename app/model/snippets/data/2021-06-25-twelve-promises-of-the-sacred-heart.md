@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Twelve promises of the Sacred Heart'
-archiveLink: 'https://archive.org/details/thesacredheartan00kelluoft/page/n5?view=theater'
-bookSlug: 'the-sacred-heart-anecdotes-and-examples'
+title: Twelve promises of the Sacred Heart
+archiveSlug: thesacredheartan00kelluoft
+archivePage: n5
+bookSlug: the-sacred-heart-anecdotes-and-examples
 ---
 
 > Devotion to the Sacred Heart of Jesus consists in honoring His human Heart. This devotion is as old as the Church herself, for it began on Calvary when the soldier's lance pierced the sacred side of our dear Lord.

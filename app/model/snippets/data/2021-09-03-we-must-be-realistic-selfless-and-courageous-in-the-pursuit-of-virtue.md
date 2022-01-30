@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'We must be Realistic, Selfless, and Courageous in the Pursuit of Virtue'
-archiveLink: 'https://archive.org/details/the-spiritual-combat-dornin-edition/page/111?view=theater'
-bookSlug: 'the-spiritual-combat'
+title: We must be Realistic, Selfless, and Courageous in the Pursuit of Virtue
+archiveSlug: the-spiritual-combat-dornin-edition
+archivePage: '111'
+bookSlug: the-spiritual-combat
 ---
 
 *This follows up from the book snippet [We must trust both in God’s goodness and our weakness](/book-snippets/2021-09-02-we-must-trust-both-in-gods-goodness-and-our-weakness.html)*

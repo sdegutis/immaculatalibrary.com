@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Ignatius of Loyola begins to read holy books, which for the first time gives him true peace'
-archiveLink: 'https://archive.org/details/the-autobiography-of-st.-ignatius-of-loyola/page/23?view=theater'
-bookSlug: 'the-autobiography-of-st-ignatius-of-loyola'
+title: St. Ignatius of Loyola begins to read holy books, which for the first time gives him true peace
+archiveSlug: the-autobiography-of-st.-ignatius-of-loyola
+archivePage: '23'
+bookSlug: the-autobiography-of-st-ignatius-of-loyola
 ---
 
 > As Ignatius had a love for fiction, when he found himself out of danger he asked for some romances to pass away the time. In that house there was no book of the kind.

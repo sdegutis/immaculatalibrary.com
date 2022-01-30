@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Aspirations, prayers, and good thoughts.'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/66?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: Aspirations, prayers, and good thoughts.
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '66'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > Chapter XIII.

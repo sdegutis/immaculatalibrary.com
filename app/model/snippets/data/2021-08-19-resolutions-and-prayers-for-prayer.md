@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Resolutions and Prayers for Prayer'
-archiveLink: 'https://archive.org/details/st.-josephs-life-virtues-privileges-power/page/331?view=theater'
-bookSlug: 'st-joseph-life-his-virtues-his-privileges-his-power'
+title: Resolutions and Prayers for Prayer
+archiveSlug: st.-josephs-life-virtues-privileges-power
+archivePage: '331'
+bookSlug: st-joseph-life-his-virtues-his-privileges-his-power
 ---
 
 > ### *Practical Resolution.*

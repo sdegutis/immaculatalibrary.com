@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The precious death of the Blessed Virgin Mary'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/490?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: The precious death of the Blessed Virgin Mary
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '490'
+bookSlug: the-glories-of-mary
 ---
 
 > But behold, Jesus himself comes to take his mother to the kingdom of the blessed.

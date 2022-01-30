@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Teresa of Avila wishes out of true humility for her writings not to be published except her sins'
-archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/75?view=theater'
-bookSlug: 'life-of-st-teresa-of-avila'
+title: St. Teresa of Avila wishes out of true humility for her writings not to be published except her sins
+archiveSlug: lifeofstteresaof00tereuoft
+archivePage: '75'
+bookSlug: life-of-st-teresa-of-avila
 ---
 
 > Others will explain this. I speak from my own experience, as I have been commanded; and if what I say be not correct, let him to whom I send it destroy it; for he knows better than I do what is wrong in it. I entreat him, for the love of our Lord, to publish abroad what I have thus far said of my wretched life, and of my sins. I give him leave to do so; and to all my confessors also---of whom he is one---to whom this is to be sent, if it be their pleasure, even during my life, so that I may no longer deceive people who think there must be some good in me. Certainly, I speak in all sincerity, so far as I understand myself. Such publication will give me great comfort.

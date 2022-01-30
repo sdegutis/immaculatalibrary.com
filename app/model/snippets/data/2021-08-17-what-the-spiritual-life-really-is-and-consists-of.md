@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'What the Spiritual Life really is and consists of'
-archiveLink: 'https://archive.org/details/the-spiritual-combat-dornin-edition/page/10?view=theater'
-bookSlug: 'the-spiritual-combat'
+title: What the Spiritual Life really is and consists of
+archiveSlug: the-spiritual-combat-dornin-edition
+archivePage: '10'
+bookSlug: the-spiritual-combat
 ---
 
 > Experience convinces us, that professed sinners are with less difficulty reclaimed, than those who wilfully make their own hearts a secret to themselves through a false resemblance of virtue.

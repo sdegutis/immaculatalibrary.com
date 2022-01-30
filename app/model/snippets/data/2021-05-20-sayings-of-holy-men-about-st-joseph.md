@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Sayings of Holy Men about St. Joseph'
-archiveLink: 'https://archive.org/details/saint-joseph-of-jesus-and-mary/page/98?view=theater'
-bookSlug: 'saint-joseph-of-jesus-and-mary'
+title: Sayings of Holy Men about St. Joseph
+archiveSlug: saint-joseph-of-jesus-and-mary
+archivePage: '98'
+bookSlug: saint-joseph-of-jesus-and-mary
 ---
 
 > There are other ministries appertaining to the order of the Hypostatic Union, which in its kind is more perfect, as we affirmed of the dignity of the Mother of God, and in this order is constituted the ministry of St. Joseph; and although it be in the lowest grade of it, nevertheless in this respect it surpasses all others, because it exists in a superior order.---*Suarez.*

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'There are many forms of devotion'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/470?view=theater'
-bookSlug: 'the-sinners-guide'
+title: There are many forms of devotion
+archiveSlug: sinnersguide00luis
+archivePage: '470'
+bookSlug: the-sinners-guide
 ---
 
 > *CHAPTER XLVI.*

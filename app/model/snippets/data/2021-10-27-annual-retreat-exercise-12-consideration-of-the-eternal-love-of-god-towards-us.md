@@ -1,8 +1,9 @@
 ---
 published: true
 title: 'Annual Retreat Exercise #12: Consideration of the eternal love of God towards us'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/279?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '279'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > CHAPTER XIV.

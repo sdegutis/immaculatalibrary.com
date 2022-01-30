@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'If we do not forgive others, God will neither forgive us nor accept any sacrifice we make'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/364?view=theater'
-bookSlug: 'the-sinners-guide'
+title: If we do not forgive others, God will neither forgive us nor accept any sacrifice we make
+archiveSlug: sinnersguide00luis
+archivePage: '364'
+bookSlug: the-sinners-guide
 ---
 
 > If it be hard to subdue your anger, excited by an injury from one of your fellow-creatures, consider how much more God has borne from you and how much He has endured for you.

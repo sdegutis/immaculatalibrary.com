@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Six drawbacks of the illusory happiness found in this life'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/291?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Six drawbacks of the illusory happiness found in this life
+archiveSlug: sinnersguide00luis
+archivePage: '291'
+bookSlug: the-sinners-guide
 ---
 
 > CHAPTER XXVIII.

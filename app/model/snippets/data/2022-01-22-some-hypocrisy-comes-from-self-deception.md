@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Some hypocrisy comes from self-deception'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/465?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Some hypocrisy comes from self-deception
+archiveSlug: sinnersguide00luis
+archivePage: '465'
+bookSlug: the-sinners-guide
 ---
 
 > Besides that gross hypocrisy which is the pretence of virtue made by those who know they are wicked, but who strive to conceal their vices, there is a more refined and more dangerous hypocrisy, which affects many who deceive themselves as well as others by a false show of justice.

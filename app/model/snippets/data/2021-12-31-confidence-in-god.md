@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Confidence in God'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/432?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Confidence in God
+archiveSlug: sinnersguide00luis
+archivePage: '432'
+bookSlug: the-sinners-guide
 ---
 
 > *Section IV.*

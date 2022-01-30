@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The first Martyrs of anglican persecution tried and sentenced'
-archiveLink: 'https://archive.org/details/livesofenglishma01camm/page/9?view=theater'
-bookSlug: 'lives-of-the-english-martyrs'
+title: The first Martyrs of anglican persecution tried and sentenced
+archiveSlug: livesofenglishma01camm
+archivePage: '9'
+bookSlug: lives-of-the-english-martyrs
 ---
 
 > The conflict which the Blessed John [Houghton] had long foreseen was now upon them. It is a consolation to have a testimony to their courage and constancy from an adversary.

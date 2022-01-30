@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'How to fortify our hearts against temptations'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/237?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: How to fortify our hearts against temptations
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '237'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > *How to fortify our hearts against temptations.*

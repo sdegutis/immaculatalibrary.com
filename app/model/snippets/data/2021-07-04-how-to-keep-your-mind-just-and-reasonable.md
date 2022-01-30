@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'How to keep your mind just and reasonable'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/199?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: How to keep your mind just and reasonable
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '199'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > Chapter XXXVI.

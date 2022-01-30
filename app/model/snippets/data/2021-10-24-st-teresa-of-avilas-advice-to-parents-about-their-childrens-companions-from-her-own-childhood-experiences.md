@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Teresa of Avila’s advice to parents about their children’s companions from her own childhood experiences'
-archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/8?view=theater'
-bookSlug: 'life-of-st-teresa-of-avila'
+title: St. Teresa of Avila’s advice to parents about their children’s companions from her own childhood experiences
+archiveSlug: lifeofstteresaof00tereuoft
+archivePage: '8'
+bookSlug: life-of-st-teresa-of-avila
 ---
 
 > I had some cousins; for into my father's house no others were allowed an entrance. In this he was very cautious; and would to God he had been cautious about them!---for I see now the danger of conversing, at an age when virtue should begin to grow, with persons who, knowing nothing themselves of the vanity of the world, provoke others to throw themselves into the midst of it.

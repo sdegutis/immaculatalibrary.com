@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'We ought to be persuaded by obligation, benefits, interest, and pursuit of happiness, to seek after God'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/314?view=theater'
-bookSlug: 'the-sinners-guide'
+title: We ought to be persuaded by obligation, benefits, interest, and pursuit of happiness, to seek after God
+archiveSlug: sinnersguide00luis
+archivePage: '314'
+bookSlug: the-sinners-guide
 ---
 
 > Do you desire any other motive to persuade you to follow this wise example and embrace so great a good?

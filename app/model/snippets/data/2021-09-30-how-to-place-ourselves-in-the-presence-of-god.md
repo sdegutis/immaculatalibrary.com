@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'How to Place Ourselves in the Presence of God'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/49?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: How to Place Ourselves in the Presence of God
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '49'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > CHAPTER II.

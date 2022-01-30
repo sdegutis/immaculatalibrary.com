@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'We must purify ourselves from all affection to venial sins'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/41?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: We must purify ourselves from all affection to venial sins
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '41'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > CHAPTER XXII.

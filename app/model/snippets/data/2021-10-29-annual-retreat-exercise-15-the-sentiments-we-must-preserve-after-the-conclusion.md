@@ -1,8 +1,9 @@
 ---
 published: true
 title: 'Annual Retreat Exercise #15: The sentiments we must preserve after the conclusion'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/282?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '282'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > CHAPTER XVI.

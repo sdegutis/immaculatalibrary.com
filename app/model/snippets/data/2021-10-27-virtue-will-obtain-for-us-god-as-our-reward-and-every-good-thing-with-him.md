@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Virtue will obtain for us God as our reward, and every good thing with him'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/313?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Virtue will obtain for us God as our reward, and every good thing with him
+archiveSlug: sinnersguide00luis
+archivePage: '313'
+bookSlug: the-sinners-guide
 ---
 
 > Virtue is an absolute good; it admits of no alloy of evil. For this reason God sends to the just this short but glorious message: "Say to the just man that it is well." [Isaias. iii. 10.]

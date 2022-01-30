@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Monster converted by Rosary'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/686?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: Monster converted by Rosary
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '686'
+bookSlug: the-glories-of-mary
 ---
 
 > 9.---There lived in Saragossa a certain noble, a very bad man; his name was Peter, and he was a relation of St. Dominic.

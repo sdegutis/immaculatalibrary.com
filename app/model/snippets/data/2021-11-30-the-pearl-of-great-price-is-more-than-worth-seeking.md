@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The Pearl of Great Price is more than worth seeking'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/234?view=theater'
-bookSlug: 'the-sinners-guide'
+title: The Pearl of Great Price is more than worth seeking
+archiveSlug: sinnersguide00luis
+archivePage: '234'
+bookSlug: the-sinners-guide
 ---
 
 > Behold, then, dear Christian, the twelve fruits of virtue in this life. They are like the twelve fruits of the tree of life seen by St. John in his prophetic vision. [Apoc. xxii. 2.]

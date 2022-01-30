@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The death of St. Stanislas Kostka'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/492?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: The death of St. Stanislas Kostka
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '492'
+bookSlug: the-glories-of-mary
 ---
 
 > During the lifetime of this holy youth [St. Stanislas Kostka], who was wholly devoted to the love of Mary, it happened that on the first day of August, he heard a sermon of Father Peter Canisius, in which, preaching to the novices of his society, he fervently urged upon all, the important advice, to live every day as if it might be the last of their life, after which they were to be presented at the divine tribunal.

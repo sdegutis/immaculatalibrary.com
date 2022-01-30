@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Thomas More on writing trew Englyshe'
-archiveLink: 'https://archive.org/details/life-and-writings-of-st-thomas-more/page/n22?view=theater'
-bookSlug: 'life-and-writings-of-sir-thomas-more'
+title: St. Thomas More on writing trew Englyshe
+archiveSlug: life-and-writings-of-st-thomas-more
+archivePage: n22
+bookSlug: life-and-writings-of-sir-thomas-more
 ---
 
 > I have modernised the spelling, but I have been scrupulous not to alter a word in making extracts.

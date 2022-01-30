@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Basics of Prayer and Gratitude'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/436?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Basics of Prayer and Gratitude
+archiveSlug: sinnersguide00luis
+archivePage: '436'
+bookSlug: the-sinners-guide
 ---
 
 > *Section VII.*

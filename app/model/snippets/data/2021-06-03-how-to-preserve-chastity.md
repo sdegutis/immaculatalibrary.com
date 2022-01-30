@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'How to preserve Chastity'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/133?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: How to preserve Chastity
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '133'
+bookSlug: introduction-to-the-devout-life
 ---
 
 This is part of an [Anthology of the Saints](/anthologies.html) on [Friendship, Love, and Marriage](/anthologies/friendship-love-and-marriage.html).

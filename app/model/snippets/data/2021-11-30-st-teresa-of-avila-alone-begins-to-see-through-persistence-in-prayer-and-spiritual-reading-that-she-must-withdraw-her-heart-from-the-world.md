@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Teresa of Avila alone begins to see, through persistence in prayer and spiritual reading, that she must withdraw her heart from the world'
-archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/63?view=theater'
-bookSlug: 'life-of-st-teresa-of-avila'
+title: St. Teresa of Avila alone begins to see, through persistence in prayer and spiritual reading, that she must withdraw her heart from the world
+archiveSlug: lifeofstteresaof00tereuoft
+archivePage: '63'
+bookSlug: life-of-st-teresa-of-avila
 ---
 
 > I will speak now---for it is very important to understand it---of the assaults which Satan directs against a soul for the purpose of taking it, and of the contrivances and compassion wherewith our Lord labours to convert it to Himself, in order that men may behold His mercy, and the great good it was for me that I did not give up prayer and spiritual reading, and that they may be on their guard against the dangers against which I was not on my guard myself.

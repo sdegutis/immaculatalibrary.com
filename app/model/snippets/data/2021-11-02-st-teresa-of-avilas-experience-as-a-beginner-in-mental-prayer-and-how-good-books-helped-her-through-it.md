@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Teresa of Avila’s experience as a beginner in mental prayer, and how good books helped her through it'
-archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/22?view=theater'
-bookSlug: 'life-of-st-teresa-of-avila'
+title: St. Teresa of Avila’s experience as a beginner in mental prayer, and how good books helped her through it
+archiveSlug: lifeofstteresaof00tereuoft
+archivePage: '22'
+bookSlug: life-of-st-teresa-of-avila
 ---
 
 > And though men may attain more quickly to the state of contemplation, if they persevere, by this way of inability to exert the intellect, yet is the process more laborious and painful; for if the will have nothing to occupy it, and if love have no present object to rest on, the soul is without support and without employment---its isolation and dryness occasion great pain, and the thoughts assail it most grievously.

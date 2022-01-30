@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'We must understand the true nature of virtue and sin if we would practice virtue and avoid sin'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/321?view=theater'
-bookSlug: 'the-sinners-guide'
+title: We must understand the true nature of virtue and sin if we would practice virtue and avoid sin
+archiveSlug: sinnersguide00luis
+archivePage: '321'
+bookSlug: the-sinners-guide
 ---
 
 > In the "Memorial of a Christian Life" we treated of this subject, and gave a number of remedies against sin in general. Our intention at present is to give special remedies applicable to particular sins, such as pride, covetousness, anger, or revenge.

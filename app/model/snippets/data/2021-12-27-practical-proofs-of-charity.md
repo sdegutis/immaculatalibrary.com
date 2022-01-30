@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Practical proofs of charity'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/425?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Practical proofs of charity
+archiveSlug: sinnersguide00luis
+archivePage: '425'
+bookSlug: the-sinners-guide
 ---
 
 > Among the works comprised in charity to our neighbor the following are the most important: advice, counsel, succor, forbearance, pardon, edification.

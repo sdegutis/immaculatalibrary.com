@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The Glorious Entry of Mary into Heaven Accompanied by Angels'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/499?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: The Glorious Entry of Mary into Heaven Accompanied by Angels
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '499'
+bookSlug: the-glories-of-mary
 ---
 
 > Let us now consider how the Saviour really did come from heaven to meet his mother, and at the first interview said, to console her; "Arise, make haste, my love, my dove, my beautiful one, and come; for winter is now past ... and gone."

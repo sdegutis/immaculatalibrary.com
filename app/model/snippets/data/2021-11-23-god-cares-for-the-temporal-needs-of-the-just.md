@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'God cares for the temporal needs of the Just'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/218?view=theater'
-bookSlug: 'the-sinners-guide'
+title: God cares for the temporal needs of the Just
+archiveSlug: sinnersguide00luis
+archivePage: '218'
+bookSlug: the-sinners-guide
 ---
 
 > CHAPTER XXII.

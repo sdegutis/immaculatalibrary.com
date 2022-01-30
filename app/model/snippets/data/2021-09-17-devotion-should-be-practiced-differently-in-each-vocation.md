@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Devotion should be practiced differently in each vocation'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/6?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: Devotion should be practiced differently in each vocation
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '6'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > CHAPTER III.

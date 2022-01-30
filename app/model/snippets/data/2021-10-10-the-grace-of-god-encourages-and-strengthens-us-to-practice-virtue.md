@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The Grace of God Encourages and Strengthens us to Practice Virtue'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/273?view=theater'
-bookSlug: 'the-sinners-guide'
+title: The Grace of God Encourages and Strengthens us to Practice Virtue
+archiveSlug: sinnersguide00luis
+archivePage: '273'
+bookSlug: the-sinners-guide
 ---
 
 > The principal cause of this illusion is that we only regard the obstacles to virtue, and do not consider the grace which God gives us to overcome these obstacles.

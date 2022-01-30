@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Francis de Sales on how poverty is happier than riches'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/131?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: St. Francis de Sales on how poverty is happier than riches
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '131'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > On one occasion I expressed my admiration at his being able to make so good a show on his small means. He said:

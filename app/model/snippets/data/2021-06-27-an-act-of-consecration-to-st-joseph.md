@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'An Act of Consecration to St. Joseph'
-archiveLink: 'https://archive.org/details/st.-josephs-life-virtues-privileges-power/page/240?view=theater'
-bookSlug: 'st-joseph-life-his-virtues-his-privileges-his-power'
+title: An Act of Consecration to St. Joseph
+archiveSlug: st.-josephs-life-virtues-privileges-power
+archivePage: '240'
+bookSlug: st-joseph-life-his-virtues-his-privileges-his-power
 ---
 
 > An Act of Consecration to St. Joseph

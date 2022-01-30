@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Teresa of Avila lacks resignation to God, and takes St. Joseph as her patron'
-archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/36?view=theater'
-bookSlug: 'life-of-st-teresa-of-avila'
+title: St. Teresa of Avila lacks resignation to God, and takes St. Joseph as her patron
+archiveSlug: lifeofstteresaof00tereuoft
+archivePage: '36'
+bookSlug: life-of-st-teresa-of-avila
 ---
 
 > All these tokens of the fear of God came to me through prayer; and the greatest of them was this, that fear was swallowed up of love---for I never thought of chastisement. All the time I was so ill, my strict watch over my conscience reached to all that is mortal sin.

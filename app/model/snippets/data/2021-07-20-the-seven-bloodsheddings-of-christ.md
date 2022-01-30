@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The Seven Bloodsheddings of Christ'
-archiveLink: 'https://archive.org/details/preciousbloodorp00fabeuoft/page/259?view=theater'
-bookSlug: 'the-precious-blood-by-fr-faber'
+title: The Seven Bloodsheddings of Christ
+archiveSlug: preciousbloodorp00fabeuoft
+archivePage: '259'
+bookSlug: the-precious-blood-by-fr-faber
 ---
 
 > There has been some variety in the enumeration of the Seven Bloodsheddings by different holy persons, though the difference has been little more than one of division. The enumeration which we shall follow is the one approved and indulgenced by Pius the Seventh.

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'We ought to help others out of sin, but with charity and prudence'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/103?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: We ought to help others out of sin, but with charity and prudence
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '103'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > UPON THE VIRTUE OF CONDESCENSION.

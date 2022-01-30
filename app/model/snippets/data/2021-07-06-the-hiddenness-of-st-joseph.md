@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The hiddenness of St. Joseph'
-archiveLink: 'https://archive.org/details/st.-josephs-life-virtues-privileges-power/page/143?view=theater'
-bookSlug: 'st-joseph-life-his-virtues-his-privileges-his-power'
+title: The hiddenness of St. Joseph
+archiveSlug: st.-josephs-life-virtues-privileges-power
+archivePage: '143'
+bookSlug: st-joseph-life-his-virtues-his-privileges-his-power
 ---
 
 > The hidden life of the Holy Family---Jesus, Mary and Joseph,---is a subject of deep reflection and useful meditation for the devout soul. The pious soul can meditate for ever on the wonders of the Hidden life of our Blessed Lord, Jesus Christ.

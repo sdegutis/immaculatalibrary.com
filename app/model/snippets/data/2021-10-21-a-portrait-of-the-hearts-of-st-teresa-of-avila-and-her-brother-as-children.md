@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'A portrait of the hearts of St. Teresa of Avila and her brother as children'
-archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/3?view=theater'
-bookSlug: 'life-of-st-teresa-of-avila'
+title: A portrait of the hearts of St. Teresa of Avila and her brother as children
+archiveSlug: lifeofstteresaof00tereuoft
+archivePage: '3'
+bookSlug: life-of-st-teresa-of-avila
 ---
 
 > We were three sisters and nine brothers. All by the mercy of God, resembled their parents in goodness except myself, though I was the most cherished of my father. And, before I began to offend God, I think he had some reason,---for I am filled with sorrow whenever I think of the good desires with which our Lord inspired me, and what a wretched use I made of them. Besides, my brothers never in any way hindered me in the service of God.

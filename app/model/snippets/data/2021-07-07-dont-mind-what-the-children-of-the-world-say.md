@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Don’t mind what the children of the world say'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/219?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: Don’t mind what the children of the world say
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '219'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > *We must not concern ourselves about what the children of the world may say.*

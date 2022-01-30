@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Everyone hopes in something, but hope in anything but God will fail us'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/177?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Everyone hopes in something, but hope in anything but God will fail us
+archiveSlug: sinnersguide00luis
+archivePage: '177'
+bookSlug: the-sinners-guide
 ---
 
 > Therefore, he whose hope is fixed upon the things of this world is rightly compared to the man in the Gospel who built his house upon the sand and beheld it beaten down by the rain and winds; while he whose hope is fixed upon the things of Heaven is like the man whose house was built upon a rock, and which stood unshaken amidst the storms. [St. Matt. vii.]

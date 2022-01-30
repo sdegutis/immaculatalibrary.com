@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Of ungodly fear of evil'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/238?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: Of ungodly fear of evil
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '238'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > *Of Inquietude.*

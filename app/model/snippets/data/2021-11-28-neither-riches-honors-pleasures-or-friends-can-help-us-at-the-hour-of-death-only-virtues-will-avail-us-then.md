@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Neither Riches, Honors, Pleasures, or Friends can help us at the Hour of Death; only Virtues will avail us then'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/231?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Neither Riches, Honors, Pleasures, or Friends can help us at the Hour of Death; only Virtues will avail us then
+archiveSlug: sinnersguide00luis
+archivePage: '231'
+bookSlug: the-sinners-guide
 ---
 
 > If at this critical hour riches could help him as they do at many other periods of life, the evil would be less.

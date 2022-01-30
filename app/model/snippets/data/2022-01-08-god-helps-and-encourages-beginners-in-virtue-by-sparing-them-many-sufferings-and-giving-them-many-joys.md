@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'God helps and encourages beginners in virtue, by sparing them many sufferings, and giving them many joys'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/161?view=theater'
-bookSlug: 'the-sinners-guide'
+title: God helps and encourages beginners in virtue, by sparing them many sufferings, and giving them many joys
+archiveSlug: sinnersguide00luis
+archivePage: '161'
+bookSlug: the-sinners-guide
 ---
 
 > You will probably tell me that these consolations are reserved for those who are already advanced in virtue.

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Prayer of St. Alphonsus for a Good Death'
-archiveLink: 'https://archive.org/details/manualofadoratio00schm/page/375?view=theater'
-bookSlug: 'manual-of-adoration-of-the-most-blessed-sacrament'
+title: Prayer of St. Alphonsus for a Good Death
+archiveSlug: manualofadoratio00schm
+archivePage: '375'
+bookSlug: manual-of-adoration-of-the-most-blessed-sacrament
 ---
 
 > ### *Indulgenced Prayers of St. Alphonsus to the Blessed Virgin.*

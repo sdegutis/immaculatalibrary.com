@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'We must purify our hearts from love of sin'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/14?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: We must purify our hearts from love of sin
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '14'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > CHAPTER VII.

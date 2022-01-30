@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Enemies of Truth are often more Diligent to win over Hearts and Minds than Those on the Side of Truth'
-archiveLink: 'https://archive.org/details/life-and-writings-of-st-thomas-more/page/275?view=theater'
-bookSlug: 'life-and-writings-of-sir-thomas-more'
+title: Enemies of Truth are often more Diligent to win over Hearts and Minds than Those on the Side of Truth
+archiveSlug: life-and-writings-of-st-thomas-more
+archivePage: '275'
+bookSlug: life-and-writings-of-sir-thomas-more
 ---
 
 > More did not find many Englishmen to share his anxieties; he thus expresses and laments the general apathy of good Catholics:

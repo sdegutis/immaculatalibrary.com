@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Teresa of Avila strongly warns of the dangers of lax monasteries and cloisters'
-archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/43?view=theater'
-bookSlug: 'life-of-st-teresa-of-avila'
+title: St. Teresa of Avila strongly warns of the dangers of lax monasteries and cloisters
+archiveSlug: lifeofstteresaof00tereuoft
+archivePage: '43'
+bookSlug: life-of-st-teresa-of-avila
 ---
 
 > Therefore, I think that it did me much harm to be in a monastery not enclosed. The liberty which those who were good might have with advantage---they not being obliged to do more than they do, because they had not bound themselves to enclosure---would certainly have led me, who am wicked, straight to hell, if our Lord, by so many remedies and means of His most singular mercy, had not delivered me out of that danger---and it is, I believe, the very greatest danger---namely, a monastery of women unenclosed---yea, more, I think it is, for those who will be wicked, a road to hell rather than a help to their weakness.

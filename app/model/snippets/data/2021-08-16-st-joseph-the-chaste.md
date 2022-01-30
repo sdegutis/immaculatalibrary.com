@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Joseph the Chaste'
-archiveLink: 'https://archive.org/details/st.-josephs-life-virtues-privileges-power/page/323?view=theater'
-bookSlug: 'st-joseph-life-his-virtues-his-privileges-his-power'
+title: St. Joseph the Chaste
+archiveSlug: st.-josephs-life-virtues-privileges-power
+archivePage: '323'
+bookSlug: st-joseph-life-his-virtues-his-privileges-his-power
 ---
 
 > "Blessed are the clean of heart for they shall see God" (Matt. v. 8). "No price is worthy a continent soul" (Ecclus. xxv. 30).

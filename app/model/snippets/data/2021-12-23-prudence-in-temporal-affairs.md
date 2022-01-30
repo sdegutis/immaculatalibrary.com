@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Prudence in Temporal Affairs'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/419?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Prudence in Temporal Affairs
+archiveSlug: sinnersguide00luis
+archivePage: '419'
+bookSlug: the-sinners-guide
 ---
 
 > *Section X.*

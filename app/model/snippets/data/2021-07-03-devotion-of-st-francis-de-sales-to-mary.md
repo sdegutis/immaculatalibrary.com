@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The devotion of St. Francis de Sales to Mary'
-archiveLink: 'https://archive.org/details/libraryofstfranc06fran/page/161?view=theater'
-bookSlug: 'mystical-explanation-of-canticles'
+title: The devotion of St. Francis de Sales to Mary
+archiveSlug: libraryofstfranc06fran
+archivePage: '161'
+bookSlug: mystical-explanation-of-canticles
 ---
 
 > It is well known that our Blessed Father had a most perfect devotion to Our Lady, and a tender love for her, accompanied by a true filial confidence in her. He called her, his Lady, his Queen, his Mistress. When he preached her praises, on her feast days, which he never failed to do, it was always with a peculiar fervour, ease, and joyousness.

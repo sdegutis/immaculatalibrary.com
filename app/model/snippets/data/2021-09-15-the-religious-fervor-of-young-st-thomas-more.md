@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The religious fervor of young St. Thomas More'
-archiveLink: 'https://archive.org/details/wisdomandwitofbl00moreuoft/page/3?view=theater'
-bookSlug: 'wisdom-and-wit-of-blessed-thomas-more'
+title: The religious fervor of young St. Thomas More
+archiveSlug: wisdomandwitofbl00moreuoft
+archivePage: '3'
+bookSlug: wisdom-and-wit-of-blessed-thomas-more
 ---
 
 > His biographers, however, tell us that, amid his first literary triumphs, in his first success as a lawyer and a politician, the thought of the emptiness of this world took so deep a hold on his soul that he spent four years in the practice of devotion and extraordinary austerity among the Carthusians, debating whether he should either retire altogether from the world's cares and pleasures, or, as a priest, in an austere and active order, labour for the world's improvement.

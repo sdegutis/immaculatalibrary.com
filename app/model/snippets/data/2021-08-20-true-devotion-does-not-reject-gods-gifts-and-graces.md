@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'True devotion does not reject God’s gifts and graces'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/108?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: True devotion does not reject God’s gifts and graces
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '108'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > Many say that they leave mental prayer to those that are perfect; that, for their part, they are unworthy to use it.

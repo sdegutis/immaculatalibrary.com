@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Mary died entirely detached from the world'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/476?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: Mary died entirely detached from the world
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '476'
+bookSlug: the-glories-of-mary
 ---
 
 > And in the first place, there is no doubt that attachment to the goods of earth renders the death of the worldly bitter and miserable, as the Holy Spirit says: "Oh! death, how bitter is the remembrance of thee to a man that hath peace in his possessions!"

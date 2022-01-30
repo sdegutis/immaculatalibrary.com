@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'How the Saints, Prophets, and Patriarchs greeted Mary at her Glorious Entrance into Heaven'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/502?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: How the Saints, Prophets, and Patriarchs greeted Mary at her Glorious Entrance into Heaven
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '502'
+bookSlug: the-glories-of-mary
 ---
 
 > Then all the saints who were at that time in paradise came to welcome her and salute her as their queen.

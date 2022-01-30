@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Childhood stories of St. Rose of Lima'
-archiveLink: 'https://archive.org/details/stroseoflima00capeuoft/page/38?view=theater'
-bookSlug: 'st-rose-of-lima-the-flower-of-the-new-world'
+title: Childhood stories of St. Rose of Lima
+archiveSlug: stroseoflima00capeuoft
+archivePage: '38'
+bookSlug: st-rose-of-lima-the-flower-of-the-new-world
 ---
 
 > The infant who had thus been miraculously re-named in her cradle grew up, according to all her biographers, into a singularly beautiful and attractive little child, though with an attractiveness of no ordinary sort.

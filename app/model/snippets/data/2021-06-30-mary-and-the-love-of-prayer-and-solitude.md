@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Mary and the love of Prayer and Solitude'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/639?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: Mary and the love of Prayer and Solitude
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '639'
+bookSlug: the-glories-of-mary
 ---
 
 > SECTION X.

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Upon Poverty of Spirit'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/137?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: Upon Poverty of Spirit
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '137'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > *UPON POVERTY OF SPIRIT.*

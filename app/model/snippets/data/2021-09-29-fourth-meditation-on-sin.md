@@ -1,8 +1,9 @@
 ---
 published: true
 title: 'Fourth Meditation: On Sin'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/23?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '23'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > CHAPTER XII.

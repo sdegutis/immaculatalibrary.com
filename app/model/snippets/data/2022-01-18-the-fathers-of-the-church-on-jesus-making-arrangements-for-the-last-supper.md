@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The Fathers of the Church on Jesus making arrangements for the Last Supper'
-archiveLink: 'https://archive.org/details/catenaurecommpt301thomuoft/page/885?view=theater'
-bookSlug: 'catena-aurea'
+title: The Fathers of the Church on Jesus making arrangements for the Last Supper
+archiveSlug: catenaurecommpt301thomuoft
+archivePage: '885'
+bookSlug: catena-aurea
 ---
 
 >> 17\. Now the first day of the feast of unleavened bread the disciples came to Jesus, saying unto him, Where wilt thou that we prepare for thee to eat the Passover?

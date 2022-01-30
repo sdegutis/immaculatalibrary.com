@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The humility of St. Teresa of Avila in retrospect to her childhood'
-archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/5?view=theater'
-bookSlug: 'life-of-st-teresa-of-avila'
+title: The humility of St. Teresa of Avila in retrospect to her childhood
+archiveSlug: lifeofstteresaof00tereuoft
+archivePage: '5'
+bookSlug: life-of-st-teresa-of-avila
 ---
 
 > I remember that, when my mother died, I was about twelve years old a little less. When I began to understand my loss, I went in my affliction to an image of our Lady, and with many tears implored her to be my mother. I did this in my simplicity, and I believe that it was of service to me; for I have by experience found the royal Virgin help me whenever I recommended myself to her; and at last she has brought me back to herself.

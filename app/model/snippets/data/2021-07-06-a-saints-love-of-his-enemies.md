@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'A Saint’s Love of his Enemies'
-archiveLink: 'https://archive.org/details/libraryofstfranc06fran/page/163?view=theater'
-bookSlug: 'mystical-explanation-of-canticles'
+title: A Saint’s Love of his Enemies
+archiveSlug: libraryofstfranc06fran
+archivePage: '163'
+bookSlug: mystical-explanation-of-canticles
 ---
 
 > *July 31, at seven o'clock in the morning, she gave her answer to the thirty-fourth point as follows:*

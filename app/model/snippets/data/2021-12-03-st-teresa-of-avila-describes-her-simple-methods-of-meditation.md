@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Teresa of Avila describes her simple methods of meditation'
-archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/66?view=theater'
-bookSlug: 'life-of-st-teresa-of-avila'
+title: St. Teresa of Avila describes her simple methods of meditation
+archiveSlug: lifeofstteresaof00tereuoft
+archivePage: '66'
+bookSlug: life-of-st-teresa-of-avila
 ---
 
 > This was my method of prayer: as I could not make reflections with my understanding, I contrived to picture Christ as within me; and I used to find myself the better for thinking of those mysteries of His life during which He was most lonely. It seemed to me that the being alone and afflicted, like a person in trouble, must needs permit me to come near unto Him.

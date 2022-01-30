@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The Glory of St. Joseph’s Resurrected Body'
-archiveLink: 'https://archive.org/details/lifegloriesofstj00thomuoft/page/422?view=theater'
-bookSlug: 'the-life-and-glories-of-st-joseph'
+title: The Glory of St. Joseph’s Resurrected Body
+archiveSlug: lifegloriesofstj00thomuoft
+archivePage: '422'
+bookSlug: the-life-and-glories-of-st-joseph
 ---
 
 **Note:** This book does not have any approbations (Nihil obstat and Imprimatur). However, this snippet is included here because the points made seem reasonable and worthy of belief to the editor of ImmaculataLibrary.com. But they are not matters of faith, and are at the reader's discretion to accept or reject.

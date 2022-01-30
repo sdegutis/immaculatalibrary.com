@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Our good works are no cause for pride, since they are rarely perfect and pure'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/329?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Our good works are no cause for pride, since they are rarely perfect and pure
+archiveSlug: sinnersguide00luis
+archivePage: '329'
+bookSlug: the-sinners-guide
 ---
 
 > Another consideration which will help you acquire humility is the thought of the little you have done purely for God.

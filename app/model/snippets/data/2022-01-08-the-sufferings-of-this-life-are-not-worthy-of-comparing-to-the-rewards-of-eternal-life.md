@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The sufferings of this life are not worthy of comparing to the Rewards of Eternal Life'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/445?view=theater'
-bookSlug: 'the-sinners-guide'
+title: The sufferings of this life are not worthy of comparing to the Rewards of Eternal Life
+archiveSlug: sinnersguide00luis
+archivePage: '445'
+bookSlug: the-sinners-guide
 ---
 
 > Nevertheless there are Christians, perfectly conformed to the divine will in prosperity, whose submission vanishes at the approach of adversity. They are like cowards, who vaunt their courage in time of peace, but throw down their arms and fly at the first sound of battle.

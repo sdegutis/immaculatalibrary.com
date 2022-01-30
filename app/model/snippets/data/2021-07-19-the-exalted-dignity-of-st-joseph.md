@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The exalted dignity of St. Joseph'
-archiveLink: 'https://archive.org/details/st.-josephs-life-virtues-privileges-power/page/173?view=theater'
-bookSlug: 'st-joseph-life-his-virtues-his-privileges-his-power'
+title: The exalted dignity of St. Joseph
+archiveSlug: st.-josephs-life-virtues-privileges-power
+archivePage: '173'
+bookSlug: st-joseph-life-his-virtues-his-privileges-his-power
 ---
 
 > *The dignity of St. Joseph. St Joseph is exalted above all God's Saints; and ranks next to the Blessed Virgin Mary herself.*

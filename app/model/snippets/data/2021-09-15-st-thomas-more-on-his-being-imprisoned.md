@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Thomas More on his being imprisoned'
-archiveLink: 'https://archive.org/details/lifeofsirthomasm00ropeuoft/page/74?view=theater'
-bookSlug: 'life-of-sir-thomas-more-by-william-roper'
+title: St. Thomas More on his being imprisoned
+archiveSlug: lifeofsirthomasm00ropeuoft
+archivePage: '74'
+bookSlug: life-of-sir-thomas-more-by-william-roper
 ---
 
 > Now when he had remained in the Tower little more than a month, my wife, longing to see her father, by her earnest suit at length got leave to go unto him.

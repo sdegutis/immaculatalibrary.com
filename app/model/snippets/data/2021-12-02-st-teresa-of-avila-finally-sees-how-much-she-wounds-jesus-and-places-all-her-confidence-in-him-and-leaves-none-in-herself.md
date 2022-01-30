@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Teresa of Avila finally sees how much she wounds Jesus, and places all her confidence in Him and leaves none in herself'
-archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/65?view=theater'
-bookSlug: 'life-of-st-teresa-of-avila'
+title: St. Teresa of Avila finally sees how much she wounds Jesus, and places all her confidence in Him and leaves none in herself
+archiveSlug: lifeofstteresaof00tereuoft
+archivePage: '65'
+bookSlug: life-of-st-teresa-of-avila
 ---
 
 > CHAPTER IX.

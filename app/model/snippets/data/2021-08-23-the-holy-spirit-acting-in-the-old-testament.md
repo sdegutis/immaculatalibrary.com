@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The Holy Spirit acting in the Old Testament'
-archiveLink: 'https://archive.org/details/parochialplainse0002newm/page/218?view=theater'
-bookSlug: 'parochial-and-plain-sermons-by-st-john-henry-newman'
+title: The Holy Spirit acting in the Old Testament
+archiveSlug: parochialplainse0002newm
+archivePage: '218'
+bookSlug: parochial-and-plain-sermons-by-st-john-henry-newman
 ---
 
 > On this Festival I propose, as is suitable, to describe as scripturally as I can, the merciful office of God the Holy Ghost, towards us Christians; and I trust I may do so, with the sobriety and reverence which the subject demands.

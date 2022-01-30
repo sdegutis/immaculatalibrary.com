@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Grace makes our souls acceptable and beautiful to God'
-archiveLink: 'https://archive.org/details/fountainofliving00andr/page/204?view=theater'
-bookSlug: 'fountain-of-living-water'
+title: Grace makes our souls acceptable and beautiful to God
+archiveSlug: fountainofliving00andr
+archivePage: '204'
+bookSlug: fountain-of-living-water
 ---
 
 > *August 29*

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Virtue strengthens and encourages us under all tribulations'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/213?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Virtue strengthens and encourages us under all tribulations
+archiveSlug: sinnersguide00luis
+archivePage: '213'
+bookSlug: the-sinners-guide
 ---
 
 > To the direct action of grace we must add that of the virtues, each of which, in its own way, strengthens the afflicted soul.

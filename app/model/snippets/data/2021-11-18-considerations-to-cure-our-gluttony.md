@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Considerations to cure our Gluttony'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/359?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Considerations to cure our Gluttony
+archiveSlug: sinnersguide00luis
+archivePage: '359'
+bookSlug: the-sinners-guide
 ---
 
 > If you find abstinence difficult think of the gall and vinegar which were given to our Saviour on the Cross; for as St. Bernard tells us, there is no food so unpleasant that it may not be made palatable by mingling it with this bitter draught.

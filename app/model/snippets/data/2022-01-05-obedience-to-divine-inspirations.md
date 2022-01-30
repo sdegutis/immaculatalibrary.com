@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Obedience to Divine Inspirations'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/438?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Obedience to Divine Inspirations
+archiveSlug: sinnersguide00luis
+archivePage: '438'
+bookSlug: the-sinners-guide
 ---
 
 > The third degree of obedience, as we have said, consists in fidelity to divine inspirations.

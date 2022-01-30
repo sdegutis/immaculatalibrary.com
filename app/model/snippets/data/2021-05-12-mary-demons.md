@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Mary and the demons'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/682?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: Mary and the demons
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '682'
+bookSlug: the-glories-of-mary
 ---
 
 > When St. Dominic was preaching at Carcassone, in France, an Albigensian heretic, who was possessed by demons, was brought to him, because he had publicly spoken against the devotion of the most holy Rosary.

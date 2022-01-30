@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Some basics about making Rash Judgments'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/381?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Some basics about making Rash Judgments
+archiveSlug: sinnersguide00luis
+archivePage: '381'
+bookSlug: the-sinners-guide
 ---
 
 > Section III.

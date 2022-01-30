@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The Glory of Mary surpasses the Glory of all the other Saints combined'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/508?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: The Glory of Mary surpasses the Glory of all the other Saints combined
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '508'
+bookSlug: the-glories-of-mary
 ---
 
 > The graces of the saints were different in each, as St. Paul said: "There are diversities of graces." So that each of them corresponding with the grace received, has rendered himself excellent in some virtue; one in saving souls, one in leading a life of penance, one in suffering torments, one in contemplation; hence the holy Church, when celebrating their festivals, says of each: "And there was not found the like to him."

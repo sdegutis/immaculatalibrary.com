@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Francis de Sales on love and freedom'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/58?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: St. Francis de Sales on love and freedom
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '58'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > THE SAME SUBJECT CONTINUED.

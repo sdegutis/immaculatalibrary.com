@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The vigilance and care necessary in the practice of virtue'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/477?view=theater'
-bookSlug: 'the-sinners-guide'
+title: The vigilance and care necessary in the practice of virtue
+archiveSlug: sinnersguide00luis
+archivePage: '477'
+bookSlug: the-sinners-guide
 ---
 
 > *CHAPTER XLVII.*

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Joseph, Patron of the Universal Church'
-archiveLink: 'https://archive.org/details/st.-josephs-life-virtues-privileges-power/page/250?view=theater'
-bookSlug: 'st-joseph-life-his-virtues-his-privileges-his-power'
+title: St. Joseph, Patron of the Universal Church
+archiveSlug: st.-josephs-life-virtues-privileges-power
+archivePage: '250'
+bookSlug: st-joseph-life-his-virtues-his-privileges-his-power
 ---
 
 > Never, perhaps, in any age has the Church been assailed by more deadly enemies than at present. Never, surely, has a wilder tempest raged round the Head of the Church, the Pope of Rome; hence God, in His infinite wisdom, has given to His Church a new Protector in St. Joseph.

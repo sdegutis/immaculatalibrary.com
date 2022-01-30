@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'How to make a good Confession'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/81?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: How to make a good Confession
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '81'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > Chapter XIX.

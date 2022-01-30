@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Joseph was a far more perfect father to Jesus than natural fathers are'
-archiveLink: 'https://archive.org/details/lifegloriesofstj00thomuoft/page/387?view=theater'
-bookSlug: 'the-life-and-glories-of-st-joseph'
+title: St. Joseph was a far more perfect father to Jesus than natural fathers are
+archiveSlug: lifegloriesofstj00thomuoft
+archivePage: '387'
+bookSlug: the-life-and-glories-of-st-joseph
 ---
 
 > Again, how much does suffering nourish love, and endear the beloved one for whom the suffering is undergone! We see this constantly in the case of fond parents.

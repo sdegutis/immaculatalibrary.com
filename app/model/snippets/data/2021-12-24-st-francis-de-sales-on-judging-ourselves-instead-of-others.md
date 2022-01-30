@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Francis de Sales on Judging Ourselves instead of Others'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/89?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: St. Francis de Sales on Judging Ourselves instead of Others
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '89'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > *UPON JUDGING OURSELVES.*

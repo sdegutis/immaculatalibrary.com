@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'How St. Francis de Sales interacted with unbelievers'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/104?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: How St. Francis de Sales interacted with unbelievers
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '104'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > *HOW BLESSED FRANCIS ADAPTED HIMSELF TO TIMES, PLACES, AND CIRCUMSTANCES.*

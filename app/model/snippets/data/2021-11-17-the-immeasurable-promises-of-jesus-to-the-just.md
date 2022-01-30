@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The immeasurable promises of Jesus to the Just'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/207?view=theater'
-bookSlug: 'the-sinners-guide'
+title: The immeasurable promises of Jesus to the Just
+archiveSlug: sinnersguide00luis
+archivePage: '207'
+bookSlug: the-sinners-guide
 ---
 
 > Is it not evident that this is one of the greatest privileges enjoyed by the just, to whom these consoling words are in a special manner addressed?

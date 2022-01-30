@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Prosperity vs Divine Providence'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/140?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: Prosperity vs Divine Providence
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '140'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > *UPON PROSPERITY.*

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'God’s Fatherly Care for the Just is the greatest Privilege of Virtue'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/130?view=theater'
-bookSlug: 'the-sinners-guide'
+title: God’s Fatherly Care for the Just is the greatest Privilege of Virtue
+archiveSlug: sinnersguide00luis
+archivePage: '130'
+bookSlug: the-sinners-guide
 ---
 
 > *CHAPTER XII.*

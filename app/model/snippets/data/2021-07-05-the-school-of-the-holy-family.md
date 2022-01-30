@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The School of the Holy Family'
-archiveLink: 'https://archive.org/details/lifegloriesofstj00thomuoft/page/362?view=theater'
-bookSlug: 'the-life-and-glories-of-st-joseph'
+title: The School of the Holy Family
+archiveSlug: lifegloriesofstj00thomuoft
+archivePage: '362'
+bookSlug: the-life-and-glories-of-st-joseph
 ---
 
 > The following beautiful passage from the Pastoral Letter of the Bishop of Nottingham, Advent, 1887, which fell under our notice after the above was written, will serve to illustrate much of what has gone before, and to quicken and deepen our perception, in detail, of the life which the Holy Family led at Nazareth, and of the obedience which, in His divine condescendence, Jesus paid His parents.

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'A clear conscience produces hope, which brings courage'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/172?view=theater'
-bookSlug: 'the-sinners-guide'
+title: A clear conscience produces hope, which brings courage
+archiveSlug: sinnersguide00luis
+archivePage: '172'
+bookSlug: the-sinners-guide
 ---
 
 > CHAPTER XVII.

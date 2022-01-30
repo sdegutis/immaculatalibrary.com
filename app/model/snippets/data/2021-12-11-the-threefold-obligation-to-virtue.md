@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The threefold obligation to virtue'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/394?view=theater'
-bookSlug: 'the-sinners-guide'
+title: The threefold obligation to virtue
+archiveSlug: sinnersguide00luis
+archivePage: '394'
+bookSlug: the-sinners-guide
 ---
 
 > CHAPTER XL.

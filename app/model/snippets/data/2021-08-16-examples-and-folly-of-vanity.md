@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Examples and Folly of Vanity'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/103?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: Examples and Folly of Vanity
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '103'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > "Borrow empty vessels not a few,” said Eliseus to the poor widow, "and pour oil into them." (4 Kings, iv. 3)

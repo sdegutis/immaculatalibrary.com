@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'We must keep our eyes on eternal bliss, and not forsake it for anything at all'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/285?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: We must keep our eyes on eternal bliss, and not forsake it for anything at all
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '285'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > In fine, Philothea, I conjure you by all that is sacred in heaven and on earth, by the baptism you have received, by the womb which bore Jesus Christ, by the charitable heart wherewith He loved you, and by the bowels of that mercy in which you hope, continue to persevere in this blessed design of leading a devout life.

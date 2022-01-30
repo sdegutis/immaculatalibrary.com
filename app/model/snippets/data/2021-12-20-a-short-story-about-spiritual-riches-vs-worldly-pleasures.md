@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'A short story about spiritual riches vs worldly pleasures'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/128?view=theater'
-bookSlug: 'the-sinners-guide'
+title: A short story about spiritual riches vs worldly pleasures
+archiveSlug: sinnersguide00luis
+archivePage: '128'
+bookSlug: the-sinners-guide
 ---
 
 > The annals of the Cistercian Order mention an incident which, in connection with our subject, is worth recording:

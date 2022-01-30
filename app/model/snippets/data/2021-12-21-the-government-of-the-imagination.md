@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The Government of the Imagination'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/414?view=theater'
-bookSlug: 'the-sinners-guide'
+title: The Government of the Imagination
+archiveSlug: sinnersguide00luis
+archivePage: '414'
+bookSlug: the-sinners-guide
 ---
 
 > *Section VIII.*

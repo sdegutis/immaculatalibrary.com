@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The relationship between Charity and Devotion'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/2?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: The relationship between Charity and Devotion
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '2'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > True devotion, Philothea, presupposes, not a partial, but a thorough love of God.

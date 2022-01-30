@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'God consoles us in the hour of affliction'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/210?view=theater'
-bookSlug: 'the-sinners-guide'
+title: God consoles us in the hour of affliction
+archiveSlug: sinnersguide00luis
+archivePage: '210'
+bookSlug: the-sinners-guide
 ---
 
 > CHAPTER XXI.

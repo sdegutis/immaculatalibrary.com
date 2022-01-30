@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The dangers of Venial Sins'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/384?view=theater'
-bookSlug: 'the-sinners-guide'
+title: The dangers of Venial Sins
+archiveSlug: sinnersguide00luis
+archivePage: '384'
+bookSlug: the-sinners-guide
 ---
 
 > CHAPTER XXXVIII.

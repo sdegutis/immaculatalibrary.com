@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'How St. Francis de Sales dealt with heretics'
-archiveLink: 'https://archive.org/details/saintfrancis00galluoft/page/148?view=theater'
-bookSlug: 'the-life-of-st-francis-de-sales'
+title: How St. Francis de Sales dealt with heretics
+archiveSlug: saintfrancis00galluoft
+archivePage: '148'
+bookSlug: the-life-of-st-francis-de-sales
 ---
 
 > *HIS ARRIVAL AND FIRST EFFORTS IN THE CHABLAIS.*

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'How to increase or diminish our Love for God'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/69?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: How to increase or diminish our Love for God
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '69'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > *Upon Desires.*

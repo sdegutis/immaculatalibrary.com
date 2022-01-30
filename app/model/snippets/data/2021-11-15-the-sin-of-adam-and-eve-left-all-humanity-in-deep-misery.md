@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The sin of Adam and Eve left all humanity in deep misery'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/204?view=theater'
-bookSlug: 'the-sinners-guide'
+title: The sin of Adam and Eve left all humanity in deep misery
+archiveSlug: sinnersguide00luis
+archivePage: '204'
+bookSlug: the-sinners-guide
 ---
 
 > CHAPTER XX.

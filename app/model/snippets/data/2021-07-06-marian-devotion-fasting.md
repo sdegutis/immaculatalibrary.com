@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Marian Devotion - Fasting'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/656?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: Marian Devotion - Fasting
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '656'
+bookSlug: the-glories-of-mary
 ---
 
 > DEVOTION IV. OF FASTING.

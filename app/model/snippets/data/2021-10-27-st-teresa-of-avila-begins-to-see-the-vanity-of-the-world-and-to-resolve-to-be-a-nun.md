@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Teresa of Avila begins to see the vanity of the world, and to resolve to be a nun'
-archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/14?view=theater'
-bookSlug: 'life-of-st-teresa-of-avila'
+title: St. Teresa of Avila begins to see the vanity of the world, and to resolve to be a nun
+archiveSlug: lifeofstteresaof00tereuoft
+archivePage: '14'
+bookSlug: life-of-st-teresa-of-avila
 ---
 
 > At this time, though I was not careless about my own good, our Lord was much more careful to dispose me for that state of life which was best for me. He sent me a serious illness, so that I was obliged to return to my father's house.

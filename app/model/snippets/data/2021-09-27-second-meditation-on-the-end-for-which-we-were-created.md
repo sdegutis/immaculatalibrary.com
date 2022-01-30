@@ -1,8 +1,9 @@
 ---
 published: true
 title: 'Second Meditation: On the end for which we were created'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/19?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '19'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > CHAPTER X.

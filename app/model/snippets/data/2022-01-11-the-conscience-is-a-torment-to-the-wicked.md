@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The conscience is a torment to the wicked'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/165?view=theater'
-bookSlug: 'the-sinners-guide'
+title: The conscience is a torment to the wicked
+archiveSlug: sinnersguide00luis
+archivePage: '165'
+bookSlug: the-sinners-guide
 ---
 
 > But conscience, which is such a kind master to the just, becomes a scourge to the wicked. It tortures them with the remembrance of their crimes and embitters all their pleasures.

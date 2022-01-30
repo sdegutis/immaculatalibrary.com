@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Peter Damian describes the Hour of Death'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/229?view=theater'
-bookSlug: 'the-sinners-guide'
+title: St. Peter Damian describes the Hour of Death
+archiveSlug: sinnersguide00luis
+archivePage: '229'
+bookSlug: the-sinners-guide
 ---
 
 > Still more terrible is the picture of the death of the sinner given by St. Peter Damian.

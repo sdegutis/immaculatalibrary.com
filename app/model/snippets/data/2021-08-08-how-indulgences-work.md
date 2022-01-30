@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'How Indulgences Work'
-archiveLink: 'https://archive.org/details/explanationofbal00kink_0/page/218?view=theater'
-bookSlug: 'explanation-of-the-baltimore-catechism'
+title: How Indulgences Work
+archiveSlug: explanationofbal00kink_0
+archivePage: '218'
+bookSlug: explanation-of-the-baltimore-catechism
 ---
 
 > **237 Q. What must we do to gain an indulgence?**

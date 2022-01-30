@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The peace of the virtuous in contrast with the torment and anxiety of the wicked'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/200?view=theater'
-bookSlug: 'the-sinners-guide'
+title: The peace of the virtuous in contrast with the torment and anxiety of the wicked
+archiveSlug: sinnersguide00luis
+archivePage: '200'
+bookSlug: the-sinners-guide
 ---
 
 > The condition of the wicked which we have been considering will enable us by contrast to set a true value on the peace of the just.

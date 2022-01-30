@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'We must distinguish True from False Devotion'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/2?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: We must distinguish True from False Devotion
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '2'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > You aspire to Devotion, Philothea, because, being a Christian, you know it to be a virtue extremely pleasing to the Divine Majesty.

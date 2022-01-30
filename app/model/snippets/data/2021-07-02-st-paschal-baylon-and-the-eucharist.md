@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Paschal Baylon and the Eucharist'
-archiveLink: 'https://archive.org/details/BlessedSacramentBook/page/n643?view=theater'
-bookSlug: 'blessed-sacrament-book'
+title: St. Paschal Baylon and the Eucharist
+archiveSlug: BlessedSacramentBook
+archivePage: n643
+bookSlug: blessed-sacrament-book
 ---
 
 > ### St. Paschal Baylon, Patron Saint of Eucharistic Associations

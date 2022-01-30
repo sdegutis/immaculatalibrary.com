@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The Holy Family at Nazareth are a Paradise on Earth'
-archiveLink: 'https://archive.org/details/st.-josephs-life-virtues-privileges-power/page/299?view=theater'
-bookSlug: 'st-joseph-life-his-virtues-his-privileges-his-power'
+title: The Holy Family at Nazareth are a Paradise on Earth
+archiveSlug: st.-josephs-life-virtues-privileges-power
+archivePage: '299'
+bookSlug: st-joseph-life-his-virtues-his-privileges-his-power
 ---
 
 > "And his face did shine as the sun, and his garments became as white as snow. … Lord it is good for us to be here" (Matt xvii. 11.)

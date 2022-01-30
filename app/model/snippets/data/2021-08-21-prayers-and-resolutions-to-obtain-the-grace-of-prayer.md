@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Prayers and resolutions to obtain the grace of Prayer'
-archiveLink: 'https://archive.org/details/st.-josephs-life-virtues-privileges-power/page/336?view=theater'
-bookSlug: 'st-joseph-life-his-virtues-his-privileges-his-power'
+title: Prayers and resolutions to obtain the grace of Prayer
+archiveSlug: st.-josephs-life-virtues-privileges-power
+archivePage: '336'
+bookSlug: st-joseph-life-his-virtues-his-privileges-his-power
 ---
 
 > ### *Practical Resolution.*

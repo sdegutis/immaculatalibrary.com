@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The joy experienced by those freed from slavery to sin'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/194?view=theater'
-bookSlug: 'the-sinners-guide'
+title: The joy experienced by those freed from slavery to sin
+archiveSlug: sinnersguide00luis
+archivePage: '194'
+bookSlug: the-sinners-guide
 ---
 
 > These are the principal sources of that marvellous liberty enjoyed by the just.

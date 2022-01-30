@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Three visions, two crowns, and a holy death'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/723?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: Three visions, two crowns, and a holy death
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '723'
+bookSlug: the-glories-of-mary
 ---
 
 > 85.---The blessed Joachim Piccolomini, who had a very great devotion to Mary, even from childhood, used to visit three times a day an image of the sorrowful mother, which was in a neighboring church, and abstained from all food on Saturday in her honor. Moreover, he rose at midnight to meditate upon her dolors.

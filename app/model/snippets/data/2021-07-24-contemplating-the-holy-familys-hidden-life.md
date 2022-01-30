@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Contemplating the Holy Family’s hidden life'
-archiveLink: 'https://archive.org/details/st.-josephs-life-virtues-privileges-power/page/150?view=theater'
-bookSlug: 'st-joseph-life-his-virtues-his-privileges-his-power'
+title: Contemplating the Holy Family’s hidden life
+archiveSlug: st.-josephs-life-virtues-privileges-power
+archivePage: '150'
+bookSlug: st-joseph-life-his-virtues-his-privileges-his-power
 ---
 
 > After the memorable occasion of the finding of the Child Jesus in the Temple, the Gospel, as we have seen, says, the Holy Family returned to Nazareth; and the last word about St. Joseph is---Jesus "was subject to them;" that is, Jesus, after having completed His twelfth year, lived under the authority and guardianship of His reputed father St. Joseph, and His holy Mother the Blessed Virgin.

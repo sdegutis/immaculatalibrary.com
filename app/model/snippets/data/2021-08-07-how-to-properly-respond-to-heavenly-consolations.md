@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'How to properly respond to heavenly consolations'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/248?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: How to properly respond to heavenly consolations
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '248'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > Whenever we experience these consolations we must humble ourselves exceedingly before God, and beware of saying: "Oh, how good am I!" No, Philothea, these consolations, as I have already said, cannot make us the better: devotion does not consist in them; but let us say: "O how good is God to such as hope in Him, to the soul that seeks Him!"

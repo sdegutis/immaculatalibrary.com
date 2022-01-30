@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'On the love of God’s goodness itself'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/61?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: On the love of God’s goodness itself
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '61'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > UPON THE LOVE OF GOD, CALLED LOVE OF BENEVOLENCE.

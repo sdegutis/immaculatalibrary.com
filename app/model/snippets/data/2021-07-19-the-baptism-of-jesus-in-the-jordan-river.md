@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The Baptism of Jesus in the Jordan River'
-archiveLink: 'https://archive.org/details/cochemslifeofchr00martuoft/page/62?view=theater'
-bookSlug: 'cochems-life-of-christ'
+title: The Baptism of Jesus in the Jordan River
+archiveSlug: cochemslifeofchr00martuoft
+archivePage: '62'
+bookSlug: cochems-life-of-christ
 ---
 
 > Before introducing Himself as the Messias, Jesus wished to present Himself as the representative of fallen man, and as the Lamb of sacrifice bearing our sins. He effected this design by humbling Himself, and like a sinner subjecting Himself to the baptism of St. John.

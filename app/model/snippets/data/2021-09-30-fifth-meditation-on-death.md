@@ -1,8 +1,9 @@
 ---
 published: true
 title: 'Fifth Meditation: On Death'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/25?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '25'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > CHAPTER XIII.

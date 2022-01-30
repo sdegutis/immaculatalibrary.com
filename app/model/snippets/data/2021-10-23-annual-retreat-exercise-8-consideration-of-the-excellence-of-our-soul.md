@@ -1,8 +1,9 @@
 ---
 published: true
 title: 'Annual Retreat Exercise #8: Consideration of the excellence of our soul'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/274?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '274'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > ### CHAPTER IX.

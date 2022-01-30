@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'We must prefer the virtues more pleasing to God than to men'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/460?view=theater'
-bookSlug: 'the-sinners-guide'
+title: We must prefer the virtues more pleasing to God than to men
+archiveSlug: sinnersguide00luis
+archivePage: '460'
+bookSlug: the-sinners-guide
 ---
 
 > *Section II.*

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The death of St. Thomas More'
-archiveLink: 'https://archive.org/details/lifeofsirthomasm00ropeuoft/page/98?view=theater'
-bookSlug: 'life-of-sir-thomas-more-by-william-roper'
+title: The death of St. Thomas More
+archiveSlug: lifeofsirthomasm00ropeuoft
+archivePage: '98'
+bookSlug: life-of-sir-thomas-more-by-william-roper
 ---
 
 > So remained Sir Thomas More in the Tower, more than a seven-night after his judgment. From whence, the day before he suffered, he sent his shirt of hair, not willing to have it seen, to my wife, his dearly beloved daughter, and a letter written with a coal (contained in the foresaid book of his works), plainly expressing the fervent desire he had to suffer on the morrow, in these words following:

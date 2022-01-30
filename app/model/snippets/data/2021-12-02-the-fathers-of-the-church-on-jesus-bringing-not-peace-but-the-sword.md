@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The Fathers of the Church on Jesus bringing not Peace but the Sword'
-archiveLink: 'https://archive.org/details/catenaaureacomme01thom/page/394?view=theater'
-bookSlug: 'catena-aurea'
+title: The Fathers of the Church on Jesus bringing not Peace but the Sword
+archiveSlug: catenaaureacomme01thom
+archivePage: '394'
+bookSlug: catena-aurea
 ---
 
 > 34\. Think not that I am come to send peace on earth: I came not to send peace, but a sword.

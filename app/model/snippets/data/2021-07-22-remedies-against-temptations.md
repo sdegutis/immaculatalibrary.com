@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Remedies against temptations'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/232?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: Remedies against temptations
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '232'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > *Remedies against great temptations.*

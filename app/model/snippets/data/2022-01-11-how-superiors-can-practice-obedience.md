@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'How superiors can practice Obedience'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/126?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: How superiors can practice Obedience
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '126'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > *UPON THE OBEDIENCE THAT MAY BE PRACTISED BY SUPERIORS.*

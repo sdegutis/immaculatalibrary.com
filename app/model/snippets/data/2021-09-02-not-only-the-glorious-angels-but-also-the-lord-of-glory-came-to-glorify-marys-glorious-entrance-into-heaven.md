@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Not only the Glorious Angels but also The Lord of Glory Himself came to glorify Mary’s Glorious Entrance into Heaven'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/497?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: Not only the Glorious Angels but also The Lord of Glory Himself came to glorify Mary’s Glorious Entrance into Heaven
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '497'
+bookSlug: the-glories-of-mary
 ---
 
 > *First Point.*---After Jesus Christ our Saviour had completed the work of our redemption by his death, the angels earnestly desired to have him with them in their heavenly country; hence they were continually supplicating him, repeating the words of David: "Arise, oh Lord, into thy resting-place, thou and the ark which thou hast sanctified."

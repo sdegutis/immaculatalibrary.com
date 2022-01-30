@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Prayers and Resolutions for Purity and Chastity'
-archiveLink: 'https://archive.org/details/st.-josephs-life-virtues-privileges-power/page/326?view=theater'
-bookSlug: 'st-joseph-life-his-virtues-his-privileges-his-power'
+title: Prayers and Resolutions for Purity and Chastity
+archiveSlug: st.-josephs-life-virtues-privileges-power
+archivePage: '326'
+bookSlug: st-joseph-life-his-virtues-his-privileges-his-power
 ---
 
 > ### *Practical Resolution.*

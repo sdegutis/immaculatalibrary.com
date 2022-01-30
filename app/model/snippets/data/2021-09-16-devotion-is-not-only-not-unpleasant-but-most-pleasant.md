@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Devotion is not only not unpleasant, but most pleasant'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/3?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: Devotion is not only not unpleasant, but most pleasant
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '3'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > CHAPTER II.

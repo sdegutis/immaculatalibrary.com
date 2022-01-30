@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'God entrusted the Blessed Virgin to one man'
-archiveLink: 'https://archive.org/details/st.-josephs-life-virtues-privileges-power/page/187?view=theater'
-bookSlug: 'st-joseph-life-his-virtues-his-privileges-his-power'
+title: God entrusted the Blessed Virgin to one man
+archiveSlug: st.-josephs-life-virtues-privileges-power
+archivePage: '187'
+bookSlug: st-joseph-life-his-virtues-his-privileges-his-power
 ---
 
 > Nothing that the infinite power, wisdom, and love of God could do, in a sense, were wanting to sanctify, purify, and beautify the soul of Mary in honour of the Incarnation; hence perfect sinlessness, perfect purity, perfect immaculateness, perfect union with and love of God, were her unique privileges at her Conception and during her whole life. The Almighty was pleased, if we may so speak, with the work of His hands, and no doubt, watched over Mary with a jealous care.

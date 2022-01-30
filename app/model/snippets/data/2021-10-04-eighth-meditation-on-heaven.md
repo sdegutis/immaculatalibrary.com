@@ -1,8 +1,9 @@
 ---
 published: true
 title: 'Eighth Meditation: On Heaven'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/30?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '30'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > CHAPTER XVI.

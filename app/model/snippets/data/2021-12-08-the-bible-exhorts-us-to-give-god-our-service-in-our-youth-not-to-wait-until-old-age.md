@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The Bible exhorts us to give God our service in our youth, not to wait until old age'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/247?view=theater'
-bookSlug: 'the-sinners-guide'
+title: The Bible exhorts us to give God our service in our youth, not to wait until old age
+archiveSlug: sinnersguide00luis
+archivePage: '247'
+bookSlug: the-sinners-guide
 ---
 
 > I shall conclude this chapter with a passage from Ecclesiastes in which man is exhorted to give himself to the service of his Creator in his youth, and not to defer it till old age, the infirmities of which are described under curious and admirable figures:

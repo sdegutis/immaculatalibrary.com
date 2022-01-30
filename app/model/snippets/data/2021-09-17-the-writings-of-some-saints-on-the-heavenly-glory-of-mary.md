@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The Writings of some Saints on the Heavenly Glory of Mary'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/509?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: The Writings of some Saints on the Heavenly Glory of Mary
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '509'
+bookSlug: the-glories-of-mary
 ---
 
 > Thus as the splendor of the sun exceeds the splendor of all stars united, so, says St. Basil, the glory of the divine mother exceeds that of all the blessed.

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Judging whether our neighbor has the habits of virtue or vice'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/93?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: Judging whether our neighbor has the habits of virtue or vice
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '93'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > *Upon Hasty Judgments.*

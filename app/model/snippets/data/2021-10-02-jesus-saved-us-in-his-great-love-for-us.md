@@ -1,8 +1,9 @@
 ---
 published: true
 title: 'Good Friday Meditation: Jesus saved us in His Great Love for us'
-archiveLink: 'https://archive.org/details/meditationsdevot00newmuoft/page/196?view=theater'
-bookSlug: 'meditations-and-devotions'
+archiveSlug: meditationsdevot00newmuoft
+archivePage: '196'
+bookSlug: meditations-and-devotions
 ---
 
 > JESUS THE LOVER OF SOULS

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'How we should do Holy Reading'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/77?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: How we should do Holy Reading
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '77'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > Chapter XVII.

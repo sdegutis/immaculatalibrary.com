@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Mary’s consecration was prompt and without delay'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/393?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: Mary’s consecration was prompt and without delay
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '393'
+bookSlug: the-glories-of-mary
 ---
 
 > DISCOURSE III.

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Examples of St. Francis de Sales’ humility.'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/147?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: Examples of St. Francis de Sales’ humility.
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '147'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > *UPON OUR SAINT’S HUMILITY.*

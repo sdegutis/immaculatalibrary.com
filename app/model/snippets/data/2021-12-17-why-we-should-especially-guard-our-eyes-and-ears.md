@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Why we should especially guard our eyes and ears'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/405?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Why we should especially guard our eyes and ears
+archiveSlug: sinnersguide00luis
+archivePage: '405'
+bookSlug: the-sinners-guide
 ---
 
 > Section IV.

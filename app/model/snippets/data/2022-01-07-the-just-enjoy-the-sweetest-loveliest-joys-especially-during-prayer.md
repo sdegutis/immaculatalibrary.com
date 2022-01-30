@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The Just enjoy the sweetest, loveliest joys especially during Prayer'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/160?view=theater'
-bookSlug: 'the-sinners-guide'
+title: The Just enjoy the sweetest, loveliest joys especially during Prayer
+archiveSlug: sinnersguide00luis
+archivePage: '160'
+bookSlug: the-sinners-guide
 ---
 
 > That it is particularly in prayer that just souls enjoy these divine consolations is a truth we now wish to prove.

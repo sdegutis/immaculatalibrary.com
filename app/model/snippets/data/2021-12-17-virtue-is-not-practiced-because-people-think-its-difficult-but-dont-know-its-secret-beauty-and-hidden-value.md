@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Virtue is not practiced because people think it’s difficult, but don’t know its secret beauty and hidden value'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/123?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Virtue is not practiced because people think it’s difficult, but don’t know its secret beauty and hidden value
+archiveSlug: sinnersguide00luis
+archivePage: '123'
+bookSlug: the-sinners-guide
 ---
 
 > To destroy this serious error I know nothing better than the touching words of our Saviour weeping over Jerusalem: "If thou also hadst known, and that in this thy day, the things that are for thy peace; but now they are hidden from thy eyes." [St. Luke xix. 42.]

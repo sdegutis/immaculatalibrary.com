@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The Fathers of the Church on the healing of Simon Peter’s mother-in-law'
-archiveLink: 'https://archive.org/details/catenaaureacomm02thom/page/n38?view=theater'
-bookSlug: 'catena-aurea'
+title: The Fathers of the Church on the healing of Simon Peter’s mother-in-law
+archiveSlug: catenaaureacomm02thom
+archivePage: n38
+bookSlug: catena-aurea
 ---
 
 >> 29\. And forthwith, when they were come out of the synagogue, they entered into the house of Simon and Andrew, with James and John.

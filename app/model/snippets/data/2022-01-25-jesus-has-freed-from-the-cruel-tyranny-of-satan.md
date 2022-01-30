@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Jesus has freed us from the cruel tyranny of Satan'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/190?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Jesus has freed us from the cruel tyranny of Satan
+archiveSlug: sinnersguide00luis
+archivePage: '190'
+bookSlug: the-sinners-guide
 ---
 
 > From this miserable slavery the Son of God has delivered us. By the superabundant grace of God we have been redeemed; by the sacrifice of the cross we have been purchased.

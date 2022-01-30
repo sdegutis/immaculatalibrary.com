@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'We must trust both in God’s goodness and our weakness'
-archiveLink: 'https://archive.org/details/the-spiritual-combat-dornin-edition/page/110?view=theater'
-bookSlug: 'the-spiritual-combat'
+title: We must trust both in God’s goodness and our weakness
+archiveSlug: the-spiritual-combat-dornin-edition
+archivePage: '110'
+bookSlug: the-spiritual-combat
 ---
 
 > When I say ready compliance, I would not be understood to mean mere desires, or feeble and barren resolutions, by which so many are deceived, for the following reasons:

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'We are inclined against Virtue because of the Fall of Man'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/272?view=theater'
-bookSlug: 'the-sinners-guide'
+title: We are inclined against Virtue because of the Fall of Man
+archiveSlug: sinnersguide00luis
+archivePage: '272'
+bookSlug: the-sinners-guide
 ---
 
 > CHAPTER XXVII.

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'This Book presents Catholic Teachings simply Rearranged as a Bouquet'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/n8?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: This Book presents Catholic Teachings simply Rearranged as a Bouquet
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: n8
+bookSlug: introduction-to-the-devout-life
 ---
 
 > Dear reader, I pray you to read this Preface for your satisfaction and for mine.

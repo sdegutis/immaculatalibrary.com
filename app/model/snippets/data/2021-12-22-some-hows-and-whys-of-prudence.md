@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Some Hows and Whys of Prudence'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/416?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Some Hows and Whys of Prudence
+archiveSlug: sinnersguide00luis
+archivePage: '416'
+bookSlug: the-sinners-guide
 ---
 
 > *Section IX.*

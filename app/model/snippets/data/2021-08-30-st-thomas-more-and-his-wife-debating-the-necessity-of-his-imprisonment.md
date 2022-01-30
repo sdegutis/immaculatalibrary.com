@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Thomas More and his wife debating the necessity of his imprisonment'
-archiveLink: 'https://archive.org/details/lifeofsirthomasm00ropeuoft/page/81?view=theater'
-bookSlug: 'life-of-sir-thomas-more-by-william-roper'
+title: St. Thomas More and his wife debating the necessity of his imprisonment
+archiveSlug: lifeofsirthomasm00ropeuoft
+archivePage: '81'
+bookSlug: life-of-sir-thomas-more-by-william-roper
 ---
 
 > When Sir Thomas More had continued a good while in the Tower, my lady, his wife, obtained license to see him. Who, at her first coming, like a simple ignorant woman, and somewhat worldly too, with this manner of salutation bluntly saluted him:

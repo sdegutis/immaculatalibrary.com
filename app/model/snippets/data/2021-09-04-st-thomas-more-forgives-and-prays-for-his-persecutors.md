@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Thomas More forgives and prays for his persecutors'
-archiveLink: 'https://archive.org/details/lifeofsirthomasm00ropeuoft/page/94?view=theater'
-bookSlug: 'life-of-sir-thomas-more-by-william-roper'
+title: St. Thomas More forgives and prays for his persecutors
+archiveSlug: lifeofsirthomasm00ropeuoft
+archivePage: '94'
+bookSlug: life-of-sir-thomas-more-by-william-roper
 ---
 
 > Now when Sir Thomas More for the avoiding of the indictment had taken as many exceptions as he thought meet, and many more reasons than I can now remember alleged, the Lord Chancellor, loth to have the burden of the judgment wholly to depend upon himself, there openly asked the advice of the Lord Fitzjames, then Lord Chief Justice of the King's Bench, and joined in commission with him, whether this indictment were sufficient or not.

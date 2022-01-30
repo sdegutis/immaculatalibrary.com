@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'How to receive Holy Communion well'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/87?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: How to receive Holy Communion well
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '87'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > Chapter XXI.

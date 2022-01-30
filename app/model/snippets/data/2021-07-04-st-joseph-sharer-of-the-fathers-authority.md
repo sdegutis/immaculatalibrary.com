@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Joseph, sharer of the Father’s Authority'
-archiveLink: 'https://archive.org/details/lifegloriesofstj00thomuoft/page/359?view=theater'
-bookSlug: 'the-life-and-glories-of-st-joseph'
+title: St. Joseph, sharer of the Father’s Authority
+archiveSlug: lifegloriesofstj00thomuoft
+archivePage: '359'
+bookSlug: the-life-and-glories-of-st-joseph
 ---
 
 > The Son of God once declared that He came, "not to be ministered unto but to minister"; at another time He said, "I am in the midst of you as he that serveth"; and of this He gave a striking example before the last supper which He ate with His Apostles, when He took a towel, and girded Himself, and washed their feet; but for eighteen years He had performed the lowliest offices in the House of Nazareth.

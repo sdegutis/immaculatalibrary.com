@@ -1,8 +1,9 @@
 ---
 published: true
 title: 'Annual Retreat Exercise #1: The effects of God’s grace in our souls should make us more grateful and loving of God'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/265?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '265'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > Consider the effects of this vocation, and comparing what you now are with what you have been, you will doubtless find in yourself a great change for the better.

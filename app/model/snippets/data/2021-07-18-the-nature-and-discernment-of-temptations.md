@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The nature and discernment of temptations'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/224?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: The nature and discernment of temptations
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '224'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > ### CHAPTER III.

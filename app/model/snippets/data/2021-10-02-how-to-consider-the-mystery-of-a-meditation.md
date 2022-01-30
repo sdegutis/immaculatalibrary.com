@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'How to Consider the Mystery of a Meditation'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/52?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: How to Consider the Mystery of a Meditation
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '52'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > CHAPTER IV.

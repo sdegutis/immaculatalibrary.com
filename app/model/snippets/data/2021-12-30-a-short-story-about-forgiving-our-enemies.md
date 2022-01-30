@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'A short story about Forgiving our Enemies'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/101?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: A short story about Forgiving our Enemies
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '101'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > *UPON FORGIVING OUR ENEMIES.*

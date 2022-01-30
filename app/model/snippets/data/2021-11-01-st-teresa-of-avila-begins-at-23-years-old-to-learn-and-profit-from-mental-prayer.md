@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Teresa of Avila begins, at 23 years old, to learn and profit from mental prayer'
-archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/21?view=theater'
-bookSlug: 'life-of-st-teresa-of-avila'
+title: St. Teresa of Avila begins, at 23 years old, to learn and profit from mental prayer
+archiveSlug: lifeofstteresaof00tereuoft
+archivePage: '21'
+bookSlug: life-of-st-teresa-of-avila
 ---
 
 > From the very beginning, God was most gracious unto me. Though I was not so free from sin as the book required, I passed that by; such watchfulness seemed to me almost impossible. I was on my guard against mortal sin---and would to God I had always been so!---but I was careless about venial sins, and that was my ruin.

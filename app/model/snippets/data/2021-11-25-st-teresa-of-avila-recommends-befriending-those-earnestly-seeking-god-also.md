@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Teresa of Avila recommends befriending those earnestly seeking God also'
-archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/53?view=theater'
-bookSlug: 'life-of-st-teresa-of-avila'
+title: St. Teresa of Avila recommends befriending those earnestly seeking God also
+archiveSlug: lifeofstteresaof00tereuoft
+archivePage: '53'
+bookSlug: life-of-st-teresa-of-avila
 ---
 
 > O my God! if I might, I would speak of the occasions from which God delivered me, and how I threw myself into them again; and of the risks I ran of losing utterly my good name, from which He delivered me.

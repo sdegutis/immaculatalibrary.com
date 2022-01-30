@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Confession turns the Ugliness of Sin into the Beauty of Humility'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/36?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: Confession turns the Ugliness of Sin into the Beauty of Humility
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '36'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > CHAPTER XIX.

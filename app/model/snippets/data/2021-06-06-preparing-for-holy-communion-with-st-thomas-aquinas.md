@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Preparation for Holy Communion'
-archiveLink: 'https://archive.org/details/breadoflifeorstt00thomuoft/page/106?view=theater'
-bookSlug: 'the-bread-of-life-st-thomas-aquinas-on-the-adorable-sacrament-of-the-altar'
+title: Preparation for Holy Communion
+archiveSlug: breadoflifeorstt00thomuoft
+archivePage: '106'
+bookSlug: the-bread-of-life-st-thomas-aquinas-on-the-adorable-sacrament-of-the-altar
 ---
 
 > This Body of Jesus is a Body of the greatest purity. It is full of the living God, and hypostatically united to Him. For receiving it therefore we must with great care make ourselves ready by three things.

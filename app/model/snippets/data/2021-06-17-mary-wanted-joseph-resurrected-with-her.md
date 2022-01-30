@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Mary wanted Joseph resurrected with her'
-archiveLink: 'https://archive.org/details/lifegloriesofstj00thomuoft/page/421?view=theater'
-bookSlug: 'the-life-and-glories-of-st-joseph'
+title: Mary wanted Joseph resurrected with her
+archiveSlug: lifegloriesofstj00thomuoft
+archivePage: '421'
+bookSlug: the-life-and-glories-of-st-joseph
 ---
 
 **Note:** This book does not have any approbations (Nihil obstat and Imprimatur). However, this snippet is included here because the points made seem reasonable and worthy of belief to the editor of ImmaculataLibrary.com. But they are not matters of faith, and are at the reader's discretion to accept or reject.

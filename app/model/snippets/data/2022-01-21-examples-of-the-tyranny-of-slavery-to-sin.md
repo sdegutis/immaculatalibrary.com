@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Examples of the Tyranny of Slavery to Sin'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/184?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Examples of the Tyranny of Slavery to Sin
+archiveSlug: sinnersguide00luis
+archivePage: '184'
+bookSlug: the-sinners-guide
 ---
 
 > If you would know the power of this tyranny you have only to consider the evils it has wrought since the beginning of the world.

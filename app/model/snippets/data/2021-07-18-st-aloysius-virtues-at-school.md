@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Aloysius’s virtues at school'
-archiveLink: 'https://archive.org/details/lifeofstaloysius00ocon/page/75?view=theater'
-bookSlug: 'life-of-st-aloysius-gonzaga'
+title: St. Aloysius’s virtues at school
+archiveSlug: lifeofstaloysius00ocon
+archivePage: '75'
+bookSlug: life-of-st-aloysius-gonzaga
 ---
 
 > Of all the periods in the life of man the most important, the one on which depend the highest interests, is the time of youth. The child, it is true, forms many habits which give shape to his future, but he can scarcely be said to realize the meaning and the purpose of his existence. He lives in the atmosphere of innocence and even after reason has sway, he beholds in life a certain amount of fable and fiction. He is mystified; he wonders; but he does not totally comprehend the value of life.

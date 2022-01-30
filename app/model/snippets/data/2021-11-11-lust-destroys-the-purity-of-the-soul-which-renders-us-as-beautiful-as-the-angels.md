@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Lust destroys the purity of the soul which renders us as beautiful as the Angels'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/347?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Lust destroys the purity of the soul which renders us as beautiful as the Angels
+archiveSlug: sinnersguide00luis
+archivePage: '347'
+bookSlug: the-sinners-guide
 ---
 
 > Consider also the nobility and the value of virginal purity, which this vice destroys.

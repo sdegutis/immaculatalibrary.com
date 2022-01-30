@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'A story from St. Gregory’s Dialogues to encourage us to guard against Lust'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/351'
-bookSlug: 'the-sinners-guide'
+title: A story from St. Gregory’s Dialogues to encourage us to guard against Lust
+archiveSlug: sinnersguide00luis
+archivePage: '351'
+bookSlug: the-sinners-guide
 ---
 
 > But, as one of the most important remedies is avoiding dangerous occasions, we shall give an example from the "Dialogues" of St. Gregory to show you with what prudence holy souls guard this angelic virtue.

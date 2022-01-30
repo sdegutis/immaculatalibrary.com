@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Teresa of Avila admits how little she deserves God’s mercy and grace for having so long wasted them'
-archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/18?view=theater'
-bookSlug: 'life-of-st-teresa-of-avila'
+title: St. Teresa of Avila admits how little she deserves God’s mercy and grace for having so long wasted them
+archiveSlug: lifeofstteresaof00tereuoft
+archivePage: '18'
+bookSlug: life-of-st-teresa-of-avila
 ---
 
 > O supreme Good, and my Rest, those graces ought to have been enough which Thou hadst given me hitherto, seeing that Thy compassion and greatness had drawn me through so many windings to a state so secure, to a house where there are so many servants of God, from whom I might learn how I may advance in Thy service.

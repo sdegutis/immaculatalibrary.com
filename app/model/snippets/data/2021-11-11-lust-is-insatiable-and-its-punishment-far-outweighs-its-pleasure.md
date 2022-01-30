@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Lust is insatiable, and its punishment far outweighs its pleasure'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/346?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Lust is insatiable, and its punishment far outweighs its pleasure
+archiveSlug: sinnersguide00luis
+archivePage: '346'
+bookSlug: the-sinners-guide
 ---
 
 > Consider, farther, that the more you indulge in these infamous gratifications, the more insatiable will be your desire for them, the less they will satisfy you. It is the nature of these pleasures to excite the appetite rather than appease it.

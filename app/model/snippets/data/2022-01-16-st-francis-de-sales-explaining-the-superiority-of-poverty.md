@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Francis de Sales explaining the superiority of poverty'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/134?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: St. Francis de Sales explaining the superiority of poverty
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '134'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > UPON THE SAME SUBJECT.

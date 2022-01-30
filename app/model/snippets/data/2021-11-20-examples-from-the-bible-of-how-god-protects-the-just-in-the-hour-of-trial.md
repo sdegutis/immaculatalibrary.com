@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Examples from the Bible of how God protects the Just in the hour of trial'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/212?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Examples from the Bible of how God protects the Just in the hour of trial
+archiveSlug: sinnersguide00luis
+archivePage: '212'
+bookSlug: the-sinners-guide
 ---
 
 > Hence the calmness and fortitude of the just under suffering. They are strong in the protection of a powerful Friend who constantly watches over them.

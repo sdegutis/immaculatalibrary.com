@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The Holy Spirit brings us Understanding'
-archiveLink: 'https://archive.org/details/fountainofliving00andr/page/205?view=theater'
-bookSlug: 'fountain-of-living-water'
+title: The Holy Spirit brings us Understanding
+archiveSlug: fountainofliving00andr
+archivePage: '205'
+bookSlug: fountain-of-living-water
 ---
 
 > AUGUST 30

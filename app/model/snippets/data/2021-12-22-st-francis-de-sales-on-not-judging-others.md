@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Francis de Sales on not judging others'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/86?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: St. Francis de Sales on not judging others
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '86'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > *UPON NOT JUDGING OTHERS.*

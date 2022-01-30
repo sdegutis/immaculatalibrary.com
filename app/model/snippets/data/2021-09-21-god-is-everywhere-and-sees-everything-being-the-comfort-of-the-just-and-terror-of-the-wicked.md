@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'God is everywhere and sees everything, being the comfort of the just, and terror of the wicked'
-archiveLink: 'https://archive.org/details/st.-josephs-life-virtues-privileges-power/page/364?view=theater'
-bookSlug: 'st-joseph-life-his-virtues-his-privileges-his-power'
+title: God is everywhere and sees everything, being the comfort of the just, and terror of the wicked
+archiveSlug: st.-josephs-life-virtues-privileges-power
+archivePage: '364'
+bookSlug: st-joseph-life-his-virtues-his-privileges-his-power
 ---
 
 > `Twentieth Meditation.`

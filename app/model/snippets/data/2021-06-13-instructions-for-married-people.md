@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Instructions for Married People'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/204?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: Instructions for Married People
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '204'
+bookSlug: introduction-to-the-devout-life
 ---
 
 This is part of an [Anthology of the Saints](/anthologies.html) on [Friendship, Love, and Marriage](/anthologies/friendship-love-and-marriage.html).

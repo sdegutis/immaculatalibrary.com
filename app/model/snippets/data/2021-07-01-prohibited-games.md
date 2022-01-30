@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Prohibited Games'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/191?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: Prohibited Games
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '191'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > Chapter XXXII.

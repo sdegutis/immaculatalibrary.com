@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Joseph is given to us as a new Joseph over all God’s house'
-archiveLink: 'https://archive.org/details/st.-josephs-life-virtues-privileges-power/page/349?view=theater'
-bookSlug: 'st-joseph-life-his-virtues-his-privileges-his-power'
+title: St. Joseph is given to us as a new Joseph over all God’s house
+archiveSlug: st.-josephs-life-virtues-privileges-power
+archivePage: '349'
+bookSlug: st-joseph-life-his-virtues-his-privileges-his-power
 ---
 
 > "Go to Joseph, and do all that he shall say to you" (Gen. xli. 55).

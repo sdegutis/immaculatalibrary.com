@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Some considerations to encourage us in our sufferings'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/447?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Some considerations to encourage us in our sufferings
+archiveSlug: sinnersguide00luis
+archivePage: '447'
+bookSlug: the-sinners-guide
 ---
 
 > Consider also the sufferings which our Saviour endured from creatures.

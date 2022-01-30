@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'True and False Justice before God'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/462?view=theater'
-bookSlug: 'the-sinners-guide'
+title: True and False Justice before God
+archiveSlug: sinnersguide00luis
+archivePage: '462'
+bookSlug: the-sinners-guide
 ---
 
 > *Section IV.*

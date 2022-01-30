@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The state of those in Slavery to Sin'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/188?view=theater'
-bookSlug: 'the-sinners-guide'
+title: The state of those in Slavery to Sin
+archiveSlug: sinnersguide00luis
+archivePage: '188'
+bookSlug: the-sinners-guide
 ---
 
 > Can there be a more terrible slavery? We call a man a captive who is placed in prison and bound with chains, but his bondage does not equal that of a man whose soul is the slave of an inordinate affection.

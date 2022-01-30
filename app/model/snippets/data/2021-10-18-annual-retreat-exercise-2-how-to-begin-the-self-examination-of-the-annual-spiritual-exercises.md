@@ -1,8 +1,9 @@
 ---
 published: true
 title: 'Annual Retreat Exercise #2: How to begin the self-examination of the annual spiritual exercises'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/267?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '267'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > To begin then this examination properly:

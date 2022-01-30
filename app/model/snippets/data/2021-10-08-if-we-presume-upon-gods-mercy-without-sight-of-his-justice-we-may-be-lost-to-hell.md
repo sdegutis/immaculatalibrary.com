@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'If we presume upon God’s Mercy without sight of His Justice, we may be lost to Hell'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/270?view=theater'
-bookSlug: 'the-sinners-guide'
+title: If we presume upon God’s Mercy without sight of His Justice, we may be lost to Hell
+archiveSlug: sinnersguide00luis
+archivePage: '270'
+bookSlug: the-sinners-guide
 ---
 
 > Tremble for your salvation, and, while always maintaining an unshaken hope, have no less fear of hell. You have no reason to expect that God should treat you differently from other men. Bear in mind the law of His justice, as it has been explained, and so live that you may never expose yourself to its terrible effects here and hereafter.

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'How we ought to receive Inspirations'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/78?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: How we ought to receive Inspirations
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '78'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > Chapter XVIII.

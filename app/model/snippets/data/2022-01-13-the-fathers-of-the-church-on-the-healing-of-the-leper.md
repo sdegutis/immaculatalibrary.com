@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The Fathers of the Church on the healing of the leper'
-archiveLink: 'https://archive.org/details/catenaaureacomm02thom/page/n43?view=theater'
-bookSlug: 'catena-aurea'
+title: The Fathers of the Church on the healing of the leper
+archiveSlug: catenaaureacomm02thom
+archivePage: n43
+bookSlug: catena-aurea
 ---
 
 >> 40\. And there came a leper to him, beseeching him, and kneeling down to him, and saying unto him, If thou wilt, thou canst make me clean.

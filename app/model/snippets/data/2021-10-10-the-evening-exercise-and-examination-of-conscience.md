@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The Evening Exercise and Examination of Conscience'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/62?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: The Evening Exercise and Examination of Conscience
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '62'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > CHAPTER XI.

@@ -12,7 +12,8 @@ export class Snippet {
     const data = loadContentFile<{
       published: boolean,
       title: string,
-      archiveLink: string,
+      archiveSlug: string,
+      archivePage: string,
       bookSlug: string,
     }>(file, 'date-slug');
 
@@ -23,7 +24,8 @@ export class Snippet {
       data.markdownContent,
       data.meta.published,
       data.meta.title,
-      data.meta.archiveLink,
+      data.meta.archiveSlug,
+      data.meta.archivePage,
       data.meta.bookSlug,
     );
   }
@@ -31,6 +33,7 @@ export class Snippet {
   view;
   clone;
 
+  archiveLink;
   public previewMarkdown;
   constructor(
     private file: FsFile,
@@ -39,7 +42,8 @@ export class Snippet {
     public markdownContent: string,
     public published: boolean,
     public title: string,
-    public archiveLink: string,
+    public archiveSlug: string,
+    public archivePage: string,
     public bookSlug: string,
   ) {
     this.previewMarkdown = this.derivePreview(2000);
@@ -49,6 +53,8 @@ export class Snippet {
 
     this.book = allBooks.find(book => book.slug.includes(this.bookSlug))!;
     this.book.snippets.push(this);
+
+    this.archiveLink = `https://archive.org/details/${archiveSlug}/page/${archivePage}?view=theater`;
 
     allSnippets?.unshift(this);
   }
@@ -72,7 +78,8 @@ export class Snippet {
     saveContentFile(this.file, {
       published: this.published,
       title: this.title,
-      archiveLink: this.archiveLink,
+      archiveSlug: this.archiveSlug,
+      archivePage: this.archivePage,
       bookSlug: this.bookSlug,
     }, this.markdownContent);
   }
@@ -84,7 +91,8 @@ export class Snippet {
   }
 
   static create(newData: {
-    archiveLink: string,
+    archiveSlug: string,
+    archivePage: string,
     slug: string,
     bookSlug: string,
     title: string,
@@ -94,7 +102,8 @@ export class Snippet {
     const header = Yaml.dump({
       published: true,
       title: newData.title,
-      archiveLink: newData.archiveLink,
+      archiveSlug: newData.archiveSlug,
+      archivePage: newData.archivePage,
       bookSlug: newData.bookSlug,
     });
     const buffer = Buffer.from(`---\n${header}---\n\n${newData.markdownContent}`);

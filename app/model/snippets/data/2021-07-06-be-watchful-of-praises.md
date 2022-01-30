@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Be watchful of praises'
-archiveLink: 'https://archive.org/details/minorworksofstte00tere/page/131?view=theater'
-bookSlug: 'minor-works-of-st-teresa-of-avila'
+title: Be watchful of praises
+archiveSlug: minorworksofstte00tere
+archivePage: '131'
+bookSlug: minor-works-of-st-teresa-of-avila
 ---
 
 > It is needless for me to warn you against the earthly peace which comes from honours, because the poor never meet with much honour. However, unless you are careful, praise from others may harm you greatly, for when once it begins it never ceases, and generally ends in running you down afterwards. This usually takes the form of telling you that you are more holy than others, and such-like flattering speeches which seem to have been inspired by the devil. Indeed, they must be, sometimes, for if they were said in your absence it would not matter, but when uttered in your hearing, what other fruit can they produce but evil, unless you are most wary?

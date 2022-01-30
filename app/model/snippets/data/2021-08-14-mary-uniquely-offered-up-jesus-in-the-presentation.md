@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Mary uniquely offered up Jesus in the Presentation'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/457?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: Mary uniquely offered up Jesus in the Presentation
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '457'
+bookSlug: the-glories-of-mary
 ---
 
 > *The great sacrifice which Mary this day made to God in offering him the life of her Son.*

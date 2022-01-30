@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'How Mary protects those souls devoted to her'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/432?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: How Mary protects those souls devoted to her
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '432'
+bookSlug: the-glories-of-mary
 ---
 
 > A well-known incident is related by Father Paul Segneri in his "Christian Instructed."

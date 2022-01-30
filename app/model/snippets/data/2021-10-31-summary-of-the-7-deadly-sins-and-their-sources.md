@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Summary of the 7 Deadly Sins and their sources'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/323?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Summary of the 7 Deadly Sins and their sources
+archiveSlug: sinnersguide00luis
+archivePage: '323'
+bookSlug: the-sinners-guide
 ---
 
 > ### CHAPTER XXX.

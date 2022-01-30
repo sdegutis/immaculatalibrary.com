@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Teresa of Avila’s lost devotion begins to return during her stay in the monastery'
-archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/12?view=theater'
-bookSlug: 'life-of-st-teresa-of-avila'
+title: St. Teresa of Avila’s lost devotion begins to return during her stay in the monastery
+archiveSlug: lifeofstteresaof00tereuoft
+archivePage: '12'
+bookSlug: life-of-st-teresa-of-avila
 ---
 
 > CHAPTER III.

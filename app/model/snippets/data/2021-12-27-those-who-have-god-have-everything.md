@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Those who have God have everything'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/139?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Those who have God have everything
+archiveSlug: sinnersguide00luis
+archivePage: '139'
+bookSlug: the-sinners-guide
 ---
 
 > What are all the promises of the world compared to the assurance and hopes contained in these blessed titles?

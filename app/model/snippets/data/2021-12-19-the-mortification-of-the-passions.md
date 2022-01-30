@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The Mortification of the Passions'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/409?view=theater'
-bookSlug: 'the-sinners-guide'
+title: The Mortification of the Passions
+archiveSlug: sinnersguide00luis
+archivePage: '409'
+bookSlug: the-sinners-guide
 ---
 
 > *Section VI.*

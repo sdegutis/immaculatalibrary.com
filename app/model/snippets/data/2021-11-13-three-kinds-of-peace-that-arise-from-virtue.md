@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Three kinds of peace that arise from Virtue'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/195?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Three kinds of peace that arise from Virtue
+archiveSlug: sinnersguide00luis
+archivePage: '195'
+bookSlug: the-sinners-guide
 ---
 
 > CHAPTER XIX.

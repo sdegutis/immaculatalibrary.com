@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Man’s Duty to his Neighbor is Charity and Mercy'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/423?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Man’s Duty to his Neighbor is Charity and Mercy
+archiveSlug: sinnersguide00luis
+archivePage: '423'
+bookSlug: the-sinners-guide
 ---
 
 > *CHAPTER XLI.*

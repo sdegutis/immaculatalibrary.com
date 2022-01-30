@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Priest spared death through love of Mary'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/708?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: Priest spared death through love of Mary
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '708'
+bookSlug: the-glories-of-mary
 ---
 
 > 55.---When St. Francis Borgia was in Rome, an ecclesiastic came to speak with him; but the saint being much occupied, sent Father Acosta to him. The ecclesiastic said to him: "Father, I am a priest and a preacher, but I live in sin, and distrust the divine mercy.

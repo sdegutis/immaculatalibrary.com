@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Mary’s glory is not dimmed by sin or lacking in potential merit'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/506?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: Mary’s glory is not dimmed by sin or lacking in potential merit
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '506'
+bookSlug: the-glories-of-mary
 ---
 
 > The works of Mary, as St. Ildephonsus says, certainly incomparably surpassed in merit the works of all the saints, and therefore the reward and the glory she merited cannot be conceived.

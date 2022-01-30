@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Advice for drinking alcohol and against using drugs'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/402?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Advice for drinking alcohol and against using drugs
+archiveSlug: sinnersguide00luis
+archivePage: '402'
+bookSlug: the-sinners-guide
 ---
 
 > Though this great prudence is necessary in eating, how much more is required in drinking!

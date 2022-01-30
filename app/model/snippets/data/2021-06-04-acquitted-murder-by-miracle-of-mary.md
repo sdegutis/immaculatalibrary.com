@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Acquitted murder by miracle of Mary'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/695?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: Acquitted murder by miracle of Mary
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '695'
+bookSlug: the-glories-of-mary
 ---
 
 > 26.---A member of the brothers of the confraternity of Mary was invited one morning by a friend to dine with him. He promised to go but went first to the meeting of the confraternity, and after that he forgot his promise.

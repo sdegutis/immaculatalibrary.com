@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Prayer is necessary for our salvation'
-archiveLink: 'https://archive.org/details/st.-josephs-life-virtues-privileges-power/page/328?view=theater'
-bookSlug: 'st-joseph-life-his-virtues-his-privileges-his-power'
+title: Prayer is necessary for our salvation
+archiveSlug: st.-josephs-life-virtues-privileges-power
+archivePage: '328'
+bookSlug: st-joseph-life-his-virtues-his-privileges-his-power
 ---
 
 > "Without me you can do nothing" (John, xv. 5).

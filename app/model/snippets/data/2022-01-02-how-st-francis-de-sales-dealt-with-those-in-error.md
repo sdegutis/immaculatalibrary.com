@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'How St. Francis de Sales dealt with those in error'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/106?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: How St. Francis de Sales dealt with those in error
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '106'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > To come now to the particulars which I promised you, let me tell you how our Blessed Father, having read in St. Augustine's works and in those of other ancient Fathers that in the early centuries Christian Priests, in addressing heretics and schismatics, did not hesitate to call them their brethren, inferred that he might quite lawfully follow so great an example.

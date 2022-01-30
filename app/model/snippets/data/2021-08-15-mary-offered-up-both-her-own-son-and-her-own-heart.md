@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Mary offered up both her own Son and her own Heart'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/459?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: Mary offered up both her own Son and her own Heart
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '459'
+bookSlug: the-glories-of-mary
 ---
 
 > The eternal Father had already determined to save man, who was lost through sin, and free him from eternal death. But because he wished that, at the same time, his divine justice should not be defrauded of a full and due satisfaction, he did not spare the life of his own Son, already made man in order to redeem man; but he required that he should pay, to its most rigorous extent, the penalty merited by men: "He that spared not even his own Son," says the apostle, "but delivered him up for us all."

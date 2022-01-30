@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Many evil effects of speaking evil of others'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/377?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Many evil effects of speaking evil of others
+archiveSlug: sinnersguide00luis
+archivePage: '377'
+bookSlug: the-sinners-guide
 ---
 
 > The second evil of this vice consists in the threefold injury which it inflicts---namely, on the one who speaks, on him who listens with approval, and on the victim who is assailed in his absence.

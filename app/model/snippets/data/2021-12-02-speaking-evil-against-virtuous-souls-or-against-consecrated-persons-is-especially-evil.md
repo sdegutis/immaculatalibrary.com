@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Speaking evil against virtuous souls, or against consecrated persons, is especially evil'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/380?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Speaking evil against virtuous souls, or against consecrated persons, is especially evil
+archiveSlug: sinnersguide00luis
+archivePage: '380'
+bookSlug: the-sinners-guide
 ---
 
 > But of all detractions, that which is directed against virtuous persons is the most sinful.

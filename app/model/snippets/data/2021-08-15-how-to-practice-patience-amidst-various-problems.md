@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'How to practice Patience amidst various problems'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/100?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: How to practice Patience amidst various problems
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '100'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > Attend to the following advice of St. Gregory:

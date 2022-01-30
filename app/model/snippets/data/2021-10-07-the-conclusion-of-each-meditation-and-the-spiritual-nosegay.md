@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The Conclusion of each Meditation, and the Spiritual Nosegay'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/55?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: The Conclusion of each Meditation, and the Spiritual Nosegay
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '55'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > CHAPTER VII.

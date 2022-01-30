@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Francis de Sales on the Law and the Just Man'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/67?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: St. Francis de Sales on the Law and the Just Man
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '67'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > UPON THE LAW AND THE JUST MAN.

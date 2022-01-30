@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'On prayer, and meditation on the Life and Passion of Jesus'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/46?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: On prayer, and meditation on the Life and Passion of Jesus
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '46'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > CHAPTER I.

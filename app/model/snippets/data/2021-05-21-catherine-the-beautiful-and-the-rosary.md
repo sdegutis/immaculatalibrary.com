@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Catherine the beautiful, and the Rosary'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/684?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: Catherine the beautiful, and the Rosary
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '684'
+bookSlug: the-glories-of-mary
 ---
 
 > 7.---There lived in Rome a woman, called Catherine the beautiful, who led a very sinful life. Hearing St. Dominic once preach on the devotion of the most holy Rosary, she had her name inscribed in the book of the confraternity, and began to recite it, but did not abandon her sinful life.

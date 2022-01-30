@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Lawful and Commendable Pastimes and Recreations'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/190?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: Lawful and Commendable Pastimes and Recreations
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '190'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > Chapter XXXI.

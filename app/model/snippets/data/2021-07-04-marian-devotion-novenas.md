@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Marian Devotion - Novenas'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/650?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: Marian Devotion - Novenas
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '650'
+bookSlug: the-glories-of-mary
 ---
 
 > DEVOTION II. OF NOVENAS.

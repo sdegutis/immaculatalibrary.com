@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Teresa of Avila’s harmful experiences with imprudent and unknowledgeable confessors'
-archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/26?view=theater'
-bookSlug: 'life-of-st-teresa-of-avila'
+title: St. Teresa of Avila’s harmful experiences with imprudent and unknowledgeable confessors
+archiveSlug: lifeofstteresaof00tereuoft
+archivePage: '26'
+bookSlug: life-of-st-teresa-of-avila
 ---
 
 > In the place to which I had gone for my cure lived a priest of good birth and understanding, with some learning, but not much.

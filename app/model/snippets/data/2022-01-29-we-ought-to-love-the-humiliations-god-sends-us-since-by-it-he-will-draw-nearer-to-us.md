@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'We ought to love the humiliations God sends us, since by it He will draw nearer to us'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/152?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: We ought to love the humiliations God sends us, since by it He will draw nearer to us
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '152'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > 3\. Even this did not satisfy him. He was not content with mere natural virtue, but insisted that humility must be christian, given birth to and animated by charity. Otherwise he held it in small esteem, refusing to admit that among christians it suffices to practise virtues in pagan fashion. But what is this infused and supernatural humility? It is to love and delight in one's own humiliation, for the reason that by its means we are able to give glory to God, Who accepts the humility of His servants, but puts far away from His heart the proud in spirit.

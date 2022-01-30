@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Profitable advice on the practice of Meditation'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/56?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: Profitable advice on the practice of Meditation
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '56'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > CHAPTER VIII.

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'How easy and common it is to seriously offend God when speaking of the faults of others'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/376?view=theater'
-bookSlug: 'the-sinners-guide'
+title: How easy and common it is to seriously offend God when speaking of the faults of others
+archiveSlug: sinnersguide00luis
+archivePage: '376'
+bookSlug: the-sinners-guide
 ---
 
 > Section II.

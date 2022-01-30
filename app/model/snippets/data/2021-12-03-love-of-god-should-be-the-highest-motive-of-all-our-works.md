@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Love of God should be the highest motive of all our works'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/55?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: Love of God should be the highest motive of all our works
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '55'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > UPON THE LOVE OF GOD IN GENERAL.

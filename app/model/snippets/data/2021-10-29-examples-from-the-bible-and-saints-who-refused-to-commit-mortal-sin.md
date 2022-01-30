@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Examples from the Bible and Saints who refused to commit mortal sin'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/319?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Examples from the Bible and Saints who refused to commit mortal sin
+archiveSlug: sinnersguide00luis
+archivePage: '319'
+bookSlug: the-sinners-guide
 ---
 
 > Holy Scripture gives us a glorious example of this constancy in the mother of the seven sons, whom she exhorted to die manfully, and whose martyrdom she heroically witnessed before she gave up her own life for the law. [2 Mach. vii.]

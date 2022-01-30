@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Humility in Word vs Deed'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/150?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: Humility in Word vs Deed
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '150'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > *UPON MERE HUMBLENESS OF SPEECH.*

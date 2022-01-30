@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Joseph’s love of silence and silence of love'
-archiveLink: 'https://archive.org/details/lifegloriesofstj00thomuoft/page/384?view=theater'
-bookSlug: 'the-life-and-glories-of-st-joseph'
+title: St. Joseph’s love of silence and silence of love
+archiveSlug: lifegloriesofstj00thomuoft
+archivePage: '384'
+bookSlug: the-life-and-glories-of-st-joseph
 ---
 
 > Heaven is the birth-place and home of love. Its blessed inhabitants love much, love for ever, and love only what is worthy of love.

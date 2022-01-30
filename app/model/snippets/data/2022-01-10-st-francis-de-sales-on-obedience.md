@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Francis de Sales on Obedience'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/124?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: St. Francis de Sales on Obedience
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '124'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > *UPON OBEDIENCE.*

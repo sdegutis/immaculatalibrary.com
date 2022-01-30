@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'How we are to govern the tongue'
-archiveLink: 'https://archive.org/details/the-spiritual-combat-dornin-edition/page/95?view=theater'
-bookSlug: 'the-spiritual-combat'
+title: How we are to govern the tongue
+archiveSlug: the-spiritual-combat-dornin-edition
+archivePage: '95'
+bookSlug: the-spiritual-combat
 ---
 
 > ### Chapter XXIV.

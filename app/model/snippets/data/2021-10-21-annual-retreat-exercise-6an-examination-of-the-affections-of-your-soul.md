@@ -1,8 +1,9 @@
 ---
 published: true
 title: 'Annual Retreat Exercise #6:An examination of the affections of your soul'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/272?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '272'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > CHAPTER VII.

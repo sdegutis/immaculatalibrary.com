@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Being careful but not anxious for our own honor'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/104?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: Being careful but not anxious for our own honor
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '104'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > True goodness is proved like true balm: for as balm, when dropped into water, if it sinks and rests at the bottom, is accounted the most excellent and precious; so if you would know whether a man is truly wise, learned, or generous, observe if his qualifications tend to humility, modesty, and submission, for then they shall be good indeed; but if they swim on the surface, and strive to appear above water, they shall be so much the less true, in proportion as they are high.

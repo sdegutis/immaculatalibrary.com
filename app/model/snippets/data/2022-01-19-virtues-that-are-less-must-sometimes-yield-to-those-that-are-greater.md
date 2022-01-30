@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Virtues that are Less must sometimes yield to those that are Greater'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/461?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Virtues that are Less must sometimes yield to those that are Greater
+archiveSlug: sinnersguide00luis
+archivePage: '461'
+bookSlug: the-sinners-guide
 ---
 
 > *Section III.*

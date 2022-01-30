@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The trap of falsely pious desires, and how to avoid it'
-archiveLink: 'https://archive.org/details/the-spiritual-combat-dornin-edition/page/115?view=theater'
-bookSlug: 'the-spiritual-combat'
+title: The trap of falsely pious desires, and how to avoid it
+archiveSlug: the-spiritual-combat-dornin-edition
+archivePage: '115'
+bookSlug: the-spiritual-combat
 ---
 
 > CHAPTER XXXI.

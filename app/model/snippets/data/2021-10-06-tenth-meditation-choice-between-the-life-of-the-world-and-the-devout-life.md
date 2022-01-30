@@ -1,8 +1,9 @@
 ---
 published: true
 title: 'Tenth Meditation: Choice between the life of the World and the Devout Life'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/34?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '34'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > CHAPTER XVIII.

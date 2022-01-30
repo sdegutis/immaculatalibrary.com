@@ -1,8 +1,9 @@
 ---
 published: true
 title: 'Annual Retreat: We ought every year to renew our good resolutions by the following exercises'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/262?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '262'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > PART THE FIFTH.

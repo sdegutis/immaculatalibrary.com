@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'If we prefer good deeds in secret, our souls will be safer and better rewarded by God'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/441?view=theater'
-bookSlug: 'the-sinners-guide'
+title: If we prefer good deeds in secret, our souls will be safer and better rewarded by God
+archiveSlug: sinnersguide00luis
+archivePage: '441'
+bookSlug: the-sinners-guide
 ---
 
 > Among those acts which we are free to do or not to do some are performed in public, others in secret. The former procure us temporal pleasure or advantage, while the latter bring no such reward.

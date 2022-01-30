@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Aspiring to deep friendship with God'
-archiveLink: 'https://archive.org/details/minorworksofstte00tere/page/134?view=theater'
-bookSlug: 'minor-works-of-st-teresa-of-avila'
+title: Aspiring to deep friendship with God
+archiveSlug: minorworksofstte00tere
+archivePage: '134'
+bookSlug: minor-works-of-st-teresa-of-avila
 ---
 
 > By describing the special peace she asks for in the words, "Let Him kiss me with the kiss of His mouth," the Bride shows that our Lord has other ways of bestowing His peace and friendship. I will describe some of them so that you may see the difference and realise the sublimity of this kind. O great God and Lord of ours! How profound is Thy wisdom! Well might she say: "Let Him kiss me!" Yet it seems as if she might have concluded her petition here, for what is the meaning of "the kiss of His mouth"? Undoubtedly there is no superfluous letter in these words. I do not understand her reason, yet I will write something on the subject; as I said, it matters little if it is not the exact meaning so long as it profits us.

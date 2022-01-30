@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Prayer to the Blessed Virgin who offered her own Son'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/474?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: Prayer to the Blessed Virgin who offered her own Son
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '474'
+bookSlug: the-glories-of-mary
 ---
 
 > *Prayer.*

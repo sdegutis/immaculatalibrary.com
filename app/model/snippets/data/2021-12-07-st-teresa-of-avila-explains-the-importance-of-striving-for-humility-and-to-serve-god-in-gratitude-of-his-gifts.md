@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Teresa of Avila explains the importance of striving for humility and to serve God in gratitude of His gifts'
-archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/73?view=theater'
-bookSlug: 'life-of-st-teresa-of-avila'
+title: St. Teresa of Avila explains the importance of striving for humility and to serve God in gratitude of His gifts
+archiveSlug: lifeofstteresaof00tereuoft
+archivePage: '73'
+bookSlug: life-of-st-teresa-of-avila
 ---
 
 > If, then, it is lawful, and so meritorious, always to remember that we have our being from God, that He has created us out of nothing, that He preserves us, and also to remember all the benefits of His death and Passion, which He suffered long before He made us, for every one of us now alive---why should it not be lawful for me to discern, confess, and consider often that I was once accustomed to speak of vanities, and that now our Lord has given me the grace to speak only of Himself?

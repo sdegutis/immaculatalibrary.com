@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Teresa convinces her father to pray, though she does not pray herself'
-archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/47?view=theater'
-bookSlug: 'life-of-st-teresa-of-avila'
+title: St. Teresa convinces her father to pray, though she does not pray herself
+archiveSlug: lifeofstteresaof00tereuoft
+archivePage: '47'
+bookSlug: life-of-st-teresa-of-avila
 ---
 
 > In those early days, when I was ill, and before I knew how to be of use to myself, I had a very strong desire to further the progress of others: a most common temptation of beginners. With me, however, it had good results. Loving my father so much, I longed to see him in the possession of that good which I seemed to derive myself from prayer.

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Without virtue, tribulations overwhelm us and we act even more self-destructively'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/215?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Without virtue, tribulations overwhelm us and we act even more self-destructively
+archiveSlug: sinnersguide00luis
+archivePage: '215'
+bookSlug: the-sinners-guide
 ---
 
 > But we feel that we have said sufficient to prove that God consoles the just in their sufferings, and therefore we shall next consider the unfortunate condition of the wicked when laboring under affliction.

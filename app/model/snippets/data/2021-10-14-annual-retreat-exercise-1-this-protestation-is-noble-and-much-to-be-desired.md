@@ -1,8 +1,9 @@
 ---
 published: true
 title: 'Annual Retreat Exercise #1: This protestation is noble and much to be desired'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/263?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '263'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > CHAPTER II.

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Hopeless evildoer saved by the Blessed Virgin’s intercession'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/471?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: Hopeless evildoer saved by the Blessed Virgin’s intercession
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '471'
+bookSlug: the-glories-of-mary
 ---
 
 > This example is not recorded in any book, but a priest, a companion of mine, related it to me, as having happened to himself.

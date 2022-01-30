@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Considerations to cure our Envy'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/356?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Considerations to cure our Envy
+archiveSlug: sinnersguide00luis
+archivePage: '356'
+bookSlug: the-sinners-guide
 ---
 
 > Consider, moreover, how envy corrodes the heart, weakens the understanding, destroys all peace of soul, and condemns us to a melancholy and intolerable existence.

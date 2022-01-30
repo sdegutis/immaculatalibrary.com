@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'He who desires graces must have recourse to Mary'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/437?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: He who desires graces must have recourse to Mary
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '437'
+bookSlug: the-glories-of-mary
 ---
 
 > *Point First.*---After the holy Virgin had heard from the archangel St. Gabriel, that her cousin Elizabeth had been six months pregnant, she was interiorly enlightened by the Holy Spirit to know that the Word which had taken human flesh and had already become her Son, wished to commence manifesting to the world the riches of his mercy, by the first graces that he desired to impart to all that family.

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'We must labor for our eternal reward'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/370?view=theater'
-bookSlug: 'the-sinners-guide'
+title: We must labor for our eternal reward
+archiveSlug: sinnersguide00luis
+archivePage: '370'
+bookSlug: the-sinners-guide
 ---
 
 > The number and enormity of your sins demand a proportionate penance and fervor to satisfy for them.

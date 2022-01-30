@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The happiness of this world is delusive and treacherous'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/302?view=theater'
-bookSlug: 'the-sinners-guide'
+title: The happiness of this world is delusive and treacherous
+archiveSlug: sinnersguide00luis
+archivePage: '302'
+bookSlug: the-sinners-guide
 ---
 
 > But there is one of its evil characteristics of which I must speak---that is, its delusive appearance.

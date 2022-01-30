@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Joseph’s Singular Faith'
-archiveLink: 'https://archive.org/details/lifegloriesofstj00thomuoft/page/377?view=theater'
-bookSlug: 'the-life-and-glories-of-st-joseph'
+title: Joseph’s Singular Faith
+archiveSlug: lifegloriesofstj00thomuoft
+archivePage: '377'
+bookSlug: the-life-and-glories-of-st-joseph
 ---
 
 > There are two perfections which we are called upon specially to admire in Joseph: his most singular faith and his eminent supernatural wisdom. These were two rays, as it were, of the Divine understanding descending into the mind of Joseph.

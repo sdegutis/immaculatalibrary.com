@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Short remedies against detraction, anger, arrogance, and imprudence'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/390?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Short remedies against detraction, anger, arrogance, and imprudence
+archiveSlug: sinnersguide00luis
+archivePage: '390'
+bookSlug: the-sinners-guide
 ---
 
 > Detraction exclaims: It is impossible to be silent any longer about the faults of such a one. Is not concealment condoning them and rendering ourselves partakers of them?

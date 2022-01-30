@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Teresa of Avila stresses the importance of befriending people who are also earnestly striving to be holy'
-archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/55?view=theater'
-bookSlug: 'life-of-st-teresa-of-avila'
+title: St. Teresa of Avila stresses the importance of befriending people who are also earnestly striving to be holy
+archiveSlug: lifeofstteresaof00tereuoft
+archivePage: '55'
+bookSlug: life-of-st-teresa-of-avila
 ---
 
 > For if that friendship with God which he desires be real, let him not be afraid of vain-glory; and if the first movements thereof assail him, he will escape from it with merit; and I believe that he who will discuss the matter with this intention will profit both himself and those who hear him, and thus will derive more light for his own understanding, as well as for the instruction of his friends.

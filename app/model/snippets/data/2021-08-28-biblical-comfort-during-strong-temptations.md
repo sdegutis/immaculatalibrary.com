@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Biblical comfort during strong temptations'
-archiveLink: 'https://archive.org/details/a-dialogue-of-comfort-against-tribulation-by-st-thomas-more/page/110'
-bookSlug: 'a-dialogue-of-comfort-against-tribulation'
+title: Biblical comfort during strong temptations
+archiveSlug: a-dialogue-of-comfort-against-tribulation-by-st-thomas-more
+archivePage: '110'
+bookSlug: a-dialogue-of-comfort-against-tribulation
 ---
 
 > But now must this needs be to man an inestimable comfort in all temptation, if his faith fail him not, that is, to wit, that he may be sure that God is alway ready to give him strength against the devil's might, and wisdom against the devil's trains.

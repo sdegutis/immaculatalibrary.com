@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Francis de Sales practicing poverty'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/129?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: St. Francis de Sales practicing poverty
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '129'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > *UPON THE LOVE OF HOLY POVERTY.*

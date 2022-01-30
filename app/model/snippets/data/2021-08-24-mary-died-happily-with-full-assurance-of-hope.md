@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Mary died happily with full assurance of hope'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/480?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: Mary died happily with full assurance of hope
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '480'
+bookSlug: the-glories-of-mary
 ---
 
 > In the third place, the certainty of eternal salvation renders death sweet.

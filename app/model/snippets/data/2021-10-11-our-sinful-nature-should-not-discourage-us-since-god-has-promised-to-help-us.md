@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Our sinful nature should not discourage us, since God has promised to help us'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/275?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Our sinful nature should not discourage us, since God has promised to help us
+archiveSlug: sinnersguide00luis
+archivePage: '275'
+bookSlug: the-sinners-guide
 ---
 
 > But, to study the subject more in detail, what is the cause of the difficulty you find in practising virtue? You say it is the evil inclinations of your heart, as well as the perpetual conflict between the spirit and the flesh, which has been conceived in sin.

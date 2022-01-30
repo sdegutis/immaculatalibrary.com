@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Everyone must submit to the teachings of the Catholic Church'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/154?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Everyone must submit to the teachings of the Catholic Church
+archiveSlug: sinnersguide00luis
+archivePage: '154'
+bookSlug: the-sinners-guide
 ---
 
 > Before concluding this chapter we would make the following suggestion:

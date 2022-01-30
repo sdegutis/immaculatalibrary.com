@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Prayers and Resolutions to St. Joseph'
-archiveLink: 'https://archive.org/details/st.-josephs-life-virtues-privileges-power/page/167?view=theater'
-bookSlug: 'st-joseph-life-his-virtues-his-privileges-his-power'
+title: Prayers and Resolutions to St. Joseph
+archiveSlug: st.-josephs-life-virtues-privileges-power
+archivePage: '167'
+bookSlug: st-joseph-life-his-virtues-his-privileges-his-power
 ---
 
 > *Resolutions.*

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The happiness of this life is ruined even by our own passions'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/296?view=theater'
-bookSlug: 'the-sinners-guide'
+title: The happiness of this life is ruined even by our own passions
+archiveSlug: sinnersguide00luis
+archivePage: '296'
+bookSlug: the-sinners-guide
 ---
 
 > Man's irregular appetites and passions are another and inexhaustible source of afflictions.

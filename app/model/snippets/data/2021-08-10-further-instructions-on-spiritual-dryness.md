@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Further instructions on spiritual dryness'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/256?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: Further instructions on spiritual dryness
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '256'
+bookSlug: introduction-to-the-devout-life
 ---
 
 *This book snippet follows [Spiritual dryness, and its various causes](https://www.immaculatalibrary.com/book-snippets/2021-08-08-spiritual-dryness-and-what-causes-it.html) and [How to properly handle spiritual drynesses](https://www.immaculatalibrary.com/book-snippets/2021-08-09-how-to-properly-handle-spiritual-drynesses.html).*

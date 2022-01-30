@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Sayings of Saints about St. Joseph'
-archiveLink: 'https://archive.org/details/saint-joseph-of-jesus-and-mary/page/92?view=theater'
-bookSlug: 'saint-joseph-of-jesus-and-mary'
+title: Sayings of Saints about St. Joseph
+archiveSlug: saint-joseph-of-jesus-and-mary
+archivePage: '92'
+bookSlug: saint-joseph-of-jesus-and-mary
 ---
 
 > Joseph is a paradise of delights.---*St. Ephrem.*

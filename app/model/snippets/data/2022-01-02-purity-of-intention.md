@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Purity of Intention'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/434?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Purity of Intention
+archiveSlug: sinnersguide00luis
+archivePage: '434'
+bookSlug: the-sinners-guide
 ---
 
 > *Section VI.*

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Against speaking badly of others for any reason'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/97?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: Against speaking badly of others for any reason
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '97'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > *UPON CONTRADICTING OTHERS.*

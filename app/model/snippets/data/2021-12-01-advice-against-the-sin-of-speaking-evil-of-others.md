@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Advice against the sin of speaking evil of others'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/378?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Advice against the sin of speaking evil of others
+archiveSlug: sinnersguide00luis
+archivePage: '378'
+bookSlug: the-sinners-guide
 ---
 
 > Henceforward consider your neighbor's character as a forbidden tree which you cannot touch.

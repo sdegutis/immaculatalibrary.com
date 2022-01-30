@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The True Widow must Give Herself Entirely to God'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/214?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: The True Widow must Give Herself Entirely to God
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '214'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > *Second [requirement to be a "widow indeed"]*

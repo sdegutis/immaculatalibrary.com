@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Virtuous persons should have an outward bearing of gravity, humility, and sweetness'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/395?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Virtuous persons should have an outward bearing of gravity, humility, and sweetness
+archiveSlug: sinnersguide00luis
+archivePage: '395'
+bookSlug: the-sinners-guide
 ---
 
 > Section II.

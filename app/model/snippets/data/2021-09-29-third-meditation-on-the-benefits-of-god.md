@@ -1,8 +1,9 @@
 ---
 published: true
 title: 'Third Meditation: On the Benefits of God'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/21?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '21'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > CHAPTER XI.

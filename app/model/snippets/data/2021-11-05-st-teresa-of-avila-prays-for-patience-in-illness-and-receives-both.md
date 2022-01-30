@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Teresa of Avila prays for patience in illness and receives both'
-archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/25?view=theater'
-bookSlug: 'life-of-st-teresa-of-avila'
+title: St. Teresa of Avila prays for patience in illness and receives both
+archiveSlug: lifeofstteresaof00tereuoft
+archivePage: '25'
+bookSlug: life-of-st-teresa-of-avila
 ---
 
 > There was then in the house a nun labouring under a most grievous and painful disorder, for there were open ulcers in her body, caused by certain obstructions, through which her food was rejected. Of this sickness she soon died. All her sisters, I saw, were afraid of her malady.

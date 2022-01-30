@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Finding the boy Jesus in the temple'
-archiveLink: 'https://archive.org/details/st.-josephs-life-virtues-privileges-power/page/146?view=theater'
-bookSlug: 'st-joseph-life-his-virtues-his-privileges-his-power'
+title: Finding the boy Jesus in the temple
+archiveSlug: st.-josephs-life-virtues-privileges-power
+archivePage: '146'
+bookSlug: st-joseph-life-his-virtues-his-privileges-his-power
 ---
 
 > Three times in the year the men of Israel were bound by the Law of God to present themselves before the Almighty, and to worship Him in the Temple. "Three times in the year all the males shall appear in the sight of the Almighty Lord, the God of Israel" (Exod. xxxiv. 23). The three times are specified in Deuteronomy. "Three times in the year shall all thy males appear before the Lord thy God, in the place which he shall choose; in the feast of the leavened bread, in the feast of the weeks, and in the feast of tabernacles" (Deut. xvi. 16).

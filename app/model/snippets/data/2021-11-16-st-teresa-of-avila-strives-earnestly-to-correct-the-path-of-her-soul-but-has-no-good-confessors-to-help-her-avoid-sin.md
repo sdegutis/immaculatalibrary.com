@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Teresa of Avila strives earnestly to correct the path of her soul, but has no good confessors to help her avoid sin'
-archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/35?view=theater'
-bookSlug: 'life-of-st-teresa-of-avila'
+title: St. Teresa of Avila strives earnestly to correct the path of her soul, but has no good confessors to help her avoid sin
+archiveSlug: lifeofstteresaof00tereuoft
+archivePage: '35'
+bookSlug: life-of-st-teresa-of-avila
 ---
 
 > The longing for solitude remained, and I loved to discourse and speak of God; for if I found any one with whom I could do so, it was a greater joy and satisfaction to me than all the refinements---or rather, to speak more correctly, the real rudeness---of the world's conversation.

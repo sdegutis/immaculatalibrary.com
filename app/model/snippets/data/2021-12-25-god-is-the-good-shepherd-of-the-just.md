@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'God is the Good Shepherd of the Just'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/136?view=theater'
-bookSlug: 'the-sinners-guide'
+title: God is the Good Shepherd of the Just
+archiveSlug: sinnersguide00luis
+archivePage: '136'
+bookSlug: the-sinners-guide
 ---
 
 > It is in illustration of this same providence that God assumes the title of Shepherd.

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'How Jesus and Mary reward the love of them'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/407?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: How Jesus and Mary reward the love of them
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '407'
+bookSlug: the-glories-of-mary
 ---
 
 > *EXAMPLE.*

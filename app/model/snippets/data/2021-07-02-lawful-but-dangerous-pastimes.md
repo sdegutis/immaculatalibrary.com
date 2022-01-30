@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Lawful but dangerous Pastimes'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/192?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: Lawful but dangerous Pastimes
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '192'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > Chapter XXXIII.

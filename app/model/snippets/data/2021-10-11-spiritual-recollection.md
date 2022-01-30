@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Spiritual Recollection'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/63?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: Spiritual Recollection
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '63'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > CHAPTER XII.

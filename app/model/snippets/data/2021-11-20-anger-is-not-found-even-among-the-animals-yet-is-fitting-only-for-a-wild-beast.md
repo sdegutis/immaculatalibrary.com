@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Anger is not found even among the animals, yet is fitting only for a wild beast'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/362?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Anger is not found even among the animals, yet is fitting only for a wild beast
+archiveSlug: sinnersguide00luis
+archivePage: '362'
+bookSlug: the-sinners-guide
 ---
 
 > CHAPTER XXXV.

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'How God hears the prayers of the Just and Virtuous'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/208?view=theater'
-bookSlug: 'the-sinners-guide'
+title: How God hears the prayers of the Just and Virtuous
+archiveSlug: sinnersguide00luis
+archivePage: '208'
+bookSlug: the-sinners-guide
 ---
 
 > If you would learn how such promises are fulfilled, study the lives of the Saints and see what marvels they effected by prayer.

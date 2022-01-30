@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Francis de Sales on entrusting all our love to God'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/66?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: St. Francis de Sales on entrusting all our love to God
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '66'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > *Upon not putting limits to our love of God.*

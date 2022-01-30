@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Marian Devotion - The Rosary and Office'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/653?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: Marian Devotion - The Rosary and Office
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '653'
+bookSlug: the-glories-of-mary
 ---
 
 > DEVOTION III. OF THE ROSARY AND OFFICE.

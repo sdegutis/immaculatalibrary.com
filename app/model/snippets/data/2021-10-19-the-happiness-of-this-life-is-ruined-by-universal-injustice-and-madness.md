@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The happiness of this life is ruined by universal injustice and madness'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/299?view=theater'
-bookSlug: 'the-sinners-guide'
+title: The happiness of this life is ruined by universal injustice and madness
+archiveSlug: sinnersguide00luis
+archivePage: '299'
+bookSlug: the-sinners-guide
 ---
 
 > St. Cyprian, desiring to excite in a friend contempt for the world, makes use of this argument only. [L. ii. Ep. 2 ad Donat.]

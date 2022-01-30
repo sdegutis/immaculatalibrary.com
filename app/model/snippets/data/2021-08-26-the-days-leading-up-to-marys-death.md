@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The days leading up to Mary’s death'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/484?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: The days leading up to Mary’s death
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '484'
+bookSlug: the-glories-of-mary
 ---
 
 > Cedrenus, Nicephorus, and Metaphrastes, relate, that the Lord, some days before [her] death, sent to her the angel Gabriel, the same who once announced to her that she was the blessed woman chosen to be the mother of God:

@@ -1,8 +1,9 @@
 ---
 published: true
 title: 'Annual Retreat Exercise #1: God in his generous mercy called us to him before it was too late'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/264?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '264'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > Consider that God inspired you with these holy resolutions in the flower of your age.

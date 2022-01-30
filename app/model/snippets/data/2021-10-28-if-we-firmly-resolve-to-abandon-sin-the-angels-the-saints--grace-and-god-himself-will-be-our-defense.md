@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'If we firmly resolve to abandon sin, the Angels, the Saints,  and God Himself will be our defense'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/317?view=theater'
-bookSlug: 'the-sinners-guide'
+title: If we firmly resolve to abandon sin, the Angels, the Saints,  and God Himself will be our defense
+archiveSlug: sinnersguide00luis
+archivePage: '317'
+bookSlug: the-sinners-guide
 ---
 
 > Be prepared, therefore, to meet with difficulties. Remember the words of the Wise Man: "Son, when thou comest to the service of God, stand in justice and in fear, and prepare thy soul for temptation." [Ecclus. ii. 1.]

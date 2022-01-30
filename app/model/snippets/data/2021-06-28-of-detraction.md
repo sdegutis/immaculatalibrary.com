@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Of detraction'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/182?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: Of detraction
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '182'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > Chapter XXIX.

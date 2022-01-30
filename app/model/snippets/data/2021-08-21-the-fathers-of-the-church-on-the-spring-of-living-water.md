@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The Fathers of the Church on the Spring of Living Water'
-archiveLink: 'https://archive.org/details/catenaaureacomme04thom/page/142?view=theater'
-bookSlug: 'catena-aurea'
+title: The Fathers of the Church on the Spring of Living Water
+archiveSlug: catenaaureacomme04thom
+archivePage: '142'
+bookSlug: catena-aurea
 ---
 
 John 4:13-18

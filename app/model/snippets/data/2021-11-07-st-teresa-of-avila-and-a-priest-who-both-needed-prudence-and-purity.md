@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Teresa of Avila and a Priest who both needed prudence and purity'
-archiveLink: 'https://archive.org/details/lifeofstteresaof00tereuoft/page/27?view=theater'
-bookSlug: 'life-of-st-teresa-of-avila'
+title: St. Teresa of Avila and a Priest who both needed prudence and purity
+archiveSlug: lifeofstteresaof00tereuoft
+archivePage: '27'
+bookSlug: life-of-st-teresa-of-avila
 ---
 
 > I began, then, by going to confession to that priest of whom I spoke before. He took an extreme liking to me, because I had then but little to confess in comparison with what I had afterwards; and I had never much to say since I became a nun. There was no harm in the liking he had for me, but it ceased to be good, because it was in excess.

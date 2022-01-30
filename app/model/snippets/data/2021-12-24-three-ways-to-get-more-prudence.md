@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Three Ways to Get More Prudence'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/421?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Three Ways to Get More Prudence
+archiveSlug: sinnersguide00luis
+archivePage: '421'
+bookSlug: the-sinners-guide
 ---
 
 > *Section XI.*

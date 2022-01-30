@@ -1,8 +1,9 @@
 ---
 published: true
 title: 'Seventh Meditation: On Hell'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/29?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '29'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > CHAPTER XV.

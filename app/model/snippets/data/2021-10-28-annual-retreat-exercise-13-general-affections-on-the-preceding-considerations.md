@@ -1,8 +1,9 @@
 ---
 published: true
 title: 'Annual Retreat Exercise #13: General affections on the preceding considerations'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/280?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '280'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > CHAPTER XV.

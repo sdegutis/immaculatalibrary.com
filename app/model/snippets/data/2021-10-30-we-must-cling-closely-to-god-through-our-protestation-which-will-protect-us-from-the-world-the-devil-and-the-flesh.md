@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'We must cling closely to God through our Protestation, which will protect us from the world, the devil, and the flesh'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/284?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: We must cling closely to God through our Protestation, which will protect us from the world, the devil, and the flesh
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '284'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > CHAPTER XVIII.

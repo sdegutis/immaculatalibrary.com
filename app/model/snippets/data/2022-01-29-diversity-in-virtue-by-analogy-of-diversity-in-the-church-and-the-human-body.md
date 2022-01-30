@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Diversity in Virtue by analogy of diversity in the Church and the Human Body'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/475?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Diversity in Virtue by analogy of diversity in the Church and the Human Body
+archiveSlug: sinnersguide00luis
+archivePage: '475'
+bookSlug: the-sinners-guide
 ---
 
 > God has willed that the order and beauty which we admire in nature should exist in the works of grace.

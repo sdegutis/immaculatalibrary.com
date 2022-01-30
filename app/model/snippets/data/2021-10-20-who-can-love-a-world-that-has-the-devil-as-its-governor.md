@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Who can love a world that has the devil as its governor?'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/n306?view=theater'
-bookSlug: 'the-sinners-guide'
+title: Who can love a world that has the devil as its governor?
+archiveSlug: sinnersguide00luis
+archivePage: n306
+bookSlug: the-sinners-guide
 ---
 
 > Moreover, if you would know the world still better, consider him who governs it.

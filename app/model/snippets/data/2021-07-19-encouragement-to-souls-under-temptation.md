@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Encouragement to souls under temptation'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/229?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: Encouragement to souls under temptation
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '229'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > *An Encouragement to a soul that is under temptation*

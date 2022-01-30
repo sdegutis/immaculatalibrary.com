@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Francis de Sales on poverty and presumption'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/132?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: St. Francis de Sales on poverty and presumption
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '132'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > He would never allow himself to be called poor; saying, that any one who had a revenue sufficient to live upon without being obliged to labour with head or hands to support himself should be called rich; and such, he said, was the case with us both.

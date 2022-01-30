@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'We must not do or say anything wrong when angry, but wait until the anger goes away'
-archiveLink: 'https://archive.org/details/sinnersguide00luis/page/366?view=theater'
-bookSlug: 'the-sinners-guide'
+title: We must not do or say anything wrong when angry, but wait until the anger goes away
+archiveSlug: sinnersguide00luis
+archivePage: '366'
+bookSlug: the-sinners-guide
 ---
 
 > The most efficacious, the sovereign remedy against this vice is to pluck from your heart inordinate love of self and of everything that pertains to you. Otherwise the slightest word or action directed against you or your interests will move you to anger.

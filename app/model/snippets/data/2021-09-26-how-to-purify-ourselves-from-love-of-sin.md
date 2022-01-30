@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'How to purify ourselves from love of sin'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/15?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: How to purify ourselves from love of sin
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '15'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > CHAPTER VIII.

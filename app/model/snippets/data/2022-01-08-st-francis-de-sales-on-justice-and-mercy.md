@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Francis de Sales on Justice and Mercy'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/121?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: St. Francis de Sales on Justice and Mercy
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '121'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > *BLESSED FRANCIS' SOLICITUDE FOR MALEFACTORS CONDEMNED TO DEATH.*

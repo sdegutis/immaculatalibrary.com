@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Frequent Communion'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/84?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: Frequent Communion
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '84'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > Chapter XX.

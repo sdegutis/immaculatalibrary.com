@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The Fathers of the Church on those who thought Jesus was insane or possessed'
-archiveLink: 'https://archive.org/details/catenaaureacomm02thom/page/n74?view=theater'
-bookSlug: 'catena-aurea'
+title: The Fathers of the Church on those who thought Jesus was insane or possessed
+archiveSlug: catenaaureacomm02thom
+archivePage: n74
+bookSlug: catena-aurea
 ---
 
 >> 19\. ---And they went into an house.

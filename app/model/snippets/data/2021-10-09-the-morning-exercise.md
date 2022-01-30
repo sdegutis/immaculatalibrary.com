@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The Morning Exercise'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/60?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: The Morning Exercise
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '60'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > OHAPTER X.

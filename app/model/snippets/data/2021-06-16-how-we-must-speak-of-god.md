@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'How we must speak of God'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/173?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: How we must speak of God
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '173'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > Chapter XXVI.

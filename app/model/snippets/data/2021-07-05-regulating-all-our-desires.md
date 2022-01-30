@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Regulating all our desires'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/202?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: Regulating all our desires
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '202'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > Chapter XXXVII.

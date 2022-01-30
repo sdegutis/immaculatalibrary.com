@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Marian Devotion - the Hail Mary'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/646?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: Marian Devotion - the Hail Mary
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '646'
+bookSlug: the-glories-of-mary
 ---
 
 > DEVOTION I. OF THE "HAIL MARY."

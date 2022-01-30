@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'God could not have exalted Mary more'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/422?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: God could not have exalted Mary more
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '422'
+bookSlug: the-glories-of-mary
 ---
 
 > *Point Second.*---In order to comprehend the greatness to which Mary was elevated, it would be necessary to comprehend the sublime majesty and grandeur of God. It is sufficient, then, only to say, that God made this Virgin his mother, to have it understood that God could not exalt her more than he did exalt her.

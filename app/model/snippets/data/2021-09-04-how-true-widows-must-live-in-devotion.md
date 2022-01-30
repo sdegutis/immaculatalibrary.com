@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'How True Widows must Live in Devotion'
-archiveLink: 'https://archive.org/details/an-introduction-to-the-devout-life/page/215?view=theater'
-bookSlug: 'introduction-to-the-devout-life'
+title: How True Widows must Live in Devotion
+archiveSlug: an-introduction-to-the-devout-life
+archivePage: '215'
+bookSlug: introduction-to-the-devout-life
 ---
 
 > The widow that has children, who stand in need of her assistance and guidance, principally in what relates to their soul and their establishment in life, ought not on any account abandon them; for the Apostle Paul says clearly, that they are obliged to take care of their children, that they may make a like return to their parents (Tim. ii. 1), and those who have no solicitude for those that belong to them, and especially for their own family, are worse than infidels.

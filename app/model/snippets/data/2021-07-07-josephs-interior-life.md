@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Joseph’s Interior Life of Prayer and Contemplation'
-archiveLink: 'https://archive.org/details/lifegloriesofstj00thomuoft/page/367?view=theater'
-bookSlug: 'the-life-and-glories-of-st-joseph'
+title: Joseph’s Interior Life of Prayer and Contemplation
+archiveSlug: lifegloriesofstj00thomuoft
+archivePage: '367'
+bookSlug: the-life-and-glories-of-st-joseph
 ---
 
 > The inner life is the true life of a man, and all the splendour and merit exhibited in the visible and sensible actions of the saints have their principle within and their source in the heart, hidden from men and patent to God only.

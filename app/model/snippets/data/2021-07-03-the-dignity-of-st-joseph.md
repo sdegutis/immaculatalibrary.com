@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'The dignity of St. Joseph'
-archiveLink: 'https://archive.org/details/lifegloriesofstj00thomuoft/page/358?view=theater'
-bookSlug: 'the-life-and-glories-of-st-joseph'
+title: The dignity of St. Joseph
+archiveSlug: lifegloriesofstj00thomuoft
+archivePage: '358'
+bookSlug: the-life-and-glories-of-st-joseph
 ---
 
 > Next to the unapproachable dignity of the great Mother of God there is none that can be compared to that of Joseph. The great Chancellor of the University of Paris, Gerson, says that, as the obedience of Jesus to Joseph was an inestimable act of humility, it implies correspondingly, in Joseph an incomparable dignity.

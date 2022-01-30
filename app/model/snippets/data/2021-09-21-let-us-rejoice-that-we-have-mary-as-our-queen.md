@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'Let us rejoice that we have Mary as our Queen'
-archiveLink: 'https://archive.org/details/thegloriesofmary00liguuoft/page/511?view=theater'
-bookSlug: 'the-glories-of-mary'
+title: Let us rejoice that we have Mary as our Queen
+archiveSlug: thegloriesofmary00liguuoft
+archivePage: '511'
+bookSlug: the-glories-of-mary
 ---
 
 > Let us rejoice, then, with Mary, in the exalted throne to which God has elevated her in heaven.

@@ -1,8 +1,9 @@
 ---
 published: true
-title: 'St. Francis de Sales on being an organ donor'
-archiveLink: 'https://archive.org/details/the-spirit-of-st.-francis-de-sales/page/146?view=theater'
-bookSlug: 'the-spirit-of-st-francis-de-sales'
+title: St. Francis de Sales on being an organ donor
+archiveSlug: the-spirit-of-st.-francis-de-sales
+archivePage: '146'
+bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
 > *THE CONTEMPT HE FELT FOR HIS BODY.*
