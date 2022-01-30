@@ -1,6 +1,4 @@
-import { addRouteable } from '../../core/router';
 import { ViewBookRoute } from '../../pages/books/one-book/view-book';
-import { randomBookPage } from '../../pages/books/random-book';
 import { loadContentFile } from '../../util/data-files';
 import { Category } from '../categories/category';
 import { Snippet } from '../snippets/snippet';
@@ -71,5 +69,3 @@ export class Book {
   snippets: Snippet[] = [];
 
 }
-
-addRouteable(randomBookPage);

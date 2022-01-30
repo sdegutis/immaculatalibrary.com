@@ -79,10 +79,8 @@ export const logoutRoute: Routeable = {
   }
 };
 
-[
-  loginRoute,
-  logoutRoute,
-].forEach(addRouteable);
+addRouteable(loginRoute);
+addRouteable(logoutRoute);
 
 export function notAllowedResponse(input: EnrichedInput, login = false) {
   const image = staticRouteFor(__dir.filesByName['image.jpg']!);

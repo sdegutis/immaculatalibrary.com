@@ -1,11 +1,7 @@
-import "../model/books/book";
-import "../model/categories/category";
-import "../model/movies/movie";
-import "../model/posts/post";
-import "../model/snippets/snippet";
 import "../pages/about/about";
 import "../pages/audiobible/audiobible";
 import "../pages/books/all-books/all-books";
+import "../pages/books/random-book";
 import "../pages/devotions/devotions";
 import "../pages/home/home";
 import "../pages/home/random";
