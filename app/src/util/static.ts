@@ -1,7 +1,7 @@
 import { createHash } from 'crypto';
 import path from 'path';
 import { EnrichedInput } from '../auth/login';
-import { addRouteable, Routeable, RouteMethod } from './router';
+import { addRouteable, Routeable, RouteMethod } from '../core/router';
 
 export class HashedStaticFile implements Routeable {
 

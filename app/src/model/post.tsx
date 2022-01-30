@@ -1,5 +1,5 @@
 import Yaml from 'js-yaml';
-import { staticRouteFor } from '../core/static';
+import { staticRouteFor } from '../util/static';
 import { ViewPostPage } from '../pages/posts/one/one-post';
 import { sortBy } from "../util/helpers";
 import postsdir from '/data/posts/';

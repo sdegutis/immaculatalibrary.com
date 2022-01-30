@@ -3,7 +3,7 @@ import { Container } from "../../../components/container/container";
 import { QuickLinks } from "../../../components/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "../../../components/site";
 import { addRouteable, Routeable, RouteMethod } from "../../../core/router";
-import { HashedStaticFile } from "../../../core/static";
+import { HashedStaticFile } from "../../../util/static";
 import { Snippet } from "../../../model/snippet";
 import { extract_page_number, format_date, md, reading_mins } from "../../../util/helpers";
 import { LatestBookSnippets } from "../latest-list";

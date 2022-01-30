@@ -6,7 +6,7 @@ import { QuickLinks } from "/src/components/quicklinks";
 import { Rating } from "/src/components/rating/rating";
 import { Head, Html, SiteFooter, SiteHeader } from "/src/components/site";
 import { addRouteable, Routeable, RouteMethod } from "/src/core/router";
-import { staticRouteFor } from "/src/core/static";
+import { staticRouteFor } from "../../../util/static";
 import { Book } from "/src/model/book";
 import { excerpt, md, striptags } from "/src/util/helpers";
 

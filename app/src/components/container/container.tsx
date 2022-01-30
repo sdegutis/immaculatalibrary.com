@@ -1,4 +1,4 @@
-import { staticRouteFor } from "/src/core/static";
+import { staticRouteFor } from "../../util/static";
 
 export const Container: Component<{ spaced?: boolean, split?: boolean }> = (attrs, children) => {
   const cssClass: string[] = [];

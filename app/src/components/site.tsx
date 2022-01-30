@@ -1,5 +1,5 @@
 import { EnrichedInput, loginRoute, logoutRoute } from "../auth/login";
-import { staticRouteFor } from "../core/static";
+import { staticRouteFor } from "../util/static";
 import { mainSiteHeaderImagePath } from "../pages/home/home";
 import { DarkModeButton, darkModeScript } from "./dark-mode/button";
 import { Meta } from "./meta/meta";

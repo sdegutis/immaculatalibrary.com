@@ -1,5 +1,5 @@
 import { addRouteable } from "../core/router";
-import { HashedStaticFile, staticRouteFor } from "../core/static";
+import { HashedStaticFile, staticRouteFor } from "../util/static";
 
 const buffer = Buffer.from(`
 @font-face { font-family: "David Libre"; font-weight: 400; src: url('${staticRouteFor(__dir.filesByName['DavidLibre-Regular.ttf']!)}'); }

@@ -5,7 +5,7 @@ import imageFileBig from './adoration-big.jpg';
 import { Content } from "/src/components/content/content";
 import { HeroImage } from '/src/components/hero-image/hero-image';
 import { addRouteable, Routeable } from "/src/core/router";
-import { staticRouteFor } from "/src/core/static";
+import { staticRouteFor } from "../../util/static";
 import { md } from "/src/util/helpers";
 
 const devotionsImageBig = staticRouteFor(imageFileBig);

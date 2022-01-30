@@ -1,5 +1,5 @@
 import { addRouteable } from "/src/core/router";
-import { HashedStaticFile, staticRouteFor } from "/src/core/static";
+import { HashedStaticFile, staticRouteFor } from "../../util/static";
 
 const webmanifest = JSON.stringify({
   name: "Immaculata Library",

@@ -1,5 +1,5 @@
 import cssFile from './rating-label.css';
-import { staticRouteFor } from '/src/core/static';
+import { staticRouteFor } from '../../util/static';
 
 const repeat = (n: number) => Array.from(Array(n));
 export const Rating: Component<{ n: number }> = ({ n }) => n ? <>

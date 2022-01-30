@@ -1,4 +1,4 @@
-import { staticRouteFor } from '../core/static';
+import { staticRouteFor } from '../util/static';
 import { ViewCategory } from '../pages/category/view-category';
 import { loadContentFile } from '../util/data-files';
 import { sortBy } from "../util/helpers";

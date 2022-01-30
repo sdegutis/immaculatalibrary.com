@@ -5,7 +5,7 @@ import { HeroImage } from '../components/hero-image/hero-image';
 import { QuickLinks } from '../components/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../components/site';
 import { addRouteable, Routeable, RouteMethod } from '../core/router';
-import { staticRouteFor } from '../core/static';
+import { staticRouteFor } from '../util/static';
 import { loadContentFile } from '../util/data-files';
 import { md, randomElement, sortBy } from "../util/helpers";
 import moviesDir from '/data/movies/';

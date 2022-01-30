@@ -7,7 +7,7 @@ import cssFile from './home.css';
 import headerImage from './home.jpg';
 import randomBookSnippetScript from './random-book-snippet.js';
 import { Content } from "/src/components/content/content";
-import { staticRouteFor } from "/src/core/static";
+import { staticRouteFor } from "../../util/static";
 
 export const mainSiteHeaderImagePath = staticRouteFor(headerImage);
 

@@ -1,4 +1,4 @@
-import { staticRouteFor } from "/src/core/static";
+import { staticRouteFor } from "../../util/static";
 
 export const SiteHeader: Component<{}> = (attrs, children) => <>
   <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['site-header.css']!)} />

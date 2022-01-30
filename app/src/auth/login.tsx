@@ -7,7 +7,7 @@ import { QuickLinks } from '../components/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../components/site';
 import { addRouteable, Routeable } from "../core/router";
 import { sameSiteReferer } from '../util/helpers';
-import { staticRouteFor } from '/src/core/static';
+import { staticRouteFor } from '../util/static';
 
 const users: string[] = [
   "$2a$10$Qwea9c8jHbc/UlaAdr66Gumlhs46/VBjyy/xZd92QgJRtytvQs5sm"

@@ -5,7 +5,7 @@ import { Container } from "../../../components/container/container";
 import { QuickLinks } from "/src/components/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "/src/components/site";
 import { addRouteable, Routeable } from "/src/core/router";
-import { staticRouteFor } from '/src/core/static';
+import { staticRouteFor } from '../../../util/static';
 import { allBooks } from "/src/model/book";
 
 const allBooksPage: Routeable = {

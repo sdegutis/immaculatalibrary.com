@@ -2,7 +2,7 @@ import { Container } from "../../../components/container/container";
 import { QuickLinks } from "../../../components/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "../../../components/site";
 import { Routeable } from "../../../core/router";
-import { staticRouteFor } from "../../../core/static";
+import { staticRouteFor } from "../../../util/static";
 import { publishedSnippets } from "../../../model/snippet";
 import { format_date, groupByDate, md, reading_mins } from "../../../util/helpers";
 import { referenceImage } from "../../category/view-category";

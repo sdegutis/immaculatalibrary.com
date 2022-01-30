@@ -1,4 +1,4 @@
-import "./core/static";
+import "./util/static";
 import "./model/book";
 import "./model/category";
 import "./model/movie";

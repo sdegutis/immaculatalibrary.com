@@ -4,7 +4,7 @@ import { QuickLinks } from "../../components/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "../../components/site";
 import { Content } from "/src/components/content/content";
 import { HeroImage } from "/src/components/hero-image/hero-image";
-import { staticRouteFor } from "/src/core/static";
+import { staticRouteFor } from "../../util/static";
 
 export function errorPage(input: EnrichedInput): RouteOutput {
   const title = 'Something went wrong';

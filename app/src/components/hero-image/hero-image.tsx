@@ -1,4 +1,4 @@
-import { staticRouteFor } from "/src/core/static";
+import { staticRouteFor } from "../../util/static";
 
 export const HeroImage: Component<{ image: string }> = (attrs, children) => <>
   <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['hero-image.css']!)} />

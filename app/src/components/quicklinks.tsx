@@ -1,4 +1,4 @@
-import { staticRouteFor } from "../core/static";
+import { staticRouteFor } from "../util/static";
 import { allCategories } from "../model/category";
 import { allMovies } from "../model/movie";
 import { publishedPosts } from "../model/post";
