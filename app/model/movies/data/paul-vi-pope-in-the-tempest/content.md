@@ -1,6 +1,6 @@
 ---
-title: 'Paul VI'
-shortTitle: 'Paul VI'
+title: Paul VI
+shortTitle: Paul VI
 subtitle: Pope in the Tempest
 year: '2008'
 ---

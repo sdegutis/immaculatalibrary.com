@@ -1,6 +1,6 @@
 ---
-title: 'Mother Teresa'
-shortTitle: 'Mother Teresa'
+title: Mother Teresa
+shortTitle: Mother Teresa
 year: '2003'
 ---
 

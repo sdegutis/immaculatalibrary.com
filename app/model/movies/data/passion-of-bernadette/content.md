@@ -1,6 +1,6 @@
 ---
-title: 'Passion of Bernadette'
-shortTitle: 'Passion of Bernadette'
+title: Passion of Bernadette
+shortTitle: Passion of Bernadette
 year: '1990'
 ---
 

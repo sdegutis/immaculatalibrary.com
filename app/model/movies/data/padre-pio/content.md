@@ -1,6 +1,6 @@
 ---
-title: 'Padre Pio'
-shortTitle: 'Padre Pio'
+title: Padre Pio
+shortTitle: Padre Pio
 subtitle: Between Heaven and Earth
 year: '2000'
 ---

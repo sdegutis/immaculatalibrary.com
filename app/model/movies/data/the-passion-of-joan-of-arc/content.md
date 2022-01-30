@@ -1,6 +1,6 @@
 ---
-title: 'The Passion of Joan of Arc'
-shortTitle: 'The Passion of Joan of Arc'
+title: The Passion of Joan of Arc
+shortTitle: The Passion of Joan of Arc
 year: '1928'
 ---
 

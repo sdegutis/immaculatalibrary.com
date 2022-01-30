@@ -1,6 +1,6 @@
 ---
-title: 'Ignatius of Loyola'
-shortTitle: 'Ignatius of Loyola'
+title: Ignatius of Loyola
+shortTitle: Ignatius of Loyola
 year: '2016'
 ---
 

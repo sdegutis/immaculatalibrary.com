@@ -1,6 +1,6 @@
 ---
-title: 'Monsieur Vincent'
-shortTitle: 'Monsieur Vincent'
+title: Monsieur Vincent
+shortTitle: Monsieur Vincent
 year: '1947'
 ---
 

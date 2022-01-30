@@ -1,6 +1,6 @@
 ---
-title: 'Flowers of St. Francis'
-shortTitle: 'Flowers of St. Francis'
+title: Flowers of St. Francis
+shortTitle: Flowers of St. Francis
 year: '1950'
 ---
 

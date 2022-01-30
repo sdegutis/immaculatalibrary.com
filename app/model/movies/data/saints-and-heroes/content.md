@@ -1,7 +1,7 @@
 ---
-title: 'Saints and Heroes Collection'
-shortTitle: 'Saints and Heroes Collection'
-year: '1988-1995'
+title: Saints and Heroes Collection
+shortTitle: Saints and Heroes Collection
+year: 1988-1995
 ---
 
 ### Links

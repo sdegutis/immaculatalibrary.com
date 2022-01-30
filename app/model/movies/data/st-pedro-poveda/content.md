@@ -1,6 +1,6 @@
 ---
-title: 'St. Pedro Poveda'
-shortTitle: 'St. Pedro Poveda'
+title: St. Pedro Poveda
+shortTitle: St. Pedro Poveda
 year: '2016'
 ---
 

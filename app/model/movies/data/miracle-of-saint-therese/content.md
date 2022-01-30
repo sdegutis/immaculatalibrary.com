@@ -1,6 +1,6 @@
 ---
-title: 'Miracle of Saint Therese'
-shortTitle: 'Miracle of Saint Therese'
+title: Miracle of Saint Therese
+shortTitle: Miracle of Saint Therese
 year: '1959'
 ---
 

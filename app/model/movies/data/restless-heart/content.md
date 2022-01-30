@@ -1,6 +1,6 @@
 ---
-title: 'St. Augustine'
-shortTitle: 'St. Augustine'
+title: St. Augustine
+shortTitle: St. Augustine
 subtitle: The Confessions of St. Augustine
 year: '2010'
 ---

@@ -1,6 +1,6 @@
 ---
-title: 'Blessed Duns Scotus'
-shortTitle: 'Blessed Duns Scotus'
+title: Blessed Duns Scotus
+shortTitle: Blessed Duns Scotus
 subtitle: Defender of the Immaculate Conception
 year: '2011'
 ---

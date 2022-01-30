@@ -1,6 +1,6 @@
 ---
-title: 'Pope John Paul II'
-shortTitle: 'Pope John Paul II'
+title: Pope John Paul II
+shortTitle: Pope John Paul II
 year: '2005'
 ---
 

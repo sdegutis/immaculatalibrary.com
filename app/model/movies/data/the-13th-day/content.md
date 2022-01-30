@@ -1,6 +1,6 @@
 ---
-title: 'The 13th Day'
-shortTitle: 'The 13th Day'
+title: The 13th Day
+shortTitle: The 13th Day
 year: '2009'
 ---
 

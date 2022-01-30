@@ -1,6 +1,6 @@
 ---
-title: 'Bernadette'
-shortTitle: 'Bernadette'
+title: Bernadette
+shortTitle: Bernadette
 year: '1988'
 ---
 
