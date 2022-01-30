@@ -30,7 +30,7 @@ export class CloneSnippetPage implements Routeable {
   route;
   constructor(private snippet: Snippet, id: string) {
     this.route = `/clone-book-snippet/${id}`;
-    this.update = new UpdateSnippetPage(id);
+    this.update = new CreateSnippetRoute(id);
     addRouteable(this);
   }
 
@@ -86,7 +86,7 @@ export class CloneSnippetPage implements Routeable {
 
 }
 
-export class UpdateSnippetPage implements Routeable {
+export class CreateSnippetRoute implements Routeable {
 
   route;
   constructor(id: string) {
