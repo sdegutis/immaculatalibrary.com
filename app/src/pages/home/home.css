@@ -47,10 +47,10 @@
   padding: 1em;
 }
 
-.home.content blockquote li {
+.home .content blockquote li {
   list-style-type: none;
 }
 
-.home.content blockquote li p {
+.home .content blockquote li p {
   margin-bottom: 0;
 }

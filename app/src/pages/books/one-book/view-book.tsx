@@ -1,6 +1,7 @@
+import { Container } from "../../../components/container/container";
 import { EnrichedInput } from "/src/auth/login";
+import { Content } from "/src/components/content/content";
 import { HeroImage } from "/src/components/hero-image/hero-image";
-import { Container, Content } from "../../../components/container/container";
 import { QuickLinks } from "/src/components/quicklinks";
 import { Rating } from "/src/components/rating/rating";
 import { Head, Html, SiteFooter, SiteHeader } from "/src/components/site";

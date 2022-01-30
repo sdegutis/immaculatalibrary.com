@@ -13,9 +13,3 @@ export const Container: Component<{ spaced?: boolean, split?: boolean }> = (attr
     </div>
   </>;
 };
-
-export const Content: Component<{}> = (attrs, children) => <>
-  <div class="content">
-    {children}
-  </div>
-</>;

@@ -1,8 +1,9 @@
-import { Container, Content } from "../../components/container/container";
+import { Container } from "../../components/container/container";
 import { QuickLinks } from "../../components/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "../../components/site";
 import imageFileBig from './audiobible-big.jpg';
 import imageFileSmall from './audiobible-small.jpg';
+import { Content } from "/src/components/content/content";
 import { HeroImage } from '/src/components/hero-image/hero-image';
 import { addRouteable, Routeable } from "/src/core/router";
 import { staticRouteFor } from "/src/core/static";

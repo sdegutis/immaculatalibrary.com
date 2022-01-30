@@ -1,7 +1,8 @@
-import { Container, Content } from "../../components/container/container";
+import { Container } from "../../components/container/container";
 import { QuickLinks } from "../../components/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "../../components/site";
 import { mainSiteHeaderImagePath } from '../home/home';
+import { Content } from "/src/components/content/content";
 import { HeroImage } from '/src/components/hero-image/hero-image';
 import { addRouteable, Routeable } from "/src/core/router";
 import { md } from "/src/util/helpers";
