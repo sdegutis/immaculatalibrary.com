@@ -27,17 +27,15 @@ const MonacoClientSide = () => <>
 export class CloneSnippetPage implements Routeable {
 
   update;
-  constructor(private snippet: Snippet) {
-    this.update = new UpdateSnippetPage(snippet);
+  route;
+  constructor(private snippet: Snippet, id: string) {
+    this.route = `/clone-book-snippet/${id}`;
+    this.update = new UpdateSnippetPage(id);
     addRouteable(this);
   }
 
   meta?: RouteMeta = { public: false };
   method: RouteMethod = 'GET';
-
-  get route() {
-    return `/clone-book-snippet/${this.snippet.date}-${this.snippet.slug}`;
-  }
 
   handle(input: EnrichedInput): RouteOutput {
     if (!input.session?.isAdmin) return notAllowedResponse(input);
@@ -90,16 +88,14 @@ export class CloneSnippetPage implements Routeable {
 
 export class UpdateSnippetPage implements Routeable {
 
-  constructor(private snippet: Snippet) {
+  route;
+  constructor(id: string) {
+    this.route = `/clone-book-snippet/${id}`;
     addRouteable(this);
   }
 
   meta?: RouteMeta = { public: false };
   method: RouteMethod = 'POST';
-
-  get route() {
-    return `/clone-book-snippet/${this.snippet.date}-${this.snippet.slug}`;
-  }
 
   handle(input: EnrichedInput): RouteOutput {
     if (!input.session?.isAdmin) return notAllowedResponse(input);

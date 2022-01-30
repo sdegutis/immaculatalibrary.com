@@ -49,7 +49,7 @@ export class Snippet {
     this.previewMarkdown = this.derivePreview(2000);
 
     this.view = new SnippetRoute(this);
-    this.clone = new CloneSnippetPage(this);
+    this.clone = new CloneSnippetPage(this, `${this.date}-${this.slug}`);
 
     this.book = allBooks.find(book => book.slug.includes(this.bookSlug))!;
     this.book.snippets.push(this);
