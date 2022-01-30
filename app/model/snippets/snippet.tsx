@@ -4,7 +4,7 @@ import { CloneSnippetPage } from '../../pages/snippets/create/routes';
 import { SnippetRoute } from '../../pages/snippets/one/snippet';
 import { loadContentFile, saveContentFile } from '../../util/data-files';
 import { Book } from '../books/book';
-import { allBooks } from '../models';
+import { allBooks, allSnippets } from '../models';
 import snippetsDir from './data/';
 
 export class Snippet {
@@ -49,6 +49,8 @@ export class Snippet {
 
     this.book = allBooks.find(book => book.slug.includes(this.bookSlug))!;
     this.book.snippets.push(this);
+
+    allSnippets?.unshift(this);
   }
 
   private derivePreview(count: number) {
