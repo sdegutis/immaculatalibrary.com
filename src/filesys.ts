@@ -113,6 +113,7 @@ export class FsFile extends FsNode {
 
   replace(newBuffer: Buffer) {
     this.buffer = newBuffer;
+    this.ignoreChanges.add(this.realPath);
     fs.writeFileSync(this.realPath, newBuffer);
   }
 
