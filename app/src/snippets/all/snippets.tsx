@@ -1,12 +1,12 @@
-import { Routeable } from "../../core/router";
-import { staticRouteFor } from "../../core/static";
-import { referenceImage } from "../../model/category";
-import { format_date, groupByDate, md, reading_mins } from "../../util/helpers";
 import { Container, HeroImage } from "../../components/page";
 import { QuickLinks } from "../../components/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "../../components/site";
-import searchBookSnippetsScript from './search-book-snippets.js';
+import { Routeable } from "../../core/router";
+import { staticRouteFor } from "../../core/static";
+import { referenceImage } from "../../model/category";
 import { publishedSnippets } from "../../model/snippet";
+import { format_date, groupByDate, md, reading_mins } from "../../util/helpers";
+import searchBookSnippetsScript from './search-book-snippets.js';
 
 export const allSnippetsPage: Routeable = {
   route: `/book-snippets.html`,
@@ -22,7 +22,7 @@ export const allSnippetsPage: Routeable = {
         <Html>
           <Head title={title}>
             <script src={staticRouteFor(searchBookSnippetsScript)} defer></script>
-            <link rel="stylesheet" href="/css/layout/book-snippets.css" />
+            <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['book-snippets.css']!)} />
           </Head>
           <body>
             <SiteHeader />
