@@ -22,6 +22,7 @@ main>* {
 #left-panel {
   display: grid;
   grid-template-rows: auto auto;
+  align-content: start;
   overflow: auto;
 }
 
