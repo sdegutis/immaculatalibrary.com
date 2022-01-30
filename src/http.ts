@@ -24,17 +24,8 @@ export function startServer(baseUrl: string, port: number, site: Site) {
     let chunks: Buffer[] = [];
     req.on('data', (data: Buffer) => chunks.push(data));
     req.on('end', () => {
-      const url = new URL(req.url!, baseUrl);
-
-      if (req.headers['host'] !== url.host) {
-        res.statusCode = 302;
-        res.setHeader('Location', url.href);
-        res.end();
-        return;
-      }
-
       const input: RouteInput = {
-        url,
+        url: new URL(req.url!, baseUrl),
         body: Buffer.concat(chunks),
         method: req.method!,
         headers: req.headers,
