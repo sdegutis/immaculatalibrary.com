@@ -1,5 +1,4 @@
 import imageFileBig from './adoration-big.jpg';
-import imageFileSmall from './adoration-small.jpg';
 import { addRouteable, Routeable } from "/src/core/router";
 import { staticRouteFor } from "/src/core/static";
 import { md } from "/src/util/helpers";
@@ -8,7 +7,6 @@ import { QuickLinks } from "/src/view/components/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "/src/view/components/site";
 
 const devotionsImageBig = staticRouteFor(imageFileBig);
-export const devotionsImageSmall = staticRouteFor(imageFileSmall);
 
 const title = 'Devotions';
 
