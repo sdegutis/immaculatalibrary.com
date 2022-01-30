@@ -8,7 +8,7 @@ import { excerpt, format_date, md, reading_mins } from '../../../util/helpers';
 import { staticRouteFor } from "../../../util/static";
 import cssFile from './posts.css';
 
-export const allPostsPage: Routeable = {
+const allPostsPage: Routeable = {
   route: `/posts.html`,
   method: 'GET',
   handle: (input) => {

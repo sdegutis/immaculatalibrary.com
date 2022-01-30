@@ -11,7 +11,7 @@ import randomBookSnippetScript from './random-book-snippet.js';
 
 export const mainSiteHeaderImagePath = staticRouteFor(headerImage);
 
-export const homePage: Routeable = {
+const homePage: Routeable = {
   route: `/`,
   method: 'GET',
   handle: (input) => {

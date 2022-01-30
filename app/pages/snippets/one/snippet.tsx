@@ -7,12 +7,9 @@ import { Head, Html, SiteFooter, SiteHeader } from "../../../components/site";
 import { addRouteable, Routeable, RouteMeta, RouteMethod } from "../../../core/router";
 import { Snippet } from "../../../model/snippets/snippet";
 import { extract_page_number, format_date, md, reading_mins } from "../../../util/helpers";
-import { HashedStaticFile } from "../../../util/static";
+import { staticRouteFor } from "../../../util/static";
 import { AdminButton } from "../admin-button/admin-button";
 import { LatestBookSnippets } from "../latest-list";
-
-export const snippetCss = HashedStaticFile.fromFile(__dir.filesByName['snippet.css']!);
-addRouteable(snippetCss);
 
 export class SnippetRoute implements Routeable {
 
@@ -20,6 +17,7 @@ export class SnippetRoute implements Routeable {
     this.meta = {
       lastModifiedDate: snippet.date,
     };
+    addRouteable(this);
   }
 
   meta?: RouteMeta;
@@ -34,7 +32,7 @@ export class SnippetRoute implements Routeable {
     return {
       body: <Html>
         <Head title={this.snippet.title}>
-          <link rel="stylesheet" href={snippetCss.route} />
+          <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['snippet.css']!)} />
         </Head>
         <body>
           <SiteHeader />

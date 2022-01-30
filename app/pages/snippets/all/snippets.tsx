@@ -2,14 +2,14 @@ import { Container } from "../../../components/container/container";
 import { HeroImage } from "../../../components/hero-image/hero-image";
 import { QuickLinks } from "../../../components/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "../../../components/site";
-import { Routeable } from "../../../core/router";
+import { addRouteable, Routeable } from "../../../core/router";
 import { publishedSnippets } from "../../../model/models";
 import { format_date, groupByDate, md, reading_mins } from "../../../util/helpers";
 import { staticRouteFor } from "../../../util/static";
 import { referenceImage } from "../../category/view-category";
 import searchBookSnippetsScript from './search-book-snippets.js';
 
-export const allSnippetsPage: Routeable = {
+const allSnippetsPage: Routeable = {
   route: `/book-snippets.html`,
   method: 'GET',
   handle: (input) => {
@@ -79,7 +79,7 @@ export const allSnippetsPage: Routeable = {
   },
 };
 
-export const bookSnippetSearch: Routeable = {
+const bookSnippetSearch: Routeable = {
   route: '/book-snippets/search',
   method: 'GET',
   handle: (input) => {
@@ -104,3 +104,6 @@ export const bookSnippetSearch: Routeable = {
     };
   }
 };
+
+addRouteable(allSnippetsPage);
+addRouteable(bookSnippetSearch);

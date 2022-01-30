@@ -1,20 +1,11 @@
 import Yaml from 'js-yaml';
 import * as luxon from 'luxon';
-import { addRouteable } from '../../core/router';
-import { allSnippetsPage, bookSnippetSearch } from '../../pages/snippets/all/snippets';
 import { CloneSnippetPage } from '../../pages/snippets/create/routes';
 import { SnippetRoute } from '../../pages/snippets/one/snippet';
-import { randomSnippetPage } from '../../pages/snippets/random';
 import { loadContentFile, saveContentFile } from '../../util/data-files';
 import { Book } from '../books/book';
 import { allBooks } from '../models';
 import snippetsDir from './data/';
-
-[
-  allSnippetsPage,
-  randomSnippetPage,
-  bookSnippetSearch,
-].forEach(addRouteable);
 
 export class Snippet {
   static from(file: FsFile) {
@@ -56,9 +47,6 @@ export class Snippet {
 
     this.view = new SnippetRoute(this);
     this.clone = new CloneSnippetPage(this);
-
-    addRouteable(this.view);
-    addRouteable(this.clone);
 
     this.id = `${this.date}-${this.slug}`;
 
