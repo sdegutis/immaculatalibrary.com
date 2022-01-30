@@ -24,7 +24,7 @@ export class Site {
     this.#runtime?.shutdown();
     this.#runtime = new Runtime(this.#persisted, root, jsxCreateStringifiedElement);
 
-    const mainFile = root.find('/src/main')! as FsFile;
+    const mainFile = root.find('main') as FsFile;
     const mainModule = this.#runtime.modules.get(mainFile)!;
 
     // this.#runtime.context['restartSite'] = () => this.build();

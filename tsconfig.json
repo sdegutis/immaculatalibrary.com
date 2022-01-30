@@ -9,11 +9,6 @@
     "target": "ES2020",
     "noEmit": true,
     "moduleResolution": "Node",
-    "paths": {
-      "/*": [
-        "./app/*"
-      ],
-    },
     "forceConsistentCasingInFileNames": true, /* Ensure that casing is correct in imports. */
     "strict": true, /* Enable all strict type-checking options. */
     "noImplicitAny": true, /* Enable error reporting for expressions and declarations with an implied `any` type.. */
@@ -30,9 +25,9 @@
     "skipLibCheck": true /* Skip type checking all .d.ts files. */,
   },
   "include": [
-    "./app/src/**/*.ts",
-    "./app/src/**/*.d.ts",
-    "./app/src/**/*.tsx",
+    "./app/**/*.ts",
+    "./app/**/*.d.ts",
+    "./app/**/*.tsx",
     "./global.d.ts"
   ],
   "references": [
