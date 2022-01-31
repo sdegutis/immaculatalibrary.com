@@ -85,7 +85,7 @@ const PrevNextLinks: Component<{ snippet: Snippet }> = ({ snippet }) => <>
 const RelativeSnippetLink: Component<{ snippet: Snippet | undefined }> = ({ snippet }, children) => <>
   <span>
     {snippet && <>
-      <a href={snippet.view.route}>{children} (p.{snippet.archivePage})</a>
+      <a href={snippet.view.route}>{children}</a> (p.{snippet.archivePage})
     </>}
   </span>
 </>;
