@@ -4,15 +4,17 @@ import { Content } from "../../../components/content/content";
 import { HeroImage } from "../../../components/hero-image/hero-image";
 import { QuickLinks } from "../../../components/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "../../../components/site";
-import { addRouteable, Routeable, RouteMethod } from "../../../core/router";
+import { addRouteable, Routeable, RouteMeta, RouteMethod } from "../../../core/router";
 import { Post } from "../../../model/posts/post";
 import { format_date, md, reading_mins } from "../../../util/helpers";
 import { staticRouteFor } from "../../../util/static";
 
 export class ViewPostPage implements Routeable {
 
+  meta: RouteMeta;
   constructor(private post: Post) {
     addRouteable(this);
+    this.meta = { lastModifiedDate: this.post.date };
   }
 
   get route() {
