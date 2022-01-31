@@ -113,6 +113,7 @@ export class Snippet {
     const file = snippetsDir.createFile(`${date}-${newData.slug}.md`, buffer);
     const newSnippet = Snippet.from(file);
     newSnippet.save();
+    newSnippet.book.sortAndConnectBookSnippets();
     return newSnippet;
   }
 

@@ -1,6 +1,7 @@
 import { ViewBookRoute } from '../../pages/books/one-book/view-book';
 import { NewSnippetPage } from '../../pages/snippets/create/routes';
 import { loadContentFile } from '../../util/data-files';
+import { sortBy } from '../../util/helpers';
 import { Category } from '../categories/category';
 import { Snippet } from '../snippets/snippet';
 
@@ -74,5 +75,18 @@ export class Book {
 
   category!: Category;
   snippets: Snippet[] = [];
+
+  sortAndConnectBookSnippets() {
+    this.snippets.sort(sortBy(s =>
+      s.archivePage.startsWith('n')
+        ? +s.archivePage.slice(1) - 1000
+        : +s.archivePage));
+    for (let i = 1; i < this.snippets.length; i++) {
+      const s1 = this.snippets[i - 1];
+      const s2 = this.snippets[i];
+      s1!.nextSnippet = s2!;
+      s2!.prevSnippet = s1!;
+    }
+  }
 
 }
