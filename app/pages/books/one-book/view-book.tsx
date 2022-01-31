@@ -89,8 +89,8 @@ export class ViewBookRoute implements Routeable {
                       <b>How to download to iPhone</b>
                     </summary>
                     <ol>
-                      <li>Make sure you have the
-                        <a href="https://apps.apple.com/us/app/apple-books/id364709193">Books app</a>
+                      <li>Make sure you have the { }
+                        <a href="https://apps.apple.com/us/app/apple-books/id364709193">Books app</a> { }
                         installed from the App Store.
                       </li>
                       <li>Click the link to download the book.</li>
