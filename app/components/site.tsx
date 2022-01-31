@@ -1,5 +1,5 @@
 import { EnrichedInput, loginRoute, logoutRoute } from "../auth/login";
-import { fontsCssRoute } from "../font/fonts";
+import { inlineFontCss } from "../font/fonts";
 import { mainSiteHeaderImagePath } from "../pages/home/home";
 import { staticRouteFor } from "../util/static";
 import { DarkModeButton, darkModeScript } from "./dark-mode/button";
@@ -26,7 +26,8 @@ export const Head: Component<{ imagePath?: string, title?: string, description?:
 
     <script src={darkModeScript}></script>
     <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['site.css']!)} />
-    <link rel="stylesheet" href={fontsCssRoute} />
+
+    <style>{inlineFontCss}</style>
 
     <Meta />
 
