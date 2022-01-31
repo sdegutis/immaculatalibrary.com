@@ -123,7 +123,8 @@ export class ViewBookRoute implements Routeable {
                       {[...this.book.snippets].map(bookSnippet => <>
                         <li>
                           <p>
-                            <a href={bookSnippet.view.route}>{md.renderInline(bookSnippet.title)}</a> (p.{bookSnippet.archivePage})
+                            p.{bookSnippet.archivePage} { }
+                            <a href={bookSnippet.view.route}>{md.renderInline(bookSnippet.title)}</a>
                           </p>
                         </li>
                       </>)}
