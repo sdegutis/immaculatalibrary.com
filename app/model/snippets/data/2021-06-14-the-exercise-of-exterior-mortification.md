@@ -6,10 +6,6 @@ archivePage: '162'
 bookSlug: introduction-to-the-devout-life
 ---
 
-This is part of an [Anthology of the Saints](/anthologies.html) on [Friendship, Love, and Marriage](/anthologies/friendship-love-and-marriage.html).
-
-*[Immaculata Libary Editor's Note:]* Section headings have been added, and paragraphs split up, for enhanced readability, which are neither part of the original book or the 1885 translation.
-
 > Chapter XXIII.
 >
 > *The Exercise of Exterior Mortification.*

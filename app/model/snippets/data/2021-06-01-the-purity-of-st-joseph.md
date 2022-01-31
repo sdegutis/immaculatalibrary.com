@@ -6,8 +6,6 @@ archivePage: '203'
 bookSlug: st-joseph-life-his-virtues-his-privileges-his-power
 ---
 
-This is part of an [Anthology of the Saints](/anthologies.html) on [Friendship, Love, and Marriage](/anthologies/friendship-love-and-marriage.html).
-
 > Section V.
 >
 > *The purity of St. Joseph.*

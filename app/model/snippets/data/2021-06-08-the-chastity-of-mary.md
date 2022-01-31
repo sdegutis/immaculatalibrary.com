@@ -6,8 +6,6 @@ archivePage: '623'
 bookSlug: the-glories-of-mary
 ---
 
-This is part of an [Anthology of the Saints](/anthologies.html) on [Friendship, Love, and Marriage](/anthologies/friendship-love-and-marriage.html).
-
 > **Section VI.**
 >
 > *OF THE CHASTITY OF MARY.*

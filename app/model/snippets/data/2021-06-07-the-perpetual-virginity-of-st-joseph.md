@@ -6,8 +6,6 @@ archivePage: '211'
 bookSlug: st-joseph-life-his-virtues-his-privileges-his-power
 ---
 
-This is part of an [Anthology of the Saints](/anthologies.html) on [Friendship, Love, and Marriage](/anthologies/friendship-love-and-marriage.html).
-
 > **Section VI.**
 >
 > *The perpetual Virginity of St. Joseph.*
