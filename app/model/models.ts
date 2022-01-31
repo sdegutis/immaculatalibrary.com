@@ -89,7 +89,10 @@ export const allPosts = (postsDir
   .reverse());
 
 for (const book of allBooks) {
-  book.snippets.sort(sortBy(s => s.archivePage));
+  book.snippets.sort(sortBy(s =>
+    s.archivePage.startsWith('n')
+      ? +s.archivePage.slice(1) - 1000
+      : +s.archivePage));
   for (let i = 1; i < book.snippets.length; i++) {
     const s1 = book.snippets[i - 1];
     const s2 = book.snippets[i];
