@@ -14,7 +14,7 @@ bookSlug: the-sinners-guide
 >
 > For it is incontestable that the respect men pay you, and the good for which they honor you, are due to God. You rob Him, therefore, of all the merit which you appropriate to yourself. Can any servant be more unfaithful than one who steals his master's glory?
 >
-> Consider, moreover, how unreasonable it is to rate your merit by the inconstant opinion of men who to-day are for you, and to-morrow against you; who to-day honor yon, and to-morrow revile you.
+> Consider, moreover, how unreasonable it is to rate your merit by the inconstant opinion of men who to-day are for you, and to-morrow against you; who to-day honor you, and to-morrow revile you.
 >
 > If your merit rests upon so slight a foundation, at one time you will be great, at another base, and again nothing at all, according to the capricious variations of the minds of men.
 >

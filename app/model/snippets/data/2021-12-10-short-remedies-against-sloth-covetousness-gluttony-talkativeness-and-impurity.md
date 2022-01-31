@@ -8,7 +8,7 @@ bookSlug: the-sinners-guide
 
 > Sloth and Indolence suggest: If you apply yourself to study, prayer, meditation, and tears you will injure your eyes. If you prolong your vigils and fasts you will weaken your body and unfit yourself for spiritual exercises.
 > 
-> Industry and Zeal answer: Who has assured you many years for the performance of these good works? Are you sure of to-morrow, or even of the present moment? Have you forgotten these words of our Saviour: "Watch ye, therefore, because yon know not the day nor the hour"? [St. Matt. xxv. 13.] Arise, then, and cast aside this indolence which has seized yon, for the kingdom of Heaven, which suffers violence, is not for the slothful, but for the violent who will bear it away. [St. Matt. xi. 12.]
+> Industry and Zeal answer: Who has assured you many years for the performance of these good works? Are you sure of to-morrow, or even of the present moment? Have you forgotten these words of our Saviour: "Watch ye, therefore, because you know not the day nor the hour"? [St. Matt. xxv. 13.] Arise, then, and cast aside this indolence which has seized you, for the kingdom of Heaven, which suffers violence, is not for the slothful, but for the violent who will bear it away. [St. Matt. xi. 12.]
 > 
 > Covetousness insinuates: Do not give any of your possessions to strangers, but keep them for yourself and your own.
 > 
