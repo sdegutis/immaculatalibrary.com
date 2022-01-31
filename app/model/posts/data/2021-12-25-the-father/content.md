@@ -1,6 +1,5 @@
 ---
 title: 'The Father'
-imageCaption: 'The Holy Trinity'
 ---
 
 The Bible and life experience together tell us some important things about the role of the father in this life, and God the Father. If we learn from this, it will help us to know God's will better, and to be more pleasing to him.

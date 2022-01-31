@@ -1,6 +1,5 @@
 ---
 title: 'God’s response to the bad things in our lives'
-imageCaption: 'Photo by <a href="https://unsplash.com/@boudewijn_huysmans?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Boudewijn Huysmans</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>'
 ---
 
 Sometimes we can be in the middle of very sad times in our lives. There's nothing wrong with being sad when bad things happen, especially when they're not our fault.

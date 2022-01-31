@@ -24,7 +24,6 @@ export class Post {
     const data = loadContentFile<{
       draft: boolean,
       title: string,
-      imageCaption: string,
     }>(file);
 
     return new Post(
@@ -35,7 +34,6 @@ export class Post {
       data.meta.title,
       staticRouteFor(dir.filesByName['image-big.jpg']!),
       staticRouteFor(dir.filesByName['image-small.jpg']!),
-      data.meta.imageCaption,
     );
   }
 
@@ -50,7 +48,6 @@ export class Post {
     public title: string,
     public imageBig: string,
     public imageSmall: string,
-    public imageCaption: string,
   ) {
     this.previewMarkdown = this.derivePreview(2000);
 
