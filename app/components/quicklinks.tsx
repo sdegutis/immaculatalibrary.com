@@ -21,7 +21,7 @@ export const QuickLinks: Component<{}> = (attrs, children) => {
           {recentPosts.map(post => <>
             <li class="post-box">
               <a href={post.view.route}>
-                <img class="image" src={post.imageSmall} />
+                <img class="image" src={post.imageSmall} alt={post.title} />
               </a>
               <a class="title" href={post.view.route}>
                 {post.title}

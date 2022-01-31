@@ -44,7 +44,7 @@ const homePage: Routeable = {
                 <div>
                   <div class="home">
                     <Content>
-                      <h3>Letters from Heaven</h3>
+                      <h2>Letters from Heaven</h2>
                       <blockquote>
                         <p>
                           “Have always at hand some approved book of devotion, and read a little of them every day with as much devotion as if you
