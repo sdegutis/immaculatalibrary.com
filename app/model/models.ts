@@ -70,9 +70,7 @@ export const allBooks = (booksDir
 
 export const allSnippets = (snippetsDir
   .files.map(file => Snippet.from(file))
-  .sort(sortBy(s => s.view.route))
-  .filter(s => s.published)
-  .reverse());
+  .filter(s => s.published));
 
 export const allCategories = (categoriesDir
   .dirs.map(dir => Category.from(dir))
@@ -91,3 +89,9 @@ export const allPosts = (postsDir
 for (const book of allBooks) {
   book.sortAndConnectBookSnippets();
 }
+
+export function sortAllSnippets() {
+  allSnippets.sort(sortBy(s => s.view.route)).reverse();
+}
+
+sortAllSnippets();
