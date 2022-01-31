@@ -3,6 +3,7 @@ import * as luxon from 'luxon';
 import { CloneSnippetPage } from '../../pages/snippets/create/routes';
 import { SnippetRoute } from '../../pages/snippets/one/snippet';
 import { loadContentFile, saveContentFile } from '../../util/data-files';
+import { pushChanges } from '../../util/live-editing';
 import { Book } from '../books/book';
 import { allBooks, allSnippets, sortAllSnippets } from '../models';
 import snippetsDir from './data/';
@@ -115,6 +116,11 @@ export class Snippet {
     newSnippet.save();
     newSnippet.book.sortAndConnectBookSnippets();
     sortAllSnippets();
+
+    setTimeout(() => {
+      pushChanges(file.realPath, 'New snippet from site');
+    }, 100);
+
     return newSnippet;
   }
 
