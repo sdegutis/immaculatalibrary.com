@@ -12,21 +12,23 @@
 }
 
 .prevnextlinks {
-  border: 1px solid var(--blue-bg);
-  background-color: #2af1;
-  border-radius: 3px;
-  padding: 1em;
-  margin: 1em 0;
   text-align: center;
+  font-size: 80%;
+
+  padding-top: 1em;
+  margin-bottom: 2em;
+  border-top: 1px dashed var(--border-color);
+  border-bottom: 1px dashed var(--border-color);
 }
 
-.prevnextlinks .title {
+.prevnextlinks .header {
   font-style: italic;
+  font-weight: bold;
   margin-bottom: 1em;
-  display: block;
 }
 
 .prevnextlinks>div {
+  margin: 1em 0;
   display: grid;
   justify-content: space-between;
   grid-template-columns: 1fr 1fr 1fr;

@@ -41,7 +41,7 @@ export class SnippetRoute implements Routeable {
             <Container spaced split>
               <Content>
 
-                <h1>{this.snippet.title}</h1>
+                <h1>{md.renderInline(this.snippet.title)}</h1>
 
                 {input.session?.isAdmin && <>
                   <AdminButton href={this.snippet.clone.route}>Make Next</AdminButton>
@@ -55,7 +55,7 @@ export class SnippetRoute implements Routeable {
 
                 {md.render(this.snippet.markdownContent)}
 
-                <PrevNextLinks snippet={this.snippet} />
+                <PrevNextLinks snippet={this.snippet} open />
 
               </Content>
               <div>
@@ -72,9 +72,9 @@ export class SnippetRoute implements Routeable {
 
 }
 
-const PrevNextLinks: Component<{ snippet: Snippet }> = ({ snippet }) => <>
-  <div class='prevnextlinks'>
-    <span class='title'>Other snippets in this book</span>
+const PrevNextLinks: Component<{ snippet: Snippet, open?: boolean }> = ({ snippet, open }) => <>
+  <div class='prevnextlinks' open={open ?? false}>
+    <span class='header'>Other snippets in this book</span>
     <div>
       <RelativeSnippetLink snippet={snippet.prevSnippet}>Previous</RelativeSnippetLink>
       <span>
@@ -90,7 +90,8 @@ const PrevNextLinks: Component<{ snippet: Snippet }> = ({ snippet }) => <>
 const RelativeSnippetLink: Component<{ snippet: Snippet | undefined }> = ({ snippet }, children) => <>
   <span>
     {snippet && <>
-      <a href={snippet.view.route}>{children}</a><br />(p.{snippet.archivePage})
+      <a href={snippet.view.route}>{children}</a><br />
+      p.{snippet.archivePage}
     </>}
   </span>
 </>;
