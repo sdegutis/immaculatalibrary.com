@@ -3,7 +3,7 @@ import { Content } from "../../../components/content/content";
 import { Head, Html } from "../../../components/site";
 import { addRouteable, Routeable, RouteMeta, RouteMethod } from "../../../core/router";
 import { Snippet } from "../../../model/snippets/snippet";
-import { md } from "../../../util/helpers";
+import { md, reading_mins } from "../../../util/helpers";
 import { staticRouteFor } from "../../../util/static";
 import adminCssPage from './clone-style.css';
 import newBookSnippetScript from './new-book-snippet.js';
@@ -47,6 +47,7 @@ export class CloneSnippetPage implements Routeable {
             <link rel='stylesheet' href={staticRouteFor(adminCssPage)} />
             <MarkdownClientSide />
             <MonacoClientSide />
+            <script>{reading_mins.toString()}</script>
           </Head>
           <body>
             <main>
@@ -58,6 +59,7 @@ export class CloneSnippetPage implements Routeable {
                   <span>Title</span>   <input autocomplete='off' name='title' />
                   <span>Slug</span>    <input autocomplete='off' name='slug' />
                   <span>Content</span> <textarea name='markdownContent' />
+                  <span>Mins</span>    <span id='readingmins'></span>
                   <span />
                   <button>Create</button>
                 </form>
@@ -111,6 +113,7 @@ export class NewSnippetPage implements Routeable {
             <link rel='stylesheet' href={staticRouteFor(adminCssPage)} />
             <MarkdownClientSide />
             <MonacoClientSide />
+            <script>{reading_mins.toString()}</script>
           </Head>
           <body>
             <main>
@@ -122,6 +125,7 @@ export class NewSnippetPage implements Routeable {
                   <span>Title</span>   <input autocomplete='off' name='title' />
                   <span>Slug</span>    <input autocomplete='off' name='slug' />
                   <span>Content</span> <textarea name='markdownContent' />
+                  <span>Mins</span>    <span id='readingmins'></span>
                   <span />
                   <button>Create</button>
                 </form>
