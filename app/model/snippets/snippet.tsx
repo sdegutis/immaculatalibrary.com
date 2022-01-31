@@ -30,6 +30,9 @@ export class Snippet {
     );
   }
 
+  nextSnippet?: Snippet;
+  prevSnippet?: Snippet;
+
   view;
   clone;
 

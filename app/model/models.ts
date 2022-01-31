@@ -87,3 +87,13 @@ export const allPosts = (postsDir
   .sort(sortBy(post => post.date))
   .filter(s => !s.draft)
   .reverse());
+
+for (const book of allBooks) {
+  book.snippets.sort(sortBy(s => s.archivePage));
+  for (let i = 1; i < book.snippets.length; i++) {
+    const s1 = book.snippets[i - 1];
+    const s2 = book.snippets[i];
+    s1!.nextSnippet = s2!;
+    s2!.prevSnippet = s1!;
+  }
+}

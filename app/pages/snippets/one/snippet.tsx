@@ -40,6 +40,7 @@ export class SnippetRoute implements Routeable {
             <HeroImage image={this.snippet.image} />
             <Container spaced split>
               <Content>
+
                 <h1>{this.snippet.title}</h1>
 
                 {input.session?.isAdmin && <>
@@ -47,9 +48,14 @@ export class SnippetRoute implements Routeable {
                 </>}
 
                 <p>{format_date(this.snippet.date)} &bull; {reading_mins(this.snippet.markdownContent)} min</p>
+
+                <PrevNextLinks snippet={this.snippet} />
+
                 <p>From <a href={this.snippet.book.view.route}>{this.snippet.book.title}</a>, page <a href={this.snippet.archiveLink}>{extract_page_number(this.snippet.archiveLink)}</a></p>
 
                 {md.render(this.snippet.markdownContent)}
+
+                <PrevNextLinks snippet={this.snippet} />
 
               </Content>
               <div>
@@ -65,3 +71,21 @@ export class SnippetRoute implements Routeable {
   }
 
 }
+
+const PrevNextLinks: Component<{ snippet: Snippet }> = ({ snippet }) => <>
+  <div class='prevnextlinks'>
+    <span class='title'>Other snippets in this book</span>
+    <div>
+      <RelativeSnippetLink snippet={snippet.prevSnippet}>Previous</RelativeSnippetLink>
+      <RelativeSnippetLink snippet={snippet.nextSnippet}>Next</RelativeSnippetLink>
+    </div>
+  </div>
+</>;
+
+const RelativeSnippetLink: Component<{ snippet: Snippet | undefined }> = ({ snippet }, children) => <>
+  <span>
+    {snippet && <>
+      <a href={snippet.view.route}>{children}</a>
+    </>}
+  </span>
+</>;
