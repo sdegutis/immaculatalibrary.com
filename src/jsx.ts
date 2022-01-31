@@ -1,6 +1,6 @@
 
 export type IntrinsicElements = {
-  [tag: string]: Record<string, string | true>;
+  [tag: string]: Record<string, string | boolean>;
 };
 
 export type Element = string;
