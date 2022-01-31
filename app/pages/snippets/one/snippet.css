@@ -22,10 +22,12 @@
 
 .prevnextlinks .title {
   font-style: italic;
+  margin-bottom: 1em;
+  display: block;
 }
 
 .prevnextlinks>div {
   display: grid;
-  grid-auto-flow: column;
   justify-content: space-between;
+  grid-template-columns: 1fr 1fr 1fr;
 }

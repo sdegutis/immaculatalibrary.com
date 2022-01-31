@@ -77,6 +77,11 @@ const PrevNextLinks: Component<{ snippet: Snippet }> = ({ snippet }) => <>
     <span class='title'>Other snippets in this book</span>
     <div>
       <RelativeSnippetLink snippet={snippet.prevSnippet}>Previous</RelativeSnippetLink>
+      <span>
+        <a href={snippet.book.view.route}>All</a>
+        <br />
+        {snippet.book.snippets.length} total
+      </span>
       <RelativeSnippetLink snippet={snippet.nextSnippet}>Next</RelativeSnippetLink>
     </div>
   </div>
@@ -85,7 +90,7 @@ const PrevNextLinks: Component<{ snippet: Snippet }> = ({ snippet }) => <>
 const RelativeSnippetLink: Component<{ snippet: Snippet | undefined }> = ({ snippet }, children) => <>
   <span>
     {snippet && <>
-      <a href={snippet.view.route}>{children}</a> (p.{snippet.archivePage})
+      <a href={snippet.view.route}>{children}</a><br />(p.{snippet.archivePage})
     </>}
   </span>
 </>;
