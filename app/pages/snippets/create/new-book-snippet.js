@@ -48,5 +48,5 @@ editor.getModel().onDidChangeContent(() => {
   const content = editor.getModel().getValue();
   contentInput.value = content;
   previewArea.innerHTML = md.render(content);
-  readingMinsEl.innerHTML = reading_mins(content);
+  readingMinsEl.innerHTML = reading_mins(content) + ' min';
 });
