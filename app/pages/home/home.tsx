@@ -3,6 +3,9 @@ import { Content } from "../../components/content/content";
 import { QuickLinks } from "../../components/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "../../components/site";
 import { addRouteable, Routeable } from "../../core/router";
+import { allSnippets } from "../../model/models";
+import { Snippet } from "../../model/snippets/snippet";
+import { format_date, md, randomElement, reading_mins } from "../../util/helpers";
 import { staticRouteFor } from "../../util/static";
 import { LatestBookSnippets } from "../snippets/latest-list";
 import cssFile from './home.css';
@@ -71,7 +74,9 @@ const homePage: Routeable = {
                     <h3>Random Book Snippet (<a href='#' id='refresh-random-book-snippet'>Another</a>)</h3>
                     <noscript>Enable JavaScript to see a random book snippet</noscript>
                     <Content>
-                      <div id="random-book-snippet"></div>
+                      <div id="random-book-snippet">
+                        <SnippetWithPreview snippet={randomElement(allSnippets)} />
+                      </div>
                     </Content>
                   </div>
                   <script src={staticRouteFor(randomBookSnippetScript)}></script>
@@ -90,6 +95,36 @@ const homePage: Routeable = {
     };
   },
 };
+
+const SnippetWithPreview: Component<{ snippet: Snippet }> = ({ snippet }) => <>
+  <h4><a href={snippet.view.route}>{md.renderInline(snippet.title)}</a></h4>
+  <p>{format_date(snippet.date)} &bull; {reading_mins(snippet.markdownContent)}</p>
+  <p>
+    From <a href={snippet.book.view.route}>{snippet.book.title}</a>
+    , page <a href={snippet.archiveLink}>{snippet.archivePage}</a>
+  </p>
+  <div class='rendered-preview'>
+    {snippet.previewMarkdown
+      ? <>
+        <div>{md.render(snippet.previewMarkdown)}</div>
+        <div hidden>{md.render(snippet.markdownContent)}</div>
+        <a href='#' class='continue-reading-snippet-link'><i>Continue reading...</i></a>
+      </>
+      : md.render(snippet.markdownContent)}
+  </div>
+</>;
+
+const bookSnippetRandom: Routeable = {
+  route: '/book-snippets/random',
+  method: 'GET',
+  handle: (input) => {
+    return {
+      body: <SnippetWithPreview snippet={randomElement(allSnippets)} />
+    };
+  }
+};
+
+addRouteable(bookSnippetRandom);
 
 const redirectHomePageRoute: Routeable = {
   route: '/index.html',
