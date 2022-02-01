@@ -98,7 +98,7 @@ const homePage: Routeable = {
 
 const SnippetWithPreview: Component<{ snippet: Snippet }> = ({ snippet }) => <>
   <h4><a href={snippet.view.route}>{md.renderInline(snippet.title)}</a></h4>
-  <p>{format_date(snippet.date)} &bull; {reading_mins(snippet.markdownContent)}</p>
+  <p>{format_date(snippet.date)} &bull; {reading_mins(snippet.markdownContent)} min</p>
   <p>
     From <a href={snippet.book.view.route}>{snippet.book.title}</a>
     , page <a href={snippet.archiveLink}>{snippet.archivePage}</a>
