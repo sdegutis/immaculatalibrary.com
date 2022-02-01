@@ -38,7 +38,7 @@ const map = new Map<FsFile, string>();
 export function staticRouteFor(file: FsFile): string {
   let s = map.get(file);
   if (!s) {
-    if (file.buffer.length < 5_000) {
+    if (file.buffer.length < 1_000) {
       const type = mime.getType(file.name) ?? 'application/octet-stream';
       map.set(file, s = `data:${type};base64,${file.buffer.toString('base64')}`);
     }
