@@ -1,4 +1,5 @@
 import { createHash } from 'crypto';
+import mime from 'mime';
 import path from 'path';
 import { EnrichedInput } from '../auth/login';
 import { addRouteable, Routeable, RouteMethod } from '../core/router';
@@ -37,9 +38,15 @@ const map = new Map<FsFile, string>();
 export function staticRouteFor(file: FsFile): string {
   let s = map.get(file);
   if (!s) {
-    const f = HashedStaticFile.fromFile(file);
-    addRouteable(f);
-    map.set(file, s = f.route);
+    if (file.buffer.length < 5_000) {
+      const type = mime.getType(file.name) ?? 'application/octet-stream';
+      map.set(file, s = `data:${type};base64,${file.buffer.toString('base64')}`);
+    }
+    else {
+      const f = HashedStaticFile.fromFile(file);
+      addRouteable(f);
+      map.set(file, s = f.route);
+    }
   }
   return s;
 }
