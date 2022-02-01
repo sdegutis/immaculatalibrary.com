@@ -58,7 +58,7 @@ export class CloneSnippetPage implements Routeable {
                   <span>Book</span>    <input autocomplete='off' name='bookSlug' value={this.snippet.bookSlug} />
                   <span>Title</span>   <input autocomplete='off' name='title' />
                   <span>Slug</span>    <input autocomplete='off' name='slug' />
-                  <span>Content</span> <textarea name='markdownContent' />
+                  <span>Text</span> <textarea name='markdownContent' />
 
                   <span id='readingmins'></span> <button>Create</button>
                 </form>
