@@ -28,11 +28,6 @@ export function reading_mins(str: string) {
   return Math.round((str.match(/\w+/g)?.length || 0) / 160);
 }
 
-export function extract_page_number(archiveLink: string) {
-  const m = archiveLink.match(/\/page\/(n?[0-9]+)/);
-  return m ? m[1] : '(unknown page)';
-}
-
 export function format_date(date: string) {
   return luxon.DateTime.fromISO(date).toLocaleString({
     year: 'numeric',

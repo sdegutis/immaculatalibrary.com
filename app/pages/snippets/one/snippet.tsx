@@ -6,7 +6,7 @@ import { QuickLinks } from "../../../components/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "../../../components/site";
 import { addRouteable, Routeable, RouteMeta, RouteMethod } from "../../../core/router";
 import { Snippet } from "../../../model/snippets/snippet";
-import { extract_page_number, format_date, md, reading_mins } from "../../../util/helpers";
+import { format_date, md, reading_mins } from "../../../util/helpers";
 import { staticRouteFor } from "../../../util/static";
 import { AdminButton } from "../admin-button/admin-button";
 import { LatestBookSnippets } from "../latest-list";
@@ -51,7 +51,7 @@ export class SnippetRoute implements Routeable {
 
                 <PrevNextLinks snippet={this.snippet} />
 
-                <p>From <a href={this.snippet.book.view.route}>{this.snippet.book.title}</a>, page <a href={this.snippet.archiveLink}>{extract_page_number(this.snippet.archiveLink)}</a></p>
+                <p>From <a href={this.snippet.book.view.route}>{this.snippet.book.title}</a>, page <a rel="noopener" href={this.snippet.archiveLink}>{this.snippet.archivePage}</a></p>
 
                 {md.render(this.snippet.markdownContent)}
 

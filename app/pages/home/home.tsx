@@ -58,7 +58,7 @@ const homePage: Routeable = {
                             <p>&mdash; St. Francis de Sales</p>
                             <p>
                               <a href="/books/introduction-to-the-devout-life.html">Introduction to the Devout Life</a>, page{' '}
-                              <a href="https://archive.org/details/an-introduction-to-the-devout-life/page/77?view=theater">77</a>
+                              <a rel="noopener" href="https://archive.org/details/an-introduction-to-the-devout-life/page/77?view=theater">77</a>
                             </p>
                           </li>
                         </ul>
@@ -101,7 +101,7 @@ const SnippetWithPreview: Component<{ snippet: Snippet }> = ({ snippet }) => <>
   <p>{format_date(snippet.date)} &bull; {reading_mins(snippet.markdownContent)} min</p>
   <p>
     From <a href={snippet.book.view.route}>{snippet.book.title}</a>
-    , page <a href={snippet.archiveLink}>{snippet.archivePage}</a>
+    , page <a rel="noopener" href={snippet.archiveLink}>{snippet.archivePage}</a>
   </p>
   <div class='rendered-preview'>
     {snippet.previewMarkdown
