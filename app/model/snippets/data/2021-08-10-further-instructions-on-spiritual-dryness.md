@@ -6,8 +6,6 @@ archivePage: '256'
 bookSlug: introduction-to-the-devout-life
 ---
 
-*This book snippet follows [Spiritual dryness, and its various causes](https://www.immaculatalibrary.com/book-snippets/2021-08-08-spiritual-dryness-and-what-causes-it.html) and [How to properly handle spiritual drynesses](https://www.immaculatalibrary.com/book-snippets/2021-08-09-how-to-properly-handle-spiritual-drynesses.html).*
-
 > To make the whole of this instruction the more evident, I will here relate an excellent passage from the history of St. Bernard, as it has been related by a learned and judicious writer. It is an ordinary thing, he says, with all that serve God, and are not as yet experienced in the vicissitudes of spiritual life, to lose breath and fall into pusillanimity and sadness when the sweetness of sensible devotion, together with that agreeable light which invites them to run forward in the way of God, is withdrawn from them.
 >
 > Persons of understanding assign the following reason for this, that man's nature cannot hold out for any length of time without some kind of delight, either heavenly or earthly.

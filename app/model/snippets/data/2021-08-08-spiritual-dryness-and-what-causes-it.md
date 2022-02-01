@@ -6,8 +6,6 @@ archivePage: '250'
 bookSlug: introduction-to-the-devout-life
 ---
 
-*This book snippet is followed by [How to properly handle spiritual drynesses](https://www.immaculatalibrary.com/book-snippets/2021-08-09-how-to-properly-handle-spiritual-drynesses.html) and [Further instructions on spiritual dryness](https://www.immaculatalibrary.com/book-snippets/2021-08-10-further-instructions-on-spiritual-dryness.html).*
-
 > As long as consolations may last, do as I have just now directed you, Philothea. But this fine and agreeable weather will not always continue; for sometimes you shall find yourself so absolutely destitute of all feeling of devotion that your soul shall seem to be a wild, fruitless, barren desert, in which there is no trace of a pathway to find her God, nor any water of grace to refresh her, on account of the dryness which seems to threaten her with total and absolute desolation.
 >
 > Alas! how much does a poor soul in such a state deserve compassion: but especially when this evil is vehement; for then, in imitation of David, she feeds herself with tears night and day, while the enemy, to cast her into despair, mocks her by a thousand suggestions of despondency, saying, Ah, poor wretch, where is thy God? By what path shall thou be able to find Him? Who can ever restore to thee the joy of his holy grace?

@@ -6,8 +6,6 @@ archivePage: '111'
 bookSlug: the-spiritual-combat
 ---
 
-*This follows up from the book snippet [We must trust both in God’s goodness and our weakness](/book-snippets/2021-09-02-we-must-trust-both-in-gods-goodness-and-our-weakness.html)*
-
 > The second reason is, that when we conceive some good purpose, we only fix our eyes on the charms and excellence of virtue, which draw to it even the most feeble minds, but never consider the difficulties of attaining it; whence it comes that cowardly minds are dashed at the first appearance of trouble, and fly off from their enterprise.
 >
 > Upon this account, you ought rather to place before your eyes the difficulties which occur in the acquisition of virtues, than the virtues themselves; think often of it, and prepare yourself accordingly.
