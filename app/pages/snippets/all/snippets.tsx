@@ -9,7 +9,7 @@ import { staticRouteFor } from "../../../util/static";
 import { referenceImage } from "../../category/view-category";
 import searchBookSnippetsScript from './search-book-snippets.js';
 
-const allSnippetsPage: Routeable = {
+export const allSnippetsPage: Routeable = {
   route: `/book-snippets.html`,
   method: 'GET',
   handle: (input) => {

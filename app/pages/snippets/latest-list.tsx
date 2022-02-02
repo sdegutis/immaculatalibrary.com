@@ -1,5 +1,7 @@
 import { allSnippets } from "../../model/models";
 import { groupByDate, md, reading_mins } from "../../util/helpers";
+import { allSnippetsPage } from "./all/snippets";
+import { randomSnippetPage } from "./random";
 
 const latestBookSnippetsStyle = `
 ul.snippets-latest {
@@ -28,9 +30,9 @@ export const LatestBookSnippets: Component<{}> = (attrs, children) => {
 
     <h3>Latest book snippets</h3>
     <p>
-      <a href="/book-snippets.html">See all {allSnippets.length}</a>
+      <a href={allSnippetsPage.route}>See all {allSnippets.length}</a>
       {' | '}
-      <a href='/random-book-snippet.html'>Random Book Snippet</a>
+      <a href={randomSnippetPage.route}>Random Book Snippet</a>
     </p>
     <ul class="snippets-latest">
       {groups.map(([date, group]) => <>

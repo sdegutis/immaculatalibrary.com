@@ -10,6 +10,7 @@ import { Book } from "../../../model/books/book";
 import { excerpt, md, striptags } from "../../../util/helpers";
 import { staticRouteFor } from "../../../util/static";
 import { AdminButton } from "../../snippets/admin-button/admin-button";
+import { allSnippetsPage } from "../../snippets/all/snippets";
 
 export class ViewBookRoute implements Routeable {
 
@@ -116,7 +117,7 @@ export class ViewBookRoute implements Routeable {
 
               <div>
 
-                <h3>Book snippets (<a href="/book-snippets.html">See all</a>)</h3>
+                <h3>Book snippets (<a href={allSnippetsPage.route}>See all</a>)</h3>
                 <ul class="snippets-latest">
                   {this.book.snippets.length > 0
                     ? <>
