@@ -26,7 +26,7 @@ And then what? St. Paul says somewhere that Jesus will deliver all things to the
 
 The Letter to the Hebrews also seems to confirm this, saying "it was fitting that He, for whom and by whom all things were made, should make the pioneer of their salvation perfect through suffering." The rest of the letter explains and proves that the first "He" in this sentence, the one "for whom and by whom all things were made", is probably God the Father.
 
-So we see that, in the *last* days, everything is finally delivered to Jesus. But that he only gives ut to God the *Father.* Which means, the Father is not only the source of all things, but the *end* of all things.
+So we see that, in the *last* days, everything is finally delivered to Jesus. But that he only gives it to God the *Father.* Which means, the Father is not only the source of all things, but the *end* of all things.
 
 Now connect the concepts of both lives together, this life and the next life, and you start to see a pattern:
 
