@@ -7,6 +7,7 @@ import { allSnippets } from "../../../model/models";
 import { format_date, groupByDate, md, reading_mins } from "../../../util/helpers";
 import { staticRouteFor } from "../../../util/static";
 import { referenceImage } from "../../category/view-category";
+import { randomSnippetPage } from "../random";
 import searchBookSnippetsScript from './search-book-snippets.js';
 
 export const allSnippetsPage: Routeable = {
@@ -37,7 +38,7 @@ export const allSnippetsPage: Routeable = {
 
                   <p>
                     Not sure what to read?<br />
-                    Try a <a href="/random-book-snippet.html" target="_blank">Random Book Snippet</a>.</p>
+                    Try a <a href={randomSnippetPage.route} target="_blank">Random Book Snippet</a>.</p>
                   <hr />
 
                   <p>

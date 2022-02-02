@@ -8,7 +8,7 @@ import { allMovies } from "../../../model/models";
 import { randomElement } from "../../../util/helpers";
 import { MoviesSidebar } from "../movies-sidebar";
 
-const allMoviesPage: Routeable = {
+export const allMoviesPage: Routeable = {
   route: `/movies.html`,
   method: 'GET',
   handle: (input) => {

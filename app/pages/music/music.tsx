@@ -14,7 +14,7 @@ const title = 'Sacred Music';
 
 const htmlContent = md.render(__dir.filesByName['content.md']!.buffer.toString('utf8'));
 
-const page: Routeable = {
+export const musicPage: Routeable = {
   method: 'GET',
   route: '/music.html',
   handle: (input) => {
@@ -41,4 +41,4 @@ const page: Routeable = {
   },
 };
 
-addRouteable(page);
+addRouteable(musicPage);

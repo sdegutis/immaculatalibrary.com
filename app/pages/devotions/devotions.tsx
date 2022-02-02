@@ -14,7 +14,7 @@ const title = 'Devotions';
 
 const htmlContent = md.render(__dir.filesByName['content.md']!.buffer.toString('utf8'));
 
-const page: Routeable = {
+export const devotionsPage: Routeable = {
   method: 'GET',
   route: '/devotions.html',
   handle: (input) => {
@@ -41,4 +41,4 @@ const page: Routeable = {
   },
 };
 
-addRouteable(page);
+addRouteable(devotionsPage);

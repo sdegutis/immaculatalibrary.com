@@ -16,7 +16,7 @@ const title = 'Audio Bible';
 
 const htmlContent = md.render(__dir.filesByName['content.md']!.buffer.toString('utf8'));
 
-const page: Routeable = {
+export const audioBiblePage: Routeable = {
   method: 'GET',
   route: '/audio-bible.html',
   handle: (input) => {
@@ -43,4 +43,4 @@ const page: Routeable = {
   },
 };
 
-addRouteable(page);
+addRouteable(audioBiblePage);

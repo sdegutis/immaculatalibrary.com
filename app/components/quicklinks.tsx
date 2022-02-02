@@ -1,5 +1,6 @@
 import { allCategories, allMovies, allPosts } from "../model/models";
-import { audioBibleImageSmall } from "../pages/audiobible/audiobible";
+import { audioBibleImageSmall, audioBiblePage } from "../pages/audiobible/audiobible";
+import { allPostsPage } from "../pages/posts/all/all-posts";
 import { excerpt, format_date, md, reading_mins } from "../util/helpers";
 import { staticRouteFor } from "../util/static";
 
@@ -14,7 +15,7 @@ export const QuickLinks: Component<{}> = (attrs, children) => {
       <div class="container">
 
         <h2>Blog Posts</h2>
-        <p><a href="/posts.html">See all</a></p>
+        <p><a href={allPostsPage.route}>See all</a></p>
 
         <ul id="posts">
 
@@ -60,7 +61,7 @@ export const QuickLinks: Component<{}> = (attrs, children) => {
           )}
 
           <li>
-            <a class="link" href="/audio-bible.html" style={`background-image: url(${audioBibleImageSmall});`}>
+            <a class="link" href={audioBiblePage.route} style={`background-image: url(${audioBibleImageSmall});`}>
               <span>Audio Bible</span>
             </a>
           </li>

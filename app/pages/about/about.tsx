@@ -11,7 +11,7 @@ const title = 'About Immaculata Library';
 
 const htmlContent = md.render(__dir.filesByName['content.md']!.buffer.toString('utf8'));
 
-const page: Routeable = {
+export const aboutPage: Routeable = {
   method: 'GET',
   route: '/about.html',
   handle: (input) => {
@@ -38,4 +38,4 @@ const page: Routeable = {
   },
 };
 
-addRouteable(page);
+addRouteable(aboutPage);

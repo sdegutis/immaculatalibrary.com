@@ -6,9 +6,10 @@ import { addRouteable, Routeable } from '../../../core/router';
 import { allBooks } from "../../../model/models";
 import { staticRouteFor } from '../../../util/static';
 import { referenceImage } from '../../category/view-category';
+import { randomBookPage } from "../random-book";
 import allBooksScript from './search-books.js';
 
-const allBooksPage: Routeable = {
+export const allBooksPage: Routeable = {
   route: `/books.html`,
   method: 'GET',
   handle: (input) => {
@@ -28,7 +29,7 @@ const allBooksPage: Routeable = {
 
                   <h1>{title}</h1>
 
-                  <p>Not sure what to read?<br /> Try a <a href="/random.html" target="_blank">Random Book</a>.</p>
+                  <p>Not sure what to read?<br /> Try a <a href={randomBookPage.route} target="_blank">Random Book</a>.</p>
                   <hr />
 
                   <p>Search:<br /> <input type="text" oninput="searchBooks(this);" /></p>
