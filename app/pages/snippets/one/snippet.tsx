@@ -49,7 +49,7 @@ export class SnippetRoute implements Routeable {
 
                 <p>{format_date(this.snippet.date)} &bull; {reading_mins(this.snippet.markdownContent)} min</p>
 
-                <PrevNextLinks snippet={this.snippet} />
+                {/* <PrevNextLinks snippet={this.snippet} /> */}
 
                 <p>From <a href={this.snippet.book.view.route}>{this.snippet.book.title}</a>, page <a rel="noopener" href={this.snippet.archiveLink}>{this.snippet.archivePage}</a></p>
 
