@@ -44,6 +44,7 @@ export class SnippetRoute implements Routeable {
                 <h1>{md.renderInline(this.snippet.title)}</h1>
 
                 {input.session?.isAdmin && <>
+                  <PrevNextLinks snippet={this.snippet} open />
                   <AdminButton href={this.snippet.clone.route}>Make Next</AdminButton>
                 </>}
 
