@@ -2,11 +2,19 @@ import mime from 'mime';
 import 'source-map-support/register';
 import { enrichAuth } from './auth/login';
 import './core/load';
-import { loadRoutes } from './core/router';
+import { addRouteable, loadRoutes } from './core/router';
 import { notFoundPage } from './pages/errors/404';
 import { errorPage } from './pages/errors/500';
 
 const routes = loadRoutes();
+
+addRouteable({
+  method: 'GET',
+  route: '/report.html',
+  handle: () => ({
+    body: __dir.filesByName['report.html']!.buffer
+  })
+});
 
 export function routeHandler(input: RouteInput): RouteOutput {
   if (input.headers['host'] !== input.url.host) {
