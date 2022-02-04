@@ -6,6 +6,7 @@ document.getElementById('giveFeedbackButton').addEventListener('click', e => {
 
   wrapper.innerHTML = `
     <form action='/send-feedback' method='POST'>
+      <button id='close-feedback'>🗙</button>
       <h3>Give Feedback</h3>
       <p>Have thoughts about this site? Would something make it better? Send your thoughts! If you need a response, please provide contact information.</p>
       <p><textarea name='feedback'></textarea></p>
@@ -23,4 +24,8 @@ document.getElementById('giveFeedbackButton').addEventListener('click', e => {
     }
   };
   document.addEventListener('keydown', escaper);
+  wrapper.querySelector('#close-feedback').addEventListener('click', e => {
+    e.preventDefault();
+    wrapper.remove();
+  });
 });
