@@ -8,7 +8,6 @@ document.getElementById('giveFeedbackButton').addEventListener('click', e => {
     <form action='/send-feedback' method='POST'>
       <button id='close-feedback'>✕</button>
       <h3>Give Feedback</h3>
-      <p>Have thoughts about this site? Would something make it better? Send your thoughts! If you need a response, please provide contact information.</p>
       <p><textarea name='feedback'></textarea></p>
       <span><button send>Send Feedback</button></span>
     </form>

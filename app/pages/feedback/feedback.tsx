@@ -27,7 +27,7 @@ const sendFeedback: Routeable = {
             <Container spaced split>
               <Content>
                 <h1>{title}</h1>
-                <p>Thanks for submitting your feedback. It has been received and will be read shortly. If you provided contact information and need a response, look for one within a day or two.</p>
+                <p>Thanks for submitting your feedback. It has been received and will be read shortly.</p>
               </Content>
             </Container>
           </main>
