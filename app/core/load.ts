@@ -3,6 +3,7 @@ import "../pages/audiobible/audiobible";
 import "../pages/books/all-books/all-books";
 import "../pages/books/random-book";
 import "../pages/devotions/devotions";
+import "../pages/feedback/feedback";
 import "../pages/home/home";
 import "../pages/movies/all-movies/all-movies";
 import "../pages/music/music";

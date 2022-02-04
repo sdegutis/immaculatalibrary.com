@@ -15,6 +15,7 @@ export const SiteHeader: Component<{}> = (attrs, children) => <>
       <ul>
         <li>
           <ul>
+            <li><a href='#' class='feedback-button' id='giveFeedbackButton'>Give Feedback</a></li>
             <li><a href={aboutPage.route}>About</a></li>
             <li><a href={allBooksPage.route}>Books</a></li>
             <li><a href={allMoviesPage.route}>Movies</a></li>
@@ -30,4 +31,6 @@ export const SiteHeader: Component<{}> = (attrs, children) => <>
       </ul>
     </nav>
   </header>
+  <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['feedback.css']!)} />
+  <script src={staticRouteFor(__dir.filesByName['feedback.js']!)} />
 </>;

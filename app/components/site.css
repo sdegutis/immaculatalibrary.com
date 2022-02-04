@@ -12,6 +12,10 @@ html {
   --admin-bg-color: #def;
   --disclaimer-border-color: var(--blue-bg);
   --disclaimer-bg-color: #def;
+
+  --input-bg: #fff;
+  --input-color: #000;
+  --input-bg-active: #0001;
 }
 
 html.dark-mode {
@@ -27,6 +31,10 @@ html.dark-mode {
   --admin-bg-color: #004;
   --disclaimer-border-color: var(--blue-bg);
   --disclaimer-bg-color: #004;
+
+  --input-bg: #000;
+  --input-color: #fff;
+  --input-bg-active: #fff1;
 }
 
 /* General resets and fixes */

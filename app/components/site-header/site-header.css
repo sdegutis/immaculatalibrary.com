@@ -24,11 +24,11 @@
   background: #20294e;
 }
 
-#site-header nav > :first-child {
+#site-header nav> :first-child {
   margin-left: -1em;
 }
 
-#site-header nav > :last-child {
+#site-header nav> :last-child {
   margin-right: -1em;
 }
 
@@ -38,13 +38,13 @@
   margin-bottom: 0;
 }
 
-#site-header nav > ul {
+#site-header nav>ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
 }
 
-#site-header nav > ul ul {
+#site-header nav>ul ul {
   display: flex;
 }
 
@@ -57,12 +57,17 @@
     padding: 0.7em;
   }
 
-  #site-header nav > :first-child {
+  #site-header nav> :first-child {
     margin-left: -0.7em;
   }
 
-  #site-header nav > :last-child {
+  #site-header nav> :last-child {
     margin-right: -0.7em;
   }
 
+}
+
+#site-header .feedback-button {
+  font-style: italic;
+  color: var(--blue-bg);
 }
