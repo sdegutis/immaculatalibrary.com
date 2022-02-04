@@ -58,7 +58,7 @@ export const homePage: Routeable = {
                             <p>&mdash; St. Francis de Sales</p>
                             <p>
                               <a href="/books/introduction-to-the-devout-life.html">Introduction to the Devout Life</a>, page{' '}
-                              <a rel="noopener" href="https://archive.org/details/an-introduction-to-the-devout-life/page/77?view=theater">77</a>
+                              <a rel="noopener" href="/book-snippets/2021-06-26-how-we-should-do-holy-reading.html">77</a>
                             </p>
                           </li>
                         </ul>
