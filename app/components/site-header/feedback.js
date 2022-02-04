@@ -8,6 +8,7 @@ document.getElementById('giveFeedbackButton').addEventListener('click', e => {
     <form action='/send-feedback' method='POST'>
       <button id='close-feedback'>✕</button>
       <h3>Give Feedback</h3>
+      <p>Share your feedback about ImmaculataLibrary.com in the box below:</p>
       <p><textarea name='feedback'></textarea></p>
       <span><button send>Send Feedback</button></span>
     </form>
