@@ -12,6 +12,13 @@ import cssFile from './home.css';
 import headerImage from './home.jpg';
 import randomBookSnippetScript from './random-book-snippet.js';
 
+let randomSnippet: Snippet;
+setTimeout(refreshRandomSnippet, 0);
+setInterval(refreshRandomSnippet, 1000 * 60 * 60 * 24);
+function refreshRandomSnippet() {
+  randomSnippet = randomElement(allSnippets);
+}
+
 export const mainSiteHeaderImagePath = staticRouteFor(headerImage);
 
 export const homePage: Routeable = {
@@ -75,7 +82,7 @@ export const homePage: Routeable = {
                     <noscript>Enable JavaScript to see a random book snippet</noscript>
                     <Content>
                       <div id="random-book-snippet">
-                        <SnippetWithPreview snippet={randomElement(allSnippets)} />
+                        <SnippetWithPreview snippet={randomSnippet} />
                       </div>
                     </Content>
                   </div>
