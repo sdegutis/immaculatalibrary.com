@@ -9,6 +9,7 @@ import { addRouteable, Routeable, RouteMeta, RouteMethod } from "../../../core/r
 import { Snippet } from "../../../model/snippets/snippet";
 import { format_date, md, reading_mins } from "../../../util/helpers";
 import { staticRouteFor } from "../../../util/static";
+import adminFormCss from '../create/admin-form.css';
 import { LatestBookSnippets } from "../latest-list";
 
 export class SnippetRoute implements Routeable {
@@ -45,12 +46,13 @@ export class SnippetRoute implements Routeable {
 
                 {input.session?.isAdmin && <>
                   <PrevNextLinks snippet={this.snippet} open />
-                  <AdminButton href={this.snippet.clone.route}>Make Next</AdminButton>
+                  <div>
+                    <AdminButton href={this.snippet.clone.route}>Make Next</AdminButton> { }
+                    <AdminButton href='#' onclick='document.getElementById(`edit-snippet-form`).hidden=false; return false;'>Edit</AdminButton>
+                  </div>
                 </>}
 
                 <p>{format_date(this.snippet.date)} &bull; {reading_mins(this.snippet.markdownContent)} min</p>
-
-                {/* <PrevNextLinks snippet={this.snippet} /> */}
 
                 <p>From <a href={this.snippet.book.view.route}>{this.snippet.book.title}</a>, page <a rel="noopener" href={this.snippet.archiveLink}>{this.snippet.archivePage}</a></p>
 
@@ -60,6 +62,19 @@ export class SnippetRoute implements Routeable {
 
               </Content>
               <div>
+                {input.session?.isAdmin && <>
+                  <link rel='stylesheet' href={staticRouteFor(adminFormCss)} />
+                  <form id='edit-snippet-form' method="POST" action={this.snippet.edit.route}>
+                    <span>Page</span>    <input autocomplete='off' name='archivePage' value={this.snippet.archivePage} autofocus />
+                    <span>Link</span>    <input autocomplete='off' name='archiveSlug' value={this.snippet.archiveSlug} />
+                    <span>Book</span>    <input autocomplete='off' name='bookSlug' value={this.snippet.bookSlug} />
+                    <span>Title</span>   <input autocomplete='off' name='title' value={this.snippet.title} />
+                    <span>Text</span>    <textarea name='markdownContent'>{this.snippet.markdownContent}</textarea>
+
+                    <span id='readingmins'></span> <button>Create</button>
+                  </form>
+                </>}
+
                 <LatestBookSnippets />
               </div>
             </Container>

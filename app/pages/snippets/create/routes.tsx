@@ -5,6 +5,7 @@ import { addRouteable, Routeable, RouteMeta, RouteMethod } from "../../../core/r
 import { Snippet } from "../../../model/snippets/snippet";
 import { md, reading_mins } from "../../../util/helpers";
 import { staticRouteFor } from "../../../util/static";
+import adminFormCss from './admin-form.css';
 import adminCssPage from './clone-style.css';
 import newBookSnippetScript from './new-book-snippet.js';
 
@@ -45,6 +46,7 @@ export class CloneSnippetPage implements Routeable {
         <Html>
           <Head>
             <link rel='stylesheet' href={staticRouteFor(adminCssPage)} />
+            <link rel='stylesheet' href={staticRouteFor(adminFormCss)} />
             <MarkdownClientSide />
             <MonacoClientSide />
             <script>{reading_mins.toString()}</script>
@@ -123,10 +125,9 @@ export class NewSnippetPage implements Routeable {
                   <span>Book</span>    <input autocomplete='off' name='bookSlug' value={this.bookSlug} />
                   <span>Title</span>   <input autocomplete='off' name='title' />
                   <span>Slug</span>    <input autocomplete='off' name='slug' />
-                  <span>Content</span> <textarea name='markdownContent' />
-                  <span>Mins</span>    <span id='readingmins'></span>
-                  <span />
-                  <button>Create</button>
+                  <span>Text</span>    <textarea name='markdownContent' />
+
+                  <span id='readingmins'></span> <button>Create</button>
                 </form>
               </div>
               <div id='editorarea'></div>
@@ -174,6 +175,38 @@ export class CreateSnippetRoute implements Routeable {
     return {
       status: 302,
       headers: { 'Location': newSnippet.view.route },
+    };
+  }
+
+}
+
+export class EditSnippetRoute implements Routeable {
+
+  route;
+  constructor(private snippet: Snippet) {
+    this.route = `/edit-snippet/${snippet.date}-${snippet.slug}`;
+    addRouteable(this);
+  }
+
+  meta?: RouteMeta = { public: false };
+  method: RouteMethod = 'POST';
+
+  handle(input: EnrichedInput): RouteOutput {
+    if (!input.session?.isAdmin) return notAllowedResponse(input);
+
+    const params = new URLSearchParams(input.body.toString('utf8'));
+
+    this.snippet.update({
+      archivePage: params.get('archivePage')!,
+      archiveSlug: params.get('archiveSlug')!,
+      bookSlug: params.get('bookSlug')!,
+      title: params.get('title')!,
+      markdownContent: params.get('markdownContent')!,
+    });
+
+    return {
+      status: 302,
+      headers: { 'Location': this.snippet.view.route },
     };
   }
 

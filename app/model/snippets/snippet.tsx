@@ -1,6 +1,6 @@
 import Yaml from 'js-yaml';
 import * as luxon from 'luxon';
-import { CloneSnippetPage } from '../../pages/snippets/create/routes';
+import { CloneSnippetPage, EditSnippetRoute } from '../../pages/snippets/create/routes';
 import { SnippetRoute } from '../../pages/snippets/one/snippet';
 import { loadContentFile, saveContentFile } from '../../util/data-files';
 import { pushChanges } from '../../util/live-editing';
@@ -36,6 +36,7 @@ export class Snippet {
 
   view;
   clone;
+  edit;
 
   archiveLink;
   public previewMarkdown;
@@ -54,6 +55,7 @@ export class Snippet {
 
     this.view = new SnippetRoute(this);
     this.clone = new CloneSnippetPage(this, `${this.date}-${this.slug}`);
+    this.edit = new EditSnippetRoute(this);
 
     this.book = allBooks.find(book => book.slug.includes(this.bookSlug))!;
     this.book.snippets.push(this);
@@ -122,6 +124,28 @@ export class Snippet {
     }, 100);
 
     return newSnippet;
+  }
+
+  update(newData: {
+    archivePage: string,
+    archiveSlug: string,
+    bookSlug: string,
+    title: string,
+    markdownContent: string,
+  }) {
+    this.archivePage = newData.archivePage;
+    this.archiveSlug = newData.archiveSlug;
+    this.bookSlug = newData.bookSlug;
+    this.title = newData.title;
+    this.markdownContent = newData.markdownContent;
+
+    this.save();
+    this.book.sortAndConnectBookSnippets();
+    sortAllSnippets();
+
+    // setTimeout(() => {
+    //   pushChanges(this.file.realPath, 'Updated snippet from site');
+    // }, 100);
   }
 
 }
