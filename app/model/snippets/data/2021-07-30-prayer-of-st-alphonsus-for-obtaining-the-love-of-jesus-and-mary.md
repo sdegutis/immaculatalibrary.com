@@ -8,7 +8,7 @@ bookSlug: manual-of-adoration-of-the-most-blessed-sacrament
 
 > ### *Indulgenced Prayers of St. Alphonsus to the Blessed Virgin.*
 >
-> #### *For Obtaining the Love of Jesus and Mary.*
+> ##### *For Obtaining the Love of Jesus and Mary.*
 >
 > Mary! of all creation the noblest, highest, purest, fairest, holiest work of God! O that all men knew thee, and loved thee, my queen! as thou deservest to be loved!
 >
