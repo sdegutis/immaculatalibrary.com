@@ -137,7 +137,7 @@ export class Snippet {
     this.archiveSlug = newData.archiveSlug;
     this.bookSlug = newData.bookSlug;
     this.title = newData.title;
-    this.markdownContent = newData.markdownContent;
+    this.markdownContent = newData.markdownContent.replace(/\r\n/g, '\n');
 
     this.save();
     this.book.sortAndConnectBookSnippets();
