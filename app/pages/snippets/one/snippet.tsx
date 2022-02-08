@@ -48,7 +48,7 @@ export class SnippetRoute implements Routeable {
                   <PrevNextLinks snippet={this.snippet} open />
                   <div>
                     <AdminButton href={this.snippet.clone.route}>Make Next</AdminButton> { }
-                    <AdminButton href='#' onclick='document.getElementById(`edit-snippet-form`).hidden=false; return false;'>Edit</AdminButton>
+                    <AdminButton href='#' onclick='document.getElementById(`edit-snippet-form`).style.display=`grid`; return false;'>Edit</AdminButton>
                   </div>
                 </>}
 
@@ -64,14 +64,14 @@ export class SnippetRoute implements Routeable {
               <div>
                 {input.session?.isAdmin && <>
                   <link rel='stylesheet' href={staticRouteFor(adminFormCss)} />
-                  <form id='edit-snippet-form' method="POST" action={this.snippet.edit.route}>
+                  <form id='edit-snippet-form' method="POST" action={this.snippet.edit.route} style='display:none'>
                     <span>Page</span>    <input autocomplete='off' name='archivePage' value={this.snippet.archivePage} autofocus />
                     <span>Link</span>    <input autocomplete='off' name='archiveSlug' value={this.snippet.archiveSlug} />
                     <span>Book</span>    <input autocomplete='off' name='bookSlug' value={this.snippet.bookSlug} />
                     <span>Title</span>   <input autocomplete='off' name='title' value={this.snippet.title} />
-                    <span>Text</span>    <textarea name='markdownContent'>{this.snippet.markdownContent}</textarea>
+                    <span>Text</span>    <textarea name='markdownContent' rows='10'>{this.snippet.markdownContent}</textarea>
 
-                    <span id='readingmins'></span> <button>Create</button>
+                    <span id='readingmins'></span> <button>Update</button>
                   </form>
                 </>}
 
