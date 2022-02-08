@@ -8,7 +8,7 @@ bookSlug: the-sinners-guide
 
 > It is a truth so universally acknowledged that even the Epicureans, who endeavored to destroy all philosophy by denying a Divine Providence and the immortality of the soul, maintained, nevertheless, religion, or the worship due to God.
 >
-> One of these philosophers [See Cicero, "De Natura Deorum"] proves the existence of God by strong and undeniable arguments. He proclaims the greatness and sovereignty of His admirable perfections, which oblige us to reverence and adore Him, and shows that for this reason alone, independently of any other title, God has a right to our love and service.
+> One of these philosophers [Cicero, "De Natura Deorum"] proves the existence of God by strong and undeniable arguments. He proclaims the greatness and sovereignty of His admirable perfections, which oblige us to reverence and adore Him, and shows that for this reason alone, independently of any other title, God has a right to our love and service.
 >
 > If we treat a king, even out of his own dominion, with respect and honor purely because of the dignity of his person, though we owe him nothing, with how much more justice should we render honor and service to this King and Lord, Who, as St. John tells us, bears written "upon His garment and upon His thigh, King of Kings and Lord of Lords"! [Apoc. xix. 16.]
 >
