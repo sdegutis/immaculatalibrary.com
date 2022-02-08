@@ -143,9 +143,9 @@ export class Snippet {
     this.book.sortAndConnectBookSnippets();
     sortAllSnippets();
 
-    // setTimeout(() => {
-    //   pushChanges(this.file.realPath, 'Updated snippet from site');
-    // }, 100);
+    setTimeout(() => {
+      pushChanges(this.file.realPath, 'Updated snippet from site');
+    }, 100);
   }
 
 }
