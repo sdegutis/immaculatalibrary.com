@@ -2,7 +2,6 @@ import chokidar from 'chokidar';
 import 'dotenv/config';
 import * as path from 'path';
 import 'source-map-support/register';
-import { startServer } from './http';
 import { Site } from './site';
 
 const formatter = new Intl.DateTimeFormat('en-US', {
@@ -22,8 +21,6 @@ wrapLog('error');
 
 const site = new Site('app');
 onFsChanges('app', 100, (path) => site.fileChanged(path));
-
-startServer(process.env['BASE_URL']!, 8080, site);
 
 function onFsChanges(fromPath: string, msTimeout: number, fn: (path: string) => void) {
   let timeout: NodeJS.Timeout | null = null;

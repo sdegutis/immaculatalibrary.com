@@ -3,6 +3,7 @@ import 'source-map-support/register';
 import { enrichAuth } from './auth/login';
 import './core/load';
 import { addRouteable, loadRoutes } from './core/router';
+import { Server } from './http';
 import { notFoundPage } from './pages/errors/404';
 import { errorPage } from './pages/errors/500';
 
@@ -16,7 +17,8 @@ addRouteable({
   })
 });
 
-export function routeHandler(input: RouteInput): RouteOutput {
+persisted.server ??= startServer(process.env['BASE_URL']!, 8080);
+persisted.server.handler = (input: RouteInput): RouteOutput => {
   if (input.headers['host'] !== input.url.host) {
     return { status: 302, headers: { 'Location': input.url.href } };
   }
@@ -48,3 +50,9 @@ export function routeHandler(input: RouteInput): RouteOutput {
 
   return output;
 };
+
+function startServer(baseUrl: string, port: number) {
+  const server = new Server(baseUrl);
+  server.start(port);
+  return server;
+}

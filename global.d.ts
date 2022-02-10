@@ -1,7 +1,3 @@
-declare type RouteHandler = import('./src/http').RouteHandler;
-declare type RouteInput = import('./src/http').RouteInput;
-declare type RouteOutput = import('./src/http').RouteOutput;
-
 declare type FsFile = import('./src/filesys').FsFile;
 declare type FsDir = import('./src/filesys').FsDir;
 

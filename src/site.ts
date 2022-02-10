@@ -1,12 +1,10 @@
 import 'dotenv/config';
 import 'source-map-support/register';
 import { FileSys, FsFile } from './filesys';
-import { RouteHandler } from './http';
 import { Runtime } from "./runtime";
 
 export class Site {
 
-  handler!: RouteHandler;
   #filesys;
   #runtime: Runtime | undefined;
   #persisted = Object.create(null);
@@ -28,10 +26,9 @@ export class Site {
     const mainModule = this.#runtime.modules.get(mainFile)!;
 
     try {
-      console.log('Loading boot module...');
+      console.log('Loading main module...');
       mainModule.require();
       console.log('Done');
-      this.handler = mainModule.exports.routeHandler;
     }
     catch (e) {
       console.error(e);
