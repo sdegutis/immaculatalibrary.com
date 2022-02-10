@@ -34,10 +34,10 @@ export function renderElement(element: JSX.Element): Buffer {
     : '');
 
   if (unary.has(element.tag)) {
-    return Buffer.from(`<${element.tag}${attrsString}/>`);
+    return Buffer.from(`<${element.tag}${attrsString}/>\n`);
   }
 
-  return Buffer.from(`<${element.tag}${attrsString}>${childrenString}</${element.tag}>`);
+  return Buffer.from(`<${element.tag}${attrsString}>${childrenString}</${element.tag}>\n`);
 }
 
 function isPresent<T>(o: T | false | undefined | null): o is T {
