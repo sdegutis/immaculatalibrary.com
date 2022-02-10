@@ -7,7 +7,7 @@ import { allMoviesPage } from "../../pages/movies/all-movies/all-movies";
 import { musicPage } from "../../pages/music/music";
 import { staticRouteFor } from "../../util/static";
 
-export const SiteHeader: Component<{}> = (attrs, children) => <>
+export const SiteHeader: JSX.Component<{}> = (attrs, children) => <>
   <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['site-header.css']!)} />
   <header id="site-header">
     <nav class="container">

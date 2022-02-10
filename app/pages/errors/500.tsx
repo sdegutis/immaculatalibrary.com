@@ -4,6 +4,7 @@ import { Content } from "../../components/content/content";
 import { HeroImage } from "../../components/hero-image/hero-image";
 import { QuickLinks } from "../../components/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "../../components/site";
+import { renderElement } from "../../util/jsx";
 import { staticRouteFor } from "../../util/static";
 
 export function errorPage(input: EnrichedInput): RouteOutput {
@@ -11,7 +12,7 @@ export function errorPage(input: EnrichedInput): RouteOutput {
   const image = staticRouteFor(__dir.filesByName['404.jpg']!);
   return {
     status: 500,
-    body: <Html>
+    body: renderElement(<Html>
       <Head title={title} />
       <body>
         <SiteHeader />
@@ -29,6 +30,6 @@ export function errorPage(input: EnrichedInput): RouteOutput {
         <QuickLinks />
         <SiteFooter input={input} />
       </body>
-    </Html>
+    </Html>)
   };
 }

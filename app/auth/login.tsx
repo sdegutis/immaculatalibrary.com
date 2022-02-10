@@ -7,6 +7,7 @@ import { QuickLinks } from '../components/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../components/site';
 import { addRouteable, Routeable } from "../core/router";
 import { sameSiteReferer } from '../util/helpers';
+import { renderElement } from '../util/jsx';
 import { staticRouteFor } from '../util/static';
 
 const users: string[] = [
@@ -89,7 +90,7 @@ export function notAllowedResponse(input: EnrichedInput, login = false) {
     headers: (login
       ? { 'WWW-Authenticate': 'Basic realm="Responsibility"' }
       : {}),
-    body: <Html>
+    body: renderElement(<Html>
       <Head />
       <body>
         <SiteHeader />
@@ -105,6 +106,6 @@ export function notAllowedResponse(input: EnrichedInput, login = false) {
         <QuickLinks />
         <SiteFooter input={input} />
       </body>
-    </Html>,
+    </Html>),
   };
 }

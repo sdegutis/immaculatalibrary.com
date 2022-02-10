@@ -7,6 +7,7 @@ import { Head, Html, SiteFooter, SiteHeader } from "../../../components/site";
 import { addRouteable, Routeable, RouteMethod } from "../../../core/router";
 import { Movie } from "../../../model/movies/movie";
 import { md } from "../../../util/helpers";
+import { renderElement } from "../../../util/jsx";
 import { MoviesSidebar } from "../movies-sidebar";
 
 export class ViewMovieRoute implements Routeable {
@@ -23,7 +24,7 @@ export class ViewMovieRoute implements Routeable {
 
   handle(input: EnrichedInput): RouteOutput {
     return {
-      body: <Html>
+      body: renderElement(<Html>
         <Head title={this.movie.displayTitle}>
         </Head>
         <body>
@@ -42,7 +43,7 @@ export class ViewMovieRoute implements Routeable {
           <QuickLinks />
           <SiteFooter input={input} />
         </body>
-      </Html>
+      </Html>)
     }
   }
 

@@ -4,7 +4,7 @@ import { allPostsPage } from "../pages/posts/all/all-posts";
 import { excerpt, format_date, md, reading_mins } from "../util/helpers";
 import { staticRouteFor } from "../util/static";
 
-export const QuickLinks: Component<{}> = (attrs, children) => {
+export const QuickLinks: JSX.Component<{}> = (attrs, children) => {
   const recentPosts = allPosts.slice(0, 6);
 
   return <>

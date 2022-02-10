@@ -1,3 +1,4 @@
+import { renderElement } from "../util/jsx";
 import { Routeable } from "./router";
 
 export function makeSitemap(routeables: Routeable[]): Routeable {
@@ -5,7 +6,7 @@ export function makeSitemap(routeables: Routeable[]): Routeable {
     route: '/sitemap.xml',
     method: 'GET',
     handle: (input) => ({
-      body: <>
+      body: renderElement(<>
         {'<?xml version="1.0" encoding="UTF-8"?>\n'}
         <urlset
           {...{
@@ -24,7 +25,7 @@ export function makeSitemap(routeables: Routeable[]): Routeable {
               </url>{'\n'}
             </>)}{'\n'}
         </urlset>
-      </>
+      </>)
     })
   };
 }

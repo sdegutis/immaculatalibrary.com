@@ -6,6 +6,7 @@ import { addRouteable, Routeable } from "../../core/router";
 import { allSnippets } from "../../model/models";
 import { Snippet } from "../../model/snippets/snippet";
 import { format_date, md, randomElement, reading_mins } from "../../util/helpers";
+import { renderElement } from "../../util/jsx";
 import { staticRouteFor } from "../../util/static";
 import { LatestBookSnippets } from "../snippets/latest-list";
 import cssFile from './home.css';
@@ -26,7 +27,7 @@ export const homePage: Routeable = {
   method: 'GET',
   handle: (input) => {
     return {
-      body: <>
+      body: renderElement(<>
         <Html>
           <Head
             description="Free Catholic Digital Resources"
@@ -98,12 +99,12 @@ export const homePage: Routeable = {
             <SiteFooter input={input} />
           </body>
         </Html>
-      </>
+      </>)
     };
   },
 };
 
-const SnippetWithPreview: Component<{ snippet: Snippet }> = ({ snippet }) => <>
+const SnippetWithPreview: JSX.Component<{ snippet: Snippet }> = ({ snippet }) => <>
   <h4><a href={snippet.view.route}>{md.renderInline(snippet.title)}</a></h4>
   <p>{format_date(snippet.date)} &bull; {reading_mins(snippet.markdownContent)} min</p>
   <p>
@@ -126,7 +127,7 @@ const bookSnippetRandom: Routeable = {
   method: 'GET',
   handle: (input) => {
     return {
-      body: <SnippetWithPreview snippet={randomElement(allSnippets)} />
+      body: renderElement(<SnippetWithPreview snippet={randomElement(allSnippets)} />)
     };
   }
 };

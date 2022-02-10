@@ -8,6 +8,7 @@ import { Head, Html, SiteFooter, SiteHeader } from "../../../components/site";
 import { addRouteable, Routeable, RouteMeta, RouteMethod } from "../../../core/router";
 import { Snippet } from "../../../model/snippets/snippet";
 import { format_date, md, reading_mins } from "../../../util/helpers";
+import { renderElement } from "../../../util/jsx";
 import { staticRouteFor } from "../../../util/static";
 import adminFormCss from '../create/admin-form.css';
 import { LatestBookSnippets } from "../latest-list";
@@ -31,7 +32,7 @@ export class SnippetRoute implements Routeable {
 
   handle(input: EnrichedInput): RouteOutput {
     return {
-      body: <Html>
+      body: renderElement(<Html>
         <Head title={this.snippet.title}>
           <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['snippet.css']!)} />
         </Head>
@@ -82,13 +83,13 @@ export class SnippetRoute implements Routeable {
           <QuickLinks />
           <SiteFooter input={input} />
         </body>
-      </Html>
+      </Html>)
     }
   }
 
 }
 
-const PrevNextLinks: Component<{ snippet: Snippet, open?: boolean }> = ({ snippet, open }) => <>
+const PrevNextLinks: JSX.Component<{ snippet: Snippet, open?: boolean }> = ({ snippet, open }) => <>
   <div class='prevnextlinks' open={open ?? false}>
     <span class='header'>Other snippets in this book</span>
     <div>
@@ -103,7 +104,7 @@ const PrevNextLinks: Component<{ snippet: Snippet, open?: boolean }> = ({ snippe
   </div>
 </>;
 
-const RelativeSnippetLink: Component<{ snippet: Snippet | undefined }> = ({ snippet }, children) => <>
+const RelativeSnippetLink: JSX.Component<{ snippet: Snippet | undefined }> = ({ snippet }, children) => <>
   <span>
     {snippet && <>
       <a href={snippet.view.route}>{children}</a><br />

@@ -5,6 +5,7 @@ import { Head, Html, SiteFooter, SiteHeader } from "../../../components/site";
 import { addRouteable, Routeable } from "../../../core/router";
 import { allSnippets } from "../../../model/models";
 import { format_date, groupByDate, md, reading_mins } from "../../../util/helpers";
+import { renderElement } from "../../../util/jsx";
 import { staticRouteFor } from "../../../util/static";
 import { referenceImage } from "../../category/view-category";
 import { randomSnippetPage } from "../random";
@@ -20,7 +21,7 @@ export const allSnippetsPage: Routeable = {
     const groups = Object.entries(groupByDate(allSnippets));
 
     return {
-      body: <>
+      body: renderElement(<>
         <Html>
           <Head title={title}>
             <script src={staticRouteFor(searchBookSnippetsScript)} defer></script>
@@ -75,7 +76,7 @@ export const allSnippetsPage: Routeable = {
             <SiteFooter input={input} />
           </body>
         </Html>
-      </>
+      </>)
     };
   },
 };
@@ -95,13 +96,13 @@ const bookSnippetSearch: Routeable = {
     });
 
     return {
-      body: JSON.stringify(snippets.map(snippet => ({
+      body: Buffer.from(JSON.stringify(snippets.map(snippet => ({
         title: md.renderInline(snippet.title),
         bookTitle: snippet.book.title,
         url: snippet.view.route,
         formattedDate: format_date(snippet.date),
         readingMins: reading_mins(snippet.markdownContent),
-      })))
+      }))))
     };
   }
 };

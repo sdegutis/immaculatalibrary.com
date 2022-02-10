@@ -2,7 +2,7 @@ import cssFile from './rating-label.css';
 import { staticRouteFor } from '../../util/static';
 
 const repeat = (n: number) => Array.from(Array(n));
-export const Rating: Component<{ n: number }> = ({ n }) => n ? <>
+export const Rating: JSX.Component<{ n: number }> = ({ n }) => n ? <>
   <span class="rating-label">
     <link rel='stylesheet' href={staticRouteFor(cssFile)} />
     {repeat(n).map(i => <>
@@ -16,4 +16,4 @@ export const Rating: Component<{ n: number }> = ({ n }) => n ? <>
       </svg>{' '}
     </>)}
   </span>
-</> : '';
+</> : <></>;

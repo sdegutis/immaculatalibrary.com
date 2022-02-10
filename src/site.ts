@@ -2,7 +2,6 @@ import 'dotenv/config';
 import 'source-map-support/register';
 import { FileSys, FsFile } from './filesys';
 import { RouteHandler } from './http';
-import { jsxCreateStringifiedElement } from "./jsx";
 import { Runtime } from "./runtime";
 
 export class Site {
@@ -23,7 +22,7 @@ export class Site {
     const root = this.#filesys.load();
 
     this.#runtime?.shutdown();
-    this.#runtime = new Runtime(this.#persisted, root, jsxCreateStringifiedElement);
+    this.#runtime = new Runtime(this.#persisted, root);
 
     const mainFile = root.find('/main') as FsFile;
     const mainModule = this.#runtime.modules.get(mainFile)!;

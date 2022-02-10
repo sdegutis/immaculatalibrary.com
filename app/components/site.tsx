@@ -6,14 +6,14 @@ import { DarkModeButton, darkModeScript } from "./dark-mode/button";
 import { Meta } from "./meta/meta";
 import { SiteHeader } from "./site-header/site-header";
 
-export const Html: Component<{}> = (attrs, children) => <>
+export const Html: JSX.Component<{}> = (attrs, children) => <>
   {'<!DOCTYPE html>'}
   <html lang="en">
     {children}
   </html>
 </>
 
-export const Head: Component<{ imagePath?: string, title?: string, description?: string }> = (attrs, children) => <>
+export const Head: JSX.Component<{ imagePath?: string, title?: string, description?: string }> = (attrs, children) => <>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -37,7 +37,7 @@ export const Head: Component<{ imagePath?: string, title?: string, description?:
 
 export { SiteHeader };
 
-export const SiteFooter: Component<{ input: EnrichedInput }> = (attrs, children) => <>
+export const SiteFooter: JSX.Component<{ input: EnrichedInput }> = (attrs, children) => <>
   <footer style='color:#999; text-align:center; margin:3em 1em'>
     <p>
       {new Date().getFullYear()} ImmaculataLibrary.com &copy; All Rights Reserved

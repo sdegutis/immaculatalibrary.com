@@ -21,7 +21,7 @@ ul.snippets-latest > li li {
 }
 `;
 
-export const LatestBookSnippets: Component<{}> = (attrs, children) => {
+export const LatestBookSnippets: JSX.Component<{}> = (attrs, children) => {
   const recentBookSnippets = allSnippets.slice(0, 9);
   const groups = Object.entries(groupByDate(recentBookSnippets));
 

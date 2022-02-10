@@ -4,6 +4,7 @@ import { Head, Html } from "../../../components/site";
 import { addRouteable, Routeable, RouteMeta, RouteMethod } from "../../../core/router";
 import { Snippet } from "../../../model/snippets/snippet";
 import { md, reading_mins } from "../../../util/helpers";
+import { renderElement } from "../../../util/jsx";
 import { staticRouteFor } from "../../../util/static";
 import adminFormCss from './admin-form.css';
 import adminCssPage from './clone-style.css';
@@ -42,7 +43,7 @@ export class CloneSnippetPage implements Routeable {
     if (!input.session?.isAdmin) return notAllowedResponse(input);
 
     return {
-      body: <>
+      body: renderElement(<>
         <Html>
           <Head>
             <link rel='stylesheet' href={staticRouteFor(adminCssPage)} />
@@ -83,7 +84,7 @@ export class CloneSnippetPage implements Routeable {
 
           </body>
         </Html>
-      </>
+      </>)
     };
   }
 
@@ -108,7 +109,7 @@ export class NewSnippetPage implements Routeable {
     if (!input.session?.isAdmin) return notAllowedResponse(input);
 
     return {
-      body: <>
+      body: renderElement(<>
         <Html>
           <Head>
             <link rel='stylesheet' href={staticRouteFor(adminCssPage)} />
@@ -145,7 +146,7 @@ export class NewSnippetPage implements Routeable {
 
           </body>
         </Html>
-      </>
+      </>)
     };
   }
 

@@ -9,8 +9,16 @@ declare const __file: FsFile;
 declare const __dir: FsDir;
 
 declare module JSX {
-  export type IntrinsicElements = import('./src/jsx').IntrinsicElements;
-  export type Element = import('./src/jsx').Element;
+  export type IntrinsicElements = {
+    [tag: string]: Record<string, string | boolean>;
+  };
+  export type Element = {
+    tag: string | Component<any>,
+    attrs: Record<string, any>,
+    children: any[],
+  };
+  export type Component<T extends Record<string, any>> =
+    (attrs: T, children: any) => Element;
 }
 
 declare module '*/' {
@@ -37,5 +45,3 @@ declare module '*.json' {
   const file: FsFile;
   export default file;
 }
-
-type Component<T extends Record<string, any>> = (attrs: T, children: any) => string;

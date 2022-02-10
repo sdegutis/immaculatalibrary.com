@@ -4,6 +4,7 @@ import { QuickLinks } from '../../../components/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../../../components/site';
 import { addRouteable, Routeable } from '../../../core/router';
 import { allBooks } from "../../../model/models";
+import { renderElement } from "../../../util/jsx";
 import { staticRouteFor } from '../../../util/static';
 import { referenceImage } from '../../category/view-category';
 import { randomBookPage } from "../random-book";
@@ -16,7 +17,7 @@ export const allBooksPage: Routeable = {
     const title = 'All Books';
     const image = referenceImage();
     return {
-      body: <>
+      body: renderElement(<>
         <Html>
           <Head title={title}>
           </Head>
@@ -56,7 +57,7 @@ export const allBooksPage: Routeable = {
             <SiteFooter input={input} />
           </body>
         </Html>
-      </>
+      </>)
     };
   },
 };

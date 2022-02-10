@@ -5,6 +5,7 @@ import { QuickLinks } from "../../components/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "../../components/site";
 import { addRouteable, Routeable } from "../../core/router";
 import { md } from "../../util/helpers";
+import { renderElement } from "../../util/jsx";
 import { staticRouteFor } from "../../util/static";
 import imageFile from './music.jpg';
 
@@ -19,7 +20,7 @@ export const musicPage: Routeable = {
   route: '/music.html',
   handle: (input) => {
     return {
-      body: <Html>
+      body: renderElement(<Html>
         <Head title={title}>
         </Head>
         <body>
@@ -36,7 +37,7 @@ export const musicPage: Routeable = {
           <QuickLinks />
           <SiteFooter input={input} />
         </body>
-      </Html>
+      </Html>)
     };
   },
 };

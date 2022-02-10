@@ -4,6 +4,7 @@ import { HeroImage } from "../../components/hero-image/hero-image";
 import { QuickLinks } from "../../components/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "../../components/site";
 import { addRouteable, Routeable } from "../../core/router";
+import { renderElement } from "../../util/jsx";
 import { staticRouteFor } from "../../util/static";
 
 const sendFeedback: Routeable = {
@@ -18,7 +19,7 @@ const sendFeedback: Routeable = {
     const title = 'Feedback received';
     const image = staticRouteFor(__dir.find('../errors/404.jpg') as FsFile);
     return {
-      body: <Html>
+      body: renderElement(<Html>
         <Head title={title} />
         <body>
           <SiteHeader />
@@ -34,7 +35,7 @@ const sendFeedback: Routeable = {
           <QuickLinks />
           <SiteFooter input={input} />
         </body>
-      </Html>
+      </Html>)
     };
   },
 };

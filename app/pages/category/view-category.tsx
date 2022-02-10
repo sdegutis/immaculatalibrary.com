@@ -9,6 +9,7 @@ import { addRouteable, Routeable, RouteMethod } from "../../core/router";
 import { Category } from "../../model/categories/category";
 import { allCategories } from "../../model/models";
 import { excerpt, md } from "../../util/helpers";
+import { renderElement } from "../../util/jsx";
 import { staticRouteFor } from "../../util/static";
 
 export class ViewCategory implements Routeable {
@@ -25,7 +26,7 @@ export class ViewCategory implements Routeable {
 
   handle(input: EnrichedInput): RouteOutput {
     return {
-      body: <Html>
+      body: renderElement(<Html>
         <Head title={this.cat.title}>
           <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['category.css']!)} />
         </Head>
@@ -71,7 +72,7 @@ export class ViewCategory implements Routeable {
           <QuickLinks />
           <SiteFooter input={input} />
         </body>
-      </Html>
+      </Html>)
     }
   }
 

@@ -6,6 +6,7 @@ import { Head, Html, SiteFooter, SiteHeader } from "../../../components/site";
 import { addRouteable, Routeable } from "../../../core/router";
 import { allMovies } from "../../../model/models";
 import { randomElement } from "../../../util/helpers";
+import { renderElement } from "../../../util/jsx";
 import { MoviesSidebar } from "../movies-sidebar";
 
 export const allMoviesPage: Routeable = {
@@ -15,7 +16,7 @@ export const allMoviesPage: Routeable = {
     const title = 'Holy Movies';
     const image = randomElement(allMovies).bigImage;
     return {
-      body: <>
+      body: renderElement(<>
         <Html>
           <Head title={title}>
           </Head>
@@ -41,7 +42,7 @@ export const allMoviesPage: Routeable = {
             <SiteFooter input={input} />
           </body>
         </Html>
-      </>
+      </>)
     };
   },
 };

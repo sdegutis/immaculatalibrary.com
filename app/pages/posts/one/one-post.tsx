@@ -7,6 +7,7 @@ import { Head, Html, SiteFooter, SiteHeader } from "../../../components/site";
 import { addRouteable, Routeable, RouteMeta, RouteMethod } from "../../../core/router";
 import { Post } from "../../../model/posts/post";
 import { format_date, md, reading_mins } from "../../../util/helpers";
+import { renderElement } from "../../../util/jsx";
 import { staticRouteFor } from "../../../util/static";
 
 export class ViewPostPage implements Routeable {
@@ -25,7 +26,7 @@ export class ViewPostPage implements Routeable {
 
   handle(input: EnrichedInput): RouteOutput {
     return {
-      body: <Html>
+      body: renderElement(<Html>
         <Head title={this.post.title}>
           <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['post.css']!)} />
         </Head>
@@ -48,7 +49,7 @@ export class ViewPostPage implements Routeable {
           <QuickLinks />
           <SiteFooter input={input} />
         </body>
-      </Html>
+      </Html>)
     }
   }
 

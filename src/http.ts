@@ -14,7 +14,7 @@ export interface RouteInput {
 export interface RouteOutput {
   status?: number;
   headers?: http.OutgoingHttpHeaders;
-  body?: string | Buffer;
+  body?: Buffer;
 }
 
 export type RouteHandler = (input: RouteInput) => RouteOutput;

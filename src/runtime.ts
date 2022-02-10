@@ -4,12 +4,6 @@ import { pathToFileURL, URL, URLSearchParams } from 'url';
 import vm from 'vm';
 import { FsDir, FsFile } from "./filesys";
 
-type JsxCreateElement = (
-  tag: string | Function | symbol,
-  attrs: any,
-  ...children: any[]
-) => any;
-
 export class Runtime {
 
   context;
@@ -20,7 +14,6 @@ export class Runtime {
   constructor(
     persisted: any,
     public root: FsDir,
-    public jsxCreateElement?: JsxCreateElement,
   ) {
     this.context = vm.createContext({
       persisted,
@@ -90,27 +83,18 @@ class Module {
 
       const filePath = pathToFileURL(this.file.realPath);
 
-      const sucraseOptions: sucrase.Options = {
-        transforms: ['typescript', 'imports'],
+      const { code, sourceMap } = sucrase.transform(rawCode, {
+        transforms: ['typescript', 'imports', 'jsx'],
+        jsxPragma: '((tag,attrs,...children)=>({tag,attrs:attrs??{},children}))',
+        jsxFragmentPragma: '""',
         disableESTransforms: true,
         production: true,
         filePath: filePath.href,
         sourceMapOptions: {
           compiledFilename: this.file.realPath,
-        }
-      };
+        },
+      });
 
-      if (this.#runtime.jsxCreateElement) {
-        (args as any)._JSX = {
-          createElement: this.#runtime.jsxCreateElement,
-          fragment: Symbol('fragment'),
-        };
-        sucraseOptions.transforms.push('jsx');
-        sucraseOptions.jsxPragma = '_JSX.createElement';
-        sucraseOptions.jsxFragmentPragma = '_JSX.fragment';
-      }
-
-      const { code, sourceMap } = sucrase.transform(rawCode, sucraseOptions);
       const sourceMapBase64 = Buffer.from(JSON.stringify(sourceMap!)).toString('base64url');
       const sourceMapUrlStr = `\n//# sourceMappingURL=data:application/json;base64,${sourceMapBase64}`;
       const runModule = vm.compileFunction(code + sourceMapUrlStr, Object.keys(args), {

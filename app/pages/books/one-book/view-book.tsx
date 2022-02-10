@@ -9,6 +9,7 @@ import { Head, Html, SiteFooter, SiteHeader } from "../../../components/site";
 import { addRouteable, Routeable, RouteMethod } from "../../../core/router";
 import { Book } from "../../../model/books/book";
 import { excerpt, md, striptags } from "../../../util/helpers";
+import { renderElement } from "../../../util/jsx";
 import { staticRouteFor } from "../../../util/static";
 import { allSnippetsPage } from "../../snippets/all/snippets";
 
@@ -26,7 +27,7 @@ export class ViewBookRoute implements Routeable {
 
   handle(input: EnrichedInput): RouteOutput {
     return {
-      body: <Html>
+      body: renderElement(<Html>
         <Head title={this.book.title} description={striptags(excerpt(this.book.markdownContent))}>
           <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['book.css']!)} />
         </Head>
@@ -144,7 +145,7 @@ export class ViewBookRoute implements Routeable {
           <QuickLinks />
           <SiteFooter input={input} />
         </body>
-      </Html>
+      </Html>)
     }
   }
 
