@@ -18,7 +18,7 @@ bookSlug: the-sinners-guide
 >
 > They all admit of greater perfection; they can increase in possessions, in knowledge. God cannot increase in perfection, containing within Himself all perfection; nor in possessions, for He is the source of all riches; nor in knowledge, for everything is present to His eternal omniscience.
 >
-> Therefore Aristotle calls Him a pure act---that is, supreme perfection, which admits of no increase.
+> Therefore Aristotle calls Him a *pure act*---that is, supreme perfection, which admits of no increase.
 >
 > The needs of creatures subject them to movement and change; God, having no necessities, is fixed and immovable, and present in all places.
 >
