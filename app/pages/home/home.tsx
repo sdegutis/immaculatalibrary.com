@@ -80,7 +80,7 @@ export const homePage: Routeable = {
 
                   <div>
                     <h3>Random Book Snippet (<a href='#' id='refresh-random-book-snippet'>Another</a>)</h3>
-                    <noscript>Enable JavaScript to see a random book snippet</noscript>
+                    <noscript>Enable JavaScript to see more random book snippets</noscript>
                     <Content>
                       <div id="random-book-snippet">
                         <SnippetWithPreview snippet={randomSnippet} />

@@ -21,6 +21,17 @@ ul.snippets-latest > li li {
 }
 `;
 
+let totalReadingTime = <></>;
+setTimeout(() => {
+  const totalReadingMins = reading_mins(allSnippets.map(s => s.markdownContent).join('\n\n'));
+  const mins = Math.round(totalReadingMins % 60);
+  const hours = Math.floor(totalReadingMins / 60);
+  console.log(totalReadingMins);
+  totalReadingTime = <>
+    <b>{hours}</b>h <b>{mins}</b>m
+  </>;
+}, 0);
+
 export const LatestBookSnippets: JSX.Component<{}> = (attrs, children) => {
   const recentBookSnippets = allSnippets.slice(0, 9);
   const groups = Object.entries(groupByDate(recentBookSnippets));
@@ -29,6 +40,7 @@ export const LatestBookSnippets: JSX.Component<{}> = (attrs, children) => {
     <style>{latestBookSnippetsStyle}</style>
 
     <h3>Latest book snippets</h3>
+    <p>(Total book snippets reading time: {totalReadingTime})</p>
     <p>
       <a href={allSnippetsPage.route}>See all {allSnippets.length}</a>
       {' | '}
