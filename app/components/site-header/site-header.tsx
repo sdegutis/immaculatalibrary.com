@@ -32,5 +32,5 @@ export const SiteHeader: JSX.Component<{}> = (attrs, children) => <>
     </nav>
   </header>
   <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['feedback.css']!)} />
-  <script src={staticRouteFor(__dir.filesByName['feedback.js']!)} />
+  <script src={staticRouteFor(__dir.filesByName['feedback.js']!)} defer />
 </>;

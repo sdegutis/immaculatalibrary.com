@@ -48,7 +48,7 @@ export const allBooksPage: Routeable = {
                     No results
                   </span>
 
-                  <script src={staticRouteFor(allBooksScript)}></script>
+                  <script src={staticRouteFor(allBooksScript)} defer></script>
 
                 </div>
               </Container>

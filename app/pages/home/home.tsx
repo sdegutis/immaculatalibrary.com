@@ -87,7 +87,7 @@ export const homePage: Routeable = {
                       </div>
                     </Content>
                   </div>
-                  <script src={staticRouteFor(randomBookSnippetScript)}></script>
+                  <script src={staticRouteFor(randomBookSnippetScript)} defer />
 
                 </div>
 
