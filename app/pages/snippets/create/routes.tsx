@@ -80,7 +80,7 @@ export class CloneSnippetPage implements Routeable {
               </div>
             </main>
 
-            <script src={staticRouteFor(newBookSnippetScript)}></script>
+            <script src={staticRouteFor(newBookSnippetScript)} defer></script>
 
           </body>
         </Html>
