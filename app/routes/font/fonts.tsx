@@ -1,4 +1,4 @@
-import { staticRouteFor } from "../util/static";
+import { staticRouteFor } from "../../util/static";
 
 export const inlineFontCss = `
 @font-face { font-display: block; font-family: "David Libre"; font-weight: 400; src: url('${staticRouteFor(__dir.filesByName['DavidLibre-Regular.woff']!)}'); }

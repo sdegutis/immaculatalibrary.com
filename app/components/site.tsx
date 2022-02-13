@@ -1,5 +1,5 @@
 import { loginRoute, logoutRoute } from "../auth/login";
-import { inlineFontCss } from "../font/fonts";
+import { inlineFontCss } from "../routes/font/fonts";
 import { mainSiteHeaderImagePath } from "../routes/home/home";
 import { staticRouteFor } from "../util/static";
 import { DarkModeButton, darkModeScript } from "./dark-mode/button";
