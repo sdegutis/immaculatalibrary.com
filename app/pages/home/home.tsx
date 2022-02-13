@@ -110,6 +110,8 @@ const SnippetWithPreview: JSX.Component<{ snippet: Snippet }> = ({ snippet }) =>
   <p>
     From <a href={snippet.book.view.route}>{snippet.book.title}</a>
     , page <a rel="noopener" href={snippet.archiveLink}>{snippet.archivePage}</a>
+    <br />
+    <small>By {snippet.book.author}</small>
   </p>
   <div class='rendered-preview'>
     {snippet.previewMarkdown
