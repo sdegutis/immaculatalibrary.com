@@ -2,10 +2,10 @@ import { Container } from "../../../components/container/container";
 import { HeroImage } from '../../../components/hero-image/hero-image';
 import { QuickLinks } from '../../../components/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../../../components/site';
+import { renderElement } from "../../../core/jsx";
 import { addRouteable, Routeable } from '../../../core/router';
 import { allPosts } from "../../../model/models";
 import { excerpt, format_date, md, reading_mins } from '../../../util/helpers';
-import { renderElement } from "../../../util/jsx";
 import { staticRouteFor } from "../../../util/static";
 import cssFile from './posts.css';
 

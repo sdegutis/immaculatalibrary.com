@@ -5,10 +5,10 @@ import { HeroImage } from "../../../components/hero-image/hero-image";
 import { QuickLinks } from "../../../components/quicklinks";
 import { Rating } from "../../../components/rating/rating";
 import { Head, Html, SiteFooter, SiteHeader } from "../../../components/site";
+import { renderElement } from "../../../core/jsx";
 import { addRouteable, Routeable, RouteMethod } from "../../../core/router";
 import { Book } from "../../../model/books/book";
 import { excerpt, md, striptags } from "../../../util/helpers";
-import { renderElement } from "../../../util/jsx";
 import { staticRouteFor } from "../../../util/static";
 import { allSnippetsPage } from "../../snippets/all/snippets";
 

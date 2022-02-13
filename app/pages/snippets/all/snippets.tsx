@@ -5,7 +5,7 @@ import { Head, Html, SiteFooter, SiteHeader } from "../../../components/site";
 import { addRouteable, Routeable } from "../../../core/router";
 import { allSnippets } from "../../../model/models";
 import { format_date, groupByDate, md, reading_mins } from "../../../util/helpers";
-import { renderElement } from "../../../util/jsx";
+import { renderElement } from "../../../core/jsx";
 import { staticRouteFor } from "../../../util/static";
 import { referenceImage } from "../../category/view-category";
 import { randomSnippetPage } from "../random";

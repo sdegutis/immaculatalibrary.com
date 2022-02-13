@@ -3,10 +3,10 @@ import { Content } from "../../../components/content/content";
 import { HeroImage } from "../../../components/hero-image/hero-image";
 import { QuickLinks } from "../../../components/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "../../../components/site";
+import { renderElement } from "../../../core/jsx";
 import { addRouteable, Routeable, RouteMethod } from "../../../core/router";
 import { Movie } from "../../../model/movies/movie";
 import { md } from "../../../util/helpers";
-import { renderElement } from "../../../util/jsx";
 import { MoviesSidebar } from "../movies-sidebar";
 
 export class ViewMovieRoute implements Routeable {

@@ -4,11 +4,11 @@ import { HeroImage } from "../../components/hero-image/hero-image";
 import { QuickLinks } from "../../components/quicklinks";
 import { Rating } from "../../components/rating/rating";
 import { Head, Html, SiteFooter, SiteHeader } from "../../components/site";
+import { renderElement } from "../../core/jsx";
 import { addRouteable, Routeable, RouteMethod } from "../../core/router";
 import { Category } from "../../model/categories/category";
 import { allCategories } from "../../model/models";
 import { excerpt, md } from "../../util/helpers";
-import { renderElement } from "../../util/jsx";
 import { staticRouteFor } from "../../util/static";
 
 export class ViewCategory implements Routeable {

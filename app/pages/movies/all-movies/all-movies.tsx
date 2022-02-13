@@ -3,10 +3,10 @@ import { Content } from "../../../components/content/content";
 import { HeroImage } from "../../../components/hero-image/hero-image";
 import { QuickLinks } from "../../../components/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "../../../components/site";
+import { renderElement } from "../../../core/jsx";
 import { addRouteable, Routeable } from "../../../core/router";
 import { allMovies } from "../../../model/models";
 import { randomElement } from "../../../util/helpers";
-import { renderElement } from "../../../util/jsx";
 import { MoviesSidebar } from "../movies-sidebar";
 
 export const allMoviesPage: Routeable = {

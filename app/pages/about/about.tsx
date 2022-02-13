@@ -3,9 +3,9 @@ import { Content } from "../../components/content/content";
 import { HeroImage } from "../../components/hero-image/hero-image";
 import { QuickLinks } from "../../components/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "../../components/site";
+import { renderElement } from "../../core/jsx";
 import { addRouteable, Routeable } from "../../core/router";
 import { md } from "../../util/helpers";
-import { renderElement } from "../../util/jsx";
 import { mainSiteHeaderImagePath } from '../home/home';
 
 const title = 'About Immaculata Library';

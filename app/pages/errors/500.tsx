@@ -3,7 +3,7 @@ import { Content } from "../../components/content/content";
 import { HeroImage } from "../../components/hero-image/hero-image";
 import { QuickLinks } from "../../components/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "../../components/site";
-import { renderElement } from "../../util/jsx";
+import { renderElement } from "../../core/jsx";
 import { staticRouteFor } from "../../util/static";
 
 export function errorPage(input: RouteInput): RouteOutput {

@@ -1,4 +1,4 @@
-import { renderElement } from "../util/jsx";
+import { renderElement } from "./jsx";
 import { Routeable } from "./router";
 
 export function makeSitemap(routeables: Routeable[]): Routeable {

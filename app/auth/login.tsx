@@ -5,9 +5,9 @@ import { Content } from '../components/content/content';
 import { HeroImage } from '../components/hero-image/hero-image';
 import { QuickLinks } from '../components/quicklinks';
 import { Head, Html, SiteFooter, SiteHeader } from '../components/site';
+import { renderElement } from '../core/jsx';
 import { addRouteable, Routeable } from "../core/router";
 import { sameSiteReferer } from '../util/helpers';
-import { renderElement } from '../util/jsx';
 import { staticRouteFor } from '../util/static';
 
 const users: string[] = [
