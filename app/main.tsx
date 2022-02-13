@@ -1,8 +1,8 @@
 import mime from 'mime';
 import 'source-map-support/register';
+import { Server } from './core/http';
 import './core/load';
 import { addRouteable, loadRoutes } from './core/router';
-import { Server } from './http';
 import { notFoundPage } from './pages/errors/404';
 import { errorPage } from './pages/errors/500';
 
