@@ -5,7 +5,7 @@ import { URL } from 'url';
 
 persisted.sessions ??= new Map<string, Session>();
 
-export class Server {
+class Server {
 
   handler!: RouteHandler;
   #server;

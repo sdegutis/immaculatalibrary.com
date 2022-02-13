@@ -1,6 +1,6 @@
 declare const persisted: {
   sessions: Map<string, Session>;
-  server: import('./http').Server;
+  server: { handler: RouteHandler };
 };
 
 interface Session {
