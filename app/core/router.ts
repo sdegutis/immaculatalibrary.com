@@ -1,7 +1,5 @@
 import { makeSitemap } from "./sitemap";
 
-type EnrichedRouteHandler = (input: RouteInput) => RouteOutput;
-
 export type RouteMethod = 'GET' | 'POST';
 
 export type RouteMeta = {
@@ -12,11 +10,11 @@ export type RouteMeta = {
 export interface Routeable {
   route: string;
   method: RouteMethod;
-  handle: EnrichedRouteHandler;
+  handle: RouteHandler;
   meta?: RouteMeta;
 }
 
-const allRoutes = new Map<string, EnrichedRouteHandler>();
+const allRoutes = new Map<string, RouteHandler>();
 
 const forSitemap: Routeable[] = [];
 
@@ -28,7 +26,7 @@ export function addRouteable(routeable: Routeable) {
   addRoute(`${routeable.method} ${routeable.route}`, (input) => routeable.handle(input));
 }
 
-function addRoute(route: string, handler: EnrichedRouteHandler) {
+function addRoute(route: string, handler: RouteHandler) {
   if (allRoutes.has(route)) {
     throw new Error(`Duplicate route: ${route}`);
   }
