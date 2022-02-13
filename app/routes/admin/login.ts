@@ -1,8 +1,8 @@
 import * as bcrypt from 'bcryptjs';
 import { randomUUID } from "crypto";
-import { notAllowedResponse } from "../../auth/login";
 import { addRouteable, Routeable } from "../../core/router";
 import { sameSiteReferer } from "../../util/helpers";
+import { notAllowedResponse } from "../../util/restricted/login";
 
 const users: string[] = [
   "$2a$10$Qwea9c8jHbc/UlaAdr66Gumlhs46/VBjyy/xZd92QgJRtytvQs5sm"

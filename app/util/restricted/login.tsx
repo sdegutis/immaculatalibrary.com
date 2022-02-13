@@ -1,10 +1,10 @@
-import { Container } from '../components/container/container';
-import { Content } from '../components/content/content';
-import { HeroImage } from '../components/hero-image/hero-image';
-import { QuickLinks } from '../components/quicklinks';
-import { Head, Html, SiteFooter, SiteHeader } from '../components/site';
-import { renderElement } from '../core/jsx';
-import { staticRouteFor } from '../util/static';
+import { Container } from '../../components/container/container';
+import { Content } from '../../components/content/content';
+import { HeroImage } from '../../components/hero-image/hero-image';
+import { QuickLinks } from '../../components/quicklinks';
+import { Head, Html, SiteFooter, SiteHeader } from '../../components/site';
+import { renderElement } from '../../core/jsx';
+import { staticRouteFor } from '../static';
 
 export function notAllowedResponse(input: RouteInput, login = false) {
   const image = staticRouteFor(__dir.filesByName['image.jpg']!);

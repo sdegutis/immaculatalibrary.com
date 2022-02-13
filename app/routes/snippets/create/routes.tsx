@@ -1,10 +1,10 @@
-import { notAllowedResponse } from "../../../auth/login";
 import { Content } from "../../../components/content/content";
 import { Head, Html } from "../../../components/site";
 import { renderElement } from "../../../core/jsx";
 import { addRouteable, Routeable, RouteMeta, RouteMethod } from "../../../core/router";
 import { Snippet } from "../../../model/snippets/snippet";
 import { calculateReadingMins, markdown } from "../../../util/helpers";
+import { notAllowedResponse } from "../../../util/restricted/login";
 import { staticRouteFor } from "../../../util/static";
 import adminFormCss from './admin-form.css';
 import adminCssPage from './clone-style.css';
