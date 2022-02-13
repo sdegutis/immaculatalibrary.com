@@ -1,6 +1,6 @@
 import { allCategories, allMovies, allPosts } from "../model/models";
-import { audioBibleImageSmall, audioBiblePage } from "../pages/audiobible/audiobible";
-import { allPostsPage } from "../pages/posts/all/all-posts";
+import { audioBibleImageSmall, audioBiblePage } from "../routes/audiobible/audiobible";
+import { allPostsPage } from "../routes/posts/all/all-posts";
 import { calculateReadingMins, excerpt, formatDate, markdown } from "../util/helpers";
 import { staticRouteFor } from "../util/static";
 

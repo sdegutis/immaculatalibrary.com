@@ -1,6 +1,6 @@
 import { loginRoute, logoutRoute } from "../auth/login";
 import { inlineFontCss } from "../font/fonts";
-import { mainSiteHeaderImagePath } from "../pages/home/home";
+import { mainSiteHeaderImagePath } from "../routes/home/home";
 import { staticRouteFor } from "../util/static";
 import { DarkModeButton, darkModeScript } from "./dark-mode/button";
 import { Meta } from "./meta/meta";

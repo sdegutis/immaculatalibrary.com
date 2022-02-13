@@ -1,13 +1,13 @@
-import "../pages/about/about";
-import "../pages/audiobible/audiobible";
-import "../pages/books/all-books/all-books";
-import "../pages/books/random-book";
-import "../pages/devotions/devotions";
-import "../pages/feedback/feedback";
-import "../pages/home/home";
-import "../pages/movies/all-movies/all-movies";
-import "../pages/music/music";
-import "../pages/posts/all/all-posts";
-import "../pages/snippets/all/snippets";
-import "../pages/snippets/random";
+import "../routes/about/about";
+import "../routes/audiobible/audiobible";
+import "../routes/books/all-books/all-books";
+import "../routes/books/random-book";
+import "../routes/devotions/devotions";
+import "../routes/feedback/feedback";
+import "../routes/home/home";
+import "../routes/movies/all-movies/all-movies";
+import "../routes/music/music";
+import "../routes/posts/all/all-posts";
+import "../routes/snippets/all/snippets";
+import "../routes/snippets/random";
 

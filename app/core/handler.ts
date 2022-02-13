@@ -1,6 +1,6 @@
 import mime from "mime";
-import { notFoundPage } from "../pages/errors/404";
-import { errorPage } from "../pages/errors/500";
+import { notFoundPage } from "../routes/errors/404";
+import { errorPage } from "../routes/errors/500";
 
 export function makeRouteHandler(routes: Map<string, RouteHandler>): RouteHandler {
   return (input: RouteInput): RouteOutput => {

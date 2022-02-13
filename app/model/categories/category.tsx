@@ -1,4 +1,4 @@
-import { ViewCategory } from '../../pages/category/view-category';
+import { ViewCategory } from '../../routes/category/view-category';
 import { loadContentFile } from '../../util/data-files';
 import { staticRouteFor } from '../../util/static';
 import { Book } from '../books/book';

@@ -1,5 +1,5 @@
-import { ViewBookRoute } from '../../pages/books/one-book/view-book';
-import { NewSnippetPage } from '../../pages/snippets/create/routes';
+import { ViewBookRoute } from '../../routes/books/one-book/view-book';
+import { NewSnippetPage } from '../../routes/snippets/create/routes';
 import { loadContentFile } from '../../util/data-files';
 import { sortBy } from '../../util/helpers';
 import { Category } from '../categories/category';

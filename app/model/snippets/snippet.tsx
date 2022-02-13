@@ -1,7 +1,7 @@
 import Yaml from 'js-yaml';
 import * as luxon from 'luxon';
-import { CloneSnippetPage, EditSnippetRoute } from '../../pages/snippets/create/routes';
-import { SnippetRoute } from '../../pages/snippets/one/snippet';
+import { CloneSnippetPage, EditSnippetRoute } from '../../routes/snippets/create/routes';
+import { SnippetRoute } from '../../routes/snippets/one/snippet';
 import { loadContentFile, saveContentFile } from '../../util/data-files';
 import { pushChanges } from '../../util/live-editing';
 import { Book } from '../books/book';

@@ -1,10 +1,10 @@
-import { aboutPage } from "../../pages/about/about";
-import { audioBiblePage } from "../../pages/audiobible/audiobible";
-import { allBooksPage } from "../../pages/books/all-books/all-books";
-import { devotionsPage } from "../../pages/devotions/devotions";
-import { homePage } from "../../pages/home/home";
-import { allMoviesPage } from "../../pages/movies/all-movies/all-movies";
-import { musicPage } from "../../pages/music/music";
+import { aboutPage } from "../../routes/about/about";
+import { audioBiblePage } from "../../routes/audiobible/audiobible";
+import { allBooksPage } from "../../routes/books/all-books/all-books";
+import { devotionsPage } from "../../routes/devotions/devotions";
+import { homePage } from "../../routes/home/home";
+import { allMoviesPage } from "../../routes/movies/all-movies/all-movies";
+import { musicPage } from "../../routes/music/music";
 import { staticRouteFor } from "../../util/static";
 
 export const SiteHeader: JSX.Component<{}> = (attrs, children) => <>

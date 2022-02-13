@@ -1,5 +1,5 @@
 import Yaml from 'js-yaml';
-import { ViewPostPage } from '../../pages/posts/one/one-post';
+import { ViewPostPage } from '../../routes/posts/one/one-post';
 import { staticRouteFor } from '../../util/static';
 
 function loadContentFile<T>(file: FsFile) {
