@@ -69,5 +69,5 @@
 
 #site-header .feedback-button {
   font-style: italic;
-  color: var(--blue-bg);
+  /* color: var(--blue-bg); */
 }
