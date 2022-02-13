@@ -1,4 +1,4 @@
-import { loginRoute, logoutRoute } from "../auth/login";
+import { loginRoute, logoutRoute } from "../routes/admin/login";
 import { inlineFontCss } from "../routes/font/fonts";
 import { mainSiteHeaderImagePath } from "../routes/home/home";
 import { staticRouteFor } from "../util/static";
