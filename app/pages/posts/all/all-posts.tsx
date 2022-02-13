@@ -5,7 +5,7 @@ import { Head, Html, SiteFooter, SiteHeader } from '../../../components/site';
 import { renderElement } from "../../../core/jsx";
 import { addRouteable, Routeable } from '../../../core/router';
 import { allPosts } from "../../../model/models";
-import { excerpt, format_date, md, reading_mins } from '../../../util/helpers';
+import { calculateReadingMins, excerpt, formatDate, markdown } from '../../../util/helpers';
 import { staticRouteFor } from "../../../util/static";
 import cssFile from './posts.css';
 
@@ -40,10 +40,10 @@ export const allPostsPage: Routeable = {
                           {post.title}
                         </a>
                         <span class="date">
-                          {format_date(post.date)} &bull; {reading_mins(post.markdownContent)} min
+                          {formatDate(post.date)} &bull; {calculateReadingMins(post.markdownContent)} min
                         </span>
                         <div class="excerpt">
-                          {md.render(excerpt(post.markdownContent))}
+                          {markdown.render(excerpt(post.markdownContent))}
                         </div>
                       </div>
                     </li>

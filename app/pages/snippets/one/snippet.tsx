@@ -7,7 +7,7 @@ import { Head, Html, SiteFooter, SiteHeader } from "../../../components/site";
 import { renderElement } from "../../../core/jsx";
 import { addRouteable, Routeable, RouteMeta, RouteMethod } from "../../../core/router";
 import { Snippet } from "../../../model/snippets/snippet";
-import { format_date, md, reading_mins } from "../../../util/helpers";
+import { calculateReadingMins, formatDate, markdown } from "../../../util/helpers";
 import { staticRouteFor } from "../../../util/static";
 import adminFormCss from '../create/admin-form.css';
 import { LatestBookSnippets } from "../latest-list";
@@ -42,7 +42,7 @@ export class SnippetRoute implements Routeable {
             <Container spaced split>
               <Content>
 
-                <h1>{md.renderInline(this.snippet.title)}</h1>
+                <h1>{markdown.renderInline(this.snippet.title)}</h1>
 
                 {input.session?.isAdmin && <>
                   <PrevNextLinks snippet={this.snippet} open />
@@ -52,7 +52,7 @@ export class SnippetRoute implements Routeable {
                   </div>
                 </>}
 
-                <p>{format_date(this.snippet.date)} &bull; {reading_mins(this.snippet.markdownContent)} min</p>
+                <p>{formatDate(this.snippet.date)} &bull; {calculateReadingMins(this.snippet.markdownContent)} min</p>
 
                 <p>
                   From <a href={this.snippet.book.view.route}>{this.snippet.book.title}</a>, { }
@@ -62,7 +62,7 @@ export class SnippetRoute implements Routeable {
                 </p>
 
 
-                {md.render(this.snippet.markdownContent)}
+                {markdown.render(this.snippet.markdownContent)}
 
                 <PrevNextLinks snippet={this.snippet} open />
 

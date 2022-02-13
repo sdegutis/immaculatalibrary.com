@@ -1,6 +1,6 @@
 import { snippetEvents } from "../../model/events";
 import { allSnippets } from "../../model/models";
-import { groupByDate, md, reading_mins } from "../../util/helpers";
+import { calculateReadingMins, groupByDate, markdown } from "../../util/helpers";
 import { allSnippetsPage } from "./all/snippets";
 import { randomSnippetPage } from "./random";
 
@@ -24,7 +24,7 @@ ul.snippets-latest > li li {
 
 let totalReadingTime = <></>;
 function updateTotalReadingTime() {
-  const totalReadingMins = reading_mins(allSnippets.map(s => s.markdownContent).join('\n\n'));
+  const totalReadingMins = calculateReadingMins(allSnippets.map(s => s.markdownContent).join('\n\n'));
   const mins = Math.round(totalReadingMins % 60);
   const hours = Math.floor(totalReadingMins / 60);
   totalReadingTime = <>
@@ -59,8 +59,8 @@ export const LatestBookSnippets: JSX.Component<{}> = (attrs, children) => {
             {group.map(snippet => <>
               <li>
                 <p>
-                  <a href={snippet.view.route}>{md.renderInline(snippet.title)}</a>
-                  <br /> {reading_mins(snippet.markdownContent)} min &mdash; {snippet.book.title}
+                  <a href={snippet.view.route}>{markdown.renderInline(snippet.title)}</a>
+                  <br /> {calculateReadingMins(snippet.markdownContent)} min &mdash; {snippet.book.title}
                 </p>
               </li>
             </>)}

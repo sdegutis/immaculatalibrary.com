@@ -2,7 +2,7 @@ import { randomInt } from 'crypto';
 import * as luxon from 'luxon';
 import MarkdownIt from 'markdown-it';
 
-export const md = new MarkdownIt({
+export const markdown = new MarkdownIt({
   html: true,
   typographer: true,
   linkify: true,
@@ -16,18 +16,18 @@ export function randomElement<T>(array: T[]): T {
 export function groupByDate<T extends { date: string }>(array: T[]) {
   const groups: Record<string, T[]> = Object.create(null);
   for (const o of array) {
-    const d = format_date(o.date);
+    const d = formatDate(o.date);
     if (!groups[d]) groups[d] = [];
     groups[d]!.push(o);
   }
   return groups;
 }
 
-export function reading_mins(str: string) {
+export function calculateReadingMins(str: string) {
   return Math.round((str.match(/\w+/g)?.length || 0) / 160);
 }
 
-export function format_date(date: string) {
+export function formatDate(date: string) {
   return luxon.DateTime.fromISO(date).toLocaleString({
     year: 'numeric',
     month: 'long',

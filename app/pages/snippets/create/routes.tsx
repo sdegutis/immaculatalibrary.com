@@ -4,7 +4,7 @@ import { Head, Html } from "../../../components/site";
 import { renderElement } from "../../../core/jsx";
 import { addRouteable, Routeable, RouteMeta, RouteMethod } from "../../../core/router";
 import { Snippet } from "../../../model/snippets/snippet";
-import { md, reading_mins } from "../../../util/helpers";
+import { calculateReadingMins, markdown } from "../../../util/helpers";
 import { staticRouteFor } from "../../../util/static";
 import adminFormCss from './admin-form.css';
 import adminCssPage from './clone-style.css';
@@ -50,7 +50,7 @@ export class CloneSnippetPage implements Routeable {
             <link rel='stylesheet' href={staticRouteFor(adminFormCss)} />
             <MarkdownClientSide />
             <MonacoClientSide />
-            <script>{reading_mins.toString()}</script>
+            <script>{calculateReadingMins.toString()}</script>
           </Head>
           <body>
             <main>
@@ -66,7 +66,7 @@ export class CloneSnippetPage implements Routeable {
                   <span id='readingmins'></span> <button>Create</button>
                 </form>
                 <Content>
-                  {md.render(this.snippet.markdownContent)}
+                  {markdown.render(this.snippet.markdownContent)}
                 </Content>
               </div>
               <div id='editorarea'></div>
@@ -115,7 +115,7 @@ export class NewSnippetPage implements Routeable {
             <link rel='stylesheet' href={staticRouteFor(adminCssPage)} />
             <MarkdownClientSide />
             <MonacoClientSide />
-            <script>{reading_mins.toString()}</script>
+            <script>{calculateReadingMins.toString()}</script>
           </Head>
           <body>
             <main>

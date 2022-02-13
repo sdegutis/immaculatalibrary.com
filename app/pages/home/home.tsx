@@ -6,7 +6,7 @@ import { renderElement } from "../../core/jsx";
 import { addRouteable, Routeable } from "../../core/router";
 import { allSnippets } from "../../model/models";
 import { Snippet } from "../../model/snippets/snippet";
-import { format_date, md, randomElement, reading_mins } from "../../util/helpers";
+import { calculateReadingMins, formatDate, markdown, randomElement } from "../../util/helpers";
 import { staticRouteFor } from "../../util/static";
 import { LatestBookSnippets } from "../snippets/latest-list";
 import cssFile from './home.css';
@@ -105,8 +105,8 @@ export const homePage: Routeable = {
 };
 
 const SnippetWithPreview: JSX.Component<{ snippet: Snippet }> = ({ snippet }) => <>
-  <h4><a href={snippet.view.route}>{md.renderInline(snippet.title)}</a></h4>
-  <p>{format_date(snippet.date)} &bull; {reading_mins(snippet.markdownContent)} min</p>
+  <h4><a href={snippet.view.route}>{markdown.renderInline(snippet.title)}</a></h4>
+  <p>{formatDate(snippet.date)} &bull; {calculateReadingMins(snippet.markdownContent)} min</p>
   <p>
     From <a href={snippet.book.view.route}>{snippet.book.title}</a>
     , page <a rel="noopener" href={snippet.archiveLink}>{snippet.archivePage}</a>
@@ -116,11 +116,11 @@ const SnippetWithPreview: JSX.Component<{ snippet: Snippet }> = ({ snippet }) =>
   <div class='rendered-preview'>
     {snippet.previewMarkdown
       ? <>
-        <div>{md.render(snippet.previewMarkdown)}</div>
-        <div hidden>{md.render(snippet.markdownContent)}</div>
+        <div>{markdown.render(snippet.previewMarkdown)}</div>
+        <div hidden>{markdown.render(snippet.markdownContent)}</div>
         <a href='#' class='continue-reading-snippet-link'><i>Continue reading...</i></a>
       </>
-      : md.render(snippet.markdownContent)}
+      : markdown.render(snippet.markdownContent)}
   </div>
 </>;
 

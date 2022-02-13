@@ -6,7 +6,7 @@ import { Head, Html, SiteFooter, SiteHeader } from "../../../components/site";
 import { renderElement } from "../../../core/jsx";
 import { addRouteable, Routeable, RouteMeta, RouteMethod } from "../../../core/router";
 import { Post } from "../../../model/posts/post";
-import { format_date, md, reading_mins } from "../../../util/helpers";
+import { calculateReadingMins, formatDate, markdown } from "../../../util/helpers";
 import { staticRouteFor } from "../../../util/static";
 
 export class ViewPostPage implements Routeable {
@@ -35,13 +35,13 @@ export class ViewPostPage implements Routeable {
             <HeroImage image={this.post.imageBig} />
             <Container spaced split>
               <Content>
-                <h1>{md.renderInline(this.post.title)}</h1>
+                <h1>{markdown.renderInline(this.post.title)}</h1>
 
                 <p class="date">
-                  {format_date(this.post.date)} &bull; {reading_mins(this.post.markdownContent)} min
+                  {formatDate(this.post.date)} &bull; {calculateReadingMins(this.post.markdownContent)} min
                 </p>
 
-                {md.render(this.post.markdownContent)}
+                {markdown.render(this.post.markdownContent)}
               </Content>
             </Container>
           </main>

@@ -8,7 +8,7 @@ import { renderElement } from "../../core/jsx";
 import { addRouteable, Routeable, RouteMethod } from "../../core/router";
 import { Category } from "../../model/categories/category";
 import { allCategories } from "../../model/models";
-import { excerpt, md } from "../../util/helpers";
+import { excerpt, markdown } from "../../util/helpers";
 import { staticRouteFor } from "../../util/static";
 
 export class ViewCategory implements Routeable {
@@ -40,7 +40,7 @@ export class ViewCategory implements Routeable {
                 <h1>{this.cat.title}</h1>
 
                 <Content>
-                  {md.render(this.cat.markdownContent)}
+                  {markdown.render(this.cat.markdownContent)}
                 </Content>
 
                 <section id='category'>
@@ -57,7 +57,7 @@ export class ViewCategory implements Routeable {
 
                         <div class="author">{book.author}</div>
                         <Content>
-                          <div class="blurb">{md.render(excerpt(book.markdownContent))}</div>
+                          <div class="blurb">{markdown.render(excerpt(book.markdownContent))}</div>
                         </Content>
                       </li>;
                     })}

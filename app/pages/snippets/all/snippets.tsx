@@ -2,10 +2,10 @@ import { Container } from "../../../components/container/container";
 import { HeroImage } from "../../../components/hero-image/hero-image";
 import { QuickLinks } from "../../../components/quicklinks";
 import { Head, Html, SiteFooter, SiteHeader } from "../../../components/site";
+import { renderElement } from "../../../core/jsx";
 import { addRouteable, Routeable } from "../../../core/router";
 import { allSnippets } from "../../../model/models";
-import { format_date, groupByDate, md, reading_mins } from "../../../util/helpers";
-import { renderElement } from "../../../core/jsx";
+import { calculateReadingMins, formatDate, groupByDate, markdown } from "../../../util/helpers";
 import { staticRouteFor } from "../../../util/static";
 import { referenceImage } from "../../category/view-category";
 import { randomSnippetPage } from "../random";
@@ -58,8 +58,8 @@ export const allSnippetsPage: Routeable = {
                           {group.map(snippet => <>
                             <li class="snippet">
                               <p>
-                                <a href={snippet.view.route}>{md.renderInline(snippet.title)}</a>
-                                <br /> {reading_mins(snippet.markdownContent)} min &mdash; {snippet.book.title}
+                                <a href={snippet.view.route}>{markdown.renderInline(snippet.title)}</a>
+                                <br /> {calculateReadingMins(snippet.markdownContent)} min &mdash; {snippet.book.title}
                               </p>
                             </li>
                           </>)}
@@ -97,11 +97,11 @@ const bookSnippetSearch: Routeable = {
 
     return {
       body: Buffer.from(JSON.stringify(snippets.map(snippet => ({
-        title: md.renderInline(snippet.title),
+        title: markdown.renderInline(snippet.title),
         bookTitle: snippet.book.title,
         url: snippet.view.route,
-        formattedDate: format_date(snippet.date),
-        readingMins: reading_mins(snippet.markdownContent),
+        formattedDate: formatDate(snippet.date),
+        readingMins: calculateReadingMins(snippet.markdownContent),
       }))))
     };
   }

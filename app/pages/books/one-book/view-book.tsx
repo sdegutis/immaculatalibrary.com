@@ -8,7 +8,7 @@ import { Head, Html, SiteFooter, SiteHeader } from "../../../components/site";
 import { renderElement } from "../../../core/jsx";
 import { addRouteable, Routeable, RouteMethod } from "../../../core/router";
 import { Book } from "../../../model/books/book";
-import { excerpt, md, striptags } from "../../../util/helpers";
+import { excerpt, markdown, striptags } from "../../../util/helpers";
 import { staticRouteFor } from "../../../util/static";
 import { allSnippetsPage } from "../../snippets/all/snippets";
 
@@ -41,7 +41,7 @@ export class ViewBookRoute implements Routeable {
                 <p class="subtitle">{this.book.subtitle}</p>
                 <p>By <span class="author">{this.book.author}</span></p>
                 <p><Rating n={this.book.rating} /></p>
-                {md.render(this.book.markdownContent)}
+                {markdown.render(this.book.markdownContent)}
 
                 <h4>Read now:</h4>
                 <table class="downloads">
@@ -76,7 +76,7 @@ export class ViewBookRoute implements Routeable {
                       {this.book.storeLinks.map(link => <>
                         <li style="text-align: center;">
                           <a href={link.link}>
-                            {md.render(link.title)} <img src={link.image} height="100" />
+                            {markdown.render(link.title)} <img src={link.image} height="100" />
                           </a>
                         </li>
                       </>)}
@@ -125,7 +125,7 @@ export class ViewBookRoute implements Routeable {
                         <li>
                           <p>
                             p.{bookSnippet.archivePage} { }
-                            <a href={bookSnippet.view.route}>{md.renderInline(bookSnippet.title)}</a>
+                            <a href={bookSnippet.view.route}>{markdown.renderInline(bookSnippet.title)}</a>
                           </p>
                         </li>
                       </>)}
