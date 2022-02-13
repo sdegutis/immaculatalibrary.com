@@ -1,4 +1,4 @@
-import { EnrichedInput, loginRoute, logoutRoute } from "../auth/login";
+import { loginRoute, logoutRoute } from "../auth/login";
 import { inlineFontCss } from "../font/fonts";
 import { mainSiteHeaderImagePath } from "../pages/home/home";
 import { staticRouteFor } from "../util/static";
@@ -37,7 +37,7 @@ export const Head: JSX.Component<{ imagePath?: string, title?: string, descripti
 
 export { SiteHeader };
 
-export const SiteFooter: JSX.Component<{ input: EnrichedInput }> = (attrs, children) => <>
+export const SiteFooter: JSX.Component<{ input: RouteInput }> = (attrs, children) => <>
   <footer style='color:#999; text-align:center; margin:3em 1em'>
     <p>
       {new Date().getFullYear()} ImmaculataLibrary.com &copy; All Rights Reserved

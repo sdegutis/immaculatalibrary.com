@@ -1,4 +1,3 @@
-import { EnrichedInput } from "../../auth/login";
 import { Container } from "../../components/container/container";
 import { Content } from "../../components/content/content";
 import { HeroImage } from "../../components/hero-image/hero-image";
@@ -24,7 +23,7 @@ export class ViewCategory implements Routeable {
 
   method: RouteMethod = 'GET';
 
-  handle(input: EnrichedInput): RouteOutput {
+  handle(input: RouteInput): RouteOutput {
     return {
       body: renderElement(<Html>
         <Head title={this.cat.title}>

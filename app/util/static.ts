@@ -1,7 +1,6 @@
 import { createHash } from 'crypto';
 import mime from 'mime';
 import path from 'path';
-import { EnrichedInput } from '../auth/login';
 import { addRouteable, Routeable, RouteMethod } from '../core/router';
 
 export class HashedStaticFile implements Routeable {
@@ -21,7 +20,7 @@ export class HashedStaticFile implements Routeable {
 
   method: RouteMethod = 'GET';
 
-  handle(input: EnrichedInput) {
+  handle(input: RouteInput) {
     const headers = { 'ETag': this.etag, 'Cache-Control': `max-age=${60 * 60 * 24 * 7 * 52}, immutable` };
 
     if (input.headers['if-none-match'] === this.etag) {

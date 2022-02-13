@@ -1,4 +1,3 @@
-import { EnrichedInput } from "../../../auth/login";
 import { AdminButton } from "../../../components/admin-button/admin-button";
 import { Container } from "../../../components/container/container";
 import { Content } from "../../../components/content/content";
@@ -25,7 +24,7 @@ export class ViewBookRoute implements Routeable {
 
   method: RouteMethod = 'GET';
 
-  handle(input: EnrichedInput): RouteOutput {
+  handle(input: RouteInput): RouteOutput {
     return {
       body: renderElement(<Html>
         <Head title={this.book.title} description={striptags(excerpt(this.book.markdownContent))}>

@@ -1,4 +1,3 @@
-import { EnrichedInput } from "../../auth/login";
 import { Container } from "../../components/container/container";
 import { Content } from "../../components/content/content";
 import { HeroImage } from "../../components/hero-image/hero-image";
@@ -7,7 +6,7 @@ import { Head, Html, SiteFooter, SiteHeader } from "../../components/site";
 import { renderElement } from "../../util/jsx";
 import { staticRouteFor } from "../../util/static";
 
-export function notFoundPage(input: EnrichedInput): RouteOutput {
+export function notFoundPage(input: RouteInput): RouteOutput {
   const title = 'Page not found';
   const image = staticRouteFor(__dir.filesByName['404.jpg']!);
   return {

@@ -14,29 +14,6 @@ const users: string[] = [
   "$2a$10$Qwea9c8jHbc/UlaAdr66Gumlhs46/VBjyy/xZd92QgJRtytvQs5sm"
 ];
 
-interface Session {
-  isAdmin: boolean;
-}
-
-export type EnrichedInput = RouteInput & {
-  session: Session | null;
-};
-
-persisted.sessions ??= new Map<string, Session>();
-
-type EnrichedRouteHandler = (input: EnrichedInput) => RouteOutput;
-
-export function enrichAuth(handler: EnrichedRouteHandler): RouteHandler {
-  return input => {
-    const cookieKvs = input.headers.cookie?.split('; ');
-    const cookiePairs = cookieKvs?.map(kv => kv.split('=') as [string, string]);
-    const cookies = cookiePairs && Object.fromEntries(cookiePairs);
-    const sessionId = cookies?.['wwwiii'] || null;
-    const session = sessionId ? persisted.sessions.get(sessionId) ?? null : null;
-    return handler({ ...input, session });
-  };
-}
-
 export const loginRoute: Routeable = {
   route: '/login',
   method: 'GET',
@@ -83,7 +60,7 @@ export const logoutRoute: Routeable = {
 addRouteable(loginRoute);
 addRouteable(logoutRoute);
 
-export function notAllowedResponse(input: EnrichedInput, login = false) {
+export function notAllowedResponse(input: RouteInput, login = false) {
   const image = staticRouteFor(__dir.filesByName['image.jpg']!);
   return {
     status: 401,

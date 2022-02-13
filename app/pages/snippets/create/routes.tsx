@@ -1,4 +1,4 @@
-import { EnrichedInput, notAllowedResponse } from "../../../auth/login";
+import { notAllowedResponse } from "../../../auth/login";
 import { Content } from "../../../components/content/content";
 import { Head, Html } from "../../../components/site";
 import { addRouteable, Routeable, RouteMeta, RouteMethod } from "../../../core/router";
@@ -39,7 +39,7 @@ export class CloneSnippetPage implements Routeable {
   meta?: RouteMeta = { public: false };
   method: RouteMethod = 'GET';
 
-  handle(input: EnrichedInput): RouteOutput {
+  handle(input: RouteInput): RouteOutput {
     if (!input.session?.isAdmin) return notAllowedResponse(input);
 
     return {
@@ -105,7 +105,7 @@ export class NewSnippetPage implements Routeable {
   meta?: RouteMeta = { public: false };
   method: RouteMethod = 'GET';
 
-  handle(input: EnrichedInput): RouteOutput {
+  handle(input: RouteInput): RouteOutput {
     if (!input.session?.isAdmin) return notAllowedResponse(input);
 
     return {
@@ -161,7 +161,7 @@ export class CreateSnippetRoute implements Routeable {
   meta?: RouteMeta = { public: false };
   method: RouteMethod = 'POST';
 
-  handle(input: EnrichedInput): RouteOutput {
+  handle(input: RouteInput): RouteOutput {
     if (!input.session?.isAdmin) return notAllowedResponse(input);
 
     const params = new URLSearchParams(input.body.toString('utf8'));
@@ -192,7 +192,7 @@ export class EditSnippetRoute implements Routeable {
   meta?: RouteMeta = { public: false };
   method: RouteMethod = 'POST';
 
-  handle(input: EnrichedInput): RouteOutput {
+  handle(input: RouteInput): RouteOutput {
     if (!input.session?.isAdmin) return notAllowedResponse(input);
 
     const params = new URLSearchParams(input.body.toString('utf8'));

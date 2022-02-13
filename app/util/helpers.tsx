@@ -1,7 +1,6 @@
 import { randomInt } from 'crypto';
 import * as luxon from 'luxon';
 import MarkdownIt from 'markdown-it';
-import { EnrichedInput } from '../auth/login';
 
 export const md = new MarkdownIt({
   html: true,
@@ -52,7 +51,7 @@ export function sortBy<T>(fn: (o: T) => string | number) {
   };
 }
 
-export function sameSiteReferer(input: EnrichedInput) {
+export function sameSiteReferer(input: RouteInput) {
   const referer = input.headers.referer;
   if (!referer) return;
 

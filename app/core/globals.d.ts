@@ -1,9 +1,14 @@
 declare const persisted: {
-  sessions: Map<string, import('../auth/login').Session>;
+  sessions: Map<string, Session>;
   server: import('../http').Server;
 };
 
+interface Session {
+  isAdmin: boolean;
+}
+
 declare interface RouteInput {
+  session: Session | null;
   method: Uppercase<string>;
   url: URL;
   headers: import('http').IncomingHttpHeaders;

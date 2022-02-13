@@ -1,6 +1,5 @@
 import mime from 'mime';
 import 'source-map-support/register';
-import { enrichAuth } from './auth/login';
 import './core/load';
 import { addRouteable, loadRoutes } from './core/router';
 import { Server } from './http';
@@ -33,15 +32,15 @@ persisted.server.handler = (input: RouteInput): RouteOutput => {
 
   try {
     if (handler) {
-      output = enrichAuth(handler)(input);
+      output = handler(input);
     }
     else {
-      output = enrichAuth(notFoundPage)(input);
+      output = notFoundPage(input);
     }
   }
   catch (e) {
     console.error(e);
-    output = enrichAuth(errorPage)(input);
+    output = errorPage(input);
   }
 
   output.headers ??= {};

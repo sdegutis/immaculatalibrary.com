@@ -1,7 +1,6 @@
-import { EnrichedInput } from "../auth/login";
 import { makeSitemap } from "./sitemap";
 
-type EnrichedRouteHandler = (input: EnrichedInput) => RouteOutput;
+type EnrichedRouteHandler = (input: RouteInput) => RouteOutput;
 
 export type RouteMethod = 'GET' | 'POST';
 
