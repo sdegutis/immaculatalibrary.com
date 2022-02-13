@@ -37,6 +37,7 @@
     "markdown-it": "^12.2.0",
     "mime": "^3.0.0",
     "source-map-support": "^0.5.21",
-    "sucrase": "^3.20.3"
+    "sucrase": "^3.20.3",
+    "tiny-typed-emitter": "^2.1.0"
   }
 }

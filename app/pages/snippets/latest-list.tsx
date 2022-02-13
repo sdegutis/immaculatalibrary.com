@@ -1,3 +1,4 @@
+import { snippetEvents } from "../../model/events";
 import { allSnippets } from "../../model/models";
 import { groupByDate, md, reading_mins } from "../../util/helpers";
 import { allSnippetsPage } from "./all/snippets";
@@ -22,15 +23,19 @@ ul.snippets-latest > li li {
 `;
 
 let totalReadingTime = <></>;
-setTimeout(() => {
+function updateTotalReadingTime() {
   const totalReadingMins = reading_mins(allSnippets.map(s => s.markdownContent).join('\n\n'));
   const mins = Math.round(totalReadingMins % 60);
   const hours = Math.floor(totalReadingMins / 60);
-  console.log(totalReadingMins);
   totalReadingTime = <>
     <b>{hours}</b>h <b>{mins}</b>m
   </>;
-}, 0);
+}
+
+snippetEvents.on('created', updateTotalReadingTime);
+snippetEvents.on('updated', updateTotalReadingTime);
+
+setTimeout(updateTotalReadingTime, 0);
 
 export const LatestBookSnippets: JSX.Component<{}> = (attrs, children) => {
   const recentBookSnippets = allSnippets.slice(0, 9);

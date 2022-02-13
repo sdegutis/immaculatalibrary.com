@@ -5,7 +5,8 @@ import { SnippetRoute } from '../../pages/snippets/one/snippet';
 import { loadContentFile, saveContentFile } from '../../util/data-files';
 import { pushChanges } from '../../util/live-editing';
 import { Book } from '../books/book';
-import { allBooks, allSnippets, sortAllSnippets } from '../models';
+import { snippetEvents } from '../events';
+import { allBooks, allSnippets } from '../models';
 import snippetsDir from './data/';
 
 export class Snippet {
@@ -117,7 +118,7 @@ export class Snippet {
     const newSnippet = Snippet.from(file);
     newSnippet.save();
     newSnippet.book.sortAndConnectBookSnippets();
-    sortAllSnippets();
+    snippetEvents.emit('created', newSnippet);
 
     setTimeout(() => {
       pushChanges(file.realPath, 'New snippet from site');
@@ -141,7 +142,7 @@ export class Snippet {
 
     this.save();
     this.book.sortAndConnectBookSnippets();
-    sortAllSnippets();
+    snippetEvents.emit('updated', this);
 
     setTimeout(() => {
       pushChanges(this.file.realPath, 'Updated snippet from site');
