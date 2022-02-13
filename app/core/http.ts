@@ -48,3 +48,9 @@ export class Server {
   }
 
 }
+
+export function startServer(baseUrl: string, port: number) {
+  const server = new Server(baseUrl);
+  server.start(port);
+  return server;
+}
