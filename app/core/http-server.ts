@@ -17,8 +17,6 @@ export function startServer(port: number, handler: RouteHandler) {
       const sessionId = cookies?.['wwwiii'] || null;
       const session = sessionId ? persisted.sessions!.get(sessionId) ?? null : null;
 
-      // console.log({ cookieKvs, cookiePairs, cookies, sessionId, session });
-
       const input: RouteInput = {
         url: new URL(req.url!, baseUrl),
         body: Buffer.concat(chunks),
