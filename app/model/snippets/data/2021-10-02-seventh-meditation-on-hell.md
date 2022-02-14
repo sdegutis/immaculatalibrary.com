@@ -10,7 +10,7 @@ bookSlug: introduction-to-the-devout-life
 >
 > *Seventh Meditation.---On Hell.*
 >
-PREPARATION.
+> PREPARATION.
 >
 > 1. Place yourself in the presence of God.
 > 2. Humble yourself and implore the assistance of his grace.
