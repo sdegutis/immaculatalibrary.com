@@ -10,6 +10,8 @@ Here is some of the most beautiful music I've ever heard. Possibly the closest t
 
 * [Silent Night](https://www.youtube.com/watch?v=A1k5YTmxIVc&t=1166s)
 
+* [Mary's Magnificat](https://www.youtube.com/watch?v=ze5fxkUcpbc&t=1100s)
+
 * [Puer natus in Bethlehem](https://www.youtube.com/watch?v=A1k5YTmxIVc&t=2573s)
 
 * [Of the Father's Heart Begotten](https://www.youtube.com/watch?v=wuIwAfHyPDw&t=5252s)
