@@ -1,6 +1,6 @@
 declare const persisted: {
-  sessions: Map<string, Session>;
-  server: { handler: RouteHandler };
+  sessions?: Map<string, Session>;
+  shutdownServer?: () => void;
 };
 
 interface Session {

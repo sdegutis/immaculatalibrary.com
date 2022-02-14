@@ -1,56 +1,47 @@
 import 'dotenv/config';
 import * as http from "http";
 import 'source-map-support/register';
-import { URL } from 'url';
+
+const baseUrl = process.env['BASE_URL']!;
 
 persisted.sessions ??= new Map<string, Session>();
 
-class Server {
+export function startServer(port: number, handler: RouteHandler) {
+  const server = http.createServer((req: http.IncomingMessage, res: http.ServerResponse) => {
+    let chunks: Buffer[] = [];
+    req.on('data', (data: Buffer) => chunks.push(data));
+    req.on('end', () => {
+      const cookieKvs = req.headers.cookie?.split('; ');
+      const cookiePairs = cookieKvs?.map(kv => kv.split('=') as [string, string]);
+      const cookies = cookiePairs && Object.fromEntries(cookiePairs);
+      const sessionId = cookies?.['wwwiii'] || null;
+      const session = sessionId ? persisted.sessions!.get(sessionId) ?? null : null;
 
-  handler!: RouteHandler;
-  #server;
+      // console.log({ cookieKvs, cookiePairs, cookies, sessionId, session });
 
-  constructor(private baseUrl: string) {
-    this.#server = http.createServer((req, res) => {
-      let chunks: Buffer[] = [];
-      req.on('data', (data: Buffer) => chunks.push(data));
-      req.on('end', () => {
-        const cookieKvs = req.headers.cookie?.split('; ');
-        const cookiePairs = cookieKvs?.map(kv => kv.split('=') as [string, string]);
-        const cookies = cookiePairs && Object.fromEntries(cookiePairs);
-        const sessionId = cookies?.['wwwiii'] || null;
-        const session = sessionId ? persisted.sessions.get(sessionId) ?? null : null;
+      const input: RouteInput = {
+        url: new URL(req.url!, baseUrl),
+        body: Buffer.concat(chunks),
+        method: req.method!,
+        headers: req.headers,
+        session,
+      };
 
-        const input: RouteInput = {
-          url: new URL(req.url!, this.baseUrl),
-          body: Buffer.concat(chunks),
-          method: req.method!,
-          headers: req.headers,
-          session,
-        };
+      const output = handler(input);
 
-        const output = this.handler(input);
-
-        res.statusCode = output.status ?? 200;
-        for (const [k, v] of Object.entries(output.headers ?? {})) {
-          if (typeof v === 'string') {
-            res.setHeader(k, v);
-          }
+      res.statusCode = output.status ?? 200;
+      for (const [k, v] of Object.entries(output.headers ?? {})) {
+        if (typeof v === 'string') {
+          res.setHeader(k, v);
         }
-        res.end(output.body ?? '');
-      });
+      }
+      res.end(output.body ?? '');
     });
-  }
+  });
 
-  start(port: number) {
-    this.#server.listen(port);
-    console.log(`Running on http://localhost:${port}`);
-  }
+  server.listen(port);
 
-}
+  console.log(`Running on http://localhost:${port}`);
 
-export function startServer(baseUrl: string, port: number) {
-  const server = new Server(baseUrl);
-  server.start(port);
-  return server;
+  return () => server.close();
 }

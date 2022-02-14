@@ -18,7 +18,7 @@ export const loginRoute: Routeable = {
       const isValid = users.some(existing => bcrypt.compareSync(userpass, existing));
       if (isValid) {
         const sessionid = randomUUID();
-        persisted.sessions.set(sessionid, {
+        persisted.sessions!.set(sessionid, {
           isAdmin: true
         });
 
