@@ -1,6 +1,6 @@
 Reading holy books can help us grow in devotion to God, and movies can help us visualize these sacred mysteries. But countless angels are singing the Lord's praises *right now* in Heaven. Listening to Sacred Music (and singing or playing it!) is a powerful way to join these angels in praising our Lord and Redeemer, in a way that deeply touches the Father's heart.
 
-### Free Links to Sacred Music
+### Videos
 
 Here is some of the most beautiful music I've ever heard. Possibly the closest thing on earth to hearing the angels sing. They're all sung by the amazing choir of [National Shrine of the Immaculate Conception](https://www.nationalshrine.org/).
 
@@ -30,8 +30,9 @@ Here is some of the most beautiful music I've ever heard. Possibly the closest t
   * Good Christian Friends, Rejoice
   * Come ye lofty, come ye lowly
 
+#### Purgatory Music
 
-
+* [Ag Críost an Síol](https://www.youtube.com/watch?v=PbNbJUa2yGM&t=1253s)
 
 
 ### Lyrics
@@ -535,3 +536,29 @@ English translation:
 
 </details>
 
+
+<summary><b>Ag Críost an Síol</b></summary>
+
+> Ag Críost an síol, ag Críost an fómhar;
+> in iothlainn Dé go dtugtar sinn.
+> Ag Críost an mhuir, ag Críost an t-iasc;
+> i líonta Dé go gcastar sinn.
+>  
+> Ó fhás go h-aois, is ó aois go bás,
+> do dhá láimh, a Chríost, anall tharainn.
+> Ó bhás go críoch, ní críoch ach athfhás,
+> i bParthas na ngrás go rabhaimid.
+
+English translation
+
+> Christ's is the seed, Christ's is the crop,
+> in the rickyard of God may we be brought.
+> Christ's is the sea, Christ's is the fish,
+> in the nets of God may we be caught.
+>  
+> From growth to age, from age to death,
+> Thy two arms, O Christ, about us.
+> From death to end, not end but rebirth,
+> in blessed Paradise may we be.
+
+</details>
