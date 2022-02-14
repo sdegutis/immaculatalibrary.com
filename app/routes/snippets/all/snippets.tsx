@@ -24,14 +24,15 @@ export const allSnippetsPage: Routeable = {
       body: renderElement(<>
         <Html>
           <Head title={title}>
-            <script src={staticRouteFor(searchBookSnippetsScript)} defer></script>
-            <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['book-snippets.css']!)} />
           </Head>
           <body>
             <SiteHeader />
             <main>
               <HeroImage image={image} />
               <Container spaced split>
+
+                <script src={staticRouteFor(searchBookSnippetsScript)} defer></script>
+                <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['book-snippets.css']!)} />
 
                 <div>
 

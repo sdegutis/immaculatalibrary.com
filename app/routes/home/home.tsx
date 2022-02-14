@@ -31,14 +31,13 @@ export const homePage: Routeable = {
         <Html>
           <Head
             description="Free Catholic Digital Resources"
-            imagePath={mainSiteHeaderImagePath}
-          >
-            <link rel="stylesheet" href={staticRouteFor(cssFile)} />
-          </Head>
+            imagePath={mainSiteHeaderImagePath} />
           <body>
             <SiteHeader />
 
             <main>
+
+              <link rel="stylesheet" href={staticRouteFor(cssFile)} />
 
               <section id="home-hero" style={`background-image: url(${mainSiteHeaderImagePath})`}>
                 <div></div>

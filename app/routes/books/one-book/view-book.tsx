@@ -28,7 +28,6 @@ export class ViewBookRoute implements Routeable {
     return {
       body: renderElement(<Html>
         <Head title={this.book.title} description={striptags(excerpt(this.book.markdownContent))}>
-          <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['book.css']!)} />
         </Head>
         <body>
           <SiteHeader />
@@ -36,6 +35,8 @@ export class ViewBookRoute implements Routeable {
             <HeroImage image={this.book.category.imageBig} />
             <Container spaced split>
               <Content>
+
+                <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['book.css']!)} />
 
                 <h1>{this.book.title}</h1>
                 <p class="subtitle">{this.book.subtitle}</p>

@@ -46,13 +46,14 @@ export class CloneSnippetPage implements Routeable {
       body: renderElement(<>
         <Html>
           <Head>
+          </Head>
+          <body>
             <link rel='stylesheet' href={staticRouteFor(adminCssPage)} />
             <link rel='stylesheet' href={staticRouteFor(adminFormCss)} />
             <MarkdownClientSide />
             <MonacoClientSide />
             <script>{calculateReadingMins.toString()}</script>
-          </Head>
-          <body>
+
             <main>
               <div id='left-panel'>
                 <form method='POST' action={this.update.route}>
@@ -112,12 +113,13 @@ export class NewSnippetPage implements Routeable {
       body: renderElement(<>
         <Html>
           <Head>
+          </Head>
+          <body>
+
             <link rel='stylesheet' href={staticRouteFor(adminCssPage)} />
             <MarkdownClientSide />
             <MonacoClientSide />
             <script>{calculateReadingMins.toString()}</script>
-          </Head>
-          <body>
             <main>
               <div id='left-panel'>
                 <form method='POST' action={this.update.route}>

@@ -33,11 +33,12 @@ export class SnippetRoute implements Routeable {
     return {
       body: renderElement(<Html>
         <Head title={this.snippet.title}>
-          <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['snippet.css']!)} />
         </Head>
         <body>
           <SiteHeader />
           <main>
+            <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['snippet.css']!)} />
+
             <HeroImage image={this.snippet.image} />
             <Container spaced split>
               <Content>

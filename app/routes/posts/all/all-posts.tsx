@@ -19,13 +19,14 @@ export const allPostsPage: Routeable = {
       body: renderElement(<>
         <Html>
           <Head title={title}>
-            <link rel="stylesheet" href={staticRouteFor(cssFile)} />
           </Head>
           <body>
             <SiteHeader />
             <main>
               <HeroImage image={image} />
               <Container spaced>
+
+                <link rel="stylesheet" href={staticRouteFor(cssFile)} />
 
                 <h1>{title}</h1>
 

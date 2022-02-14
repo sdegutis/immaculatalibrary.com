@@ -27,11 +27,13 @@ export class ViewPostPage implements Routeable {
     return {
       body: renderElement(<Html>
         <Head title={this.post.title}>
-          <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['post.css']!)} />
         </Head>
         <body>
           <SiteHeader />
           <main>
+
+            <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['post.css']!)} />
+
             <HeroImage image={this.post.imageBig} />
             <Container spaced split>
               <Content>

@@ -27,7 +27,6 @@ export class ViewCategory implements Routeable {
     return {
       body: renderElement(<Html>
         <Head title={this.cat.title}>
-          <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['category.css']!)} />
         </Head>
         <body>
           <SiteHeader />
@@ -42,6 +41,8 @@ export class ViewCategory implements Routeable {
                 <Content>
                   {markdown.render(this.cat.markdownContent)}
                 </Content>
+
+                <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['category.css']!)} />
 
                 <section id='category'>
                   <h2>Books</h2>
