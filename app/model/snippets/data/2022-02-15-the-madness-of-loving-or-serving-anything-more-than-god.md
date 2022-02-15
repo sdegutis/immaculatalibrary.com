@@ -2,7 +2,7 @@
 published: true
 title: The madness of loving or serving anything more than God
 archiveSlug: sinnersguide00luis
-archivePage: '22'
+archivePage: '23'
 bookSlug: the-sinners-guide
 ---
 
