@@ -1,8 +1,6 @@
 import { Container } from "../../components/container/container";
 import { Content } from "../../components/content/content";
-import { HeroImage } from "../../components/hero-image/hero-image";
-import { QuickLinks } from "../../components/quicklinks";
-import { Head, Html, SiteFooter, SiteHeader } from "../../components/site";
+import { SiteCommon } from "../../components/site";
 import { renderElement } from "../../core/jsx";
 import { addRouteable, Routeable } from "../../core/router";
 import { staticRouteFor } from "../../util/static";
@@ -19,23 +17,18 @@ const sendFeedback: Routeable = {
     const title = 'Feedback received';
     const image = staticRouteFor(__dir.find('../errors/404.jpg') as FsFile);
     return {
-      body: renderElement(<Html>
-        <Head title={title} />
-        <body>
-          <SiteHeader />
-          <main>
-            <HeroImage image={image} />
-            <Container spaced split>
-              <Content>
-                <h1>{title}</h1>
-                <p>Thanks for submitting your feedback. It has been received and will be read shortly.</p>
-              </Content>
-            </Container>
-          </main>
-          <QuickLinks />
-          <SiteFooter input={input} />
-        </body>
-      </Html>)
+      body: renderElement(<SiteCommon
+        title={title}
+        image={image}
+        input={input}
+      >
+        <Container spaced split>
+          <Content>
+            <h1>{title}</h1>
+            <p>Thanks for submitting your feedback. It has been received and will be read shortly.</p>
+          </Content>
+        </Container>
+      </SiteCommon>)
     };
   },
 };

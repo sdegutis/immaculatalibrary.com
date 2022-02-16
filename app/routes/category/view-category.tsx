@@ -1,9 +1,7 @@
 import { Container } from "../../components/container/container";
 import { Content } from "../../components/content/content";
-import { HeroImage } from "../../components/hero-image/hero-image";
-import { QuickLinks } from "../../components/quicklinks";
 import { Rating } from "../../components/rating/rating";
-import { Head, Html, SiteFooter, SiteHeader } from "../../components/site";
+import { SiteCommon } from "../../components/site";
 import { renderElement } from "../../core/jsx";
 import { addRouteable, Routeable, RouteMethod } from "../../core/router";
 import { Category } from "../../model/categories/category";
@@ -25,54 +23,48 @@ export class ViewCategory implements Routeable {
 
   handle(input: RouteInput): RouteOutput {
     return {
-      body: renderElement(<Html>
-        <Head title={this.cat.title}>
-        </Head>
-        <body>
-          <SiteHeader />
-          <main>
-            <HeroImage image={this.cat.imageBig} />
-            <Container spaced split>
+      body: renderElement(<SiteCommon
+        title={this.cat.title}
+        image={this.cat.imageBig}
+        input={input}
+      >
+        <Container spaced split>
 
-              <div>
+          <div>
 
-                <h1>{this.cat.title}</h1>
+            <h1>{this.cat.title}</h1>
 
-                <Content>
-                  {markdown.render(this.cat.markdownContent)}
-                </Content>
+            <Content>
+              {markdown.render(this.cat.markdownContent)}
+            </Content>
 
-                <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['category.css']!)} />
+            <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['category.css']!)} />
 
-                <section id='category'>
-                  <h2>Books</h2>
-                  <ul>
-                    {this.cat.books.map(book => {
-                      return <li>
-                        <div class="title">
-                          <a href={book.view.route}>{book.title}</a>
-                          {book.subtitle && <>: {book.subtitle}</>}
-                          {' '}
-                          <Rating n={book.rating} />
-                        </div>
+            <section id='category'>
+              <h2>Books</h2>
+              <ul>
+                {this.cat.books.map(book => {
+                  return <li>
+                    <div class="title">
+                      <a href={book.view.route}>{book.title}</a>
+                      {book.subtitle && <>: {book.subtitle}</>}
+                      {' '}
+                      <Rating n={book.rating} />
+                    </div>
 
-                        <div class="author">{book.author}</div>
-                        <Content>
-                          <div class="blurb">{markdown.render(excerpt(book.markdownContent))}</div>
-                        </Content>
-                      </li>;
-                    })}
-                  </ul>
-                </section>
+                    <div class="author">{book.author}</div>
+                    <Content>
+                      <div class="blurb">{markdown.render(excerpt(book.markdownContent))}</div>
+                    </Content>
+                  </li>;
+                })}
+              </ul>
+            </section>
 
-              </div>
+          </div>
 
-            </Container>
-          </main>
-          <QuickLinks />
-          <SiteFooter input={input} />
-        </body>
-      </Html>)
+        </Container>
+      </SiteCommon>)
     }
   }
 

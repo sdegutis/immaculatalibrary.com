@@ -1,7 +1,5 @@
 import { Container } from "../../../components/container/container";
-import { HeroImage } from '../../../components/hero-image/hero-image';
-import { QuickLinks } from '../../../components/quicklinks';
-import { Head, Html, SiteFooter, SiteHeader } from '../../../components/site';
+import { SiteCommon } from '../../../components/site';
 import { renderElement } from "../../../core/jsx";
 import { addRouteable, Routeable } from '../../../core/router';
 import { allPosts } from "../../../model/models";
@@ -17,46 +15,40 @@ export const allPostsPage: Routeable = {
     const image = staticRouteFor(__dir.filesByName['posts.jpg']!);
     return {
       body: renderElement(<>
-        <Html>
-          <Head title={title}>
-          </Head>
-          <body>
-            <SiteHeader />
-            <main>
-              <HeroImage image={image} />
-              <Container spaced>
+        <SiteCommon
+          title={title}
+          image={image}
+          input={input}
+        >
+          <Container spaced>
 
-                <link rel="stylesheet" href={staticRouteFor(cssFile)} />
+            <link rel="stylesheet" href={staticRouteFor(cssFile)} />
 
-                <h1>{title}</h1>
+            <h1>{title}</h1>
 
-                <ul class="all-blog-posts">
-                  {allPosts.map(post => <>
-                    <li class="post-row">
-                      <a href={post.view.route}>
-                        <img class="image" src={post.imageSmall} />
-                      </a>
-                      <div>
-                        <a class="title" href={post.view.route}>
-                          {post.title}
-                        </a>
-                        <span class="date">
-                          {formatDate(post.date)} &bull; {calculateReadingMins(post.markdownContent)} min
-                        </span>
-                        <div class="excerpt">
-                          {markdown.render(excerpt(post.markdownContent))}
-                        </div>
-                      </div>
-                    </li>
-                  </>)}
-                </ul>
+            <ul class="all-blog-posts">
+              {allPosts.map(post => <>
+                <li class="post-row">
+                  <a href={post.view.route}>
+                    <img class="image" src={post.imageSmall} />
+                  </a>
+                  <div>
+                    <a class="title" href={post.view.route}>
+                      {post.title}
+                    </a>
+                    <span class="date">
+                      {formatDate(post.date)} &bull; {calculateReadingMins(post.markdownContent)} min
+                    </span>
+                    <div class="excerpt">
+                      {markdown.render(excerpt(post.markdownContent))}
+                    </div>
+                  </div>
+                </li>
+              </>)}
+            </ul>
 
-              </Container>
-            </main>
-            <QuickLinks />
-            <SiteFooter input={input} />
-          </body>
-        </Html>
+          </Container>
+        </SiteCommon>
       </>)
     };
   },

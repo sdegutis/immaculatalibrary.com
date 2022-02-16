@@ -1,7 +1,5 @@
 import { Container } from "../../../components/container/container";
-import { HeroImage } from "../../../components/hero-image/hero-image";
-import { QuickLinks } from "../../../components/quicklinks";
-import { Head, Html, SiteFooter, SiteHeader } from "../../../components/site";
+import { SiteCommon } from "../../../components/site";
 import { renderElement } from "../../../core/jsx";
 import { addRouteable, Routeable } from "../../../core/router";
 import { allSnippets } from "../../../model/models";
@@ -22,61 +20,55 @@ export const allSnippetsPage: Routeable = {
 
     return {
       body: renderElement(<>
-        <Html>
-          <Head title={title}>
-          </Head>
-          <body>
-            <SiteHeader />
-            <main>
-              <HeroImage image={image} />
-              <Container spaced split>
+        <SiteCommon
+          title={title}
+          image={image}
+          input={input}
+        >
+          <Container spaced split>
 
-                <script src={staticRouteFor(searchBookSnippetsScript)} defer></script>
-                <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['book-snippets.css']!)} />
+            <script src={staticRouteFor(searchBookSnippetsScript)} defer></script>
+            <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['book-snippets.css']!)} />
 
-                <div>
+            <div>
 
-                  <h1>{title}</h1>
+              <h1>{title}</h1>
 
-                  <p>
-                    Not sure what to read?<br />
-                    Try a <a href={randomSnippetPage.route} target="_blank">Random Book Snippet</a>.</p>
-                  <hr />
+              <p>
+                Not sure what to read?<br />
+                Try a <a href={randomSnippetPage.route} target="_blank">Random Book Snippet</a>.</p>
+              <hr />
 
-                  <p>
-                    Search:<br />
-                    <input type="text" id="search-book-snippets-field" />
-                  </p>
+              <p>
+                Search:<br />
+                <input type="text" id="search-book-snippets-field" />
+              </p>
 
-                  <div id="search-results"></div>
-                  <hr />
+              <div id="search-results"></div>
+              <hr />
 
-                  <ul id="snippets-all">
-                    {groups.map(([date, group]) => <>
-                      <li>
-                        <h4>{date}</h4>
-                        <ul>
-                          {group.map(snippet => <>
-                            <li class="snippet">
-                              <p>
-                                <a href={snippet.view.route}>{markdown.renderInline(snippet.title)}</a>
-                                <br /> {calculateReadingMins(snippet.markdownContent)} min &mdash; {snippet.book.title}
-                              </p>
-                            </li>
-                          </>)}
-                        </ul>
-                      </li>
-                    </>)}
-                  </ul>
+              <ul id="snippets-all">
+                {groups.map(([date, group]) => <>
+                  <li>
+                    <h4>{date}</h4>
+                    <ul>
+                      {group.map(snippet => <>
+                        <li class="snippet">
+                          <p>
+                            <a href={snippet.view.route}>{markdown.renderInline(snippet.title)}</a>
+                            <br /> {calculateReadingMins(snippet.markdownContent)} min &mdash; {snippet.book.title}
+                          </p>
+                        </li>
+                      </>)}
+                    </ul>
+                  </li>
+                </>)}
+              </ul>
 
-                </div>
+            </div>
 
-              </Container>
-            </main>
-            <QuickLinks />
-            <SiteFooter input={input} />
-          </body>
-        </Html>
+          </Container>
+        </SiteCommon>
       </>)
     };
   },

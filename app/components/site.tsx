@@ -3,7 +3,9 @@ import { inlineFontCss } from "../routes/font/fonts";
 import { mainSiteHeaderImagePath } from "../routes/home/home";
 import { staticRouteFor } from "../util/static";
 import { DarkModeButton, darkModeScript } from "./dark-mode/button";
+import { HeroImage } from "./hero-image/hero-image";
 import { Meta } from "./meta/meta";
+import { QuickLinks } from "./quicklinks";
 import { SiteHeader } from "./site-header/site-header";
 
 export const Html: JSX.Component<{}> = (attrs, children) => <>
@@ -13,7 +15,7 @@ export const Html: JSX.Component<{}> = (attrs, children) => <>
   </html>
 </>
 
-export const Head: JSX.Component<{ imagePath?: string, title?: string, description?: string }> = (attrs, children) => <>
+export const Head: JSX.Component<{ imagePath?: string, title?: string, description?: string | undefined }> = (attrs, children) => <>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -58,4 +60,24 @@ export const SiteFooter: JSX.Component<{ input: RouteInput }> = (attrs, children
         link.target = '_blank';
       }`}
   </script>
+</>;
+
+export const SiteCommon: JSX.Component<{
+  input: RouteInput,
+  title: string,
+  image: string,
+  description?: string,
+}> = (attrs, children) => <>
+  <Html>
+    <Head title={attrs.title} description={attrs.description} />
+    <body>
+      <SiteHeader />
+      <main>
+        <HeroImage image={attrs.image} />
+        {children}
+      </main>
+      <QuickLinks />
+      <SiteFooter input={attrs.input} />
+    </body>
+  </Html>
 </>;

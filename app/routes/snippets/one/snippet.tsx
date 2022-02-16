@@ -1,9 +1,7 @@
 import { AdminButton } from "../../../components/admin-button/admin-button";
 import { Container } from "../../../components/container/container";
 import { Content } from "../../../components/content/content";
-import { HeroImage } from "../../../components/hero-image/hero-image";
-import { QuickLinks } from "../../../components/quicklinks";
-import { Head, Html, SiteFooter, SiteHeader } from "../../../components/site";
+import { SiteCommon } from "../../../components/site";
 import { renderElement } from "../../../core/jsx";
 import { addRouteable, Routeable, RouteMeta, RouteMethod } from "../../../core/router";
 import { Snippet } from "../../../model/snippets/snippet";
@@ -31,65 +29,58 @@ export class SnippetRoute implements Routeable {
 
   handle(input: RouteInput): RouteOutput {
     return {
-      body: renderElement(<Html>
-        <Head title={this.snippet.title}>
-        </Head>
-        <body>
-          <SiteHeader />
-          <main>
-            <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['snippet.css']!)} />
+      body: renderElement(<SiteCommon
+        title={this.snippet.title}
+        image={this.snippet.image}
+        input={input}
+      >
+        <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['snippet.css']!)} />
+        <Container spaced split>
+          <Content>
 
-            <HeroImage image={this.snippet.image} />
-            <Container spaced split>
-              <Content>
+            <h1>{markdown.renderInline(this.snippet.title)}</h1>
 
-                <h1>{markdown.renderInline(this.snippet.title)}</h1>
-
-                {input.session?.isAdmin && <>
-                  <PrevNextLinks snippet={this.snippet} open />
-                  <div>
-                    <AdminButton href={this.snippet.clone.route}>Make Next</AdminButton> { }
-                    <AdminButton href='#' onclick='document.getElementById(`edit-snippet-form`).style.display=`grid`; return false;'>Edit</AdminButton>
-                  </div>
-                </>}
-
-                <p>{formatDate(this.snippet.date)} &bull; {calculateReadingMins(this.snippet.markdownContent)} min</p>
-
-                <p>
-                  From <a href={this.snippet.book.view.route}>{this.snippet.book.title}</a>, { }
-                  page <a rel="noopener" href={this.snippet.archiveLink}>{this.snippet.archivePage}</a>
-                  <br />
-                  <small>By {this.snippet.book.author}</small>
-                </p>
-
-
-                {markdown.render(this.snippet.markdownContent)}
-
-                <PrevNextLinks snippet={this.snippet} open />
-
-              </Content>
+            {input.session?.isAdmin && <>
+              <PrevNextLinks snippet={this.snippet} open />
               <div>
-                {input.session?.isAdmin && <>
-                  <link rel='stylesheet' href={staticRouteFor(adminFormCss)} />
-                  <form id='edit-snippet-form' method="POST" action={this.snippet.edit.route} style='display:none'>
-                    <span>Page</span>    <input autocomplete='off' name='archivePage' value={this.snippet.archivePage} autofocus />
-                    <span>Link</span>    <input autocomplete='off' name='archiveSlug' value={this.snippet.archiveSlug} />
-                    <span>Book</span>    <input autocomplete='off' name='bookSlug' value={this.snippet.bookSlug} />
-                    <span>Title</span>   <input autocomplete='off' name='title' value={this.snippet.title} />
-                    <span>Text</span>    <textarea name='markdownContent' rows='10'>{this.snippet.markdownContent}</textarea>
-
-                    <span id='readingmins'></span> <button>Update</button>
-                  </form>
-                </>}
-
-                <LatestBookSnippets />
+                <AdminButton href={this.snippet.clone.route}>Make Next</AdminButton> { }
+                <AdminButton href='#' onclick='document.getElementById(`edit-snippet-form`).style.display=`grid`; return false;'>Edit</AdminButton>
               </div>
-            </Container>
-          </main>
-          <QuickLinks />
-          <SiteFooter input={input} />
-        </body>
-      </Html>)
+            </>}
+
+            <p>{formatDate(this.snippet.date)} &bull; {calculateReadingMins(this.snippet.markdownContent)} min</p>
+
+            <p>
+              From <a href={this.snippet.book.view.route}>{this.snippet.book.title}</a>, { }
+              page <a rel="noopener" href={this.snippet.archiveLink}>{this.snippet.archivePage}</a>
+              <br />
+              <small>By {this.snippet.book.author}</small>
+            </p>
+
+
+            {markdown.render(this.snippet.markdownContent)}
+
+            <PrevNextLinks snippet={this.snippet} open />
+
+          </Content>
+          <div>
+            {input.session?.isAdmin && <>
+              <link rel='stylesheet' href={staticRouteFor(adminFormCss)} />
+              <form id='edit-snippet-form' method="POST" action={this.snippet.edit.route} style='display:none'>
+                <span>Page</span>    <input autocomplete='off' name='archivePage' value={this.snippet.archivePage} autofocus />
+                <span>Link</span>    <input autocomplete='off' name='archiveSlug' value={this.snippet.archiveSlug} />
+                <span>Book</span>    <input autocomplete='off' name='bookSlug' value={this.snippet.bookSlug} />
+                <span>Title</span>   <input autocomplete='off' name='title' value={this.snippet.title} />
+                <span>Text</span>    <textarea name='markdownContent' rows='10'>{this.snippet.markdownContent}</textarea>
+
+                <span id='readingmins'></span> <button>Update</button>
+              </form>
+            </>}
+
+            <LatestBookSnippets />
+          </div>
+        </Container>
+      </SiteCommon>)
     }
   }
 

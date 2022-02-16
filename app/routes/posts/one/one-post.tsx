@@ -1,8 +1,6 @@
 import { Container } from "../../../components/container/container";
 import { Content } from "../../../components/content/content";
-import { HeroImage } from "../../../components/hero-image/hero-image";
-import { QuickLinks } from "../../../components/quicklinks";
-import { Head, Html, SiteFooter, SiteHeader } from "../../../components/site";
+import { SiteCommon } from "../../../components/site";
 import { renderElement } from "../../../core/jsx";
 import { addRouteable, Routeable, RouteMeta, RouteMethod } from "../../../core/router";
 import { Post } from "../../../model/posts/post";
@@ -25,32 +23,24 @@ export class ViewPostPage implements Routeable {
 
   handle(input: RouteInput): RouteOutput {
     return {
-      body: renderElement(<Html>
-        <Head title={this.post.title}>
-        </Head>
-        <body>
-          <SiteHeader />
-          <main>
+      body: renderElement(<SiteCommon
+        title={this.post.title}
+        image={this.post.imageBig}
+        input={input}
+      >
+        <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['post.css']!)} />
+        <Container spaced split>
+          <Content>
+            <h1>{markdown.renderInline(this.post.title)}</h1>
 
-            <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['post.css']!)} />
+            <p class="date">
+              {formatDate(this.post.date)} &bull; {calculateReadingMins(this.post.markdownContent)} min
+            </p>
 
-            <HeroImage image={this.post.imageBig} />
-            <Container spaced split>
-              <Content>
-                <h1>{markdown.renderInline(this.post.title)}</h1>
-
-                <p class="date">
-                  {formatDate(this.post.date)} &bull; {calculateReadingMins(this.post.markdownContent)} min
-                </p>
-
-                {markdown.render(this.post.markdownContent)}
-              </Content>
-            </Container>
-          </main>
-          <QuickLinks />
-          <SiteFooter input={input} />
-        </body>
-      </Html>)
+            {markdown.render(this.post.markdownContent)}
+          </Content>
+        </Container>
+      </SiteCommon>)
     }
   }
 

@@ -45,8 +45,7 @@ export class CloneSnippetPage implements Routeable {
     return {
       body: renderElement(<>
         <Html>
-          <Head>
-          </Head>
+          <Head />
           <body>
             <link rel='stylesheet' href={staticRouteFor(adminCssPage)} />
             <link rel='stylesheet' href={staticRouteFor(adminFormCss)} />
@@ -112,8 +111,7 @@ export class NewSnippetPage implements Routeable {
     return {
       body: renderElement(<>
         <Html>
-          <Head>
-          </Head>
+          <Head />
           <body>
 
             <link rel='stylesheet' href={staticRouteFor(adminCssPage)} />
