@@ -3,8 +3,8 @@
   background-position-y: center;
   height: 20vh;
   display: grid;
-  align-content: center;
-  justify-content: center;
+  align-content: start;
+  /* justify-content: center; */
   position: relative;
   /* 
   
@@ -12,6 +12,10 @@
   text-align: center;
   text-shadow: 0px 1px 7px #000;
   font-size: 125%; */
+}
+
+#page-hero>#site-header {
+  background-color: #1a1f33bb;
 }
 
 @media (min-width: 600px) {
