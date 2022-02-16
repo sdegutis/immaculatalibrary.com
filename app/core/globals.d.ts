@@ -1,6 +1,6 @@
 declare const persisted: {
   sessions?: Map<string, Session>;
-  shutdownServer?: () => void;
+  server?: { handler: import('http').RequestListener };
 };
 
 interface Session {

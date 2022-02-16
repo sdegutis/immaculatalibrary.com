@@ -6,8 +6,22 @@ const baseUrl = process.env['BASE_URL']!;
 
 persisted.sessions ??= new Map<string, Session>();
 
-export function startServer(port: number, handler: RouteHandler) {
-  const server = http.createServer((req: http.IncomingMessage, res: http.ServerResponse) => {
+export class Server {
+
+  handler!: http.RequestListener;
+
+  constructor(port: number) {
+    const server = http.createServer((req: http.IncomingMessage, res: http.ServerResponse) => {
+      this.handler(req, res);
+    });
+    server.listen(port);
+    console.log(`Running on http://localhost:${port}`);
+  }
+
+}
+
+export function makeRequestHandler(handler: RouteHandler): http.RequestListener {
+  return ((req: http.IncomingMessage, res: http.ServerResponse) => {
     let chunks: Buffer[] = [];
     req.on('data', (data: Buffer) => chunks.push(data));
     req.on('end', () => {
@@ -36,10 +50,4 @@ export function startServer(port: number, handler: RouteHandler) {
       res.end(output.body ?? '');
     });
   });
-
-  server.listen(port);
-
-  console.log(`Running on http://localhost:${port}`);
-
-  return () => server.close();
 }
