@@ -1,6 +1,6 @@
 ---
 published: true
-title: Jesus would not have honored His Mother of Purity if he failed to preserve her from original sin
+title: Jesus would not have honored the Mother of Purity if he failed to preserve her from original sin
 archiveSlug: thegloriesofmary00liguuoft
 archivePage: '353'
 bookSlug: the-glories-of-mary
