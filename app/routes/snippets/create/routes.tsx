@@ -145,7 +145,7 @@ export class NewSnippetPage implements Routeable {
               </div>
             </main>
 
-            <script src={staticRouteFor(newBookSnippetScript)}></script>
+            <script src={staticRouteFor(newBookSnippetScript)} defer></script>
 
           </body>
         </Html>
