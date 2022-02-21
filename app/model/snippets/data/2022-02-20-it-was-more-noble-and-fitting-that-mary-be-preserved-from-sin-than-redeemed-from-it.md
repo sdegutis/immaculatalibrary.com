@@ -2,7 +2,7 @@
 published: true
 title: It was more noble and fitting that Mary be preserved from sin than redeemed from it
 archiveSlug: thegloriesofmary00liguuoft
-archivePage: '353'
+archivePage: '355'
 bookSlug: the-glories-of-mary
 ---
 
