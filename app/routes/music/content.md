@@ -536,6 +536,7 @@ English translation:
 
 </details>
 
+<details>
 
 <summary><b>Ag Críost an Síol</b></summary>
 
