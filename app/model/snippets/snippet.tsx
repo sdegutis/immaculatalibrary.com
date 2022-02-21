@@ -39,7 +39,6 @@ export class Snippet {
   clone;
   edit;
 
-  archiveLink;
   public previewMarkdown;
   constructor(
     private file: FsFile,
@@ -61,9 +60,11 @@ export class Snippet {
     this.book = allBooks.find(book => book.slug.includes(this.bookSlug))!;
     this.book.snippets.push(this);
 
-    this.archiveLink = `https://archive.org/details/${archiveSlug}/page/${archivePage}?view=theater`;
-
     allSnippets?.unshift(this);
+  }
+
+  get archiveLink() {
+    return `https://archive.org/details/${this.archiveSlug}/page/${this.archivePage}?view=theater`;
   }
 
   private derivePreview(count: number) {
