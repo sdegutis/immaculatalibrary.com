@@ -11,8 +11,8 @@ const contentInput = document.querySelector('textarea[name=markdownContent]');
 const previewArea = document.getElementById('previewarea');
 const readingMinsEl = document.getElementById('readingmins');
 
-/** @type {import('../../../util/helpers').reading_mins} */
-var reading_mins;
+/** @type {import('../../../util/helpers').calculateReadingMins} */
+var calculateReadingMins;
 
 const slugify = str => str.toLowerCase().replace(/ /g, '-').replace(/[^a-z0-9-]/g, '');
 
@@ -48,5 +48,5 @@ editor.getModel().onDidChangeContent(() => {
   const content = editor.getModel().getValue();
   contentInput.value = content;
   previewArea.innerHTML = md.render(content);
-  readingMinsEl.innerHTML = reading_mins(content) + ' min';
+  readingMinsEl.innerHTML = calculateReadingMins(content) + ' min';
 });
