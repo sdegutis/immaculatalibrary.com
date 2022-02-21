@@ -5,10 +5,6 @@ import { addRouteable, Routeable, RouteMethod } from '../core/router';
 
 export class HashedStaticFile implements Routeable {
 
-  static fromFile(file: FsFile) {
-    return new HashedStaticFile(file.buffer, file.name);
-  }
-
   etag;
   route;
   constructor(private buffer: Buffer, filename: string) {
@@ -32,9 +28,14 @@ export class HashedStaticFile implements Routeable {
 
 }
 
-const map = new Map<FsFile, string>();
+interface Staticable {
+  buffer: Buffer;
+  name: string;
+}
 
-export function staticRouteFor(file: FsFile): string {
+const map = new Map<Staticable, string>();
+
+export function staticRouteFor(file: Staticable): string {
   let s = map.get(file);
   if (!s) {
     if (file.buffer.length < 1_000) {
@@ -42,7 +43,7 @@ export function staticRouteFor(file: FsFile): string {
       map.set(file, s = `data:${type};base64,${file.buffer.toString('base64')}`);
     }
     else {
-      const f = HashedStaticFile.fromFile(file);
+      const f = new HashedStaticFile(file.buffer, file.name);
       addRouteable(f);
       map.set(file, s = f.route);
     }
