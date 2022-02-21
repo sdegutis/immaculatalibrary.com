@@ -118,6 +118,7 @@ export class NewSnippetPage implements Routeable {
           <body>
 
             <link rel='stylesheet' href={staticRouteFor(adminCssPage)} />
+            <link rel='stylesheet' href={staticRouteFor(adminFormCss)} />
             <MarkdownClientSide />
             <MonacoClientSide />
             <script>{calculateReadingMins.toString()}</script>
