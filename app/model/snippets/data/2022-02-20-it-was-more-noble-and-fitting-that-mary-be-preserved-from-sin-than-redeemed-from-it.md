@@ -15,3 +15,9 @@ bookSlug: the-glories-of-mary
 > We must believe that by a new mode of sanctification the Holy Spirit redeemed her at the first moment of her conception, and preserved her by a special grace from original sin, which was not in her, but would have been in her.\*
 >
 > On this subject Cardinal Cusano has elegantly written: Others have had a deliverer, but the holy Virgin had a predeliverer;\* others have had a Redeemer to deliver them from sin already contracted, but the holy Virgin had a Redeemer who, because he was her Son, prevented her from contracting sin.
+>
+> In a word, to conclude this point, Hugo of St. Victor says, the tree is known by its fruit. If the Lamb was always immaculate, always immaculate must the mother also have been.\*
+>
+> Hence this same doctor saluted Mary by calling her: "The worthy mother of a worthy Son." By which he meant to say, that none but Mary was the worthy mother of such a Son, and that none but Jesus was the worthy Son of such a mother.\*
+>
+> Therefore let us say with St. Ildephonsus: Give suck, then, oh Mary, give suck to thy Creator; give suck to him who created thee, and hath made thee so pure and perfect that thou hast merited that he should receive from thee the human nature.
