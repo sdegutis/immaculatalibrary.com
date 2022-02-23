@@ -71,10 +71,9 @@ export const SiteCommon: JSX.Component<{
   <Html>
     <Head title={attrs.title} description={attrs.description} />
     <body>
+      <SiteHeader />
       <main>
-        <HeroImage image={attrs.image}>
-          <SiteHeader />
-        </HeroImage>
+        <HeroImage image={attrs.image} />
         {children}
       </main>
       <QuickLinks />
