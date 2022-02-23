@@ -2,7 +2,6 @@
 title: 'Purity'
 imageFilename: 'https://images.unsplash.com/photo-1600464920755-ea8ee301fc99?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1039&q=80'
 imageCaption: 'Photo by <a href="https://unsplash.com/@juliakadel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Julia Kadel</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>'
-draft: true
 ---
 
 If you want to be happy, you must be pure, for Jesus said, "blessed are the pure of heart, for they shall see God."
@@ -29,7 +28,7 @@ So enjoy the good blessings God has given you. But remember they come from God, 
 
 How do you know if something is in the deepest part of your heart? It's what you think about when you wake up, and while you're falling asleep. It's what you turn to when you're bored or sad.
 
-So if you do start to feel that the perishable things of this world are entering your heart a little too deeply, back away from them for a bit!
+So if you do start to feel that the perishable things of this world (1 John 2:17) are entering your heart a little too deeply, back away from them for a bit!
 
 It's kind of like pinching yourself when you're reminded of a funny joke and feeling the urge to giggle, but you're in the middle of a funeral Mass.
 
@@ -49,7 +48,7 @@ This is that epic reality where countless angels and numberless demons are fight
 
 Cornelius, that devout soldier in the Acts of the Apostles, caught a little glimpse of this world when an angel appeared to him. And what was his reaction? "Cornelius stared at him in terror!" Because this deeper, more true, more real world is far more real, and far more epic than we expect.
 
-So meditate on the great mysteries of our holy religion, and do not let the lust of the flesh, the lust of the eyes, or the pride of life enter your heart. Then you will remain pure, and become more pure.
+So meditate on the great mysteries of our holy religion, and do not let the lust of the flesh, the lust of the eyes, or the pride of life enter your heart (1 John 2:16). Then you will remain pure, and become more pure.
 
 You will be like the Blessed Virgin Mary and the Blessed Saint Joseph, who *never* had such a terrified reaction to seeing angels. And why? Because they *always* lived in this deeper reality.
 
