@@ -6,6 +6,7 @@ import categoriesDir from './categories/data/';
 import { snippetEvents } from './events';
 import moviesDir from './movies/data/';
 import { Movie } from './movies/movie';
+import { loadAllSongs } from './music/song';
 import postsDir from './posts/data/';
 import { Post } from './posts/post';
 import snippetsDir from './snippets/data/';
@@ -86,6 +87,8 @@ export const allPosts = (postsDir
   .sort(sortBy(post => post.date))
   .filter(s => !s.draft)
   .reverse());
+
+export const allSongs = loadAllSongs();
 
 for (const book of allBooks) {
   book.sortAndConnectBookSnippets();

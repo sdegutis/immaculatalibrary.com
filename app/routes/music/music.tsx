@@ -5,6 +5,7 @@ import { renderElement } from "../../core/jsx";
 import { addRouteable, Routeable } from "../../core/router";
 import { markdown } from "../../util/helpers";
 import { staticRouteFor } from "../../util/static";
+import { MusicSidebar } from "./music-sidebar";
 import imageFile from './music.jpg';
 
 export const audioBibleImage = staticRouteFor(imageFile);
@@ -28,6 +29,7 @@ export const musicPage: Routeable = {
             <h1>{title}</h1>
             {htmlContent}
           </Content>
+          <MusicSidebar />
         </Container>
       </SiteCommon>)
     };
