@@ -104,7 +104,7 @@ addRouteable(allSnippetsPage);
 addRouteable(bookSnippetSearch);
 
 addRouteable({
-  route: '/loaderio-5c5d1ee4fd1aedd6c2120a11c61c325b.txt',
+  route: '/loaderio-683766c9a88c449a936bd3e62fbf9ebd.txt',
   method: 'GET',
-  handle: () => ({ body: Buffer.from('loaderio-5c5d1ee4fd1aedd6c2120a11c61c325b') }),
+  handle: () => ({ body: Buffer.from('loaderio-683766c9a88c449a936bd3e62fbf9ebd') }),
 });
