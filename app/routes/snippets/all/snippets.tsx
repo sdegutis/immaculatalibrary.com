@@ -102,9 +102,3 @@ const bookSnippetSearch: Routeable = {
 
 addRouteable(allSnippetsPage);
 addRouteable(bookSnippetSearch);
-
-addRouteable({
-  route: '/loaderio-683766c9a88c449a936bd3e62fbf9ebd.txt',
-  method: 'GET',
-  handle: () => ({ body: Buffer.from('loaderio-683766c9a88c449a936bd3e62fbf9ebd') }),
-});
