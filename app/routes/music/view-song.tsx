@@ -30,10 +30,10 @@ export class ViewSong implements Routeable {
         <Container spaced split>
           <Content>
             <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['view-song.css']!)} />
+            <h1>{this.song.title}</h1>
             <div class="embed-container">
               <iframe allowfullscreen="allowfullscreen" frameborder="0" src={embedUrl}></iframe>
             </div>
-            <h1>{this.song.title}</h1>
             {this.song.html}
           </Content>
           <MusicSidebar />
