@@ -25,3 +25,9 @@ bookSlug: the-sinners-guide
 > What shall I say of their effeminate adornments, their costly stuffs, their extravagant perfumes, their sumptuous tables groaning under the weight of rare and luxurious viands? Nay, sensuality and luxury are so general that, to our shame, books are published to teach us how to sin in these respects.
 >
 > Men have perverted creatures from their lawful use, and instead of making God's benefits a help to virtue, they have turned them into instruments of vice. So great is the selfishness of the world that there is nothing which men do not sacrifice to the gratification of the flesh, wholly forgetful of the poor, whom God has so specially recommended to their care. Such persons never find that they are poor until they are asked for alms; at any other time there is no extravagant luxury their income cannot afford.
+>
+> Beware lest this terrible accusation be made against you at the hour of death! The greater the benefits you have perverted the more severe the account you will have to render.
+> 
+> It is a great sign of reprobation for a man to continue to abuse the favors God has bestowed upon him. To have received much, and to have made but small return, is, in a manner, already to have judged himself.
+> 
+> If the Ninivites shall rise in judgment against the Jews for not having done penance at our Saviour’s teaching, let us see that the same Lord shall have no reason to condemn us upon the example of beasts that love their benefactors, while we manifest such gross ingratitude to the Supreme Benefactor of all.
