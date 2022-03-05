@@ -6,7 +6,7 @@ archivePage: '204'
 bookSlug: the-spirit-of-st-francis-de-sales
 ---
 
-> &HOW BLESSED FRANCIS DEALT WITH A CRIMINAL WHO DESPAIRED OF SALVATION.*
+> *HOW BLESSED FRANCIS DEALT WITH A CRIMINAL WHO DESPAIRED OF SALVATION.*
 >
 > He was once asked to visit in prison a poor criminal already condemned to death, but who could not be induced to make his confession. The unhappy man had committed crimes so terrible that he despaired of the forgiveness even of God, and having often during his lifetime met death face to face in battle and in duels, he appeared to be quite ready again to meet it boldly; nay, so hardened was he by the devil that he even spoke calmly of hell, as of the abode destined for him for eternity.
 >
