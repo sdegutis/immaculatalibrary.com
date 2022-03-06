@@ -4,11 +4,47 @@ import { Content } from "../../../components/content/content";
 import { SiteCommon } from "../../../components/site";
 import { renderElement } from "../../../core/jsx";
 import { addRouteable, Routeable, RouteMeta, RouteMethod } from "../../../core/router";
-import { Snippet } from "../../../model/snippets/snippet";
-import { calculateReadingMins, formatDate, markdown } from "../../../util/helpers";
+import { allTags, Snippet } from "../../../model/snippets/snippet";
+import { calculateReadingMins, formatDate, markdown, sameSiteReferer } from "../../../util/helpers";
 import { staticRouteFor } from "../../../util/static";
 import adminFormCss from '../create/admin-form.css';
 import { LatestBookSnippets } from "../latest-list";
+
+export class CreateTagRoute implements Routeable {
+
+  route;
+  method: RouteMethod = 'POST';
+
+  constructor(private snippet: Snippet) {
+    this.route = `/book-snippets/${this.snippet.date}-${this.snippet.slug}/create-tag`;
+    addRouteable(this);
+  }
+
+  handle(input: RouteInput): RouteOutput {
+    const text = input.body.toString('utf8');
+    const form = new URLSearchParams(text);
+
+    const tagsObject = Object.fromEntries(form.entries());
+    delete tagsObject["_newtag"];
+
+    const tags = [...Object.keys(tagsObject), ...form.getAll('_newtag')];
+    this.snippet.setTags(tags);
+
+    return {
+      status: 302,
+      headers: { 'Location': sameSiteReferer(input)?.href ?? '/' },
+    };
+  }
+
+}
+
+function addCheckbox(button: HTMLButtonElement, e: Event) {
+  e.preventDefault();
+  const li = document.createElement('li');
+  li.innerHTML = `<input name='_newtag'>`;
+  button.parentElement?.insertAdjacentElement('beforebegin', li);
+  li.querySelector('input')!.focus();
+}
 
 export class SnippetRoute implements Routeable {
 
@@ -45,6 +81,24 @@ export class SnippetRoute implements Routeable {
               <div>
                 <AdminButton href={this.snippet.clone.route}>Make Next</AdminButton> { }
                 <AdminButton href='#' onclick='document.getElementById(`edit-snippet-form`).style.display=`grid`; return false;'>Edit</AdminButton>
+                <h3>Tags ({this.snippet.tags.size})</h3>
+                <form method='POST' action={this.snippet.createTag.route}>
+                  <ul>
+                    {[...allTags].map(tag => <>
+                      <li>
+                        <label>
+                          <input type='checkbox' checked={this.snippet.tags.has(tag)} name={tag} /> { }
+                          {tag}
+                        </label>
+                      </li>
+                    </>)}
+                    <li>
+                      <script>{addCheckbox.toString()}</script>
+                      <button onclick={`${addCheckbox.name}(this, event)`}>Add</button>
+                      <button>Save</button>
+                    </li>
+                  </ul>
+                </form>
               </div>
             </>}
 

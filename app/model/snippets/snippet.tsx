@@ -1,13 +1,15 @@
 import Yaml from 'js-yaml';
 import * as luxon from 'luxon';
 import { CloneSnippetPage, EditSnippetRoute } from '../../routes/snippets/create/routes';
-import { SnippetRoute } from '../../routes/snippets/one/snippet';
+import { CreateTagRoute, SnippetRoute } from '../../routes/snippets/one/snippet';
 import { loadContentFile, saveContentFile } from '../../util/data-files';
 import { pushChanges } from '../../util/live-editing';
 import { Book } from '../books/book';
 import { snippetEvents } from '../events';
 import { allBooks, allSnippets } from '../models';
 import snippetsDir from './data/';
+
+export const allTags = new Set<string>();
 
 export class Snippet {
   static from(file: FsFile) {
@@ -17,6 +19,7 @@ export class Snippet {
       archiveSlug: string,
       archivePage: string,
       bookSlug: string,
+      tags: string[],
     }>(file, 'date-slug');
 
     return new Snippet(
@@ -29,11 +32,14 @@ export class Snippet {
       data.meta.archiveSlug,
       data.meta.archivePage,
       data.meta.bookSlug,
+      new Set(data.meta.tags ?? []),
     );
   }
 
   nextSnippet?: Snippet;
   prevSnippet?: Snippet;
+
+  createTag;
 
   view;
   clone;
@@ -50,6 +56,7 @@ export class Snippet {
     public archiveSlug: string,
     public archivePage: string,
     public bookSlug: string,
+    public tags: Set<string>,
   ) {
     this.previewMarkdown = this.derivePreview(2000);
 
@@ -59,6 +66,12 @@ export class Snippet {
 
     this.book = allBooks.find(book => book.slug.includes(this.bookSlug))!;
     this.book.snippets.push(this);
+
+    this.createTag = new CreateTagRoute(this);
+
+    for (const tag of tags) {
+      allTags.add(tag);
+    }
 
     allSnippets?.unshift(this);
   }
@@ -82,6 +95,20 @@ export class Snippet {
     return null;
   }
 
+  setTags(tags: string[]) {
+    this.tags = new Set(tags);
+    for (const tag of tags) {
+      allTags.add(tag);
+    }
+    this.save();
+  }
+
+  addTag(tag: string) {
+    this.tags.add(tag);
+    allTags.add(tag);
+    this.save();
+  }
+
   save() {
     saveContentFile(this.file, {
       published: this.published,
@@ -89,6 +116,7 @@ export class Snippet {
       archiveSlug: this.archiveSlug,
       archivePage: this.archivePage,
       bookSlug: this.bookSlug,
+      tags: [...this.tags],
     }, this.markdownContent);
   }
 
