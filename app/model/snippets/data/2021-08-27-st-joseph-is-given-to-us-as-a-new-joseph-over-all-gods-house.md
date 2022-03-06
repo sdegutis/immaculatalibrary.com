@@ -4,13 +4,12 @@ title: St. Joseph is given to us as a new Joseph over all God’s house
 archiveSlug: st.-josephs-life-virtues-privileges-power
 archivePage: '349'
 bookSlug: st-joseph-life-his-virtues-his-privileges-his-power
+tags: []
 ---
 
 > "Go to Joseph, and do all that he shall say to you" (Gen. xli. 55).
 >
-> "Thou shalt be over my house, and at the commandment of thy mouth all the people shall obey. ... Behold I have appointed thee over
-the whole land of Egypt ... without thy commandment no man shall move hand or foot in all the land of Egypt ... and
-he called him in the Egyptian tongue the saviour of the world" (Gen. xli. 40).
+> "Thou shalt be over my house, and at the commandment of thy mouth all the people shall obey. ... Behold I have appointed thee over the whole land of Egypt ... without thy commandment no man shall move hand or foot in all the land of Egypt ... and he called him in the Egyptian tongue the saviour of the world" (Gen. xli. 40).
 >
 > "He made him master of his house and ruler of all his possessions" (Ps. civ. 21).
 >
