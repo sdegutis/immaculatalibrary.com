@@ -4,6 +4,8 @@ title: St. Joseph is merely portrayed as an old man in Christian Art to represen
 archiveSlug: lifegloriesofstj00thomuoft
 archivePage: '135'
 bookSlug: the-life-and-glories-of-st-joseph
+tags:
+  - St. Joseph
 ---
 
 > It is, perhaps, not difficult to conceive why painters, in portraying the Holy Family, should have had a bias in favour of increasing the apparent age of St. Joseph as compared with that of the young Mother.
