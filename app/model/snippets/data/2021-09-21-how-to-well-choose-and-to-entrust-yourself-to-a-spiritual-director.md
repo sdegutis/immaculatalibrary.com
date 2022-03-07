@@ -4,6 +4,9 @@ title: How to well choose and to entrust yourself to a Spiritual Director
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '9'
 bookSlug: introduction-to-the-devout-life
+tags:
+  - obedience
+  - spiritual-directors
 ---
 
 > But who shall find this man? The wise men answer, "They that fear God:" that is, the humble, who earnestly desire their spiritual advancement.
