@@ -1,5 +1,6 @@
 import { snippetEvents } from "../../model/events";
 import { allSnippets } from "../../model/models";
+import { Snippet } from "../../model/snippets/snippet";
 import { calculateReadingMins, groupByDate, markdown } from "../../util/helpers";
 import { allSnippetsPage } from "./all/snippets";
 import { randomSnippetPage } from "./random";
@@ -22,6 +23,27 @@ ul.snippets-latest > li li {
 }
 `;
 
+export const SnippetsGroups: JSX.Component<{ groups: [string, Snippet[]][] }> = ({ groups }, children) => <>
+  <style>{latestBookSnippetsStyle}</style>
+  <ul class="snippets-latest">
+    {groups.map(([date, group]) => <>
+      <li>
+        <h4>{date}</h4>
+        <ul>
+          {group.map(snippet => <>
+            <li>
+              <p>
+                <a href={snippet.view.route}>{markdown.renderInline(snippet.title)}</a>
+                <br /> {calculateReadingMins(snippet.markdownContent)} min &mdash; {snippet.book.title}
+              </p>
+            </li>
+          </>)}
+        </ul>
+      </li>
+    </>)}
+  </ul>
+</>;
+
 let totalReadingTime = <></>;
 function updateTotalReadingTime() {
   const totalReadingMins = calculateReadingMins(allSnippets.map(s => s.markdownContent).join('\n\n'));
@@ -42,7 +64,6 @@ export const LatestBookSnippets: JSX.Component<{}> = (attrs, children) => {
   const groups = Object.entries(groupByDate(recentBookSnippets));
 
   return <>
-    <style>{latestBookSnippetsStyle}</style>
 
     <h3>Latest book snippets</h3>
     <p>(Total book snippets reading time: {totalReadingTime})</p>
@@ -51,23 +72,8 @@ export const LatestBookSnippets: JSX.Component<{}> = (attrs, children) => {
       {' | '}
       <a href={randomSnippetPage.route}>Random Book Snippet</a>
     </p>
-    <ul class="snippets-latest">
-      {groups.map(([date, group]) => <>
-        <li>
-          <h4>{date}</h4>
-          <ul>
-            {group.map(snippet => <>
-              <li>
-                <p>
-                  <a href={snippet.view.route}>{markdown.renderInline(snippet.title)}</a>
-                  <br /> {calculateReadingMins(snippet.markdownContent)} min &mdash; {snippet.book.title}
-                </p>
-              </li>
-            </>)}
-          </ul>
-        </li>
-      </>)}
-    </ul>
+
+    <SnippetsGroups groups={groups} />
 
   </>;
 };

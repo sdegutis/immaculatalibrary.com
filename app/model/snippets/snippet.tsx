@@ -8,8 +8,7 @@ import { Book } from '../books/book';
 import { snippetEvents } from '../events';
 import { allBooks, allSnippets } from '../models';
 import snippetsDir from './data/';
-
-export const allTags = new Set<string>();
+import { Tag } from './tag';
 
 export class Snippet {
   static from(file: FsFile) {
@@ -45,6 +44,8 @@ export class Snippet {
   clone;
   edit;
 
+  tags;
+
   public previewMarkdown;
   constructor(
     private file: FsFile,
@@ -56,7 +57,7 @@ export class Snippet {
     public archiveSlug: string,
     public archivePage: string,
     public bookSlug: string,
-    public tags: Set<string>,
+    tags: Set<string>,
   ) {
     this.previewMarkdown = this.derivePreview(2000);
 
@@ -69,8 +70,9 @@ export class Snippet {
 
     this.createTag = new CreateTagRoute(this);
 
-    for (const tag of tags) {
-      allTags.add(tag);
+    this.tags = new Set([...tags].map(Tag.getOrCreate));
+    for (const tag of this.tags) {
+      tag.addSnippet(this);
     }
 
     allSnippets?.unshift(this);
@@ -96,10 +98,14 @@ export class Snippet {
   }
 
   setTags(tags: string[]) {
-    this.tags = new Set(tags);
-    for (const tag of tags) {
-      allTags.add(tag);
+    for (const tag of this.tags) {
+      tag.removeSnippet(this);
     }
+    this.tags = new Set(tags.map(Tag.getOrCreate));
+    for (const tag of this.tags) {
+      tag.addSnippet(this);
+    }
+
     this.save();
 
     setTimeout(() => {

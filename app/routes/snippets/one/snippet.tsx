@@ -4,7 +4,8 @@ import { Content } from "../../../components/content/content";
 import { SiteCommon } from "../../../components/site";
 import { renderElement } from "../../../core/jsx";
 import { addRouteable, Routeable, RouteMeta, RouteMethod } from "../../../core/router";
-import { allTags, Snippet } from "../../../model/snippets/snippet";
+import { Snippet } from "../../../model/snippets/snippet";
+import { allTags } from "../../../model/snippets/tag";
 import { calculateReadingMins, formatDate, markdown, sameSiteReferer } from "../../../util/helpers";
 import { staticRouteFor } from "../../../util/static";
 import adminFormCss from '../create/admin-form.css';
@@ -76,6 +77,8 @@ export class SnippetRoute implements Routeable {
 
             <h1>{markdown.renderInline(this.snippet.title)}</h1>
 
+            <p>{formatDate(this.snippet.date)} &bull; {calculateReadingMins(this.snippet.markdownContent)} min</p>
+
             {input.session?.isAdmin && <>
               <PrevNextLinks snippet={this.snippet} open />
               <div>
@@ -84,11 +87,11 @@ export class SnippetRoute implements Routeable {
                 <h3>Tags ({this.snippet.tags.size})</h3>
                 <form method='POST' action={this.snippet.createTag.route}>
                   <ul>
-                    {[...allTags].map(tag => <>
+                    {[...allTags.values()].map(tag => <>
                       <li>
                         <label>
-                          <input type='checkbox' checked={this.snippet.tags.has(tag)} name={tag} /> { }
-                          {tag}
+                          <input type='checkbox' checked={this.snippet.tags.has(tag)} name={tag.name} /> { }
+                          {tag.name}
                         </label>
                       </li>
                     </>)}
@@ -102,7 +105,11 @@ export class SnippetRoute implements Routeable {
               </div>
             </>}
 
-            <p>{formatDate(this.snippet.date)} &bull; {calculateReadingMins(this.snippet.markdownContent)} min</p>
+            <p>
+              {[...this.snippet.tags].map(tag => <>
+                <a href={tag.view.route}>#{tag.name}</a>
+              </>)}
+            </p>
 
             <p>
               From <a href={this.snippet.book.view.route}>{this.snippet.book.title}</a>, { }
@@ -110,7 +117,6 @@ export class SnippetRoute implements Routeable {
               <br />
               <small>By {this.snippet.book.author}</small>
             </p>
-
 
             {markdown.render(this.snippet.markdownContent)}
 
