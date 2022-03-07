@@ -4,7 +4,8 @@ title: The Passion of Jesus should move us to deepest gratitude and Love for God
 archiveSlug: sinnersguide00luis
 archivePage: '50'
 bookSlug: the-sinners-guide
-tags: []
+tags:
+  - passion
 ---
 
 > Can we, without the deepest grief, behold this spectacle---God hanging as a malefactor upon an infamous gibbet?
