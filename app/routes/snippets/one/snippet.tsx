@@ -107,7 +107,7 @@ export class SnippetRoute implements Routeable {
 
             <p>
               {[...this.snippet.tags].map(tag => <>
-                <a href={tag.view.route}>#{tag.name}</a>
+                <a href={tag.view.route}>#{tag.name}</a> { }
               </>)}
             </p>
 
