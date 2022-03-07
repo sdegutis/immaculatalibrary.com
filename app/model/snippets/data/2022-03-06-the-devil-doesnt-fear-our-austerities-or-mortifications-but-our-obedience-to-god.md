@@ -4,6 +4,8 @@ title: The devil doesn't fear our austerities or mortifications, but our obedien
 archiveSlug: the-spirit-of-st.-francis-de-sales
 archivePage: '207'
 bookSlug: the-spirit-of-st-francis-de-sales
+tags:
+  - obedience
 ---
 
 > *UPON MORTIFICATION.*
