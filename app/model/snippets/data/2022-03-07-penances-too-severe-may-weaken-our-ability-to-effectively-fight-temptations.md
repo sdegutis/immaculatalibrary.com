@@ -4,7 +4,8 @@ title: Penances too severe may weaken our ability to effectively fight temptatio
 archiveSlug: the-spirit-of-st.-francis-de-sales
 archivePage: '208'
 bookSlug: the-spirit-of-st-francis-de-sales
-tags: []
+tags:
+  - penance
 ---
 
 > *UPON THE SAME SUBJECT.*
