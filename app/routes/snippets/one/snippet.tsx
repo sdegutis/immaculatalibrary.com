@@ -27,7 +27,7 @@ export class CreateTagRoute implements Routeable {
     const tagsObject = Object.fromEntries(form.entries());
     delete tagsObject["_newtag"];
 
-    const tags = [...Object.keys(tagsObject), ...form.getAll('_newtag')];
+    const tags = [...Object.keys(tagsObject), ...form.getAll('_newtag')].filter(tag => tag);
     this.snippet.setTags(tags);
 
     return {
