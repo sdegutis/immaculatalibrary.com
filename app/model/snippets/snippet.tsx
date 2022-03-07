@@ -107,16 +107,6 @@ export class Snippet {
     }, 100);
   }
 
-  addTag(tag: string) {
-    this.tags.add(tag);
-    allTags.add(tag);
-    this.save();
-
-    setTimeout(() => {
-      pushChanges(this.file.realPath, 'Updated snippet from site');
-    }, 100);
-  }
-
   save() {
     saveContentFile(this.file, {
       published: this.published,
