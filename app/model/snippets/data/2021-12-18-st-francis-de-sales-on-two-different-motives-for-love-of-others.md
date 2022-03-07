@@ -4,6 +4,7 @@ title: St. Francis de Sales on two different motives for love of others
 archiveSlug: the-spirit-of-st.-francis-de-sales
 archivePage: '77'
 bookSlug: the-spirit-of-st-francis-de-sales
+tags: []
 ---
 
 > *UPON THE PURE LOVE OF OUR NEIGHBOUR.*
@@ -34,4 +35,4 @@ bookSlug: the-spirit-of-st-francis-de-sales
 >
 > In another place he remarks:
 >
->> St. Catherine of Sienna illustrates the subject by means of a beautiful simile. "If," she says, "you take a glass and fill it from a spring, and if while drinking from this glass you do not remove it from the spring, you may drink as much as you please without ever emptying the glass" So it is with friendships: if we never withdraw them from their source they never dry up.
+>> St. Catherine of Sienna illustrates the subject by means of a beautiful simile. "If," she says, "you take a glass and fill it from a spring, and if while drinking from this glass you do not remove it from the spring, you may drink as much as you please without ever emptying the glass." So it is with friendships: if we never withdraw them from their source they never dry up.
