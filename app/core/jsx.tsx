@@ -108,6 +108,7 @@ function elementToString(element: PlainElement): string {
 function isElement<T extends PlainElement | JSX.Element>(object: any): object is T {
   return (
     typeof object === 'object'
+    && object !== null
     && 'tag' in object
     && 'attrs' in object
     && 'children' in object
