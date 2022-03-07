@@ -120,7 +120,7 @@ export class Snippet {
       archiveSlug: this.archiveSlug,
       archivePage: this.archivePage,
       bookSlug: this.bookSlug,
-      tags: [...this.tags],
+      tags: [...this.tags].map(tag => tag.name),
     }, this.markdownContent);
   }
 
