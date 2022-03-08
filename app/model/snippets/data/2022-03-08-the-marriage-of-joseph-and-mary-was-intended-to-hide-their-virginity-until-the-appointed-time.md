@@ -4,7 +4,10 @@ title: The marriage of Joseph and Mary was intended to hide their virginity unti
 archiveSlug: lifegloriesofstj00thomuoft
 archivePage: '149'
 bookSlug: the-life-and-glories-of-st-joseph
-tags: []
+tags:
+  - mary
+  - joseph
+  - virginity
 ---
 
 > Nor let it be objected that this marriage of Mary and Joseph tended to hide and veil from men the virginity of Mary, since this was the one chief object and desire of these two holy spouses; that is, while jealously guarding and cultivating virginity, to withdraw it from the observation of men and from their esteem, hiding it through humility under the veil of matrimony, that they might not be regarded as singular.
