@@ -4,7 +4,9 @@ title: We must love the crosses God gives us more than the ones we choose
 archiveSlug: the-spirit-of-st.-francis-de-sales
 archivePage: '210'
 bookSlug: the-spirit-of-st-francis-de-sales
-tags: []
+tags:
+  - obedience
+  - penance
 ---
 
 > With regard to the various kinds of mortification, that which is inward and hidden is far more excellent than that which is exterior, the former not being compatible, as is the latter, with hypocrisy, vanity, or indiscretion.
