@@ -4,7 +4,9 @@ title: St. Anselm on the gratitude we owe God
 archiveSlug: sinnersguide00luis
 archivePage: '51'
 bookSlug: the-sinners-guide
-tags: []
+tags:
+  - exhortation
+  - morals
 ---
 
 > Tell me, O ye creatures! whether a greater benefit, a more generous favor, a more binding obligation can be conceived. Tell me, O ye celestial choirs! whether God has done for you what He has done for us? Who, then, will refuse to give himself without reserve to the service of such a Master?
