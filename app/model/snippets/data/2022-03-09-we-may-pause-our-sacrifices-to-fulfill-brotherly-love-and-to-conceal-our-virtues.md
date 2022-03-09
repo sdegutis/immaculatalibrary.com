@@ -4,7 +4,9 @@ title: We may pause our sacrifices to fulfill brotherly love and to conceal our 
 archiveSlug: the-spirit-of-st.-francis-de-sales
 archivePage: '211'
 bookSlug: the-spirit-of-st-francis-de-sales
-tags: []
+tags:
+  - penance
+  - morals
 ---
 
 > UPON FASTING. <sup>1</sup>
