@@ -4,7 +4,9 @@ title: Theories about when Joseph and Mary left Jerusalem after their marriage
 archiveSlug: lifegloriesofstj00thomuoft
 archivePage: '152'
 bookSlug: the-life-and-glories-of-st-joseph
-tags: []
+tags:
+  - mary
+  - joseph
 ---
 
 > CHAPTER XXII.
