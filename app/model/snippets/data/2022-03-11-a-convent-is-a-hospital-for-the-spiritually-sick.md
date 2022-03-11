@@ -4,7 +4,9 @@ title: A convent is a hospital for the spiritually sick
 archiveSlug: the-spirit-of-st.-francis-de-sales
 archivePage: '219'
 bookSlug: the-spirit-of-st-francis-de-sales
-tags: []
+tags:
+  - obedience
+  - consecration
 ---
 
 > UPON THE STATE OF PERFECTION.
