@@ -4,7 +4,8 @@ title: The seven degrees of our Justification by the Holy Spirit
 archiveSlug: sinnersguide00luis
 archivePage: '56'
 bookSlug: the-sinners-guide
-tags: []
+tags:
+  - doctrine
 ---
 
 > CHAPTER V.
