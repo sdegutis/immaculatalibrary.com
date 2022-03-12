@@ -4,7 +4,9 @@ title: The benefit of no longer being God's enemy, but rather his own dear child
 archiveSlug: sinnersguide00luis
 archivePage: '56'
 bookSlug: the-sinners-guide
-tags: []
+tags:
+  - exhortation
+  - doctrine
 ---
 
 > The first of these graces is our vocation.
