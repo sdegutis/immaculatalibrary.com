@@ -4,7 +4,9 @@ title: A brief description of the Holy House in Nazareth
 archiveSlug: lifegloriesofstj00thomuoft
 archivePage: '153'
 bookSlug: the-life-and-glories-of-st-joseph
-tags: []
+tags:
+  - mary
+  - joseph
 ---
 
 > The Santa Casa, now miraculously transported to Loreto, was, like the Nazareth houses in general, very small; and, as was the case with many of them likewise, it was built against the rock, with an opening into a cave or grotto at the back.<sup>1</sup> On the one side was an apartment in the rock, which to this day bears the name of the kitchen of the Madonna; on the other, at a very short distance, was what is still by tradition called the workshop of St. Joseph.
