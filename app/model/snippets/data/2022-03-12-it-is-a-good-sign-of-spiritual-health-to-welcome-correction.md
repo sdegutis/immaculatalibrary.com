@@ -4,7 +4,10 @@ title: It is a good sign of spiritual health to welcome correction
 archiveSlug: the-spirit-of-st.-francis-de-sales
 archivePage: '219'
 bookSlug: the-spirit-of-st-francis-de-sales
-tags: []
+tags:
+  - obedience
+  - correction
+  - humility
 ---
 
 > MARKS OF PROGRESS IN PERFECTION.
