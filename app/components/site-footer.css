@@ -8,8 +8,8 @@
 }
 
 #sitewide-quicklinks {
-  display: grid;
-  grid-auto-flow: column;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 1em;
   margin: 2em 0;
