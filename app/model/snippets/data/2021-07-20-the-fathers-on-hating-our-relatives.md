@@ -4,6 +4,9 @@ title: The Church Fathers on Hating our Relatives
 archiveSlug: catenaaureacomme04thom
 archivePage: '516'
 bookSlug: catena-aurea
+tags:
+  - Morals
+  - BibleCommentary
 ---
 
 > 25\. And there went great multitudes with Him: and He turned, and said unto them,
