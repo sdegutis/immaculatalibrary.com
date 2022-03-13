@@ -4,6 +4,9 @@ title: Encouragements to love Jesus in Holy Communion
 archiveSlug: BlessedSacramentBook
 archivePage: n639
 bookSlug: blessed-sacrament-book
+tags:
+  - exhortation
+  - holy-communion
 ---
 
 > ***The Voice of Christ***
