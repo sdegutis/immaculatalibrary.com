@@ -4,6 +4,10 @@ title: 'Annual Retreat Exercise #11: Consideration of the love that Jesus Christ
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '278'
 bookSlug: introduction-to-the-devout-life
+tags:
+  - Exhortation
+  - Passion
+  - Love
 ---
 
 > ### CHAPTER XIII.
