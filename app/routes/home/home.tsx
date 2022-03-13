@@ -31,7 +31,7 @@ export const homePage: Routeable = {
       body: renderElement(<>
         <Html>
           <Head
-            description="Free Catholic Digital Resources"
+            description="Catholic Digital Library"
             imagePath={mainSiteHeaderImagePath} />
           <body>
 
@@ -44,7 +44,7 @@ export const homePage: Routeable = {
                 <div>
                   <div>
                     <h1><a href={homePage.route}>Immaculata Library</a></h1>
-                    <p>Free Digital Catholic Books</p>
+                    <p>Catholic Digital Library</p>
                   </div>
                 </div>
               </section>
