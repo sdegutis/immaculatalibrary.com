@@ -4,6 +4,9 @@ title: How the Gospel’s Saints and her Most Chaste Spouse St. Joseph greeted M
 archiveSlug: thegloriesofmary00liguuoft
 archivePage: '503'
 bookSlug: the-glories-of-mary
+tags:
+  - Joseph
+  - Mary
 ---
 
 > Then came holy Simeon to kiss her feet, and with joy reminded her of that day on which he received from her hands the infant Jesus.
