@@ -4,7 +4,10 @@ title: Perfection of consecrated life is not in austerities but purely in Love o
 archiveSlug: the-spirit-of-st.-francis-de-sales
 archivePage: '221'
 bookSlug: the-spirit-of-st-francis-de-sales
-tags: []
+tags:
+  - spiritual-directors
+  - consecration
+  - doctrine
 ---
 
 > UPON THE PERFECTION AIMED AT IN RELIGIOUS HOUSES.
