@@ -5,8 +5,8 @@ archiveSlug: lifegloriesofstj00thomuoft
 archivePage: '147'
 bookSlug: the-life-and-glories-of-st-joseph
 tags:
-  Mary
-  Joseph
+  - Mary
+  - Joseph
   - Marriage
 ---
 

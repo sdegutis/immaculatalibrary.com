@@ -5,8 +5,8 @@ archiveSlug: lifegloriesofstj00thomuoft
 archivePage: '149'
 bookSlug: the-life-and-glories-of-st-joseph
 tags:
-  Mary
-  Joseph
+  - Mary
+  - Joseph
   - Virginity
 ---
 

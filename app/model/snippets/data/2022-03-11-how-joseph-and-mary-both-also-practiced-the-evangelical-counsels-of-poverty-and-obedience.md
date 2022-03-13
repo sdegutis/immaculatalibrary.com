@@ -6,8 +6,8 @@ archivePage: '153'
 bookSlug: the-life-and-glories-of-st-joseph
 tags:
   - Obedience
-  Mary
-  Joseph
+  - Mary
+  - Joseph
   - Marriage
   - Morals
   - Consecration

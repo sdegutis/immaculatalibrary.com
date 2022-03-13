@@ -5,8 +5,8 @@ archiveSlug: lifegloriesofstj00thomuoft
 archivePage: '150'
 bookSlug: the-life-and-glories-of-st-joseph
 tags:
-  Mary
-  Joseph
+  - Mary
+  - Joseph
 ---
 
 > If any one should ask, would not a richer and more powerful spouse have been more suitable for our Sovereign Lady, the reply is not far to seek. It is not power or riches which attract the eyes of God. It is virtue, rectitude, humility, poverty, and sanctity of life.
