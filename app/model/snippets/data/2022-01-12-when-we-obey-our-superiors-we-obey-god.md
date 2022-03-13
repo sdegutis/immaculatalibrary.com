@@ -4,6 +4,10 @@ title: When we obey our superiors, we obey God
 archiveSlug: sinnersguide00luis
 archivePage: '450'
 bookSlug: the-sinners-guide
+tags:
+  - Exhortation
+  - Obedience
+  - Doctrine
 ---
 
 > *CHAPTER XLIII.*
