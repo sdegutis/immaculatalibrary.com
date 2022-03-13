@@ -4,6 +4,9 @@ title: Prayer of St. Alphonsus for Obtaining the Love of Jesus and Mary
 archiveSlug: manualofadoratio00schm
 archivePage: '378'
 bookSlug: manual-of-adoration-of-the-most-blessed-sacrament
+tags:
+  - Mary
+  - Prayer
 ---
 
 > ### *Indulgenced Prayers of St. Alphonsus to the Blessed Virgin.*
