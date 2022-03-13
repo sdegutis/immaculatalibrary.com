@@ -28,40 +28,64 @@ export class ViewCategory implements Routeable {
         image={this.cat.imageBig}
         input={input}
       >
-        <Container spaced split>
+        <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['category.css']!)} />
 
+        <Container spaced centered>
           <div>
-
             <h1>{this.cat.title}</h1>
-
             <Content>
               {markdown.render(this.cat.markdownContent)}
             </Content>
-
-            <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['category.css']!)} />
-
-            <section id='category'>
-              <h2>Books</h2>
-              <ul>
-                {this.cat.books.map(book => {
-                  return <li>
-                    <div class="title">
-                      <a href={book.view.route}>{book.title}</a>
-                      {book.subtitle && <>: {book.subtitle}</>}
-                      {' '}
-                      <Rating n={book.rating} />
-                    </div>
-
-                    <div class="author">{book.author}</div>
-                    <Content>
-                      <div class="blurb">{markdown.render(excerpt(book.markdownContent))}</div>
-                    </Content>
-                  </li>;
-                })}
-              </ul>
-            </section>
-
           </div>
+        </Container>
+
+        <Container spaced split>
+
+          <section id='category'>
+            <h2>Books</h2>
+            <ul>
+              {this.cat.books.map(book => {
+                return <li>
+                  <div class="title">
+                    <a href={book.view.route}>{book.title}</a>
+                    {book.subtitle && <>: {book.subtitle}</>}
+                    {' '}
+                    <Rating n={book.rating} />
+                  </div>
+
+                  <div class="author">{book.author}</div>
+                  <Content>
+                    <div class="blurb">{markdown.render(excerpt(book.markdownContent))}</div>
+                  </Content>
+                </li>;
+              })}
+            </ul>
+          </section>
+
+          <section id='snippets-in-category'>
+            <h2>Book Snippets</h2>
+            <div class='scrollable-area'>
+              <ul>
+                {this.cat.books
+                  .filter(book => book.snippets.length > 0)
+                  .map(book => <>
+                    <li>
+                      <h3>{book.title}</h3>
+                      <ul>
+                        {book.snippets.map(bookSnippet => <>
+                          <li>
+                            <p>
+                              p.{bookSnippet.archivePage} { }
+                              <a href={bookSnippet.view.route}>{markdown.renderInline(bookSnippet.title)}</a>
+                            </p>
+                          </li>
+                        </>)}
+                      </ul>
+                    </li>
+                  </>)}
+              </ul>
+            </div>
+          </section>
 
         </Container>
       </SiteCommon>)

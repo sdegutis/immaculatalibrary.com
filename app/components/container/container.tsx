@@ -1,7 +1,8 @@
 import { staticRouteFor } from "../../util/static";
 
-export const Container: JSX.Component<{ spaced?: boolean, split?: boolean }> = (attrs, children) => {
+export const Container: JSX.Component<{ centered?: boolean, spaced?: boolean, split?: boolean }> = (attrs, children) => {
   const cssClass: string[] = [];
+  if (attrs.centered) cssClass.push('centered-page');
   if (attrs.spaced) cssClass.push('spaced-main-content');
   if (attrs.split) cssClass.push('split-page');
   return <>
