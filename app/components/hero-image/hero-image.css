@@ -14,10 +14,6 @@
   font-size: 125%; */
 }
 
-#page-hero>#site-header {
-  background-color: #1a1f33bb;
-}
-
 @media (min-width: 600px) {
   #page-hero {
     height: 200px;

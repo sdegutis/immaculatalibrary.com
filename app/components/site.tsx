@@ -50,14 +50,19 @@ export const SiteFooter: JSX.Component<{ input: RouteInput }> = (attrs, children
     <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['site-footer.css']!)} />
     <div class='sitewide-quicklinks'>
       <a href={aboutPage.route}>About</a>
+      {' | '}
       <a href={allBooksPage.route}>Books</a>
+      {' | '}
       <a href={allMoviesPage.route}>Movies</a>
+      {' | '}
       <a href={musicPage.route}>Music</a>
+      {' | '}
       <a href={audioBiblePage.route}>Audio Bible</a>
+      {' | '}
       <a href={devotionsPage.route}>Devotions</a>
     </div>
-    <p>
-      {new Date().getFullYear()} ImmaculataLibrary.com &copy; All Rights Reserved
+    <p class='sitewide-quicklinks'>
+      <span>{new Date().getFullYear()} ImmaculataLibrary.com &copy; All Rights Reserved</span>
       {' | '}
       <a href="mailto:immaculatalibrary@gmail.com">Contact</a>
       {' | '}
@@ -86,9 +91,10 @@ export const SiteCommon: JSX.Component<{
   <Html>
     <Head title={attrs.title} description={attrs.description} />
     <body>
-      <SiteHeader />
       <main>
-        <HeroImage image={attrs.image} />
+        <HeroImage image={attrs.image}>
+          <SiteHeader />
+        </HeroImage>
         {children}
       </main>
       <QuickLinks />

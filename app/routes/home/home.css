@@ -21,7 +21,12 @@
 
 #home-hero h1 {
   color: inherit;
-  margin-bottom: 0;
+  margin-bottom: 7px;
+}
+
+#home-hero a {
+  color: inherit;
+  text-decoration: underline;
 }
 
 #home-hero p {

@@ -1,7 +1,7 @@
 import { Container } from "../../components/container/container";
 import { Content } from "../../components/content/content";
 import { QuickLinks } from "../../components/quicklinks";
-import { Head, Html, SiteFooter, SiteHeader } from "../../components/site";
+import { Head, Html, SiteFooter } from "../../components/site";
 import { renderElement } from "../../core/jsx";
 import { addRouteable, Routeable } from "../../core/router";
 import { allSnippets } from "../../model/models";
@@ -33,7 +33,6 @@ export const homePage: Routeable = {
             description="Free Catholic Digital Resources"
             imagePath={mainSiteHeaderImagePath} />
           <body>
-            <SiteHeader />
 
             <main>
 
@@ -43,7 +42,7 @@ export const homePage: Routeable = {
                 <div></div>
                 <div>
                   <div>
-                    <h1>Immaculata Library</h1>
+                    <h1><a href={homePage.route}>Immaculata Library</a></h1>
                     <p>Free Digital Catholic Books</p>
                   </div>
                 </div>
