@@ -7,11 +7,12 @@
   text-align: center;
 }
 
-#site-footer .sitewide-quicklinks {
+#sitewide-quicklinks {
   display: grid;
   grid-auto-flow: column;
   justify-content: center;
   gap: 1em;
-  justify-items: space-around;
-  margin-bottom: 2em;
+  margin: 2em 0;
+  padding-top: 2em;
+  border-top: 1px solid var(--border-color);
 }

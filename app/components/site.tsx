@@ -8,6 +8,7 @@ import { mainSiteHeaderImagePath } from "../routes/home/home";
 import { allMoviesPage } from "../routes/movies/all-movies/all-movies";
 import { musicPage } from "../routes/music/music";
 import { staticRouteFor } from "../util/static";
+import { Container } from "./container/container";
 import { DarkModeButton, darkModeScript } from "./dark-mode/button";
 import { HeroImage } from "./hero-image/hero-image";
 import { Meta } from "./meta/meta";
@@ -48,20 +49,7 @@ export { SiteHeader };
 export const SiteFooter: JSX.Component<{ input: RouteInput }> = (attrs, children) => <>
   <footer id='site-footer'>
     <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['site-footer.css']!)} />
-    <div class='sitewide-quicklinks'>
-      <a href={aboutPage.route}>About</a>
-      {' | '}
-      <a href={allBooksPage.route}>Books</a>
-      {' | '}
-      <a href={allMoviesPage.route}>Movies</a>
-      {' | '}
-      <a href={musicPage.route}>Music</a>
-      {' | '}
-      <a href={audioBiblePage.route}>Audio Bible</a>
-      {' | '}
-      <a href={devotionsPage.route}>Devotions</a>
-    </div>
-    <p class='sitewide-quicklinks'>
+    <p>
       <span>{new Date().getFullYear()} ImmaculataLibrary.com &copy; All Rights Reserved</span>
       {' | '}
       <a href="mailto:immaculatalibrary@gmail.com">Contact</a>
@@ -97,6 +85,21 @@ export const SiteCommon: JSX.Component<{
         </HeroImage>
         {children}
       </main>
+      <Container>
+        <div id='sitewide-quicklinks'>
+          <a href={aboutPage.route}>About</a>
+          {' | '}
+          <a href={allBooksPage.route}>Books</a>
+          {' | '}
+          <a href={allMoviesPage.route}>Movies</a>
+          {' | '}
+          <a href={musicPage.route}>Music</a>
+          {' | '}
+          <a href={audioBiblePage.route}>Audio Bible</a>
+          {' | '}
+          <a href={devotionsPage.route}>Devotions</a>
+        </div>
+      </Container>
       <QuickLinks />
       <SiteFooter input={attrs.input} />
     </body>
