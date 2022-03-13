@@ -1,14 +1,7 @@
-import { aboutPage } from "../routes/about/about";
 import { loginRoute, logoutRoute } from "../routes/admin/login";
-import { audioBiblePage } from "../routes/audiobible/audiobible";
-import { allBooksPage } from "../routes/books/all-books/all-books";
-import { devotionsPage } from "../routes/devotions/devotions";
 import { inlineFontCss } from "../routes/font/fonts";
 import { mainSiteHeaderImagePath } from "../routes/home/home";
-import { allMoviesPage } from "../routes/movies/all-movies/all-movies";
-import { musicPage } from "../routes/music/music";
 import { staticRouteFor } from "../util/static";
-import { Container } from "./container/container";
 import { DarkModeButton, darkModeScript } from "./dark-mode/button";
 import { HeroImage } from "./hero-image/hero-image";
 import { Meta } from "./meta/meta";
@@ -85,21 +78,6 @@ export const SiteCommon: JSX.Component<{
         </HeroImage>
         {children}
       </main>
-      <Container>
-        <div id='sitewide-quicklinks'>
-          <a href={aboutPage.route}>About</a>
-          {' | '}
-          <a href={allBooksPage.route}>Books</a>
-          {' | '}
-          <a href={allMoviesPage.route}>Movies</a>
-          {' | '}
-          <a href={musicPage.route}>Music</a>
-          {' | '}
-          <a href={audioBiblePage.route}>Audio Bible</a>
-          {' | '}
-          <a href={devotionsPage.route}>Devotions</a>
-        </div>
-      </Container>
       <QuickLinks />
       <SiteFooter input={attrs.input} />
     </body>
