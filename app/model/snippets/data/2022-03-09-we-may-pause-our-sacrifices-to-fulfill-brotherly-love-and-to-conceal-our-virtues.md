@@ -5,8 +5,8 @@ archiveSlug: the-spirit-of-st.-francis-de-sales
 archivePage: '211'
 bookSlug: the-spirit-of-st-francis-de-sales
 tags:
-  - penance
-  - morals
+  - Penance
+  - Morals
 ---
 
 > UPON FASTING. <sup>1</sup>

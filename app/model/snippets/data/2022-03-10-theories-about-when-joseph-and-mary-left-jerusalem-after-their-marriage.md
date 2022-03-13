@@ -5,8 +5,8 @@ archiveSlug: lifegloriesofstj00thomuoft
 archivePage: '152'
 bookSlug: the-life-and-glories-of-st-joseph
 tags:
-  - mary
-  - joseph
+  - The Blessed Virgin Mary
+  - St. Joseph
 ---
 
 > CHAPTER XXII.

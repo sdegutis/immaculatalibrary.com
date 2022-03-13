@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '56'
 bookSlug: the-sinners-guide
 tags:
-  - doctrine
+  - Doctrine of the Church
 ---
 
 > CHAPTER V.

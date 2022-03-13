@@ -5,7 +5,7 @@ archiveSlug: the-spirit-of-st.-francis-de-sales
 archivePage: '208'
 bookSlug: the-spirit-of-st-francis-de-sales
 tags:
-  - penance
+  - Penance
 ---
 
 > *UPON THE SAME SUBJECT.*

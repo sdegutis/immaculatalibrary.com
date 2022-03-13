@@ -5,10 +5,10 @@ archiveSlug: lifegloriesofstj00thomuoft
 archivePage: '148'
 bookSlug: the-life-and-glories-of-st-joseph
 tags:
-  - mary
-  - joseph
-  - marriage
-  - virginity
+  - The Blessed Virgin Mary
+  - St. Joseph
+  - Marriage
+  - Virginity
 ---
 
 > It may be further asked, if Jesus, who was essential purity, willed to be born of a virgin, why did He will that she should also be married?

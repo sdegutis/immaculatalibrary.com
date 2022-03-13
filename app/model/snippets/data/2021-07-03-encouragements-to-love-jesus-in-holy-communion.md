@@ -5,8 +5,8 @@ archiveSlug: BlessedSacramentBook
 archivePage: n639
 bookSlug: blessed-sacrament-book
 tags:
-  - exhortation
-  - holy-communion
+  - Exhortation
+  - Holy Communion
 ---
 
 > ***The Voice of Christ***

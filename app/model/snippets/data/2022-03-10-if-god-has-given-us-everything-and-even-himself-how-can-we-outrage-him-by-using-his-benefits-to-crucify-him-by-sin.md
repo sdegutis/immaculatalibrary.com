@@ -5,9 +5,9 @@ archiveSlug: sinnersguide00luis
 archivePage: '53'
 bookSlug: the-sinners-guide
 tags:
-  - passion
-  - exhortation
-  - morals
+  - Passion
+  - Exhortation
+  - Morals
 ---
 
 > If, therefore, the son of Jacob felt such gratitude for perishable benefits, what should be ours for the immortal blessings God has bestowed upon us? Joseph's master entrusted him with all his possessions. God has given us not only His possessions but Himself.

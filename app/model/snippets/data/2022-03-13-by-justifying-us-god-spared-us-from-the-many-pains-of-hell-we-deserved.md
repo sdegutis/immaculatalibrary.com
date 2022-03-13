@@ -5,9 +5,9 @@ archiveSlug: sinnersguide00luis
 archivePage: '58'
 bookSlug: the-sinners-guide
 tags:
-  - exhortation
-  - doctrine
-  - hell
+  - Exhortation
+  - Doctrine of the Church
+  - Hell
 ---
 
 > Another blessing flowing from justification is our deliverance from the eternal pains of hell.

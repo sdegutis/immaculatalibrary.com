@@ -5,7 +5,7 @@ archiveSlug: the-spirit-of-st.-francis-de-sales
 archivePage: '207'
 bookSlug: the-spirit-of-st-francis-de-sales
 tags:
-  - obedience
+  - Obedience
 ---
 
 > *UPON MORTIFICATION.*

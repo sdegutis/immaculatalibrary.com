@@ -5,9 +5,9 @@ archiveSlug: lifegloriesofstj00thomuoft
 archivePage: '147'
 bookSlug: the-life-and-glories-of-st-joseph
 tags:
-  - mary
-  - joseph
-  - marriage
+  - The Blessed Virgin Mary
+  - St. Joseph
+  - Marriage
 ---
 
 > But to return to the difficulty suggested respecting the vows.

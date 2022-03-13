@@ -5,9 +5,8 @@ archiveSlug: the-spirit-of-st.-francis-de-sales
 archivePage: '219'
 bookSlug: the-spirit-of-st-francis-de-sales
 tags:
-  - obedience
-  - correction
-  - humility
+  - Obedience
+  - Humility
 ---
 
 > MARKS OF PROGRESS IN PERFECTION.

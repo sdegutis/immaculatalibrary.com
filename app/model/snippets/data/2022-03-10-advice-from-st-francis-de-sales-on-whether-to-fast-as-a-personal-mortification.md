@@ -5,8 +5,8 @@ archiveSlug: the-spirit-of-st.-francis-de-sales
 archivePage: '213'
 bookSlug: the-spirit-of-st-francis-de-sales
 tags:
-  - penance
-  - morals
+  - Penance
+  - Morals
 ---
 
 > He asked me one day if it was easy for me to fast. I answered that it was perfectly easy, as it was a rare thing for me to sit down to table with any appetite. "Then," he rejoined, "do not fast at all." On my expressing great astonishment at these words, and venturing to remind our Blessed Father that it was a mortification, strongly recommended to us by God Himself.

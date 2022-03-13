@@ -5,8 +5,8 @@ archiveSlug: the-spirit-of-st.-francis-de-sales
 archivePage: '210'
 bookSlug: the-spirit-of-st-francis-de-sales
 tags:
-  - obedience
-  - penance
+  - Obedience
+  - Penance
 ---
 
 > With regard to the various kinds of mortification, that which is inward and hidden is far more excellent than that which is exterior, the former not being compatible, as is the latter, with hypocrisy, vanity, or indiscretion.

@@ -5,9 +5,9 @@ archiveSlug: the-spirit-of-st.-francis-de-sales
 archivePage: '221'
 bookSlug: the-spirit-of-st-francis-de-sales
 tags:
-  - spiritual-directors
-  - consecration
-  - doctrine
+  - Spiritual Directors
+  - Consecration
+  - Doctrine of the Church
 ---
 
 > UPON THE PERFECTION AIMED AT IN RELIGIOUS HOUSES.

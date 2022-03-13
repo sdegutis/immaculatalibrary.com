@@ -5,9 +5,9 @@ archiveSlug: lifegloriesofstj00thomuoft
 archivePage: '156'
 bookSlug: the-life-and-glories-of-st-joseph
 tags:
-  - mary
-  - joseph
-  - marriage
+  - The Blessed Virgin Mary
+  - St. Joseph
+  - Marriage
 ---
 
 > But first and foremost was her solicitude to minister assiduously to the wants and wishes of Joseph.

@@ -5,8 +5,8 @@ archiveSlug: sinnersguide00luis
 archivePage: '56'
 bookSlug: the-sinners-guide
 tags:
-  - exhortation
-  - doctrine
+  - Exhortation
+  - Doctrine of the Church
 ---
 
 > The first of these graces is our vocation.

@@ -5,13 +5,13 @@ archiveSlug: lifegloriesofstj00thomuoft
 archivePage: '153'
 bookSlug: the-life-and-glories-of-st-joseph
 tags:
-  - obedience
-  - mary
-  - joseph
-  - marriage
-  - morals
-  - consecration
-  - poverty
+  - Obedience
+  - The Blessed Virgin Mary
+  - St. Joseph
+  - Marriage
+  - Morals
+  - Consecration
+  - Poverty
 ---
 
 > Be this as it may, we have good reason to believe that the holy spouses never contemplated retaining the whole of the patrimony which Mary inherited from her parents, and which, moderate as it was, would probably have sufficed to raise them above the level of actual poverty. These two ardent lovers of virginity were also lovers of poverty, which they thus embraced by their voluntary act.
