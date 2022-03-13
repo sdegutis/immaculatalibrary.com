@@ -4,6 +4,8 @@ title: How Christ guides and inspires the Saints
 archiveSlug: livesofsaintsofe00butluoft
 archivePage: '177'
 bookSlug: the-lives-of-the-saints-of-egypt
+tags:
+  - Doctrine
 ---
 
 > If we look into the lives of all the saints, we shall find that it was by a spirit and gift of prayer that the Holy Ghost formed in their hearts the most perfect sentiments of all virtues.
