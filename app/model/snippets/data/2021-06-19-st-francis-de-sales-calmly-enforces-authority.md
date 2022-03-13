@@ -4,6 +4,10 @@ title: St. Francis de Sales calmly enforces authority
 archiveSlug: saintfrancis00galluoft
 archivePage: '258'
 bookSlug: the-life-of-st-francis-de-sales
+tags:
+  - Morals
+  - Authority
+  - Example
 ---
 
 > Francis and the Catholics were most anxious that the church of St. Hyppolitus, surrendered to them by the Duke, should be promptly restored, that he might officiate therein at the approaching Christmas festivals. He therefore hastened to deliver the Duke's letters to the governor of the province, and to the syndics of Thonon.
