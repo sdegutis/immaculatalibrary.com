@@ -4,6 +4,10 @@ title: Virtuous persons should have an outward bearing of gravity, humility, and
 archiveSlug: sinnersguide00luis
 archivePage: '395'
 bookSlug: the-sinners-guide
+tags:
+  - Morals
+  - Humility
+  - Modesty
 ---
 
 > Section II.
