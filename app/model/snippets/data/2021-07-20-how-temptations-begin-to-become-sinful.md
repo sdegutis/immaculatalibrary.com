@@ -4,6 +4,10 @@ title: How temptations begin to become sinful
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '230'
 bookSlug: introduction-to-the-devout-life
+tags:
+  - Morals
+  - Example
+  - Doctrine
 ---
 
 > *How temptation and delectation may become sinful.*

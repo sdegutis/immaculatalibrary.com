@@ -4,6 +4,11 @@ title: On having the Cross of Jesus in our hearts
 archiveSlug: the-spirit-of-st.-francis-de-sales
 archivePage: '186'
 bookSlug: the-spirit-of-st-francis-de-sales
+tags:
+  - Example
+  - Exhortation
+  - Passion
+  - Love
 ---
 
 > *A DIAMOND CROSS.*
