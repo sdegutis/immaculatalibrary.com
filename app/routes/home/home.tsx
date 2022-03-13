@@ -78,7 +78,7 @@ export const homePage: Routeable = {
 
                   <h3>Book Snippets by Tag</h3>
                   <p>{[...allTags.values()].map(tag => <>
-                    <a href={tag.view.route}>#{tag.name}</a> { }
+                    <a href={tag.view.route}>#{tag.slug}</a> { }
                   </>)}</p>
                 </div>
                 <div>
