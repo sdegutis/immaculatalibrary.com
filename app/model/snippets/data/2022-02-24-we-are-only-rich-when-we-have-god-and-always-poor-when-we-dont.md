@@ -4,6 +4,10 @@ title: We are only rich when we have God and always poor when we don't
 archiveSlug: sinnersguide00luis
 archivePage: '33'
 bookSlug: the-sinners-guide
+tags:
+  - Exhortation
+  - Morals
+  - Poverty
 ---
 
 > If, then, thou art blind, poor, and in need, why dost thou not seek the Father who created thee, the Artist who designed thee, that He may satisfy thy wants and supply all that is lacking to thy perfection? Penetrated with this truth, David cried out: "Thy hands have made me and formed me: give me understanding, and I will learn Thy commandments." [Px. cxviii. 73.]
