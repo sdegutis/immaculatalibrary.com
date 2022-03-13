@@ -16,7 +16,7 @@ export class ViewTagRoute implements Routeable {
   constructor(
     private tag: Tag,
   ) {
-    this.route = `/book-snippets/tag/${slugify(this.tag.name)}`;
+    this.route = `/book-snippets/tag/${slugify(this.tag.slug)}`;
     addRouteable(this);
   }
 

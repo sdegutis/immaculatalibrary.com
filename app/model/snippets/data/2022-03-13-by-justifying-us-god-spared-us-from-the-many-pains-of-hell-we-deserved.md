@@ -6,7 +6,7 @@ archivePage: '58'
 bookSlug: the-sinners-guide
 tags:
   - Exhortation
-  - Doctrine of the Church
+  - Doctrine
   - Hell
 ---
 

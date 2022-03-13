@@ -5,8 +5,8 @@ archiveSlug: lifegloriesofstj00thomuoft
 archivePage: '156'
 bookSlug: the-life-and-glories-of-st-joseph
 tags:
-  - The Blessed Virgin Mary
-  - St. Joseph
+  Mary
+  Joseph
   - Marriage
 ---
 

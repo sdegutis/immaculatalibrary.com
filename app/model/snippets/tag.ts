@@ -14,8 +14,10 @@ export class Tag {
   }
 
   view;
+  slug;
 
   constructor(public name: string) {
+    this.slug = this.name.replace(/ /g, '');
     this.view = new ViewTagRoute(this);
   }
 
