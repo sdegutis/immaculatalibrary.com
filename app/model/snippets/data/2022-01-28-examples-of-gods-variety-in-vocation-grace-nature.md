@@ -4,6 +4,9 @@ title: Examples of God's variety in vocation, grace, nature
 archiveSlug: sinnersguide00luis
 archivePage: '473'
 bookSlug: the-sinners-guide
+tags:
+  - Example
+  - Doctrine
 ---
 
 > This diversity is due partly to nature and partly to grace.
