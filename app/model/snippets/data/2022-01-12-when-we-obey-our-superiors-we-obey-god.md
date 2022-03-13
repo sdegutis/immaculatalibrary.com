@@ -8,6 +8,7 @@ tags:
   - Exhortation
   - Obedience
   - Doctrine
+  - Authority
 ---
 
 > *CHAPTER XLIII.*
