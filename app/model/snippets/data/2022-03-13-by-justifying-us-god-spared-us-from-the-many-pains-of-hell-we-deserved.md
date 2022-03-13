@@ -4,7 +4,10 @@ title: By justifying us, God spared us from the many pains of Hell we deserved
 archiveSlug: sinnersguide00luis
 archivePage: '58'
 bookSlug: the-sinners-guide
-tags: []
+tags:
+  - exhortation
+  - doctrine
+  - hell
 ---
 
 > Another blessing flowing from justification is our deliverance from the eternal pains of hell.
