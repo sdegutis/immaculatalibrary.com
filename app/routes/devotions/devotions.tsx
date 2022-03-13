@@ -23,7 +23,7 @@ export const devotionsPage: Routeable = {
         image={devotionsImageBig}
         input={input}
       >
-        <Container spaced split>
+        <Container spaced centered>
           <Content>
             <h1>{title}</h1>
             {htmlContent}

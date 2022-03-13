@@ -25,7 +25,7 @@ export const audioBiblePage: Routeable = {
         image={audioBibleImageBig}
         input={input}
       >
-        <Container spaced split>
+        <Container spaced centered>
           <Content>
             <h1>{title}</h1>
             {htmlContent}

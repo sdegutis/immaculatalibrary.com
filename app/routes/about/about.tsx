@@ -20,7 +20,7 @@ export const aboutPage: Routeable = {
         image={mainSiteHeaderImagePath}
         input={input}
       >
-        <Container spaced split>
+        <Container spaced centered>
           <Content>
             <h1>{title}</h1>
             {htmlContent}
