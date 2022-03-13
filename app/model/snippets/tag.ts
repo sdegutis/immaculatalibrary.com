@@ -1,4 +1,5 @@
 import { ViewTagRoute } from "../../routes/snippets/tag";
+import { sortBy } from "../../util/helpers";
 import { Snippet } from "./snippet";
 
 export const allTags = new Map<string, Tag>();
@@ -29,4 +30,8 @@ export class Tag {
     this.snippets.delete(snippet);
   }
 
+}
+
+export function sortedTags() {
+  return [...allTags.values()].sort(sortBy(tag => tag.name));
 }

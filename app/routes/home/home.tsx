@@ -6,7 +6,7 @@ import { renderElement } from "../../core/jsx";
 import { addRouteable, Routeable } from "../../core/router";
 import { allSnippets } from "../../model/models";
 import { Snippet } from "../../model/snippets/snippet";
-import { allTags } from "../../model/snippets/tag";
+import { sortedTags } from "../../model/snippets/tag";
 import { calculateReadingMins, formatDate, markdown, randomElement } from "../../util/helpers";
 import { staticRouteFor } from "../../util/static";
 import { LatestBookSnippets } from "../snippets/latest-list";
@@ -77,7 +77,7 @@ export const homePage: Routeable = {
                   <LatestBookSnippets />
 
                   <h3>Book Snippets by Tag</h3>
-                  <p>{[...allTags.values()].map(tag => <>
+                  <p>{sortedTags().map(tag => <>
                     <a href={tag.view.route}>#{tag.slug}</a> { }
                   </>)}</p>
                 </div>
