@@ -4,7 +4,11 @@ title: How Joseph and Mary honored, served and loved one another as the holiest 
 archiveSlug: lifegloriesofstj00thomuoft
 archivePage: '158'
 bookSlug: the-life-and-glories-of-st-joseph
-tags: []
+tags:
+  - Joseph
+  - Love
+  - Marriage
+  - Mary
 ---
 
 > Joseph knew, says the pious and learned Gerson, that he was the head of Mary, because the husband is the head of the wife. Nevertheless, his veneration for her was so profound that he considered himself unworthy to be her companion, or even to kiss the ground on which she had trod; and he was always on the watch, to render her some service, albeit unrequested, even as might some most devoted servant rather than spouse.
