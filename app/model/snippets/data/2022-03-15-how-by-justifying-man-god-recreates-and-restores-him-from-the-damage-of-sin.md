@@ -4,7 +4,10 @@ title: How by justifying man, God recreates and restores him from the damage of 
 archiveSlug: sinnersguide00luis
 archivePage: '59'
 bookSlug: the-sinners-guide
-tags: []
+tags:
+  - Doctrine
+  - Mercy
+  - Sin
 ---
 
 > Another benefit of justification, more spiritual and therefore less apparent, is the regeneration of the interior man deformed by sin. For sin deprives the soul not only of God but of all her supernatural power, of the graces and gifts of the Holy Ghost, in which her beauty and strength consist.
