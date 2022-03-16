@@ -4,7 +4,9 @@ title: By justifying a soul, God not only imparts immeasurable beauty, strength 
 archiveSlug: sinnersguide00luis
 archivePage: '61'
 bookSlug: the-sinners-guide
-tags: []
+tags:
+  - Doctrine
+  - Holy Spirit
 ---
 
 > This renewal of the inner man is so powerful, so true, that in baptism it is called regeneration, in penance resurrection; not only because it restores the soul from death of sin to the life of grace, but because it is an anticipation of the last glorious resurrection.
