@@ -4,7 +4,9 @@ title: St. Leonard of Port Maurice on the dignity of St. Joseph as the Spouse of
 archiveSlug: lifegloriesofstj00thomuoft
 archivePage: '159'
 bookSlug: the-life-and-glories-of-st-joseph
-tags: []
+tags:
+  - Joseph
+  - Mary
 ---
 
 > We cannot refrain from quoting here a passage from the writings of that great lover of Joseph, St. Leonard of Port Maurice.
