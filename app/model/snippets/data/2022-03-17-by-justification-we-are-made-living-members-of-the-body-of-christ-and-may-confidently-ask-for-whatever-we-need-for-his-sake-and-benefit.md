@@ -4,7 +4,10 @@ title: By justification, we are made living members of the Body of Christ, and m
 archiveSlug: sinnersguide00luis
 archivePage: '62'
 bookSlug: the-sinners-guide
-tags: []
+tags:
+  - Doctrine
+  - Exhortation
+  - Body of Christ
 ---
 
 > Still another more marvellous benefit of justification is that it transforms the soul into a living member of Christ.
