@@ -4,7 +4,12 @@ title: The unfathomable spiritual riches St. Joseph much have received as the pr
 archiveSlug: lifegloriesofstj00thomuoft
 archivePage: '160'
 bookSlug: the-life-and-glories-of-st-joseph
-tags: []
+tags:
+  - Joseph
+  - Love
+  - Marriage
+  - Mary
+  - Purity
 ---
 
 > O truly happy spouse! Adam rejoiced when he received from God Eve for a companion, but his joy was soon turned into sorrow, for Eve brought to him irreparable woe; while Joseph's joy in receiving Mary for his companion was constant and enduring, for Mary was to him the cause of endless felicity. Mary brought him everlasting riches as her dowry, so that he might truly say, "All good things came to me together with her, and innumerable riches through her hands". [Wisdom vii. 11.]
