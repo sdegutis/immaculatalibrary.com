@@ -4,7 +4,10 @@ title: The many blessings and consequences of Joseph being the most blessed spou
 archiveSlug: lifegloriesofstj00thomuoft
 archivePage: '161'
 bookSlug: the-life-and-glories-of-st-joseph
-tags: []
+tags:
+  - Joseph
+  - Love
+  - Mary
 ---
 
 > We should overload our pages were we to cite all that Saints and Doctors have said touching the holy conversation of Mary and Joseph. We must be content with giving an extract from that *Conference* of St. Francis de Sales to which frequent reference has been made. [*Entretien, xix.*] Speaking of the virginal nuptials of Joseph and Mary, he says:
