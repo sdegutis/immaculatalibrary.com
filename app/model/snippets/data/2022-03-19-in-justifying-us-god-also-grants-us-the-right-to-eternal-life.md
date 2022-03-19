@@ -4,7 +4,9 @@ title: In justifying us, God also grants us the right to eternal life
 archiveSlug: sinnersguide00luis
 archivePage: '63'
 bookSlug: the-sinners-guide
-tags: []
+tags:
+  - Doctrine
+  - Mercy
 ---
 
 > The final benefit of justification is the right which it gives to eternal life.
