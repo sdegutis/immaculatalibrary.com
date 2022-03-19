@@ -4,7 +4,12 @@ title: God rewarded the purity, humility, and virginity of Joseph and Mary by le
 archiveSlug: lifegloriesofstj00thomuoft
 archivePage: '164'
 bookSlug: the-life-and-glories-of-st-joseph
-tags: []
+tags:
+  - Humility
+  - Joseph
+  - Mary
+  - Purity
+  - Virginity
 ---
 
 > *CHAPTER XXIII. THE ANNUNCIATION.*
