@@ -80,6 +80,11 @@
   color: white;
   font-weight: bold;
   text-decoration: none;
+  transition: 75ms ease-in transform;
+}
+
+.quicklinks a.link:hover {
+  transform: scale(1.15);
 }
 
 .quicklinks a.link:hover {
