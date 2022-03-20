@@ -12,5 +12,12 @@ titleInput.addEventListener('input', (e) => {
 fixupButton.onclick = (e) => {
   e.preventDefault();
 
-
+  contentInput.value = (contentInput.value
+    .replace(/ {2,}/g, ' ')
+    .replace(/ ;/g, ';')
+    .replace(/- /g, '')
+    .replace(/ !/g, '!')
+    .replace(/ \?/g, '?')
+    .replace(/^/gm, '> ')
+  );
 };
