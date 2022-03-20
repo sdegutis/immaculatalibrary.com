@@ -1,8 +1,7 @@
-import script from './script.js';
 import { staticRouteFor } from "../../util/static";
+import script from './script.js';
 
 export const DarkModeButton: JSX.Component<{}> = (attrs, children) => <>
-  <a href="#" class="dark-mode-toggle" data-lightmode="Light mode" data-darkmode="Dark mode"></a>
+  <script src={staticRouteFor(script)} defer></script>
+  <a href="#" class="dark-mode-toggle">Dark mode</a>
 </>;
-
-export const darkModeScript = staticRouteFor(script);

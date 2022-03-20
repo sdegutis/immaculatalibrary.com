@@ -2,7 +2,7 @@ import { loginRoute, logoutRoute } from "../routes/admin/login";
 import { inlineFontCss } from "../routes/font/fonts";
 import { mainSiteHeaderImagePath } from "../routes/home/home";
 import { staticRouteFor } from "../util/static";
-import { DarkModeButton, darkModeScript } from "./dark-mode/button";
+import { DarkModeButton } from "./dark-mode/button";
 import { HeroImage } from "./hero-image/hero-image";
 import { Meta } from "./meta/meta";
 import { QuickLinks } from "./quicklinks";
@@ -26,7 +26,6 @@ export const Head: JSX.Component<{ imagePath?: string, title?: string, descripti
     <meta property="og:image" content={`https://www.immaculatalibrary.com${attrs.imagePath ?? mainSiteHeaderImagePath}`} />
     <meta name="description" content={attrs.description ?? "Free Digital Catholic Books"} />
 
-    <script src={darkModeScript}></script>
     <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['site.css']!)} />
 
     <style>{inlineFontCss}</style>
