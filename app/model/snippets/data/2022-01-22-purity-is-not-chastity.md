@@ -4,6 +4,11 @@ title: Purity is not Chastity
 archiveSlug: the-spirit-of-st.-francis-de-sales
 archivePage: '142'
 bookSlug: the-spirit-of-st-francis-de-sales
+tags:
+  - Doctrine
+  - Morals
+  - Purity
+  - Doctors of the Church
 ---
 
 > *UPON PURITY OF HEART.*
