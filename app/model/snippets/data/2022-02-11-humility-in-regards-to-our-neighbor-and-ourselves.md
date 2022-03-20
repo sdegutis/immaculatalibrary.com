@@ -4,6 +4,8 @@ title: Humility in regards to our neighbor and ourselves
 archiveSlug: the-spirit-of-st.-francis-de-sales
 archivePage: '166'
 bookSlug: the-spirit-of-st-francis-de-sales
+tags:
+  - Humility
 ---
 
 > *UPON SOME SPIRITUAL MAXIMS.*
