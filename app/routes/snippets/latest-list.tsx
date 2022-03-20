@@ -5,26 +5,24 @@ import { calculateReadingMins, groupByDate, markdown } from "../../util/helpers"
 import { allSnippetsPage } from "./all/snippets";
 import { randomSnippetPage } from "./random";
 
-const latestBookSnippetsStyle = `
-ul.snippets-latest {
-  padding-left: 0;
-}
-
-ul.snippets-latest > li {
-  list-style-type: none;
-}
-
-ul.snippets-latest > li ul {
-  padding-left: 20px;
-}
-
-ul.snippets-latest > li li {
-  list-style-type: disc;
-}
-`;
-
 export const SnippetsGroups: JSX.Component<{ groups: [string, Snippet[]][] }> = ({ groups }, children) => <>
-  <style>{latestBookSnippetsStyle}</style>
+  <style>{`
+    ul.snippets-latest {
+      padding-left: 0;
+    }
+
+    ul.snippets-latest > li {
+      list-style-type: none;
+    }
+
+    ul.snippets-latest > li ul {
+      padding-left: 20px;
+    }
+
+    ul.snippets-latest > li li {
+      list-style-type: disc;
+    }
+  `}</style>
   <ul class="snippets-latest">
     {groups.map(([date, group]) => <>
       <li>
