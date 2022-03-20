@@ -8,6 +8,7 @@ import { notAllowedResponse } from "../../../util/restricted/login";
 import { staticRouteFor } from "../../../util/static";
 import adminFormCss from './admin-form.css';
 import adminCssPage from './clone-style.css';
+import newBookSnippetMobileScript from './new-book-snippet-mobile.js';
 import newBookSnippetScript from './new-book-snippet.js';
 
 const MarkdownClientSide = () => <>
@@ -84,6 +85,59 @@ export class CloneSnippetPage implements Routeable {
             </main>
 
             <script src={staticRouteFor(newBookSnippetScript)} defer></script>
+
+          </body>
+        </Html>
+      </>)
+    };
+  }
+
+}
+
+export class CloneSnippetMobilePage implements Routeable {
+
+  update;
+  route;
+  constructor(private snippet: Snippet, id: string) {
+    this.route = `/clone-book-snippet-mobile/${id}`;
+    this.update = new CreateSnippetRoute(this.route);
+    addRouteable(this);
+  }
+
+  meta?: RouteMeta = { public: false };
+  method: RouteMethod = 'GET';
+
+  handle(input: RouteInput): RouteOutput {
+    if (!input.session?.isAdmin) return notAllowedResponse(input);
+
+    return {
+      body: renderElement(<>
+        <Html>
+          <Head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+          </Head>
+          <body>
+            <link rel='stylesheet' href={staticRouteFor(__dir.filesByName['clone-mobile-style.css']!)} />
+            <link rel='stylesheet' href={staticRouteFor(adminFormCss)} />
+
+            <main>
+              <form method='POST' action={this.update.route}>
+                <span>Page</span>    <input autocomplete='off' name='archivePage' value={this.snippet.archivePage} autofocus />
+                <span>Link</span>    <input autocomplete='off' name='archiveSlug' value={this.snippet.archiveSlug} />
+                <span>Book</span>    <input autocomplete='off' name='bookSlug' value={this.snippet.bookSlug} />
+                <span>Title</span>   <input autocomplete='off' name='title' />
+                <span>Slug</span>    <input autocomplete='off' name='slug' />
+                <span>Text</span>    <textarea name='markdownContent' />
+
+                <span id='readingmins'></span>
+                <div style='display: grid; grid-auto-flow: column; gap: 1em'>
+                  <button>Create</button>
+                  <button id='fixup'>Fixup</button>
+                </div>
+              </form>
+            </main>
+
+            <script src={staticRouteFor(newBookSnippetMobileScript)} defer></script>
 
           </body>
         </Html>

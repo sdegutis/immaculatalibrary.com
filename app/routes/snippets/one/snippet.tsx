@@ -83,6 +83,7 @@ export class SnippetRoute implements Routeable {
               <PrevNextLinks snippet={this.snippet} open />
               <div>
                 <AdminButton href={this.snippet.clone.route}>Make Next</AdminButton> { }
+                <AdminButton href={this.snippet.cloneMobile.route}>Make Next Mobile</AdminButton> { }
                 <AdminButton href='#' onclick='document.getElementById(`edit-snippet-form`).style.display=`grid`; return false;'>Edit</AdminButton>
                 <h3>Tags ({this.snippet.tags.size})</h3>
                 <form method='POST' action={this.snippet.createTag.route}>

@@ -1,6 +1,6 @@
 import Yaml from 'js-yaml';
 import * as luxon from 'luxon';
-import { CloneSnippetPage, EditSnippetRoute } from '../../routes/snippets/create/routes';
+import { CloneSnippetMobilePage, CloneSnippetPage, EditSnippetRoute } from '../../routes/snippets/create/routes';
 import { CreateTagRoute, SnippetRoute } from '../../routes/snippets/one/snippet';
 import { loadContentFile, saveContentFile } from '../../util/data-files';
 import { pushChanges } from '../../util/live-editing';
@@ -42,6 +42,7 @@ export class Snippet {
 
   view;
   clone;
+  cloneMobile;
   edit;
 
   tags;
@@ -63,6 +64,7 @@ export class Snippet {
 
     this.view = new SnippetRoute(this);
     this.clone = new CloneSnippetPage(this, `${this.date}-${this.slug}`);
+    this.cloneMobile = new CloneSnippetMobilePage(this, `${this.date}-${this.slug}`);
     this.edit = new EditSnippetRoute(this);
 
     this.book = allBooks.find(book => book.slug.includes(this.bookSlug))!;
