@@ -4,7 +4,10 @@ title: All God's angels descended from Heaven to witness the Annunciation, Fiat,
 archiveSlug: lifegloriesofstj00thomuoft
 archivePage: '165'
 bookSlug: the-life-and-glories-of-st-joseph
-tags: []
+tags:
+  - Love
+  - Mary
+  - Angels
 ---
 
 > To the great archangel, then, the Most High made known the embassage with which he was charged, and the words which he was to address to the Virgin of Nazareth.
