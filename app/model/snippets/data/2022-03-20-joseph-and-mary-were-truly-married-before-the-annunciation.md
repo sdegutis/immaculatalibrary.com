@@ -4,7 +4,10 @@ title: Joseph and Mary were truly married before the Annunciation
 archiveSlug: lifegloriesofstj00thomuoft
 archivePage: '164'
 bookSlug: the-life-and-glories-of-st-joseph
-tags: []
+tags:
+  - Doctrine
+  - Joseph
+  - Mary
 ---
 
 > The winter was now past, and spring was returning to gladden the earth. According to many Doctors of the Church, it was the year 4,000 of the creation of the world and the same season of the year in which God completed that work of His hands.
