@@ -4,7 +4,9 @@ title: On the Archangel Gabriel entering Mary's room to greet her
 archiveSlug: lifegloriesofstj00thomuoft
 archivePage: '168'
 bookSlug: the-life-and-glories-of-st-joseph
-tags: []
+tags:
+  - Angels
+  - Mary
 ---
 
 > The angel was to present himself in a visible human form, because, as St. Thomas says, he came to announce the advent of that God who, in Himself invisible, was about to become visible in human flesh; and he was also to assume a specially beautiful and majestic appearance, as befitted such a messenger and such a message. The Angel Gabriel came, says St. Augustine, all radiant in his countenance, glorious in his apparel, admirable in his bearing.
