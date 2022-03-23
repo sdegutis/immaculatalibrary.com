@@ -4,7 +4,10 @@ title: Mary is full of grace and blessed among all women
 archiveSlug: lifegloriesofstj00thomuoft
 archivePage: '170'
 bookSlug: the-life-and-glories-of-st-joseph
-tags: []
+tags:
+  - Doctors of the Church
+  - Doctrine
+  - Mary
 ---
 
 > So Gabriel bowed low before the Virgin of Nazareth, and said, "Hail, full of grace, the Lord is with thee. Blessed art thou among women." Sublime salutation, with which, as St. Ambrose says, the Virgin alone could be saluted, for she alone obtained that grace which no other ever merited; that is, to be full of Him who is the author of grace.
