@@ -4,7 +4,12 @@ title: Mary by faith remained a Virgin yet became Mother of God
 archiveSlug: lifegloriesofstj00thomuoft
 archivePage: '171'
 bookSlug: the-life-and-glories-of-st-joseph
-tags: []
+tags:
+  - Angels
+  - BibleCommentary
+  - Doctrine
+  - Mary
+  - Virginity
 ---
 
 > At these words of praise the most humble virgin was "troubled" and, casting her eyes on the ground, reflected within herself what could be the import of the salutation. This was the cause of her perturbation, and not, as some have imagined, the appearance of an angel in human form. What need to seek further when the Evangelist speaks so plainly?
