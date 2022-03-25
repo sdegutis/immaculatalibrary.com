@@ -4,7 +4,10 @@ title: The world is saved by Mary’s fiat
 archiveSlug: lifegloriesofstj00thomuoft
 archivePage: '173'
 bookSlug: the-life-and-glories-of-st-joseph
-tags: []
+tags:
+  - Doctrine
+  - Mary
+  - Incarnation
 ---
 
 > A great wonder it is, no doubt, and worthy of our highest admiration, that the accomplishment of all these mysteries and of everything involved in them should be left by the Most High in the hands of a humble maiden, and that all should depend on her fiat; but securely was it left to the wisdom and fortitude of this "valiant woman," who did not betray the confidence reposed in her.
