@@ -4,7 +4,9 @@ title: Some effects of the Holy Spirit in a just soul
 archiveSlug: sinnersguide00luis
 archivePage: '65'
 bookSlug: the-sinners-guide
-tags: []
+tags:
+  - Doctrine
+  - Holy Spirit
 ---
 
 > The effects produced in the soul by the Holy Ghost do not end here. This Divine Spirit, not content with causing us to enter the path of justice, maintains us therein, strengthening us against all obstacles until we arrive at the haven of salvation. His love will not permit Him to remain idle in a soul which He honors by His presence.
