@@ -4,7 +4,9 @@ title: The benefit of being chosen by God should motivate us to gratitude and to
 archiveSlug: sinnersguide00luis
 archivePage: '70'
 bookSlug: the-sinners-guide
-tags: []
+tags:
+  - Doctrine
+  - Exhortation
 ---
 
 > CHAPTER VI.
