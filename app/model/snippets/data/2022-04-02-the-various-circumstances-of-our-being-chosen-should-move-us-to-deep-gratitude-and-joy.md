@@ -4,7 +4,9 @@ title: The various circumstances of our being Chosen should move us to deep grat
 archiveSlug: sinnersguide00luis
 archivePage: '73'
 bookSlug: the-sinners-guide
-tags: []
+tags:
+  - Doctrine
+  - Exhortation
 ---
 
 > Weigh all the circumstances of this election, and you will find that each of them is an extraordinary favor, a new motive to love and serve God.
