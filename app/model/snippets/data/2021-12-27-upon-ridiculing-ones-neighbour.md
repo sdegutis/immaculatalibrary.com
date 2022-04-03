@@ -4,6 +4,12 @@ title: Upon ridiculing one’s neighbour
 archiveSlug: the-spirit-of-st.-francis-de-sales
 archivePage: '95'
 bookSlug: the-spirit-of-st-francis-de-sales
+tags:
+  - Doctors of the Church
+  - Doctrine
+  - Justice
+  - Mercy
+  - Morals
 ---
 
 > *Upon ridiculing one's neighbour.*
