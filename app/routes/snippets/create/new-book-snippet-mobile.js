@@ -15,6 +15,7 @@ fixupButton.onclick = (e) => {
   contentInput.value = (contentInput.value
     .replace(/ {2,}/g, ' ')
     .replace(/ ;/g, ';')
+    .replace(/ :/g, ';')
     .replace(/- /g, '')
     .replace(/ !/g, '!')
     .replace(/ \?/g, '?')
