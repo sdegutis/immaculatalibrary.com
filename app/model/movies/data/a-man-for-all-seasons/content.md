@@ -20,6 +20,7 @@ Amazing movie that does justice to St. Thomas More's life, principles, integrity
 
 ### Caveats
 
+* King Henry yells a lot and can be scary or confusing for kids.
 * The jail scene is too emotional for young kids.
 * The execution would traumatize young kids.
 

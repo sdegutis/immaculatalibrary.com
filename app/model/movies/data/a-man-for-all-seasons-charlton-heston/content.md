@@ -20,6 +20,7 @@ Great movie, very witty, entertaining, and philosophical. This and the 1966 vers
 
 ### Caveats
 
+* King Henry yells a lot and can be scary or confusing for kids.
 * There is a depraved torture scene with Cromwell, Rich and a candle in the pub.
 * The jail scene is too emotional for young kids.
 * His breakdown in jail is out of character.
