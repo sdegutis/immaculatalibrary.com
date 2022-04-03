@@ -5,8 +5,9 @@ archiveSlug: the-spirit-of-st.-francis-de-sales
 archivePage: '219'
 bookSlug: the-spirit-of-st-francis-de-sales
 tags:
-  - Obedience
   - Consecration
+  - Doctrine
+  - Obedience
 ---
 
 > UPON THE STATE OF PERFECTION.
