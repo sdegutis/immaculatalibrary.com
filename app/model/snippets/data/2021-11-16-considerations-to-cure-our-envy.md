@@ -4,6 +4,11 @@ title: Considerations to cure our Envy
 archiveSlug: sinnersguide00luis
 archivePage: '356'
 bookSlug: the-sinners-guide
+tags:
+  - Doctrine
+  - Exhortation
+  - Morals
+  - Envy
 ---
 
 > Consider, moreover, how envy corrodes the heart, weakens the understanding, destroys all peace of soul, and condemns us to a melancholy and intolerable existence.
