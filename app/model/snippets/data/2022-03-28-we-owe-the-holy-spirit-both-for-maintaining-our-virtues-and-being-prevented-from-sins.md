@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '66'
 bookSlug: the-sinners-guide
 tags:
-  - BibleCommentary
+  - Bible Commentary
   - Doctors of the Church
   - Doctrine
   - Holy Spirit

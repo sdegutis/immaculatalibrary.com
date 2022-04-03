@@ -6,7 +6,7 @@ archivePage: '171'
 bookSlug: the-life-and-glories-of-st-joseph
 tags:
   - Angels
-  - BibleCommentary
+  - Bible Commentary
   - Doctrine
   - Mary
   - Virginity
