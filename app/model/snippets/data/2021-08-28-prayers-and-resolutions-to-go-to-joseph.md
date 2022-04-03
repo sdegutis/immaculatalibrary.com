@@ -4,6 +4,10 @@ title: Prayers and Resolutions to "Go to Joseph"
 archiveSlug: st.-josephs-life-virtues-privileges-power
 archivePage: '352'
 bookSlug: st-joseph-life-his-virtues-his-privileges-his-power
+tags:
+  - Exhortation
+  - Joseph
+  - Prayer
 ---
 
 > *Practical Resolution.*
