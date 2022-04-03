@@ -4,6 +4,10 @@ title: Heavenly consolations sometimes draw us to God
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '247'
 bookSlug: introduction-to-the-devout-life
+tags:
+  - Doctors of the Church
+  - Doctrine
+  - Heaven
 ---
 
 > Yet these tender and delightful affections are sometimes good and profitable; for they excite the appetite for piety in the soul, strengthen the spirit, and add to the promptitude of devotion a holy gaiety and cheerfulness, which makes our actions more beautiful and agreeable, even on the exterior.
