@@ -4,6 +4,11 @@ title: The gratifications of this life can never satisfy our hearts, but only in
 archiveSlug: sinnersguide00luis
 archivePage: '198'
 bookSlug: the-sinners-guide
+tags:
+  - Bible Commentary
+  - Doctrine
+  - Example
+  - Exhortation
 ---
 
 > This is the miserable condition which David described when he said: "They wandered in a wilderness, in a place without water. They were hungry and thirsty; their soul fainted in them." [Ps. cvi. 4, 5.]
