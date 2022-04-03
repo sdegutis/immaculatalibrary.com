@@ -4,6 +4,11 @@ title: Other counsels touching Discourse
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '188'
 bookSlug: introduction-to-the-devout-life
+tags:
+  - Doctors of the Church
+  - Example
+  - Modesty
+  - Morals
 ---
 
 > Chapter XXX.
