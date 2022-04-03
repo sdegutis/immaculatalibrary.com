@@ -4,7 +4,9 @@ title: The Four Last Things are extremely powerful incentives to practice virtue
 archiveSlug: sinnersguide00luis
 archivePage: '76'
 bookSlug: the-sinners-guide
-tags: []
+tags:
+  - Doctrine
+  - Four Last Things
 ---
 
 > CHAPTER VII.
