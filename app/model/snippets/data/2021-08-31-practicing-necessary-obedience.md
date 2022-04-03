@@ -4,6 +4,11 @@ title: Practicing Necessary Obedience
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '129'
 bookSlug: introduction-to-the-devout-life
+tags:
+  - Authority
+  - Doctors of the Church
+  - Doctrine
+  - Obedience
 ---
 
 > There are two sorts of obedience, the one necessary, the other voluntary.
