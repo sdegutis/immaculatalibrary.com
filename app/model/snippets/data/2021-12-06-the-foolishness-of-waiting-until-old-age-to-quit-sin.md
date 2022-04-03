@@ -4,6 +4,12 @@ title: The foolishness of waiting until old age to quit sin
 archiveSlug: sinnersguide00luis
 archivePage: '245'
 bookSlug: the-sinners-guide
+tags:
+  - Doctors of the Church
+  - Doctrine
+  - Exhortation
+  - Morals
+  - Justice
 ---
 
 > Let me call your attention to the foolish choice you make in selecting old age as a time for repentance, and permitting your youth to go fruitlessly by.
