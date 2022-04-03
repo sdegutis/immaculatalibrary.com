@@ -18,7 +18,7 @@ export class Tag {
   slug;
 
   constructor(public name: string) {
-    this.slug = this.name.replace(/ /g, '');
+    this.slug = this.name.split(' ').map(capitalize).join('');
     this.view = new ViewTagRoute(this);
   }
 
@@ -34,4 +34,8 @@ export class Tag {
 
 export function sortedTags() {
   return [...allTags.values()].sort(sortBy(tag => tag.name));
+}
+
+function capitalize(str: string) {
+  return str[0]?.toUpperCase() + str.slice(1);
 }
