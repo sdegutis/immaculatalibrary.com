@@ -4,6 +4,9 @@ title: The error of thinking we are saintly, and how to avoid it
 archiveSlug: the-spiritual-combat-dornin-edition
 archivePage: '113'
 bookSlug: the-spiritual-combat
+tags:
+  - Doctrine
+  - Humility
 ---
 
 > CHAPTER XXX.
