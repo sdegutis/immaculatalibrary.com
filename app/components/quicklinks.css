@@ -93,10 +93,13 @@
 
 .quicklinks a.link:hover>span {
   background: #0007;
+  opacity: 1;
 }
 
 .quicklinks a.link>span {
   background: #0003;
   padding: 7px;
+  transition: 75ms ease-in opacity;
+  opacity: 0;
   text-shadow: 0px 1px 3px #000;
 }
