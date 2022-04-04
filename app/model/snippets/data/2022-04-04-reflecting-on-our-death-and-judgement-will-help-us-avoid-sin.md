@@ -4,7 +4,10 @@ title: Reflecting on our death and judgement will help us avoid sin
 archiveSlug: sinnersguide00luis
 archivePage: '77'
 bookSlug: the-sinners-guide
-tags: []
+tags:
+  - Doctrine
+  - Four Last Things
+  - Death
 ---
 
 > The first of these is death. Let us, then, consider it, for it is a truth which of all others makes most impression upon us, from the fact that it is so undisputed and so frequently brought before our minds.
