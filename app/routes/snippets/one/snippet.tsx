@@ -85,24 +85,28 @@ export class SnippetRoute implements Routeable {
                 <AdminButton href={this.snippet.clone.route}>Make Next</AdminButton> { }
                 <AdminButton href={this.snippet.cloneMobile.route}>Make Next Mobile</AdminButton> { }
                 <AdminButton href='#' onclick='document.getElementById(`edit-snippet-form`).style.display=`grid`; return false;'>Edit</AdminButton>
-                <h3>Tags ({this.snippet.tags.size})</h3>
-                <form method='POST' action={this.snippet.createTag.route}>
-                  <ul>
-                    {sortedTags().map(tag => <>
+
+                <details>
+                  <summary>Tags ({this.snippet.tags.size})</summary>
+                  <form method='POST' action={this.snippet.createTag.route}>
+                    <ul>
+                      {sortedTags().map(tag => <>
+                        <li>
+                          <label>
+                            <input type='checkbox' checked={this.snippet.tags.has(tag)} name={tag.name} /> { }
+                            {tag.name}
+                          </label>
+                        </li>
+                      </>)}
                       <li>
-                        <label>
-                          <input type='checkbox' checked={this.snippet.tags.has(tag)} name={tag.name} /> { }
-                          {tag.name}
-                        </label>
+                        <script>{addCheckbox.toString()}</script>
+                        <button onclick={`${addCheckbox.name}(this, event)`}>Add</button>
+                        <button>Save</button>
                       </li>
-                    </>)}
-                    <li>
-                      <script>{addCheckbox.toString()}</script>
-                      <button onclick={`${addCheckbox.name}(this, event)`}>Add</button>
-                      <button>Save</button>
-                    </li>
-                  </ul>
-                </form>
+                    </ul>
+                  </form>
+                </details>
+
               </div>
             </>}
 
