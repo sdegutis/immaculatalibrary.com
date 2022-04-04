@@ -19,7 +19,7 @@ fixupButton.onclick = (e) => {
     .replace(/- /g, '')
     .replace(/ !/g, '!')
     .replace(/ \?/g, '?')
-    .replace(/^/gm, '> ')
     .replace(/\n+/gm, '\n\n')
+    .replace(/^/gm, '> ')
   );
 };
