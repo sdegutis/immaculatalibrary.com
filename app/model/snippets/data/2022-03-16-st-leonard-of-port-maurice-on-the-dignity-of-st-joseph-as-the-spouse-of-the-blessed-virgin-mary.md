@@ -7,6 +7,7 @@ bookSlug: the-life-and-glories-of-st-joseph
 tags:
   - Joseph
   - Mary
+  - What the Saints Say
 ---
 
 > We cannot refrain from quoting here a passage from the writings of that great lover of Joseph, St. Leonard of Port Maurice.
