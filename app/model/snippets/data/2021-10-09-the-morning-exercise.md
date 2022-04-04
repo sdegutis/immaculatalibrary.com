@@ -4,6 +4,10 @@ title: The Morning Exercise
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '60'
 bookSlug: introduction-to-the-devout-life
+tags:
+  - Doctors of the Church
+  - Doctrine
+  - Prayer
 ---
 
 > OHAPTER X.
