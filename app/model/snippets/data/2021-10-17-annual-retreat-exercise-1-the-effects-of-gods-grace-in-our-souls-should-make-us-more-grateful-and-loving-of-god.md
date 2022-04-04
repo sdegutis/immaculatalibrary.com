@@ -4,6 +4,11 @@ title: 'Annual Retreat Exercise #1: The effects of God’s grace in our souls sh
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '265'
 bookSlug: introduction-to-the-devout-life
+tags:
+  - Bible Commentary
+  - Doctors of the Church
+  - Exhortation
+  - Meditations
 ---
 
 > Consider the effects of this vocation, and comparing what you now are with what you have been, you will doubtless find in yourself a great change for the better.
