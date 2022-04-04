@@ -4,6 +4,12 @@ title: The calm we should have during tribulation
 archiveSlug: the-spirit-of-st.-francis-de-sales
 archivePage: '179'
 bookSlug: the-spirit-of-st-francis-de-sales
+tags:
+  - Doctors of the Church
+  - Doctrine
+  - Example
+  - Exhortation
+  - Patience
 ---
 
 > BLESSED FRANCIS' CALMNESS IN TRIBULATION.
