@@ -64,11 +64,10 @@ export const LatestBookSnippets: JSX.Component<{}> = (attrs, children) => {
   return <>
 
     <h3>Latest book snippets</h3>
-    <p>(Total book snippets reading time: {totalReadingTime})</p>
     <p>
-      <a href={allSnippetsPage.route}>See all {allSnippets.length}</a>
+      <a href={allSnippetsPage.route} title={`${allSnippets.length} total, ${totalReadingTime} reading time`}>Search</a>
       {' | '}
-      <a href={randomSnippetPage.route}>Random Book Snippet</a>
+      <a href={randomSnippetPage.route}>Random</a>
     </p>
 
     <SnippetsGroups groups={groups} />
