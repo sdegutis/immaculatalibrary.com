@@ -4,7 +4,9 @@ title: Meditations on Death and its terrible circumstances
 archiveSlug: sinnersguide00luis
 archivePage: '78'
 bookSlug: the-sinners-guide
-tags: []
+tags:
+  - Bible Commentary
+  - Death
 ---
 
 > Consider, also, how uncertain is the hour of death. It generally comes when man is most forgetful of eternal things, overturning his plans for an earthly future, and opening before him the appalling vision of eternity. Therefore, the Holy Scriptures tell us that it comes as a thief in the night; that is, when men are plunged in sleep and least apprehensive of danger.
