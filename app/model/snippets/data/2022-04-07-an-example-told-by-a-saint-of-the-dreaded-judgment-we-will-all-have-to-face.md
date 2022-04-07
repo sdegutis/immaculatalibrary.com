@@ -12,7 +12,7 @@ tags:
   - What the Saints Say
 ---
 
-> St. John Climaehus gives a no less striking example of a holy monk, which is so remarkable that I shall give it as nearly as possible in the Saint’s own words:
+> St. John Climachus gives a no less striking example of a holy monk, which is so remarkable that I shall give it as nearly as possible in the Saint’s own words:
 > 
 > > A religious named Stephen, who lived in the same desert with us, had a great desire to embrace a more solitary life. He had already acquired a reputation for sanctity, having been favored with the gift of tears and fasting and other privileges attached to the most eminent virtues.
 > >
