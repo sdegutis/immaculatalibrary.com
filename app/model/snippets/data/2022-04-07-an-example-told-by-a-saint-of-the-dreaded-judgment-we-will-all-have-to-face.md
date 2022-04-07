@@ -4,7 +4,12 @@ title: An example told by a Saint of the dreaded Judgment we will all have to fa
 archiveSlug: sinnersguide00luis
 archivePage: '82'
 bookSlug: the-sinners-guide
-tags: []
+tags:
+  - Death
+  - Example
+  - Four Last Things
+  - Justice
+  - What the Saints Say
 ---
 
 > St. John Climaehus gives a no less striking example of a holy monk, which is so remarkable that I shall give it as nearly as possible in the Saint’s own words:
