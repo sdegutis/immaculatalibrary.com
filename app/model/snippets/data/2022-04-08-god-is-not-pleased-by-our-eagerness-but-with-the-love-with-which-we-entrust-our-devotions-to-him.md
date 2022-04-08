@@ -4,7 +4,12 @@ title: God is not pleased by our eagerness but with the love with which we entru
 archiveSlug: the-spiritual-conferences-of-st-francis-de-sales
 archivePage: '112'
 bookSlug: the-spiritual-conferences-of-st-francis-de-sales
-tags: []
+tags:
+  - Doctors of the Church
+  - Exhortation
+  - Love
+  - Morals
+  - What the Saints Say
 ---
 
 > Let us not be at all eager in our work, for, in order to do it well, we must apply ourselves to it carefully indeed, but calmly and peacefully, without trusting in our labour, but in God and His grace.
