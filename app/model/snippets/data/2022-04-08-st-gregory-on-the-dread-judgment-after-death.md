@@ -2,7 +2,7 @@
 published: true
 title: St. Gregory on the dread Judgment after death
 archiveSlug: sinnersguide00luis
-archivePage: '82'
+archivePage: '84'
 bookSlug: the-sinners-guide
 tags: []
 ---
