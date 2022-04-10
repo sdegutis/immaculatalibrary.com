@@ -4,7 +4,12 @@ title: The faithfulness and love with which we do our devotions is what brings u
 archiveSlug: the-spiritual-conferences-of-st-francis-de-sales
 archivePage: '113'
 bookSlug: the-spiritual-conferences-of-st-francis-de-sales
-tags: []
+tags:
+  - Doctors of the Church
+  - Doctrine
+  - Example
+  - What the Saints Say
+  - Devotion
 ---
 
 > How foolish are those who waste time and thought in desiring to be martyred in the Indies, but do not apply themselves to the duties of their state of life! And how mistaken are those who wish to eat more than they can digest! We have not sufficient spiritual warmth to be able to digest thoroughly all that we take in for our perfection, and yet we will not cut off our fretting desires to be always doing more and more.
