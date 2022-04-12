@@ -4,7 +4,16 @@ title: Our submission to God’s will during afflictions is far more pleasing to
 archiveSlug: the-spiritual-conferences-of-st-francis-de-sales
 archivePage: '117'
 bookSlug: the-spiritual-conferences-of-st-francis-de-sales
-tags: []
+tags:
+  - Bible Commentary
+  - Devotion
+  - Doctors of the Church
+  - Example
+  - Humility
+  - Obedience
+  - Patience
+  - Spiritual Directors
+  - What the Saints Say
 ---
 
 > I wish to give you for your second law these words, expressed by the doves in their own language: The more they take away from me, the more I produce.
