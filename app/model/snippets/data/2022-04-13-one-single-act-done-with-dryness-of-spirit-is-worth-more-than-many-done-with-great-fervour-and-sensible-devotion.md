@@ -4,7 +4,15 @@ title: One single act done with dryness of spirit is worth more than many done w
 archiveSlug: the-spiritual-conferences-of-st-francis-de-sales
 archivePage: '118'
 bookSlug: the-spiritual-conferences-of-st-francis-de-sales
-tags: []
+tags:
+  - Devotion
+  - Doctors of the Church
+  - Doctrine
+  - Love
+  - Morals
+  - Patience
+  - Spiritual Directors
+  - What the Saints Say
 ---
 
 > In order, then, to obey this sweet law of the doves, we must, like them, allow ourselves to be deprived by our Sovereign Master of our little doves—that is to say, of the means of fulfilling our desires—whenever it pleases Him to take them away, however good they may be, without lamenting or ever complaining of Him as if He were doing us a wrong.
