@@ -42,14 +42,12 @@ export const SnippetsGroups: JSX.Component<{ groups: [string, Snippet[]][] }> = 
   </ul>
 </>;
 
-let totalReadingTime = <></>;
+let totalReadingTime = '';
 function updateTotalReadingTime() {
   const totalReadingMins = calculateReadingMins(allSnippets.map(s => s.markdownContent).join('\n\n'));
   const mins = Math.round(totalReadingMins % 60);
   const hours = Math.floor(totalReadingMins / 60);
-  totalReadingTime = <>
-    <b>{hours}</b>h <b>{mins}</b>m
-  </>;
+  totalReadingTime = `${hours}h ${mins}m`;
 }
 
 snippetEvents.on('created', updateTotalReadingTime);
