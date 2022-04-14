@@ -4,7 +4,12 @@ title: We should have the same song of praise for God whether we receive good or
 archiveSlug: the-spiritual-conferences-of-st-francis-de-sales
 archivePage: '120'
 bookSlug: the-spiritual-conferences-of-st-francis-de-sales
-tags: []
+tags:
+  - Bible Commentary
+  - Doctors of the Church
+  - Doctrine
+  - Love
+  - What the Saints Say
 ---
 
 > The third law of the doves to which I would call your attention is, that they lament in the same way that they rejoice; they only sing one air, which is the same for their most joyous songs as for those in which they bewail themselves and express their sadness.
