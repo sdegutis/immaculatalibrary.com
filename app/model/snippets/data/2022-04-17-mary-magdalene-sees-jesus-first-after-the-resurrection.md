@@ -4,7 +4,12 @@ title: Mary Magdalene sees Jesus first after the Resurrection
 archiveSlug: catenaaureacomme04thom
 archivePage: '598'
 bookSlug: catena-aurea
-tags: []
+tags:
+  - Bible Commentary
+  - Doctors of the Church
+  - Love
+  - What the Saints Say
+  - Resurrection
 ---
 
 >> 10. Then the disciples went away again unto their own home.
