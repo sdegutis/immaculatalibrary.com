@@ -1,4 +1,5 @@
 import { Content } from "../../../components/content/content";
+import { DarkModeScript } from "../../../components/dark-mode/button";
 import { Head, Html } from "../../../components/site";
 import { renderElement } from "../../../core/jsx";
 import { addRouteable, Routeable, RouteMeta, RouteMethod } from "../../../core/router";
@@ -55,6 +56,7 @@ export class CloneSnippetPage implements Routeable {
             <link rel='stylesheet' href={staticRouteFor(adminFormCss)} />
             <MarkdownClientSide />
             <MonacoClientSide />
+            <DarkModeScript />
             <script>{calculateReadingMins.toString()}</script>
 
             <main>
@@ -115,6 +117,7 @@ export class CloneSnippetMobilePage implements Routeable {
         <Html>
           <Head>
             <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+            <DarkModeScript />
           </Head>
           <body>
             <link rel='stylesheet' href={staticRouteFor(__dir.filesByName['clone-mobile-style.css']!)} />
@@ -175,6 +178,7 @@ export class NewSnippetPage implements Routeable {
             <link rel='stylesheet' href={staticRouteFor(adminFormCss)} />
             <MarkdownClientSide />
             <MonacoClientSide />
+            <DarkModeScript />
             <script>{calculateReadingMins.toString()}</script>
             <main>
               <div id='left-panel'>
