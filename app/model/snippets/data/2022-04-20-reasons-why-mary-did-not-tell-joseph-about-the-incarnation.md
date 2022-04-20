@@ -4,7 +4,12 @@ title: Reasons why Mary did not tell Joseph about the Incarnation
 archiveSlug: lifegloriesofstj00thomuoft
 archivePage: '178'
 bookSlug: the-life-and-glories-of-st-joseph
-tags: []
+tags:
+  - Bible Commentary
+  - Humility
+  - Incarnation
+  - Joseph
+  - Mary
 ---
 
 > But why did not Mary confide in Joseph, for hitherto he had been the depositary of all her thoughts?
