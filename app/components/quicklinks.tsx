@@ -1,36 +1,11 @@
 import { allCategories, allMovies } from "../model/models";
-import { aboutPage } from "../routes/about/about";
 import { audioBibleImageSmall, audioBiblePage } from "../routes/audiobible/audiobible";
-import { allBooksPage } from "../routes/books/all-books/all-books";
-import { devotionsPage } from "../routes/devotions/devotions";
-import { allMoviesPage } from "../routes/movies/all-movies/all-movies";
-import { musicPage } from "../routes/music/music";
-import { allSnippetsPage } from "../routes/snippets/all/snippets";
 import { staticRouteFor } from "../util/static";
-import { Container } from "./container/container";
 
 export const QuickLinks: JSX.Component<{}> = (attrs, children) => {
   // const recentPosts = allPosts.slice(0, 6);
 
   return <>
-    <Container>
-      <div id='sitewide-quicklinks'>
-        <a href={aboutPage.route}>About</a>
-        {' | '}
-        <a href={allBooksPage.route}>Books</a>
-        {' | '}
-        <a href={allSnippetsPage.route}>Snippets</a>
-        {' | '}
-        <a href={allMoviesPage.route}>Movies</a>
-        {' | '}
-        <a href={musicPage.route}>Music</a>
-        {' | '}
-        <a href={audioBiblePage.route}>Audio Bible</a>
-        {' | '}
-        <a href={devotionsPage.route}>Devotions</a>
-      </div>
-    </Container>
-
     <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['quicklinks.css']!)} />
 
     <div id="recents">

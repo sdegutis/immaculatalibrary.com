@@ -5,6 +5,7 @@ import { staticRouteFor } from "../util/static";
 import { DarkModeButton } from "./dark-mode/button";
 import { HeroImage } from "./hero-image/hero-image";
 import { Meta } from "./meta/meta";
+import { Navlinks } from "./navlinks";
 import { QuickLinks } from "./quicklinks";
 import { SiteHeader } from "./site-header/site-header";
 
@@ -75,6 +76,7 @@ export const SiteCommon: JSX.Component<{
         <HeroImage image={attrs.image}>
           <SiteHeader />
         </HeroImage>
+        <Navlinks />
         {children}
       </main>
       <QuickLinks />

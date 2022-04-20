@@ -1,5 +1,6 @@
 import { Container } from "../../components/container/container";
 import { Content } from "../../components/content/content";
+import { Navlinks } from "../../components/navlinks";
 import { QuickLinks } from "../../components/quicklinks";
 import { Head, Html, SiteFooter } from "../../components/site";
 import { renderElement } from "../../core/jsx";
@@ -48,6 +49,8 @@ export const homePage: Routeable = {
                   </div>
                 </div>
               </section>
+
+              <Navlinks />
 
               <Container spaced split>
 
