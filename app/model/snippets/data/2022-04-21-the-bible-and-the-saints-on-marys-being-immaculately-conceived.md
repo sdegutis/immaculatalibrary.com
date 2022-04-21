@@ -4,7 +4,12 @@ title: The Bible and the Saints on Mary's being Immaculately Conceived
 archiveSlug: thegloriesofmary00liguuoft
 archivePage: '359'
 bookSlug: the-glories-of-mary
-tags: []
+tags:
+  - Bible Commentary
+  - Doctors of the Church
+  - Doctrine
+  - Mary
+  - What the Saints Say
 ---
 
 > We know that this divine spouse loved Mary more than all the other saints and angels united, as Father Suarez, St. Lawrence Justinian, and others affirm.
