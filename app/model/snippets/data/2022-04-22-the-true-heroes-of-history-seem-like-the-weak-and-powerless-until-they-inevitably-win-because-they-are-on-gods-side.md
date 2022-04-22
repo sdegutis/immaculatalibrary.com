@@ -4,7 +4,12 @@ title: The true heroes of history seem like the weak and powerless, until they i
 archiveSlug: abandonmenttodiv00causrich
 archivePage: '91'
 bookSlug: abandonment-to-divine-providence
-tags: []
+tags:
+  - Exhortation
+  - Humility
+  - Justice
+  - Meditations
+  - Morals
 ---
 
 > SECTION XII.—*The Triumph of Humility.*
