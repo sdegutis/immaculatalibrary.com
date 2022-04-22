@@ -77,15 +77,6 @@ export const homePage: Routeable = {
                   </div>
                   <br />
 
-                  <LatestBookSnippets />
-
-                  <h3>Book Snippets by Tag</h3>
-                  <p>{sortedTags().map(tag => <>
-                    <a href={tag.view.route}>#{tag.slug}</a> { }
-                  </>)}</p>
-                </div>
-                <div>
-
                   <div>
                     <h3>Random Book Snippet (<a href='#' id='refresh-random-book-snippet'>Another</a>)</h3>
                     <noscript>Enable JavaScript to see more random book snippets</noscript>
@@ -96,6 +87,15 @@ export const homePage: Routeable = {
                     </Content>
                   </div>
                   <script src={staticRouteFor(randomBookSnippetScript)} defer />
+
+                  {/* <h3>Book Snippets by Tag</h3>
+                  <p>{sortedTags().map(tag => <>
+                    <a href={tag.view.route}>#{tag.slug}</a> { }
+                  </>)}</p> */}
+                </div>
+                <div>
+
+                  <LatestBookSnippets />
 
                 </div>
 
