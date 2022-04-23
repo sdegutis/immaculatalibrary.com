@@ -4,7 +4,11 @@ title: If we see and love the will of God in all things, whether good or bad, an
 archiveSlug: abandonmenttodiv00causrich
 archivePage: '88'
 bookSlug: abandonment-to-divine-providence
-tags: []
+tags:
+  - Doctrine
+  - Exhortation
+  - Love
+  - Obedience
 ---
 
 > SECTION X.—*We Must see God in all His Creatures.*
