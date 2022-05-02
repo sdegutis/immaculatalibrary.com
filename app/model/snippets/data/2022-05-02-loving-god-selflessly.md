@@ -4,7 +4,11 @@ title: Loving God selflessly
 archiveSlug: dialogueofseraph00cath
 archivePage: '142'
 bookSlug: the-dialogue-of-st-catherine-of-siena
-tags: []
+tags:
+  - Doctors of the Church
+  - Love
+  - Morals
+  - What the Saints Say
 ---
 
 > *Of the imperfection of those who love God for their own profit, delight, and consolation.*
