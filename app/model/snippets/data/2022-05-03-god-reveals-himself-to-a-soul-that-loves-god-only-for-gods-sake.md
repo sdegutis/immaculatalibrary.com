@@ -4,7 +4,12 @@ title: God reveals himself to a soul that loves God only for God's sake
 archiveSlug: dialogueofseraph00cath
 archivePage: '145'
 bookSlug: the-dialogue-of-st-catherine-of-siena
-tags: []
+tags:
+  - Doctors of the Church
+  - Doctrine
+  - Love
+  - Morals
+  - What the Saints Say
 ---
 
 > It was with this imperfect love that S. Peter loved the sweet and good Jesus, My only-begotten Son, enjoying most pleasantly His sweet conversation, but, when the time of trouble came, he failed, and so disgraceful was his fall, that, not only could he not bear any pain himself, but his terror of the very approach of pain caused him to fall, and deny the Lord, with the words, "*I have never known Him.*"
