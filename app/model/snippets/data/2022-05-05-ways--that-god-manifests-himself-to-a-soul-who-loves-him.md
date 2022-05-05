@@ -4,7 +4,12 @@ title: Ways  that God manifests Himself to a soul who loves Him
 archiveSlug: dialogueofseraph00cath
 archivePage: '145'
 bookSlug: the-dialogue-of-st-catherine-of-siena
-tags: []
+tags:
+  - Doctors of the Church
+  - Doctrine
+  - Love
+  - Prayer
+  - What the Saints Say
 ---
 
 > *Of the way in which God manifests Himself to the soul who loves Him.*
