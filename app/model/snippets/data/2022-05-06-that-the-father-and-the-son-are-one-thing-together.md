@@ -4,7 +4,12 @@ title: That the Father and the Son are One Thing Together
 archiveSlug: dialogueofseraph00cath
 archivePage: '148'
 bookSlug: the-dialogue-of-st-catherine-of-siena
-tags: []
+tags:
+  - Bible Commentary
+  - Doctors of the Church
+  - Doctrine
+  - What the Saints Say
+  - Unity
 ---
 
 > *Why Christ did not say "I will manifest My Father" but "I will manifest Myself"*
