@@ -2,7 +2,7 @@
 published: true
 title: Ways  that God manifests Himself to a soul who loves Him
 archiveSlug: dialogueofseraph00cath
-archivePage: '145'
+archivePage: '147'
 bookSlug: the-dialogue-of-st-catherine-of-siena
 tags:
   - Doctors of the Church
