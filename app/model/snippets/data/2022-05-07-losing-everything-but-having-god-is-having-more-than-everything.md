@@ -4,7 +4,13 @@ title: Losing everything but having God is having more than everything
 archiveSlug: the-spirit-of-st.-francis-de-sales
 archivePage: '49'
 bookSlug: the-spirit-of-st-francis-de-sales
-tags: []
+tags:
+  - Doctors of the Church
+  - Doctrine
+  - Example
+  - Love
+  - What the Saints Say
+  - Greed
 ---
 
 > *God should Suffice for us All*
