@@ -4,7 +4,13 @@ title: Saint Joseph's life was a preparation for his vocation as Husband of Mary
 archiveSlug: saint-joseph-of-jesus-and-mary
 archivePage: '23'
 bookSlug: saint-joseph-of-jesus-and-mary
-tags: []
+tags:
+  - Doctors of the Church
+  - Joseph
+  - Mary
+  - Purity
+  - Virginity
+  - What the Saints Say
 ---
 
 > *The Espousals of Saint Joseph*
