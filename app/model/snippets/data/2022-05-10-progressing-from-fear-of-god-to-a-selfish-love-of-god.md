@@ -14,7 +14,7 @@ tags:
 
 > *How the soul, after having mounted the first step of the Bridge, should proceed to mount the second.*
 > 
-> Thou hast now seen how excellent is the state of him who has attained to the love of a friend climbing with the foot of affection, he; has reached the secret of the Heart, which is the second of the three steps figured in the Body of My Son.
+> Thou hast now seen how excellent is the state of him who has attained to the love of a friend climbing with the foot of affection, he has reached the secret of the Heart, which is the second of the three steps figured in the Body of My Son.
 > 
 > I have told thee what was meant by the three powers of the soul, and now I will show thee how they signify the three states, through which the soul passes.
 > 
