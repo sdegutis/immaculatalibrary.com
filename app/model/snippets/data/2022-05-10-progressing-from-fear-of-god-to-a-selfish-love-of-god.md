@@ -20,7 +20,7 @@ tags:
 > 
 > Before treating of the third state, I wish to show thee how a man becomes a friend and how, from a friend, he grows into a son, attaining to filial love, and how a man may know if he has become a friend. And first of how a man arrives at being a friend.
 > 
-> In the beginning, a man serves Me imperfectly through servile fear, but, by exercise and perseverance, he arrives at the love of delight, rinding his own delight and profit in Me.
+> In the beginning, a man serves Me imperfectly through servile fear, but, by exercise and perseverance, he arrives at the love of delight, finding his own delight and profit in Me.
 > 
 > This is a necessary stage, by which he must pass, who would attain to perfect love, to the love that is of friend and son. I call filial love perfect, because thereby, a man receives his inheritance from Me, the Eternal Father, and because a son's love includes that of a friend, which is why I told thee that a friend grows into a son. What means does he take to arrive thereat? I will tell thee.
 > 
