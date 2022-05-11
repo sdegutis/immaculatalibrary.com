@@ -4,7 +4,12 @@ title: When God withdraws good feelings of devotion, it’s only to free us clos
 archiveSlug: dialogueofseraph00cath
 archivePage: '152'
 bookSlug: the-dialogue-of-st-catherine-of-siena
-tags: []
+tags:
+  - Devotion
+  - Doctors of the Church
+  - Doctrine
+  - Love
+  - What the Saints Say
 ---
 
 > Everything that He said was said primarily, and in particular, to the disciples, but referred in general to the whole present and future, to those, that is to say, who should come after.
