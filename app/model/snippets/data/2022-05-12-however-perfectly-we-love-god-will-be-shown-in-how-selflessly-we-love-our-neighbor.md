@@ -4,7 +4,11 @@ title: However perfectly we love God will be shown in how selflessly we love our
 archiveSlug: dialogueofseraph00cath
 archivePage: '155'
 bookSlug: the-dialogue-of-st-catherine-of-siena
-tags: []
+tags:
+  - Bible Commentary
+  - Doctors of the Church
+  - Love
+  - What the Saints Say
 ---
 
 > *How an imperfect lover of God loves his neighbour also imperfectly, andofthe signs of this imperfect love.*
