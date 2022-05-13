@@ -4,7 +4,11 @@ title: By humility and a desire to love God, we begin to pray, which is so effec
 archiveSlug: dialogueofseraph00cath
 archivePage: '158'
 bookSlug: the-dialogue-of-st-catherine-of-siena
-tags: []
+tags:
+  - Doctors of the Church
+  - Love
+  - Prayer
+  - What the Saints Say
 ---
 
 > ### A TREATISE OF PRAYER
