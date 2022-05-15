@@ -1,11 +1,9 @@
-import { allCategories, allMovies, allPosts } from "../model/models";
+import { allCategories, allMovies } from "../model/models";
 import { audioBibleImageSmall, audioBiblePage } from "../routes/audiobible/audiobible";
-import { allPostsPage } from "../routes/posts/all/all-posts";
-import { calculateReadingMins, excerpt, formatDate, markdown } from "../util/helpers";
 import { staticRouteFor } from "../util/static";
 
 export const QuickLinks: JSX.Component<{}> = (attrs, children) => {
-  const recentPosts = allPosts.slice(0, 6);
+  // const recentPosts = allPosts.slice(0, 6);
 
   return <>
     <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['quicklinks.css']!)} />
@@ -13,7 +11,7 @@ export const QuickLinks: JSX.Component<{}> = (attrs, children) => {
     <div id="recents">
       <div class="container">
 
-        <h2>Blog Posts</h2>
+        {/* <h2>Blog Posts</h2>
         <p><a href={allPostsPage.route}>See all</a></p>
 
         <ul id="posts">
@@ -35,7 +33,7 @@ export const QuickLinks: JSX.Component<{}> = (attrs, children) => {
             </li>
 
           </>)}
-        </ul>
+        </ul> */}
 
         <h2>Books</h2>
         <ul class="quicklinks">

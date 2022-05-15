@@ -8,7 +8,7 @@ import moviesDir from './movies/data/';
 import { Movie } from './movies/movie';
 import { loadAllSongs } from './music/song';
 import postsDir from './posts/data/';
-import { Post } from './posts/post';
+// import { Post } from './posts/post';
 import snippetsDir from './snippets/data/';
 import { Snippet } from './snippets/snippet';
 
@@ -82,11 +82,11 @@ export const allMovies = (moviesDir
   .dirs.map(dir => Movie.from(dir))
   .sort(sortBy(m => movieOrder.indexOf(m.slug))));
 
-export const allPosts = (postsDir
-  .dirs.map(dir => Post.from(dir))
-  .sort(sortBy(post => post.date))
-  .filter(s => !s.draft)
-  .reverse());
+// export const allPosts = (postsDir
+//   .dirs.map(dir => Post.from(dir))
+//   .sort(sortBy(post => post.date))
+//   .filter(s => !s.draft)
+//   .reverse());
 
 export const allSongs = loadAllSongs();
 
