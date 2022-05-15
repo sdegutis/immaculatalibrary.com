@@ -4,7 +4,13 @@ title: 'May 15th: The union of Humility and Charity in the Blessed Virgin Mary'
 archiveSlug: themonthofmaryac00gilluoft
 archivePage: '139'
 bookSlug: the-month-of-mary
-tags: []
+tags:
+  - Bible Commentary
+  - Doctors of the Church
+  - Doctrine
+  - Humility
+  - Love
+  - What the Saints Say
 ---
 
 > Reflect on these two virtues, and you will ask how it is possible that charity can be united with humility, if the nature of one is to soar on high, and that of the other to abase itself? Naturally, indeed, it is impossible; but God, Who is One, and Who loves and desires unity, manifested the greatness of His power by uniting these two dissimilar virtues in the soul of Mary.
