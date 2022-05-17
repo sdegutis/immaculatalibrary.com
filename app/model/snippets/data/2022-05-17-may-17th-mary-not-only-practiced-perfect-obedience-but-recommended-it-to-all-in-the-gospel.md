@@ -4,7 +4,10 @@ title: 'May 17th: Mary not only practiced perfect obedience, but recommended it 
 archiveSlug: themonthofmaryac00gilluoft
 archivePage: '139'
 bookSlug: the-month-of-mary
-tags: []
+tags:
+  - Humility
+  - Mary
+  - Obedience
 ---
 
 > SEVENTEENTH DAY.
