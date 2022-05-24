@@ -4,7 +4,8 @@ title: Mary only slept in order to love and serve God better
 archiveSlug: themonthofmaryac00gilluoft
 archivePage: '202'
 bookSlug: the-month-of-mary
-tags: []
+tags:
+  - Mary
 ---
 
 > Say not that the Most Holy Virgin, like all men, was subject to the necessities of life. It may be said, in the words of the Canticles, that her sleep was the sleep of Love, the celestial Spouse saying, _I adjure you, daughters of Jeru salem, that you stir not nor awake my love till she please._
