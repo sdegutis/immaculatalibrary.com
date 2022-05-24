@@ -4,7 +4,11 @@ title: Mary’s love was greater than any angel’s or saint’s as much as the 
 archiveSlug: themonthofmaryac00gilluoft
 archivePage: '201'
 bookSlug: the-month-of-mary
-tags: []
+tags:
+  - Doctors of the Church
+  - Doctrine
+  - Mary
+  - What the Saints Say
 ---
 
 > TWENTY-FOURTH DAY.
