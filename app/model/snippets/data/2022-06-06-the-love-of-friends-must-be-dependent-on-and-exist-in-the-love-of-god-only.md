@@ -2,7 +2,7 @@
 published: true
 title: The love of friends must only depend on and exist in the Love of God
 archiveSlug: followingofchris00thom
-archivePage: '247'
+archivePage: '246'
 bookSlug: imitation-of-christ
 tags:
   - Doctrine
