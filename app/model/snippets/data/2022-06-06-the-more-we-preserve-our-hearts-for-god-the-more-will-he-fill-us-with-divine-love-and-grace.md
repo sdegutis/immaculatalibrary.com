@@ -4,7 +4,11 @@ title: The more we preserve our hearts for God, the more will he fill us with Di
 archiveSlug: followingofchris00thom
 archivePage: '247'
 bookSlug: imitation-of-christ
-tags: []
+tags:
+  - Doctrine
+  - Friendship
+  - Humility
+  - Love
 ---
 
 > But he that attributes any thing of good to himself, stops the grace of God from coming into him; for the grace of the Holy Ghost ever seeks an humble heart.
