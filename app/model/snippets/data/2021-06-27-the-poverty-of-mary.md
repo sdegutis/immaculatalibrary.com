@@ -4,6 +4,13 @@ title: Of the Poverty of Mary
 archiveSlug: thegloriesofmary00liguuoft
 archivePage: '629'
 bookSlug: the-glories-of-mary
+tags:
+  - Bible Commentary
+  - Doctors of the Church
+  - Mary
+  - Poverty
+  - What the Saints Say
+  - Private Revelations
 ---
 
 > SECTION VII.
