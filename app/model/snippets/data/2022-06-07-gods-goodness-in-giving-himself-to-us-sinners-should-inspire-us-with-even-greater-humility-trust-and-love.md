@@ -4,7 +4,13 @@ title: God’s goodness in giving Himself to us sinners should inspire us with e
 archiveSlug: followingofchris00thom
 archivePage: '328'
 bookSlug: imitation-of-christ
-tags: []
+tags:
+  - Blessed Sacrament
+  - Devotion
+  - Exhortation
+  - Humility
+  - Love
+  - Prayer
 ---
 
 > Chap. II.—_That the great goodness and charity of God is shewed to man in this sacrament._
