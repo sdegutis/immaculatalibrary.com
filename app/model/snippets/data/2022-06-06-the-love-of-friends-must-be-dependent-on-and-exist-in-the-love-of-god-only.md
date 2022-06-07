@@ -1,6 +1,6 @@
 ---
 published: true
-title: The love of friends must be dependent on and exist in the love of God only
+title: The love of friends must only depend on and exist in the Love of God
 archiveSlug: followingofchris00thom
 archivePage: '247'
 bookSlug: imitation-of-christ
@@ -11,22 +11,22 @@ tags:
   - Friendship
 ---
 
-Chap. XLII.—_That our peace is not to be placed in men._
-
-Son, if thou placest thy peace with any person, for the sake of thy contentment in his company, thou shall be unsettled and entangled:
-
-But if thou hast recourse to the ever-living and subsisting Truth, thou shalt not be grieved when a friend departs
+> Chap. XLII.—_That our peace is not to be placed in men._
+> 
+> Son, if thou placest thy peace with any person, for the sake of thy contentment in his company, thou shall be unsettled and entangled:
+> 
+> But if thou hast recourse to the ever-living and subsisting Truth, thou shalt not be grieved when a friend departs
 or dies.
-
-In _me_ the love of thy friend must
+> 
+> In _me_ the love of thy friend must
 stand; and for _me_ is he to be loved, whoever he be, who appears to thee good, and is very dear to thee in this
 life.
-
-Without _me_ no friendship is of any strength, nor will be durable; nor is that love true and pure of which I am not the author.
-
-Thou oughtest to be so far mortified to such affections of persons beloved, as to wish (for as much as appertains to thee) to be without any company of man.
-
-By so much the more does a man
+> 
+> Without _me_ no friendship is of any strength, nor will be durable; nor is that love true and pure of which I am not the author.
+> 
+> Thou oughtest to be so far mortified to such affections of persons beloved, as to wish (for as much as appertains to thee) to be without any company of man.
+> 
+> By so much the more does a man
 draw nigh to God, by how much the farther he withdraws himself from all earthly comfort.
-
-So much the higher he ascends into God, by how much the lower he descends into himself, and by how much the meaner he esteems himself.
+> 
+> So much the higher he ascends into God, by how much the lower he descends into himself, and by how much the meaner he esteems himself.
