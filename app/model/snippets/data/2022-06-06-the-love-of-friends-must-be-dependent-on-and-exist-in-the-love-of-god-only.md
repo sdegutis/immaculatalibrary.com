@@ -4,7 +4,11 @@ title: The love of friends must be dependent on and exist in the love of God onl
 archiveSlug: followingofchris00thom
 archivePage: '247'
 bookSlug: imitation-of-christ
-tags: []
+tags:
+  - Doctrine
+  - Exhortation
+  - Love
+  - Friendship
 ---
 
 Chap. XLII.—_That our peace is not to be placed in men._
