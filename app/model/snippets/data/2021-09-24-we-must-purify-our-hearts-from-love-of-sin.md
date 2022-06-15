@@ -21,7 +21,7 @@ tags: []
 >
 > Thus those weak and faint-hearted penitents abstain from sin for a time, but to their grief: they would like to sin without running the risk of damnation; they speak of sin with a kind of satisfaction and relish, and think those happy who deliver themselves up to it.
 >
-> A man resolved to revenge himself will renounce the desire in confession; but soon after he will be found among his friends, taking pleasure in speaking of his quarrel, and saying, had it not been for fear of God he would have done this or that. Oh, how strict is God's law on this point of forgiving!
+> A man resolved to revenge himself will renounce the desire in confession; but soon after he will be found among his friends, taking pleasure in speaking of his quarrel, and saying, had it not been for fear of God he would have done this or that. “Oh, how strict is God's law on this point of forgiving!”
 >
 > Ah! who does not see that, although this poor man is without sin he is embarrassed with the passion of sin; and, being out of Egypt in effect, he is yet there in desire, longing for the garlic and onions he was wont to eat.
 >
