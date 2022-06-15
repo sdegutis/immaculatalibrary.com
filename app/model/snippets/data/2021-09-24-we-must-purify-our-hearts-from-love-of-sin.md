@@ -17,7 +17,7 @@ tags: []
 >
 > Their hearts renounce sin, and avoid it, but they cease not to look back often that way, as Lot's wife did towards Sodom.
 >
-> The abstain from sin, as sick men do from melons, which they abstain from because the physician threatens them with death if they eat them; but it is troublesome to them to refrain: they talk of them and are unwilling to believe them hurtful; they would at least smell them, and account those appy who may eat them.
+> The abstain from sin, as sick men do from melons, which they abstain from because the physician threatens them with death if they eat them; but it is troublesome to them to refrain: they talk of them and are unwilling to believe them hurtful; they would at least smell them, and account those happy who may eat them.
 >
 > Thus those weak and faint-hearted penitents abstain from sin for a time, but to their grief: they would like to sin without running the risk of damnation; they speak of sin with a kind of satisfaction and relish, and think those happy who deliver themselves up to it.
 >
