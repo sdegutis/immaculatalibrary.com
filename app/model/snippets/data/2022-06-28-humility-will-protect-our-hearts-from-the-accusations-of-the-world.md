@@ -4,7 +4,8 @@ title: Humility will protect our hearts from the accusations of the world
 archiveSlug: followingofchris00thom
 archivePage: '256'
 bookSlug: imitation-of-christ
-tags: []
+tags:
+  - Humility
 ---
 
 > Chap. XLVI.—*Of having confidence in God, when words arise against us.*
