@@ -4,6 +4,7 @@ title: Remedies against evil friendships
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '156'
 bookSlug: introduction-to-the-devout-life
+tags: []
 ---
 
 > Chapter XXI.
@@ -14,7 +15,7 @@ bookSlug: introduction-to-the-devout-life
 >
 > Alcmæon pretended that goats breathe by the ears and not by the nostrils, which Aristotle of course denied; but this I know, that our heart breathes by the ear, and as it sends forth its own thoughts by the tongue, so it draws in the thoughts of others by the ear. Let us then keep a diligent guard upon our ears, that we may not draw in the corrupt air of filthy words, for otherwise our hearts will soon be infected. Hearken to no conversation of this kind under what pretext soever.
 >
-> Remember that you have dedicated your heart to God, and, that being so, it would be a sacrilege to alienate the least part of it from Him. Rather dedicate it to Him anew, by a thousand resolutions and protestations; and keeping yourself close within them, as a deer within its thicket, call upon God, and He will help you, and his love will take yours under its protection. that it may live for Him alone.
+> Remember that you have dedicated your heart to God, and, that being so, it would be a sacrilege to alienate the least part of it from Him. Rather dedicate it to Him anew, by a thousand resolutions and protestations; and keeping yourself close within them, as a deer within its thicket, call upon God, and He will help you, and his love will take yours under its protection, that it may live for Him alone.
 >
 > But if you are already caught in the meshes of such evil friendships, how difficult will it be to extricate yourself from them! Place yourself before the Divine Majesty, acknowledging, in his presence, the excess of your misery, frailty, and vanity. Then, with the greatest effort of which your heart is capable, detest them; renounce all the promises received, and, with the greatest and most absolute resolution, determine in your heart never to permit them to occupy your thoughts in the slightest degree for the remainder of your life.
 >
