@@ -4,6 +4,13 @@ title: Four Fathers and Doctors of the Church on deathbed penances
 archiveSlug: sinnersguide00luis
 archivePage: '251'
 bookSlug: the-sinners-guide
+tags:
+  - Death
+  - Doctors of the Church
+  - Exhortation
+  - Four Last Things
+  - Morals
+  - What the Saints Say
 ---
 
 > St. Ambrose, in his book on Penance, which some attribute to St. Augustine, treats of this subject at great length. Here is one of the many excellent things he tells us:
