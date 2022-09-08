@@ -4,7 +4,9 @@ title: The devil tries to frighten us into submission, but God will protect us
 archiveSlug: followingofchris00thom
 archivePage: '148'
 bookSlug: imitation-of-christ
-tags: []
+tags:
+  - Exhortation
+  - Courage
 ---
 
 > Know, that the old enemy strives by all means to hinder thy desire after good, and to divert thee from every devout exercise; namely, from the veneration of the saints, from the pious meditation of my passion: from the profitable remembrance of thy sins, from keeping a guard upon thy own heart, and from a firm purpose of advancing in virtue.
