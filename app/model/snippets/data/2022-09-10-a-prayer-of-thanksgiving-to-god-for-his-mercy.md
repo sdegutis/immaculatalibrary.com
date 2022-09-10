@@ -4,7 +4,9 @@ title: A prayer of thanksgiving to God for his mercy
 archiveSlug: followingofchris00thom
 archivePage: '141'
 bookSlug: imitation-of-christ
-tags: []
+tags:
+  - Mercy
+  - Prayer
 ---
 
 > ### Chap. V.---*Of the wonderful effect of divine love.*
