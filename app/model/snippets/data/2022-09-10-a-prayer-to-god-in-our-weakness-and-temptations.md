@@ -4,7 +4,10 @@ title: A prayer to God in our weakness and temptations
 archiveSlug: followingofchris00thom
 archivePage: '187'
 bookSlug: imitation-of-christ
-tags: []
+tags:
+  - Humility
+  - Mercy
+  - Prayer
 ---
 
 > Behold, then, O Lord, my abjection and frailty every way known to thee.
