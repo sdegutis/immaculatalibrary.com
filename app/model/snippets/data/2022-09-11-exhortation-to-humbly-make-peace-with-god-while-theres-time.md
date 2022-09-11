@@ -1,6 +1,6 @@
 ---
 published: true
-title: Exhortation to humbly make peace with God while there's time
+title: Exhortation to humbly make peace with God
 archiveSlug: followingofchris00thom
 archivePage: '71'
 bookSlug: imitation-of-christ
