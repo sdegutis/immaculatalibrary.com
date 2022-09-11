@@ -4,7 +4,10 @@ title: Exhortation to humbly make peace with God while there's time
 archiveSlug: followingofchris00thom
 archivePage: '71'
 bookSlug: imitation-of-christ
-tags: []
+tags:
+  - Exhortation
+  - Hell
+  - Justice
 ---
 
 > 4\. There is no vice which will not have its proper torments.
