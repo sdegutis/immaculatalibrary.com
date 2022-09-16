@@ -4,7 +4,10 @@ title: A prayer for heavenly Wisdom in our trials
 archiveSlug: followingofchris00thom
 archivePage: '211'
 bookSlug: imitation-of-christ
-tags: []
+tags:
+  - Patience
+  - Prayer
+  - Wisdom
 ---
 
 > 5\. Give me, O Lord, heavenly wisdom, that I may learn above all things to seek thee, and to find thee; above all things to relish thee, and to love thee, and to understand all other thhigs, as they are, according to the order of thy wisdom.
