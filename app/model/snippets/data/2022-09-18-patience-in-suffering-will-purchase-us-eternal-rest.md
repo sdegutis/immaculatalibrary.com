@@ -4,7 +4,9 @@ title: Patience in suffering will purchase us eternal rest
 archiveSlug: followingofchris00thom
 archivePage: '232'
 bookSlug: imitation-of-christ
-tags: []
+tags:
+  - Exhortation
+  - Patience
 ---
 
 > 2\. If thou seekest rest in this life, how then wilt thou come to rest everlasting?
