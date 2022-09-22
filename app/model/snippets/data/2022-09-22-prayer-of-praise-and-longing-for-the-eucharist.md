@@ -4,7 +4,10 @@ title: Prayer of praise and longing for the Eucharist
 archiveSlug: followingofchris00thom
 archivePage: '331'
 bookSlug: imitation-of-christ
-tags: []
+tags:
+  - Body of Christ
+  - Holy Communion
+  - Prayer
 ---
 
 > 5\. A wonderful thing it is, and worthy of faith, and exceeding all human understanding; that thou, O Lord, my God, true God, and true man, art contained whole and entire, under a small form of bread and wine, and without being consumed art eaten by the receiver.
