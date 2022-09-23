@@ -2,7 +2,7 @@
 published: true
 title: Our hearts must not rest in this world but in God
 archiveSlug: followingofchris00thom
-archivePage: '331'
+archivePage: '85'
 bookSlug: imitation-of-christ
 tags:
   - Exhortation
