@@ -4,7 +4,9 @@ title: Our hearts must not rest in this world but in God
 archiveSlug: followingofchris00thom
 archivePage: '331'
 bookSlug: imitation-of-christ
-tags: []
+tags:
+  - Exhortation
+  - Wisdom
 ---
 
 > 4\. Why dost thou stand looking about thee here, since this is not thy resting place?
