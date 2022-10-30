@@ -4,7 +4,10 @@ title: Our peace cannot be found in others
 archiveSlug: followingofchris00thom
 archivePage: '246'
 bookSlug: imitation-of-christ
-tags: []
+tags:
+  - Doctrine
+  - Friendship
+  - Wisdom
 ---
 
 > ### Chap. XLII. — That our peace is not to be placed in men.
