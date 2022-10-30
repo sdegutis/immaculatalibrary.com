@@ -65,6 +65,12 @@ export class SnippetRoute implements Routeable {
   method: RouteMethod = 'GET';
 
   handle(input: RouteInput): RouteOutput {
+    const singleFile = this.snippet.book.archiveFiles.length === 1;
+    const specificBookName = (!singleFile && this.snippet.book.archiveFiles
+      .find(file => file.archiveId === this.snippet.archiveSlug)
+      ?.pdfFile
+      .replace('.pdf', ''));
+
     return {
       body: renderElement(<SiteCommon
         title={this.snippet.title}
@@ -118,6 +124,7 @@ export class SnippetRoute implements Routeable {
 
             <p>
               From <a href={this.snippet.book.view.route}>{this.snippet.book.title}</a>, { }
+              {specificBookName && <>in file "{specificBookName}", </>}
               page <a rel="noopener" href={this.snippet.archiveLink}>{this.snippet.archivePage}</a>
               <br />
               <small>By {this.snippet.book.author}</small>
