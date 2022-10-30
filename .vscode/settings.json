@@ -1,3 +1,4 @@
 {
-  "typescript.preferences.importModuleSpecifierEnding": "minimal"
+  "typescript.preferences.importModuleSpecifierEnding": "minimal",
+  "task.allowAutomaticTasks": "on"
 }
