@@ -4,7 +4,12 @@ title: We have made the commandments of God grievous to ourselves by hardening o
 archiveSlug: nparochialplains01newmuoft
 archivePage: '109'
 bookSlug: parochial-and-plain-sermons-by-st-john-henry-newman
-tags: []
+tags:
+  - Doctrine
+  - Exhortation
+  - Mercy
+  - Sin
+  - What the Saints Say
 ---
 
 Let each of us (I say) reflect upon his own most gross and persevering neglect of God at various seasons of his past life.
