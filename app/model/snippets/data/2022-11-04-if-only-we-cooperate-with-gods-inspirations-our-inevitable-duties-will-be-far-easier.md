@@ -4,7 +4,10 @@ title: If only we cooperate with God's inspirations, our inevitable duties will 
 archiveSlug: nparochialplains01newmuoft
 archivePage: '110'
 bookSlug: parochial-and-plain-sermons-by-st-john-henry-newman
-tags: []
+tags:
+  - Doctrine
+  - Exhortation
+  - What the Saints Say
 ---
 
 > We have made His commands grievous to us: we must bear it; let us not attempt to explain them away because they *are* grievous.
