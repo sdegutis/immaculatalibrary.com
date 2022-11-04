@@ -4,7 +4,10 @@ title: If we continue to ignore God's warnings, we forfeit our souls permanently
 archiveSlug: sinnersguide00luis
 archivePage: '93'
 bookSlug: the-sinners-guide
-tags: []
+tags:
+  - Exhortation
+  - Hell
+  - Justice
 ---
 
 > Another thought which should here impress us is that God has given us two eyes, two ears, two hands, and two feet, so that if we lose one of these members we still have one left. But He has given us only one soul, and if we lose that we have no other with which to enjoy eternal happiness.
