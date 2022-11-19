@@ -11,7 +11,7 @@ import { Container } from "./container/container";
 export const Navlinks: JSX.Component<{}> = () => <>
   <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['navlinks.css']!)} />
   <Container>
-    <div id='navlinks'>
+    <div id='navlinks-donate'>
       Dear reader, please donate Apple Cash (815-245-1625) if you can 😢 God bless you 🥲
     </div>
   </Container>
