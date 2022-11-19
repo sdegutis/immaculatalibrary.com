@@ -12,6 +12,11 @@ export const Navlinks: JSX.Component<{}> = () => <>
   <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['navlinks.css']!)} />
   <Container>
     <div id='navlinks'>
+      Dear reader, please donate Apple Cash (815-245-1625) if you can 😢 God bless you 🥲
+    </div>
+  </Container>
+  <Container>
+    <div id='navlinks'>
       <a href={aboutPage.route}>About</a>
       {' | '}
       <a href={allBooksPage.route}>Books</a>
