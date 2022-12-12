@@ -1,6 +1,6 @@
 (() => {
 
-  const donated = localStorage.getItem('donated');
+  const donated = sessionStorage.getItem('donated');
   if (donated) {
     revealReadOnlineSection();
   }
@@ -10,7 +10,7 @@
       e.preventDefault();
       window.open('https://buy.stripe.com/5kAaIqclW2dsby8dQQ', '_blank');
       revealReadOnlineSection();
-      localStorage.setItem('donated', 'true');
+      sessionStorage.setItem('donated', 'true');
     };
   }
 
@@ -20,4 +20,4 @@
     document.getElementById('did-donate-sign').hidden = false;
   }
 
-})();  
+})();
