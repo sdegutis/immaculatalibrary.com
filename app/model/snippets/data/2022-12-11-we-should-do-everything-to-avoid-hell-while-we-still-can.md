@@ -4,7 +4,11 @@ title: We should do everything to avoid Hell while we still can
 archiveSlug: sinnersguide00luis
 archivePage: '94'
 bookSlug: the-sinners-guide
-tags: []
+tags:
+  - Death
+  - Exhortation
+  - Hell
+  - Penance
 ---
 
 > Why, then, will we not help one another while we can? Why will we not render glory to God before the sun of His justice has set for us?
