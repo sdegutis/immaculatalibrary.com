@@ -47,7 +47,7 @@ export class ViewBookRoute implements Routeable {
             </p>
             <script defer src={staticRouteFor(__dir.filesByName['onebook.js']!)}></script>
             <p id='did-donate-sign' hidden>
-              ❤️ Thanks for supporting this site! 🙏 Please continue to support us by <a href='#' id='donate-to-read-button'>donating</a> again when you can. ❤️
+              ❤️ Thanks for supporting this site! 🙏 Please continue to support us by <a href='https://buy.stripe.com/5kAaIqclW2dsby8dQQ' target='_blank'>donating</a> again when you can. ❤️
             </p>
             <table class="downloads" hidden id='read-online-table'>
               {this.book.archiveFiles.map(file => <>
