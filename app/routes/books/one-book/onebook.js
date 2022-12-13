@@ -1,6 +1,6 @@
 (() => {
 
-  const donated = sessionStorage.getItem('donated');
+  const donated = localStorage.getItem('donated');
   if (donated) {
     revealReadOnlineSection();
   }
@@ -10,7 +10,7 @@
       e.preventDefault();
       window.open('https://buy.stripe.com/5kAaIqclW2dsby8dQQ', '_blank');
       revealReadOnlineSection();
-      sessionStorage.setItem('donated', 'true');
+      localStorage.setItem('donated', 'true');
     };
   }
 
