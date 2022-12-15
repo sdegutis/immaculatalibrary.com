@@ -42,9 +42,10 @@ export class ViewBookRoute implements Routeable {
             {markdown.render(this.book.markdownContent)}
 
             <h4>Read now:</h4>
-            <p id='read-online-table-donate-section'>
-              To read online or download PDF, please <a href='#' id='donate-to-read-button'>donate</a> to help keep the site running. Thanks.
-            </p>
+            <div id='read-online-table-donate-section'>
+              <p>To read online or download PDF, please make a <a href='#' id='donate-to-read-button'>one-time donation</a> to help keep the site running.</p>
+              <p>Or you can <a href="#" onclick='revealReadOnlineSection(); return false'>just skip the donation</a> and start reading this book online now.</p>
+            </div>
             <script defer src={staticRouteFor(__dir.filesByName['onebook.js']!)}></script>
             <p id='did-donate-sign' hidden>
               ❤️ Thanks for supporting this site! 🙏 Please continue to support us by <a href='https://buy.stripe.com/5kAaIqclW2dsby8dQQ' target='_blank'>donating</a> again when you can. ❤️
