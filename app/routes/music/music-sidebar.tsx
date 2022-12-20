@@ -13,15 +13,6 @@ export const MusicSidebar: JSX.Component<{}> = (attrs, children) => <>
       </>)}
     </ul>
 
-    <h4>Purgatory Music</h4>
-    <ul>
-      {allSongs.filter(s => s.category === 'Purgatory').map(song => <>
-        <li>
-          <a href={song.view.route}>{song.title}</a>
-        </li>
-      </>)}
-    </ul>
-
   </div>
 </>;
 
