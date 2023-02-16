@@ -5,7 +5,8 @@ import { sameSiteReferer } from "../../util/helpers";
 import { notAllowedResponse } from "../../util/restricted/login";
 
 const users: string[] = [
-  "$2a$10$Qwea9c8jHbc/UlaAdr66Gumlhs46/VBjyy/xZd92QgJRtytvQs5sm"
+  "$2a$10$Qwea9c8jHbc/UlaAdr66Gumlhs46/VBjyy/xZd92QgJRtytvQs5sm",
+  "$2a$10$FombUytLvlQ3qESBhIsziOmGTFMiiHTd4eufhANnbxNW8iELR74Em",
 ];
 
 export const loginRoute: Routeable = {
