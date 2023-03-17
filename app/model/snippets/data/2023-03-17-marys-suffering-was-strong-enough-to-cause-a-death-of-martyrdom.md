@@ -4,7 +4,11 @@ title: Mary's suffering was strong enough to cause a death of martyrdom
 archiveSlug: thegloriesofmary00liguuoft
 archivePage: '516'
 bookSlug: the-glories-of-mary
-tags: []
+tags:
+  - Doctors of the Church
+  - Mary
+  - Passion
+  - What the Saints Say
 ---
 
 > *First Point*---As Jesus is called King of sorrows and King of martyrs, because he suffered in his life more than all the other martyrs, so is also Mary called, with reason, queen of the martyrs, having merited this title by suffering the greatest martyrdom that could be suffered, next to that of her Son.
