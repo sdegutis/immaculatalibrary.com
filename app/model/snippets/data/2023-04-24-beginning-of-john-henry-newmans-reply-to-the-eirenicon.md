@@ -4,7 +4,9 @@ title: Beginning of John Henry Newman's reply to the Eirenicon
 archiveSlug: st-john-henry-newmans-reply-to-dr-puseys-eirenicon
 archivePage: '3'
 bookSlug: st-john-henry-newman-reply-to-eirenicon
-tags: []
+tags:
+  - Unity
+  - What the Saints Say
 ---
 
 > ### A LETTER,
