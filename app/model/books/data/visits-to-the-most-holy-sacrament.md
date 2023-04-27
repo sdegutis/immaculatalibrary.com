@@ -7,7 +7,7 @@ translator: ''
 score: 100
 rating: 5
 files:
-  - archiveId: 'visitstothemosth00liguuoft'
+  - archiveId: 'visits-to-the-most-holy-sacrament-by-st.-alphonsus-de-liguori'
     pdfFile: 'Visits to the Most Holy Sacrament, by St. Alphonsus de Liguori.pdf'
 storeLinks:
   - link: 'https://tanbooks.com/sanctification/spiritual-direction-books/visits-to-the-blessed-sacrament-paperbound/'
