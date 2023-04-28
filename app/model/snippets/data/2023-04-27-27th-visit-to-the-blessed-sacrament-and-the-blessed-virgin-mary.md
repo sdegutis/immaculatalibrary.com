@@ -7,7 +7,7 @@ bookSlug: visits-to-the-most-holy-sacrament
 tags: []
 ---
 
-> ### TWENTY-SEVENTH VISIT.
+> ### Twenty-seventh visit.
 >
 > In the office of the most holy sacrament we read the following words: “Neither is there any nation so great, that hath its gods so nigh them as our God is to us.” The Gentiles hearing the works of love of our God, exclaimed, O how good is this God of the Christians!
 > 
@@ -29,7 +29,7 @@ tags: []
 >
 > *The Spiritual Communion.*
 >
-> #### TWENTY-SEVENTH VISIT TO THE BLESSED VIRGIN.
+> #### Twenty-seventh visit to the Blessed Virgin.
 > 
 > My queen! thou hast said to thy servant St. Bridget, that as often as a man sins, if he returns to thee with sincere repentance, thou wilt receive him and restore him to the friendship of God; that thou dost not consider the greatness of his crimes, but the sincerity of his repentance; and that thou art ever ready to apply a cure to his wounds, because thou art in reality, as in name, the Mother of mercy.
 >
