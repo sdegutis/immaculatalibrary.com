@@ -7,7 +7,7 @@ bookSlug: visits-to-the-most-holy-sacrament
 tags: []
 ---
 
-> ### Twenty Eighth Visit.
+> ### Twenty-eighth Visit.
 >
 > God has given to us his only son; why, then, says St. Paul, should we fear that he will refuse us any good gift which we stand in need of? “How hath he not, also, with him given us all things?” Rom. vii. 32. We know that “the Father hath given all things into his hands.” St. John xiii. 3.
 >
