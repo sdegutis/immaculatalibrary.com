@@ -25,4 +25,4 @@ tags: []
 >
 > This interpretation, and the parallelism it involves, seem to me undeniable; but at all events (and this is my point) the parallelism is the doctrine of the Fathers, from the earliest times; and, this being established, we are able, by the position and office of Eve in our fall, to determine the position and office of Mary in our restoration.
 > 
-> <sup>1</sup>: Vid. Essay on Development of Doctrine, 1846, p. 384, &c.
+> <sup>1</sup>: Vid. Essay on Development of Doctrine, 1845, p. 384, &c.
