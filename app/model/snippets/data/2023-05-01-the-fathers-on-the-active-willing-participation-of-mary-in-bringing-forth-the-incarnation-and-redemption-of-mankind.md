@@ -29,6 +29,6 @@ tags: []
 >
 > And again,—
 >
->> “As Eve by the speech of an Angel was seduced, so as to flee God, transgressing His word, so also Mary received the good tidings by means of the Angel's speech, so as to bear God within her, being obedient to His word. And, though the one had disobeyed God, yet the other was drawn to obey God; that of the virgin Eve the virgin Mary might become the advocate. And, as by a virgin the human race had been bound to death, by a virgin it is saved, the balance being preserved, a virgin's disobedience by a virgin's obedience.” — Ibid. v. 19.
+>> “As Eve by the speech of an Angel was seduced, so as to flee God, transgressing His word, so also Mary received the good tidings by means of the Angel's speech, so as to bear God within her, being obedient to His word. And, though the one had disobeyed God, yet the other was drawn to obey God; that of the virgin Eve the virgin Mary might become the advocate. And, as by a virgin the human race had been bound to death, by a virgin it is saved, the balance being preserved, a virgin's disobedience by a virgin's obedience.”—*Ibid.* v. 19.
 >
 > <sup>1</sup> I have attempted to translate literally without caring to write English. The original passages are at the end of the Letter.
