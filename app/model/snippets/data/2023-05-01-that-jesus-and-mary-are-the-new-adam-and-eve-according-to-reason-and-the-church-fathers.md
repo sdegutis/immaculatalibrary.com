@@ -2,7 +2,7 @@
 published: true
 title: That Jesus and Mary are the new Adam and Eve according to reason and the Church Fathers
 archiveSlug: st-john-henry-newmans-reply-to-dr-puseys-eirenicon
-archivePage: '31'
+archivePage: '33'
 bookSlug: st-john-henry-newman-reply-to-eirenicon
 tags: []
 ---
