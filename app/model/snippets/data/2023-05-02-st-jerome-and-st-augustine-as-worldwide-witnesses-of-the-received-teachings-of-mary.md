@@ -1,6 +1,6 @@
 ---
 published: true
-title: St. Jerome and St. Augustine as worldwide witnesses of the received teachings of Mary
+title: St. Jerome and St. Augustine as worldwide fifth century witnesses of the received teachings of Mary
 archiveSlug: st-john-henry-newmans-reply-to-dr-puseys-eirenicon
 archivePage: '43'
 bookSlug: st-john-henry-newman-reply-to-eirenicon
