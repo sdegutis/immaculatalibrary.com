@@ -2,7 +2,7 @@
 published: true
 title: That Catholics are rightly apt to consider the practical implications of the Blessed Virgin's life and derive her dignity and a devotion from it
 archiveSlug: st-john-henry-newmans-reply-to-dr-puseys-eirenicon
-archivePage: '53'
+archivePage: '55'
 bookSlug: st-john-henry-newman-reply-to-eirenicon
 tags: []
 ---
