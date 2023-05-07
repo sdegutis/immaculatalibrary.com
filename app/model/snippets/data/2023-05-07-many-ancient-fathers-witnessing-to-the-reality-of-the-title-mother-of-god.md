@@ -19,6 +19,30 @@ tags: []
 >
 > If we look for those, in the interval, between Origen and the Council, to whom Alexander refers, we find it used again and again by the Fathers in such of their works as are extant; by Archelaus of Mesopotamia, Eusebius of Palestine, Alexander of Egypt, in the third century; in the fourth by Athanasius many times with emphasis, by Cyril of Palestine, Gregory Nyssen of Cappadocia, Gregory Nazianzen of Cappadocia, Antiochus of Syria, and Ammonius of Thrace:—not to speak of the Emperor Julian, who, having no local or ecclesiastical domicile, speaks for the whole of Christendom. Another and earlier Emperor, Constantine, in his speech before the assembled Bishops at Nicaea, uses the still more explicit title of "the Virgin Mother of God;" which is also used by Ambrose of Milan, and by Vincent and Cassian in the south of France, and then by St. Leo.
 >
-> So much for the term; it would be tedious to produce the passages of authors who, using or not using the term, convey the idea. "Our God was carried in the womb of Mary," says Ignatius, who was martyred A.D. 106. "The word of God," says Hippolytus, "was carried in that Virgin frame." "The Maker of all," says Amphilochius, "is born of a Virgin." "She did compass without circumscribing the Sun of justice,—the Everlasting is born," says Chrysostom. "God dwelt in the womb," says Proclus. "When thou hearest that God speaks from the bush," asks Theodotus, "in the bush seest thou not the Virgin?" Cassian says, "Mary bore her Author." "The one God only-begotten," says Hilary, "is introduced into the womb of a Virgin." "The Everlasting," says Ambrose, "came into the Virgin." "The closed gate," says Jerome, "by which alone the Lord God of Israel enters, is the Virgin Mary." "That man from heaven," says Capriolus, "is God conceived in the womb." "He is made in thee," says Augustine, "who made thee."
+> So much for the term; it would be tedious to produce the passages of authors who, using or not using the term, convey the idea.
+>
+> "Our God was carried in the womb of Mary," says Ignatius, who was martyred A.D. 106.
+>
+> "The word of God," says Hippolytus, "was carried in that Virgin frame."
+>
+> "The Maker of all," says Amphilochius, "is born of a Virgin."
+>
+> "She did compass without circumscribing the Sun of justice,—the Everlasting is born," says Chrysostom.
+>
+> "God dwelt in the womb," says Proclus.
+>
+> "When thou hearest that God speaks from the bush," asks Theodotus, "in the bush seest thou not the Virgin?"
+>
+> Cassian says, "Mary bore her Author."
+>
+> "The one God only-begotten," says Hilary, "is introduced into the womb of a Virgin."
+>
+> "The Everlasting," says Ambrose, "came into the Virgin."
+>
+> "The closed gate," says Jerome, "by which alone the Lord God of Israel enters, is the Virgin Mary."
+>
+> "That man from heaven," says Capriolus, "is God conceived in the womb."
+>
+> "He is made in thee," says Augustine, "who made thee."
 >
 > <sup>1</sup> Vid. Translation of St. Athanasius, pp. 420, 440, 447.
