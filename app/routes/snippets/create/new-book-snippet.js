@@ -1,3 +1,7 @@
+window.addEventListener('beforeunload', (e) => {
+  e.returnValue = 'Abandon all changes!?';
+});
+
 const md = markdownit({
   typographer: true,
   html: true,
