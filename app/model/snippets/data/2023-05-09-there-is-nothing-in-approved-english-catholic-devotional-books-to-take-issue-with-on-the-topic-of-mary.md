@@ -2,7 +2,7 @@
 published: true
 title: There is nothing in approved English Catholic devotional books to take issue with on the topic of Mary
 archiveSlug: st-john-henry-newmans-reply-to-dr-puseys-eirenicon
-archivePage: '105'
+archivePage: '106'
 bookSlug: st-john-henry-newman-reply-to-eirenicon
 tags: []
 ---
