@@ -2,7 +2,7 @@
 published: true
 title: Examples of false and harmful devotion to Mary
 archiveSlug: st-john-henry-newmans-reply-to-dr-puseys-eirenicon
-archivePage: '117'
+archivePage: '118'
 bookSlug: st-john-henry-newman-reply-to-eirenicon
 tags: []
 ---
