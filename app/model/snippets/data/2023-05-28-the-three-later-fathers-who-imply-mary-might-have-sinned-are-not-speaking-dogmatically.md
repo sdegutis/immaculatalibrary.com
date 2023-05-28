@@ -1,6 +1,6 @@
 ---
 published: true
-title: The three later Fathers who imply Mary might have sinned are not speaking dogmatically
+title: The three later Fathers who speak more lowly of Mary are not speaking dogmatically
 archiveSlug: st-john-henry-newmans-reply-to-dr-puseys-eirenicon
 archivePage: '139'
 bookSlug: st-john-henry-newman-reply-to-eirenicon
