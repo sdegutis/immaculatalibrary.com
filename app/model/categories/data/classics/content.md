@@ -5,6 +5,7 @@ books:
   - 'abandonment-to-divine-providence'
   - 'ascent-of-mount-carmel'
   - 'catena-aurea'
+  - 'confessions'
   - 'dark-night-of-the-soul'
   - 'imitation-of-christ'
   - 'interior-castle'
