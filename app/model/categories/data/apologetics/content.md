@@ -5,6 +5,7 @@ books:
   - 'apologetica'
   - 'catechism-of-the-summa-theologica'
   - 'catena-aurea'
+  - 'works-of-justin-martyr'
   - 'catholic-belief-and-practice'
   - 'catholic-controversy'
   - 'defense-of-true-devotion-to-mary'
