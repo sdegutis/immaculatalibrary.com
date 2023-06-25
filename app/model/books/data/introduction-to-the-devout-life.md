@@ -1,4 +1,5 @@
 ---
+complete: true
 title: 'Introduction to the Devout Life'
 subtitle: ''
 dateAdded: '2020-04-07'
