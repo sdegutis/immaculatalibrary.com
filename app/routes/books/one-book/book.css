@@ -56,4 +56,5 @@ ul.snippets-latest {
   top: 0;
   backdrop-filter: blur(7px);
   -webkit-backdrop-filter: blur(7px);
+  padding: 1em 0;
 }
