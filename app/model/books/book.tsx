@@ -25,6 +25,7 @@ export class Book {
         image: string;
         title: string;
       }[],
+      complete?: boolean,
     }>(file, 'slug');
 
     return new Book(
@@ -39,6 +40,7 @@ export class Book {
       data.meta.rating,
       data.meta.files,
       data.meta.storeLinks,
+      data.meta.complete ?? false,
     );
   }
 
@@ -65,6 +67,7 @@ export class Book {
       image: string;
       title: string;
     }[],
+    public complete: boolean,
   ) {
     this.view = new ViewBookRoute(this);
     this.archiveFiles = this.files.map(file => ({
