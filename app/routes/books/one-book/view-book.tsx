@@ -8,15 +8,34 @@ import { addRouteable, Routeable, RouteMethod } from "../../../core/router";
 import { Book } from "../../../model/books/book";
 import { excerpt, markdown, striptags } from "../../../util/helpers";
 import { staticRouteFor } from "../../../util/static";
-import { allSnippetsPage } from "../../snippets/all/snippets";
+import { makeSnippetRoute } from "../../snippets/one/snippet";
+
+function getRandomElement<T>(array: T[]): T {
+  const i = Math.floor(Math.random() * array.length);
+  return array[i]!;
+}
 
 export class ViewBookRoute implements Routeable {
 
   readBookPage;
 
+  randomSnippetInBookPage: Routeable;
+
   constructor(private book: Book) {
     addRouteable(this);
     this.readBookPage = new ReadBookRoute(this.book);
+
+    this.randomSnippetInBookPage = {
+      route: `/books/${this.book.slug}/random-snippet`,
+      method: 'GET',
+      handle: () => ({
+        status: 302,
+        headers: {
+          'Location': makeSnippetRoute(getRandomElement(this.book.snippets)),
+        },
+      }),
+    };
+    addRouteable(this.randomSnippetInBookPage);
   }
 
   get route() {
@@ -129,7 +148,7 @@ export class ViewBookRoute implements Routeable {
 
           <div>
 
-            <h3>Book snippets (<a href={allSnippetsPage.route}>See all</a>)</h3>
+            <h3>Book snippets (<a href={this.randomSnippetInBookPage.route}>Random</a>)</h3>
             <ul class="snippets-latest">
               {this.book.snippets.length > 0
                 ? <>

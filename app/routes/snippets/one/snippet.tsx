@@ -47,6 +47,10 @@ function addCheckbox(button: HTMLButtonElement, e: Event) {
   li.querySelector('input')!.focus();
 }
 
+export function makeSnippetRoute(snippet: Snippet) {
+  return `/book-snippets/${snippet.date}-${snippet.slug}.html`;
+}
+
 export class SnippetRoute implements Routeable {
 
   constructor(private snippet: Snippet) {
@@ -59,7 +63,7 @@ export class SnippetRoute implements Routeable {
   meta?: RouteMeta;
 
   get route() {
-    return `/book-snippets/${this.snippet.date}-${this.snippet.slug}.html`;
+    return makeSnippetRoute(this.snippet);
   }
 
   method: RouteMethod = 'GET';
