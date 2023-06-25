@@ -19,6 +19,8 @@ html {
 }
 
 html.dark-mode {
+  color-scheme:dark;
+
   background: #111;
   --bgalt: #000;
   color: #ccc;

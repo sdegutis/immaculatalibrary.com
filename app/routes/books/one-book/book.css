@@ -40,3 +40,13 @@ ul.snippets-latest {
   overflow: auto;
   list-style-type: none;
 }
+
+.readonline-chapters {
+  padding-left: 0;
+  list-style-type: none;
+
+  position: sticky;
+  top: 0;
+  overflow: auto;
+  height: 100vh;
+}

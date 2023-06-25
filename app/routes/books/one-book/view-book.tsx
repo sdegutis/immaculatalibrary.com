@@ -12,8 +12,11 @@ import { allSnippetsPage } from "../../snippets/all/snippets";
 
 export class ViewBookRoute implements Routeable {
 
+  readBookPage;
+
   constructor(private book: Book) {
     addRouteable(this);
+    this.readBookPage = new ReadBookRoute(this.book);
   }
 
   get route() {
@@ -42,6 +45,17 @@ export class ViewBookRoute implements Routeable {
             {markdown.render(this.book.markdownContent)}
 
             <h4>Read now:</h4>
+            {this.book.complete && <>
+              <table class="downloads" id='read-online-table'>
+                <tr>
+                  <td>
+                    <a href={this.readBookPage.route}>
+                      Read on Web
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </>}
             <table class="downloads" id='read-online-table'>
               {this.book.archiveFiles.map(file => <>
                 <tr>
@@ -55,7 +69,7 @@ export class ViewBookRoute implements Routeable {
                   </td>
                   {file.archiveId && <>
                     <td class="link">
-                      <a href={`https://archive.org/details/${file.archiveId}?view=theater`} target="_blank">Read online</a>
+                      <a href={`https://archive.org/details/${file.archiveId}?view=theater`} target="_blank">Read Scans</a>
                       {input.session?.isAdmin && <>
                         <br />
                         <AdminButton href={file.page.route}>New Snippet</AdminButton>
@@ -133,6 +147,80 @@ export class ViewBookRoute implements Routeable {
                     <em>No snippets have been posted for this book yet.</em>
                   </li>
                 </>}
+            </ul>
+
+          </div>
+
+        </Container>
+      </SiteCommon>)
+    }
+  }
+
+}
+
+export class ReadBookRoute implements Routeable {
+
+  constructor(private book: Book) {
+    addRouteable(this);
+  }
+
+  get route() {
+    return `/books/read-on-web/${this.book.slug}.html`;
+  }
+
+  method: RouteMethod = 'GET';
+
+  handle(input: RouteInput): RouteOutput {
+    const orderedSnippets = [...this.book.snippets];
+
+    return {
+      body: renderElement(<SiteCommon
+        input={input}
+        title={this.book.title}
+        description={striptags(excerpt(this.book.markdownContent))}
+        image={this.book.category.imageBig}
+      >
+        <Container spaced split>
+          <Content>
+
+            <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['book.css']!)} />
+
+            <h1>{this.book.title}</h1>
+            <p class="subtitle">{this.book.subtitle}</p>
+            <p>By <span class="author">{this.book.author}</span></p>
+            <p><Rating n={this.book.rating} /></p>
+            {markdown.render(this.book.markdownContent)}
+
+            <hr />
+
+            {orderedSnippets.map((bookSnippet, i) => <>
+              <h3 id={`snippet-${bookSnippet.slug}`}>
+                Chapter {i + 1} &mdash; { }
+                <a href={bookSnippet.view.route}>
+                  {markdown.renderInline(bookSnippet.title)}
+                </a>
+              </h3>
+              {markdown.render(bookSnippet.markdownContent)}
+              <hr />
+            </>)}
+
+          </Content>
+
+          <div>
+
+            <ul class="readonline-chapters">
+              <h3>Chapter Index</h3>
+
+              {orderedSnippets.map((bookSnippet, i) => <>
+                <li>
+                  <p>
+                    Ch.{i + 1} { }
+                    <a href={`#snippet-${bookSnippet.slug}`}>
+                      {markdown.renderInline(bookSnippet.title)}
+                    </a>
+                  </p>
+                </li>
+              </>)}
             </ul>
 
           </div>
