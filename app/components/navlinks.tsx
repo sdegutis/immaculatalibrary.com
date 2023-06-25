@@ -11,11 +11,6 @@ import { Container } from "./container/container";
 export const Navlinks: JSX.Component<{}> = () => <>
   <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['navlinks.css']!)} />
   <Container>
-    <div id='navlinks-donate'>
-      Please <a href='https://buy.stripe.com/5kAaIqclW2dsby8dQQ'>donate</a> to support this site 🙏❤️🤝
-    </div>
-  </Container>
-  <Container>
     <div id='navlinks'>
       <a href={aboutPage.route}>About</a>
       {' | '}

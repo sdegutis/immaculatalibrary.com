@@ -40,10 +40,3 @@ ul.snippets-latest {
   overflow: auto;
   list-style-type: none;
 }
-
-#read-online-table-donate-section {
-  border: 1px solid var(--admin-border-color);
-  border-radius: 3px;
-  padding: 1em 1em 0;
-  margin: 1em 0;
-}
