@@ -213,14 +213,16 @@ export class ReadBookRoute implements Routeable {
             <hr />
 
             {orderedSnippets.map((bookSnippet, i) => <>
-              <h3 id={`snippet-${bookSnippet.slug}`}>
-                Chapter {i + 1} &mdash; { }
-                <a href={bookSnippet.view.route}>
-                  {markdown.renderInline(bookSnippet.title)}
-                </a>
-              </h3>
-              {markdown.render(bookSnippet.markdownContent)}
-              <hr />
+              <div class='chapter' id={`snippet-${bookSnippet.slug}`}>
+                <h3 class='chapter-header'>
+                  Chapter {i + 1} &mdash; { }
+                  <a href={bookSnippet.view.route}>
+                    {markdown.renderInline(bookSnippet.title)}
+                  </a>
+                </h3>
+                {markdown.render(bookSnippet.markdownContent)}
+                <hr />
+              </div>
             </>)}
 
           </Content>

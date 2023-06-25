@@ -50,3 +50,9 @@ ul.snippets-latest {
   overflow: auto;
   height: 100vh;
 }
+
+.content .chapter .chapter-header {
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(7px);
+}
