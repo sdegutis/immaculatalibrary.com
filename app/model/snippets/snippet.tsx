@@ -3,6 +3,7 @@ import * as luxon from 'luxon';
 import { CloneSnippetMobilePage, CloneSnippetPage, EditSnippetRoute } from '../../routes/snippets/create/routes';
 import { CreateTagRoute, SnippetRoute } from '../../routes/snippets/one/snippet';
 import { loadContentFile, saveContentFile } from '../../util/data-files';
+import { markdown } from '../../util/helpers';
 import { pushChanges } from '../../util/live-editing';
 import { Book } from '../books/book';
 import { snippetEvents } from '../events';
@@ -47,6 +48,9 @@ export class Snippet {
 
   tags;
 
+  public renderedBody;
+  public renderedTitle;
+
   public previewMarkdown;
   constructor(
     private file: FsFile,
@@ -78,6 +82,9 @@ export class Snippet {
     }
 
     allSnippets?.unshift(this);
+
+    this.renderedBody = markdown.render(this.markdownContent);
+    this.renderedTitle = markdown.renderInline(this.title);
   }
 
   get archiveLink() {

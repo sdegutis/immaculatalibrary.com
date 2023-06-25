@@ -76,7 +76,7 @@ export class ViewCategory implements Routeable {
                           <li>
                             <p>
                               p.{bookSnippet.archivePage} { }
-                              <a href={bookSnippet.view.route}>{markdown.renderInline(bookSnippet.title)}</a>
+                              <a href={bookSnippet.view.route}>{bookSnippet.renderedTitle}</a>
                             </p>
                           </li>
                         </>)}

@@ -85,7 +85,7 @@ export class SnippetRoute implements Routeable {
         <Container spaced split>
           <Content>
 
-            <h1>{markdown.renderInline(this.snippet.title)}</h1>
+            <h1>{this.snippet.renderedTitle}</h1>
 
             <p>{formatDate(this.snippet.date)} &bull; {calculateReadingMins(this.snippet.markdownContent)} min</p>
 
@@ -134,7 +134,7 @@ export class SnippetRoute implements Routeable {
               <small>By {this.snippet.book.author}</small>
             </p>
 
-            {markdown.render(this.snippet.markdownContent)}
+            {this.snippet.renderedBody}
 
             <PrevNextLinks snippet={this.snippet} open />
 

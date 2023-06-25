@@ -55,7 +55,7 @@ export const allSnippetsPage: Routeable = {
                       {group.map(snippet => <>
                         <li class="snippet">
                           <p>
-                            <a href={snippet.view.route}>{markdown.renderInline(snippet.title)}</a>
+                            <a href={snippet.view.route}>{snippet.renderedTitle}</a>
                             <br /> {calculateReadingMins(snippet.markdownContent)} min &mdash; {snippet.book.title}
                           </p>
                         </li>
@@ -90,7 +90,7 @@ const bookSnippetSearch: Routeable = {
 
     return {
       body: Buffer.from(JSON.stringify(snippets.map(snippet => ({
-        title: markdown.renderInline(snippet.title),
+        title: snippet.renderedTitle,
         bookTitle: snippet.book.title,
         url: snippet.view.route,
         formattedDate: formatDate(snippet.date),

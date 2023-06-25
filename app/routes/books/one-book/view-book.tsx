@@ -156,7 +156,7 @@ export class ViewBookRoute implements Routeable {
                     <li>
                       <p>
                         p.{bookSnippet.archivePage} { }
-                        <a href={bookSnippet.view.route}>{markdown.renderInline(bookSnippet.title)}</a>
+                        <a href={bookSnippet.view.route}>{bookSnippet.renderedTitle}</a>
                       </p>
                     </li>
                   </>)}
@@ -217,10 +217,10 @@ export class ReadBookRoute implements Routeable {
                 <h3 class='chapter-header'>
                   Chapter {i + 1} &mdash; { }
                   <a href={bookSnippet.view.route}>
-                    {markdown.renderInline(bookSnippet.title)}
+                    {bookSnippet.renderedTitle}
                   </a>
                 </h3>
-                {markdown.render(bookSnippet.markdownContent)}
+                {bookSnippet.renderedBody}
                 <hr />
               </div>
             </>)}
@@ -237,7 +237,7 @@ export class ReadBookRoute implements Routeable {
                   <p>
                     Ch.{i + 1} { }
                     <a href={`#snippet-${bookSnippet.slug}`}>
-                      {markdown.renderInline(bookSnippet.title)}
+                      {bookSnippet.renderedTitle}
                     </a>
                   </p>
                 </li>

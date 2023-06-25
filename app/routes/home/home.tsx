@@ -113,7 +113,7 @@ export const homePage: Routeable = {
 };
 
 const SnippetWithPreview: JSX.Component<{ snippet: Snippet }> = ({ snippet }) => <>
-  <h4><a href={snippet.view.route}>{markdown.renderInline(snippet.title)}</a></h4>
+  <h4><a href={snippet.view.route}>{snippet.renderedTitle}</a></h4>
   <p>{formatDate(snippet.date)} &bull; {calculateReadingMins(snippet.markdownContent)} min</p>
   <p>
     From <a href={snippet.book.view.route}>{snippet.book.title}</a>
@@ -125,10 +125,10 @@ const SnippetWithPreview: JSX.Component<{ snippet: Snippet }> = ({ snippet }) =>
     {snippet.previewMarkdown
       ? <>
         <div>{markdown.render(snippet.previewMarkdown)}</div>
-        <div hidden>{markdown.render(snippet.markdownContent)}</div>
+        <div hidden>{snippet.renderedBody}</div>
         <a href='#' class='continue-reading-snippet-link'><i>Continue reading...</i></a>
       </>
-      : markdown.render(snippet.markdownContent)}
+      : snippet.renderedBody}
   </div>
 </>;
 

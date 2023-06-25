@@ -31,7 +31,7 @@ export const SnippetsGroups: JSX.Component<{ groups: [string, Snippet[]][] }> = 
           {group.map(snippet => <>
             <li>
               <p>
-                <a href={snippet.view.route}>{markdown.renderInline(snippet.title)}</a>
+                <a href={snippet.view.route}>{snippet.renderedTitle}</a>
                 <br /> {calculateReadingMins(snippet.markdownContent)} min &mdash; {snippet.book.title}
               </p>
             </li>
