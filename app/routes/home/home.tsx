@@ -5,7 +5,7 @@ import { QuickLinks } from "../../components/quicklinks";
 import { Head, Html, SiteFooter } from "../../components/site";
 import { renderElement } from "../../core/jsx";
 import { Routeable, addRouteable } from "../../core/router";
-import { allSnippets } from "../../model/models";
+import { allBooks, allSnippets } from "../../model/models";
 import { Snippet } from "../../model/snippets/snippet";
 import { calculateReadingMins, formatDate, markdown, randomElement } from "../../util/helpers";
 import { staticRouteFor } from "../../util/static";
@@ -13,6 +13,18 @@ import { LatestBookSnippets } from "../snippets/latest-list";
 import cssFile from './home.css';
 import headerImage from './home.jpg';
 import randomBookSnippetScript from './random-book-snippet.js';
+
+const featuredBooks = {
+  'introduction-to-the-devout-life': 'cuz its good',
+  'st-john-henry-newman-reply-to-eirenicon': 'cuz its good',
+  'the-sinners-guide': 'cuz its good',
+  'catena-aurea': 'cuz its good',
+  'imitation-of-christ': 'cuz its good',
+  'the-spiritual-combat': 'cuz its good',
+  'the-glories-of-mary': 'cuz its good',
+};
+
+console.log(Object.entries(featuredBooks))
 
 let randomSnippet: Snippet;
 setTimeout(refreshRandomSnippet, 0);
@@ -51,30 +63,46 @@ export const homePage: Routeable = {
 
               <Navlinks />
 
+              <Container spaced centered>
+                <div class="home">
+                  <Content>
+                    <h2>Letters from Heaven</h2>
+                    <blockquote>
+                      <p>
+                        “Have always at hand some approved book of devotion, and read a little of them every day with as much devotion as if you
+                        were reading a letter which those saints had sent you from heaven to show you the way to it, and encourage you to come.”
+                      </p>
+                      <ul>
+                        <li>
+                          <p>&mdash; St. Francis de Sales</p>
+                          <p>
+                            <a href="/books/introduction-to-the-devout-life.html">Introduction to the Devout Life</a>, page{' '}
+                            <a rel="noopener" href="/book-snippets/2021-06-26-how-we-should-do-holy-reading.html">77</a>
+                          </p>
+                        </li>
+                      </ul>
+                    </blockquote>
+                  </Content>
+                </div>
+              </Container>
+
+              <Container spaced>
+
+                <h2>Featured books</h2>
+
+                {Object.entries(featuredBooks).map(([id, why]) => {
+                  const book = allBooks.find(book => book.slug === id)!;
+                  return <>
+                    <h3>{book.title}</h3>
+                    <Content><p>{why}</p></Content>
+                  </>;
+                })}
+
+              </Container>
+
               <Container spaced split>
 
                 <div>
-                  <div class="home">
-                    <Content>
-                      <h2>Letters from Heaven</h2>
-                      <blockquote>
-                        <p>
-                          “Have always at hand some approved book of devotion, and read a little of them every day with as much devotion as if you
-                          were reading a letter which those saints had sent you from heaven to show you the way to it, and encourage you to come.”
-                        </p>
-                        <ul>
-                          <li>
-                            <p>&mdash; St. Francis de Sales</p>
-                            <p>
-                              <a href="/books/introduction-to-the-devout-life.html">Introduction to the Devout Life</a>, page{' '}
-                              <a rel="noopener" href="/book-snippets/2021-06-26-how-we-should-do-holy-reading.html">77</a>
-                            </p>
-                          </li>
-                        </ul>
-                      </blockquote>
-                    </Content>
-                  </div>
-                  <br />
 
                   <div>
                     <h3>Random Book Snippet (<a href='#' id='refresh-random-book-snippet'>Another</a>)</h3>
