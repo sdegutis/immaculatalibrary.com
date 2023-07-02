@@ -34,7 +34,7 @@ function evalTree(element: JSX.Element) {
     element = element.tag(element.attrs, element.children);
   }
 
-  element.children = element.children.flat().map(child => {
+  element.children = element.children.flat(Infinity).map(child => {
     if (isElement<JSX.Element>(child)) {
       return evalTree(child);
     }
@@ -70,7 +70,7 @@ function hoistHeadThings(element: PlainElement, context: Context) {
 
 function elementToString(element: PlainElement): string {
   const childrenString = (element.children
-    .flat()
+    .flat(Infinity)
     .map(child => {
       if (child === undefined || child === null || child === false) {
         return '';
