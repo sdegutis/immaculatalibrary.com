@@ -1,6 +1,6 @@
 ---
-title: 'St. John Henry Newman’s Letter to Dr. Pusey in reply to his Eirenicon'
-subtitle: ''
+title: 'A Defense of the Teachings of Mary'
+subtitle: 'A letter by St. John Henry Newman'
 dateAdded: '2020-06-04'
 author: 'St. John Henry Newman'
 translator: ''

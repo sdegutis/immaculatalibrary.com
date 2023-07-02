@@ -15,16 +15,14 @@ import headerImage from './home.jpg';
 import randomBookSnippetScript from './random-book-snippet.js';
 
 const featuredBooks = {
-  'introduction-to-the-devout-life': 'cuz its good',
-  'st-john-henry-newman-reply-to-eirenicon': 'cuz its good',
-  'the-sinners-guide': 'cuz its good',
-  'catena-aurea': 'cuz its good',
-  'imitation-of-christ': 'cuz its good',
-  'the-spiritual-combat': 'cuz its good',
-  'the-glories-of-mary': 'cuz its good',
+  'introduction-to-the-devout-life': `Practical advice for daily life`,
+  'st-john-henry-newman-reply-to-eirenicon': `A thorough defense of the Church's core teachings about Mary`,
+  'the-sinners-guide': `Practical teachings`,
+  'catena-aurea': `The Church Fathers' commentary on the Gospels`,
+  'imitation-of-christ': `Devotional material`,
+  'the-spiritual-combat': `Practical advice in spiritual warfare`,
+  'the-glories-of-mary': `Devotional book about Mary`,
 };
-
-console.log(Object.entries(featuredBooks))
 
 let randomSnippet: Snippet;
 setTimeout(refreshRandomSnippet, 0);
@@ -90,13 +88,17 @@ export const homePage: Routeable = {
 
                 <h2>Featured books</h2>
 
-                {Object.entries(featuredBooks).map(([id, why]) => {
-                  const book = allBooks.find(book => book.slug === id)!;
-                  return <>
-                    <h3>{book.title}</h3>
-                    <Content><p>{why}</p></Content>
-                  </>;
-                })}
+                <ul id='featured-books'>
+                  {Object.entries(featuredBooks).map(([id, why]) => {
+                    const book = allBooks.find(book => book.slug === id)!;
+                    return <>
+                      <li class='featured-book'>
+                        <h3><a href={book.view.route}>{book.title}</a></h3>
+                        <Content><p>{why}</p></Content>
+                      </li>
+                    </>;
+                  })}
+                </ul>
 
               </Container>
 
