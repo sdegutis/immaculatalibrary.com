@@ -2,8 +2,8 @@ const unary = new Set(['br', 'hr', 'input']);
 
 interface Context {
   head?: JSX.Element;
-  stylesheets: Set<string>;
-  scripts: Set<string>;
+  stylesheets: string[];
+  scripts: string[];
 }
 
 type PlainElement = {
@@ -16,8 +16,8 @@ export function renderElement(element: JSX.Element): Buffer {
   const simpleElement = evalTree(element) as PlainElement;
 
   const context: Context = {
-    stylesheets: new Set(),
-    scripts: new Set(),
+    stylesheets: [],
+    scripts: [],
   };
 
   hoistHeadThings(simpleElement, context);
@@ -49,16 +49,17 @@ function evalTree(element: JSX.Element) {
 function hoistHeadThings(element: PlainElement, context: Context) {
   if (element.tag === 'head') {
     context.head = element;
+    return;
   }
 
   element.children = element.children.map(child => {
     if (isElement<PlainElement>(child)) {
       if (child.tag === 'link' && child.attrs["rel"] === 'stylesheet') {
-        context.stylesheets.add(elementToString(child));
+        context.stylesheets.push(elementToString(child));
         return '';
       }
       else if (child.tag === 'script' && child.attrs["src"]) {
-        context.scripts.add(elementToString(child));
+        context.scripts.push(elementToString(child));
         return '';
       }
       hoistHeadThings(child, context);
@@ -108,7 +109,6 @@ function elementToString(element: PlainElement): string {
 function isElement<T extends PlainElement | JSX.Element>(object: any): object is T {
   return (
     typeof object === 'object'
-    && object !== null
     && 'tag' in object
     && 'attrs' in object
     && 'children' in object
