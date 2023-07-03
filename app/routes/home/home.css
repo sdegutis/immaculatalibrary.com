@@ -62,7 +62,7 @@
 
 #featured-books-container {
   background: var(--bgalt);
-  padding: 2em 0;
+  padding: 1em 0;
 }
 
 #featured-books {
@@ -71,13 +71,12 @@
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1em;
+  gap: 2em;
 }
 
 @media (min-width: 600px) {
   #featured-books {
     grid-template-columns: repeat(3, 1fr);
-    gap: 2em;
   }
 }
 
