@@ -15,13 +15,27 @@ import headerImage from './home.jpg';
 import randomBookSnippetScript from './random-book-snippet.js';
 
 const featuredBooks = {
-  'introduction-to-the-devout-life': `Practical advice for daily life`,
-  'st-john-henry-newman-reply-to-eirenicon': `A thorough defense of the Church's core teachings about Mary`,
-  'the-sinners-guide': `Practical teachings`,
-  'catena-aurea': `The Church Fathers' commentary on the Gospels`,
-  'imitation-of-christ': `Devotional material`,
-  'the-spiritual-combat': `Practical advice in spiritual warfare`,
-  'the-glories-of-mary': `Devotional book about Mary`,
+  'introduction-to-the-devout-life':
+    `Practical advice for living in a fallen world while building devotion and avoiding sin. Great both for those new to the faith and those looking to reinvigorate their spiritual life.`,
+
+  'imitation-of-christ':
+    `One of the most popular and widely acclaimed books in all of Christian history, the Imitation of Christ is densely packed with devotional material for reflection and prayer.`,
+
+  'st-john-henry-newman-reply-to-eirenicon':
+    `A thorough defense of the Church's core teachings about Mary, which many useful tangents like the process of conversion and an explanation of how the Church's devotions emerge.`,
+
+  'catena-aurea':
+    `Commentary of the Church Fathers on the four Gospels, compiled and weaved together seamlessly by St. Thomas Aquinas and translated into English by St. John Henry Newman.`,
+
+  'the-sinners-guide':
+    `Exhortations to practice virtue and avoid sin, tackling this topic from practically every angle possible, with extremely thorough explanations and reasoned theology at every step along the way.`,
+
+  'the-spiritual-combat':
+    `Practical guide to the temptations we will face by trying to live a devout life and how to overcome them, with practical theology about the nature of sin, temptation, grace, and virtue.`,
+
+  'the-glories-of-mary':
+    `A comprehensive explanation and defense of all the devotions and doctrines relating to the Blessed Virgin Mary, structured around the Hail Holy Queen prayer, with historical examples and prayers.`,
+
 };
 
 let randomSnippet: Snippet;
@@ -45,7 +59,7 @@ export const homePage: Routeable = {
             imagePath={mainSiteHeaderImagePath} />
           <body>
 
-            <main>
+            <div>
 
               <link rel="stylesheet" href={staticRouteFor(cssFile)} />
 
@@ -84,6 +98,10 @@ export const homePage: Routeable = {
                 </div>
               </Container>
 
+            </div>
+
+            <div id='featured-books-container'>
+
               <Container spaced>
 
                 <h2>Featured books</h2>
@@ -101,6 +119,10 @@ export const homePage: Routeable = {
                 </ul>
 
               </Container>
+
+            </div>
+
+            <main>
 
               <Container spaced split>
 
