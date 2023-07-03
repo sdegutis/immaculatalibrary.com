@@ -70,8 +70,14 @@
   list-style-type: none;
 
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 2em;
+}
+
+@media (min-width: 450px) {
+  #featured-books {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (min-width: 600px) {
