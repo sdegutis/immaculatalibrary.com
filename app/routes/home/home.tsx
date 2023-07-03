@@ -16,7 +16,7 @@ import randomBookSnippetScript from './random-book-snippet.js';
 
 const featuredBooks = {
   'introduction-to-the-devout-life':
-    `Practical advice for living in a fallen world while building devotion and avoiding sin. Great both for those new to the faith and those looking to reinvigorate their spiritual life.`,
+    `Practical advice for living in a fallen world while building devotion and avoiding sin, useful both for those new to the faith and those looking to reinvigorate their spiritual life.`,
 
   'imitation-of-christ':
     `One of the most popular and widely acclaimed books in all of Christian history, the Imitation of Christ is densely packed with devotional material for reflection and prayer.`,
