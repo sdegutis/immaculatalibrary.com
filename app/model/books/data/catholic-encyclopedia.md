@@ -1,5 +1,5 @@
 ---
-title: 'Catholic Encyclopedia (15 volumes)'
+title: 'The 1912 Catholic Encyclopedia'
 subtitle: ''
 dateAdded: '2020-04-07'
 author: 'Charles G. Herbermann, Ph.D., L.L.D., Edward A. Pace, Ph.D., D.D., Conde B. Pallen, Ph.D., L.L.D., Thomas J. Shahan, D.D., John J. Wynne, S.J., Assisted by Numerous Collaborators'

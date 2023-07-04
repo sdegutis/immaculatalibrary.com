@@ -36,6 +36,9 @@ const featuredBooks = {
   'the-glories-of-mary':
     `A comprehensive explanation and defense of all the devotions and doctrines relating to the Blessed Virgin Mary, structured around the Hail Holy Queen prayer, with historical examples and prayers.`,
 
+  'catholic-encyclopedia':
+    `The 1912 edition of the Catholic Encyclopedia, a 15 volume set series containing thorough and invaluable information on nearly every topic from the eyes of about 100 years ago.`,
+
 };
 
 let randomSnippet: Snippet;
