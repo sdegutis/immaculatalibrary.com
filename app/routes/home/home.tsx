@@ -5,7 +5,7 @@ import { QuickLinks } from "../../components/quicklinks";
 import { Head, Html, SiteFooter } from "../../components/site";
 import { renderElement } from "../../core/jsx";
 import { Routeable, addRouteable } from "../../core/router";
-import { allBooks, allSnippets } from "../../model/models";
+import { allBooks, allCategories, allSnippets } from "../../model/models";
 import { Snippet } from "../../model/snippets/snippet";
 import { calculateReadingMins, formatDate, markdown, randomElement } from "../../util/helpers";
 import { staticRouteFor } from "../../util/static";
@@ -14,32 +14,49 @@ import cssFile from './home.css';
 import headerImage from './home.jpg';
 import randomBookSnippetScript from './random-book-snippet.js';
 
-const featuredBooks = {
-  'introduction-to-the-devout-life':
-    `Practical advice for living in a fallen world while building devotion and avoiding sin, useful both for those new to the faith and those looking to reinvigorate their spiritual life.`,
+const featuredBooks = [
+  {
+    id: 'introduction-to-the-devout-life',
+    why: `Practical advice for living in a fallen world while building devotion and avoiding sin, useful both for those new to the faith and those looking to reinvigorate their spiritual life.`,
+    image: 'instruction',
+  },
+  {
+    id: 'imitation-of-christ',
+    why: `One of the most popular and widely acclaimed books in all of Christian history, the Imitation of Christ is densely packed with devotional material for reflection and prayer.`,
+    image: 'devotion',
+  },
+  {
+    id: 'st-john-henry-newman-reply-to-eirenicon',
+    why: `A thorough defense of the Church's core teachings about Mary, which many useful tangents like the process of conversion and an explanation of how the Church's devotions emerge.`,
+    image: 'st-john-henry-newman',
+  },
+  {
+    id: 'catena-aurea',
+    why: `Commentary of the Church Fathers on the four Gospels, compiled and weaved together seamlessly by St. Thomas Aquinas and translated into English by St. John Henry Newman.`,
+    image: 'classics',
+  },
+  {
+    id: 'the-sinners-guide',
+    why: `Exhortations to practice virtue and avoid sin, tackling this topic from practically every angle possible, with extremely thorough explanations and reasoned theology at every step along the way.`,
+    image: 'holy-spirit',
+  },
+  {
+    id: 'the-spiritual-combat',
+    why: `Practical guide to the temptations we will face by trying to live a devout life and how to overcome them, with practical theology about the nature of sin, temptation, grace, and virtue.`,
+    image: 'apologetics',
+  },
+  {
+    id: 'the-glories-of-mary',
+    why: `A comprehensive explanation and defense of all the devotions and doctrines relating to the Blessed Virgin Mary, structured around the Hail Holy Queen prayer, with historical examples and prayers.`,
+    image: 'mary',
+  },
+  {
+    id: 'catholic-encyclopedia',
+    why: `The 1912 edition of the Catholic Encyclopedia, a 15 volume set series containing thorough and invaluable information on nearly every topic from the eyes of about 100 years ago.`,
+    image: 'reference',
+  },
 
-  'imitation-of-christ':
-    `One of the most popular and widely acclaimed books in all of Christian history, the Imitation of Christ is densely packed with devotional material for reflection and prayer.`,
-
-  'st-john-henry-newman-reply-to-eirenicon':
-    `A thorough defense of the Church's core teachings about Mary, which many useful tangents like the process of conversion and an explanation of how the Church's devotions emerge.`,
-
-  'catena-aurea':
-    `Commentary of the Church Fathers on the four Gospels, compiled and weaved together seamlessly by St. Thomas Aquinas and translated into English by St. John Henry Newman.`,
-
-  'the-sinners-guide':
-    `Exhortations to practice virtue and avoid sin, tackling this topic from practically every angle possible, with extremely thorough explanations and reasoned theology at every step along the way.`,
-
-  'the-spiritual-combat':
-    `Practical guide to the temptations we will face by trying to live a devout life and how to overcome them, with practical theology about the nature of sin, temptation, grace, and virtue.`,
-
-  'the-glories-of-mary':
-    `A comprehensive explanation and defense of all the devotions and doctrines relating to the Blessed Virgin Mary, structured around the Hail Holy Queen prayer, with historical examples and prayers.`,
-
-  'catholic-encyclopedia':
-    `The 1912 edition of the Catholic Encyclopedia, a 15 volume set series containing thorough and invaluable information on nearly every topic from the eyes of about 100 years ago.`,
-
-};
+];
 
 let randomSnippet: Snippet;
 setTimeout(refreshRandomSnippet, 0);
@@ -110,11 +127,13 @@ export const homePage: Routeable = {
                 <h2>Featured books</h2>
 
                 <ul id='featured-books'>
-                  {Object.entries(featuredBooks).map(([id, why]) => {
+                  {featuredBooks.map(({ id, why, image }) => {
                     const book = allBooks.find(book => book.slug === id)!;
+                    const imageUrl = allCategories.find(cat => cat.slug === image)!.imageBig;
                     return <>
                       <li class='featured-book'>
                         <h3><a href={book.view.route}>{book.title}</a></h3>
+                        <div class='thumb' style={`background-image: url(${imageUrl})`} />
                         <Content><p>{why}</p></Content>
                       </li>
                     </>;
