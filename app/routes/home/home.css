@@ -60,9 +60,14 @@
   margin-bottom: 0;
 }
 
-#featured-books-container {
+#featured-books-area {
   background: var(--bgalt);
-  padding: 1em 0;
+  padding: 3em 0;
+}
+
+#featured-books-container {
+  margin: 0 auto;
+  max-width: calc(100% - 4em);
 }
 
 #featured-books {
@@ -83,6 +88,18 @@
 @media (min-width: 750px) {
   #featured-books {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1050px) {
+  #featured-books {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1350px) {
+  #featured-books {
+    grid-template-columns: repeat(5, 1fr);
   }
 }
 

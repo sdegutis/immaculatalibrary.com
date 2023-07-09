@@ -120,9 +120,9 @@ export const homePage: Routeable = {
 
             </div>
 
-            <div id='featured-books-container'>
+            <div id='featured-books-area'>
 
-              <Container spaced>
+              <div id='featured-books-container'>
 
                 <h2>Featured books</h2>
 
@@ -133,14 +133,16 @@ export const homePage: Routeable = {
                     return <>
                       <li class='featured-book'>
                         <h3><a href={book.view.route}>{book.title}</a></h3>
-                        <div class='thumb' style={`background-image: url(${imageUrl})`} />
+                        <a href={book.view.route}>
+                          <div class='thumb' style={`background-image: url(${imageUrl})`} />
+                        </a>
                         <Content><p>{why}</p></Content>
                       </li>
                     </>;
                   })}
                 </ul>
 
-              </Container>
+              </div>
 
             </div>
 
