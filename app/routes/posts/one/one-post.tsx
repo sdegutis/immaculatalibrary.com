@@ -3,6 +3,7 @@ import { Content } from "../../../components/content/content";
 import { SiteCommon } from "../../../components/site";
 import { renderElement } from "../../../core/jsx";
 import { addRouteable, Routeable, RouteMeta, RouteMethod } from "../../../core/router";
+import { allCategories } from "../../../model/models";
 import { Post } from "../../../model/posts/post";
 import { calculateReadingMins, formatDate, markdown } from "../../../util/helpers";
 import { staticRouteFor } from "../../../util/static";
@@ -22,10 +23,11 @@ export class ViewPostPage implements Routeable {
   method: RouteMethod = 'GET';
 
   handle(input: RouteInput): RouteOutput {
+    const image = allCategories.find(cat => cat.slug === 'devotion')!.imageBig;
     return {
       body: renderElement(<SiteCommon
         title={this.post.title}
-        image={this.post.imageBig}
+        image={image}
         input={input}
       >
         <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['post.css']!)} />
