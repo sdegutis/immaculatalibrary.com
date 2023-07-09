@@ -14,12 +14,10 @@ function loadContentFile<T>(file: FsFile) {
 }
 
 export class Post {
-  static from(dir: FsDir) {
-    const matchResults = dir.name.match(/^(\d{4}-\d{2}-\d{2})-(.+)$/)!;
+  static from(file: FsFile) {
+    const matchResults = file.name.match(/^(\d{4}-\d{2}-\d{2})-(.+).md$/)!;
     const date = matchResults[1]!;
     const slug = matchResults[2]!;
-
-    const file = dir.filesByName['content.md']!
 
     const data = loadContentFile<{
       draft: boolean,
@@ -32,8 +30,6 @@ export class Post {
       data.markdownContent,
       data.meta.draft,
       data.meta.title,
-      staticRouteFor(dir.filesByName['image-big.jpg']!),
-      staticRouteFor(dir.filesByName['image-small.jpg']!),
     );
   }
 
@@ -46,8 +42,6 @@ export class Post {
     public markdownContent: string,
     public draft: boolean,
     public title: string,
-    public imageBig: string,
-    public imageSmall: string,
   ) {
     this.previewMarkdown = this.derivePreview(2000);
 

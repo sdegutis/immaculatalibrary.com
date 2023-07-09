@@ -83,7 +83,7 @@ export const allMovies = (moviesDir
   .sort(sortBy(m => movieOrder.indexOf(m.slug))));
 
 export const allPosts = (postsDir
-  .dirs.map(dir => Post.from(dir))
+  .files.map(file => Post.from(file))
   .sort(sortBy(post => post.date))
   .filter(s => !s.draft)
   .reverse());
