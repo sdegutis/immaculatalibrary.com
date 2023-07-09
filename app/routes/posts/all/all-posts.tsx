@@ -8,10 +8,10 @@ import { staticRouteFor } from "../../../util/static";
 import cssFile from './posts.css';
 
 export const allPostsPage: Routeable = {
-  route: `/posts.html`,
+  route: `/articles.html`,
   method: 'GET',
   handle: (input) => {
-    const title = 'All Blog Posts';
+    const title = 'All Articles';
     const image = staticRouteFor(__dir.filesByName['posts.jpg']!);
     return {
       body: renderElement(<>

@@ -17,7 +17,7 @@ export class ViewPostPage implements Routeable {
   }
 
   get route() {
-    return `/posts/${this.post.date}-${this.post.slug}.html`;
+    return `/articles/${this.post.date}-${this.post.slug}.html`;
   }
 
   method: RouteMethod = 'GET';
