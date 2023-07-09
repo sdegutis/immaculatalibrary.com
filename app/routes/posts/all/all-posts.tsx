@@ -2,7 +2,7 @@ import { Container } from "../../../components/container/container";
 import { SiteCommon } from '../../../components/site';
 import { renderElement } from "../../../core/jsx";
 import { addRouteable, Routeable } from '../../../core/router';
-// import { allPosts } from "../../../model/models";
+import { allPosts } from "../../../model/models";
 import { calculateReadingMins, excerpt, formatDate, markdown } from '../../../util/helpers';
 import { staticRouteFor } from "../../../util/static";
 import cssFile from './posts.css';
@@ -26,12 +26,12 @@ export const allPostsPage: Routeable = {
 
             <h1>{title}</h1>
 
-            {/* <ul class="all-blog-posts">
+            <ul class="all-blog-posts">
               {allPosts.map(post => <>
                 <li class="post-row">
-                  <a href={post.view.route}>
+                  {/* <a href={post.view.route}>
                     <img class="image" src={post.imageSmall} />
-                  </a>
+                  </a> */}
                   <div>
                     <a class="title" href={post.view.route}>
                       {post.title}
@@ -45,7 +45,7 @@ export const allPostsPage: Routeable = {
                   </div>
                 </li>
               </>)}
-            </ul> */}
+            </ul>
 
           </Container>
         </SiteCommon>
