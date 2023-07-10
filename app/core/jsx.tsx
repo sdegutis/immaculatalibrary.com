@@ -1,4 +1,4 @@
-const unary = new Set(['br', 'hr', 'input']);
+const UNARY = new Set(['br', 'hr', 'input']);
 
 interface Context {
   head?: JSX.Element;
@@ -99,7 +99,7 @@ function elementToString(element: PlainElement): string {
       .join(' ')
     : '');
 
-  if (unary.has(element.tag as string)) {
+  if (UNARY.has(element.tag as string)) {
     return `<${element.tag}${attrsString}/>`;
   }
 
