@@ -24,11 +24,14 @@ export function addRouteable(routeable: Routeable) {
   }
 
   addRoute(`${routeable.method} ${routeable.route}`, (input) => routeable.handle(input));
+
+  return routeable;
 }
 
 function addRoute(route: string, handler: RouteHandler) {
   if (allRoutes.has(route)) {
-    throw new Error(`Duplicate route: ${route}`);
+    console.log(`Duplicate route: ${route}`);
+    return;
   }
 
   allRoutes.set(route, handler);
