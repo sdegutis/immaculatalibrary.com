@@ -1,45 +1,55 @@
 import 'dotenv/config';
 import * as http from "http";
 import 'source-map-support/register';
+import internal, { pipeline, Readable } from 'stream';
+import { createGzip } from 'zlib';
 
-const baseUrl = process.env['BASE_URL']!;
+export const baseUrl = process.env['BASE_URL']!;
+export const isLive = baseUrl.includes('.com');
 
-persisted.sessions ??= new Map<string, Session>();
+export function makeAbsoluteUrl(relativeUrl: string) {
+  return new URL(relativeUrl, baseUrl).toString();
+}
 
-export class Server {
+export function createPersistentServer(port: number) {
+  const persistentServer = {
+    httpHandler: (req: http.IncomingMessage, res: http.ServerResponse) => { res.end(); },
+    wsHandler: (req: http.IncomingMessage, socket: internal.Duplex, head: Buffer) => { },
+  };
 
-  handler!: http.RequestListener;
+  const server = http.createServer((req: http.IncomingMessage, res: http.ServerResponse) => {
+    persistentServer.httpHandler(req, res);
+  });
 
-  constructor(port: number) {
-    const server = http.createServer((req: http.IncomingMessage, res: http.ServerResponse) => {
-      this.handler(req, res);
-    });
-    server.listen(port);
-    console.log(`Running on http://localhost:${port}`);
-  }
+  server.on('upgrade', (req, socket, head) => {
+    persistentServer.wsHandler(req, socket, head);
+  });
 
+  server.listen(port);
+  console.log(`Running on http://localhost:${port}`);
+
+  return persistentServer;
 }
 
 export function makeRequestHandler(handler: RouteHandler): http.RequestListener {
   return ((req: http.IncomingMessage, res: http.ServerResponse) => {
     let chunks: Buffer[] = [];
     req.on('data', (data: Buffer) => chunks.push(data));
-    req.on('end', () => {
-      const cookieKvs = req.headers.cookie?.split('; ');
-      const cookiePairs = cookieKvs?.map(kv => kv.split('=') as [string, string]);
-      const cookies = cookiePairs && Object.fromEntries(cookiePairs);
-      const sessionId = cookies?.['wwwiii'] || null;
-      const session = sessionId ? persisted.sessions!.get(sessionId) ?? null : null;
-
+    req.on('end', async () => {
       const input: RouteInput = {
-        url: new URL(req.url!, baseUrl),
+        url: new URL(req.url ?? '', baseUrl),
         body: Buffer.concat(chunks),
-        method: req.method!,
+        method: req.method as Uppercase<string>,
         headers: req.headers,
-        session,
+        cookies: Object.fromEntries(
+          (req.headers.cookie ?? '')
+            .split(';')
+            .filter(s => s)
+            .map(s => s.trim().split('='))),
       };
 
-      const output = handler(input);
+      const output = await handler(input);
+      const outBody = output.body ?? '';
 
       res.statusCode = output.status ?? 200;
       for (const [k, v] of Object.entries(output.headers ?? {})) {
@@ -47,7 +57,19 @@ export function makeRequestHandler(handler: RouteHandler): http.RequestListener 
           res.setHeader(k, v);
         }
       }
-      res.end(output.body ?? '');
+
+      if (input.headers['accept-encoding']?.includes('gzip')) {
+        res.setHeader('content-encoding', 'gzip');
+        const inStream = Readable.from([outBody]);
+        const gzip = createGzip();
+        pipeline(inStream, gzip, res, (err) => {
+          res.end();
+          inStream.destroy();
+        });
+      }
+      else {
+        res.end(outBody);
+      }
     });
   });
 }

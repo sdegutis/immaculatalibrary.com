@@ -3,6 +3,7 @@ import { randomUUID } from "crypto";
 import { addRouteable, Routeable } from "../../core/router";
 import { sameSiteReferer } from "../../util/helpers";
 import { notAllowedResponse } from "../../util/restricted/login";
+import { sessions } from './session';
 
 const users: string[] = [
   "$2a$10$Qwea9c8jHbc/UlaAdr66Gumlhs46/VBjyy/xZd92QgJRtytvQs5sm",
@@ -19,7 +20,7 @@ export const loginRoute: Routeable = {
       const isValid = users.some(existing => bcrypt.compareSync(userpass, existing));
       if (isValid) {
         const sessionid = randomUUID();
-        persisted.sessions!.set(sessionid, {
+        sessions.set(sessionid, {
           isAdmin: true
         });
 
@@ -27,7 +28,7 @@ export const loginRoute: Routeable = {
           status: 302,
           headers: {
             'Location': sameSiteReferer(input)?.href ?? '/',
-            'Set-Cookie': `wwwiii=${sessionid}`,
+            'Set-Cookie': `wwwiii=${sessionid}; Path=/`,
           }
         };
       }

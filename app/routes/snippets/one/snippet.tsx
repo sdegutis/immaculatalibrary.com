@@ -6,8 +6,9 @@ import { renderElement } from "../../../core/jsx";
 import { addRouteable, Routeable, RouteMeta, RouteMethod } from "../../../core/router";
 import { Snippet } from "../../../model/snippets/snippet";
 import { sortedTags } from "../../../model/snippets/tag";
-import { calculateReadingMins, formatDate, markdown, sameSiteReferer } from "../../../util/helpers";
+import { calculateReadingMins, formatDate, sameSiteReferer } from "../../../util/helpers";
 import { staticRouteFor } from "../../../util/static";
+import { getSession } from "../../admin/session";
 import adminFormCss from '../create/admin-form.css';
 import { LatestBookSnippets } from "../latest-list";
 
@@ -89,7 +90,7 @@ export class SnippetRoute implements Routeable {
 
             <p>{formatDate(this.snippet.date)} &bull; {calculateReadingMins(this.snippet.markdownContent)} min</p>
 
-            {input.session?.isAdmin && <>
+            {getSession(input)?.isAdmin && <>
               <PrevNextLinks snippet={this.snippet} open />
               <div>
                 <AdminButton href={this.snippet.clone.route}>Make Next</AdminButton> { }
@@ -140,7 +141,7 @@ export class SnippetRoute implements Routeable {
 
           </Content>
           <div>
-            {input.session?.isAdmin && <>
+            {getSession(input)?.isAdmin && <>
               <link rel='stylesheet' href={staticRouteFor(adminFormCss)} />
               <form id='edit-snippet-form' method="POST" action={this.snippet.edit.route} style='display:none'>
                 <span>Page</span>    <input autocomplete='off' name='archivePage' value={this.snippet.archivePage} autofocus />

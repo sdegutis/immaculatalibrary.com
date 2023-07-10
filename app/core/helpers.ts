@@ -8,6 +8,6 @@ export function htmlResponse(html: JSX.Element): RouteOutput {
   };
 }
 
-export function redirectResponse(url: string): RouteOutput {
-  return { status: 302, headers: { 'Location': url } };
+export function redirectResponse(url: string, status = 302): RouteOutput {
+  return { status, headers: { 'Location': url } };
 }

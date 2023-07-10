@@ -2,11 +2,12 @@ import { Content } from "../../../components/content/content";
 import { DarkModeScript } from "../../../components/dark-mode/button";
 import { Head, Html } from "../../../components/site";
 import { renderElement } from "../../../core/jsx";
-import { addRouteable, Routeable, RouteMeta, RouteMethod } from "../../../core/router";
+import { RouteMeta, RouteMethod, Routeable, addRouteable } from "../../../core/router";
 import { Snippet } from "../../../model/snippets/snippet";
 import { calculateReadingMins, markdown } from "../../../util/helpers";
 import { notAllowedResponse } from "../../../util/restricted/login";
 import { staticRouteFor } from "../../../util/static";
+import { getSession } from "../../admin/session";
 import adminFormCss from './admin-form.css';
 import adminCssPage from './clone-style.css';
 import newBookSnippetMobileScript from './new-book-snippet-mobile.js';
@@ -45,7 +46,7 @@ export class CloneSnippetPage implements Routeable {
   method: RouteMethod = 'GET';
 
   handle(input: RouteInput): RouteOutput {
-    if (!input.session?.isAdmin) return notAllowedResponse(input);
+    if (!getSession(input)?.isAdmin) return notAllowedResponse(input);
 
     return {
       body: renderElement(<>
@@ -110,7 +111,7 @@ export class CloneSnippetMobilePage implements Routeable {
   method: RouteMethod = 'GET';
 
   handle(input: RouteInput): RouteOutput {
-    if (!input.session?.isAdmin) return notAllowedResponse(input);
+    if (!getSession(input)?.isAdmin) return notAllowedResponse(input);
 
     return {
       body: renderElement(<>
@@ -166,7 +167,7 @@ export class NewSnippetPage implements Routeable {
   method: RouteMethod = 'GET';
 
   handle(input: RouteInput): RouteOutput {
-    if (!input.session?.isAdmin) return notAllowedResponse(input);
+    if (!getSession(input)?.isAdmin) return notAllowedResponse(input);
 
     return {
       body: renderElement(<>
@@ -224,7 +225,7 @@ export class CreateSnippetRoute implements Routeable {
   method: RouteMethod = 'POST';
 
   handle(input: RouteInput): RouteOutput {
-    if (!input.session?.isAdmin) return notAllowedResponse(input);
+    if (!getSession(input)?.isAdmin) return notAllowedResponse(input);
 
     const params = new URLSearchParams(input.body.toString('utf8'));
     const newSnippet = Snippet.create({
@@ -255,7 +256,7 @@ export class EditSnippetRoute implements Routeable {
   method: RouteMethod = 'POST';
 
   handle(input: RouteInput): RouteOutput {
-    if (!input.session?.isAdmin) return notAllowedResponse(input);
+    if (!getSession(input)?.isAdmin) return notAllowedResponse(input);
 
     const params = new URLSearchParams(input.body.toString('utf8'));
 

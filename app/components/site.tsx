@@ -1,4 +1,5 @@
 import { loginRoute, logoutRoute } from "../routes/admin/login";
+import { getSession } from "../routes/admin/session";
 import { inlineFontCss } from "../routes/font/fonts";
 import { mainSiteHeaderImagePath } from "../routes/home/home";
 import { staticRouteFor } from "../util/static";
@@ -49,7 +50,7 @@ export const SiteFooter: JSX.Component<{ input: RouteInput }> = (attrs, children
       {' | '}
       <DarkModeButton />
       {' | '}
-      {attrs.input.session?.isAdmin ? <>
+      {getSession(attrs.input)?.isAdmin ? <>
         <a href={logoutRoute.route}>Logout</a>
       </> : <>
         <a href={loginRoute.route}>Login</a>
