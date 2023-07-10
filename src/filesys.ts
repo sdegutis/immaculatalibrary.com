@@ -110,6 +110,7 @@ export class FsFile extends FsNode {
 
   declare parent: FsDir;
   buffer!: Buffer;
+  transformedJs?: string;
 
   replace(newBuffer: Buffer) {
     this.buffer = newBuffer;

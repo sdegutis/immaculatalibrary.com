@@ -61,18 +61,40 @@ class Module {
   #ran = false;
   #runtime: Runtime;
 
+  code;
+  sourceMap;
+  filePath;
+
   constructor(
     private file: FsFile,
     runtime: Runtime,
   ) {
     this.#runtime = runtime;
+
+    const rawCode = this.file.buffer.toString('utf8');
+    this.filePath = pathToFileURL(this.file.realPath);
+
+    const transformed = sucrase.transform(rawCode, {
+      transforms: ['typescript', 'imports', 'jsx'],
+      jsxPragma: '((tag,attrs,...children)=>({tag,attrs:attrs??{},children}))',
+      jsxFragmentPragma: '""',
+      disableESTransforms: true,
+      production: true,
+      filePath: this.filePath.href,
+      sourceMapOptions: {
+        compiledFilename: this.file.realPath,
+      },
+    });
+
+    this.code = transformed.code;
+    this.sourceMap = transformed.sourceMap!;
+
+    this.file.transformedJs = this.code;
   }
 
   require() {
     if (!this.#ran) {
       this.#ran = true;
-
-      const rawCode = this.file.buffer.toString('utf8');
 
       const args = {
         require: (path: string) => this.#requireFromWithinModule(path),
@@ -81,24 +103,10 @@ class Module {
         __file: this.file,
       };
 
-      const filePath = pathToFileURL(this.file.realPath);
-
-      const { code, sourceMap } = sucrase.transform(rawCode, {
-        transforms: ['typescript', 'imports', 'jsx'],
-        jsxPragma: '((tag,attrs,...children)=>({tag,attrs:attrs??{},children}))',
-        jsxFragmentPragma: '""',
-        disableESTransforms: true,
-        production: true,
-        filePath: filePath.href,
-        sourceMapOptions: {
-          compiledFilename: this.file.realPath,
-        },
-      });
-
-      const sourceMapBase64 = Buffer.from(JSON.stringify(sourceMap!)).toString('base64url');
+      const sourceMapBase64 = Buffer.from(JSON.stringify(this.sourceMap)).toString('base64url');
       const sourceMapUrlStr = `\n//# sourceMappingURL=data:application/json;base64,${sourceMapBase64}`;
-      const runModule = vm.compileFunction(code + sourceMapUrlStr, Object.keys(args), {
-        filename: filePath.href,
+      const runModule = vm.compileFunction(this.code + sourceMapUrlStr, Object.keys(args), {
+        filename: this.filePath.href,
         parsingContext: this.#runtime.context,
       });
 
