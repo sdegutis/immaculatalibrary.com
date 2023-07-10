@@ -14,7 +14,7 @@ export const Navlinks: JSX.Component<{}> = () => <>
   <Container>
     <div id='navlinks'>
       <a href={aboutPage.route}>About</a>{' | '}
-      <a href={allBooksPage.route}>Books</a>{' | '}
+      {/* <a href={allBooksPage.route}>Books</a>{' | '} */}
       <a href={allSnippetsPage.route}>Snippets</a>{' | '}
       <a href={allMoviesPage.route}>Movies</a>{' | '}
       <a href={allPostsPage.route}>Articles</a>{' | '}
