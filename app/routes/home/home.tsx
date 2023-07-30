@@ -58,13 +58,6 @@ const featuredBooks = [
 
 ];
 
-let randomSnippet: Snippet;
-setTimeout(refreshRandomSnippet, 0);
-setInterval(refreshRandomSnippet, 1000 * 60 * 60 * 24);
-function refreshRandomSnippet() {
-  randomSnippet = randomElement(allSnippets);
-}
-
 export const mainSiteHeaderImagePath = staticRouteFor(headerImage);
 
 export const homePage: Routeable = {
@@ -156,9 +149,7 @@ export const homePage: Routeable = {
                     <h3>Random Book Snippet (<a href='#' id='refresh-random-book-snippet'>Another</a>)</h3>
                     <noscript>Enable JavaScript to see more random book snippets</noscript>
                     <Content>
-                      <div id="random-book-snippet">
-                        <SnippetWithPreview snippet={randomSnippet} />
-                      </div>
+                      <div id="random-book-snippet"></div>
                     </Content>
                   </div>
                   <script src={staticRouteFor(randomBookSnippetScript)} defer />

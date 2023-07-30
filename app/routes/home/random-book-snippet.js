@@ -26,3 +26,5 @@ function insertRandomBookSnippet(text) {
   container.innerHTML = text;
   makeContinueReadingLinkWork();
 }
+
+doRandomBookSnippet();
