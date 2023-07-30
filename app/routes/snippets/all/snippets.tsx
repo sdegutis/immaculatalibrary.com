@@ -12,7 +12,7 @@ import searchBookSnippetsScript from './search-book-snippets.js';
 export const allSnippetsPage: Routeable = {
   route: `/book-snippets.html`,
   method: 'GET',
-  handle: (input) => {
+  handle: () => {
 
     const title = 'Book Snippets';
     const image = referenceImage();
@@ -23,7 +23,6 @@ export const allSnippetsPage: Routeable = {
         <SiteCommon
           title={title}
           image={image}
-          input={input}
         >
           <Container spaced split>
 
@@ -77,7 +76,7 @@ export const allSnippetsPage: Routeable = {
 const bookSnippetSearch: Routeable = {
   route: '/book-snippets/searchable.json',
   method: 'GET',
-  handle: (input) => {
+  handle: () => {
     return {
       body: Buffer.from(JSON.stringify(allSnippets.map(s => ({
         searchable: s.markdownContent.toLowerCase()

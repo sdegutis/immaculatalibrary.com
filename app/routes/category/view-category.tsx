@@ -21,12 +21,11 @@ export class ViewCategory implements Routeable {
 
   method: RouteMethod = 'GET';
 
-  handle(input: RouteInput): RouteOutput {
+  handle(): RouteOutput {
     return {
       body: renderElement(<SiteCommon
         title={this.cat.title}
         image={this.cat.imageBig}
-        input={input}
       >
         <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['category.css']!)} />
 

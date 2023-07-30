@@ -23,7 +23,7 @@ export function addRouteable(routeable: Routeable) {
     forSitemap.push(routeable);
   }
 
-  addRoute(`${routeable.method} ${routeable.route}`, (input) => routeable.handle(input));
+  addRoute(`${routeable.method} ${routeable.route}`, () => routeable.handle());
 
   return routeable;
 }

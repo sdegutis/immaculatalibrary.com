@@ -5,7 +5,7 @@ import { allSnippets } from "../../model/models";
 export const randomSnippetPage: Routeable = {
   route: '/random-book-snippet.html',
   method: 'GET',
-  handle: (input) => {
+  handle: () => {
     return {
       body: renderElement(<>
         <script>{`const pages = ${JSON.stringify(allSnippets.map(snippet => snippet.view.route))}`}</script>

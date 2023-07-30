@@ -18,14 +18,13 @@ export class ViewSong implements Routeable {
   }
 
   method: RouteMethod = 'GET';
-  handle: RouteHandler = (input) => {
+  handle: RouteHandler = () => {
     const embedUrl = this.song.youtube.replace('watch?v=', 'embed/').replace(/&t=(\d+)s/, '?start=$1');
 
     return {
       body: renderElement(<SiteCommon
         title={this.song.title}
         image={audioBibleImage}
-        input={input}
       >
         <Container spaced split>
           <Content>

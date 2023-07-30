@@ -20,7 +20,7 @@ export class SnippetWithPreviewRoute implements Routeable {
 
   method: RouteMethod = 'GET';
 
-  handle: RouteHandler = (input) => {
+  handle: RouteHandler = () => {
     return {
       body: renderElement(<>
         <h4><a href={this.snippet.view.route}>{this.snippet.renderedTitle}</a></h4>
@@ -63,7 +63,7 @@ export class SnippetRoute implements Routeable {
 
   method: RouteMethod = 'GET';
 
-  handle(input: RouteInput): RouteOutput {
+  handle(): RouteOutput {
     const singleFile = this.snippet.book.archiveFiles.length === 1;
     const specificBookName = (!singleFile && this.snippet.book.archiveFiles
       .find(file => file.archiveId === this.snippet.archiveSlug)
@@ -74,7 +74,6 @@ export class SnippetRoute implements Routeable {
       body: renderElement(<SiteCommon
         title={this.snippet.title}
         image={this.snippet.image}
-        input={input}
       >
         <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['snippet.css']!)} />
         <Container spaced split>

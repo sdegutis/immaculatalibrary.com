@@ -10,7 +10,7 @@ import cssFile from './posts.css';
 export const allPostsPage: Routeable = {
   route: `/articles.html`,
   method: 'GET',
-  handle: (input) => {
+  handle: () => {
     const title = 'All Articles';
     const image = staticRouteFor(__dir.filesByName['posts.jpg']!);
     return {
@@ -18,7 +18,6 @@ export const allPostsPage: Routeable = {
         <SiteCommon
           title={title}
           image={image}
-          input={input}
         >
           <Container spaced>
 

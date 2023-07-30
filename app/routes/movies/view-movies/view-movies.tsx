@@ -19,12 +19,11 @@ export class ViewMovieRoute implements Routeable {
 
   method: RouteMethod = 'GET';
 
-  handle(input: RouteInput): RouteOutput {
+  handle(): RouteOutput {
     return {
       body: renderElement(<SiteCommon
         title={this.movie.displayTitle}
         image={this.movie.bigImage}
-        input={input}
       >
         <Container spaced split>
           <Content>

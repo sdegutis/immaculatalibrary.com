@@ -16,4 +16,4 @@ declare interface RouteOutput {
   body?: Buffer;
 }
 
-declare type RouteHandler = (input: RouteInput) => RouteOutput | Promise<RouteOutput>;
+declare type RouteHandler = () => RouteOutput;

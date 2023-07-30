@@ -38,7 +38,7 @@ export const Head: JSX.Component<{ imagePath?: string, title?: string, descripti
 
 export { SiteHeader };
 
-export const SiteFooter: JSX.Component<{ input: RouteInput }> = (attrs, children) => <>
+export const SiteFooter: JSX.Component<{}> = (attrs, children) => <>
   <footer id='site-footer'>
     <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['site-footer.css']!)} />
     <p>
@@ -57,7 +57,6 @@ export const SiteFooter: JSX.Component<{ input: RouteInput }> = (attrs, children
 </>;
 
 export const SiteCommon: JSX.Component<{
-  input: RouteInput,
   title: string,
   image: string,
   description?: string,
@@ -73,7 +72,7 @@ export const SiteCommon: JSX.Component<{
         {children}
       </main>
       <QuickLinks />
-      <SiteFooter input={attrs.input} />
+      <SiteFooter />
     </body>
   </Html>
 </>;

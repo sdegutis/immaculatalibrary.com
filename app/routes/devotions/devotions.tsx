@@ -16,12 +16,11 @@ const htmlContent = markdown.render(__dir.filesByName['content.md']!.buffer.toSt
 export const devotionsPage: Routeable = {
   method: 'GET',
   route: '/devotions.html',
-  handle: (input) => {
+  handle: () => {
     return {
       body: renderElement(<SiteCommon
         title={title}
         image={devotionsImageBig}
-        input={input}
       >
         <Container spaced centered>
           <Content>

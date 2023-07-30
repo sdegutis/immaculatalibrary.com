@@ -61,7 +61,7 @@ export const mainSiteHeaderImagePath = staticRouteFor(headerImage);
 export const homePage: Routeable = {
   route: `/index.html`,
   method: 'GET',
-  handle: (input) => {
+  handle: () => {
     return {
       body: renderElement(<>
         <Html>
@@ -169,7 +169,7 @@ export const homePage: Routeable = {
             </main>
 
             <QuickLinks />
-            <SiteFooter input={input} />
+            <SiteFooter />
           </body>
         </Html>
       </>)

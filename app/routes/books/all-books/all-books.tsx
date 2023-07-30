@@ -11,7 +11,7 @@ import allBooksScript from './search-books.js';
 export const allBooksPage: Routeable = {
   route: `/books.html`,
   method: 'GET',
-  handle: (input) => {
+  handle: () => {
     const title = 'All Books';
     const image = referenceImage();
     return {
@@ -19,7 +19,6 @@ export const allBooksPage: Routeable = {
         <SiteCommon
           title={title}
           image={image}
-          input={input}
         >
           <Container spaced split>
             <div>

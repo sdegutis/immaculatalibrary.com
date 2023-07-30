@@ -22,13 +22,12 @@ export class ViewPostPage implements Routeable {
 
   method: RouteMethod = 'GET';
 
-  handle(input: RouteInput): RouteOutput {
+  handle(): RouteOutput {
     const image = allCategories.find(cat => cat.slug === 'devotion')!.imageBig;
     return {
       body: renderElement(<SiteCommon
         title={this.post.title}
         image={image}
-        input={input}
       >
         <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['post.css']!)} />
         <Container spaced split>

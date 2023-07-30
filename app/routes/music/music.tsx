@@ -17,12 +17,11 @@ const htmlContent = markdown.render(__dir.filesByName['content.md']!.buffer.toSt
 export const musicPage: Routeable = {
   method: 'GET',
   route: '/music.html',
-  handle: (input) => {
+  handle: () => {
     return {
       body: renderElement(<SiteCommon
         title={title}
         image={audioBibleImage}
-        input={input}
       >
         <Container spaced split>
           <Content>

@@ -2,6 +2,7 @@ import { Container } from "../../components/container/container";
 import { Content } from "../../components/content/content";
 import { SiteCommon } from "../../components/site";
 import { renderElement } from "../../core/jsx";
+import { addRouteable } from "../../core/router";
 import { staticRouteFor } from "../../util/static";
 
 export function notFoundPage(input: RouteInput): RouteOutput {
@@ -12,7 +13,6 @@ export function notFoundPage(input: RouteInput): RouteOutput {
     body: renderElement(<SiteCommon
       title={title}
       image={image}
-      input={input}
     >
       <Container spaced split>
 

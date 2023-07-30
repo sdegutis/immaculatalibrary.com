@@ -11,14 +11,13 @@ const image = allMovies[0]!.bigImage;
 export const allMoviesPage: Routeable = {
   route: `/movies.html`,
   method: 'GET',
-  handle: (input) => {
+  handle: () => {
     const title = 'Holy Movies';
     return {
       body: renderElement(<>
         <SiteCommon
           title={title}
           image={image}
-          input={input}
         >
           <Container spaced split>
             <Content>

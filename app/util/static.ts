@@ -16,14 +16,8 @@ export class HashedStaticFile implements Routeable {
 
   method: RouteMethod = 'GET';
 
-  handle(input: RouteInput) {
-    const headers = { 'ETag': this.etag, 'Cache-Control': `max-age=${60 * 60 * 24 * 7 * 52}, immutable` };
-
-    if (input.headers['if-none-match'] === this.etag) {
-      return { status: 304, headers };
-    }
-
-    return { body: this.buffer, headers };
+  handle() {
+    return { body: this.buffer };
   }
 
 }

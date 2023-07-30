@@ -37,10 +37,9 @@ export class ViewBookRoute implements Routeable {
 
   method: RouteMethod = 'GET';
 
-  handle(input: RouteInput): RouteOutput {
+  handle(): RouteOutput {
     return {
       body: renderElement(<SiteCommon
-        input={input}
         title={this.book.title}
         description={striptags(excerpt(this.book.markdownContent))}
         image={this.book.category.imageBig}
@@ -178,12 +177,11 @@ export class ReadBookRoute implements Routeable {
 
   method: RouteMethod = 'GET';
 
-  handle(input: RouteInput): RouteOutput {
+  handle(): RouteOutput {
     const orderedSnippets = [...this.book.snippets];
 
     return {
       body: renderElement(<SiteCommon
-        input={input}
         title={this.book.title}
         description={striptags(excerpt(this.book.markdownContent))}
         image={this.book.category.imageBig}

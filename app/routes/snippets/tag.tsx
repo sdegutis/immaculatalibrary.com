@@ -20,7 +20,7 @@ export class ViewTagRoute implements Routeable {
     addRouteable(this);
   }
 
-  handle(input: RouteInput): RouteOutput {
+  handle(): RouteOutput {
     const title = `${this.tag.name} Book Snippets`;
 
     const [randomSnippet] = this.tag.snippets;
@@ -33,7 +33,6 @@ export class ViewTagRoute implements Routeable {
         <SiteCommon
           title={title}
           image={image}
-          input={input}
         >
           <Container spaced split>
 

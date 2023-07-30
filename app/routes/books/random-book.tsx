@@ -5,7 +5,7 @@ import { allBooks } from "../../model/models";
 export const randomBookPage: Routeable = {
   route: '/random.html',
   method: 'GET',
-  handle: (input) => {
+  handle: () => {
     return {
       body: renderElement(<>
         <script>{`const pages = ${JSON.stringify(allBooks.map(book => book.view.route))}`}</script>

@@ -18,12 +18,11 @@ const htmlContent = markdown.render(__dir.filesByName['content.md']!.buffer.toSt
 export const audioBiblePage: Routeable = {
   method: 'GET',
   route: '/audio-bible.html',
-  handle: (input) => {
+  handle: () => {
     return {
       body: renderElement(<SiteCommon
         title={title}
         image={audioBibleImageBig}
-        input={input}
       >
         <Container spaced centered>
           <Content>
