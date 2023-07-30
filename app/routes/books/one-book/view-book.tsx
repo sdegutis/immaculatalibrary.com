@@ -19,7 +19,7 @@ export class ViewBookRoute implements Routeable {
     this.readBookPage = new ReadBookRoute(this.book);
 
     this.randomSnippetInBookPage = {
-      route: `/books/${this.book.slug}/random-snippet`,
+      route: `/books/${this.book.slug}/random-snippet.html`,
       method: 'GET',
       handle: () => ({
         body: renderElement(<>
