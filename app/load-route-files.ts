@@ -3,6 +3,8 @@ import "./routes/audiobible/audiobible";
 import "./routes/books/all-books/all-books";
 import "./routes/books/random-book";
 import "./routes/devotions/devotions";
+import "./routes/errors/404";
+import "./routes/errors/500";
 import "./routes/home/home";
 import "./routes/movies/all-movies/all-movies";
 import "./routes/music/music";
