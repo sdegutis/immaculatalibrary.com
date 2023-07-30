@@ -26,6 +26,11 @@ export function renderElement(element: JSX.Element): Buffer {
   context.head.children.push(...context.stylesheets);
   context.head.children.push(...context.scripts);
 
+  const topChild = simpleElement.children[0];
+  if (isElement(topChild) && topChild.tag === 'head' && topChild.children.length === 0) {
+    simpleElement.children.shift();
+  }
+
   return Buffer.from(elementToString(simpleElement));
 }
 
