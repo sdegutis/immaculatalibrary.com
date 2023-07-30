@@ -8,16 +8,18 @@ input.addEventListener('input', (e) => {
   timer = setTimeout(searchBookSnippets, 250);
 });
 
-async function searchBookSnippets() {
-  const searchTerm = input.value.trim();
-  let results = null;
+let jsonResults;
+fetch('/book-snippets/searchable.json')
+  .then(res => res.json())
+  .then(json => jsonResults = json);
 
-  if (searchTerm) {
-    const url = new URL('/book-snippets/search', location.href);
-    url.searchParams.set('searchTerm', searchTerm);
-    const response = await fetch(url);
-    results = await response.json();
-  }
+function searchBookSnippets() {
+  if (!jsonResults) return;
+
+  const searchTerm = input.value.trim().toLowerCase();
+  const results = searchTerm
+    ? jsonResults.filter(s => s.searchable.includes(searchTerm))
+    : null;
 
   if (!results) {
     searchResultsContainer.textContent = '';

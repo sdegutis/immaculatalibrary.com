@@ -75,28 +75,22 @@ export const allSnippetsPage: Routeable = {
 };
 
 const bookSnippetSearch: Routeable = {
-  route: '/book-snippets/search',
+  route: '/book-snippets/searchable.json',
   method: 'GET',
   handle: (input) => {
-    const searchTerm = input.url.searchParams.get('searchTerm')!.toLowerCase();
-
-    const snippets = allSnippets.filter(s => {
-      if (s.markdownContent.toLowerCase().includes(searchTerm)) return true;
-      if (s.title.toLowerCase().includes(searchTerm)) return true;
-      if (s.book.title.toLowerCase().includes(searchTerm)) return true;
-      if (s.book.author.toLowerCase().includes(searchTerm)) return true;
-      return false;
-    });
-
     return {
-      body: Buffer.from(JSON.stringify(snippets.map(snippet => ({
-        title: snippet.renderedTitle,
-        bookTitle: snippet.book.title,
-        url: snippet.view.route,
-        formattedDate: formatDate(snippet.date),
-        readingMins: calculateReadingMins(snippet.markdownContent),
+      body: Buffer.from(JSON.stringify(allSnippets.map(s => ({
+        searchable: s.markdownContent.toLowerCase()
+          + s.title.toLowerCase()
+          + s.book.title.toLowerCase()
+          + s.book.author.toLowerCase(),
+        title: s.renderedTitle,
+        bookTitle: s.book.title,
+        url: s.view.route,
+        formattedDate: formatDate(s.date),
+        readingMins: calculateReadingMins(s.markdownContent),
       }))))
-    };
+    }
   }
 };
 
