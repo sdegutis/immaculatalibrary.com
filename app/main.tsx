@@ -18,7 +18,7 @@ server.httpHandler = makeRequestHandler(makeRouteHandler(routes));
 async function generateSite() {
   await rimraf('docs');
   for (const [route, handler] of routes) {
-    const filepath = path.join('docs', route.slice(4));
+    const filepath = path.join('docs', route);
     const body = handler().body!;
     console.log(filepath);
 
@@ -26,4 +26,6 @@ async function generateSite() {
     fs.writeFileSync(filepath, body);
   }
   fs.writeFileSync('docs/CNAME', 'www.immaculatalibrary.com');
+
+  console.log('Done generating site.');
 };
