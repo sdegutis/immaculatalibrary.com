@@ -1,6 +1,6 @@
 import { makeSitemap } from "./sitemap";
 
-export type RouteMethod = 'GET' | 'POST';
+export type RouteMethod = 'GET';
 
 export type RouteMeta = {
   lastModifiedDate?: string;

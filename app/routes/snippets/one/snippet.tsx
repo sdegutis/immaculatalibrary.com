@@ -4,37 +4,9 @@ import { SiteCommon } from "../../../components/site";
 import { renderElement } from "../../../core/jsx";
 import { addRouteable, Routeable, RouteMeta, RouteMethod } from "../../../core/router";
 import { Snippet } from "../../../model/snippets/snippet";
-import { calculateReadingMins, formatDate, sameSiteReferer } from "../../../util/helpers";
+import { calculateReadingMins, formatDate } from "../../../util/helpers";
 import { staticRouteFor } from "../../../util/static";
 import { LatestBookSnippets } from "../latest-list";
-
-export class CreateTagRoute implements Routeable {
-
-  route;
-  method: RouteMethod = 'POST';
-
-  constructor(private snippet: Snippet) {
-    this.route = `/book-snippets/${this.snippet.date}-${this.snippet.slug}/create-tag`;
-    addRouteable(this);
-  }
-
-  handle(input: RouteInput): RouteOutput {
-    const text = input.body.toString('utf8');
-    const form = new URLSearchParams(text);
-
-    const tagsObject = Object.fromEntries(form.entries());
-    delete tagsObject["_newtag"];
-
-    const tags = [...Object.keys(tagsObject), ...form.getAll('_newtag')].filter(tag => tag);
-    this.snippet.setTags(tags);
-
-    return {
-      status: 302,
-      headers: { 'Location': sameSiteReferer(input)?.href ?? '/' },
-    };
-  }
-
-}
 
 function addCheckbox(button: HTMLButtonElement, e: Event) {
   e.preventDefault();

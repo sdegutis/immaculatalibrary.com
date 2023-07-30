@@ -1,6 +1,6 @@
 import Yaml from 'js-yaml';
 import * as luxon from 'luxon';
-import { CreateTagRoute, SnippetRoute } from '../../routes/snippets/one/snippet';
+import { SnippetRoute } from '../../routes/snippets/one/snippet';
 import { loadContentFile, saveContentFile } from '../../util/data-files';
 import { markdown } from '../../util/helpers';
 import { pushChanges } from '../../util/live-editing';
@@ -38,8 +38,6 @@ export class Snippet {
   nextSnippet?: Snippet;
   prevSnippet?: Snippet;
 
-  createTag;
-
   view;
 
   tags;
@@ -66,8 +64,6 @@ export class Snippet {
 
     this.book = allBooks.find(book => book.slug.includes(this.bookSlug))!;
     this.book.snippets.push(this);
-
-    this.createTag = new CreateTagRoute(this);
 
     this.tags = new Set([...tags].map(Tag.getOrCreate));
     for (const tag of this.tags) {

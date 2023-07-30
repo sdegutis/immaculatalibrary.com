@@ -50,13 +50,3 @@ export function sortBy<T>(fn: (o: T) => string | number) {
     return a < b ? -1 : a > b ? 1 : 0;
   };
 }
-
-export function sameSiteReferer(input: RouteInput) {
-  const referer = input.headers.referer;
-  if (!referer) return;
-
-  const url = new URL(referer);
-  if (url.hostname !== input.url.hostname) return;
-
-  return url;
-}
