@@ -1,5 +1,4 @@
 import { ViewBookRoute } from '../../routes/books/one-book/view-book';
-import { NewSnippetPage } from '../../routes/snippets/create/routes';
 import { loadContentFile } from '../../util/data-files';
 import { sortBy } from '../../util/helpers';
 import { Category } from '../categories/category';
@@ -72,7 +71,6 @@ export class Book {
     this.view = new ViewBookRoute(this);
     this.archiveFiles = this.files.map(file => ({
       ...file,
-      page: new NewSnippetPage(file.archiveId, this.slug),
     }));
   }
 

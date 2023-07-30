@@ -1,15 +1,11 @@
-import { AdminButton } from "../../../components/admin-button/admin-button";
 import { Container } from "../../../components/container/container";
 import { Content } from "../../../components/content/content";
 import { SiteCommon } from "../../../components/site";
 import { renderElement } from "../../../core/jsx";
 import { addRouteable, Routeable, RouteMeta, RouteMethod } from "../../../core/router";
 import { Snippet } from "../../../model/snippets/snippet";
-import { sortedTags } from "../../../model/snippets/tag";
 import { calculateReadingMins, formatDate, sameSiteReferer } from "../../../util/helpers";
 import { staticRouteFor } from "../../../util/static";
-import { getSession } from "../../admin/session";
-import adminFormCss from '../create/admin-form.css';
 import { LatestBookSnippets } from "../latest-list";
 
 export class CreateTagRoute implements Routeable {
@@ -90,37 +86,6 @@ export class SnippetRoute implements Routeable {
 
             <p>{formatDate(this.snippet.date)} &bull; {calculateReadingMins(this.snippet.markdownContent)} min</p>
 
-            {getSession(input)?.isAdmin && <>
-              <PrevNextLinks snippet={this.snippet} open />
-              <div>
-                <AdminButton href={this.snippet.clone.route}>Make Next</AdminButton> { }
-                <AdminButton href={this.snippet.cloneMobile.route}>Make Next Mobile</AdminButton> { }
-                <AdminButton href='#' onclick='document.getElementById(`edit-snippet-form`).style.display=`grid`; return false;'>Edit</AdminButton>
-
-                <details>
-                  <summary>Tags ({this.snippet.tags.size})</summary>
-                  <form method='POST' action={this.snippet.createTag.route}>
-                    <ul>
-                      {sortedTags().map(tag => <>
-                        <li>
-                          <label>
-                            <input type='checkbox' checked={this.snippet.tags.has(tag)} name={tag.name} /> { }
-                            {tag.name}
-                          </label>
-                        </li>
-                      </>)}
-                      <li>
-                        <script>{addCheckbox.toString()}</script>
-                        <button onclick={`${addCheckbox.name}(this, event)`}>Add</button>
-                        <button>Save</button>
-                      </li>
-                    </ul>
-                  </form>
-                </details>
-
-              </div>
-            </>}
-
             <p>
               {[...this.snippet.tags].map(tag => <>
                 <a href={tag.view.route}>#{tag.slug}</a> { }
@@ -141,19 +106,6 @@ export class SnippetRoute implements Routeable {
 
           </Content>
           <div>
-            {getSession(input)?.isAdmin && <>
-              <link rel='stylesheet' href={staticRouteFor(adminFormCss)} />
-              <form id='edit-snippet-form' method="POST" action={this.snippet.edit.route} style='display:none'>
-                <span>Page</span>    <input autocomplete='off' name='archivePage' value={this.snippet.archivePage} autofocus />
-                <span>Link</span>    <input autocomplete='off' name='archiveSlug' value={this.snippet.archiveSlug} />
-                <span>Book</span>    <input autocomplete='off' name='bookSlug' value={this.snippet.bookSlug} />
-                <span>Title</span>   <input autocomplete='off' name='title' value={this.snippet.title} />
-                <span>Text</span>    <textarea name='markdownContent' rows='10'>{this.snippet.markdownContent}</textarea>
-
-                <span id='readingmins'></span> <button>Update</button>
-              </form>
-            </>}
-
             <LatestBookSnippets />
           </div>
         </Container>

@@ -8,7 +8,6 @@ import { addRouteable, Routeable, RouteMethod } from "../../../core/router";
 import { Book } from "../../../model/books/book";
 import { excerpt, markdown, striptags } from "../../../util/helpers";
 import { staticRouteFor } from "../../../util/static";
-import { getSession } from "../../admin/session";
 import { makeSnippetRoute } from "../../snippets/one/snippet";
 
 function getRandomElement<T>(array: T[]): T {
@@ -90,10 +89,6 @@ export class ViewBookRoute implements Routeable {
                   {file.archiveId && <>
                     <td class="link">
                       <a href={`https://archive.org/details/${file.archiveId}?view=theater`} target="_blank">Read Scans</a>
-                      {getSession(input)?.isAdmin && <>
-                        <br />
-                        <AdminButton href={file.page.route}>New Snippet</AdminButton>
-                      </>}
                     </td>
                   </>}
                 </tr>
