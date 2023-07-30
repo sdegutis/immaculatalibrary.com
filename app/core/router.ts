@@ -1,13 +1,9 @@
 import { makeSitemap } from "./sitemap";
 
-export type RouteMeta = {
-  lastModifiedDate?: string;
-};
-
 export interface Routeable {
   route: string;
   handle: RouteHandler;
-  meta?: RouteMeta;
+  lastModifiedDate?: string;
 }
 
 const allRoutes = new Map<string, RouteHandler>();

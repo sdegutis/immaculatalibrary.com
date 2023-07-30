@@ -2,7 +2,7 @@ import { Container } from "../../../components/container/container";
 import { Content } from "../../../components/content/content";
 import { SiteCommon } from "../../../components/site";
 import { renderElement } from "../../../core/jsx";
-import { addRouteable, Routeable, RouteMeta } from "../../../core/router";
+import { addRouteable, Routeable } from "../../../core/router";
 import { allCategories } from "../../../model/models";
 import { Post } from "../../../model/posts/post";
 import { calculateReadingMins, formatDate, markdown } from "../../../util/helpers";
@@ -10,10 +10,11 @@ import { staticRouteFor } from "../../../util/static";
 
 export class ViewPostPage implements Routeable {
 
-  meta: RouteMeta;
+  lastModifiedDate;
+
   constructor(private post: Post) {
     addRouteable(this);
-    this.meta = { lastModifiedDate: this.post.date };
+    this.lastModifiedDate = this.post.date;
   }
 
   get route() {

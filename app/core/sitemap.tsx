@@ -18,8 +18,8 @@ export function makeSitemap(routeables: Routeable[]): Routeable {
             .map((routeable) => <>
               <url>{'\n'}
                 <loc>https://www.immaculatalibrary.com{routeable.route}</loc>{'\n'}
-                {(routeable.meta?.lastModifiedDate) && <>
-                  <lastmod>{routeable.meta.lastModifiedDate}</lastmod>{'\n'}
+                {routeable.lastModifiedDate && <>
+                  <lastmod>{routeable.lastModifiedDate}</lastmod>{'\n'}
                 </>}
               </url>{'\n'}
             </>)}{'\n'}

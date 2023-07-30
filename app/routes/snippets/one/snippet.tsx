@@ -2,7 +2,7 @@ import { Container } from "../../../components/container/container";
 import { Content } from "../../../components/content/content";
 import { SiteCommon } from "../../../components/site";
 import { renderElement } from "../../../core/jsx";
-import { addRouteable, Routeable, RouteMeta } from "../../../core/router";
+import { addRouteable, Routeable } from "../../../core/router";
 import { Snippet } from "../../../model/snippets/snippet";
 import { calculateReadingMins, formatDate, markdown } from "../../../util/helpers";
 import { staticRouteFor } from "../../../util/static";
@@ -47,13 +47,11 @@ export class SnippetWithPreviewRoute implements Routeable {
 export class SnippetRoute implements Routeable {
 
   constructor(private snippet: Snippet) {
-    this.meta = {
-      lastModifiedDate: snippet.date,
-    };
+    this.lastModifiedDate = snippet.date;
     addRouteable(this);
   }
 
-  meta?: RouteMeta;
+  lastModifiedDate;
 
   get route() {
     return `/book-snippets/${this.snippet.date}-${this.snippet.slug}.html`;
