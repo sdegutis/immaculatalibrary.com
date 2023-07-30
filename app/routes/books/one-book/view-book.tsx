@@ -1,4 +1,3 @@
-import { AdminButton } from "../../../components/admin-button/admin-button";
 import { Container } from "../../../components/container/container";
 import { Content } from "../../../components/content/content";
 import { Rating } from "../../../components/rating/rating";
@@ -6,14 +5,9 @@ import { SiteCommon } from "../../../components/site";
 import { renderElement } from "../../../core/jsx";
 import { addRouteable, Routeable, RouteMethod } from "../../../core/router";
 import { Book } from "../../../model/books/book";
-import { excerpt, markdown, striptags } from "../../../util/helpers";
+import { excerpt, markdown, randomElement, striptags } from "../../../util/helpers";
 import { staticRouteFor } from "../../../util/static";
 import { makeSnippetRoute } from "../../snippets/one/snippet";
-
-function getRandomElement<T>(array: T[]): T {
-  const i = Math.floor(Math.random() * array.length);
-  return array[i]!;
-}
 
 export class ViewBookRoute implements Routeable {
 
@@ -31,7 +25,7 @@ export class ViewBookRoute implements Routeable {
       handle: () => ({
         status: 302,
         headers: {
-          'Location': makeSnippetRoute(getRandomElement(this.book.snippets)),
+          'Location': makeSnippetRoute(randomElement(this.book.snippets)),
         },
       }),
     };
