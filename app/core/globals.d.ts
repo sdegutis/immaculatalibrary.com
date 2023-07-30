@@ -17,3 +17,4 @@ declare interface RouteOutput {
 }
 
 declare type RouteHandler = () => RouteOutput;
+declare type FullRouteHandler = (input: RouteInput) => RouteOutput;
