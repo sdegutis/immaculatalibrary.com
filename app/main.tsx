@@ -9,12 +9,14 @@ import './load-route-files';
 const routes = loadRoutes();
 
 (async () => {
-  await rimraf('site');
+  // await rimraf('site');
   for (const [route, handler] of routes) {
-    const filepath = route.slice(4);
-    const dir = path.dirname(filepath);
-    await mkdirp(path.join('site', dir));
+    const filepath = path.join('site', route.slice(4));
+    console.log(filepath);
     const body = handler().body!;
-    fs.writeFileSync(path.join('site', filepath), body);
+    console.log(filepath, body.length);
+
+    // await mkdirp(path.dirname(filepath));
+    // fs.writeFileSync(filepath, body);
   }
 })();
