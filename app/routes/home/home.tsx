@@ -59,7 +59,7 @@ const featuredBooks = [
 export const mainSiteHeaderImagePath = staticRouteFor(headerImage);
 
 export const homePage: Routeable = {
-  route: `/`,
+  route: `/index.html`,
   method: 'GET',
   handle: (input) => {
     return {
@@ -177,14 +177,4 @@ export const homePage: Routeable = {
   },
 };
 
-const redirectHomePageRoute: Routeable = {
-  route: '/index.html',
-  method: 'GET',
-  handle: (input) => ({
-    status: 302,
-    headers: { 'Location': '/' },
-  })
-};
-
 addRouteable(homePage);
-addRouteable(redirectHomePageRoute);
