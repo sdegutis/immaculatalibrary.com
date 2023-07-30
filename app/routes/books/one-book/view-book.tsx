@@ -5,9 +5,8 @@ import { SiteCommon } from "../../../components/site";
 import { renderElement } from "../../../core/jsx";
 import { addRouteable, Routeable, RouteMethod } from "../../../core/router";
 import { Book } from "../../../model/books/book";
-import { excerpt, markdown, randomElement, striptags } from "../../../util/helpers";
+import { excerpt, markdown, striptags } from "../../../util/helpers";
 import { staticRouteFor } from "../../../util/static";
-import { makeSnippetRoute } from "../../snippets/one/snippet";
 
 export class ViewBookRoute implements Routeable {
 
@@ -23,10 +22,10 @@ export class ViewBookRoute implements Routeable {
       route: `/books/${this.book.slug}/random-snippet`,
       method: 'GET',
       handle: () => ({
-        status: 302,
-        headers: {
-          'Location': makeSnippetRoute(randomElement(this.book.snippets)),
-        },
+        body: renderElement(<>
+          <script>{`const pages = ${JSON.stringify(this.book.snippets.map(snippet => snippet.view.route))}`}</script>
+          <script>{`const i = Math.floor(Math.random() * pages.length); window.location = pages[i];`}</script>
+        </>),
       }),
     };
     addRouteable(this.randomSnippetInBookPage);

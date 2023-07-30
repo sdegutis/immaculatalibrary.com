@@ -8,18 +8,6 @@ import { calculateReadingMins, formatDate } from "../../../util/helpers";
 import { staticRouteFor } from "../../../util/static";
 import { LatestBookSnippets } from "../latest-list";
 
-function addCheckbox(button: HTMLButtonElement, e: Event) {
-  e.preventDefault();
-  const li = document.createElement('li');
-  li.innerHTML = `<input name='_newtag'>`;
-  button.parentElement?.insertAdjacentElement('beforebegin', li);
-  li.querySelector('input')!.focus();
-}
-
-export function makeSnippetRoute(snippet: Snippet) {
-  return `/book-snippets/${snippet.date}-${snippet.slug}.html`;
-}
-
 export class SnippetRoute implements Routeable {
 
   constructor(private snippet: Snippet) {
@@ -32,7 +20,7 @@ export class SnippetRoute implements Routeable {
   meta?: RouteMeta;
 
   get route() {
-    return makeSnippetRoute(this.snippet);
+    return `/book-snippets/${this.snippet.date}-${this.snippet.slug}.html`;
   }
 
   method: RouteMethod = 'GET';
