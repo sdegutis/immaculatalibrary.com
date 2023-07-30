@@ -9,7 +9,6 @@ import cssFile from './posts.css';
 
 export const allPostsPage: Routeable = {
   route: `/articles.html`,
-  method: 'GET',
   handle: () => {
     const title = 'All Articles';
     const image = staticRouteFor(__dir.filesByName['posts.jpg']!);

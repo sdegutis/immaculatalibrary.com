@@ -1,14 +1,11 @@
 import { makeSitemap } from "./sitemap";
 
-export type RouteMethod = 'GET';
-
 export type RouteMeta = {
   lastModifiedDate?: string;
 };
 
 export interface Routeable {
   route: string;
-  method: RouteMethod;
   handle: RouteHandler;
   meta?: RouteMeta;
 }
@@ -18,12 +15,8 @@ const allRoutes = new Map<string, RouteHandler>();
 const forSitemap: Routeable[] = [];
 
 export function addRouteable(routeable: Routeable) {
-  if (routeable.method === 'GET') {
-    forSitemap.push(routeable);
-  }
-
-  addRoute(`${routeable.method} ${routeable.route}`, () => routeable.handle());
-
+  forSitemap.push(routeable);
+  addRoute(routeable.route, () => routeable.handle());
   return routeable;
 }
 

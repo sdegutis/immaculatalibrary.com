@@ -2,7 +2,7 @@ import { Container } from "../../../components/container/container";
 import { Content } from "../../../components/content/content";
 import { SiteCommon } from "../../../components/site";
 import { renderElement } from "../../../core/jsx";
-import { addRouteable, Routeable, RouteMeta, RouteMethod } from "../../../core/router";
+import { addRouteable, Routeable, RouteMeta } from "../../../core/router";
 import { allCategories } from "../../../model/models";
 import { Post } from "../../../model/posts/post";
 import { calculateReadingMins, formatDate, markdown } from "../../../util/helpers";
@@ -19,8 +19,6 @@ export class ViewPostPage implements Routeable {
   get route() {
     return `/articles/${this.post.date}-${this.post.slug}.html`;
   }
-
-  method: RouteMethod = 'GET';
 
   handle(): RouteOutput {
     const image = allCategories.find(cat => cat.slug === 'devotion')!.imageBig;

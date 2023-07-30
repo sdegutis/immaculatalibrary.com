@@ -1,7 +1,7 @@
 import { createHash } from 'crypto';
 import mime from 'mime';
 import path from 'path';
-import { addRouteable, Routeable, RouteMethod } from '../core/router';
+import { addRouteable, Routeable } from '../core/router';
 
 export class HashedStaticFile implements Routeable {
 
@@ -13,8 +13,6 @@ export class HashedStaticFile implements Routeable {
     this.route = `/superstatic/${name}.${hash}${ext}`;
     this.etag = `"${hash}"`;
   }
-
-  method: RouteMethod = 'GET';
 
   handle() {
     return { body: this.buffer };

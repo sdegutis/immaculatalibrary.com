@@ -3,7 +3,7 @@ import { SiteCommon } from "../../../components/site";
 import { renderElement } from "../../../core/jsx";
 import { addRouteable, Routeable } from "../../../core/router";
 import { allSnippets } from "../../../model/models";
-import { calculateReadingMins, formatDate, groupByDate, markdown } from "../../../util/helpers";
+import { calculateReadingMins, formatDate, groupByDate } from "../../../util/helpers";
 import { staticRouteFor } from "../../../util/static";
 import { referenceImage } from "../../category/view-category";
 import { randomSnippetPage } from "../random";
@@ -11,7 +11,6 @@ import searchBookSnippetsScript from './search-book-snippets.js';
 
 export const allSnippetsPage: Routeable = {
   route: `/book-snippets.html`,
-  method: 'GET',
   handle: () => {
 
     const title = 'Book Snippets';
@@ -75,7 +74,6 @@ export const allSnippetsPage: Routeable = {
 
 const bookSnippetSearch: Routeable = {
   route: '/book-snippets/searchable.json',
-  method: 'GET',
   handle: () => {
     return {
       body: Buffer.from(JSON.stringify(allSnippets.map(s => ({

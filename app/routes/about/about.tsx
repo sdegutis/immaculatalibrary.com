@@ -11,7 +11,6 @@ const title = 'About Immaculata Library';
 const htmlContent = markdown.render(__dir.filesByName['content.md']!.buffer.toString('utf8'));
 
 export const aboutPage: Routeable = {
-  method: 'GET',
   route: '/about.html',
   handle: () => {
     return {

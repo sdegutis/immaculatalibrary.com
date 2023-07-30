@@ -10,7 +10,6 @@ const image = allMovies[0]!.bigImage;
 
 export const allMoviesPage: Routeable = {
   route: `/movies.html`,
-  method: 'GET',
   handle: () => {
     const title = 'Holy Movies';
     return {

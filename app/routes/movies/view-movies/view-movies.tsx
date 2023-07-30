@@ -2,7 +2,7 @@ import { Container } from "../../../components/container/container";
 import { Content } from "../../../components/content/content";
 import { SiteCommon } from "../../../components/site";
 import { renderElement } from "../../../core/jsx";
-import { addRouteable, Routeable, RouteMethod } from "../../../core/router";
+import { addRouteable, Routeable } from "../../../core/router";
 import { Movie } from "../../../model/movies/movie";
 import { markdown } from "../../../util/helpers";
 import { MoviesSidebar } from "../movies-sidebar";
@@ -16,8 +16,6 @@ export class ViewMovieRoute implements Routeable {
   get route() {
     return `/movies/${this.movie.slug}.html`;
   }
-
-  method: RouteMethod = 'GET';
 
   handle(): RouteOutput {
     return {

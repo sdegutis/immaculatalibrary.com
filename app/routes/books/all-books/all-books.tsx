@@ -10,7 +10,6 @@ import allBooksScript from './search-books.js';
 
 export const allBooksPage: Routeable = {
   route: `/books.html`,
-  method: 'GET',
   handle: () => {
     const title = 'All Books';
     const image = referenceImage();

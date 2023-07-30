@@ -4,7 +4,6 @@ import { allSnippets } from "../../model/models";
 
 export const randomSnippetPage: Routeable = {
   route: '/random-book-snippet.html',
-  method: 'GET',
   handle: () => {
     return {
       body: renderElement(<>

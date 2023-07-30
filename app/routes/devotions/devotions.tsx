@@ -14,7 +14,6 @@ const title = 'Devotions';
 const htmlContent = markdown.render(__dir.filesByName['content.md']!.buffer.toString('utf8'));
 
 export const devotionsPage: Routeable = {
-  method: 'GET',
   route: '/devotions.html',
   handle: () => {
     return {

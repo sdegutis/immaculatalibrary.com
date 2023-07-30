@@ -3,7 +3,7 @@ import { Content } from "../../../components/content/content";
 import { Rating } from "../../../components/rating/rating";
 import { SiteCommon } from "../../../components/site";
 import { renderElement } from "../../../core/jsx";
-import { addRouteable, Routeable, RouteMethod } from "../../../core/router";
+import { addRouteable, Routeable } from "../../../core/router";
 import { Book } from "../../../model/books/book";
 import { excerpt, markdown, striptags } from "../../../util/helpers";
 import { staticRouteFor } from "../../../util/static";
@@ -20,7 +20,6 @@ export class ViewBookRoute implements Routeable {
 
     this.randomSnippetInBookPage = {
       route: `/books/${this.book.slug}/random-snippet.html`,
-      method: 'GET',
       handle: () => ({
         body: renderElement(<>
           <script>{`const pages = ${JSON.stringify(this.book.snippets.map(snippet => snippet.view.route))}`}</script>
@@ -34,8 +33,6 @@ export class ViewBookRoute implements Routeable {
   get route() {
     return `/books/${this.book.slug}.html`;
   }
-
-  method: RouteMethod = 'GET';
 
   handle(): RouteOutput {
     return {
@@ -174,8 +171,6 @@ export class ReadBookRoute implements Routeable {
   get route() {
     return `/books/read-on-web/${this.book.slug}.html`;
   }
-
-  method: RouteMethod = 'GET';
 
   handle(): RouteOutput {
     const orderedSnippets = [...this.book.snippets];

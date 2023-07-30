@@ -16,7 +16,6 @@ const title = 'Audio Bible';
 const htmlContent = markdown.render(__dir.filesByName['content.md']!.buffer.toString('utf8'));
 
 export const audioBiblePage: Routeable = {
-  method: 'GET',
   route: '/audio-bible.html',
   handle: () => {
     return {

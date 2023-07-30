@@ -60,7 +60,6 @@ export const mainSiteHeaderImagePath = staticRouteFor(headerImage);
 
 export const homePage: Routeable = {
   route: `/index.html`,
-  method: 'GET',
   handle: () => {
     return {
       body: renderElement(<>

@@ -4,7 +4,6 @@ import { allBooks } from "../../model/models";
 
 export const randomBookPage: Routeable = {
   route: '/random.html',
-  method: 'GET',
   handle: () => {
     return {
       body: renderElement(<>

@@ -1,7 +1,7 @@
 import { Container } from "../../components/container/container";
 import { SiteCommon } from "../../components/site";
 import { renderElement } from "../../core/jsx";
-import { addRouteable, Routeable, RouteMethod } from "../../core/router";
+import { addRouteable, Routeable } from "../../core/router";
 import { Tag } from "../../model/snippets/tag";
 import { groupByDate } from "../../util/helpers";
 import { SnippetsGroups } from "./latest-list";
@@ -11,7 +11,6 @@ const slugify = (str: string) => str.toLowerCase().replace(/ /g, '-').replace(/[
 export class ViewTagRoute implements Routeable {
 
   route: string;
-  method: RouteMethod = 'GET';
 
   constructor(
     private tag: Tag,

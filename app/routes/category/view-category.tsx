@@ -3,7 +3,7 @@ import { Content } from "../../components/content/content";
 import { Rating } from "../../components/rating/rating";
 import { SiteCommon } from "../../components/site";
 import { renderElement } from "../../core/jsx";
-import { addRouteable, Routeable, RouteMethod } from "../../core/router";
+import { addRouteable, Routeable } from "../../core/router";
 import { Category } from "../../model/categories/category";
 import { allCategories } from "../../model/models";
 import { excerpt, markdown } from "../../util/helpers";
@@ -18,8 +18,6 @@ export class ViewCategory implements Routeable {
   get route() {
     return `/${this.cat.slug}.html`;
   }
-
-  method: RouteMethod = 'GET';
 
   handle(): RouteOutput {
     return {

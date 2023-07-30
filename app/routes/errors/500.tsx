@@ -7,7 +7,6 @@ import { staticRouteFor } from "../../util/static";
 
 addRouteable({
   route: '/500.html',
-  method: 'GET',
   handle: () => {
     const title = 'Something went wrong';
     const image = staticRouteFor(__dir.filesByName['404.jpg']!);

@@ -2,7 +2,7 @@ import { Container } from "../../../components/container/container";
 import { Content } from "../../../components/content/content";
 import { SiteCommon } from "../../../components/site";
 import { renderElement } from "../../../core/jsx";
-import { addRouteable, Routeable, RouteMeta, RouteMethod } from "../../../core/router";
+import { addRouteable, Routeable, RouteMeta } from "../../../core/router";
 import { Snippet } from "../../../model/snippets/snippet";
 import { calculateReadingMins, formatDate, markdown } from "../../../util/helpers";
 import { staticRouteFor } from "../../../util/static";
@@ -17,8 +17,6 @@ export class SnippetWithPreviewRoute implements Routeable {
   get route() {
     return `/book-snippets/with-preview/${this.snippet.date}-${this.snippet.slug}.html`;
   }
-
-  method: RouteMethod = 'GET';
 
   handle: RouteHandler = () => {
     return {
@@ -60,8 +58,6 @@ export class SnippetRoute implements Routeable {
   get route() {
     return `/book-snippets/${this.snippet.date}-${this.snippet.slug}.html`;
   }
-
-  method: RouteMethod = 'GET';
 
   handle(): RouteOutput {
     const singleFile = this.snippet.book.archiveFiles.length === 1;

@@ -15,7 +15,6 @@ const title = 'Sacred Music';
 const htmlContent = markdown.render(__dir.filesByName['content.md']!.buffer.toString('utf8'));
 
 export const musicPage: Routeable = {
-  method: 'GET',
   route: '/music.html',
   handle: () => {
     return {

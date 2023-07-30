@@ -2,7 +2,7 @@ import { Container } from "../../components/container/container";
 import { Content } from "../../components/content/content";
 import { SiteCommon } from "../../components/site";
 import { renderElement } from "../../core/jsx";
-import { addRouteable, Routeable, RouteMethod } from "../../core/router";
+import { addRouteable, Routeable } from "../../core/router";
 import { Song } from "../../model/music/song";
 import { staticRouteFor } from "../../util/static";
 import { audioBibleImage } from "./music";
@@ -17,7 +17,6 @@ export class ViewSong implements Routeable {
     addRouteable(this);
   }
 
-  method: RouteMethod = 'GET';
   handle: RouteHandler = () => {
     const embedUrl = this.song.youtube.replace('watch?v=', 'embed/').replace(/&t=(\d+)s/, '?start=$1');
 
