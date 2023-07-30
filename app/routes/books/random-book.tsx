@@ -1,15 +1,16 @@
+import { renderElement } from "../../core/jsx";
 import { addRouteable, Routeable } from "../../core/router";
 import { allBooks } from "../../model/models";
-import { randomElement } from "../../util/helpers";
 
 export const randomBookPage: Routeable = {
   route: '/random.html',
   method: 'GET',
   handle: (input) => {
-    const book = randomElement(allBooks);
     return {
-      status: 302,
-      headers: { 'Location': book.view.route },
+      body: renderElement(<>
+        <script>{`const pages = ${JSON.stringify(allBooks.map(book => book.view.route))}`}</script>
+        <script>{`const i = Math.floor(Math.random() * pages.length); window.location = pages[i];`}</script>
+      </>),
     };
   },
 }
