@@ -8,11 +8,6 @@ export const markdown = new MarkdownIt({
   breaks: true,
 });
 
-export function randomElement<T>(array: T[]): T {
-  const i = Math.floor(Math.random() * array.length);
-  return array[i]!;
-}
-
 export function groupByDate<T extends { date: string }>(array: T[]) {
   const groups: Record<string, T[]> = Object.create(null);
   for (const o of array) {

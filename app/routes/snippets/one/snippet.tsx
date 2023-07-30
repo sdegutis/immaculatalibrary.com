@@ -4,9 +4,47 @@ import { SiteCommon } from "../../../components/site";
 import { renderElement } from "../../../core/jsx";
 import { addRouteable, Routeable, RouteMeta, RouteMethod } from "../../../core/router";
 import { Snippet } from "../../../model/snippets/snippet";
-import { calculateReadingMins, formatDate } from "../../../util/helpers";
+import { calculateReadingMins, formatDate, markdown } from "../../../util/helpers";
 import { staticRouteFor } from "../../../util/static";
 import { LatestBookSnippets } from "../latest-list";
+
+export class SnippetWithPreviewRoute implements Routeable {
+
+  constructor(public snippet: Snippet) {
+    addRouteable(this);
+  }
+
+  get route() {
+    return `/book-snippets/with-preview/${this.snippet.date}-${this.snippet.slug}.html`;
+  }
+
+  method: RouteMethod = 'GET';
+
+  handle: RouteHandler = (input) => {
+    return {
+      body: renderElement(<>
+        <h4><a href={this.snippet.view.route}>{this.snippet.renderedTitle}</a></h4>
+        <p>{formatDate(this.snippet.date)} &bull; {calculateReadingMins(this.snippet.markdownContent)} min</p>
+        <p>
+          From <a href={this.snippet.book.view.route}>{this.snippet.book.title}</a>
+          , page <a rel="noopener" href={this.snippet.archiveLink}>{this.snippet.archivePage}</a>
+          <br />
+          <small>By {this.snippet.book.author}</small>
+        </p>
+        <div class='rendered-preview'>
+          {this.snippet.previewMarkdown
+            ? <>
+              <div>{markdown.render(this.snippet.previewMarkdown)}</div>
+              <div hidden>{this.snippet.renderedBody}</div>
+              <a href='#' class='continue-reading-snippet-link'><i>Continue reading...</i></a>
+            </>
+            : this.snippet.renderedBody}
+        </div>
+      </>)
+    };
+  }
+
+}
 
 export class SnippetRoute implements Routeable {
 

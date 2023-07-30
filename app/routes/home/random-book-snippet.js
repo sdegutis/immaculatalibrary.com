@@ -16,7 +16,10 @@ document.getElementById('refresh-random-book-snippet').addEventListener('click',
 });
 
 function doRandomBookSnippet() {
-  fetch('/book-snippets/random')
+  const i = Math.floor(Math.random() * homeSnippets.length);
+  const homeSnippet = homeSnippets[i];
+
+  fetch(homeSnippet)
     .then(res => res.text())
     .then(insertRandomBookSnippet);
 }

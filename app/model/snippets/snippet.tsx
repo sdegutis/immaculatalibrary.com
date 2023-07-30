@@ -1,6 +1,6 @@
 import Yaml from 'js-yaml';
 import * as luxon from 'luxon';
-import { SnippetRoute } from '../../routes/snippets/one/snippet';
+import { SnippetRoute, SnippetWithPreviewRoute } from '../../routes/snippets/one/snippet';
 import { loadContentFile, saveContentFile } from '../../util/data-files';
 import { markdown } from '../../util/helpers';
 import { pushChanges } from '../../util/live-editing';
@@ -39,6 +39,7 @@ export class Snippet {
   prevSnippet?: Snippet;
 
   view;
+  viewWithPreview;
 
   tags;
 
@@ -61,6 +62,7 @@ export class Snippet {
     this.previewMarkdown = this.derivePreview(2000);
 
     this.view = new SnippetRoute(this);
+    this.viewWithPreview = new SnippetWithPreviewRoute(this);
 
     this.book = allBooks.find(book => book.slug.includes(this.bookSlug))!;
     this.book.snippets.push(this);

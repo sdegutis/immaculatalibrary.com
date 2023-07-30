@@ -6,8 +6,6 @@ import { Head, Html, SiteFooter } from "../../components/site";
 import { renderElement } from "../../core/jsx";
 import { Routeable, addRouteable } from "../../core/router";
 import { allBooks, allCategories, allSnippets } from "../../model/models";
-import { Snippet } from "../../model/snippets/snippet";
-import { calculateReadingMins, formatDate, markdown, randomElement } from "../../util/helpers";
 import { staticRouteFor } from "../../util/static";
 import { LatestBookSnippets } from "../snippets/latest-list";
 import cssFile from './home.css';
@@ -148,6 +146,7 @@ export const homePage: Routeable = {
                   <div>
                     <h3>Random Book Snippet (<a href='#' id='refresh-random-book-snippet'>Another</a>)</h3>
                     <noscript>Enable JavaScript to see more random book snippets</noscript>
+                    <script>{`const homeSnippets = ${JSON.stringify(allSnippets.map(snippet => snippet.viewWithPreview.route))}`}</script>
                     <Content>
                       <div id="random-book-snippet"></div>
                     </Content>
@@ -177,38 +176,6 @@ export const homePage: Routeable = {
     };
   },
 };
-
-const SnippetWithPreview: JSX.Component<{ snippet: Snippet }> = ({ snippet }) => <>
-  <h4><a href={snippet.view.route}>{snippet.renderedTitle}</a></h4>
-  <p>{formatDate(snippet.date)} &bull; {calculateReadingMins(snippet.markdownContent)} min</p>
-  <p>
-    From <a href={snippet.book.view.route}>{snippet.book.title}</a>
-    , page <a rel="noopener" href={snippet.archiveLink}>{snippet.archivePage}</a>
-    <br />
-    <small>By {snippet.book.author}</small>
-  </p>
-  <div class='rendered-preview'>
-    {snippet.previewMarkdown
-      ? <>
-        <div>{markdown.render(snippet.previewMarkdown)}</div>
-        <div hidden>{snippet.renderedBody}</div>
-        <a href='#' class='continue-reading-snippet-link'><i>Continue reading...</i></a>
-      </>
-      : snippet.renderedBody}
-  </div>
-</>;
-
-const bookSnippetRandom: Routeable = {
-  route: '/book-snippets/random',
-  method: 'GET',
-  handle: (input) => {
-    return {
-      body: renderElement(<SnippetWithPreview snippet={randomElement(allSnippets)} />)
-    };
-  }
-};
-
-addRouteable(bookSnippetRandom);
 
 const redirectHomePageRoute: Routeable = {
   route: '/index.html',
