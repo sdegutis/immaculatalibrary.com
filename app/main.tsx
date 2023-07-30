@@ -25,4 +25,5 @@ async function generateSite() {
     await mkdirp(path.dirname(filepath));
     fs.writeFileSync(filepath, body);
   }
+  fs.writeFileSync('docs/CNAME', 'www.immaculatalibrary.com');
 };
