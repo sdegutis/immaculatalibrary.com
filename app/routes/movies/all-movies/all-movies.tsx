@@ -4,15 +4,15 @@ import { SiteCommon } from "../../../components/site";
 import { renderElement } from "../../../core/jsx";
 import { addRouteable, Routeable } from "../../../core/router";
 import { allMovies } from "../../../model/models";
-import { randomElement } from "../../../util/helpers";
 import { MoviesSidebar } from "../movies-sidebar";
+
+const image = allMovies[0]!.bigImage;
 
 export const allMoviesPage: Routeable = {
   route: `/movies.html`,
   method: 'GET',
   handle: (input) => {
     const title = 'Holy Movies';
-    const image = randomElement(allMovies).bigImage;
     return {
       body: renderElement(<>
         <SiteCommon
