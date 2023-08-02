@@ -26,7 +26,7 @@ export function makeRouteHandler(routes: Map<string, RouteHandler>): FullRouteHa
       return redirectResponse(path.join(input.url.pathname, 'index.html'));
     }
 
-    const key = `${input.method} ${input.url.pathname}`;
+    const key = input.url.pathname;
     const handler = routes.get(key);
     let output: RouteOutput;
 
