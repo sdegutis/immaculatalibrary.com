@@ -16,7 +16,7 @@ export class ViewCategory implements Routeable {
   }
 
   get route() {
-    return `/${this.cat.slug}.html`;
+    return `/books/category/${this.cat.slug}.html`;
   }
 
   handle(): RouteOutput {
