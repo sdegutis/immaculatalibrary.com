@@ -2,8 +2,8 @@ const UNARY = new Set(['br', 'hr', 'input']);
 
 interface Context {
   head?: JSX.Element;
-  stylesheets: string[];
-  scripts: string[];
+  stylesheets: Set<string>;
+  scripts: Set<string>;
 }
 
 type PlainElement = {
@@ -16,8 +16,8 @@ export function renderElement(element: JSX.Element): Buffer {
   const simpleElement = evalTree(element) as PlainElement;
 
   const context: Context = {
-    stylesheets: [],
-    scripts: [],
+    stylesheets: new Set(),
+    scripts: new Set(),
   };
 
   hoistHeadThings(simpleElement, context);
@@ -60,11 +60,11 @@ function hoistHeadThings(element: PlainElement, context: Context) {
   element.children = element.children.map(child => {
     if (isElement<PlainElement>(child)) {
       if (child.tag === 'link' && child.attrs["rel"] === 'stylesheet') {
-        context.stylesheets.push(elementToString(child));
+        context.stylesheets.add(elementToString(child));
         return '';
       }
       else if (child.tag === 'script' && child.attrs["src"]) {
-        context.scripts.push(elementToString(child));
+        context.scripts.add(elementToString(child));
         return '';
       }
       hoistHeadThings(child, context);
