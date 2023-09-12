@@ -4,8 +4,6 @@ import * as path from 'path';
 import 'source-map-support/register';
 import { Site } from './site';
 
-addTimestampToConsoleMethods();
-
 const site = new Site('app');
 onFsChanges('app', 100, (path) => site.fileChanged(path));
 
@@ -16,25 +14,4 @@ function onFsChanges(fromPath: string, msTimeout: number, fn: (path: string) => 
     if (timeout) clearTimeout(timeout);
     timeout = setTimeout(() => fn(updatedPath), msTimeout);
   });
-}
-
-function addTimestampToConsoleMethods() {
-  const formatter = new Intl.DateTimeFormat('en-US', {
-    day: 'numeric',
-    month: '2-digit',
-    year: 'numeric',
-    hour12: true,
-    hour: 'numeric',
-    minute: '2-digit',
-    second: '2-digit',
-    hourCycle: 'h12',
-    fractionalSecondDigits: 3,
-  } as Intl.DateTimeFormatOptions & { fractionalSecondDigits?: 0 | 1 | 2 | 3 });
-
-  for (const key of ['log', 'error'] as const) {
-    const realFn = console[key];
-    console[key] = (...args: any) => {
-      realFn(formatter.format(), '-', ...args);
-    };
-  }
 }
