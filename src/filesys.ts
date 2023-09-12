@@ -4,7 +4,6 @@ import path from "path";
 class FsNode {
 
   constructor(
-    protected ignoreChanges: Set<string>,
     public realBase: string,
     public name: string,
     public parent: FsDir | null,
@@ -63,9 +62,8 @@ export class FsDir extends FsNode {
       throw new Error("Cannot overwrite existing file.");
     }
 
-    const child = new FsFile(this.ignoreChanges, this.realBase, name, this);
+    const child = new FsFile(this.realBase, name, this);
     child.buffer = buffer;
-    this.ignoreChanges.add(child.realPath);
     fs.writeFileSync(child.realPath, buffer);
     this.children.push(child);
 
@@ -114,7 +112,6 @@ export class FsFile extends FsNode {
 
   replace(newBuffer: Buffer) {
     this.buffer = newBuffer;
-    this.ignoreChanges.add(this.realPath);
     fs.writeFileSync(this.realPath, newBuffer);
   }
 
@@ -130,17 +127,14 @@ export class FsFile extends FsNode {
 
 export class FileSys {
 
-  constructor(
-    public fsBase: string,
-    private ignoreChanges: Set<string>,
-  ) { }
+  constructor(public fsBase: string) { }
 
   load() {
     return this.#loadDir('/', null);
   }
 
   #loadDir(base: string, parent: FsDir | null) {
-    const dir = new FsDir(this.ignoreChanges, this.fsBase, path.posix.basename(base), parent);
+    const dir = new FsDir(this.fsBase, path.posix.basename(base), parent);
 
     const dirRealPath = path.posix.join(this.fsBase, base);
     const files = fs.readdirSync(dirRealPath);
@@ -155,7 +149,7 @@ export class FileSys {
         dir.children.push(child);
       }
       else if (stat.isFile()) {
-        const child = new FsFile(this.ignoreChanges, this.fsBase, name, dir);
+        const child = new FsFile(this.fsBase, name, dir);
         child.buffer = fs.readFileSync(child.realPath);
         dir.children.push(child);
       }

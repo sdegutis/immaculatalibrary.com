@@ -8,10 +8,9 @@ export class Site {
   #filesys;
   #runtime: Runtime | undefined;
   #persisted = Object.create(null);
-  #ignoreChanges = new Set<string>();
 
   constructor(path: string) {
-    this.#filesys = new FileSys(path, this.#ignoreChanges);
+    this.#filesys = new FileSys(path);
     this.build();
   }
 
@@ -36,13 +35,7 @@ export class Site {
   }
 
   fileChanged(path: string) {
-    if (this.#ignoreChanges.has(path)) {
-      console.log('Ignoring internally changed file:', path);
-      this.#ignoreChanges.delete(path);
-    }
-    else {
-      this.build();
-    }
+    this.build();
   }
 
 }
