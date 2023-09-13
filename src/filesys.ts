@@ -1,5 +1,5 @@
 import fs from "fs";
-import path from "path";
+import path from "path/posix";
 
 class FsNode {
 
@@ -14,11 +14,11 @@ class FsNode {
     for (let node: FsNode | FsDir | null = this; node; node = node.parent) {
       parts.unshift(node.name);
     }
-    return path.posix.join('/', ...parts);
+    return path.join('/', ...parts);
   }
 
   get realPath() {
-    return path.posix.join(this.realBase, this.path);
+    return path.join(this.realBase, this.path);
   }
 
   // rename(newName: string) {
@@ -73,10 +73,10 @@ export class FsDir extends FsNode {
   find(toPath: string) {
     const absolutePath = (toPath.startsWith('/')
       ? toPath
-      : path.posix.join(this.path, toPath));
+      : path.join(this.path, toPath));
 
     let dir: FsDir = this.root;
-    const parts = absolutePath.split(path.posix.sep).slice(1);
+    const parts = absolutePath.split(path.sep).slice(1);
     let part: string | undefined;
 
     while (undefined !== (part = parts.shift())) {
@@ -133,18 +133,18 @@ export class FileSys {
   }
 
   #loadDir(base: string, parent: FsDir | null) {
-    const dir = new FsDir(this.fsBase, path.posix.basename(base), parent);
+    const dir = new FsDir(this.fsBase, path.basename(base), parent);
 
-    const dirRealPath = path.posix.join(this.fsBase, base);
+    const dirRealPath = path.join(this.fsBase, base);
     const files = fs.readdirSync(dirRealPath);
     for (const name of files) {
       if (name.startsWith('.')) continue;
 
-      const fileRealPath = path.posix.join(this.fsBase, base, name);
+      const fileRealPath = path.join(this.fsBase, base, name);
       const stat = fs.statSync(fileRealPath);
 
       if (stat.isDirectory()) {
-        const child = this.#loadDir(path.posix.join(base, name), dir);
+        const child = this.#loadDir(path.join(base, name), dir);
         dir.children.push(child);
       }
       else if (stat.isFile()) {
