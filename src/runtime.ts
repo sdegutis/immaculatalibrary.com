@@ -88,8 +88,6 @@ class Module {
 
     this.code = transformed.code;
     this.sourceMap = transformed.sourceMap!;
-
-    this.file.transformedJs = this.code;
   }
 
   require() {
