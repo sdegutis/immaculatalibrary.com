@@ -1,4 +1,4 @@
-import { snippetEvents } from "../../model/events";
+// import { snippetEvents } from "../../model/events";
 import { allSnippets } from "../../model/models";
 import { Snippet } from "../../model/snippets/snippet";
 import { calculateReadingMins, groupByDate, markdown } from "../../util/helpers";
@@ -50,8 +50,8 @@ function updateTotalReadingTime() {
   totalReadingTime = `${hours}h ${mins}m`;
 }
 
-snippetEvents.on('created', updateTotalReadingTime);
-snippetEvents.on('updated', updateTotalReadingTime);
+// snippetEvents.on('created', updateTotalReadingTime);
+// snippetEvents.on('updated', updateTotalReadingTime);
 
 setTimeout(updateTotalReadingTime, 0);
 

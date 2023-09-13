@@ -26,7 +26,7 @@ export function loadContentFile<T>(file: FsFile, filename: 'date-slug' | 'slug')
   return { date, slug, markdownContent, meta };
 }
 
-export function saveContentFile(file: FsFile, meta: any, content: string) {
-  const header = Yaml.dump(meta, { lineWidth: -1, noCompatMode: true });
-  file.replace(Buffer.from(`---\n${header}---\n\n${content}`));
-}
+// export function saveContentFile(file: FsFile, meta: any, content: string) {
+//   const header = Yaml.dump(meta, { lineWidth: -1, noCompatMode: true });
+//   file.replace(Buffer.from(`---\n${header}---\n\n${content}`));
+// }

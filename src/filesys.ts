@@ -21,16 +21,16 @@ class FsNode {
     return path.posix.join(this.realBase, this.path);
   }
 
-  rename(newName: string) {
-    if (this.parent?.childrenByName[newName]) {
-      throw new Error("Cannot overwrite existing file.");
-    }
+  // rename(newName: string) {
+  //   if (this.parent?.childrenByName[newName]) {
+  //     throw new Error("Cannot overwrite existing file.");
+  //   }
 
-    const oldPath = this.realPath;
-    this.name = newName;
-    const newPath = this.realPath;
-    fs.renameSync(oldPath, newPath);
-  }
+  //   const oldPath = this.realPath;
+  //   this.name = newName;
+  //   const newPath = this.realPath;
+  //   fs.renameSync(oldPath, newPath);
+  // }
 
   isFile(): this is FsFile { return this instanceof FsFile };
   isDir(): this is FsDir { return this instanceof FsDir };
@@ -57,18 +57,18 @@ export class FsDir extends FsNode {
   get filesByName() { return Object.fromEntries(this.files.map(c => [c.name, c])); }
   get dirsByName() { return Object.fromEntries(this.dirs.map(c => [c.name, c])); }
 
-  createFile(name: string, buffer: Buffer) {
-    if (this.childrenByName[name]) {
-      throw new Error("Cannot overwrite existing file.");
-    }
+  // createFile(name: string, buffer: Buffer) {
+  //   if (this.childrenByName[name]) {
+  //     throw new Error("Cannot overwrite existing file.");
+  //   }
 
-    const child = new FsFile(this.realBase, name, this);
-    child.buffer = buffer;
-    fs.writeFileSync(child.realPath, buffer);
-    this.children.push(child);
+  //   const child = new FsFile(this.realBase, name, this);
+  //   child.buffer = buffer;
+  //   fs.writeFileSync(child.realPath, buffer);
+  //   this.children.push(child);
 
-    return child;
-  }
+  //   return child;
+  // }
 
   find(toPath: string) {
     const absolutePath = (toPath.startsWith('/')
@@ -109,10 +109,10 @@ export class FsFile extends FsNode {
   declare parent: FsDir;
   buffer!: Buffer;
 
-  replace(newBuffer: Buffer) {
-    this.buffer = newBuffer;
-    fs.writeFileSync(this.realPath, newBuffer);
-  }
+  // replace(newBuffer: Buffer) {
+  //   this.buffer = newBuffer;
+  //   fs.writeFileSync(this.realPath, newBuffer);
+  // }
 
   get root(): FsDir {
     return this.parent.root;

@@ -1,13 +1,13 @@
-import Yaml from 'js-yaml';
-import * as luxon from 'luxon';
+// import Yaml from 'js-yaml';
+// import * as luxon from 'luxon';
 import { SnippetRoute, SnippetWithPreviewRoute } from '../../routes/snippets/one/snippet';
-import { loadContentFile, saveContentFile } from '../../util/data-files';
+import { loadContentFile } from '../../util/data-files';
 import { markdown } from '../../util/helpers';
-import { pushChanges } from '../../util/live-editing';
+// import { pushChanges } from '../../util/live-editing';
 import { Book } from '../books/book';
-import { snippetEvents } from '../events';
+// import { snippetEvents } from '../events';
 import { allBooks, allSnippets } from '../models';
-import snippetsDir from './data/';
+// import snippetsDir from './data/';
 import { Tag } from './tag';
 
 export class Snippet {
@@ -97,32 +97,32 @@ export class Snippet {
     return null;
   }
 
-  setTags(tags: string[]) {
-    for (const tag of this.tags) {
-      tag.removeSnippet(this);
-    }
-    this.tags = new Set(tags.map(Tag.getOrCreate));
-    for (const tag of this.tags) {
-      tag.addSnippet(this);
-    }
+  // setTags(tags: string[]) {
+  //   for (const tag of this.tags) {
+  //     tag.removeSnippet(this);
+  //   }
+  //   this.tags = new Set(tags.map(Tag.getOrCreate));
+  //   for (const tag of this.tags) {
+  //     tag.addSnippet(this);
+  //   }
 
-    this.save();
+  //   this.save();
 
-    setTimeout(() => {
-      pushChanges(this.file.realPath, 'Updated snippet from site');
-    }, 100);
-  }
+  //   setTimeout(() => {
+  //     pushChanges(this.file.realPath, 'Updated snippet from site');
+  //   }, 100);
+  // }
 
-  save() {
-    saveContentFile(this.file, {
-      published: this.published,
-      title: this.title,
-      archiveSlug: this.archiveSlug,
-      archivePage: this.archivePage,
-      bookSlug: this.bookSlug,
-      tags: [...this.tags].map(tag => tag.name),
-    }, this.markdownContent);
-  }
+  // save() {
+  //   saveContentFile(this.file, {
+  //     published: this.published,
+  //     title: this.title,
+  //     archiveSlug: this.archiveSlug,
+  //     archivePage: this.archivePage,
+  //     bookSlug: this.bookSlug,
+  //     tags: [...this.tags].map(tag => tag.name),
+  //   }, this.markdownContent);
+  // }
 
   book: Book;
 
@@ -130,56 +130,56 @@ export class Snippet {
     return this.book.category.imageBig;
   }
 
-  static create(newData: {
-    archiveSlug: string,
-    archivePage: string,
-    slug: string,
-    bookSlug: string,
-    title: string,
-    markdownContent: string,
-  }): Snippet {
-    const date = luxon.DateTime.now().toISODate();
-    const header = Yaml.dump({
-      published: true,
-      title: newData.title,
-      archiveSlug: newData.archiveSlug,
-      archivePage: newData.archivePage,
-      bookSlug: newData.bookSlug,
-    });
-    const buffer = Buffer.from(`---\n${header}---\n\n${newData.markdownContent}`);
-    const file = snippetsDir.createFile(`${date}-${newData.slug}.md`, buffer);
-    const newSnippet = Snippet.from(file);
-    newSnippet.save();
-    newSnippet.book.sortAndConnectBookSnippets();
-    snippetEvents.emit('created', newSnippet);
+  // static create(newData: {
+  //   archiveSlug: string,
+  //   archivePage: string,
+  //   slug: string,
+  //   bookSlug: string,
+  //   title: string,
+  //   markdownContent: string,
+  // }): Snippet {
+  //   const date = luxon.DateTime.now().toISODate();
+  //   const header = Yaml.dump({
+  //     published: true,
+  //     title: newData.title,
+  //     archiveSlug: newData.archiveSlug,
+  //     archivePage: newData.archivePage,
+  //     bookSlug: newData.bookSlug,
+  //   });
+  //   const buffer = Buffer.from(`---\n${header}---\n\n${newData.markdownContent}`);
+  //   const file = snippetsDir.createFile(`${date}-${newData.slug}.md`, buffer);
+  //   const newSnippet = Snippet.from(file);
+  //   newSnippet.save();
+  //   newSnippet.book.sortAndConnectBookSnippets();
+  //   snippetEvents.emit('created', newSnippet);
 
-    setTimeout(() => {
-      pushChanges(file.realPath, 'New snippet from site');
-    }, 100);
+  //   setTimeout(() => {
+  //     pushChanges(file.realPath, 'New snippet from site');
+  //   }, 100);
 
-    return newSnippet;
-  }
+  //   return newSnippet;
+  // }
 
-  update(newData: {
-    archivePage: string,
-    archiveSlug: string,
-    bookSlug: string,
-    title: string,
-    markdownContent: string,
-  }) {
-    this.archivePage = newData.archivePage;
-    this.archiveSlug = newData.archiveSlug;
-    this.bookSlug = newData.bookSlug;
-    this.title = newData.title;
-    this.markdownContent = newData.markdownContent.replace(/\r\n/g, '\n');
+  // update(newData: {
+  //   archivePage: string,
+  //   archiveSlug: string,
+  //   bookSlug: string,
+  //   title: string,
+  //   markdownContent: string,
+  // }) {
+  //   this.archivePage = newData.archivePage;
+  //   this.archiveSlug = newData.archiveSlug;
+  //   this.bookSlug = newData.bookSlug;
+  //   this.title = newData.title;
+  //   this.markdownContent = newData.markdownContent.replace(/\r\n/g, '\n');
 
-    this.save();
-    this.book.sortAndConnectBookSnippets();
-    snippetEvents.emit('updated', this);
+  //   this.save();
+  //   this.book.sortAndConnectBookSnippets();
+  //   snippetEvents.emit('updated', this);
 
-    setTimeout(() => {
-      pushChanges(this.file.realPath, 'Updated snippet from site');
-    }, 100);
-  }
+  //   setTimeout(() => {
+  //     pushChanges(this.file.realPath, 'Updated snippet from site');
+  //   }, 100);
+  // }
 
 }

@@ -102,5 +102,5 @@ sortAllSnippets();
 
 snippetEvents.emit('loaded');
 
-snippetEvents.on('created', sortAllSnippets);
-snippetEvents.on('updated', sortAllSnippets);
+// snippetEvents.on('created', sortAllSnippets);
+// snippetEvents.on('updated', sortAllSnippets);
