@@ -34,7 +34,7 @@ export class Site {
     }
   }
 
-  fileChanged(path: string) {
+  pathsUpdated(paths: Set<string>) {
     this.build();
   }
 
