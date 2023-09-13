@@ -1,4 +1,3 @@
-import 'dotenv/config';
 import * as http from "http";
 import 'source-map-support/register';
 import internal, { pipeline, Readable } from 'stream';

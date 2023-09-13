@@ -1,4 +1,3 @@
-import 'dotenv/config';
 import 'source-map-support/register';
 import { FileSys, FsFile } from './filesys';
 import { Runtime } from "./runtime";

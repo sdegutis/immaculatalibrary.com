@@ -1,5 +1,4 @@
 import chokidar from 'chokidar';
-import 'dotenv/config';
 import * as Path from 'path';
 import 'source-map-support/register';
 import { Site } from './site';

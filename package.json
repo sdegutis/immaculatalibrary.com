@@ -31,7 +31,6 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "chokidar": "^3.5.2",
-    "dotenv": "^14.3.0",
     "js-yaml": "^4.1.0",
     "luxon": "^2.3.0",
     "markdown-it": "^12.2.0",
