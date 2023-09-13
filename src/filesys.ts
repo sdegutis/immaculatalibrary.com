@@ -127,10 +127,10 @@ export class FsFile extends FsNode {
 
 export class FileSys {
 
-  constructor(public fsBase: string) { }
+  root;
 
-  load() {
-    return this.#loadDir('/', null);
+  constructor(public fsBase: string) {
+    this.root = this.#loadDir('/', null);
   }
 
   #loadDir(base: string, parent: FsDir | null) {
@@ -156,6 +156,10 @@ export class FileSys {
     }
 
     return dir;
+  }
+
+  update(paths: Set<string>) {
+    this.root = this.#loadDir('/', null);
   }
 
 }

@@ -15,7 +15,7 @@ export class Site {
 
   build() {
     console.log('Building site');
-    const root = this.#filesys.load();
+    const root = this.#filesys.root;
 
     this.#runtime?.shutdown();
     this.#runtime = new Runtime(this.#persisted, root);
@@ -34,6 +34,7 @@ export class Site {
   }
 
   pathsUpdated(paths: Set<string>) {
+    this.#filesys.update(paths);
     this.build();
   }
 
