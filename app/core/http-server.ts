@@ -4,13 +4,6 @@ import 'source-map-support/register';
 import internal, { pipeline, Readable } from 'stream';
 import { createGzip } from 'zlib';
 
-export const baseUrl = process.env['BASE_URL']!;
-export const isLive = baseUrl.includes('.com');
-
-export function makeAbsoluteUrl(relativeUrl: string) {
-  return new URL(relativeUrl, baseUrl).toString();
-}
-
 export function createPersistentServer(port: number) {
   const persistentServer = {
     httpHandler: (req: http.IncomingMessage, res: http.ServerResponse) => { res.end(); },
@@ -37,7 +30,7 @@ export function makeRequestHandler(handler: FullRouteHandler): http.RequestListe
     req.on('data', (data: Buffer) => chunks.push(data));
     req.on('end', async () => {
       const input: RouteInput = {
-        url: new URL(req.url ?? '', baseUrl),
+        url: new URL(req.url ?? '', 'http://localhost:8080'),
         body: Buffer.concat(chunks),
         method: req.method as Uppercase<string>,
         headers: req.headers,
