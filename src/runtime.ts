@@ -121,7 +121,7 @@ class Module {
     const file = this.file.parent.find(toPath);
     if (!file) throw new Error(`Can't find file at path: ${toPath}`);
 
-    const mod = file.isFile() && this.#runtime.modules.get(file);
+    const mod = file instanceof FsFile && this.#runtime.modules.get(file);
     if (!mod) return file;
 
     return mod.require();
