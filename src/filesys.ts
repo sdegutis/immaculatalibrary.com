@@ -13,7 +13,7 @@ abstract class FsNode {
     public readonly parent: FsDir | null,
   ) {
     const parts: string[] = [];
-    for (let node: FsNode | FsDir | null = this; node; node = node.parent) {
+    for (let node: FsNode | null = this; node; node = node.parent) {
       parts.unshift(node.name);
     }
     this.root = (this.parent ? this.parent.root : this as any);
