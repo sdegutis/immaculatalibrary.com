@@ -3,8 +3,7 @@ import path from "path/posix";
 
 abstract class FsNode {
 
-  abstract root: FsDir;
-
+  readonly root: FsDir;
   readonly path;
   readonly realPath;
 
@@ -17,6 +16,7 @@ abstract class FsNode {
     for (let node: FsNode | FsDir | null = this; node; node = node.parent) {
       parts.unshift(node.name);
     }
+    this.root = (this.parent ? this.parent.root : this as any);
     this.path = path.join('/', ...parts);
     this.realPath = path.join(this.realBase, this.path);
   }
@@ -36,16 +36,7 @@ abstract class FsNode {
 
 export class FsDir extends FsNode {
 
-  root;
   children: (FsFile | FsDir)[] = [];
-
-  constructor(realBase: string, name: string, parent: FsDir | null) {
-    super(realBase, name, parent);
-
-    let ancestor: FsDir = this;
-    while (ancestor.parent) ancestor = ancestor.parent;
-    this.root = ancestor;
-  }
 
   get files(): FsFile[] { return this.children.filter(child => child instanceof FsFile) as FsFile[]; }
   get dirs(): FsDir[] { return this.children.filter(child => child instanceof FsDir) as FsDir[]; }
@@ -103,14 +94,8 @@ export class FsDir extends FsNode {
 
 export class FsFile extends FsNode {
 
-  root;
   declare parent: FsDir;
   buffer!: Buffer;
-
-  constructor(realBase: string, name: string, parent: FsDir | null) {
-    super(realBase, name, parent);
-    this.root = this.parent.root;
-  }
 
   // replace(newBuffer: Buffer) {
   //   this.buffer = newBuffer;
