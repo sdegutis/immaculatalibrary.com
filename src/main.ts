@@ -17,7 +17,7 @@ const pathUpdated = (filePath: string) => {
   }, 100);
 };
 
-(chokidar.watch('app', { ignoreInitial: true })
+(chokidar.watch('app', { ignoreInitial: true, cwd: process.cwd() })
   .on('add', pathUpdated)
   .on('change', pathUpdated)
   .on('unlink', pathUpdated));
