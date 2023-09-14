@@ -21,17 +21,6 @@ abstract class FsNode {
     this.realPath = path.join(this.realBase, this.path);
   }
 
-  // rename(newName: string) {
-  //   if (this.parent?.childrenByName[newName]) {
-  //     throw new Error("Cannot overwrite existing file.");
-  //   }
-
-  //   const oldPath = this.realPath;
-  //   this.name = newName;
-  //   const newPath = this.realPath;
-  //   fs.renameSync(oldPath, newPath);
-  // }
-
 }
 
 export class FsDir extends FsNode {
