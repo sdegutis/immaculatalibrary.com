@@ -139,9 +139,7 @@ export class FileSys {
         const contents = fs.readFileSync(realFilePath);
 
         if (fsFile) {
-          if (!fsFile.buffer.equals(contents)) {
-            fsFile.buffer = contents;
-          }
+          fsFile.buffer = contents;
         }
         else {
           const dirs = fsFilePath.slice(1).split(path.sep);
