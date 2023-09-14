@@ -157,7 +157,7 @@ export class FileSys {
     return dir;
   }
 
-  update(paths: Set<string>) {
+  update(filePaths: Set<string>) {
     this.root = this.#loadDir('/', null);
   }
 
