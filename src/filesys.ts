@@ -8,7 +8,7 @@ abstract class FsNode {
   readonly realPath;
 
   constructor(
-    public readonly realBase: string,
+    private readonly realBase: string,
     public readonly name: string,
     public readonly parent: FsDir | null,
   ) {
