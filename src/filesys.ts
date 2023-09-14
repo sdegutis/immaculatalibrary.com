@@ -163,9 +163,11 @@ export class FileSys {
         }
       }
       else {
-        const nodes = fsFile!.parent.children;
-        const idx = nodes.indexOf(fsFile!);
-        nodes.splice(idx, 1);
+        if (fsFile) {
+          const nodes = fsFile.parent.children;
+          const idx = nodes.indexOf(fsFile);
+          nodes.splice(idx, 1);
+        }
       }
     }
   }
