@@ -3,22 +3,20 @@ import path from "path/posix";
 
 class FsNode {
 
-  constructor(
-    public realBase: string,
-    public name: string,
-    public parent: FsDir | null,
-  ) { }
+  readonly path;
+  readonly realPath;
 
-  get path() {
+  constructor(
+    public readonly realBase: string,
+    public readonly name: string,
+    public readonly parent: FsDir | null,
+  ) {
     const parts: string[] = [];
     for (let node: FsNode | FsDir | null = this; node; node = node.parent) {
       parts.unshift(node.name);
     }
-    return path.join('/', ...parts);
-  }
-
-  get realPath() {
-    return path.join(this.realBase, this.path);
+    this.path = path.join('/', ...parts);
+    this.realPath = path.join(this.realBase, this.path);
   }
 
   // rename(newName: string) {
