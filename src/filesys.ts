@@ -99,7 +99,7 @@ export class FsFile extends FsNode {
 
 export class FileSys {
 
-  root;
+  readonly root;
 
   constructor(public fsBase: string) {
     this.root = this.#loadDir('/', null);
@@ -130,8 +130,44 @@ export class FileSys {
     return dir;
   }
 
-  update(filePaths: Set<string>) {
-    this.root = this.#loadDir('/', null);
+  update(realFilePaths: Set<string>) {
+    for (const realFilePath of realFilePaths) {
+      const fsFilePath = realFilePath.slice(this.fsBase.length);
+      const fsFile = this.root.find(fsFilePath) as FsFile | null;
+
+      if (fs.existsSync(realFilePath)) {
+        const contents = fs.readFileSync(realFilePath);
+
+        if (fsFile) {
+          if (!fsFile.buffer.equals(contents)) {
+            fsFile.buffer = contents;
+          }
+        }
+        else {
+          const dirs = fsFilePath.slice(1).split(path.sep);
+          const name = dirs.pop()!;
+
+          let dir = this.root;
+          for (const dirName of dirs) {
+            let subdir = dir.dirsByName[dirName];
+            if (!subdir) {
+              subdir = new FsDir(this.fsBase, dirName, dir);
+              dir.children.push(subdir);
+            }
+            dir = subdir;
+          }
+
+          const file = new FsFile(this.fsBase, name, dir);
+          file.buffer = contents;
+          dir.children.push(file);
+        }
+      }
+      else {
+        const nodes = fsFile!.parent.children;
+        const idx = nodes.indexOf(fsFile!);
+        nodes.splice(idx, 1);
+      }
+    }
   }
 
 }
