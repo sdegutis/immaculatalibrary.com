@@ -1,7 +1,9 @@
 import fs from "fs";
 import path from "path/posix";
 
-class FsNode {
+abstract class FsNode {
+
+  abstract root: FsDir;
 
   readonly path;
   readonly realPath;
@@ -34,12 +36,15 @@ class FsNode {
 
 export class FsDir extends FsNode {
 
+  root;
   children: (FsFile | FsDir)[] = [];
 
-  get root(): FsDir {
+  constructor(realBase: string, name: string, parent: FsDir | null) {
+    super(realBase, name, parent);
+
     let ancestor: FsDir = this;
     while (ancestor.parent) ancestor = ancestor.parent;
-    return ancestor;
+    this.root = ancestor;
   }
 
   get files(): FsFile[] { return this.children.filter(child => child instanceof FsFile) as FsFile[]; }
@@ -98,17 +103,19 @@ export class FsDir extends FsNode {
 
 export class FsFile extends FsNode {
 
+  root;
   declare parent: FsDir;
   buffer!: Buffer;
+
+  constructor(realBase: string, name: string, parent: FsDir | null) {
+    super(realBase, name, parent);
+    this.root = this.parent.root;
+  }
 
   // replace(newBuffer: Buffer) {
   //   this.buffer = newBuffer;
   //   fs.writeFileSync(this.realPath, newBuffer);
   // }
-
-  get root(): FsDir {
-    return this.parent.root;
-  }
 
   get text() {
     return this.buffer.toString('utf8');
