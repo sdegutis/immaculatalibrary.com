@@ -11,10 +11,7 @@ export class Runtime {
   #timeouts: NodeJS.Timeout[] = [];
   #intervals: NodeJS.Timer[] = [];
 
-  constructor(
-    persisted: any,
-    public root: FsDir,
-  ) {
+  constructor(persisted: any, root: FsDir) {
     this.context = vm.createContext({
       persisted,
       console,
