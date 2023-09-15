@@ -57,22 +57,19 @@ export class Runtime {
 
 class Module {
 
-  public exports = Object.create(null);
+  #exports = Object.create(null);
   #ran = false;
-  #runtime: Runtime;
 
-  code;
-  sourceMap;
-  filePath;
+  #code;
+  #sourceMap;
+  #filePath;
 
   constructor(
     private file: FsFile,
-    runtime: Runtime,
+    private runtime: Runtime,
   ) {
-    this.#runtime = runtime;
-
     const rawCode = this.file.buffer.toString('utf8');
-    this.filePath = pathToFileURL(this.file.realPath);
+    this.#filePath = pathToFileURL(this.file.realPath);
 
     const transformed = sucrase.transform(rawCode, {
       transforms: ['typescript', 'imports', 'jsx'],
@@ -80,14 +77,14 @@ class Module {
       jsxFragmentPragma: '""',
       disableESTransforms: true,
       production: true,
-      filePath: this.filePath.href,
+      filePath: this.#filePath.href,
       sourceMapOptions: {
         compiledFilename: this.file.realPath,
       },
     });
 
-    this.code = transformed.code;
-    this.sourceMap = transformed.sourceMap!;
+    this.#code = transformed.code;
+    this.#sourceMap = transformed.sourceMap!;
   }
 
   require() {
@@ -96,21 +93,21 @@ class Module {
 
       const args = {
         require: (path: string) => this.#requireFromWithinModule(path),
-        exports: this.exports,
+        exports: this.#exports,
         __dir: this.file.parent!,
         __file: this.file,
       };
 
-      const sourceMapBase64 = Buffer.from(JSON.stringify(this.sourceMap)).toString('base64url');
+      const sourceMapBase64 = Buffer.from(JSON.stringify(this.#sourceMap)).toString('base64url');
       const sourceMapUrlStr = `\n//# sourceMappingURL=data:application/json;base64,${sourceMapBase64}`;
-      const runModule = vm.compileFunction(this.code + sourceMapUrlStr, Object.keys(args), {
-        filename: this.filePath.href,
-        parsingContext: this.#runtime.context,
+      const runModule = vm.compileFunction(this.#code + sourceMapUrlStr, Object.keys(args), {
+        filename: this.#filePath.href,
+        parsingContext: this.runtime.context,
       });
 
       runModule(...Object.values(args));
     }
-    return this.exports;
+    return this.#exports;
   }
 
   #requireFromWithinModule(toPath: string) {
@@ -121,7 +118,7 @@ class Module {
     const file = this.file.parent.find(toPath);
     if (!file) throw new Error(`Can't find file at path: ${toPath}`);
 
-    const mod = file instanceof FsFile && this.#runtime.modules.get(file);
+    const mod = file instanceof FsFile && this.runtime.modules.get(file);
     if (!mod) return file;
 
     return mod.require();
