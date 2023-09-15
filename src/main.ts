@@ -3,7 +3,7 @@ import * as path from 'path';
 import 'source-map-support/register';
 import { Site } from './site';
 
-const site = new Site('app');
+const site = new Site('app', 'docs');
 
 const updatedPaths = new Set<string>();
 let reloadFsTimer: NodeJS.Timeout;

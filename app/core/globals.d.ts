@@ -1,5 +1,8 @@
 declare const persisted: {
   [key: string]: any;
+
+  runtime: Runtime;
+  outFs: FsDir;
 };
 
 declare interface RouteInput {

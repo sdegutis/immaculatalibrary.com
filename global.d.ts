@@ -1,6 +1,8 @@
 declare type FsFile = import('./src/filesys').FsFile;
 declare type FsDir = import('./src/filesys').FsDir;
 
+declare type Runtime = import('./src/runtime').Runtime;
+
 declare const __file: FsFile;
 declare const __dir: FsDir;
 

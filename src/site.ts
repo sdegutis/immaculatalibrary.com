@@ -4,21 +4,26 @@ import { Runtime } from "./runtime";
 
 export class Site {
 
-  #filesys;
+  #srcFs;
+  #outFs;
   #runtime: Runtime | undefined;
-  #persisted = Object.create(null);
+  #persisted: Record<string, any> = Object.create(null);
 
-  constructor(path: string) {
-    this.#filesys = new FileSys(path);
+  constructor(srcPath: string, outPath: string) {
+    this.#srcFs = new FileSys(srcPath);
+    this.#outFs = new FileSys(outPath);
     this.build();
   }
 
   build() {
     console.log('Building site');
-    const root = this.#filesys.root;
+    const root = this.#srcFs.root;
 
     this.#runtime?.shutdown();
     this.#runtime = new Runtime(this.#persisted, root);
+
+    this.#persisted['runtime'] = this.#runtime;
+    this.#persisted['outFs'] = this.#outFs;
 
     const mainFile = root.find('/main') as FsFile;
     const mainModule = this.#runtime.modules.get(mainFile)!;
@@ -34,7 +39,7 @@ export class Site {
   }
 
   pathsUpdated(paths: Set<string>) {
-    this.#filesys.update(paths);
+    this.#srcFs.update(paths);
     this.build();
   }
 
