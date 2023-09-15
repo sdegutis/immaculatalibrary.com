@@ -27,8 +27,8 @@ export class FsDir extends FsNode {
 
   children: (FsFile | FsDir)[] = [];
 
-  get files(): FsFile[] { return this.children.filter(child => child instanceof FsFile) as FsFile[]; }
-  get dirs(): FsDir[] { return this.children.filter(child => child instanceof FsDir) as FsDir[]; }
+  get files() { return this.children.filter(child => child instanceof FsFile) as FsFile[]; }
+  get dirs() { return this.children.filter(child => child instanceof FsDir) as FsDir[]; }
 
   get childrenByName() { return Object.fromEntries(this.children.map(c => [c.name, c])); }
   get filesByName() { return Object.fromEntries(this.files.map(c => [c.name, c])); }
