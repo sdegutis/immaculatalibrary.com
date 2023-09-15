@@ -1,7 +1,5 @@
 import fs from 'fs';
-import { mkdirp } from 'mkdirp';
 import path from 'path';
-import { rimraf } from 'rimraf';
 import 'source-map-support/register';
 import { createPersistentServer, makeRequestHandler } from "./core/http-server";
 import { makeRouteHandler } from './core/route-handler';
