@@ -2,6 +2,7 @@ import { Column } from "../components/new/column";
 import { Html } from "../components/new/html";
 import { Navlinks } from "../components/new/navlinks";
 import { SiteFooter } from "../components/new/site-footer";
+import { SiteHeader } from "../components/new/site-header";
 import { Typography } from "../components/new/typography";
 
 export default <>
@@ -9,10 +10,7 @@ export default <>
     <body>
       <main>
 
-        {/* <HeroImage image={attrs.image}>
-          <SiteHeader />
-        </HeroImage> */}
-
+        <SiteHeader image='/img/page/home.jpg' />
         <Navlinks />
 
         <Column spaced centered>
