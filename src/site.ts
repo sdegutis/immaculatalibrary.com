@@ -1,6 +1,9 @@
+import * as http from "http";
 import 'source-map-support/register';
 import { FileSys, FsFile } from './filesys';
 import { Runtime } from "./runtime";
+
+const PORT = 8080;
 
 export class Site {
 
@@ -13,6 +16,21 @@ export class Site {
     this.#srcFs = new FileSys(srcPath);
     this.#outFs = new FileSys(outPath);
     this.build();
+
+    const server = http.createServer((req, res) => {
+      const file = this.#outFs.root.find(req.url!);
+      if (file instanceof FsFile) {
+        res.statusCode = 200;
+        res.end(file.buffer);
+      }
+      else {
+        res.statusCode = 404;
+        res.end('File not found');
+      }
+    });
+
+    server.listen(PORT);
+    console.log(`Running on http://localhost:${PORT}`);
   }
 
   build() {
