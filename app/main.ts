@@ -5,23 +5,23 @@ const out = siteDir.clone(null);
 renderDynamic(out);
 export default out;
 
-function renderDynamic(currentDir: FsDir) {
-  for (const dir of currentDir.dirs) {
-    renderDynamic(dir);
+function renderDynamic(dir: FsDir) {
+  for (const subdir of dir.dirs) {
+    renderDynamic(subdir);
   }
 
-  for (const file of currentDir.files) {
+  for (const file of dir.files) {
     if (file.name.endsWith('.tsx')) {
       const exported = require(file.path).default;
-      currentDir.delete(file);
+      dir.delete(file);
 
       if (Array.isArray(exported)) {
         for (const [name, jsx] of exported) {
-          currentDir.createFile(name, renderElement(jsx));
+          dir.createFile(name, renderElement(jsx));
         }
       }
       else {
-        currentDir.createFile(file.name.slice(0, -4), renderElement(exported));
+        dir.createFile(file.name.slice(0, -4), renderElement(exported));
       }
     }
   }
