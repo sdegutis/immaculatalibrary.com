@@ -40,7 +40,6 @@ export class Site {
     this.#runtime?.shutdown();
     this.#runtime = new Runtime(this.#persisted, root);
 
-    this.#persisted['runtime'] = this.#runtime;
     // this.#persisted['outFs'] = this.#outFs;
 
     const mainFile = root.find('/main') as FsFile;

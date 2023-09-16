@@ -1,8 +1,3 @@
-declare const persisted: {
-  runtime: Runtime;
-  // outFs: FsDir;
-};
-
 declare interface RouteInput {
   method: Uppercase<string>;
   url: URL;
