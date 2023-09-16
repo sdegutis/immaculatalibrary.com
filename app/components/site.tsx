@@ -3,7 +3,7 @@ import { mainSiteHeaderImagePath } from "../routes/home/home";
 import { staticRouteFor } from "../util/static";
 import { DarkModeButton } from "./dark-mode/button";
 import { HeroImage } from "./hero-image/hero-image";
-import { Meta } from "./meta/meta";
+import { Meta } from "./meta";
 import { Navlinks } from "./navlinks";
 import { QuickLinks } from "./quicklinks";
 import { SiteHeader } from "./site-header/site-header";
