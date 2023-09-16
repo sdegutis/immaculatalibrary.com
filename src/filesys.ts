@@ -4,7 +4,7 @@ import path from "path/posix";
 abstract class FsNode {
 
   constructor(
-    public name: string,
+    public readonly name: string,
     public readonly parent: FsDir | null,
   ) { }
 
@@ -68,6 +68,21 @@ export class FsDir extends FsNode {
     const dir = new FsDir(this.name, parent);
     dir.children = this.children.map(node => node.clone(dir));
     return dir;
+  }
+
+  delete(node: FsFile | FsDir) {
+    const idx = this.children.indexOf(node);
+    this.children.splice(idx, 1);
+  }
+
+  createFile(name: string, contents: Buffer) {
+    if (this.children.find(node => node.name === name)) {
+      throw new Error(`File already exists with this name.`);
+    }
+
+    const file = new FsFile(name, this);
+    file.buffer = contents;
+    this.children.push(file);
   }
 
 }
