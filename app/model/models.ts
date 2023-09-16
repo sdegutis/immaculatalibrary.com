@@ -1,14 +1,14 @@
+import booksDir from '../data/books/';
+import categoriesDir from '../data/categories/';
+import moviesDir from '../data/movies/';
+import postsDir from '../data/posts/';
+import snippetsDir from '../data/snippets/';
 import { sortBy } from '../util/helpers';
 import { Book } from './book';
-import booksDir from './books/data/';
-import categoriesDir from './categories/data/';
 import { Category } from './category';
 import { Movie } from './movie';
-import moviesDir from './movies/data/';
 import { Post } from './post';
-import postsDir from './posts/data/';
 import { Snippet } from './snippet';
-import snippetsDir from './snippets/data/';
 import { loadAllSongs } from './song';
 
 const categoryOrder = [
