@@ -76,6 +76,12 @@ export class FsDir extends FsNode {
     return null;
   }
 
+  clone(parent: FsDir | null) {
+    const dir = new FsDir(this.name, parent);
+    dir.children = this.children.map(node => node.clone(dir));
+    return dir;
+  }
+
 }
 
 export class FsFile extends FsNode {
@@ -90,6 +96,12 @@ export class FsFile extends FsNode {
 
   get text() {
     return this.buffer.toString('utf8');
+  }
+
+  clone(parent: FsDir) {
+    const file = new FsFile(this.name, parent);
+    file.buffer = this.buffer;
+    return file;
   }
 
 }

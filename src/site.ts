@@ -1,6 +1,6 @@
 import * as http from "http";
 import 'source-map-support/register';
-import { FileSys, FsFile } from './filesys';
+import { FileSys, FsDir, FsFile } from './filesys';
 import { Runtime } from "./runtime";
 
 const PORT = 8080;
@@ -43,10 +43,10 @@ export class Site {
     const mainFile = root.find('/main') as FsFile;
     const mainModule = this.#runtime.modules.get(mainFile)!;
 
-    let outMap: Map<string, Buffer>;
+    let outDir: FsDir;
     try {
       console.log('Loading main module...');
-      outMap = mainModule.require().default;
+      outDir = mainModule.require().default;
       console.log('Done');
     }
     catch (e) {
@@ -54,7 +54,7 @@ export class Site {
       return;
     }
 
-    console.log(outMap.size, this.#outFs.root);
+    console.log(outDir, this.#outFs.root);
   }
 
   pathsUpdated(paths: Set<string>) {
