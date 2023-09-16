@@ -7,7 +7,6 @@ abstract class FsNode {
   readonly path;
 
   constructor(
-    private readonly fs: FileSys,
     public readonly name: string,
     public readonly parent: FsDir | null,
   ) {
@@ -108,7 +107,7 @@ export class FileSys {
   }
 
   #loadDir(base: string, parent: FsDir | null) {
-    const dir = new FsDir(this, path.basename(base), parent);
+    const dir = new FsDir(path.basename(base), parent);
 
     const dirRealPath = path.join(this.realBase, base);
     const files = fs.readdirSync(dirRealPath);
@@ -123,7 +122,7 @@ export class FileSys {
         dir.children.push(child);
       }
       else if (stat.isFile()) {
-        const child = new FsFile(this, name, dir);
+        const child = new FsFile(name, dir);
         child.buffer = fs.readFileSync(this.realPath(child));
         dir.children.push(child);
       }
@@ -151,13 +150,13 @@ export class FileSys {
           for (const dirName of dirs) {
             let subdir = dir.dirsByName[dirName];
             if (!subdir) {
-              subdir = new FsDir(this, dirName, dir);
+              subdir = new FsDir(dirName, dir);
               dir.children.push(subdir);
             }
             dir = subdir;
           }
 
-          const file = new FsFile(this, name, dir);
+          const file = new FsFile(name, dir);
           file.buffer = contents;
           dir.children.push(file);
         }
