@@ -1,20 +1,15 @@
 import * as http from "http";
 import 'source-map-support/register';
-import internal, { pipeline, Readable } from 'stream';
+import { pipeline, Readable } from 'stream';
 import { createGzip } from 'zlib';
 
 export function createPersistentServer(port: number) {
   const persistentServer = {
     httpHandler: (req: http.IncomingMessage, res: http.ServerResponse) => { res.end(); },
-    wsHandler: (req: http.IncomingMessage, socket: internal.Duplex, head: Buffer) => { },
   };
 
   const server = http.createServer((req: http.IncomingMessage, res: http.ServerResponse) => {
     persistentServer.httpHandler(req, res);
-  });
-
-  server.on('upgrade', (req, socket, head) => {
-    persistentServer.wsHandler(req, socket, head);
   });
 
   server.listen(port);
