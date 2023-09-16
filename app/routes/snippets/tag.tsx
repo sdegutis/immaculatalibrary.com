@@ -2,7 +2,7 @@ import { Container } from "../../components/container/container";
 import { SiteCommon } from "../../components/site";
 import { renderElement } from "../../core/jsx";
 import { addRouteable, Routeable } from "../../core/router";
-import { Tag } from "../../model/snippets/tag";
+import { Tag } from "../../model/tag";
 import { groupByDate } from "../../util/helpers";
 import { SnippetsGroups } from "./latest-list";
 

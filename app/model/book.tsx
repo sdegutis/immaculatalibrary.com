@@ -1,8 +1,8 @@
-import { ViewBookRoute } from '../../routes/books/one-book/view-book';
-import { loadContentFile } from '../../util/data-files';
-import { sortBy } from '../../util/helpers';
-import { Category } from '../categories/category';
-import { Snippet } from '../snippets/snippet';
+import { ViewBookRoute } from '../routes/books/one-book/view-book';
+import { loadContentFile } from '../util/data-files';
+import { sortBy } from '../util/helpers';
+import { Category } from './category';
+import { Snippet } from './snippet';
 
 export class Book {
 

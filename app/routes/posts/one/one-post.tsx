@@ -4,7 +4,7 @@ import { SiteCommon } from "../../../components/site";
 import { renderElement } from "../../../core/jsx";
 import { addRouteable, Routeable } from "../../../core/router";
 import { allCategories } from "../../../model/models";
-import { Post } from "../../../model/posts/post";
+import { Post } from "../../../model/post";
 import { calculateReadingMins, formatDate, markdown } from "../../../util/helpers";
 import { staticRouteFor } from "../../../util/static";
 

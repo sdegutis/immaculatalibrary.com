@@ -1,7 +1,7 @@
 // import { snippetEvents } from "../../model/events";
 import { allSnippets } from "../../model/models";
-import { Snippet } from "../../model/snippets/snippet";
-import { calculateReadingMins, groupByDate, markdown } from "../../util/helpers";
+import { Snippet } from "../../model/snippet";
+import { calculateReadingMins, groupByDate } from "../../util/helpers";
 import { allSnippetsPage } from "./all/snippets";
 import { randomSnippetPage } from "./random";
 

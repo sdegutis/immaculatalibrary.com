@@ -3,7 +3,7 @@ import { Content } from "../../components/content/content";
 import { SiteCommon } from "../../components/site";
 import { renderElement } from "../../core/jsx";
 import { addRouteable, Routeable } from "../../core/router";
-import { Song } from "../../model/music/song";
+import { Song } from "../../model/song";
 import { staticRouteFor } from "../../util/static";
 import { audioBibleImage } from "./music";
 import { MusicSidebar } from "./music-sidebar";

@@ -4,7 +4,7 @@ import { Rating } from "../../components/rating/rating";
 import { SiteCommon } from "../../components/site";
 import { renderElement } from "../../core/jsx";
 import { addRouteable, Routeable } from "../../core/router";
-import { Category } from "../../model/categories/category";
+import { Category } from "../../model/category";
 import { allCategories } from "../../model/models";
 import { excerpt, markdown } from "../../util/helpers";
 import { staticRouteFor } from "../../util/static";

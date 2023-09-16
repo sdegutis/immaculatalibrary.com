@@ -1,12 +1,12 @@
 // import Yaml from 'js-yaml';
 // import * as luxon from 'luxon';
-import { SnippetRoute, SnippetWithPreviewRoute } from '../../routes/snippets/one/snippet';
-import { loadContentFile } from '../../util/data-files';
-import { markdown } from '../../util/helpers';
+import { SnippetRoute, SnippetWithPreviewRoute } from '../routes/snippets/one/snippet';
+import { loadContentFile } from '../util/data-files';
+import { markdown } from '../util/helpers';
 // import { pushChanges } from '../../util/live-editing';
-import { Book } from '../books/book';
+import { Book } from './book';
 // import { snippetEvents } from '../events';
-import { allBooks, allSnippets } from '../models';
+import { allBooks, allSnippets } from './models';
 // import snippetsDir from './data/';
 import { Tag } from './tag';
 

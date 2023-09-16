@@ -3,7 +3,7 @@ import { Content } from "../../../components/content/content";
 import { SiteCommon } from "../../../components/site";
 import { renderElement } from "../../../core/jsx";
 import { addRouteable, Routeable } from "../../../core/router";
-import { Snippet } from "../../../model/snippets/snippet";
+import { Snippet } from "../../../model/snippet";
 import { calculateReadingMins, formatDate, markdown } from "../../../util/helpers";
 import { staticRouteFor } from "../../../util/static";
 import { LatestBookSnippets } from "../latest-list";

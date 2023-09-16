@@ -1,5 +1,5 @@
-import { ViewTagRoute } from "../../routes/snippets/tag";
-import { sortBy } from "../../util/helpers";
+import { ViewTagRoute } from "../routes/snippets/tag";
+import { sortBy } from "../util/helpers";
 import { Snippet } from "./snippet";
 
 export const allTags = new Map<string, Tag>();

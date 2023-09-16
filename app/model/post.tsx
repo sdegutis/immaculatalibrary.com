@@ -1,6 +1,5 @@
 import Yaml from 'js-yaml';
-import { ViewPostPage } from '../../routes/posts/one/one-post';
-import { staticRouteFor } from '../../util/static';
+import { ViewPostPage } from '../routes/posts/one/one-post';
 
 function loadContentFile<T>(file: FsFile) {
   const fileContents = file.text.replace(/\r\n/g, '\n');

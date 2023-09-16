@@ -1,16 +1,16 @@
 import { sortBy } from '../util/helpers';
-import { Book } from './books/book';
+import { Book } from './book';
 import booksDir from './books/data/';
-import { Category } from './categories/category';
 import categoriesDir from './categories/data/';
+import { Category } from './category';
 // import { snippetEvents } from './events';
+import { Movie } from './movie';
 import moviesDir from './movies/data/';
-import { Movie } from './movies/movie';
-import { loadAllSongs } from './music/song';
+import { Post } from './post';
 import postsDir from './posts/data/';
-import { Post } from './posts/post';
+import { Snippet } from './snippet';
 import snippetsDir from './snippets/data/';
-import { Snippet } from './snippets/snippet';
+import { loadAllSongs } from './song';
 
 const categoryOrder = [
   'classics',

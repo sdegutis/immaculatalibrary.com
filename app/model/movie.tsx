@@ -1,6 +1,6 @@
-import { ViewMovieRoute } from '../../routes/movies/view-movies/view-movies';
-import { loadContentFile } from '../../util/data-files';
-import { staticRouteFor } from '../../util/static';
+import { ViewMovieRoute } from '../routes/movies/view-movies/view-movies';
+import { loadContentFile } from '../util/data-files';
+import { staticRouteFor } from '../util/static';
 
 export class Movie {
 

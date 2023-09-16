@@ -3,7 +3,7 @@ import { Content } from "../../../components/content/content";
 import { SiteCommon } from "../../../components/site";
 import { renderElement } from "../../../core/jsx";
 import { addRouteable, Routeable } from "../../../core/router";
-import { Movie } from "../../../model/movies/movie";
+import { Movie } from "../../../model/movie";
 import { markdown } from "../../../util/helpers";
 import { MoviesSidebar } from "../movies-sidebar";
 

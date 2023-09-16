@@ -1,6 +1,6 @@
 import Yaml from 'js-yaml';
-import { ViewSong } from '../../routes/music/view-song';
-import { markdown } from '../../util/helpers';
+import { ViewSong } from '../routes/music/view-song';
+import { markdown } from '../util/helpers';
 
 export class Song {
 
