@@ -3,8 +3,6 @@ import 'source-map-support/register';
 import { FileSys, FsDir, FsFile } from './filesys';
 import { Runtime } from "./runtime";
 
-const PORT = 8080;
-
 export class Site {
 
   #srcFs;
@@ -15,8 +13,10 @@ export class Site {
   constructor(srcPath: string, outPath: string) {
     this.#srcFs = new FileSys(srcPath);
     this.#outFs = new FileSys(outPath);
-    this.build();
+    this.#build();
+  }
 
+  startServer(port: number) {
     const server = http.createServer((req, res) => {
       const file = this.#outFs.root.find(req.url!);
       if (file instanceof FsFile) {
@@ -29,11 +29,11 @@ export class Site {
       }
     });
 
-    server.listen(PORT);
-    console.log(`Running on http://localhost:${PORT}`);
+    server.listen(port);
+    console.log(`Running on http://localhost:${port}`);
   }
 
-  build() {
+  #build() {
     console.log('Building site');
     const root = this.#srcFs.root;
 
@@ -59,7 +59,7 @@ export class Site {
 
   pathsUpdated(paths: Set<string>) {
     this.#srcFs.reflectChangesFromReal(paths);
-    this.build();
+    this.#build();
   }
 
 }

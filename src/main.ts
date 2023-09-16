@@ -4,6 +4,7 @@ import 'source-map-support/register';
 import { Site } from './site';
 
 const site = new Site('app', 'docs');
+site.startServer(8080);
 
 const updatedPaths = new Set<string>();
 let reloadFsTimer: NodeJS.Timeout;
