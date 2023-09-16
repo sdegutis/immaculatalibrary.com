@@ -1,13 +1,5 @@
-import path from 'path';
-// import { loadRoutes } from './core/router';
-// import './load-route-files';
+import siteDir from './site/';
 
-const out = __dir.dirsByName['site']!.clone(null);
-
-// for (const [route, handler] of loadRoutes()) {
-//   const filepath = path.join('docs', route);
-//   const body = handler().body!;
-//   out.set(filepath, body);
-// }
+const out = siteDir.clone(null);
 
 export default out;
