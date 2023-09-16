@@ -23,7 +23,7 @@ export class Site {
     this.#runtime = new Runtime(this.#persisted, root);
 
     this.#persisted['runtime'] = this.#runtime;
-    this.#persisted['outFs'] = this.#outFs;
+    // this.#persisted['outFs'] = this.#outFs;
 
     const mainFile = root.find('/main') as FsFile;
     const mainModule = this.#runtime.modules.get(mainFile)!;
