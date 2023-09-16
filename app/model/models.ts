@@ -74,7 +74,7 @@ export const allSnippets = (snippetsDir
   .filter(s => s.published));
 
 export const allCategories = (categoriesDir
-  .dirs.map(dir => Category.from(dir))
+  .files.map(file => Category.from(file))
   .sort(sortBy(c => categoryOrder.indexOf(c.slug))));
 
 export const allMovies = (moviesDir
