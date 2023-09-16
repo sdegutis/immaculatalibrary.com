@@ -3,7 +3,6 @@ import { Book } from './book';
 import booksDir from './books/data/';
 import categoriesDir from './categories/data/';
 import { Category } from './category';
-// import { snippetEvents } from './events';
 import { Movie } from './movie';
 import moviesDir from './movies/data/';
 import { Post } from './post';
@@ -99,8 +98,3 @@ export function sortAllSnippets() {
 }
 
 sortAllSnippets();
-
-// snippetEvents.emit('loaded');
-
-// snippetEvents.on('created', sortAllSnippets);
-// snippetEvents.on('updated', sortAllSnippets);
