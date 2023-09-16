@@ -54,11 +54,11 @@ export class Site {
       return;
     }
 
-    console.log(outDir, this.#outFs.root);
+    this.#outFs.reflectChangesToReal(outDir);
   }
 
   pathsUpdated(paths: Set<string>) {
-    this.#srcFs.update(paths);
+    this.#srcFs.reflectChangesFromReal(paths);
     this.build();
   }
 

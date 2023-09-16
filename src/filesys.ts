@@ -143,7 +143,7 @@ export class FileSys {
     return dir;
   }
 
-  update(realFilePaths: Set<string>) {
+  reflectChangesFromReal(realFilePaths: Set<string>) {
     for (const realFilePath of realFilePaths) {
       const fsFilePath = realFilePath.slice(this.realBase.length);
       const fsFile = this.root.find(fsFilePath) as FsFile | null;
@@ -181,6 +181,10 @@ export class FileSys {
         }
       }
     }
+  }
+
+  reflectChangesToReal(outDir: FsDir) {
+    console.log(outDir, this.root);
   }
 
 }
