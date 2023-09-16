@@ -1,6 +1,6 @@
 import chokidar from 'chokidar';
 import * as path from 'path';
-import 'source-map-support/register';
+// import 'source-map-support/register';
 import { Site } from './site';
 
 const site = new Site('app', 'docs');

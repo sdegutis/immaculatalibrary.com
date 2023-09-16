@@ -1,5 +1,4 @@
 import * as http from "http";
-import 'source-map-support/register';
 import { FileSys, FsDir, FsFile } from './filesys';
 import { Runtime } from "./runtime";
 
