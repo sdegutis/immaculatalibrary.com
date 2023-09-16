@@ -1,8 +1,8 @@
-.content>h1:first-child {
+.typography>h1:first-child {
   margin-bottom: 0;
 }
 
-.content p.date {
+.typography p.date {
   font-size: 80%;
   margin-bottom: 2em;
 }

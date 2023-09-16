@@ -1,33 +1,33 @@
-.content blockquote {
+.typography blockquote {
   border-left: 3px solid var(--border-color);
   padding-left: 1em;
 }
 
-.content blockquote>p {
+.typography blockquote>p {
   text-indent: 1em;
 }
 
-.content code {
+.typography code {
   font: inherit;
   color: inherit;
   font-variant: small-caps;
 }
 
-.content p {
+.typography p {
   hyphens: auto;
   text-align: justify;
 }
 
-.content :is(ol, ul) p:first-child {
+.typography :is(ol, ul) p:first-child {
   text-indent: 2.5em;
 }
 
-.content :is(ol, ul) p {
+.typography :is(ol, ul) p {
   text-indent: 1em;
   margin-left: -2em;
 }
 
-.content :is(ol, ul) ::marker {
+.typography :is(ol, ul) ::marker {
   font-weight: bold;
   color: var(--bold-color);
 }

@@ -1,36 +1,36 @@
-.content h2.title {
+.typography h2.title {
   margin-bottom: 0.25em;
 }
 
-.content p.subtitle {
+.typography p.subtitle {
   font-weight: bold;
   color: var(--bold-color);
 }
 
-.content .author {
+.typography .author {
   font-weight: bold;
   color: var(--bold-color);
 }
 
-.content .indent {
+.typography .indent {
   margin-left: 20px;
 }
 
-.content ul {
+.typography ul {
   list-style-type: none;
   padding-left: 0;
 }
 
-.content table.downloads {
+.typography table.downloads {
   border-collapse: collapse;
 }
 
-.content table.downloads td {
+.typography table.downloads td {
   padding: 1em;
   border: 1px solid var(--border-color);
 }
 
-.content table.downloads td.link {
+.typography table.downloads td.link {
   white-space: nowrap;
 }
 
@@ -51,7 +51,7 @@ ul.snippets-latest {
   height: 100vh;
 }
 
-.content .chapter .chapter-header {
+.typography .chapter .chapter-header {
   position: sticky;
   top: 0;
   backdrop-filter: blur(7px);

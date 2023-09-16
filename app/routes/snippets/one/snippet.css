@@ -2,11 +2,11 @@
   margin-bottom: 1em;
 }
 
-.content>h1:first-child {
+.typography>h1:first-child {
   margin-bottom: 0;
 }
 
-.content>p:nth-child(2) {
+.typography>p:nth-child(2) {
   margin-bottom: 2em;
   font-size: 80%;
 }
