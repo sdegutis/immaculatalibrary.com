@@ -20,7 +20,7 @@ export class Site {
     const server = http.createServer((req, res) => {
       let node = this.#outFs.root.find(req.url!);
       if (node instanceof FsDir) {
-        node = node.filesByName['index.html'] ?? null;
+        node = node.filesByName['index.html'];
       }
 
       if (node instanceof FsFile) {

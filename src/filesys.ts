@@ -51,7 +51,7 @@ export class FsDir extends FsNode {
           dir.filesByName[part + '.tsx'] ??
           dir.dirsByName[part]?.filesByName['index.ts'] ??
           dir.dirsByName[part]?.filesByName['index.tsx'] ??
-          null
+          undefined
         );
       }
       else {
@@ -61,7 +61,7 @@ export class FsDir extends FsNode {
       }
     }
 
-    return null;
+    return undefined;
   }
 
   clone(parent: FsDir | null) {
