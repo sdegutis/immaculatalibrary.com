@@ -4,7 +4,7 @@ import path from "path/posix";
 abstract class FsNode {
 
   constructor(
-    public readonly name: string,
+    public name: string,
     public readonly parent: FsDir | null,
   ) { }
 
