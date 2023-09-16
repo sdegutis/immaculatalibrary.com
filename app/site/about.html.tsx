@@ -1,5 +1,6 @@
 import { Column } from "../components/new/column";
 import { Html } from "../components/new/html";
+import { Navlinks } from "../components/new/navlinks";
 import { Typography } from "../components/new/typography";
 
 export default <>
@@ -9,9 +10,9 @@ export default <>
 
         {/* <HeroImage image={attrs.image}>
           <SiteHeader />
-        </HeroImage>
+        </HeroImage> */}
 
-        <Navlinks /> */}
+        <Navlinks />
 
         <Column spaced centered>
           <Typography>
