@@ -1,6 +1,5 @@
-import mime from "mime";
-import { redirectResponse } from "./helpers";
 import path from "path";
+import { redirectResponse } from "./helpers";
 
 export function notFoundPage(input: RouteInput): RouteOutput {
   return {
@@ -44,8 +43,6 @@ export function makeRouteHandler(routes: Map<string, RouteHandler>): FullRouteHa
     }
 
     output.headers ??= {};
-    output.headers['Strict-Transport-Security'] = 'max-age=15552000; includeSubDomains';
-    output.headers['Content-Type'] ??= mime.getType(input.url.pathname) ?? undefined;
 
     return output;
   };
