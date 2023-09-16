@@ -2,7 +2,7 @@ import * as process from 'process';
 import * as sucrase from 'sucrase';
 import { pathToFileURL, URL, URLSearchParams } from 'url';
 import vm from 'vm';
-import { FsDir, FsFile } from "./filesys";
+import { FileSys, FsDir, FsFile } from "./filesys";
 
 export class Runtime {
 
@@ -11,7 +11,7 @@ export class Runtime {
   #timeouts: NodeJS.Timeout[] = [];
   #intervals: NodeJS.Timer[] = [];
 
-  constructor(persisted: any, root: FsDir) {
+  constructor(persisted: any, public fs: FileSys) {
     this.context = vm.createContext({
       persisted,
       console,
@@ -22,7 +22,7 @@ export class Runtime {
       setTimeout: (fn: () => void, ms: number) => this.#setTimeout(fn, ms),
       setInterval: (fn: () => void, ms: number) => this.#setInterval(fn, ms),
     });
-    this.#createModules(root);
+    this.#createModules(fs.root);
   }
 
   #setTimeout(fn: () => void, ms: number) {
@@ -66,7 +66,7 @@ class Module {
     private runtime: Runtime,
   ) {
     const rawCode = this.file.buffer.toString('utf8');
-    this.#filePath = pathToFileURL(this.file.realPath);
+    this.#filePath = pathToFileURL(runtime.fs.realPath(this.file));
 
     const transformed = sucrase.transform(rawCode, {
       transforms: ['typescript', 'imports', 'jsx'],
@@ -76,7 +76,7 @@ class Module {
       production: true,
       filePath: this.#filePath.href,
       sourceMapOptions: {
-        compiledFilename: this.file.realPath,
+        compiledFilename: runtime.fs.realPath(this.file),
       },
     });
 

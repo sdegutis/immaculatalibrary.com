@@ -38,7 +38,7 @@ export class Site {
     const root = this.#srcFs.root;
 
     this.#runtime?.shutdown();
-    this.#runtime = new Runtime(this.#persisted, root);
+    this.#runtime = new Runtime(this.#persisted, this.#srcFs);
 
     const mainFile = root.find('/main') as FsFile;
     const mainModule = this.#runtime.modules.get(mainFile)!;

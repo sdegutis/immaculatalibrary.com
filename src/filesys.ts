@@ -19,10 +19,6 @@ abstract class FsNode {
     this.path = path.join('/', ...parts);
   }
 
-  get realPath() {
-    return path.join(this.fs.realBase, this.path);
-  }
-
 }
 
 export class FsDir extends FsNode {
@@ -107,6 +103,10 @@ export class FileSys {
     this.root = this.#loadDir('/', null);
   }
 
+  realPath(node: FsNode) {
+    return path.join(this.realBase, node.path);
+  }
+
   #loadDir(base: string, parent: FsDir | null) {
     const dir = new FsDir(this, path.basename(base), parent);
 
@@ -124,7 +124,7 @@ export class FileSys {
       }
       else if (stat.isFile()) {
         const child = new FsFile(this, name, dir);
-        child.buffer = fs.readFileSync(child.realPath);
+        child.buffer = fs.readFileSync(this.realPath(child));
         dir.children.push(child);
       }
     }
