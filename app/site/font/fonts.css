@@ -1,0 +1,69 @@
+@font-face {
+  font-display: block;
+  font-family: "David Libre";
+  font-weight: 400;
+  src: url(/font/DavidLibre-Regular.woff);
+}
+
+@font-face {
+  font-display: block;
+  font-family: "David Libre";
+  font-weight: 600;
+  src: url(/font/DavidLibre-Medium.woff);
+}
+
+@font-face {
+  font-display: block;
+  font-family: "David Libre";
+  font-weight: 700;
+  src: url(/font/DavidLibre-Bold.woff);
+}
+
+@font-face {
+  font-display: block;
+  font-family: "Martel";
+  font-weight: 200;
+  src: url(/font/Martel-ExtraLight.woff);
+}
+
+@font-face {
+  font-display: block;
+  font-family: "Martel";
+  font-weight: 300;
+  src: url(/font/Martel-Light.woff);
+}
+
+@font-face {
+  font-display: block;
+  font-family: "Martel";
+  font-weight: 400;
+  src: url(/font/Martel-Regular.woff);
+}
+
+@font-face {
+  font-display: block;
+  font-family: "Martel";
+  font-weight: 600;
+  src: url(/font/Martel-SemiBold.woff);
+}
+
+@font-face {
+  font-display: block;
+  font-family: "Martel";
+  font-weight: 700;
+  src: url(/font/Martel-Bold.woff);
+}
+
+@font-face {
+  font-display: block;
+  font-family: "Martel";
+  font-weight: 800;
+  src: url(/font/Martel-ExtraBold.woff);
+}
+
+@font-face {
+  font-display: block;
+  font-family: "Martel";
+  font-weight: 900;
+  src: url(/font/Martel-Black.woff);
+}
