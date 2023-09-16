@@ -5,10 +5,9 @@ abstract class FsNode {
 
   readonly root: FsDir;
   readonly path;
-  readonly realPath;
 
   constructor(
-    protected readonly realBase: string,
+    private readonly fs: FileSys,
     public readonly name: string,
     public readonly parent: FsDir | null,
   ) {
@@ -18,7 +17,10 @@ abstract class FsNode {
     }
     this.root = (this.parent ? this.parent.root : this as any);
     this.path = path.join('/', ...parts);
-    this.realPath = path.join(this.realBase, this.path);
+  }
+
+  get realPath() {
+    return path.join(this.fs.fsBase, this.path);
   }
 
 }
@@ -106,7 +108,7 @@ export class FileSys {
   }
 
   #loadDir(base: string, parent: FsDir | null) {
-    const dir = new FsDir(this.fsBase, path.basename(base), parent);
+    const dir = new FsDir(this, path.basename(base), parent);
 
     const dirRealPath = path.join(this.fsBase, base);
     const files = fs.readdirSync(dirRealPath);
@@ -121,7 +123,7 @@ export class FileSys {
         dir.children.push(child);
       }
       else if (stat.isFile()) {
-        const child = new FsFile(this.fsBase, name, dir);
+        const child = new FsFile(this, name, dir);
         child.buffer = fs.readFileSync(child.realPath);
         dir.children.push(child);
       }
@@ -149,13 +151,13 @@ export class FileSys {
           for (const dirName of dirs) {
             let subdir = dir.dirsByName[dirName];
             if (!subdir) {
-              subdir = new FsDir(this.fsBase, dirName, dir);
+              subdir = new FsDir(this, dirName, dir);
               dir.children.push(subdir);
             }
             dir = subdir;
           }
 
-          const file = new FsFile(this.fsBase, name, dir);
+          const file = new FsFile(this, name, dir);
           file.buffer = contents;
           dir.children.push(file);
         }
