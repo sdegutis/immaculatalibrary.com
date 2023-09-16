@@ -31,19 +31,6 @@ export class FsDir extends FsNode {
   get filesByName() { return Object.fromEntries(this.files.map(c => [c.name, c])); }
   get dirsByName() { return Object.fromEntries(this.dirs.map(c => [c.name, c])); }
 
-  // createFile(name: string, buffer: Buffer) {
-  //   if (this.childrenByName[name]) {
-  //     throw new Error("Cannot overwrite existing file.");
-  //   }
-
-  //   const child = new FsFile(this.realBase, name, this);
-  //   child.buffer = buffer;
-  //   fs.writeFileSync(child.realPath, buffer);
-  //   this.children.push(child);
-
-  //   return child;
-  // }
-
   find(toPath: string) {
     const absolutePath = (toPath.startsWith('/')
       ? toPath
@@ -89,11 +76,6 @@ export class FsFile extends FsNode {
 
   declare parent: FsDir;
   buffer!: Buffer;
-
-  // replace(newBuffer: Buffer) {
-  //   this.buffer = newBuffer;
-  //   fs.writeFileSync(this.realPath, newBuffer);
-  // }
 
   get text() {
     return this.buffer.toString('utf8');
