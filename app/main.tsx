@@ -3,21 +3,12 @@ import 'source-map-support/register';
 import { loadRoutes } from './core/router';
 import './load-route-files';
 
-const routes = loadRoutes();
+const out = new Map<string, Buffer>();
 
-// generateSite();
+for (const [route, handler] of loadRoutes()) {
+  const filepath = path.join('docs', route);
+  const body = handler().body!;
+  out.set(filepath, body);
+}
 
-async function generateSite() {
-  // await rimraf('docs');
-  for (const [route, handler] of routes) {
-    const filepath = path.join('docs', route);
-    const body = handler().body!;
-    // console.log(filepath);
-
-    // await mkdirp(path.dirname(filepath));
-    // fs.writeFileSync(filepath, body);
-  }
-  // fs.writeFileSync('docs/CNAME', 'www.immaculatalibrary.com');
-
-  console.log('Done generating site.');
-};
+export default out;

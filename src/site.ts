@@ -40,19 +40,21 @@ export class Site {
     this.#runtime?.shutdown();
     this.#runtime = new Runtime(this.#persisted, root);
 
-    // this.#persisted['outFs'] = this.#outFs;
-
     const mainFile = root.find('/main') as FsFile;
     const mainModule = this.#runtime.modules.get(mainFile)!;
 
+    let outMap: Map<string, Buffer>;
     try {
       console.log('Loading main module...');
-      mainModule.require();
+      outMap = mainModule.require().default;
       console.log('Done');
     }
     catch (e) {
       console.error(e);
+      return;
     }
+
+    console.log(outMap.size, this.#outFs.root);
   }
 
   pathsUpdated(paths: Set<string>) {
