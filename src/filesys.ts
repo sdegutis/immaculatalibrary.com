@@ -36,7 +36,6 @@ export class FsDir extends FsNode {
 
     let dir: FsDir = this;
     while (dir.parent) dir = dir.parent;
-    console.log('root', dir)
 
     const parts = absolutePath.split(path.sep).slice(1);
     let part: string | undefined;
