@@ -91,7 +91,7 @@ export class FsFile extends FsNode {
 
 export class FileSys {
 
-  readonly root;
+  root;
 
   constructor(public realBase: string) {
     this.root = this.#loadDir('/', null);
@@ -168,6 +168,8 @@ export class FileSys {
 
   reflectChangesToReal(outDir: FsDir) {
     console.log(outDir, this.root);
+
+    this.root = outDir;
   }
 
 }
