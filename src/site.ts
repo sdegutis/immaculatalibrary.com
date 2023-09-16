@@ -18,10 +18,14 @@ export class Site {
 
   startServer(port: number) {
     const server = http.createServer((req, res) => {
-      const file = this.#outFs.root.find(req.url!);
-      if (file instanceof FsFile) {
+      let node = this.#outFs.root.find(req.url!);
+      if (node instanceof FsDir) {
+        node = node.filesByName['index.html'] ?? null;
+      }
+
+      if (node instanceof FsFile) {
         res.statusCode = 200;
-        res.end(file.buffer);
+        res.end(node.buffer);
       }
       else {
         res.statusCode = 404;
