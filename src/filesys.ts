@@ -20,7 +20,7 @@ abstract class FsNode {
   }
 
   get realPath() {
-    return path.join(this.fs.fsBase, this.path);
+    return path.join(this.fs.realBase, this.path);
   }
 
 }
@@ -103,19 +103,19 @@ export class FileSys {
 
   readonly root;
 
-  constructor(public fsBase: string) {
+  constructor(public realBase: string) {
     this.root = this.#loadDir('/', null);
   }
 
   #loadDir(base: string, parent: FsDir | null) {
     const dir = new FsDir(this, path.basename(base), parent);
 
-    const dirRealPath = path.join(this.fsBase, base);
+    const dirRealPath = path.join(this.realBase, base);
     const files = fs.readdirSync(dirRealPath);
     for (const name of files) {
       if (name.startsWith('.')) continue;
 
-      const fileRealPath = path.join(this.fsBase, base, name);
+      const fileRealPath = path.join(this.realBase, base, name);
       const stat = fs.statSync(fileRealPath);
 
       if (stat.isDirectory()) {
@@ -134,7 +134,7 @@ export class FileSys {
 
   update(realFilePaths: Set<string>) {
     for (const realFilePath of realFilePaths) {
-      const fsFilePath = realFilePath.slice(this.fsBase.length);
+      const fsFilePath = realFilePath.slice(this.realBase.length);
       const fsFile = this.root.find(fsFilePath) as FsFile | null;
 
       if (fs.existsSync(realFilePath)) {
