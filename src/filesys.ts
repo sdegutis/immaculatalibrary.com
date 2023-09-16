@@ -3,7 +3,6 @@ import path from "path/posix";
 
 abstract class FsNode {
 
-  readonly root: FsDir;
   readonly path;
 
   constructor(
@@ -14,7 +13,6 @@ abstract class FsNode {
     for (let node: FsNode | null = this; node; node = node.parent) {
       parts.unshift(node.name);
     }
-    this.root = (this.parent ? this.parent.root : this as any);
     this.path = path.join('/', ...parts);
   }
 
@@ -36,7 +34,10 @@ export class FsDir extends FsNode {
       ? toPath
       : path.join(this.path, toPath));
 
-    let dir: FsDir = this.root;
+    let dir: FsDir = this;
+    while (dir.parent) dir = dir.parent;
+    console.log('root', dir)
+
     const parts = absolutePath.split(path.sep).slice(1);
     let part: string | undefined;
 
