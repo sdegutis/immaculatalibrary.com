@@ -3,17 +3,17 @@ import path from "path/posix";
 
 abstract class FsNode {
 
-  readonly path;
-
   constructor(
     public readonly name: string,
     public readonly parent: FsDir | null,
-  ) {
+  ) { }
+
+  get path() {
     const parts: string[] = [];
     for (let node: FsNode | null = this; node; node = node.parent) {
       parts.unshift(node.name);
     }
-    this.path = path.join('/', ...parts);
+    return path.join('/', ...parts);
   }
 
 }
