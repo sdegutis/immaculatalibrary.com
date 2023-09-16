@@ -1,4 +1,4 @@
-import { inlineFontCss } from "../routes/font/fonts";
+// import { inlineFontCss } from "../routes/font/fonts";
 import { mainSiteHeaderImagePath } from "../routes/home/home";
 import { staticRouteFor } from "../util/static";
 import { DarkModeButton } from "./dark-mode/button";
@@ -28,7 +28,7 @@ export const Head: JSX.Component<{ imagePath?: string, title?: string, descripti
 
     <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['site.css']!)} />
 
-    <style>{inlineFontCss}</style>
+    <style>{/* inlineFontCss */}</style>
 
     <Meta />
 
