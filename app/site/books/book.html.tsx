@@ -20,15 +20,15 @@ export default allBooks.map(book => [`${book.slug}.html`, <>
 
         <h4>Read now:</h4>
         {book.complete && <>
-          {/* <table class="downloads" id='read-online-table'>
+          <table class="downloads" id='read-online-table'>
             <tr>
               <td>
-                <a href={this.readBookPage.route}>
+                <a href={`/books/read-on-web/${book.slug}.html`}>
                   Read on Web
                 </a>
               </td>
             </tr>
-          </table> */}
+          </table>
         </>}
         <table class="downloads" id='read-online-table'>
           {book.files.map(file => <>
