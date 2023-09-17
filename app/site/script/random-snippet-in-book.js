@@ -1,4 +1,4 @@
-const snippetsData = fetch('/dynamic/snippets.json').then(res => res.json());
+const snippetsData = fetch('/data/snippets.json').then(res => res.json());
 const button = document.getElementById('random-snippet-in-book-button');
 
 button.onclick = (e) => {
