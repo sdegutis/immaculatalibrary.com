@@ -1,4 +1,4 @@
-import { loadContentFile } from '../core/data-files';
+import { loadContentFile } from '../core/helpers';
 import { Category } from './categories';
 import { Snippet } from './snippets';
 
