@@ -121,12 +121,13 @@ export default <>
 
           <div>
             <h3>Random Book Snippet (<a href='#' id='refresh-random-book-snippet'>Another</a>)</h3>
-            <noscript>Enable JavaScript to see more random book snippets</noscript>
             <Common.Typography>
-              <div id="random-book-snippet"></div>
+              <div id="random-book-snippet">
+                <p><em>Loading...</em></p>
+              </div>
             </Common.Typography>
           </div>
-          <script src='/script/random-book-snippet.js' defer />
+          <script type='module' src='/script/random-book-snippet.js' defer />
 
           {/* <h3>Book Snippets by Tag</h3>
           <p>{sortedTags().map(tag => <>

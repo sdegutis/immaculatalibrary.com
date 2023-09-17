@@ -1,4 +1,6 @@
-const snippetsData = fetch('/data/snippets.json').then(res => res.json());
+import { snippetsData } from "./modules/load-snippets.js";
+
+window.showSnippetGroups = showSnippetGroups;
 
 function showSnippetGroups(filter) {
   const host = document.querySelector('.snippets-latest');

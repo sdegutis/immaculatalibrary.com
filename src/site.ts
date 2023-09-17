@@ -23,6 +23,9 @@ export class Site {
 
       if (node instanceof FsFile) {
         res.statusCode = 200;
+        if (node.name.endsWith('.js')) {
+          res.setHeader('content-type', 'text/javascript');
+        }
         res.end(node.buffer);
       }
       else {

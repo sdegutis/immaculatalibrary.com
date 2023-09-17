@@ -1,4 +1,4 @@
-const snippetsData = fetch('/data/snippets.json').then(res => res.json());
+import { snippetsData } from './modules/load-snippets.js';
 
 makeContinueReadingLinkWork();
 

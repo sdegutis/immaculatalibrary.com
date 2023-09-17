@@ -18,7 +18,11 @@ export const LatestBookSnippets: JSX.Component<{}> = (attrs, children) => {
     <h3>Latest book snippets</h3>
     <SnippetsGroups />
 
-    <script defer>{`showSnippetGroups((s, i) => i < 10);`}</script>
+    <script defer>{`
+      window.addEventListener('load', () => {
+        showSnippetGroups((s, i) => i < 10);
+      });
+    `}</script>
 
     {/* <p>
       <a href='/snippets.html'>Search</a> | { }
