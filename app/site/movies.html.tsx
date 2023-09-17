@@ -3,7 +3,7 @@ import * as Common from "../components/common";
 export default <>
   <Common.Page>
 
-    <Common.SiteHeader image='/img/categories/blessed-sacrament-big.jpg' />
+    <Common.SiteHeader image='/img/movies/passion-of-the-christ-big.jpg' />
     <Common.Navlinks />
 
     <main>
