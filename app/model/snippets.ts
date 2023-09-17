@@ -30,6 +30,8 @@ export interface Snippet {
 
 export function snippetFromFile(file: FsFile): Snippet {
   const data = loadContentFile<Snippet>(file);
+  data.tags ??= [];
+
   data.route = `/book-snippets/${data.slug}.html`;
   data.archiveLink = `https://archive.org/details/${data.archiveSlug}/page/${data.archivePage}?view=theater`;
   data.previewMarkdown = derivePreview(data);

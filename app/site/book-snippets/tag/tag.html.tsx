@@ -1,24 +1,20 @@
 import * as Common from "../../../components/common";
+import { SnippetsGroups } from "../../../components/snippet-groups";
 import { allTags } from "../../../model/tag";
 
-export default [...allTags.values()].map(tag => {
-  // const [randomSnippet] = tag.snippets;
-  // const image = randomSnippet!.book.category.imageBig;
+export default [...allTags.values()].map(tag => [`${tag.slug.toLowerCase()}.html`, <>
+  <Common.TypicalPage image='/img/categories/reference-big.jpg'>
 
-  // const groups = Object.entries(groupByDate([...tag.snippets]));
+    <Common.Column spaced split>
 
-  return [`${tag.slug.toLowerCase()}.html`, <>
-    <Common.TypicalPage image='/img/categories/reference-big.jpg'>
+      <div>
+        <h1>{tag.name} Book Snippets</h1>
+        <SnippetsGroups />
+      </div>
 
-      <Common.Column spaced split>
+      <script defer>{`showSnippetGroups(s => s.tags.includes(${JSON.stringify(tag.name)}));`}</script>
 
-        <div>
-          <h1>{tag.name} Book Snippets</h1>
-          {/* <SnippetsGroups groups={groups} /> */}
-        </div>
+    </Common.Column>
 
-      </Common.Column>
-
-    </Common.TypicalPage>
-  </>];
-});
+  </Common.TypicalPage>
+</>]);

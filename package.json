@@ -1,7 +1,7 @@
 {
-  "name": "immaculatalibrary-v3",
+  "name": "immaculatalibrary",
   "version": "2.0.0",
-  "description": "A simple TypeScript web framework",
+  "description": "My website.",
   "main": "out/main.js",
   "scripts": {
     "build": "tsc --build",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PurityLib/Purity.git"
+    "url": "git+https://github.com/sdegutis/immaculatalibrary.com.git"
   },
   "keywords": [],
   "author": "Steven Degutis",
   "license": "Custom MIT",
   "bugs": {
-    "url": "https://github.com/PurityLib/Purity/issues"
+    "url": "https://github.com/sdegutis/immaculatalibrary.com/issues"
   },
-  "homepage": "https://github.com/PurityLib/Purity#readme",
+  "homepage": "https://github.com/sdegutis/immaculatalibrary.com#readme",
   "devDependencies": {
     "@types/js-yaml": "^4.0.5",
     "@types/luxon": "^2.0.9",

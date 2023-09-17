@@ -6,6 +6,8 @@ export default <>
     slug: snippet.slug,
     book: snippet.bookSlug,
     route: snippet.route,
+    tags: snippet.tags,
+    date: snippet.date,
     searchable: snippet.content.toLowerCase()
       + snippet.title.toLowerCase()
       + snippet.book.title.toLowerCase()
