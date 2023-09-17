@@ -12,7 +12,7 @@ export const QuickLinks: JSX.Component<{}> = (attrs, children) => {
         <ul class="quicklinks">
 
           {allCategories.map(cat => <li>
-            <a class="link" href={`/book/category/${cat.slug}.html`} style={`background-image: url(/img/categories/${cat.slug}-small.jpg);`}>
+            <a class="link" href={`/books/category/${cat.slug}.html`} style={`background-image: url(/img/categories/${cat.slug}-small.jpg);`}>
               <span>{cat.meta.shortTitle}</span>
             </a>
           </li>
