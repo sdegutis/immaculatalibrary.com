@@ -45,11 +45,11 @@ export default allCategories.map(cat => [`${cat.slug}.html`, <>
           </ul>
         </section>
 
-        {/* <section id='snippets-in-category'>
+        <section id='snippets-in-category'>
           <h2>Book Snippets</h2>
           <div class='scrollable-area'>
             <ul>
-              {this.cat.books
+              {cat.booksInCategory
                 .filter(book => book.snippets.length > 0)
                 .map(book => <>
                   <li>
@@ -59,7 +59,7 @@ export default allCategories.map(cat => [`${cat.slug}.html`, <>
                         <li>
                           <p>
                             p.{bookSnippet.archivePage} { }
-                            <a href={bookSnippet.view.route}>{bookSnippet.renderedTitle}</a>
+                            <a href={bookSnippet.route}>{bookSnippet.renderedTitle}</a>
                           </p>
                         </li>
                       </>)}
@@ -68,7 +68,7 @@ export default allCategories.map(cat => [`${cat.slug}.html`, <>
                 </>)}
             </ul>
           </div>
-        </section> */}
+        </section>
 
       </Common.Column>
 

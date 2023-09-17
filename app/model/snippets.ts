@@ -16,9 +16,9 @@ export interface Snippet {
   bookSlug: string;
   tags: string[];
 
+  route: string;
   archiveLink: string;
   previewMarkdown: string | null;
-
   renderedBody: string;
   renderedTitle: string;
 
@@ -29,6 +29,7 @@ export interface Snippet {
 
 export function snippetFromFile(file: FsFile) {
   const data = loadContentFile<Snippet>(file);
+  data.route = `/book-snippets/${data.slug}.html`;
   data.archiveLink = `https://archive.org/details/${data.archiveSlug}/page/${data.archivePage}?view=theater`;
   data.previewMarkdown = derivePreview(data);
   data.renderedBody = markdown.render(data.content);
