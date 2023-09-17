@@ -21,7 +21,6 @@
   "homepage": "https://github.com/sdegutis/immaculatalibrary.com#readme",
   "devDependencies": {
     "@types/js-yaml": "^4.0.5",
-    "@types/luxon": "^2.0.9",
     "@types/markdown-it": "^12.2.3",
     "@types/node": "^17.0.8",
     "typescript": "^4.5.4"
@@ -29,7 +28,6 @@
   "dependencies": {
     "chokidar": "^3.5.2",
     "js-yaml": "^4.1.0",
-    "luxon": "^2.3.0",
     "markdown-it": "^12.2.0",
     "sucrase": "^3.20.3"
   }

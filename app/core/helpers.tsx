@@ -1,5 +1,4 @@
 import Yaml from "js-yaml";
-import * as luxon from 'luxon';
 import MarkdownIt from 'markdown-it';
 
 export function loadContentFile<T>(file: FsFile) {
@@ -38,7 +37,7 @@ export function calculateReadingMins(str: string) {
 }
 
 export function formatDate(date: string) {
-  return luxon.DateTime.fromISO(date).toLocaleString({
+  return new Date(date).toLocaleDateString('en-EN', {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
