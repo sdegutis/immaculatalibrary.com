@@ -18,7 +18,8 @@ document.getElementById('refresh-random-book-snippet').addEventListener('click',
 });
 
 function doRandomBookSnippet() {
-  snippetsData.then(snippets => {
+  snippetsData.then(snippetInfo => {
+    const snippets = snippetInfo.snippets;
     const i = Math.floor(Math.random() * snippets.length);
     const snippet = snippets[i];
 

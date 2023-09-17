@@ -3,25 +3,35 @@ import { snippetsData } from "./modules/load-snippets.js";
 window.showSnippetGroups = showSnippetGroups;
 
 function showSnippetGroups(filter) {
-  const host = document.querySelector('.snippets-latest');
-  snippetsData.then(snippets => {
-    snippets = snippets.filter(filter);
+  const host = document.getElementById('snippets-group-area');
+  snippetsData.then(snippetInfo => {
+    const snippets = snippetInfo.snippets.filter(filter);
     const groups = Object.entries(groupByDate(snippets));
-    host.innerHTML = groups.map(([date, group]) => `
-      <li>
-        <h4>${date}</h4>
-        <ul>
-          ${group.map(snippet => `
-            <li>
-              <p>
-                <a href="${snippet.url}">${snippet.title}</a>
-                <br /> ${snippet.readingMins} min &mdash; ${snippet.bookTitle}
-              </p>
-            </li>
-          `).join('')}
-        </ul>
-      </li>
-    `).join('');
+    host.innerHTML = `
+      <p>
+        <a href='/snippets.html'>Search</a> |
+        <a href='#'>Random</a> |
+        ${snippetInfo.snippets.length} total |
+        ${snippetInfo.totalReadingTime}
+      </p>
+      <ul class="snippets-latest">
+        ${groups.map(([date, group]) => `
+          <li>
+            <h4>${date}</h4>
+            <ul>
+              ${group.map(snippet => `
+                <li>
+                  <p>
+                    <a href="${snippet.url}">${snippet.title}</a>
+                    <br /> ${snippet.readingMins} min &mdash; ${snippet.bookTitle}
+                  </p>
+                </li>
+              `).join('')}
+            </ul>
+          </li>
+        `).join('')}
+      </ul>
+    `;
   });
 }
 
