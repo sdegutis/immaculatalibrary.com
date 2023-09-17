@@ -10,11 +10,13 @@ export interface Article {
   title: string;
   draft?: boolean;
 
+  route: string;
   previewMarkdown: string | null;
 }
 
 export function articleFromFile(file: FsFile) {
   const data = loadContentFile<Article>(file);
+  data.route = `/articles/${data.slug}.html`;
   data.previewMarkdown = derivePreview(data);
   return data;
 }
