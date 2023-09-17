@@ -1,8 +1,6 @@
 import { snippetsData } from "./modules/load-snippets.js";
 
-window.showSnippetGroups = showSnippetGroups;
-
-function showSnippetGroups(filter) {
+export function showSnippetGroups(filter) {
   const host = document.getElementById('snippets-group-area');
   snippetsData.then(snippetInfo => {
     const snippets = snippetInfo.snippets.filter(filter);

@@ -12,7 +12,10 @@ export default [...allTags.values()].map(tag => [`${tag.slug.toLowerCase()}.html
         <SnippetsGroups />
       </div>
 
-      <script defer>{`showSnippetGroups(s => s.tags.includes(${JSON.stringify(tag.name)}));`}</script>
+      <script type='module'>{`
+        import { showSnippetGroups } from '/script/snippet-groups.js';
+        showSnippetGroups(s => s.tags.includes(${JSON.stringify(tag.name)}));
+      `}</script>
 
     </Common.Column>
 
