@@ -2,8 +2,12 @@ import { renderElement } from './core/jsx';
 import siteDir from './site/';
 
 const out = siteDir.clone();
+
 renderDynamic(out);
+out.createFile('sitemap.xml', renderElement(require('/site/sitemap.xml.tsx').default(out)));
+
 export default out;
+
 
 function renderDynamic(dir: FsDir) {
   for (const subdir of dir.dirs) {
@@ -14,6 +18,8 @@ function renderDynamic(dir: FsDir) {
     if (file.name.endsWith('.tsx')) {
       const exported = require('/site' + file.path).default;
       dir.delete(file);
+
+      if (file.name === 'sitemap.xml.tsx') continue;
 
       if (Array.isArray(exported)) {
         for (const [name, jsx] of exported) {
