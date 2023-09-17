@@ -1,7 +1,7 @@
 import booksDir from '../../data/books/';
 import { loadContentFile } from '../../util/data-files';
 
-export const allBooks = booksDir.files.map(file => loadContentFile<{
+interface Book {
   title: string;
   subtitle: string;
   dateAdded: string;
@@ -19,4 +19,6 @@ export const allBooks = booksDir.files.map(file => loadContentFile<{
     title: string;
   }[];
   complete?: boolean;
-}>(file, 'slug'));
+}
+
+export const allBooks = booksDir.files.map(file => loadContentFile<Book>(file, 'slug'));

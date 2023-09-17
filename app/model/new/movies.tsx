@@ -2,12 +2,14 @@ import moviesDir from '../../data/movies/';
 import { loadContentFile } from '../../util/data-files';
 import { sortBy } from '../../util/helpers';
 
-export const allMovies = moviesDir.files.map(file => loadContentFile<{
+interface Movie {
   title: string;
   shortTitle: string;
   subtitle: string | undefined;
   year: string;
-}>(file, 'slug'));
+}
+
+export const allMovies = moviesDir.files.map(file => loadContentFile<Movie>(file, 'slug'));
 
 const movieOrder = [
   'passion-of-the-christ',
