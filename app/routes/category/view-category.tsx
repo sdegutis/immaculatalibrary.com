@@ -1,6 +1,6 @@
 import { Container } from "../../components/container/container";
 import { Content } from "../../components/content/content";
-import { Rating } from "../../components/rating/rating";
+import { Rating } from "../../components/rating";
 import { SiteCommon } from "../../components/site";
 import { renderElement } from "../../core/jsx";
 import { addRouteable, Routeable } from "../../core/router";

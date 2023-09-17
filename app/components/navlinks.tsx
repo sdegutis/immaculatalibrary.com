@@ -1,25 +1,16 @@
-import { aboutPage } from "../routes/about/about";
-import { audioBiblePage } from "../routes/audiobible/audiobible";
-import { devotionsPage } from "../routes/devotions/devotions";
-import { allMoviesPage } from "../routes/movies/all-movies/all-movies";
-import { musicPage } from "../routes/music/music";
-import { allPostsPage } from "../routes/posts/all/all-posts";
-import { allSnippetsPage } from "../routes/snippets/all/snippets";
-import { staticRouteFor } from "../util/static";
-import { Container } from "./container/container";
+import { Column } from "./column";
 
 export const Navlinks: JSX.Component<{}> = () => <>
-  <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['navlinks.css']!)} />
-  <Container>
+  <link rel="stylesheet" href='/css/navlinks.css' />
+  <Column>
     <div id='navlinks'>
-      <a href={aboutPage.route}>About</a>{' | '}
-      {/* <a href={allBooksPage.route}>Books</a>{' | '} */}
-      <a href={allSnippetsPage.route}>Snippets</a>{' | '}
-      <a href={allMoviesPage.route}>Movies</a>{' | '}
-      <a href={allPostsPage.route}>Articles</a>{' | '}
-      <a href={musicPage.route}>Music</a>{' | '}
-      <a href={audioBiblePage.route}>Audio Bible</a>{' | '}
-      <a href={devotionsPage.route}>Devotions</a>
+      <a href='/about.html'>About</a>{' | '}
+      <a href='/snippets.html'>Snippets</a>{' | '}
+      <a href='/movies.html'>Movies</a>{' | '}
+      <a href='/articles.html'>Articles</a>{' | '}
+      <a href='/music.html'>Music</a>{' | '}
+      <a href='/audio-bible.html'>Audio Bible</a>{' | '}
+      <a href='/devotions.html'>Devotions</a>
     </div>
-  </Container>
+  </Column>
 </>;

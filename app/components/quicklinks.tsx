@@ -1,46 +1,19 @@
-import { allCategories, allMovies } from "../model/models";
-import { audioBibleImageSmall, audioBiblePage } from "../routes/audiobible/audiobible";
-import { staticRouteFor } from "../util/static";
+import { allCategories } from "../model/new/categories";
+import { allMovies } from "../model/new/movies";
 
 export const QuickLinks: JSX.Component<{}> = (attrs, children) => {
-  // const recentPosts = allPosts.slice(0, 6);
-
   return <>
-    <link rel="stylesheet" href={staticRouteFor(__dir.filesByName['quicklinks.css']!)} />
+    <link rel="stylesheet" href='/css/quicklinks.css' />
 
     <div id="recents">
       <div class="container">
-
-        {/* <h2>Blog Posts</h2>
-        <p><a href={allPostsPage.route}>See all</a></p>
-
-        <ul id="posts">
-
-          {recentPosts.map(post => <>
-            <li class="post-box">
-              <a href={post.view.route}>
-                <img class="image" src={post.imageSmall} alt={post.title} width="1000" height="400" />
-              </a>
-              <a class="title" href={post.view.route}>
-                {post.title}
-              </a>
-              <span class="date">
-                {formatDate(post.date)} &bull; {calculateReadingMins(post.markdownContent)} min
-              </span>
-              <div class="excerpt">
-                {markdown.render(excerpt(post.markdownContent))}
-              </div>
-            </li>
-
-          </>)}
-        </ul> */}
 
         <h2>Books</h2>
         <ul class="quicklinks">
 
           {allCategories.map(cat => <li>
-            <a class="link" href={cat.view.route} style={`background-image: url(${cat.imageSmall});`}>
-              <span>{cat.shortTitle}</span>
+            <a class="link" href={`/book/category/${cat.slug}.html`} style={`background-image: url(/img/categories/${cat.slug}-small.jpg);`}>
+              <span>{cat.meta.shortTitle}</span>
             </a>
           </li>
           )}
@@ -51,14 +24,14 @@ export const QuickLinks: JSX.Component<{}> = (attrs, children) => {
         <ul class="quicklinks">
 
           {allMovies.map(movie => <li>
-            <a class="link" href={movie.view.route} style={`background-image: url(${movie.smallImage});`}>
-              <span>{movie.shortTitle}</span>
+            <a class="link" href={`/movies/${movie.slug}.html`} style={`background-image: url(/img/movies/${movie.slug}-small.jpg);`}>
+              <span>{movie.meta.shortTitle}</span>
             </a>
           </li>
           )}
 
           <li>
-            <a class="link" href={audioBiblePage.route} style={`background-image: url(${audioBibleImageSmall});`}>
+            <a class="link" href='/audio-bible.html' style={`background-image: url(/img/page/audiobible-small.jpg);`}>
               <span>Audio Bible</span>
             </a>
           </li>
