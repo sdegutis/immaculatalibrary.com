@@ -1,1 +1,0 @@
-Reading holy books can help us grow in devotion to God, and movies can help us visualize these sacred mysteries. But countless angels are singing the Lord's praises *right now* in Heaven. Listening to Sacred Music (and singing or playing it!) is a powerful way to join these angels in praising our Lord and Redeemer, in a way that deeply touches the Father's heart.
