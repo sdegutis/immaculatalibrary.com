@@ -26,6 +26,7 @@ export default allMovies.map(movie => {
 
       <Common.QuickLinks />
       <Common.SiteFooter />
+
     </Common.Page>
   </>];
 });
