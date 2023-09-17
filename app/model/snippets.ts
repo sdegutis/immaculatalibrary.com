@@ -1,5 +1,6 @@
 import { loadContentFile } from '../util/data-files';
 import { markdown } from '../util/helpers';
+import { Book } from './books';
 
 const PREVIEW_LENGTH = 2000;
 
@@ -20,6 +21,10 @@ export interface Snippet {
 
   renderedBody: string;
   renderedTitle: string;
+
+  book: Book;
+  prevSnippet?: Snippet;
+  nextSnippet?: Snippet;
 }
 
 export function snippetFromFile(file: FsFile) {
@@ -33,15 +38,10 @@ export function snippetFromFile(file: FsFile) {
 
 // ) {
 
-//   this.book = allBooks.find(book => book.slug.includes(this.bookSlug))!;
-//   this.book.snippets.push(this);
-
 //   this.tags = new Set([...tags].map(Tag.getOrCreate));
 //   for (const tag of this.tags) {
 //     tag.addSnippet(this);
 //   }
-
-//   allSnippets?.unshift(this);
 
 // }
 
@@ -59,8 +59,3 @@ function derivePreview(snippet: Snippet) {
   }
   return null;
 }
-
-// get image() {
-//   return this.book.category.imageBig;
-// }
-

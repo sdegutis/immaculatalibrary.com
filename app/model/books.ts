@@ -1,5 +1,6 @@
 import { loadContentFile } from '../util/data-files';
 import { Category } from './categories';
+import { Snippet } from './snippets';
 
 export interface Book {
   slug: string;
@@ -24,22 +25,14 @@ export interface Book {
   complete?: boolean;
 
   route: string;
+
   category: Category;
+  snippets: Snippet[];
 }
 
 export function bookFromFile(file: FsFile) {
   const data = loadContentFile<Book>(file);
   data.route = `/books/${data.slug}.html`;
+  data.snippets = [];
   return data;
 }
-
-// this.snippets.sort(sortBy(s =>
-//   s.archivePage.startsWith('n')
-//     ? +s.archivePage.slice(1) - 1000
-//     : +s.archivePage));
-// for (let i = 1; i < this.snippets.length; i++) {
-//   const s1 = this.snippets[i - 1];
-//   const s2 = this.snippets[i];
-//   s1!.nextSnippet = s2!;
-//   s2!.prevSnippet = s1!;
-// }
