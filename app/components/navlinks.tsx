@@ -5,7 +5,7 @@ export const Navlinks: JSX.Component<{}> = () => <>
   <Column>
     <div id='navlinks'>
       <a href='/about.html'>About</a>{' | '}
-      <a href='/snippets.html'>Snippets</a>{' | '}
+      <a href='/books.html'>Books</a>{' | '}
       <a href='/movies.html'>Movies</a>{' | '}
       <a href='/articles.html'>Articles</a>{' | '}
       <a href='/music.html'>Music</a>{' | '}
