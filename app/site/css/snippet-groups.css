@@ -1,0 +1,15 @@
+    ul.snippets-latest {
+      padding-left: 0;
+    }
+
+    ul.snippets-latest>li {
+      list-style-type: none;
+    }
+
+    ul.snippets-latest>li ul {
+      padding-left: 20px;
+    }
+
+    ul.snippets-latest>li li {
+      list-style-type: disc;
+    }
