@@ -40,7 +40,6 @@ export class Site {
     console.log('Building site');
     const root = this.#srcFs.root;
 
-    this.#runtime?.shutdown();
     this.#runtime = new Runtime(this.#persisted, this.#srcFs);
 
     const mainFile = root.find('/main') as FsFile;

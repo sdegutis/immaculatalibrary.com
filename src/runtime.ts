@@ -8,8 +8,6 @@ export class Runtime {
 
   context;
   modules = new Map<FsFile, Module>();
-  #timeouts: NodeJS.Timeout[] = [];
-  #intervals: NodeJS.Timer[] = [];
 
   constructor(persisted: any, public fs: FileSys) {
     this.context = vm.createContext({
@@ -19,23 +17,8 @@ export class Runtime {
       URL,
       URLSearchParams,
       process,
-      setTimeout: (fn: () => void, ms: number) => this.#setTimeout(fn, ms),
-      setInterval: (fn: () => void, ms: number) => this.#setInterval(fn, ms),
     });
     this.#createModules(fs.root);
-  }
-
-  #setTimeout(fn: () => void, ms: number) {
-    this.#timeouts.push(setTimeout(fn, ms));
-  }
-
-  #setInterval(fn: () => void, ms: number) {
-    this.#intervals.push(setInterval(fn, ms));
-  }
-
-  shutdown() {
-    this.#timeouts.forEach(clearTimeout);
-    this.#intervals.forEach(clearInterval);
   }
 
   #createModules(dir: FsDir) {
