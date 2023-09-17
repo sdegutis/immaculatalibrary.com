@@ -28,7 +28,7 @@ export interface Snippet {
   tagsForSnippet: Set<Tag>;
 }
 
-export function snippetFromFile(file: FsFile) {
+export function snippetFromFile(file: FsFile): Snippet {
   const data = loadContentFile<Snippet>(file);
   data.route = `/book-snippets/${data.slug}.html`;
   data.archiveLink = `https://archive.org/details/${data.archiveSlug}/page/${data.archivePage}?view=theater`;

@@ -16,7 +16,7 @@ export interface Article {
   previewMarkdown: string | null;
 }
 
-export function articleFromFile(file: FsFile) {
+export function articleFromFile(file: FsFile): Article {
   const data = loadContentFile<Article>(file);
   data.route = `/articles/${data.slug}.html`;
   data.previewMarkdown = derivePreview(data);

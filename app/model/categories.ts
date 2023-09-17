@@ -44,7 +44,7 @@ const categoryOrder = [
 
 export const categorySorter = sortBy((c: Category) => categoryOrder.indexOf(c.slug));
 
-export function categoryFromFile(file: FsFile) {
+export function categoryFromFile(file: FsFile): Category {
   const data = loadContentFile<Category>(file);
   data.route = `/books/category/${data.slug}.html`;
   data.imageBig = `/img/categories/${data.slug}-big.jpg`;

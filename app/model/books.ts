@@ -30,7 +30,7 @@ export interface Book {
   snippets: Snippet[];
 }
 
-export function bookFromFile(file: FsFile) {
+export function bookFromFile(file: FsFile): Book {
   const data = loadContentFile<Book>(file);
   data.route = `/books/${data.slug}.html`;
   data.snippets = [];
