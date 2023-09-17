@@ -3,37 +3,27 @@ import { calculateReadingMins, formatDate, markdown } from "../../core/helpers";
 import { allArticles } from "../../model/models";
 
 export default allArticles.map(article => [`${article.slug}.html`, <>
-  <link rel="stylesheet" href="/css/article.css" />
+  <Common.TypicalPage image={article.imageFilename ?? '/img/page/articles.jpg'}>
 
-  <Common.Page>
+    <link rel="stylesheet" href="/css/article.css" />
 
-    <Common.SiteHeader image={article.imageFilename ?? '/img/page/articles.jpg'} />
-    <Common.Navlinks />
+    <Common.Column spaced split>
 
-    <main>
+      <Common.Typography>
 
-      <Common.Column spaced split>
+        <h1>{markdown.renderInline(article.title)}</h1>
 
-        <Common.Typography>
+        {article.imageCaption && <small>(Image: {article.imageCaption})</small>}
 
-          <h1>{markdown.renderInline(article.title)}</h1>
+        <p class="date">
+          {formatDate(article.date)} &bull; {calculateReadingMins(article.content)} min
+        </p>
 
-          {article.imageCaption && <small>(Image: {article.imageCaption})</small>}
+        {markdown.render(article.content)}
 
-          <p class="date">
-            {formatDate(article.date)} &bull; {calculateReadingMins(article.content)} min
-          </p>
+      </Common.Typography>
 
-          {markdown.render(article.content)}
+    </Common.Column>
 
-        </Common.Typography>
-
-      </Common.Column>
-
-    </main>
-
-    <Common.QuickLinks />
-    <Common.SiteFooter />
-
-  </Common.Page>
+  </Common.TypicalPage>
 </>]);

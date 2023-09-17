@@ -6,34 +6,24 @@ import { allMusics } from "../../model/models";
 export default allMusics.map(song => {
   const embedUrl = song.youtube.replace('watch?v=', 'embed/').replace(/&t=(\d+)s/, '?start=$1');
   return [`${song.slug}.html`, <>
-    <link rel="stylesheet" href='/css/view-song.css' />
+    <Common.TypicalPage image='/img/page/music.jpg'>
 
-    <Common.Page>
+      <link rel="stylesheet" href='/css/view-song.css' />
 
-      <Common.SiteHeader image='/img/page/music.jpg' />
-      <Common.Navlinks />
+      <Common.Column spaced split>
 
-      <main>
+        <Common.Typography>
+          <h1>{song.title}</h1>
+          <div class="embed-container">
+            <iframe allowfullscreen="allowfullscreen" frameborder="0" src={embedUrl}></iframe>
+          </div>
+          {markdown.render(song.content)}
+        </Common.Typography>
 
-        <Common.Column spaced split>
+        <MusicSidebar />
 
-          <Common.Typography>
-            <h1>{song.title}</h1>
-            <div class="embed-container">
-              <iframe allowfullscreen="allowfullscreen" frameborder="0" src={embedUrl}></iframe>
-            </div>
-            {markdown.render(song.content)}
-          </Common.Typography>
+      </Common.Column>
 
-          <MusicSidebar />
-
-        </Common.Column>
-
-      </main>
-
-      <Common.QuickLinks />
-      <Common.SiteFooter />
-
-    </Common.Page>
+    </Common.TypicalPage >
   </>];
 });

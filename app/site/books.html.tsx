@@ -2,47 +2,37 @@ import * as Common from "../components/common";
 import { allBooks } from "../model/models";
 
 export default <>
-  <Common.Page>
+  <Common.TypicalPage image='/img/categories/reference-big.jpg'>
 
-    <Common.SiteHeader image='/img/categories/reference-big.jpg' />
-    <Common.Navlinks />
+    <Common.Column spaced split>
 
-    <main>
+      <div>
 
-      <Common.Column spaced split>
+        <h1>All Books</h1>
 
-        <div>
+        <p>Not sure what to read?<br /> Try a <a href='/random.html' target="_blank">Random Book</a>.</p>
+        <hr />
 
-          <h1>All Books</h1>
+        <p>Search:<br /> <input type="text" oninput="searchBooks(this);" /></p>
+        <hr />
 
-          <p>Not sure what to read?<br /> Try a <a href='/random.html' target="_blank">Random Book</a>.</p>
-          <hr />
+        <ul id="books-all" style="padding-left: 20px">
+          {allBooks.map(book => <>
+            <li>
+              <p><a class="link" href={book.route}>{book.title}</a><br /> {book.author}</p>
+            </li>
+          </>)}
+        </ul>
 
-          <p>Search:<br /> <input type="text" oninput="searchBooks(this);" /></p>
-          <hr />
+        <span hidden id="no-books-found" style="font-style: italic">
+          No results
+        </span>
 
-          <ul id="books-all" style="padding-left: 20px">
-            {allBooks.map(book => <>
-              <li>
-                <p><a class="link" href={book.route}>{book.title}</a><br /> {book.author}</p>
-              </li>
-            </>)}
-          </ul>
+        <script src='/script/search-books.js' defer></script>
 
-          <span hidden id="no-books-found" style="font-style: italic">
-            No results
-          </span>
+      </div>
 
-          <script src='/script/search-books.js' defer></script>
+    </Common.Column>
 
-        </div>
-
-      </Common.Column>
-
-    </main>
-
-    <Common.QuickLinks />
-    <Common.SiteFooter />
-
-  </Common.Page>
+  </Common.TypicalPage>
 </>;

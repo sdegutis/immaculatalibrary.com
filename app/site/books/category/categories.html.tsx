@@ -4,78 +4,68 @@ import { excerpt, markdown } from "../../../core/helpers";
 import { allCategories } from "../../../model/models";
 
 export default allCategories.map(cat => [`${cat.slug}.html`, <>
-  <Common.Page>
+  <Common.TypicalPage image={`/img/categories/${cat.slug}-big.jpg`}>
 
     <link rel="stylesheet" href='/css/category.css' />
 
-    <Common.SiteHeader image={`/img/categories/${cat.slug}-big.jpg`} />
-    <Common.Navlinks />
+    <Common.Column spaced centered>
+      <Common.Typography>
 
-    <main>
+        <h1>{cat.title}</h1>
+        {markdown.render(cat.content)}
 
-      <Common.Column spaced centered>
-        <Common.Typography>
+      </Common.Typography>
+    </Common.Column>
 
-          <h1>{cat.title}</h1>
-          {markdown.render(cat.content)}
+    <Common.Column spaced split>
 
-        </Common.Typography>
-      </Common.Column>
+      <section id='category'>
+        <h2>Books</h2>
+        <ul>
+          {cat.booksInCategory.map(book => {
+            return <li>
+              <div class="title">
+                <a href={book.route}>{book.title}</a>
+                {book.subtitle && <>: {book.subtitle}</>}
+                {' '}
+                <Rating n={book.rating} />
+              </div>
 
-      <Common.Column spaced split>
+              <div class="author">{book.author}</div>
+              <Common.Typography>
+                <div class="blurb">{markdown.render(excerpt(book.content))}</div>
+              </Common.Typography>
+            </li>;
+          })}
+        </ul>
+      </section>
 
-        <section id='category'>
-          <h2>Books</h2>
+      <section id='snippets-in-category'>
+        <h2>Book Snippets</h2>
+        <div class='scrollable-area'>
           <ul>
-            {cat.booksInCategory.map(book => {
-              return <li>
-                <div class="title">
-                  <a href={book.route}>{book.title}</a>
-                  {book.subtitle && <>: {book.subtitle}</>}
-                  {' '}
-                  <Rating n={book.rating} />
-                </div>
-
-                <div class="author">{book.author}</div>
-                <Common.Typography>
-                  <div class="blurb">{markdown.render(excerpt(book.content))}</div>
-                </Common.Typography>
-              </li>;
-            })}
+            {cat.booksInCategory
+              .filter(book => book.snippets.length > 0)
+              .map(book => <>
+                <li>
+                  <h3>{book.title}</h3>
+                  <ul>
+                    {book.snippets.map(bookSnippet => <>
+                      <li>
+                        <p>
+                          p.{bookSnippet.archivePage} { }
+                          <a href={bookSnippet.route}>{bookSnippet.renderedTitle}</a>
+                        </p>
+                      </li>
+                    </>)}
+                  </ul>
+                </li>
+              </>)}
           </ul>
-        </section>
+        </div>
+      </section>
 
-        <section id='snippets-in-category'>
-          <h2>Book Snippets</h2>
-          <div class='scrollable-area'>
-            <ul>
-              {cat.booksInCategory
-                .filter(book => book.snippets.length > 0)
-                .map(book => <>
-                  <li>
-                    <h3>{book.title}</h3>
-                    <ul>
-                      {book.snippets.map(bookSnippet => <>
-                        <li>
-                          <p>
-                            p.{bookSnippet.archivePage} { }
-                            <a href={bookSnippet.route}>{bookSnippet.renderedTitle}</a>
-                          </p>
-                        </li>
-                      </>)}
-                    </ul>
-                  </li>
-                </>)}
-            </ul>
-          </div>
-        </section>
+    </Common.Column>
 
-      </Common.Column>
-
-    </main>
-
-    <Common.QuickLinks />
-    <Common.SiteFooter />
-
-  </Common.Page>
+  </Common.TypicalPage >
 </>]);

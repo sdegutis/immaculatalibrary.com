@@ -1,4 +1,5 @@
 import * as Common from "../components/common";
+import { EmptyPage } from "../components/page";
 import { booksBySlug, categoriesBySlug } from "../model/models";
 
 const featuredBooks = [
@@ -46,7 +47,7 @@ const featuredBooks = [
 ];
 
 export default <>
-  <Common.Page>
+  <EmptyPage>
 
     <link rel="stylesheet" href="/css/home.css" />
 
@@ -118,5 +119,5 @@ export default <>
     <Common.QuickLinks />
     <Common.SiteFooter />
 
-  </Common.Page>
+  </EmptyPage>
 </>;

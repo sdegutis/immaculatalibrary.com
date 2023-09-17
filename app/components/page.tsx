@@ -1,8 +1,9 @@
-export const Page: JSX.Component<{
-  imagePath?: string,
-  title?: string,
-  description?: string | undefined,
-}> = (attrs, children) => <>
+import { Navlinks } from "./navlinks";
+import { QuickLinks } from "./quicklinks";
+import { SiteFooter } from "./site-footer";
+import { SiteHeader } from "./site-header";
+
+export const EmptyPage: JSX.Component<{}> = (attrs, children) => <>
   {'<!DOCTYPE html>'}
   <html lang="en">
 
@@ -10,11 +11,11 @@ export const Page: JSX.Component<{
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <title>{attrs.title && `${attrs.title} - `}Immaculata Library</title>
-      <meta property="og:title" content={'Immaculata Library' + (attrs.title ? `: ${attrs.title}` : '')} />
+      <title>Immaculata Library</title>
+      <meta property="og:title" content='Immaculata Library' />
       <meta property="og:locale" content="en_US" />
-      {attrs.imagePath && <meta property="og:image" content={`https://www.immaculatalibrary.com${attrs.imagePath}`} />}
-      <meta name="description" content={attrs.description ?? "Free Digital Catholic Books"} />
+      {/* {attrs.image && <meta property="og:image" content={`https://www.immaculatalibrary.com${attrs.image}`} />} */}
+      <meta name="description" content="Catholic Digital Library" />
 
       <link rel="stylesheet" href='/css/base.css' />
       <link rel="stylesheet" href='/css/fonts.css' />
@@ -30,4 +31,20 @@ export const Page: JSX.Component<{
     </body>
 
   </html>
+</>;
+
+export const TypicalPage: JSX.Component<{ image: string }> = (attrs, children) => <>
+  <EmptyPage>
+
+    <SiteHeader image={attrs.image} />
+    <Navlinks />
+
+    <main>
+      {children}
+    </main>
+
+    <QuickLinks />
+    <SiteFooter />
+
+  </EmptyPage>
 </>;

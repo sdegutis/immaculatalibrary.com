@@ -281,27 +281,17 @@ Most Sacred Heart of Jesus
 `;
 
 export default <>
-  <Common.Page>
+  <Common.TypicalPage image='/img/categories/blessed-sacrament-big.jpg'>
 
-    <Common.SiteHeader image='/img/categories/blessed-sacrament-big.jpg' />
-    <Common.Navlinks />
+    <Common.Column spaced centered>
+      <Common.Typography>
 
-    <main>
+        <h1>Prayers</h1>
 
-      <Common.Column spaced centered>
-        <Common.Typography>
+        {markdown.render(prayers)}
 
-          <h1>Prayers</h1>
+      </Common.Typography>
+    </Common.Column>
 
-          {markdown.render(prayers)}
-
-        </Common.Typography>
-      </Common.Column>
-
-    </main>
-
-    <Common.QuickLinks />
-    <Common.SiteFooter />
-
-  </Common.Page>
+  </Common.TypicalPage>
 </>;
