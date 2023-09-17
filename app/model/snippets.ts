@@ -1,4 +1,4 @@
-import { loadContentFile } from '../../util/data-files';
+import { loadContentFile } from '../util/data-files';
 
 export interface Snippet {
   date: string;

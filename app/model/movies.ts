@@ -1,5 +1,5 @@
-import { loadContentFile } from '../../util/data-files';
-import { sortBy } from '../../util/helpers';
+import { loadContentFile } from '../util/data-files';
+import { sortBy } from '../util/helpers';
 
 export interface Movie {
   slug: string;

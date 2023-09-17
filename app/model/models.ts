@@ -1,4 +1,4 @@
-import { sortBy } from '../../util/helpers';
+import { sortBy } from '../util/helpers';
 import { articleFromFile } from "./articles";
 import { bookFromFile } from "./books";
 import { categoryFromFile, categorySorter } from "./categories";
