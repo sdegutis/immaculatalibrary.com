@@ -2,6 +2,8 @@
 // import { allSnippets } from "../model/models";
 // import { Snippet } from "../model/snippets";
 
+import { SnippetsGroups } from "./snippet-groups";
+
 // const totalReadingMins = calculateReadingMins(allSnippets.map(s => s.content).join('\n\n'));
 // const mins = Math.round(totalReadingMins % 60);
 // const hours = Math.floor(totalReadingMins / 60);
@@ -14,6 +16,10 @@ export const LatestBookSnippets: JSX.Component<{}> = (attrs, children) => {
   return <>
 
     <h3>Latest book snippets</h3>
+    <SnippetsGroups />
+
+    <script defer>{`showSnippetGroups((s, i) => i < 10);`}</script>
+
     {/* <p>
       <a href='/snippets.html'>Search</a> | { }
       <a href='#'>Random</a> | { }

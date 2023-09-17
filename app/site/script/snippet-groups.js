@@ -3,7 +3,7 @@ const snippetsData = fetch('/data/snippets.json').then(res => res.json());
 function showSnippetGroups(filter) {
   const host = document.querySelector('.snippets-latest');
   snippetsData.then(snippets => {
-    snippets = snippets.reverse().filter(filter);
+    snippets = snippets.filter(filter);
     const groups = Object.entries(groupByDate(snippets));
     host.innerHTML = groups.map(([date, group]) => `
       <li>
