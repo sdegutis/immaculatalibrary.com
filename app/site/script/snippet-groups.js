@@ -45,7 +45,6 @@ function groupByDate(array) {
   const groups = Object.create(null);
   for (const o of array) {
     const d = formatDate(o.date);
-    console.log(o.date, d)
     if (!groups[d]) groups[d] = [];
     groups[d].push(o);
   }

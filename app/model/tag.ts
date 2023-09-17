@@ -10,12 +10,12 @@ export class Tag {
     return tag;
   }
 
-  slug;
+  oneword;
   route;
 
   constructor(public name: string) {
-    this.slug = this.name.split(' ').map(capitalize).join('');
-    this.route = `/book-snippets/tag/${this.slug.toLowerCase()}.html`;
+    this.oneword = this.name.split(' ').map(capitalize).join('');
+    this.route = `/book-snippets/tag/${this.oneword.toLowerCase()}.html`;
   }
 
 }

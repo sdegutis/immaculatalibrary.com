@@ -25,7 +25,7 @@ export default allSnippets.map(snippet => {
 
           <p>
             {[...snippet.tagsForSnippet].map(tag => <>
-              <a href={tag.route}>#{tag.slug}</a> { }
+              <a href={tag.route}>#{tag.oneword}</a> { }
             </>)}
           </p>
 
