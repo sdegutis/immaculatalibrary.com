@@ -1,100 +1,34 @@
-import booksDir from '../data/books/';
-import categoriesDir from '../data/categories/';
-import moviesDir from '../data/movies/';
-import postsDir from '../data/posts/';
-import snippetsDir from '../data/snippets/';
-import { sortBy } from '../util/helpers';
-import { Book } from './book';
-import { Category } from './category';
-import { Movie } from './movie';
-import { Post } from './post';
-import { Snippet } from './snippet';
-import { loadAllSongs } from './song';
+import { sortBy } from '../../util/helpers';
+import { articleFromFile } from "./articles";
+import { bookFromFile } from "./books";
+import { categoryFromFile, categorySorter } from "./categories";
+import { movieFromFile, movieSorter } from "./movies";
+import { musicFromFile } from './musics';
+import { snippetFromFile } from './snippets';
 
-const categoryOrder = [
-  'classics',
-  'devotion',
-  'instruction',
-  'reference',
-  'saints',
-  'mary',
-  'joseph',
-  'apologetics',
-  'blessed-sacrament',
-  'sacred-heart',
-  'holy-spirit',
-  'lourdes',
-  'st-francis-de-sales',
-  'st-alphonsus-de-liguori',
-  'st-catherine-of-siena',
-  'st-teresa-of-avila',
-  'st-john-of-the-cross',
-  'st-john-henry-newman',
-  'st-thomas-more',
-  'st-thomas-aquinas',
-  'st-louis-de-montfort',
-  'jesuits',
-  'fr-lasance',
-];
+export const allMovies = ((require('/data/movies/') as FsDir).files
+  .map(movieFromFile)
+  .sort(movieSorter));
 
-const movieOrder = [
-  'passion-of-the-christ',
-  'a-man-for-all-seasons',
-  'a-man-for-all-seasons-charlton-heston',
-  'saints-and-heroes',
-  'ignatius-of-loyola',
-  'our-gods-brother',
-  'blessed-duns-scotus',
-  'the-13th-day',
-  'bernadette',
-  'saint-maria-soledad',
-  'st-pedro-poveda',
-  'don-bosco',
-  'flowers-of-st-francis',
-  'the-jewellers-shop',
-  'monsieur-vincent',
-  'miracle-of-saint-therese',
-  'restless-heart',
-  'the-passion-of-joan-of-arc',
-  'mother-teresa',
-  'passion-of-bernadette',
-  'padre-pio',
-  'john-xxiii-pope-of-peace',
-  'paul-vi-pope-in-the-tempest',
-  'pope-john-paul-ii',
-  'saint-john-baptist-de-la-salle',
-];
-
-export const allBooks = (booksDir
-  .files.map(file => Book.from(file))
-  .sort(sortBy(b => `${b.dateAdded} ${b.slug}`)));
-
-export const allSnippets = (snippetsDir
-  .files.map(file => Snippet.from(file))
-  .filter(s => s.published));
-
-export const allCategories = (categoriesDir
-  .files.map(file => Category.from(file))
-  .sort(sortBy(c => categoryOrder.indexOf(c.slug))));
-
-export const allMovies = (moviesDir
-  .dirs.map(dir => Movie.from(dir))
-  .sort(sortBy(m => movieOrder.indexOf(m.slug))));
-
-export const allPosts = (postsDir
-  .files.map(file => Post.from(file))
-  .sort(sortBy(post => post.date))
+export const allArticles = ((require('/data/articles/') as FsDir).files
+  .map(articleFromFile)
+  .sort(sortBy(article => article.date))
   .filter(s => !s.draft)
   .reverse());
 
-export const allSongs = loadAllSongs();
+export const allBooks = ((require('/data/books/') as FsDir).files
+  .map(bookFromFile)
+  .sort(sortBy(b => `${b.dateAdded} ${b.slug}`)));
 
-for (const book of allBooks) {
-  book.sortAndConnectBookSnippets();
-}
+export const allCategories = ((require('/data/categories/') as FsDir).files
+  .map(categoryFromFile)
+  .sort(categorySorter));
 
-export function sortAllSnippets() {
-  allSnippets.sort(sortBy(s => s.view.route)).reverse();
-}
+export const allMusics = ((require('/data/music/') as FsDir).files
+  .map(musicFromFile));
 
-sortAllSnippets();
+export const allSnippets = ((require('/data/snippets/') as FsDir).files
+  .map(snippetFromFile)
+  .filter((s => s.published))
+  .sort(sortBy(s => s.slug))
+  .reverse());

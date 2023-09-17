@@ -1,5 +1,5 @@
 import * as Common from "../../components/common";
-import { allMovies } from "../../model/new/models";
+import { allMovies } from "../../model/models";
 import { markdown } from "../../util/helpers";
 
 export default allMovies.map(movie => {

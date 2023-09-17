@@ -1,4 +1,4 @@
-import { allCategories, allMovies } from "../model/new/models";
+import { allCategories, allMovies } from "../model/models";
 
 export const QuickLinks: JSX.Component<{}> = (attrs, children) => {
   return <>

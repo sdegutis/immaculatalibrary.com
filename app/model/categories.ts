@@ -47,3 +47,9 @@ export function categoryFromFile(file: FsFile) {
   data.imageSmall = `/img/categories/${data.slug}-small.jpg`;
   return data;
 }
+
+// for (const bookSlug of this.bookSlugs) {
+//   const book = allBooks.find(book => book.slug === bookSlug)!;
+//   this.books.push(book);
+//   book.category = this;
+// }
