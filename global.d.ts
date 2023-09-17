@@ -21,23 +21,3 @@ declare module '*/' {
   const dir: FsDir;
   export default dir;
 }
-
-declare module '*.css' {
-  const file: FsFile;
-  export default file;
-}
-
-declare module '*.js' {
-  const file: FsFile;
-  export default file;
-}
-
-declare module '*.jpg' {
-  const file: FsFile;
-  export default file;
-}
-
-declare module '*.json' {
-  const file: FsFile;
-  export default file;
-}
