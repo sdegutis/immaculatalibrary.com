@@ -34,10 +34,6 @@ export function formatDate(date: string) {
   });
 }
 
-export function striptags(s: string) {
-  return s.replace(/<[^>]+?>/g, '');
-}
-
 export function excerpt(s: string) {
   return s.split(/\r?\n\r?\n/)[0]!;
 }
