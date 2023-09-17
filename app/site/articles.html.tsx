@@ -18,9 +18,6 @@ export default <>
         <ul class="all-blog-posts">
           {allArticles.map(article => <>
             <li class="post-row">
-              {/* <a href={post.view.route}>
-                    <img class="image" src={post.imageSmall} />
-                  </a> */}
               <div>
                 <a class="title" href={article.route}>
                   {article.title}

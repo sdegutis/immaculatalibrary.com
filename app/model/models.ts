@@ -5,7 +5,6 @@ import { categoryFromFile, categorySorter } from "./categories";
 import { movieFromFile, movieSorter } from "./movies";
 import { musicFromFile } from './musics';
 import { snippetFromFile } from './snippets';
-import { allTags } from './tag';
 
 export const allMovies = ((require('/data/movies/') as FsDir).files
   .map(movieFromFile)
