@@ -1,6 +1,7 @@
 import { Column } from "../components/new/column";
 import { Html } from "../components/new/html";
 import { Navlinks } from "../components/new/navlinks";
+import { QuickLinks } from "../components/new/quicklinks";
 import { SiteFooter } from "../components/new/site-footer";
 import { SiteHeader } from "../components/new/site-header";
 import { Typography } from "../components/new/typography";
@@ -38,7 +39,7 @@ export default <>
 
       </main>
 
-      {/* <QuickLinks /> */}
+      <QuickLinks />
       <SiteFooter />
     </body>
   </Html>
