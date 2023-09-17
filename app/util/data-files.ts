@@ -8,13 +8,9 @@ interface Output<T> {
 
 export function loadContentFile<T>(file: FsFile, filename: 'slug'): Output<T>;
 export function loadContentFile<T>(file: FsFile, filename: 'date-slug'): Output<T> & { date: string };
-export function loadContentFile<T>(file: FsFile, filename: 'date-slug' | 'slug'): Output<T> & { date: null | string } {
-  const matchResults = (filename === 'slug'
-    ? [null, ...file.name.match(/^(.+?).md$/)!]
-    : file.name.match(/^(\d{4}-\d{2}-\d{2})-(.+?).md$/)!
-  );
-  const date = matchResults[1]!;
-  const slug = matchResults[2]!;
+export function loadContentFile<T>(file: FsFile, filename: 'date-slug' | 'slug'): Output<T> & { date: undefined | string } {
+  const slug = file.name.slice(0, -3);
+  const date = slug.match(/^(\d{4}-\d{2}-\d{2})-/)?.[1];
 
   const fileContents = file.text.replace(/\r\n/g, '\n');
   const fileContentsMatch = fileContents.match(/^---\n(.+?)\n---\n\n(.+?)$/s)!;
