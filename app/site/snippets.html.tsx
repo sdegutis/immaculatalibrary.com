@@ -13,11 +13,6 @@ export default <>
         <h1>Book Snippets</h1>
 
         <p>
-          Not sure what to read?<br />
-          Try a <a href='#' target="_blank">Random Book Snippet</a>.</p>
-        <hr />
-
-        <p>
           Search:<br />
           <input type="text" id="search-book-snippets-field" />
         </p>
