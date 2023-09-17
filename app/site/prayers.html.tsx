@@ -1,3 +1,14 @@
+import { Column } from "../components/new/column";
+import { Html } from "../components/new/html";
+import { Navlinks } from "../components/new/navlinks";
+import { QuickLinks } from "../components/new/quicklinks";
+import { SiteFooter } from "../components/new/site-footer";
+import { SiteHeader } from "../components/new/site-header";
+import { Typography } from "../components/new/typography";
+import { markdown } from "../util/helpers";
+
+const prayers = `
+
 ### Morning
 
 Angel of God, my Guardian dear
@@ -272,3 +283,31 @@ Most Immaculate Heart of the Blessed Virgin Mary
 Most Sacred Heart of Jesus
 Most Sacred Heart of Jesus
 Most Sacred Heart of Jesus
+
+`;
+
+export default <>
+  <Html>
+    <body>
+      <main>
+
+        <SiteHeader image='/img/categories/blessed-sacrament-big.jpg' />
+        <Navlinks />
+
+        <Column spaced centered>
+          <Typography>
+
+            <h1>Prayers</h1>
+
+            {markdown.render(prayers)}
+
+          </Typography>
+        </Column>
+
+      </main>
+
+      <QuickLinks />
+      <SiteFooter />
+    </body>
+  </Html>
+</>;
