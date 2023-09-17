@@ -6,6 +6,6 @@ button.onclick = (e) => {
   snippetsData.then(snippets => {
     snippets = snippets.filter(s => s.book === button.dataset.book);
     const i = Math.floor(Math.random() * snippets.length);
-    window.location = snippets[i].route;
+    window.location = snippets[i].url;
   });
 };
