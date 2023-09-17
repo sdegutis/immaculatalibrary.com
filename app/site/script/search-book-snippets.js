@@ -1,6 +1,7 @@
-const input = document.getElementById('search-book-snippets-field');
+import { snippetsData } from './modules/load-snippets.js';
+import { showSnippetGroups } from './snippet-groups.js';
 
-const searchResultsContainer = document.getElementById('search-results');
+const input = document.getElementById('search-book-snippets-field');
 
 let timer = null;
 input.addEventListener('input', (e) => {
@@ -8,41 +9,17 @@ input.addEventListener('input', (e) => {
   timer = setTimeout(searchBookSnippets, 250);
 });
 
-let jsonResults;
-fetch('/book-snippets/searchable.json')
-  .then(res => res.json())
-  .then(json => jsonResults = json);
+searchBookSnippets();
 
-function searchBookSnippets() {
-  if (!jsonResults) return;
+async function searchBookSnippets() {
+  const snippetInfo = await snippetsData;
 
   const searchTerm = input.value.trim().toLowerCase();
-  const results = searchTerm
-    ? jsonResults.filter(s => s.searchable.includes(searchTerm))
-    : null;
 
-  if (!results) {
-    searchResultsContainer.textContent = '';
-  }
-  else if (results.length === 0) {
-    searchResultsContainer.innerHTML = `<p><i>No results</i></p>`;
+  if (searchTerm) {
+    showSnippetGroups(s => s.searchable.includes(searchTerm));
   }
   else {
-    searchResultsContainer.innerHTML = `<p><i>Search results (${results.length} book snippets)</i></p>`;
-
-    const list = document.createElement('ul');
-    searchResultsContainer.append(list);
-
-    for (const row of results) {
-      const rowEl = document.createElement('li');
-      rowEl.innerHTML = `
-        <a href="${row.url}">${row.title}</a>
-        <br/>
-        ${row.readingMins} mins &mdash; ${row.formattedDate}
-        <br/>
-        ${row.bookTitle}
-      `.trim();
-      list.append(rowEl);
-    }
+    showSnippetGroups(s => true);
   }
 }
