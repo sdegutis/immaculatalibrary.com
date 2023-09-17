@@ -7,7 +7,7 @@ export default allArticles.map(article => [`${article.slug}.html`, <>
 
   <Common.Page>
 
-    <Common.SiteHeader image='/img/page/articles.jpg' />
+    <Common.SiteHeader image={article.imageFilename ?? '/img/page/articles.jpg'} />
     <Common.Navlinks />
 
     <main>
@@ -17,6 +17,8 @@ export default allArticles.map(article => [`${article.slug}.html`, <>
         <Common.Typography>
 
           <h1>{markdown.renderInline(article.title)}</h1>
+
+          {article.imageCaption && <small>(Image: {article.imageCaption})</small>}
 
           <p class="date">
             {formatDate(article.date)} &bull; {calculateReadingMins(article.content)} min

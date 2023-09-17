@@ -9,6 +9,8 @@ export interface Article {
 
   title: string;
   draft?: boolean;
+  imageFilename?: string;
+  imageCaption?: string;
 
   route: string;
   previewMarkdown: string | null;
