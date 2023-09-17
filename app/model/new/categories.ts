@@ -2,13 +2,24 @@ import categoriesDir from '../../data/categories/';
 import { loadContentFile } from '../../util/data-files';
 import { sortBy } from '../../util/helpers';
 
-interface Category {
+export interface Category {
+  slug: string;
+  content: string;
+
   title: string;
   shortTitle: string;
   books: string[];
+
+  imageBig: string;
+  imageSmall: string;
 }
 
-export const allCategories = categoriesDir.files.map(file => loadContentFile<Category>(file, 'slug'));
+export const allCategories = categoriesDir.files.map(file => {
+  const data = loadContentFile<Category>(file);
+  data.imageBig = `/img/categories/${data.slug}-big.jpg`;
+  data.imageSmall = `/img/categories/${data.slug}-small.jpg`;
+  return data;
+});
 
 const categoryOrder = [
   'classics',

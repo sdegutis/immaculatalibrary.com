@@ -1,9 +1,16 @@
 import articlesDir from '../../data/articles/';
 import { loadContentFile } from '../../util/data-files';
 
-interface Article {
+export interface Article {
+  date: string;
+  slug: string;
+  content: string;
+
   title: string;
   draft?: boolean;
 }
 
-export const allArticles = articlesDir.files.map(file => loadContentFile<Article>(file, 'date-slug'));
+export const allArticles = articlesDir.files.map(file => {
+  const data = loadContentFile<Article>(file);
+  return data;
+});

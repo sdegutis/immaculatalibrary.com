@@ -2,14 +2,25 @@ import moviesDir from '../../data/movies/';
 import { loadContentFile } from '../../util/data-files';
 import { sortBy } from '../../util/helpers';
 
-interface Movie {
+export interface Movie {
+  slug: string;
+  content: string;
+
   title: string;
   shortTitle: string;
   subtitle: string | undefined;
   year: string;
+
+  imageBig: string;
+  imageSmall: string;
 }
 
-export const allMovies = moviesDir.files.map(file => loadContentFile<Movie>(file, 'slug'));
+export const allMovies = moviesDir.files.map(file => {
+  const data = loadContentFile<Movie>(file);
+  data.imageBig = `/img/movies/${data.slug}-big.jpg`;
+  data.imageSmall = `/img/movies/${data.slug}-small.jpg`;
+  return data;
+});
 
 const movieOrder = [
   'passion-of-the-christ',

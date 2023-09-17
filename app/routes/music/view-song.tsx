@@ -6,7 +6,7 @@ import { addRouteable, Routeable } from "../../core/router";
 import { Song } from "../../model/song";
 import { staticRouteFor } from "../../util/static";
 import { audioBibleImage } from "./music";
-import { MusicSidebar } from "./music-sidebar";
+import { MusicSidebar } from "../../components/music-sidebar";
 
 export class ViewSong implements Routeable {
 

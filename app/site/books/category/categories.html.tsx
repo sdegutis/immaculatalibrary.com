@@ -15,8 +15,8 @@ export default allCategories.map(cat => [`${cat.slug}.html`, <>
       <Common.Column spaced centered>
         <Common.Typography>
 
-          <h1>{cat.meta.title}</h1>
-          {markdown.render(cat.markdownContent)}
+          <h1>{cat.title}</h1>
+          {markdown.render(cat.content)}
 
         </Common.Typography>
       </Common.Column>
