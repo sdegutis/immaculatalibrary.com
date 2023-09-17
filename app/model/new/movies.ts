@@ -1,4 +1,3 @@
-import moviesDir from '../../data/movies/';
 import { loadContentFile } from '../../util/data-files';
 import { sortBy } from '../../util/helpers';
 
@@ -14,13 +13,6 @@ export interface Movie {
   imageBig: string;
   imageSmall: string;
 }
-
-export const allMovies = moviesDir.files.map(file => {
-  const data = loadContentFile<Movie>(file);
-  data.imageBig = `/img/movies/${data.slug}-big.jpg`;
-  data.imageSmall = `/img/movies/${data.slug}-small.jpg`;
-  return data;
-});
 
 const movieOrder = [
   'passion-of-the-christ',
@@ -50,4 +42,11 @@ const movieOrder = [
   'saint-john-baptist-de-la-salle',
 ];
 
-allMovies.sort(sortBy(m => movieOrder.indexOf(m.slug)));
+export const movieSorter = sortBy((m: Movie) => movieOrder.indexOf(m.slug));
+
+export function movieFromFile(file: FsFile) {
+  const data = loadContentFile<Movie>(file);
+  data.imageBig = `/img/movies/${data.slug}-big.jpg`;
+  data.imageSmall = `/img/movies/${data.slug}-small.jpg`;
+  return data;
+}

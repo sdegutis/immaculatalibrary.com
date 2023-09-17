@@ -1,4 +1,3 @@
-import snippetsDir from '../../data/snippets/';
 import { loadContentFile } from '../../util/data-files';
 
 export interface Snippet {
@@ -14,7 +13,7 @@ export interface Snippet {
   tags: string[];
 }
 
-export const allSnippets = snippetsDir.files.map(file => {
+export function snippetFromFile(file: FsFile) {
   const data = loadContentFile<Snippet>(file);
   return data;
-});
+}

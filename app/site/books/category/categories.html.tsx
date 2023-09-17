@@ -1,5 +1,5 @@
 import * as Common from "../../../components/common";
-import { allCategories } from "../../../model/new/categories";
+import { allCategories } from "../../../model/new/models";
 import { markdown } from "../../../util/helpers";
 
 export default allCategories.map(cat => [`${cat.slug}.html`, <>

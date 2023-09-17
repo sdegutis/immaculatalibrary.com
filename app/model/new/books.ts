@@ -1,4 +1,3 @@
-import booksDir from '../../data/books/';
 import { loadContentFile } from '../../util/data-files';
 
 export interface Book {
@@ -24,7 +23,7 @@ export interface Book {
   complete?: boolean;
 }
 
-export const allBooks = booksDir.files.map(file => {
+export function bookFromFile(file: FsFile) {
   const data = loadContentFile<Book>(file);
   return data;
-});
+}

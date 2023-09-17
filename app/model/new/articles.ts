@@ -1,4 +1,3 @@
-import articlesDir from '../../data/articles/';
 import { loadContentFile } from '../../util/data-files';
 
 export interface Article {
@@ -10,7 +9,7 @@ export interface Article {
   draft?: boolean;
 }
 
-export const allArticles = articlesDir.files.map(file => {
+export function articleFromFile(file: FsFile) {
   const data = loadContentFile<Article>(file);
   return data;
-});
+}
