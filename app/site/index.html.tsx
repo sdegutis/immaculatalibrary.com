@@ -1,8 +1,8 @@
-import { Page } from "../components/new/page";
+import * as Common from "../components/new/common";
 
 export default <>
-  <Page>
+  <Common.Page>
     <main>
     </main>
-  </Page>
+  </Common.Page>
 </>;

@@ -1,20 +1,14 @@
-import { Column } from "../components/new/column";
-import { Navlinks } from "../components/new/navlinks";
-import { Page } from "../components/new/page";
-import { QuickLinks } from "../components/new/quicklinks";
-import { SiteFooter } from "../components/new/site-footer";
-import { SiteHeader } from "../components/new/site-header";
-import { Typography } from "../components/new/typography";
+import * as Common from "../components/new/common";
 
 export default <>
-  <Page>
+  <Common.Page>
     <main>
 
-      <SiteHeader image='/img/page/audiobible-big.jpg' />
-      <Navlinks />
+      <Common.SiteHeader image='/img/page/audiobible-big.jpg' />
+      <Common.Navlinks />
 
-      <Column spaced centered>
-        <Typography>
+      <Common.Column spaced centered>
+        <Common.Typography>
 
           <h1>Audio Bible</h1>
 
@@ -29,12 +23,12 @@ export default <>
             the <a href="https://www.truthandlifeapp.com/WebBibleTAL/WebPlayer.aspx">Gospel of Mark</a> for
             free, so you can even sample it now on the web.</p>
 
-        </Typography>
-      </Column>
+        </Common.Typography>
+      </Common.Column>
 
     </main>
 
-    <QuickLinks />
-    <SiteFooter />
-  </Page>
+    <Common.QuickLinks />
+    <Common.SiteFooter />
+  </Common.Page>
 </>;

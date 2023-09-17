@@ -1,21 +1,14 @@
-import { Column } from "../components/new/column";
-import { MoviesSidebar } from "../components/new/movies-sidebar";
-import { Navlinks } from "../components/new/navlinks";
-import { Page } from "../components/new/page";
-import { QuickLinks } from "../components/new/quicklinks";
-import { SiteFooter } from "../components/new/site-footer";
-import { SiteHeader } from "../components/new/site-header";
-import { Typography } from "../components/new/typography";
+import * as Common from "../components/new/common";
 
 export default <>
-  <Page>
+  <Common.Page>
     <main>
 
-      <SiteHeader image='/img/categories/blessed-sacrament-big.jpg' />
-      <Navlinks />
+      <Common.SiteHeader image='/img/categories/blessed-sacrament-big.jpg' />
+      <Common.Navlinks />
 
-      <Column spaced split>
-        <Typography>
+      <Common.Column spaced split>
+        <Common.Typography>
 
           <h1>Holy Movies</h1>
 
@@ -27,13 +20,13 @@ export default <>
             list of recommended and reviewed Catholic movies.
           </p>
 
-        </Typography>
-        <MoviesSidebar />
-      </Column>
+        </Common.Typography>
+        <Common.MoviesSidebar />
+      </Common.Column>
 
     </main>
 
-    <QuickLinks />
-    <SiteFooter />
-  </Page>
+    <Common.QuickLinks />
+    <Common.SiteFooter />
+  </Common.Page>
 </>;

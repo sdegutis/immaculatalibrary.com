@@ -1,30 +1,24 @@
-import { Column } from "../components/new/column";
-import { Navlinks } from "../components/new/navlinks";
-import { Page } from "../components/new/page";
-import { QuickLinks } from "../components/new/quicklinks";
-import { SiteFooter } from "../components/new/site-footer";
-import { SiteHeader } from "../components/new/site-header";
-import { Typography } from "../components/new/typography";
+import * as Common from "../components/new/common";
 
 export default <>
-  <Page>
+  <Common.Page>
     <main>
 
-      <SiteHeader image='/img/page/404.jpg' />
-      <Navlinks />
+      <Common.SiteHeader image='/img/page/404.jpg' />
+      <Common.Navlinks />
 
-      <Column spaced>
-        <Typography>
+      <Common.Column spaced>
+        <Common.Typography>
 
           <h1>Page not found</h1>
           <p>Sorry, couldn't find the page you're looking for.</p>
 
-        </Typography>
-      </Column>
+        </Common.Typography>
+      </Common.Column>
 
     </main>
 
-    <QuickLinks />
-    <SiteFooter />
-  </Page>
+    <Common.QuickLinks />
+    <Common.SiteFooter />
+  </Common.Page>
 </>;

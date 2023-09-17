@@ -1,20 +1,14 @@
-import { Column } from "../components/new/column";
-import { Navlinks } from "../components/new/navlinks";
-import { Page } from "../components/new/page";
-import { QuickLinks } from "../components/new/quicklinks";
-import { SiteFooter } from "../components/new/site-footer";
-import { SiteHeader } from "../components/new/site-header";
-import { Typography } from "../components/new/typography";
+import * as Common from "../components/new/common";
 
 export default <>
-  <Page>
+  <Common.Page>
     <main>
 
-      <SiteHeader image='/img/page/home.jpg' />
-      <Navlinks />
+      <Common.SiteHeader image='/img/page/home.jpg' />
+      <Common.Navlinks />
 
-      <Column spaced centered>
-        <Typography>
+      <Common.Column spaced centered>
+        <Common.Typography>
 
           <h1>About Immaculata Library</h1>
 
@@ -33,12 +27,12 @@ export default <>
             have received official approbations from Bishops, <em>and</em> have
             helped to produce Saints, or are written by Saints, are offered.</p>
 
-        </Typography>
-      </Column>
+        </Common.Typography>
+      </Common.Column>
 
     </main>
 
-    <QuickLinks />
-    <SiteFooter />
-  </Page>
+    <Common.QuickLinks />
+    <Common.SiteFooter />
+  </Common.Page>
 </>;

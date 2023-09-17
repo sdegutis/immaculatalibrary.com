@@ -1,20 +1,14 @@
-import { Column } from "../components/new/column";
-import { Navlinks } from "../components/new/navlinks";
-import { Page } from "../components/new/page";
-import { QuickLinks } from "../components/new/quicklinks";
-import { SiteFooter } from "../components/new/site-footer";
-import { SiteHeader } from "../components/new/site-header";
-import { Typography } from "../components/new/typography";
+import * as Common from "../components/new/common";
 
 export default <>
-  <Page>
+  <Common.Page>
     <main>
 
-      <SiteHeader image='/img/categories/blessed-sacrament-big.jpg' />
-      <Navlinks />
+      <Common.SiteHeader image='/img/categories/blessed-sacrament-big.jpg' />
+      <Common.Navlinks />
 
-      <Column spaced centered>
-        <Typography>
+      <Common.Column spaced centered>
+        <Common.Typography>
 
           <h1>Devotions</h1>
 
@@ -25,12 +19,12 @@ export default <>
           <p><a href='http://auxiliumchristianorum.org/'>Auxilium Christianorum</a></p>
           <p><a href='https://www.catholicexorcism.org/'>CatholicExorcism.org</a></p>
 
-        </Typography>
-      </Column>
+        </Common.Typography>
+      </Common.Column>
 
     </main>
 
-    <QuickLinks />
-    <SiteFooter />
-  </Page>
+    <Common.QuickLinks />
+    <Common.SiteFooter />
+  </Common.Page>
 </>;
