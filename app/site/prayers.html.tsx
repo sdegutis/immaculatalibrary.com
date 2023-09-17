@@ -282,10 +282,11 @@ Most Sacred Heart of Jesus
 
 export default <>
   <Common.Page>
-    <main>
 
-      <Common.SiteHeader image='/img/categories/blessed-sacrament-big.jpg' />
-      <Common.Navlinks />
+    <Common.SiteHeader image='/img/categories/blessed-sacrament-big.jpg' />
+    <Common.Navlinks />
+
+    <main>
 
       <Common.Column spaced centered>
         <Common.Typography>
@@ -301,5 +302,6 @@ export default <>
 
     <Common.QuickLinks />
     <Common.SiteFooter />
+
   </Common.Page>
 </>;

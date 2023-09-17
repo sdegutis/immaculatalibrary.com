@@ -5,10 +5,11 @@ import { markdown } from "../../util/helpers";
 export default allMovies.map(movie => {
   return [`${movie.slug}.html`, <>
     <Common.Page>
-      <main>
 
-        <Common.SiteHeader image={`/img/movies/${movie.slug}-big.jpg`} />
-        <Common.Navlinks />
+      <Common.SiteHeader image={`/img/movies/${movie.slug}-big.jpg`} />
+      <Common.Navlinks />
+
+      <main>
 
         <Common.Column spaced split>
           <Common.Typography>

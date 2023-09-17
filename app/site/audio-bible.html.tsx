@@ -2,10 +2,11 @@ import * as Common from "../components/new/common";
 
 export default <>
   <Common.Page>
-    <main>
 
-      <Common.SiteHeader image='/img/page/audiobible-big.jpg' />
-      <Common.Navlinks />
+    <Common.SiteHeader image='/img/page/audiobible-big.jpg' />
+    <Common.Navlinks />
+
+    <main>
 
       <Common.Column spaced centered>
         <Common.Typography>
@@ -30,5 +31,6 @@ export default <>
 
     <Common.QuickLinks />
     <Common.SiteFooter />
+
   </Common.Page>
 </>;
