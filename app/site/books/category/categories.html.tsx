@@ -1,6 +1,7 @@
 import * as Common from "../../../components/common";
+import { Rating } from "../../../components/rating";
 import { allCategories } from "../../../model/models";
-import { markdown } from "../../../util/helpers";
+import { excerpt, markdown } from "../../../util/helpers";
 
 export default allCategories.map(cat => [`${cat.slug}.html`, <>
   <Common.Page>
@@ -21,30 +22,30 @@ export default allCategories.map(cat => [`${cat.slug}.html`, <>
         </Common.Typography>
       </Common.Column>
 
-      {/* <Container spaced split>
+      <Common.Column spaced split>
 
         <section id='category'>
           <h2>Books</h2>
           <ul>
-            {this.cat.books.map(book => {
+            {cat.booksInCategory.map(book => {
               return <li>
                 <div class="title">
-                  <a href={book.view.route}>{book.title}</a>
+                  <a href={book.route}>{book.title}</a>
                   {book.subtitle && <>: {book.subtitle}</>}
                   {' '}
                   <Rating n={book.rating} />
                 </div>
 
                 <div class="author">{book.author}</div>
-                <Content>
-                  <div class="blurb">{markdown.render(excerpt(book.markdownContent))}</div>
-                </Content>
+                <Common.Typography>
+                  <div class="blurb">{markdown.render(excerpt(book.content))}</div>
+                </Common.Typography>
               </li>;
             })}
           </ul>
         </section>
 
-        <section id='snippets-in-category'>
+        {/* <section id='snippets-in-category'>
           <h2>Book Snippets</h2>
           <div class='scrollable-area'>
             <ul>
@@ -67,9 +68,9 @@ export default allCategories.map(cat => [`${cat.slug}.html`, <>
                 </>)}
             </ul>
           </div>
-        </section>
+        </section> */}
 
-      </Container> */}
+      </Common.Column>
 
     </main>
 

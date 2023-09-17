@@ -32,3 +32,13 @@ export const allSnippets = ((require('/data/snippets/') as FsDir).files
   .filter((s => s.published))
   .sort(sortBy(s => s.slug))
   .reverse());
+
+const booksBySlug = Object.fromEntries(allBooks.map(book => [book.slug, book]));
+
+for (const category of allCategories) {
+  for (const bookSlug of category.books) {
+    const book = booksBySlug[bookSlug]!;
+    book.category = category;
+    category.booksInCategory.push(book);
+  }
+}

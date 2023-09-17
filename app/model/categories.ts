@@ -1,5 +1,6 @@
 import { loadContentFile } from '../util/data-files';
 import { sortBy } from '../util/helpers';
+import { Book } from './books';
 
 export interface Category {
   slug: string;
@@ -12,6 +13,8 @@ export interface Category {
   route: string;
   imageBig: string;
   imageSmall: string;
+
+  booksInCategory: Book[];
 }
 
 const categoryOrder = [
@@ -47,11 +50,6 @@ export function categoryFromFile(file: FsFile) {
   data.route = `/books/category/${data.slug}.html`;
   data.imageBig = `/img/categories/${data.slug}-big.jpg`;
   data.imageSmall = `/img/categories/${data.slug}-small.jpg`;
+  data.booksInCategory = [];
   return data;
 }
-
-// for (const bookSlug of this.bookSlugs) {
-//   const book = allBooks.find(book => book.slug === bookSlug)!;
-//   this.books.push(book);
-//   book.category = this;
-// }

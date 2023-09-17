@@ -1,4 +1,5 @@
 import { loadContentFile } from '../util/data-files';
+import { Category } from './categories';
 
 export interface Book {
   slug: string;
@@ -21,10 +22,14 @@ export interface Book {
     title: string;
   }[];
   complete?: boolean;
+
+  route: string;
+  category: Category;
 }
 
 export function bookFromFile(file: FsFile) {
   const data = loadContentFile<Book>(file);
+  data.route = `/books/${data.slug}.html`;
   return data;
 }
 
