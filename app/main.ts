@@ -1,7 +1,7 @@
 import { renderElement } from './core/jsx';
 import siteDir from './site/';
 
-const out = siteDir.clone(null);
+const out = siteDir.clone();
 renderDynamic(out);
 export default out;
 
@@ -12,7 +12,7 @@ function renderDynamic(dir: FsDir) {
 
   for (const file of dir.files) {
     if (file.name.endsWith('.tsx')) {
-      const exported = require(file.path).default;
+      const exported = require('/site' + file.path).default;
       dir.delete(file);
 
       if (Array.isArray(exported)) {

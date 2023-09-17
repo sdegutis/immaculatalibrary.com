@@ -64,8 +64,8 @@ export class FsDir extends FsNode {
     return undefined;
   }
 
-  clone(parent: FsDir | null) {
-    const dir = new FsDir(this.name, parent);
+  clone(parent: FsDir | null = null) {
+    const dir = new FsDir(parent === null ? '/' : this.name, parent);
     dir.children = this.children.map(node => node.clone(dir));
     return dir;
   }
@@ -182,9 +182,63 @@ export class FileSys {
   }
 
   reflectChangesToReal(outDir: FsDir) {
-    console.log(outDir, this.root);
-
+    this.#reflectDirToDisk(outDir, this.root);
     this.root = outDir;
+  }
+
+  #reflectDirToDisk(fsDir: FsDir, realDir: FsDir) {
+    for (const file of fsDir.files) {
+      const realFile = realDir.filesByName[file.name];
+      if (!realFile || !realFile.buffer.equals(file.buffer)) {
+        fs.writeFileSync(this.realPath(file), file.buffer);
+      }
+    }
+
+    for (const file of realDir.files) {
+      if (!fsDir.filesByName[file.name]) {
+        fs.unlinkSync(this.realPath(file));
+      }
+    }
+
+    for (const subdir of fsDir.dirs) {
+      const realSubdir = realDir.dirsByName[subdir.name];
+      if (realSubdir) {
+        this.#reflectDirToDisk(subdir, realSubdir);
+      }
+      else {
+        this.#createTree(subdir);
+      }
+    }
+
+    for (const subdir of realDir.dirs) {
+      if (!fsDir.dirsByName[subdir.name]) {
+        this.#deleteTree(subdir);
+      }
+    }
+  }
+
+  #createTree(dir: FsDir) {
+    fs.mkdirSync(this.realPath(dir));
+
+    for (const file of dir.files) {
+      fs.writeFileSync(this.realPath(file), file.buffer);
+    }
+
+    for (const subdir of dir.dirs) {
+      this.#createTree(subdir);
+    }
+  }
+
+  #deleteTree(dir: FsDir) {
+    for (const file of dir.files) {
+      fs.unlinkSync(this.realPath(file));
+    }
+
+    for (const subdir of dir.dirs) {
+      this.#deleteTree(subdir);
+    }
+
+    fs.rmdirSync(this.realPath(dir));
   }
 
 }
