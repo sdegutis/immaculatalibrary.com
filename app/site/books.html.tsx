@@ -10,7 +10,8 @@ export default <>
 
         <h1>All Books</h1>
 
-        <p>Not sure what to read?<br /> Try a <a href='/random.html' target="_blank">Random Book</a>.</p>
+        <script src='/script/random-book.js' defer />
+        <p>Not sure what to read?<br /> Try a <a href='#' class='random-book-button' target="_blank">Random Book</a>.</p>
         <hr />
 
         <p>Search:<br /> <input type="text" oninput="searchBooks(this);" /></p>
