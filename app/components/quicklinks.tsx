@@ -11,7 +11,7 @@ export const QuickLinks: JSX.Component<{}> = (attrs, children) => {
         <ul class="quicklinks">
 
           {allCategories.map(cat => <li>
-            <a class="link" href={`/books/category/${cat.slug}.html`} style={`background-image: url(${cat.imageSmall});`}>
+            <a class="link" href={cat.route} style={`background-image: url(${cat.imageSmall});`}>
               <span>{cat.shortTitle}</span>
             </a>
           </li>
@@ -23,7 +23,7 @@ export const QuickLinks: JSX.Component<{}> = (attrs, children) => {
         <ul class="quicklinks">
 
           {allMovies.map(movie => <li>
-            <a class="link" href={`/movies/${movie.slug}.html`} style={`background-image: url(${movie.imageSmall});`}>
+            <a class="link" href={movie.route} style={`background-image: url(${movie.imageSmall});`}>
               <span>{movie.shortTitle}</span>
             </a>
           </li>

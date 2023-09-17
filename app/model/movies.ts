@@ -10,6 +10,7 @@ export interface Movie {
   subtitle: string | undefined;
   year: string;
 
+  route: string;
   imageBig: string;
   imageSmall: string;
 }
@@ -46,6 +47,7 @@ export const movieSorter = sortBy((m: Movie) => movieOrder.indexOf(m.slug));
 
 export function movieFromFile(file: FsFile) {
   const data = loadContentFile<Movie>(file);
+  data.route = `/movies/${data.slug}.html`;
   data.imageBig = `/img/movies/${data.slug}-big.jpg`;
   data.imageSmall = `/img/movies/${data.slug}-small.jpg`;
   return data;

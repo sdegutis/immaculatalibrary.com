@@ -9,6 +9,7 @@ export interface Category {
   shortTitle: string;
   books: string[];
 
+  route: string;
   imageBig: string;
   imageSmall: string;
 }
@@ -43,6 +44,7 @@ export const categorySorter = sortBy((c: Category) => categoryOrder.indexOf(c.sl
 
 export function categoryFromFile(file: FsFile) {
   const data = loadContentFile<Category>(file);
+  data.route = `/books/category/${data.slug}.html`;
   data.imageBig = `/img/categories/${data.slug}-big.jpg`;
   data.imageSmall = `/img/categories/${data.slug}-small.jpg`;
   return data;
