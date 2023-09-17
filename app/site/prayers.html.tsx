@@ -1,4 +1,4 @@
-import * as Common from "../components/new/common";
+import * as Common from "../components/common";
 import { markdown } from "../util/helpers";
 
 const prayers = `

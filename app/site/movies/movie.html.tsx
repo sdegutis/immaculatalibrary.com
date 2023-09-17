@@ -1,4 +1,4 @@
-import * as Common from "../../components/new/common";
+import * as Common from "../../components/common";
 import { allMovies } from "../../model/new/movies";
 import { markdown } from "../../util/helpers";
 

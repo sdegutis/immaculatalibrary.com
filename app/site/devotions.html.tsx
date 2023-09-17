@@ -1,4 +1,4 @@
-import * as Common from "../components/new/common";
+import * as Common from "../components/common";
 
 export default <>
   <Common.Page>
