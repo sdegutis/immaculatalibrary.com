@@ -2,6 +2,7 @@ import * as Common from "../components/common";
 import { LatestBookSnippets } from "../components/latest-snippets";
 import { EmptyPage } from "../components/page";
 import { booksBySlug, categoriesBySlug } from "../model/models";
+import { sortedTags } from "../model/tag";
 
 const featuredBooks = [
   {
@@ -129,10 +130,10 @@ export default <>
           </div>
           <script type='module' src='/script/random-book-snippet.js' defer />
 
-          {/* <h3>Book Snippets by Tag</h3>
+          <h3>Book Snippets by Tag</h3>
           <p>{sortedTags().map(tag => <>
-            <a href={tag.view.route}>#{tag.slug}</a> { }
-          </>)}</p> */}
+            <a href={tag.route}>#{tag.oneword}</a> { }
+          </>)}</p>
         </div>
         <div>
 
