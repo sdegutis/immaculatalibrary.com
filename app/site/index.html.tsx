@@ -114,6 +114,33 @@ export default <>
 
       </div>
 
+      <Common.Column spaced split>
+
+        <div>
+
+          <div>
+            <h3>Random Book Snippet (<a href='#' id='refresh-random-book-snippet'>Another</a>)</h3>
+            <noscript>Enable JavaScript to see more random book snippets</noscript>
+            {/* <script>{`const homeSnippets = ${JSON.stringify(allSnippets.map(snippet => snippet.viewWithPreview.route))}`}</script> */}
+            <Common.Typography>
+              <div id="random-book-snippet"></div>
+            </Common.Typography>
+          </div>
+          <script src='/script/random-book-snippet.js' defer />
+
+          {/* <h3>Book Snippets by Tag</h3>
+          <p>{sortedTags().map(tag => <>
+            <a href={tag.view.route}>#{tag.slug}</a> { }
+          </>)}</p> */}
+        </div>
+        <div>
+
+          {/* <LatestBookSnippets /> */}
+
+        </div>
+
+      </Common.Column>
+
     </main>
 
     <Common.QuickLinks />
