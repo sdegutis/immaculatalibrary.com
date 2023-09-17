@@ -1,4 +1,5 @@
 import * as Common from "../../components/common";
+import { LatestBookSnippets } from "../../components/latest-snippets";
 import { calculateReadingMins, formatDate } from "../../core/helpers";
 import { allSnippets } from "../../model/models";
 import { Snippet } from "../../model/snippets";
@@ -42,7 +43,7 @@ export default allSnippets.map(snippet => {
 
         </Common.Typography>
         <div>
-          {/* <LatestBookSnippets /> */}
+          <LatestBookSnippets />
         </div>
       </Common.Column>
 

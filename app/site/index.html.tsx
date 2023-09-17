@@ -1,4 +1,5 @@
 import * as Common from "../components/common";
+import { LatestBookSnippets } from "../components/latest-snippets";
 import { EmptyPage } from "../components/page";
 import { booksBySlug, categoriesBySlug } from "../model/models";
 
@@ -135,7 +136,7 @@ export default <>
         </div>
         <div>
 
-          {/* <LatestBookSnippets /> */}
+          <LatestBookSnippets />
 
         </div>
 
