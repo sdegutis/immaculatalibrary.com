@@ -1,4 +1,4 @@
-import { loadContentFile } from '../util/data-files';
+import { loadContentFile } from '../core/data-files';
 
 export interface Music {
   slug: string;

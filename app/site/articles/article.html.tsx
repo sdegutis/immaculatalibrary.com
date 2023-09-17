@@ -1,6 +1,6 @@
 import * as Common from "../../components/common";
+import { calculateReadingMins, formatDate, markdown } from "../../core/helpers";
 import { allArticles } from "../../model/models";
-import { calculateReadingMins, formatDate, markdown } from "../../util/helpers";
 
 export default allArticles.map(article => [`${article.slug}.html`, <>
   <link rel="stylesheet" href="/css/article.css" />

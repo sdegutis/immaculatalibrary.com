@@ -1,5 +1,5 @@
-import { loadContentFile } from '../util/data-files';
-import { markdown } from '../util/helpers';
+import { loadContentFile } from '../core/data-files';
+import { markdown } from '../core/helpers';
 import { Book } from './books';
 
 const PREVIEW_LENGTH = 2000;

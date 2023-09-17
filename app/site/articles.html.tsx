@@ -1,6 +1,6 @@
 import * as Common from "../components/common";
+import { calculateReadingMins, excerpt, formatDate, markdown } from "../core/helpers";
 import { allArticles } from "../model/models";
-import { calculateReadingMins, excerpt, formatDate, markdown } from "../util/helpers";
 
 export default <>
   <link rel="stylesheet" href="/css/articles.css" />

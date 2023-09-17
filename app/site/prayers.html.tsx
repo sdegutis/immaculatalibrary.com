@@ -1,5 +1,5 @@
 import * as Common from "../components/common";
-import { markdown } from "../util/helpers";
+import { markdown } from "../core/helpers";
 
 const prayers = `
 

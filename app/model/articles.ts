@@ -1,4 +1,4 @@
-import { loadContentFile } from '../util/data-files';
+import { loadContentFile } from '../core/data-files';
 
 const PREVIEW_LENGTH = 2000;
 

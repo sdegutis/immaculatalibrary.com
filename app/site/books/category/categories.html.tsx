@@ -1,7 +1,7 @@
 import * as Common from "../../../components/common";
 import { Rating } from "../../../components/rating";
+import { excerpt, markdown } from "../../../core/helpers";
 import { allCategories } from "../../../model/models";
-import { excerpt, markdown } from "../../../util/helpers";
 
 export default allCategories.map(cat => [`${cat.slug}.html`, <>
   <Common.Page>

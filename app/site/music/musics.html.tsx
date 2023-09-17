@@ -1,7 +1,7 @@
 import * as Common from "../../components/common";
 import { MusicSidebar } from "../../components/music-sidebar";
+import { markdown } from "../../core/helpers";
 import { allMusics } from "../../model/models";
-import { markdown } from "../../util/helpers";
 
 export default allMusics.map(song => {
   const embedUrl = song.youtube.replace('watch?v=', 'embed/').replace(/&t=(\d+)s/, '?start=$1');

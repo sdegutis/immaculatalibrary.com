@@ -1,7 +1,7 @@
 import * as Common from "../../components/common";
 import { MoviesSidebar } from "../../components/movies-sidebar";
+import { markdown } from "../../core/helpers";
 import { allMovies } from "../../model/models";
-import { markdown } from "../../util/helpers";
 
 export default allMovies.map(movie => {
   return [`${movie.slug}.html`, <>
