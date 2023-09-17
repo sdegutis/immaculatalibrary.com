@@ -14,7 +14,7 @@ export default allMovies.map(movie => {
         <Common.Column spaced split>
           <Common.Typography>
 
-            <h1>{movie.displayTitle}</h1>
+            <h1>{movie.meta.title} ({movie.meta.year})</h1>
             {movie.meta.subtitle && <h4><i>{movie.meta.subtitle}</i></h4>}
             {markdown.render(movie.markdownContent)}
 

@@ -9,7 +9,7 @@ export const allMovies = moviesDir.files.map(file => {
     subtitle: string | undefined,
     year: string,
   }>(file, 'slug');
-  return { ...data, displayTitle: `${data.meta.title} (${data.meta.year})` };
+  return { ...data };
 });
 
 const movieOrder = [
