@@ -122,7 +122,6 @@ export default <>
           <div>
             <h3>Random Book Snippet (<a href='#' id='refresh-random-book-snippet'>Another</a>)</h3>
             <noscript>Enable JavaScript to see more random book snippets</noscript>
-            {/* <script>{`const homeSnippets = ${JSON.stringify(allSnippets.map(snippet => snippet.viewWithPreview.route))}`}</script> */}
             <Common.Typography>
               <div id="random-book-snippet"></div>
             </Common.Typography>

@@ -1,3 +1,5 @@
+const snippetsData = fetch('/data/snippets.json').then(res => res.json());
+
 makeContinueReadingLinkWork();
 
 function makeContinueReadingLinkWork() {
@@ -16,12 +18,14 @@ document.getElementById('refresh-random-book-snippet').addEventListener('click',
 });
 
 function doRandomBookSnippet() {
-  const i = Math.floor(Math.random() * homeSnippets.length);
-  const homeSnippet = homeSnippets[i];
+  snippetsData.then(snippets => {
+    const i = Math.floor(Math.random() * snippets.length);
+    const snippet = snippets[i];
 
-  fetch(homeSnippet)
-    .then(res => res.text())
-    .then(insertRandomBookSnippet);
+    fetch(`/data/snippets/${snippet.slug}-preview.html`)
+      .then(res => res.text())
+      .then(insertRandomBookSnippet);
+  });
 }
 
 function insertRandomBookSnippet(text) {
