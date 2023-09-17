@@ -31,7 +31,6 @@
     "js-yaml": "^4.1.0",
     "luxon": "^2.3.0",
     "markdown-it": "^12.2.0",
-    "source-map-support": "^0.5.21",
     "sucrase": "^3.20.3"
   }
 }
