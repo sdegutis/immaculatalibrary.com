@@ -182,7 +182,7 @@ export class FileSys {
   }
 
   reflectChangesToReal(outDir: FsDir) {
-    // this.#reflectDirToDisk(outDir, this.root);
+    this.#reflectDirToDisk(outDir, this.root);
     this.root = outDir;
   }
 
