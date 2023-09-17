@@ -8,7 +8,7 @@ export function showSnippetGroups(filter) {
     host.innerHTML = `
       <p>
         <a href='/snippets.html'>Search</a> |
-        <a href='#'>Random</a> |
+        <a href='#' class='get-random-book-snippet'>Random</a> |
         ${snippetInfo.snippets.length} total |
         ${snippetInfo.totalReadingTime}
       </p>
@@ -30,6 +30,14 @@ export function showSnippetGroups(filter) {
         `).join('')}
       </ul>
     `;
+
+    const randomButton = host.querySelector('.get-random-book-snippet');
+    randomButton.addEventListener('click', e => {
+      e.preventDefault();
+
+      const i = Math.floor(Math.random() * snippetInfo.snippets.length);
+      window.location = snippetInfo.snippets[i].url;
+    });
   });
 }
 
