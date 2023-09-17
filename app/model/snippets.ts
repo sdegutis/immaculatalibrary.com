@@ -37,9 +37,6 @@ export function snippetFromFile(file: FsFile): Snippet {
   data.renderedTitle = markdown.renderInline(data.title);
 
   data.tagsForSnippet = new Set([...data.tags ?? []].map(Tag.getOrCreate));
-  for (const tag of data.tagsForSnippet) {
-    tag.addSnippet(data);
-  }
 
   return data;
 }

@@ -23,11 +23,11 @@ export default allSnippets.map(snippet => {
 
           <p>{formatDate(snippet.date)} &bull; {calculateReadingMins(snippet.content)} min</p>
 
-          {/* <p>
-            {[...snippet.tags].map(tag => <>
+          <p>
+            {[...snippet.tagsForSnippet].map(tag => <>
               <a href={tag.route}>#{tag.slug}</a> { }
             </>)}
-          </p> */}
+          </p>
 
           <p>
             From <a href={snippet.book.route}>{snippet.book.title}</a>, { }

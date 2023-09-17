@@ -1,5 +1,4 @@
 import { sortBy } from "../core/helpers";
-import { Snippet } from "./snippets";
 
 export const allTags = new Map<string, Tag>();
 
@@ -11,15 +10,12 @@ export class Tag {
     return tag;
   }
 
-  snippets = new Set<Snippet>();
   slug;
+  route;
 
   constructor(public name: string) {
     this.slug = this.name.split(' ').map(capitalize).join('');
-  }
-
-  addSnippet(snippet: Snippet) {
-    this.snippets.add(snippet);
+    this.route = `/book-snippets/tag/${this.slug.toLowerCase()}.html`;
   }
 
 }
