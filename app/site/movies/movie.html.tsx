@@ -1,4 +1,5 @@
 import * as Common from "../../components/common";
+import { MoviesSidebar } from "../../components/movies-sidebar";
 import { allMovies } from "../../model/models";
 import { markdown } from "../../util/helpers";
 
@@ -12,14 +13,15 @@ export default allMovies.map(movie => {
       <main>
 
         <Common.Column spaced split>
-          <Common.Typography>
 
+          <Common.Typography>
             <h1>{movie.title} ({movie.year})</h1>
             {movie.subtitle && <h4><i>{movie.subtitle}</i></h4>}
             {markdown.render(movie.content)}
-
           </Common.Typography>
-          <Common.MoviesSidebar />
+
+          <MoviesSidebar />
+
         </Common.Column>
 
       </main>

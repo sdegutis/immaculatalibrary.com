@@ -1,4 +1,5 @@
 import * as Common from "../components/common";
+import { MoviesSidebar } from "../components/movies-sidebar";
 
 export default <>
   <Common.Page>
@@ -9,10 +10,9 @@ export default <>
     <main>
 
       <Common.Column spaced split>
+
         <Common.Typography>
-
           <h1>Holy Movies</h1>
-
           <p>
             Books are not the only way to experience the
             lives of the saints! Movies can be a great way
@@ -20,9 +20,10 @@ export default <>
             his Saints. This page contains a roughly priotized
             list of recommended and reviewed Catholic movies.
           </p>
-
         </Common.Typography>
-        <Common.MoviesSidebar />
+
+        <MoviesSidebar />
+
       </Common.Column>
 
     </main>
