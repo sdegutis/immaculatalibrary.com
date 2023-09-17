@@ -3,14 +3,13 @@ import { loadContentFile } from '../../util/data-files';
 import { sortBy } from '../../util/helpers';
 
 export const allMovies = moviesDir.files.map(file => {
-  const slug = file.name.slice(0, -3);
   const data = loadContentFile<{
     title: string,
     shortTitle: string,
     subtitle: string | undefined,
     year: string,
   }>(file, 'slug');
-  return { ...data, slug, displayTitle: `${data.meta.title} (${data.meta.year})` };
+  return { ...data, displayTitle: `${data.meta.title} (${data.meta.year})` };
 });
 
 const movieOrder = [

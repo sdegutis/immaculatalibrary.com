@@ -2,7 +2,6 @@ import snippetsDir from '../../data/snippets/';
 import { loadContentFile } from '../../util/data-files';
 
 export const allSnippets = snippetsDir.files.map(file => {
-  const slug = file.name.slice(0, -3);
   const data = loadContentFile<{
     published: boolean,
     title: string,
@@ -11,5 +10,5 @@ export const allSnippets = snippetsDir.files.map(file => {
     bookSlug: string,
     tags: string[],
   }>(file, 'date-slug');
-  return { ...data, slug };
+  return { ...data };
 });

@@ -3,13 +3,12 @@ import { loadContentFile } from '../../util/data-files';
 import { sortBy } from '../../util/helpers';
 
 export const allCategories = categoriesDir.files.map(file => {
-  const slug = file.name.slice(0, -3);
   const data = loadContentFile<{
     title: string,
     shortTitle: string,
     books: string[],
   }>(file, 'slug');
-  return { ...data, slug };
+  return { ...data };
 });
 
 const categoryOrder = [

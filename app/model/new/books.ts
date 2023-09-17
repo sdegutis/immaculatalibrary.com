@@ -2,7 +2,6 @@ import booksDir from '../../data/books/';
 import { loadContentFile } from '../../util/data-files';
 
 export const allBooks = booksDir.files.map(file => {
-  const slug = file.name.slice(0, -3);
   const data = loadContentFile<{
     title: string,
     subtitle: string,
@@ -22,5 +21,5 @@ export const allBooks = booksDir.files.map(file => {
     }[],
     complete?: boolean,
   }>(file, 'slug');
-  return { ...data, slug };
+  return { ...data };
 });
