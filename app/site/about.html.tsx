@@ -31,7 +31,7 @@ export default <>
 
             <p>Only the most useful and approved of all Catholic books
               are selected for this website. This means, only books that
-              have received official approbations from Bishops, *and* have
+              have received official approbations from Bishops, <em>and</em> have
               helped to produce Saints, or are written by Saints, are offered.</p>
 
           </Typography>
