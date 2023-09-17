@@ -1,4 +1,7 @@
 import { loadContentFile } from '../util/data-files';
+import { markdown } from '../util/helpers';
+
+const PREVIEW_LENGTH = 2000;
 
 export interface Snippet {
   date: string;
@@ -11,15 +14,24 @@ export interface Snippet {
   archivePage: string;
   bookSlug: string;
   tags: string[];
+
+  archiveLink: string;
+  previewMarkdown: string | null;
+
+  renderedBody: string;
+  renderedTitle: string;
 }
 
 export function snippetFromFile(file: FsFile) {
   const data = loadContentFile<Snippet>(file);
+  data.archiveLink = `https://archive.org/details/${data.archiveSlug}/page/${data.archivePage}?view=theater`;
+  data.previewMarkdown = derivePreview(data);
+  data.renderedBody = markdown.render(data.content);
+  data.renderedTitle = markdown.renderInline(data.title);
   return data;
 }
 
 // ) {
-//   this.previewMarkdown = this.derivePreview(2000);
 
 //   this.book = allBooks.find(book => book.slug.includes(this.bookSlug))!;
 //   this.book.snippets.push(this);
@@ -31,28 +43,22 @@ export function snippetFromFile(file: FsFile) {
 
 //   allSnippets?.unshift(this);
 
-//   this.renderedBody = markdown.render(this.markdownContent);
-//   this.renderedTitle = markdown.renderInline(this.title);
 // }
 
-// get archiveLink() {
-//   return `https://archive.org/details/${this.archiveSlug}/page/${this.archivePage}?view=theater`;
-// }
+function derivePreview(snippet: Snippet) {
+  const paragraphs = snippet.content.trim().split(/(\r?\n>+ *\r?\n)/);
 
-// private derivePreview(count: number) {
-//   const paragraphs = this.markdownContent.trim().split(/(\r?\n>+ *\r?\n)/);
+  let running = 0;
+  for (let i = 0; i < paragraphs.length; i++) {
+    running += paragraphs[i]!.length;
+    if (running > PREVIEW_LENGTH) break;
+  }
 
-//   let running = 0;
-//   for (let i = 0; i < paragraphs.length; i++) {
-//     running += paragraphs[i]!.length;
-//     if (running > count) break;
-//   }
-
-//   if (running < this.markdownContent.trim().length - 1) {
-//     return this.markdownContent.substring(0, running);
-//   }
-//   return null;
-// }
+  if (running < snippet.content.trim().length - 1) {
+    return snippet.content.substring(0, running);
+  }
+  return null;
+}
 
 // get image() {
 //   return this.book.category.imageBig;
