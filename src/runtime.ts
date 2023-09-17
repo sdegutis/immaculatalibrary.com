@@ -9,9 +9,8 @@ export class Runtime {
   context;
   modules = new Map<FsFile, Module>();
 
-  constructor(persisted: any, public fs: FileSys) {
+  constructor(public fs: FileSys) {
     this.context = vm.createContext({
-      persisted,
       console,
       Buffer,
       URL,

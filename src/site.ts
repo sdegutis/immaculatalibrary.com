@@ -7,7 +7,6 @@ export class Site {
   #srcFs;
   #outFs;
   #runtime: Runtime | undefined;
-  #persisted: Record<string, any> = Object.create(null);
 
   constructor(srcPath: string, outPath: string) {
     this.#srcFs = new FileSys(srcPath);
@@ -40,7 +39,7 @@ export class Site {
     console.log('Building site');
     const root = this.#srcFs.root;
 
-    this.#runtime = new Runtime(this.#persisted, this.#srcFs);
+    this.#runtime = new Runtime(this.#srcFs);
 
     const mainFile = root.find('/main') as FsFile;
     const mainModule = this.#runtime.modules.get(mainFile)!;
