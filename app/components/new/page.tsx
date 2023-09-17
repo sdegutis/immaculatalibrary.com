@@ -1,4 +1,4 @@
-export const Html: JSX.Component<{
+export const Page: JSX.Component<{
   imagePath?: string,
   title?: string,
   description?: string | undefined,
@@ -25,6 +25,9 @@ export const Html: JSX.Component<{
       <link rel="manifest" href='/meta/site.webmanifest' />
     </head>
 
-    {children}
+    <body>
+      {children}
+    </body>
+
   </html>
 </>;

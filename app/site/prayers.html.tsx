@@ -1,6 +1,6 @@
 import { Column } from "../components/new/column";
-import { Html } from "../components/new/html";
 import { Navlinks } from "../components/new/navlinks";
+import { Page } from "../components/new/page";
 import { QuickLinks } from "../components/new/quicklinks";
 import { SiteFooter } from "../components/new/site-footer";
 import { SiteHeader } from "../components/new/site-header";
@@ -287,27 +287,25 @@ Most Sacred Heart of Jesus
 `;
 
 export default <>
-  <Html>
-    <body>
-      <main>
+  <Page>
+    <main>
 
-        <SiteHeader image='/img/categories/blessed-sacrament-big.jpg' />
-        <Navlinks />
+      <SiteHeader image='/img/categories/blessed-sacrament-big.jpg' />
+      <Navlinks />
 
-        <Column spaced centered>
-          <Typography>
+      <Column spaced centered>
+        <Typography>
 
-            <h1>Prayers</h1>
+          <h1>Prayers</h1>
 
-            {markdown.render(prayers)}
+          {markdown.render(prayers)}
 
-          </Typography>
-        </Column>
+        </Typography>
+      </Column>
 
-      </main>
+    </main>
 
-      <QuickLinks />
-      <SiteFooter />
-    </body>
-  </Html>
+    <QuickLinks />
+    <SiteFooter />
+  </Page>
 </>;

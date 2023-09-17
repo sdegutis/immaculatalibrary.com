@@ -1,10 +1,8 @@
-import { Html } from "../components/new/html";
+import { Page } from "../components/new/page";
 
 export default <>
-  <Html>
-    <body>
-      <main>
-      </main>
-    </body>
-  </Html>
+  <Page>
+    <main>
+    </main>
+  </Page>
 </>;
