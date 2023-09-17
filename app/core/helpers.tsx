@@ -22,16 +22,6 @@ export const markdown = new MarkdownIt({
   breaks: true,
 });
 
-export function groupByDate<T extends { date: string }>(array: T[]) {
-  const groups: Record<string, T[]> = Object.create(null);
-  for (const o of array) {
-    const d = formatDate(o.date);
-    if (!groups[d]) groups[d] = [];
-    groups[d]!.push(o);
-  }
-  return groups;
-}
-
 export function calculateReadingMins(str: string) {
   return Math.round((str.match(/\w+/g)?.length || 0) / 160);
 }
