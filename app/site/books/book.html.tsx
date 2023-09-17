@@ -97,6 +97,30 @@ export default allBooks.map(book => [`${book.slug}.html`, <>
 
       </Common.Typography>
 
+      <div>
+
+        <h3>Book snippets (<a href={`/script/random-snippet.html?book=${book.slug}`}>Random</a>)</h3>
+        <ul class="snippets-latest">
+          {book.snippets.length > 0
+            ? <>
+              {[...book.snippets].map(bookSnippet => <>
+                <li>
+                  <p>
+                    p.{bookSnippet.archivePage} { }
+                    <a href={bookSnippet.route}>{bookSnippet.renderedTitle}</a>
+                  </p>
+                </li>
+              </>)}
+            </>
+            : <>
+              <li>
+                <em>No snippets have been posted for this book yet.</em>
+              </li>
+            </>}
+        </ul>
+
+      </div>
+
     </Common.Column>
 
   </Common.TypicalPage>
