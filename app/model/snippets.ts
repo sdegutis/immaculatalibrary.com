@@ -1,5 +1,6 @@
 import { loadContentFile, markdown } from '../core/helpers';
 import { Book } from './books';
+import { Tag } from './tag';
 
 const PREVIEW_LENGTH = 2000;
 
@@ -24,6 +25,7 @@ export interface Snippet {
   book: Book;
   prevSnippet?: Snippet;
   nextSnippet?: Snippet;
+  tagsForSnippet: Set<Tag>;
 }
 
 export function snippetFromFile(file: FsFile) {
@@ -33,17 +35,14 @@ export function snippetFromFile(file: FsFile) {
   data.previewMarkdown = derivePreview(data);
   data.renderedBody = markdown.render(data.content);
   data.renderedTitle = markdown.renderInline(data.title);
+
+  data.tagsForSnippet = new Set([...data.tags ?? []].map(Tag.getOrCreate));
+  for (const tag of data.tagsForSnippet) {
+    tag.addSnippet(data);
+  }
+
   return data;
 }
-
-// ) {
-
-//   this.tags = new Set([...tags].map(Tag.getOrCreate));
-//   for (const tag of this.tags) {
-//     tag.addSnippet(this);
-//   }
-
-// }
 
 function derivePreview(snippet: Snippet) {
   const paragraphs = snippet.content.trim().split(/(\r?\n>+ *\r?\n)/);
