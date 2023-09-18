@@ -41,14 +41,8 @@ html.dark-mode {
 
 /* General resets and fixes */
 
-* {
+body {
   margin: 0;
-  /* padding: 0; */
-  /* box-sizing: border-box; */
-}
-
-:is(h1, h2, h3, h4, hr, p, ul, ol, table, details, summary, form) {
-  margin-bottom: 1em;
 }
 
 :is(h1, h2, h3, h4, h5, h6, b, strong) {
@@ -63,10 +57,6 @@ hr {
   height: 1px;
   background-color: var(--border-color);
   border: 0;
-}
-
-:is(ul, ol) {
-  padding-left: revert;
 }
 
 input[type=text] {

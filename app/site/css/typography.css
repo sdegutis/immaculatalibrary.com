@@ -1,6 +1,7 @@
 .typography blockquote {
   border-left: 3px solid var(--border-color);
   padding-left: 1em;
+  margin: 0;
 }
 
 .typography blockquote>p {

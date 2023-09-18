@@ -24,6 +24,7 @@
 #home-hero h1 {
   color: inherit;
   margin-bottom: 7px;
+  margin: 0;
 }
 
 #home-hero a {
@@ -34,6 +35,7 @@
 #home-hero p {
   font-variant: small-caps;
   margin-bottom: 0;
+  margin: 0;
 }
 
 #home-hero>div {
