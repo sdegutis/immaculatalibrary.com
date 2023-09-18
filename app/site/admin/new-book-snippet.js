@@ -1,3 +1,5 @@
+// auto transform " aud " -> " and "
+
 window.addEventListener('beforeunload', (e) => {
   e.returnValue = 'Abandon all changes!?';
 });

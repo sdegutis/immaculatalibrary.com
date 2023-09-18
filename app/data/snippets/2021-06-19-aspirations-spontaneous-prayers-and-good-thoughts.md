@@ -40,7 +40,7 @@ bookSlug: introduction-to-the-devout-life
 >
 > A sight so very extraordinary made the whole company burst into a fit of laughter, whilst the saint, weeping and sighing, cried out: "Alas! you laugh, but the poor beast does not laugh; the enemies of the soul, having hunted, and driven her on, by divers turnings and windings, through all sorts of sins, lie in wait for her at the narrow passage of death, to catch and devour her, and she, being in so dreadful a plight, looks for succour and refuge on every side; and, if she does not find it, she is mocked and derided by her enemies." When the saint had said this, he rode on sighing.
 >
-> Constantine the Great, having written with great respect to St. Anthony, the religious about him were greatly astonished. "Why," said he, "do you feel astonished that a king should write to a man? De astonished, rather, that the Eternal God should have written down his law to mortal men; yea, more, should have spoken to them by word of mouth in the person of his Son."
+> Constantine the Great, having written with great respect to St. Anthony, the religious about him were greatly astonished. "Why," said he, "do you feel astonished that a king should write to a man? Be astonished, rather, that the Eternal God should have written down his law to mortal men; yea, more, should have spoken to them by word of mouth in the person of his Son."
 >
 > St. Francis, seeing a sheep alone amidst a flock of goats: "Observe," said he to his companion, "the poor sheep, how mild it is amidst the goats; our blessed Lord walked thus meekly and humbly among the Pharisees." At another time, seeing a lamb devoured by a wild boar: "Ah! little lamb," said he, weeping, "how strikingly dost thou represent the death of my Saviour!"
 >
