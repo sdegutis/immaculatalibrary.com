@@ -1,10 +1,13 @@
 import chokidar from 'chokidar';
 import * as path from 'path';
+import { Server } from './server';
 import { Site } from './site';
 
-const site = new Site('app', 'docs');
-site.build();
-site.startServer(8080);
+const server = new Server();
+server.startServer(8080);
+
+const site = new Site('app');
+server.outDir = site.build();
 
 const updatedPaths = new Set<string>();
 let reloadFsTimer: NodeJS.Timeout;
@@ -14,6 +17,7 @@ const pathUpdated = (filePath: string) => {
   clearTimeout(reloadFsTimer);
   reloadFsTimer = setTimeout(() => {
     site.pathsUpdated(updatedPaths);
+    server.outDir = site.build();
     updatedPaths.clear();
   }, 100);
 };

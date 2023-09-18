@@ -1,43 +1,16 @@
-import * as http from "http";
 import { FileSys, FsDir, FsFile } from './filesys';
 import { Runtime } from "./runtime";
 
 export class Site {
 
   #srcFs;
-  #outFs;
   #runtime: Runtime | undefined;
 
-  constructor(srcPath: string, outPath: string) {
+  constructor(srcPath: string) {
     this.#srcFs = new FileSys(srcPath);
-    this.#outFs = new FileSys(outPath);
   }
 
-  startServer(port: number) {
-    const server = http.createServer((req, res) => {
-      let node = this.#outFs.root.find(req.url!);
-      if (node instanceof FsDir) {
-        node = node.filesByName['index.html'];
-      }
-
-      if (node instanceof FsFile) {
-        res.statusCode = 200;
-        if (node.name.endsWith('.js')) {
-          res.setHeader('content-type', 'text/javascript');
-        }
-        res.end(node.buffer);
-      }
-      else {
-        res.statusCode = 404;
-        res.end('File not found');
-      }
-    });
-
-    server.listen(port);
-    console.log(`Running on http://localhost:${port}`);
-  }
-
-  build(generateFiles = false) {
+  build() {
     console.log('Building site');
     const root = this.#srcFs.root;
 
@@ -57,16 +30,11 @@ export class Site {
       return;
     }
 
-    if (generateFiles) {
-      this.#outFs.reflectChangesToReal(outDir);
-    }
-
-    this.#outFs.root = outDir;
+    return outDir;
   }
 
   pathsUpdated(paths: Set<string>) {
     this.#srcFs.reflectChangesFromReal(paths);
-    this.build();
   }
 
 }
