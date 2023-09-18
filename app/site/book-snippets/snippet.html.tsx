@@ -45,8 +45,15 @@ export default allSnippets.map(snippet => {
         <div>
           <LatestBookSnippets />
         </div>
-      </Common.Column>
 
+        <details>
+          <summary>Admin</summary>
+          <ul>
+            <li><a href={`./create/${snippet.slug}.html`}>Make next snippet</a></li>
+          </ul>
+        </details>
+
+      </Common.Column>
 
     </Common.TypicalPage>
   </>];
