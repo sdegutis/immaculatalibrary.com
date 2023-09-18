@@ -1,4 +1,6 @@
 #home-hero {
+  box-sizing: border-box;
+
   background-size: cover;
   background-position-y: center;
   height: 230px;
