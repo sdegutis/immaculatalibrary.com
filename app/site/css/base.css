@@ -19,7 +19,7 @@ html {
 }
 
 html.dark-mode {
-  color-scheme:dark;
+  color-scheme: dark;
 
   background: #111;
   --bgalt: #000;
@@ -47,11 +47,11 @@ html.dark-mode {
   box-sizing: border-box;
 }
 
-h1, h2, h3, h4, hr, p, ul, ol, table, details, summary, form {
+:is(h1, h2, h3, h4, hr, p, ul, ol, table, details, summary, form) {
   margin-bottom: 1em;
 }
 
-h1, h2, h3, h4, h5, h6, b, strong {
+:is(h1, h2, h3, h4, h5, h6, b, strong) {
   color: var(--bold-color);
 }
 
@@ -65,7 +65,7 @@ hr {
   border: 0;
 }
 
-ul, ol {
+:is(ul, ol) {
   padding-left: revert;
 }
 
