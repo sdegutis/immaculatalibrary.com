@@ -23,7 +23,11 @@ export default allSnippets.map(snippet => [`${snippet.slug}.html`, <>
           <span>Slug</span>    <input autocomplete='off' name='slug' />
           <span>Text</span> <textarea name='markdownContent' />
 
-          <span id='readingmins'></span> <button>Create</button>
+          <span id='readingmins' />
+          <span style='display:grid; gap:0.25em; grid-template-columns: 1fr 1fr'>
+            <button id='create-button'>Create</button>
+            <button id='fixup-button'>Fixup</button>
+          </span>
         </form>
         <Typography>
           {markdown.render(snippet.content)}
