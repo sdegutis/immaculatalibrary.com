@@ -22,7 +22,7 @@ bookSlug: the-life-and-glories-of-st-joseph
 >
 > In the absence, then, of any authentic document on the point, it is reasonable to have recourse to arguments drawn from suitability and decorum.
 >
-> Now, when the tender age of Mary at the time of her espousals is considered, and the providential object of that marriage, which was to shield her reputation aud to hide for a time the mystery of the Incarnation; to provide her also with a fitting companion and protector, who was to be an aid and a support to her, especially during their flight into Egypt and in all the labours and sufferings which their exile must have entailed; it would seem surprising, not to say incredible, in the absence of any solid proof, to suppose that it pleased God to select for her husband a man weighed down by the burden of years.
+> Now, when the tender age of Mary at the time of her espousals is considered, and the providential object of that marriage, which was to shield her reputation and to hide for a time the mystery of the Incarnation; to provide her also with a fitting companion and protector, who was to be an aid and a support to her, especially during their flight into Egypt and in all the labours and sufferings which their exile must have entailed; it would seem surprising, not to say incredible, in the absence of any solid proof, to suppose that it pleased God to select for her husband a man weighed down by the burden of years.
 >
 > Again, as regards the evidence to be drawn of Joseph's great age from pictorial representations, we may say that it has become quite valueless ever since patient research has brought to light monuments of much earlier date in the sculptures and paintings of the very first centuries.
 >

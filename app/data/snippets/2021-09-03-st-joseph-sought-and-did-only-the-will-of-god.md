@@ -20,7 +20,7 @@ bookSlug: st-joseph-life-his-virtues-his-privileges-his-power
 >
 > St. Paul, converted into a "vessel of election" by the grace and very presence of Jesus Christ Himself, cried out: "Lord, what wilt Thou have me do" (Acts, ix. 6). To know and do the will of God was the first prayer of the Apostle of the Gentiles. In like manner the prayer of the Royal Psalmist to God was, “"each me to do thy will" (Ps. cxlii. 9).
 >
-> How beautiful aud sublime the prayer of holy Job in the darkest midnight of his abandonment, humiliation, and sufferings! "Naked came I out of my mother's womb, and naked shall I return thither; the Lord gave and the Lord hath taken away, as it hath pleased the Lord, so it is done: blessed be the name of the Lord" (i. 21).
+> How beautiful and sublime the prayer of holy Job in the darkest midnight of his abandonment, humiliation, and sufferings! "Naked came I out of my mother's womb, and naked shall I return thither; the Lord gave and the Lord hath taken away, as it hath pleased the Lord, so it is done: blessed be the name of the Lord" (i. 21).
 >
 > St. Teresa justly concludes: "All that he who practises prayer should seek is to conform his will to the Divine Will; and let him be assured that in this consists the highest perfection."
 >
