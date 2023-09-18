@@ -1,4 +1,4 @@
-import { loadContentFile, markdown } from '../core/helpers';
+import { calculateReadingMins, formatDate, loadContentFile, markdown } from '../core/helpers';
 import { Book } from './books';
 import { Tag } from './tag';
 
@@ -21,6 +21,8 @@ export interface Snippet {
   previewMarkdown: string | null;
   renderedBody: string;
   renderedTitle: string;
+  mins: number;
+  formattedDate: string;
 
   book: Book;
   prevSnippet?: Snippet;
@@ -37,6 +39,8 @@ export function snippetFromFile(file: FsFile): Snippet {
   data.previewMarkdown = derivePreview(data);
   data.renderedBody = markdown.render(data.content);
   data.renderedTitle = markdown.renderInline(data.title);
+  data.mins = calculateReadingMins(data.content);
+  data.formattedDate = formatDate(data.date);
 
   data.tagsForSnippet = new Set([...data.tags ?? []].map(Tag.getOrCreate));
 

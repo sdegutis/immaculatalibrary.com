@@ -1,4 +1,4 @@
-import { loadContentFile } from '../core/helpers';
+import { calculateReadingMins, formatDate, loadContentFile } from '../core/helpers';
 
 const PREVIEW_LENGTH = 2000;
 
@@ -11,6 +11,8 @@ export interface Article {
   draft?: boolean;
   imageFilename?: string;
   imageCaption?: string;
+  mins: number;
+  formattedDate: string;
 
   route: string;
   previewMarkdown: string | null;
@@ -19,6 +21,8 @@ export interface Article {
 export function articleFromFile(file: FsFile): Article {
   const data = loadContentFile<Article>(file);
   data.route = `/articles/${data.slug}.html`;
+  data.mins = calculateReadingMins(data.content);
+  data.formattedDate = formatDate(data.date);
   data.previewMarkdown = derivePreview(data);
   return data;
 }

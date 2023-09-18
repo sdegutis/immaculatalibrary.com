@@ -1,4 +1,4 @@
-import { calculateReadingMins, formatDate } from "../../core/helpers";
+import { calculateReadingMins } from "../../core/helpers";
 import { allSnippets } from "../../model/models";
 
 const totalReadingMins = calculateReadingMins(allSnippets.map(s => s.content).join('\n\n'));
@@ -22,8 +22,8 @@ export default <>
       title: snippet.renderedTitle,
       bookTitle: snippet.book.title,
       url: snippet.route,
-      formattedDate: formatDate(snippet.date),
-      readingMins: calculateReadingMins(snippet.content),
+      formattedDate: snippet.formattedDate,
+      readingMins: snippet.mins,
     }))
   })}
 </>;

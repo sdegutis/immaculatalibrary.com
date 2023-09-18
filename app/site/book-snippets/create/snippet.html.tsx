@@ -30,7 +30,7 @@ export default allSnippets.map(snippet => [`${snippet.slug}.html`, <>
           </span>
         </form>
         <Typography>
-          {markdown.render(snippet.content)}
+          {snippet.renderedBody}
         </Typography>
       </div>
       <div id='editorarea'></div>

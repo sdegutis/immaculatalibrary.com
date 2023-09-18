@@ -1,5 +1,5 @@
 import * as Common from "../components/common";
-import { calculateReadingMins, excerpt, formatDate, markdown } from "../core/helpers";
+import { excerpt, markdown } from "../core/helpers";
 import { allArticles } from "../model/models";
 
 export default <>
@@ -18,7 +18,7 @@ export default <>
                 {article.title}
               </a>
               <span class="date">
-                {formatDate(article.date)} &bull; {calculateReadingMins(article.content)} min
+                {article.formattedDate} &bull; {article.mins} min
               </span>
               <div class="excerpt">
                 {markdown.render(excerpt(article.content))}

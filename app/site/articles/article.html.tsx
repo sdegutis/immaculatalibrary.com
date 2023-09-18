@@ -1,5 +1,5 @@
 import * as Common from "../../components/common";
-import { calculateReadingMins, formatDate, markdown } from "../../core/helpers";
+import { markdown } from "../../core/helpers";
 import { allArticles } from "../../model/models";
 
 export default allArticles.map(article => [`${article.slug}.html`, <>
@@ -16,7 +16,7 @@ export default allArticles.map(article => [`${article.slug}.html`, <>
         {article.imageCaption && <small>(Image: {article.imageCaption})</small>}
 
         <p class="date">
-          {formatDate(article.date)} &bull; {calculateReadingMins(article.content)} min
+          {article.formattedDate} &bull; {article.mins} min
         </p>
 
         {markdown.render(article.content)}

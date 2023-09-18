@@ -1,6 +1,5 @@
 import * as Common from "../../components/common";
 import { LatestBookSnippets } from "../../components/latest-snippets";
-import { calculateReadingMins, formatDate } from "../../core/helpers";
 import { allSnippets } from "../../model/models";
 import { Snippet } from "../../model/snippets";
 
@@ -21,7 +20,7 @@ export default allSnippets.map(snippet => {
 
           <h1>{snippet.renderedTitle}</h1>
 
-          <p>{formatDate(snippet.date)} &bull; {calculateReadingMins(snippet.content)} min</p>
+          <p>{snippet.formattedDate} &bull; {snippet.mins} min</p>
 
           <p>
             {[...snippet.tagsForSnippet].map(tag => <>
