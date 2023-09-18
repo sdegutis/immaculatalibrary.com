@@ -3,6 +3,7 @@ import * as path from 'path';
 import { Site } from './site';
 
 const site = new Site('app', 'docs');
+site.build();
 site.startServer(8080);
 
 const updatedPaths = new Set<string>();

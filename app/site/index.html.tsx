@@ -42,7 +42,7 @@ const featuredBooks = [
   },
   {
     id: 'catholic-encyclopedia',
-    why: `The 1912 edition of the Catholic Encyclopedia, a 15 volume set series containing thorough and invaluable information on nearly every topic from the eyes of about 100 years ago.`,
+    why: `The 1912 edition of the Catholic Encyclopedia, a 15 volume set series containing thorough and invaluable information on nearly every topic from the eyes of roughly 100 years ago.`,
     image: 'reference',
   },
 

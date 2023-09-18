@@ -11,7 +11,6 @@ export class Site {
   constructor(srcPath: string, outPath: string) {
     this.#srcFs = new FileSys(srcPath);
     this.#outFs = new FileSys(outPath);
-    this.#build();
   }
 
   startServer(port: number) {
@@ -38,7 +37,7 @@ export class Site {
     console.log(`Running on http://localhost:${port}`);
   }
 
-  #build() {
+  build(generateFiles = false) {
     console.log('Building site');
     const root = this.#srcFs.root;
 
@@ -58,12 +57,16 @@ export class Site {
       return;
     }
 
-    this.#outFs.reflectChangesToReal(outDir);
+    if (generateFiles) {
+      this.#outFs.reflectChangesToReal(outDir);
+    }
+
+    this.#outFs.root = outDir;
   }
 
   pathsUpdated(paths: Set<string>) {
     this.#srcFs.reflectChangesFromReal(paths);
-    this.#build();
+    this.build();
   }
 
 }

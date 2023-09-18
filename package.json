@@ -4,6 +4,7 @@
   "description": "My website.",
   "main": "out/main.js",
   "scripts": {
+    "generate": "node out/generate.js",
     "build": "tsc --build",
     "watch": "tsc --build --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
