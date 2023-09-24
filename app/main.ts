@@ -3,8 +3,10 @@ import siteDir from './site/';
 
 const out = siteDir.clone();
 
+console.time('Building views');
 renderDynamic(out);
 out.createFile('sitemap.xml', renderElement(require('/site/sitemap.xml.tsx').default(out)));
+console.timeEnd('Building views');
 
 export default out;
 
