@@ -1,22 +1,13 @@
-import * as process from 'process';
 import * as sucrase from 'sucrase';
-import { pathToFileURL, URL, URLSearchParams } from 'url';
+import { pathToFileURL } from 'url';
 import vm from 'vm';
 import { FileSys, FsDir, FsFile } from "./filesys";
 
 export class Runtime {
 
-  context;
   modules = new Map<FsFile, Module>();
 
   constructor(public fs: FileSys) {
-    this.context = vm.createContext({
-      console,
-      Buffer,
-      URL,
-      URLSearchParams,
-      process,
-    });
     this.#createModules(fs.root);
   }
 
@@ -52,7 +43,7 @@ class Module {
 
     const transformed = sucrase.transform(rawCode, {
       transforms: ['typescript', 'imports', 'jsx'],
-      jsxPragma: '((tag,attrs,...children)=>({tag,attrs:attrs??{},children}))',
+      jsxPragma: '__createJsxElement',
       jsxFragmentPragma: '""',
       disableESTransforms: true,
       production: true,
@@ -75,13 +66,13 @@ class Module {
         exports: this.#exports,
         __dir: this.file.parent!,
         __file: this.file,
+        __createJsxElement: createJsxElement,
       };
 
       const sourceMapBase64 = Buffer.from(JSON.stringify(this.#sourceMap)).toString('base64url');
       const sourceMapUrlStr = `\n//# sourceMappingURL=data:application/json;base64,${sourceMapBase64}`;
       const runModule = vm.compileFunction(this.#code + sourceMapUrlStr, Object.keys(args), {
         filename: this.#filePath.href,
-        parsingContext: this.runtime.context,
       });
 
       runModule(...Object.values(args));
@@ -103,4 +94,8 @@ class Module {
     return mod.require();
   }
 
+}
+
+function createJsxElement(tag: string | Function, attrs: any, ...children: any[]) {
+  return { tag, attrs: attrs ?? {}, children };
 }
