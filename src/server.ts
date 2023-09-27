@@ -17,7 +17,7 @@ export class Server {
         if (node.name.endsWith('.js')) {
           res.setHeader('content-type', 'text/javascript');
         }
-        res.end(node.buffer);
+        res.end(node.content);
       }
       else {
         res.statusCode = 404;

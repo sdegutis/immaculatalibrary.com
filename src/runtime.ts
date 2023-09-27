@@ -41,7 +41,7 @@ export class Module {
     private file: FsFile,
     private runtime: Runtime,
   ) {
-    const rawCode = this.file.buffer.toString('utf8');
+    const rawCode = this.file.text;
     this.#filePath = pathToFileURL(runtime.fs.realPath(this.file));
 
     const transformed = sucrase.transform(rawCode, {

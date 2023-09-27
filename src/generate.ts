@@ -14,6 +14,6 @@ function realPath(node: FsFile | FsDir) {
 
 function createTree(dir: FsDir) {
   fs.mkdirSync(realPath(dir));
-  for (const file of dir.files) { fs.writeFileSync(realPath(file), file.buffer); }
+  for (const file of dir.files) { fs.writeFileSync(realPath(file), file.content); }
   for (const subdir of dir.dirs) { createTree(subdir); }
 }

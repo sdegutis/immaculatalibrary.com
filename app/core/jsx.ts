@@ -6,7 +6,7 @@ interface Context {
   scripts: Set<string>;
 }
 
-export function renderElement(element: JsxElement): Buffer {
+export function renderElement(element: JsxElement): Buffer | string {
   const context: Context = {
     stylesheets: new Set(),
     scripts: new Set(),
@@ -23,7 +23,7 @@ export function renderElement(element: JsxElement): Buffer {
     element.children.shift();
   }
 
-  return Buffer.from(elementToString(element));
+  return elementToString(element);
 }
 
 function hoistHeadThings(element: JSX.Element, context: Context) {

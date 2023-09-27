@@ -76,13 +76,13 @@ export class FsDir extends FsNode {
     this.children.splice(idx, 1);
   }
 
-  createFile(name: string, contents: Buffer) {
+  createFile(name: string, contents: Buffer | string) {
     if (this.children.find(node => node.name === name)) {
       throw new Error(`File already exists with this name.`);
     }
 
     const file = new FsFile(name, this);
-    file.buffer = contents;
+    file.content = contents;
     this.children.push(file);
   }
 
@@ -91,16 +91,16 @@ export class FsDir extends FsNode {
 export class FsFile extends FsNode {
 
   declare parent: FsDir;
-  buffer!: Buffer;
+  content!: Buffer | string;
   module?: Module;
 
   get text() {
-    return this.buffer.toString('utf8');
+    return this.content.toString('utf8');
   }
 
   clone(parent: FsDir) {
     const file = new FsFile(this.name, parent);
-    file.buffer = this.buffer;
+    file.content = this.content;
     return file;
   }
 
@@ -135,7 +135,7 @@ export class FileSys {
       }
       else if (stat.isFile()) {
         const child = new FsFile(name, dir);
-        child.buffer = fs.readFileSync(this.realPath(child));
+        child.content = fs.readFileSync(this.realPath(child));
         dir.children.push(child);
       }
     }
@@ -152,7 +152,7 @@ export class FileSys {
         const contents = fs.readFileSync(realFilePath);
 
         if (fsFile) {
-          fsFile.buffer = contents;
+          fsFile.content = contents;
         }
         else {
           const dirs = fsFilePath.slice(1).split(path.sep);
@@ -169,7 +169,7 @@ export class FileSys {
           }
 
           const file = new FsFile(name, dir);
-          file.buffer = contents;
+          file.content = contents;
           dir.children.push(file);
         }
       }
