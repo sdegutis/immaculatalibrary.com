@@ -1,95 +1,89 @@
-const UNARY = new Set(['br', 'hr', 'input']);
+export function renderElement(element: JsxElement): string {
+  element = createJsxElement('', null, [element]);
 
-interface Context {
-  head?: JSX.Element;
-  stylesheets: Set<string>;
-  scripts: Set<string>;
-}
-
-export function renderElement(element: JsxElement): Buffer | string {
-  const context: Context = {
-    stylesheets: new Set(),
-    scripts: new Set(),
-  };
-
+  const context: RenderContext = { head: element, hoisted: new Set() };
   hoistHeadThings(element, context);
 
-  context.head ??= createHead(element);
-  context.head.children.push(...context.stylesheets);
-  context.head.children.push(...context.scripts);
-
-  const topChild = element.children[0];
-  if (topChild instanceof JsxElement && topChild.tag === 'head' && topChild.children.length === 0) {
-    element.children.shift();
+  for (const hoisted of context.hoisted) {
+    context.head.children.push(hoisted);
   }
 
-  return elementToString(element);
+  const parts: string[] = [];
+  addElement(element, parts);
+  return parts.join('');
 }
 
-function hoistHeadThings(element: JSX.Element, context: Context) {
+interface RenderContext {
+  head: JsxElement;
+  hoisted: Set<string>,
+}
+
+function hoistHeadThings(element: JsxElement, context: RenderContext) {
   if (element.tag === 'head') {
     context.head = element;
+  }
+  hoistInArray(element.children, context);
+}
+
+function hoistInArray(array: any[], context: RenderContext) {
+  for (let i = array.length - 1; i >= 0; i--) {
+    const child = array[i];
+    if (child instanceof JsxElement) {
+      if (child.tag === 'style' || child.tag === 'script' || child.tag === 'link') {
+        array.splice(i, 1);
+
+        const parts: string[] = [];
+        addElement(child, parts);
+        context.hoisted.add(parts.join(''));
+      }
+      else {
+        hoistHeadThings(child, context);
+      }
+    }
+    else if (Array.isArray(child)) {
+      hoistInArray(child, context);
+    }
+  }
+}
+
+function addElement(element: JsxElement, parts: string[]) {
+  if (element.tag === '') {
+    pushChildren(element.children, parts);
     return;
   }
 
-  element.children = element.children.map(child => {
-    if (child instanceof JsxElement) {
-      if (child.tag === 'link' && child.attrs?.["rel"] === 'stylesheet') {
-        context.stylesheets.add(elementToString(child));
-        return '';
-      }
-      else if (child.tag === 'script' && child.attrs?.["src"]) {
-        context.scripts.add(elementToString(child));
-        return '';
-      }
-      hoistHeadThings(child, context);
+  parts.push('<', element.tag);
+
+  for (const k in element.attrs) {
+    const v = element.attrs[k];
+    if (v === true)
+      parts.push(' ', k);
+    else if (v === false || v === null || v === undefined)
+      continue;
+    else
+      parts.push(' ', k, '="', v, '"');
+  }
+
+  parts.push('>');
+  pushChildren(element.children, parts);
+  parts.push('</', element.tag, '>');
+}
+
+function pushChildren(children: any[], parts: string[]) {
+  for (const child of children) {
+    if (child === undefined || child === null || child === false) {
+      continue;
     }
-    return child;
-  });
-}
-
-function elementToString(element: JSX.Element): string {
-  const childrenString = (element.children
-    .flat(Infinity)
-    .map(child => {
-      if (child === undefined || child === null || child === false) {
-        return '';
-      }
-      else if (child instanceof JsxElement) {
-        return elementToString(child);
-      }
-      else {
-        return String(child);
-      }
-    })
-    .join(''));
-
-  if (element.tag === '') {
-    return childrenString;
+    else if (child instanceof JsxElement) {
+      addElement(child, parts);
+    }
+    else if (Array.isArray(child)) {
+      pushChildren(child, parts);
+    }
+    else {
+      parts.push(child);
+    }
   }
-
-  const attrsArray = Object.entries(element.attrs ?? {});
-  const attrsString = (attrsArray.length > 0
-    ? ' ' + attrsArray
-      .map(([k, v]) => {
-        if (v === true) return k;
-        if (v === false || v === null || v === undefined) return '';
-        return `${k}="${v}"`;
-      })
-      .join(' ')
-    : '');
-
-  if (UNARY.has(element.tag as string)) {
-    return `<${element.tag}${attrsString}/>`;
-  }
-
-  return `<${element.tag}${attrsString}>${childrenString}</${element.tag}>`;
-}
-
-function createHead(root: JSX.Element): JSX.Element {
-  const head = createJsxElement('head', null);
-  root.children.unshift(head);
-  return head;
 }
 
 class JsxElement {
