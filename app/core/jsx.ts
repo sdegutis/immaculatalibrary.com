@@ -6,7 +6,7 @@ interface Context {
   scripts: Set<string>;
 }
 
-export function renderElement(element: JSX.Element): Buffer {
+export function renderElement(element: JsxElement): Buffer {
   const context: Context = {
     stylesheets: new Set(),
     scripts: new Set(),
@@ -19,7 +19,7 @@ export function renderElement(element: JSX.Element): Buffer {
   context.head.children.push(...context.scripts);
 
   const topChild = element.children[0];
-  if (isElement(topChild) && topChild.tag === 'head' && topChild.children.length === 0) {
+  if (topChild instanceof JsxElement && topChild.tag === 'head' && topChild.children.length === 0) {
     element.children.shift();
   }
 
@@ -33,7 +33,7 @@ function hoistHeadThings(element: JSX.Element, context: Context) {
   }
 
   element.children = element.children.map(child => {
-    if (isElement<JSX.Element>(child)) {
+    if (child instanceof JsxElement) {
       if (child.tag === 'link' && child.attrs?.["rel"] === 'stylesheet') {
         context.stylesheets.add(elementToString(child));
         return '';
@@ -55,7 +55,7 @@ function elementToString(element: JSX.Element): string {
       if (child === undefined || child === null || child === false) {
         return '';
       }
-      else if (isElement<JSX.Element>(child)) {
+      else if (child instanceof JsxElement) {
         return elementToString(child);
       }
       else {
@@ -86,25 +86,23 @@ function elementToString(element: JSX.Element): string {
   return `<${element.tag}${attrsString}>${childrenString}</${element.tag}>`;
 }
 
-function isElement<T extends JSX.Element | JSX.Element>(object: any): object is T {
-  return (
-    typeof object === 'object'
-    && object !== null
-    && 'tag' in object
-    && 'attrs' in object
-    && 'children' in object
-  );
-}
-
 function createHead(root: JSX.Element): JSX.Element {
   const head = createJsxElement('head', null);
   root.children.unshift(head);
   return head;
 }
 
+class JsxElement {
+  constructor(
+    public tag: string,
+    public attrs: Record<string, any> | null,
+    public children: any[],
+  ) { }
+}
+
 export default function createJsxElement(tag: string | Function, attrs: any, ...children: any[]) {
   if (typeof tag === 'function')
     return tag(attrs ?? {}, children);
   else
-    return { tag, attrs: attrs, children };
+    return new JsxElement(tag, attrs, children);
 }
