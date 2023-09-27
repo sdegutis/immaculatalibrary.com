@@ -7,38 +7,23 @@ interface Context {
 }
 
 export function renderElement(element: JSX.Element): Buffer {
-  const simpleElement = evalTree(element);
-
   const context: Context = {
     stylesheets: new Set(),
     scripts: new Set(),
   };
 
-  hoistHeadThings(simpleElement, context);
+  hoistHeadThings(element, context);
 
-  context.head ??= createHead(simpleElement);
+  context.head ??= createHead(element);
   context.head.children.push(...context.stylesheets);
   context.head.children.push(...context.scripts);
 
-  const topChild = simpleElement.children[0];
+  const topChild = element.children[0];
   if (isElement(topChild) && topChild.tag === 'head' && topChild.children.length === 0) {
-    simpleElement.children.shift();
+    element.children.shift();
   }
 
-  return Buffer.from(elementToString(simpleElement));
-}
-
-function evalTree(element: JSX.Element) {
-  element.children = element.children.flat(Infinity).map(child => {
-    if (isElement<JSX.Element>(child)) {
-      return evalTree(child);
-    }
-    else {
-      return child;
-    }
-  });
-
-  return element;
+  return Buffer.from(elementToString(element));
 }
 
 function hoistHeadThings(element: JSX.Element, context: Context) {
