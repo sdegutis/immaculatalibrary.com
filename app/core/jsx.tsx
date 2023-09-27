@@ -6,14 +6,8 @@ interface Context {
   scripts: Set<string>;
 }
 
-type PlainElement = {
-  tag: string,
-  attrs: Record<string, any>,
-  children: any[],
-};
-
 export function renderElement(element: JSX.Element): Buffer {
-  const simpleElement = evalTree(element) as PlainElement;
+  const simpleElement = evalTree(element);
 
   const context: Context = {
     stylesheets: new Set(),
@@ -35,10 +29,6 @@ export function renderElement(element: JSX.Element): Buffer {
 }
 
 function evalTree(element: JSX.Element) {
-  while (typeof element.tag === 'function') {
-    element = element.tag(element.attrs, element.children);
-  }
-
   element.children = element.children.flat(Infinity).map(child => {
     if (isElement<JSX.Element>(child)) {
       return evalTree(child);
@@ -51,19 +41,19 @@ function evalTree(element: JSX.Element) {
   return element;
 }
 
-function hoistHeadThings(element: PlainElement, context: Context) {
+function hoistHeadThings(element: JSX.Element, context: Context) {
   if (element.tag === 'head') {
     context.head = element;
     return;
   }
 
   element.children = element.children.map(child => {
-    if (isElement<PlainElement>(child)) {
-      if (child.tag === 'link' && child.attrs["rel"] === 'stylesheet') {
+    if (isElement<JSX.Element>(child)) {
+      if (child.tag === 'link' && child.attrs?.["rel"] === 'stylesheet') {
         context.stylesheets.add(elementToString(child));
         return '';
       }
-      else if (child.tag === 'script' && child.attrs["src"]) {
+      else if (child.tag === 'script' && child.attrs?.["src"]) {
         context.scripts.add(elementToString(child));
         return '';
       }
@@ -73,14 +63,14 @@ function hoistHeadThings(element: PlainElement, context: Context) {
   });
 }
 
-function elementToString(element: PlainElement): string {
+function elementToString(element: JSX.Element): string {
   const childrenString = (element.children
     .flat(Infinity)
     .map(child => {
       if (child === undefined || child === null || child === false) {
         return '';
       }
-      else if (isElement<PlainElement>(child)) {
+      else if (isElement<JSX.Element>(child)) {
         return elementToString(child);
       }
       else {
@@ -93,7 +83,7 @@ function elementToString(element: PlainElement): string {
     return childrenString;
   }
 
-  const attrsArray = Object.entries(element.attrs);
+  const attrsArray = Object.entries(element.attrs ?? {});
   const attrsString = (attrsArray.length > 0
     ? ' ' + attrsArray
       .map(([k, v]) => {
@@ -111,7 +101,7 @@ function elementToString(element: PlainElement): string {
   return `<${element.tag}${attrsString}>${childrenString}</${element.tag}>`;
 }
 
-function isElement<T extends PlainElement | JSX.Element>(object: any): object is T {
+function isElement<T extends JSX.Element | JSX.Element>(object: any): object is T {
   return (
     typeof object === 'object'
     && object !== null
@@ -121,8 +111,8 @@ function isElement<T extends PlainElement | JSX.Element>(object: any): object is
   );
 }
 
-function createHead(root: PlainElement): PlainElement {
-  const head = <head /> as PlainElement;
+function createHead(root: JSX.Element): JSX.Element {
+  const head = <head />;
   root.children.unshift(head);
   return head;
 }

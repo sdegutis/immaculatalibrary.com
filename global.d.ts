@@ -9,8 +9,8 @@ declare module JSX {
     [tag: string]: Record<string, string | boolean>;
   };
   export type Element = {
-    tag: string | Component<any>,
-    attrs: Record<string, any>,
+    tag: string,
+    attrs: Record<string, any> | null,
     children: any[],
   };
   export type Component<T extends Record<string, any>> =

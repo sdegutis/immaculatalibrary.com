@@ -97,5 +97,8 @@ class Module {
 }
 
 function createJsxElement(tag: string | Function, attrs: any, ...children: any[]) {
-  return { tag, attrs: attrs ?? {}, children };
+  if (typeof tag === 'function')
+    return tag(attrs ?? {}, children);
+  else
+    return { tag, attrs: attrs, children };
 }
