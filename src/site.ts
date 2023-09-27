@@ -17,7 +17,7 @@ export class Site {
     this.#runtime = new Runtime(this.#srcFs);
 
     const mainFile = root.find('/main') as FsFile;
-    const mainModule = this.#runtime.modules.get(mainFile)!;
+    const mainModule = mainFile.module!;
 
     let outDir: FsDir;
     try {

@@ -5,8 +5,6 @@ import { FileSys, FsDir, FsFile } from "./filesys";
 
 export class Runtime {
 
-  modules = new Map<FsFile, Module>();
-
   constructor(public fs: FileSys) {
     this.#createModules(fs.root);
   }
@@ -18,14 +16,14 @@ export class Runtime {
 
     for (const file of dir.files) {
       if (file.name.match(/\.tsx?$/)) {
-        this.modules.set(file, new Module(file, this));
+        file.module = new Module(file, this);
       }
     }
   }
 
 }
 
-class Module {
+export class Module {
 
   #exports = Object.create(null);
   #ran = false;
@@ -88,7 +86,7 @@ class Module {
     const file = this.file.parent.find(toPath);
     if (!file) throw new Error(`Can't find file at path: ${toPath}`);
 
-    const mod = file instanceof FsFile && this.runtime.modules.get(file);
+    const mod = file instanceof FsFile && file.module;
     if (!mod) return file;
 
     return mod.require();

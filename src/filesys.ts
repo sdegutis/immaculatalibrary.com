@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path/posix";
+import { Module } from "./runtime";
 
 abstract class FsNode {
 
@@ -91,6 +92,7 @@ export class FsFile extends FsNode {
 
   declare parent: FsDir;
   buffer!: Buffer;
+  module?: Module;
 
   get text() {
     return this.buffer.toString('utf8');
