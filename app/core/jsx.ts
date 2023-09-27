@@ -3,10 +3,7 @@ export function renderElement(element: JsxElement): string {
 
   const context: RenderContext = { head: element, hoisted: new Set() };
   hoistHeadThings(element, context);
-
-  for (const hoisted of context.hoisted) {
-    context.head.children.push(hoisted);
-  }
+  context.head.children.push(...context.hoisted);
 
   const parts: string[] = [];
   addElement(element, parts);
