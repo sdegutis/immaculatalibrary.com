@@ -173,9 +173,7 @@ export class FileSys {
       }
       else {
         if (fsFile) {
-          const nodes = fsFile.parent.children;
-          const idx = nodes.indexOf(fsFile);
-          nodes.splice(idx, 1);
+          fsFile.parent.delete(fsFile);
         }
       }
     }
