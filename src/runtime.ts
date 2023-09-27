@@ -5,8 +5,13 @@ import { FileSys, FsDir, FsFile } from "./filesys";
 
 export class Runtime {
 
+  createJsxElement;
+
   constructor(public fs: FileSys) {
     this.#createModules(fs.root);
+
+    const jsxFile = fs.root.find('/core/jsx.ts') as FsFile;
+    this.createJsxElement = jsxFile.module!.require().default;
   }
 
   #createModules(dir: FsDir) {
@@ -64,7 +69,7 @@ export class Module {
         exports: this.#exports,
         __dir: this.file.parent!,
         __file: this.file,
-        __createJsxElement: createJsxElement,
+        __createJsxElement: this.runtime.createJsxElement,
       };
 
       const sourceMapBase64 = Buffer.from(JSON.stringify(this.#sourceMap)).toString('base64url');
@@ -92,11 +97,4 @@ export class Module {
     return mod.require();
   }
 
-}
-
-function createJsxElement(tag: string | Function, attrs: any, ...children: any[]) {
-  if (typeof tag === 'function')
-    return tag(attrs ?? {}, children);
-  else
-    return { tag, attrs: attrs, children };
 }

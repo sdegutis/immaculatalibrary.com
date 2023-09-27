@@ -97,7 +97,14 @@ function isElement<T extends JSX.Element | JSX.Element>(object: any): object is 
 }
 
 function createHead(root: JSX.Element): JSX.Element {
-  const head = <head />;
+  const head = createJsxElement('head', null);
   root.children.unshift(head);
   return head;
+}
+
+export default function createJsxElement(tag: string | Function, attrs: any, ...children: any[]) {
+  if (typeof tag === 'function')
+    return tag(attrs ?? {}, children);
+  else
+    return { tag, attrs: attrs, children };
 }
