@@ -23,7 +23,7 @@ export const markdown = new MarkdownIt({
 });
 
 export function calculateReadingMins(str: string) {
-  return Math.round((str.match(/\w+/g)?.length || 0) / 160);
+  return Math.round(str.length / 888);
 }
 
 export function excerpt(s: string) {
