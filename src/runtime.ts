@@ -42,7 +42,9 @@ export class Module {
     private runtime: Runtime,
   ) {
     const rawCode = this.file.text;
-    this.#filePath = pathToFileURL(runtime.fs.realPath(this.file));
+
+    const filename = runtime.fs.realPath(this.file);
+    this.#filePath = pathToFileURL(filename);
 
     const transformed = sucrase.transform(rawCode, {
       transforms: ['typescript', 'imports', 'jsx'],
@@ -52,7 +54,7 @@ export class Module {
       production: true,
       filePath: this.#filePath.href,
       sourceMapOptions: {
-        compiledFilename: runtime.fs.realPath(this.file),
+        compiledFilename: filename,
       },
     });
 
