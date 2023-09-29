@@ -32,6 +32,7 @@ function doRandomBookSnippet() {
 function insertRandomBookSnippet(text) {
   const container = document.getElementById('random-book-snippet');
   container.innerHTML = text;
+  formatAllDates();
   makeContinueReadingLinkWork();
 }
 

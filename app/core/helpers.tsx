@@ -26,14 +26,6 @@ export function calculateReadingMins(str: string) {
   return Math.round((str.match(/\w+/g)?.length || 0) / 160);
 }
 
-export function formatDate(date: string) {
-  return new Date(date).toLocaleDateString('en-EN', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  });
-}
-
 export function excerpt(s: string) {
   return s.split(/\r?\n\r?\n/)[0]!;
 }

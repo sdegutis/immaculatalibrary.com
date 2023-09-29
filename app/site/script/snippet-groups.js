@@ -15,7 +15,7 @@ export function showSnippetGroups(filter) {
       <ul class="snippets-latest">
         ${groups.map(([date, group]) => `
           <li>
-            <h4>${date}</h4>
+            <h4 class='format-date'>${date}</h4>
             <ul>
               ${group.map(snippet => `
                 <li>
@@ -31,6 +31,8 @@ export function showSnippetGroups(filter) {
       </ul>
     `;
 
+    formatAllDates();
+
     const randomButton = host.querySelector('.get-random-book-snippet');
     randomButton.addEventListener('click', e => {
       e.preventDefault();
@@ -44,17 +46,9 @@ export function showSnippetGroups(filter) {
 function groupByDate(array) {
   const groups = Object.create(null);
   for (const o of array) {
-    const d = formatDate(o.date);
+    const d = o.date;
     if (!groups[d]) groups[d] = [];
     groups[d].push(o);
   }
   return groups;
-}
-
-function formatDate(dateStr) {
-  return new Date(dateStr.split('-')).toLocaleDateString('en-EN', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  });
 }

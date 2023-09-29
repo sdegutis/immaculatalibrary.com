@@ -22,7 +22,6 @@ export default <>
       title: snippet.renderedTitle,
       bookTitle: snippet.book.title,
       url: snippet.route,
-      formattedDate: snippet.formattedDate,
       readingMins: snippet.mins,
     }))
   })}

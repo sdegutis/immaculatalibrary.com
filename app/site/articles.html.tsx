@@ -18,7 +18,7 @@ export default <>
                 {article.title}
               </a>
               <span class="date">
-                {article.formattedDate} &bull; {article.mins} min
+                <span class='format-date'>{article.date}</span> &bull; {article.mins} min
               </span>
               <div class="excerpt">
                 {markdown.render(excerpt(article.content))}

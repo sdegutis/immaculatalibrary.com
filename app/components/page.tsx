@@ -20,6 +20,8 @@ export const EmptyPage: JSX.Component<{}> = (attrs, children) => <>
       <link rel="stylesheet" href='/css/base.css' />
       <link rel="stylesheet" href='/css/fonts.css' />
 
+      <script src='/script/format-date.js' defer></script>
+
       <link rel="apple-touch-icon" sizes="180x180" href="/meta/apple-touch-icon.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/meta/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/meta/favicon-16x16.png" />
