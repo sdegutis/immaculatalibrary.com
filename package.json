@@ -27,7 +27,7 @@
     "typescript": "^4.5.4"
   },
   "dependencies": {
-    "chokidar": "^3.5.2",
+    "chokidar": "^3.5.3",
     "js-yaml": "^4.1.0",
     "markdown-it": "^12.2.0",
     "sucrase": "^3.20.3"
