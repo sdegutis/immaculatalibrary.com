@@ -10,7 +10,7 @@ export class Site {
     this.#srcFs = new FileSys(srcPath);
   }
 
-  build() {
+  build(): FsDir | undefined {
     console.log('Building site');
     const root = this.#srcFs.root;
 
@@ -19,18 +19,13 @@ export class Site {
     const mainFile = root.find('/main') as FsFile;
     const mainModule = mainFile.module!;
 
-    let outDir: FsDir;
     try {
-      console.log('Loading main module...');
-      outDir = mainModule.require().default;
-      console.log('Done');
+      return mainModule.require().default;
     }
     catch (e) {
       console.error(e);
       return;
     }
-
-    return outDir;
   }
 
   pathsUpdated(paths: Set<string>) {
