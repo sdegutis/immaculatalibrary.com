@@ -30,6 +30,6 @@
     "chokidar": "^3.5.3",
     "js-yaml": "^4.1.0",
     "markdown-it": "^13.0.2",
-    "sucrase": "^3.20.3"
+    "sucrase": "^3.34.0"
   }
 }
