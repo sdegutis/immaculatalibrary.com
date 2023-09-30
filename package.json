@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/sdegutis/immaculatalibrary.com#readme",
   "devDependencies": {
-    "@types/js-yaml": "^4.0.5",
+    "@types/js-yaml": "^4.0.6",
     "@types/markdown-it": "^12.2.3",
     "@types/node": "^17.0.8",
     "typescript": "^4.5.4"
