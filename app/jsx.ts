@@ -23,11 +23,11 @@ function hoistHeadThings(element: JsxElement, context: RenderContext) {
 }
 
 function hoistInArray(array: any[], context: RenderContext) {
-  for (let i = array.length - 1; i >= 0; i--) {
+  for (let i = 0; i < array.length; i++) {
     const child = array[i];
     if (child instanceof JsxElement) {
       if (child.tag === 'style' || child.tag === 'script' || child.tag === 'link') {
-        array.splice(i, 1);
+        array.splice(i--, 1);
 
         const parts: string[] = [];
         addElement(child, parts);
