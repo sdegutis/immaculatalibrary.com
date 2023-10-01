@@ -4,17 +4,6 @@ import { EmptyPage } from "../components/page";
 import { booksBySlug, categoriesBySlug } from "../model/models";
 import { sortedTags } from "../model/tag";
 
-const featuredBooks = [
-  'introduction-to-the-devout-life',
-  'imitation-of-christ',
-  'st-john-henry-newman-reply-to-eirenicon',
-  'catena-aurea',
-  'the-sinners-guide',
-  'the-spiritual-combat',
-  'the-glories-of-mary',
-  'catholic-encyclopedia',
-];
-
 export default <>
   <EmptyPage>
 
@@ -64,7 +53,16 @@ export default <>
           <h2>Featured books</h2>
 
           <ul id='featured-books'>
-            {featuredBooks.map(id => {
+            {[
+              'introduction-to-the-devout-life',
+              'imitation-of-christ',
+              'st-john-henry-newman-reply-to-eirenicon',
+              'catena-aurea',
+              'the-sinners-guide',
+              'the-spiritual-combat',
+              'the-glories-of-mary',
+              'catholic-encyclopedia',
+            ].map(id => {
               const book = booksBySlug[id]!;
 
               const imageUrl = categoriesBySlug[book.frontpage!.image]!.imageBig;
