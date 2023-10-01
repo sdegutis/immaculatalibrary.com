@@ -4,7 +4,8 @@ const out = siteDir.clone();
 
 console.time('Building views');
 renderDynamic(out);
-out.createFile('sitemap.xml', require('/site/sitemap.xml.tsx').default(out).toString());
+const sitemap = require('/site/sitemap.xml.tsx').default(out) as JSX.Element;
+out.createFile('sitemap.xml', sitemap.stringify());
 console.timeEnd('Building views');
 
 export default out;
@@ -24,11 +25,11 @@ function renderDynamic(dir: FsDir) {
 
       if (Array.isArray(exported)) {
         for (const [name, jsx] of exported) {
-          dir.createFile(name, jsx.toString());
+          dir.createFile(name, (jsx as JSX.Element).stringify());
         }
       }
       else {
-        dir.createFile(file.name.slice(0, -4), exported.toString());
+        dir.createFile(file.name.slice(0, -4), (exported as JSX.Element).stringify());
       }
     }
   }

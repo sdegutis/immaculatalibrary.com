@@ -2,7 +2,7 @@ import * as sucrase from 'sucrase';
 import { pathToFileURL } from 'url';
 import vm from 'vm';
 import { FileSys, FsDir, FsFile } from "./filesys";
-import createJsxElement from './jsx';
+import { createJsxElement } from './jsx';
 
 export class Runtime {
 

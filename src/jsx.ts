@@ -1,4 +1,4 @@
-class JsxElement {
+export class JsxElement {
 
   constructor(
     public tag: string,
@@ -6,7 +6,7 @@ class JsxElement {
     public children: any[],
   ) { }
 
-  toString() {
+  stringify(): string {
     const element = createJsxElement('', null, this);
 
     const context: RenderContext = { head: element, hoisted: new Set() };
@@ -93,7 +93,7 @@ function pushChildren(children: any[], parts: string[]) {
   }
 }
 
-export default function createJsxElement(tag: string | Function, attrs: any, ...children: any[]) {
+export function createJsxElement(tag: string | Function, attrs: any, ...children: any[]): JsxElement {
   if (typeof tag === 'function')
     return tag(attrs ?? {}, children);
   else
