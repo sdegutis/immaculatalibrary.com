@@ -3,6 +3,8 @@ import { pathToFileURL } from 'url';
 import vm from 'vm';
 import { FileSys, FsDir, FsFile } from "./filesys";
 
+const JSX_IMPL_PATH = '/core/jsx.ts';
+
 export class Runtime {
 
   #deps = new Map<string, Set<string>>();
@@ -12,7 +14,7 @@ export class Runtime {
   }
 
   getJsxFunction() {
-    const jsxFile = this.fs.root.find('/core/jsx.ts') as FsFile;
+    const jsxFile = this.fs.root.find(JSX_IMPL_PATH) as FsFile;
     return jsxFile.module!.require().default;
   }
 
@@ -41,7 +43,18 @@ export class Runtime {
         }
       }
 
-      this.#resetDepTree(file.path, resetSeen);
+      if (file.path === JSX_IMPL_PATH) {
+        this.#deps.clear();
+        const resetDir = (dir: FsDir) => {
+          for (const subdir of dir.dirs) resetDir(subdir);
+          for (const file of dir.files) file.module?.resetFunction();
+        };
+        resetDir(this.fs.root);
+        return;
+      }
+      else {
+        this.#resetDepTree(file.path, resetSeen);
+      }
     }
   }
 
