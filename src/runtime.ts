@@ -5,13 +5,15 @@ import { FileSys, FsDir, FsFile } from "./filesys";
 
 export class Runtime {
 
-  createJsxElement;
+  #deps = new Map<string, Set<string>>();
 
   constructor(public fs: FileSys) {
     this.#createModules(fs.root);
+  }
 
-    const jsxFile = fs.root.find('/core/jsx.ts') as FsFile;
-    this.createJsxElement = jsxFile.module!.require().default;
+  getJsxFunction() {
+    const jsxFile = this.fs.root.find('/core/jsx.ts') as FsFile;
+    return jsxFile.module!.require().default;
   }
 
   #createModules(dir: FsDir) {
@@ -26,25 +28,77 @@ export class Runtime {
     }
   }
 
+  updateModules(files: FsFile[]) {
+    const resetSeen = new Set<string>();
+
+    for (const file of files) {
+      if (file.name.match(/\.tsx?$/)) {
+        if (file.module) {
+          file.module.resetFunction();
+        }
+        else {
+          file.module = new Module(file, this);
+        }
+      }
+
+      this.#resetDepTree(file.path, resetSeen);
+    }
+  }
+
+  addDep(path: string, requiringPath: string) {
+    let list = this.#deps.get(requiringPath);
+    if (!list) this.#deps.set(requiringPath, list = new Set());
+    list.add(path);
+  }
+
+  #resetDepTree(path: string, seen: Set<string>) {
+    if (seen.has(path)) return;
+
+    const deps = this.#deps.get(path);
+    if (deps) {
+      for (const dep of deps) {
+        const file = this.fs.root.find(dep) as FsFile;
+        file.module?.resetExports();
+        seen.add(dep);
+        this.#resetDepTree(dep, seen);
+      }
+    }
+
+    this.#deps.delete(path);
+  }
+
 }
 
 export class Module {
 
   #exports = Object.create(null);
   #ran = false;
-
-  #code;
-  #sourceMap;
-  #filePath;
+  #run;
 
   constructor(
     private file: FsFile,
     private runtime: Runtime,
   ) {
+    this.#run = this.createRunFunction();
+  }
+
+  resetExports() {
+    this.#ran = false;
+    for (const key in this.#exports) {
+      delete this.#exports[key];
+    }
+  }
+
+  resetFunction() {
+    this.resetExports();
+    this.#run = this.createRunFunction();
+  }
+
+  createRunFunction() {
     const rawCode = this.file.text;
 
-    const filename = runtime.fs.realPath(this.file);
-    this.#filePath = pathToFileURL(filename);
+    const filename = this.runtime.fs.realPath(this.file);
+    const fileUrl = pathToFileURL(filename);
 
     const transformed = sucrase.transform(rawCode, {
       transforms: ['typescript', 'imports', 'jsx'],
@@ -52,35 +106,36 @@ export class Module {
       jsxFragmentPragma: '""',
       disableESTransforms: true,
       production: true,
-      filePath: this.#filePath.href,
+      filePath: fileUrl.href,
       sourceMapOptions: {
         compiledFilename: filename,
       },
     });
 
-    this.#code = transformed.code;
-    this.#sourceMap = transformed.sourceMap!;
+    const args = {
+      require: (path: string) => this.#requireFromWithinModule(path),
+      exports: this.#exports,
+      __dir: this.file.parent!,
+      __file: this.file,
+      __createJsxElement: undefined,
+    };
+
+    const sourceMapBase64 = Buffer.from(JSON.stringify(transformed.sourceMap)).toString('base64url');
+    const sourceMapUrlStr = `\n//# sourceMappingURL=data:application/json;base64,${sourceMapBase64}`;
+    const runModule = vm.compileFunction(transformed.code + sourceMapUrlStr, Object.keys(args), {
+      filename: fileUrl.href,
+    });
+
+    return () => {
+      args.__createJsxElement = this.runtime.getJsxFunction();
+      runModule(...Object.values(args));
+    };
   }
 
   require() {
     if (!this.#ran) {
       this.#ran = true;
-
-      const args = {
-        require: (path: string) => this.#requireFromWithinModule(path),
-        exports: this.#exports,
-        __dir: this.file.parent!,
-        __file: this.file,
-        __createJsxElement: this.runtime.createJsxElement,
-      };
-
-      const sourceMapBase64 = Buffer.from(JSON.stringify(this.#sourceMap)).toString('base64url');
-      const sourceMapUrlStr = `\n//# sourceMappingURL=data:application/json;base64,${sourceMapBase64}`;
-      const runModule = vm.compileFunction(this.#code + sourceMapUrlStr, Object.keys(args), {
-        filename: this.#filePath.href,
-      });
-
-      runModule(...Object.values(args));
+      this.#run();
     }
     return this.#exports;
   }
@@ -95,6 +150,8 @@ export class Module {
 
     const mod = file instanceof FsFile && file.module;
     if (!mod) return file;
+
+    this.runtime.addDep(this.file.path, file.path);
 
     return mod.require();
   }

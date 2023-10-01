@@ -4,17 +4,16 @@ import { Runtime } from "./runtime";
 export class Site {
 
   #srcFs;
-  #runtime: Runtime | undefined;
+  #runtime;
 
   constructor(srcPath: string) {
     this.#srcFs = new FileSys(srcPath);
+    this.#runtime = new Runtime(this.#srcFs);
   }
 
   build(): FsDir | undefined {
     console.log('Building site');
     const root = this.#srcFs.root;
-
-    this.#runtime = new Runtime(this.#srcFs);
 
     const mainFile = root.find('/main') as FsFile;
     const mainModule = mainFile.module!;
@@ -29,7 +28,8 @@ export class Site {
   }
 
   pathsUpdated(paths: Set<string>) {
-    this.#srcFs.reflectChangesFromReal(paths);
+    const files = this.#srcFs.reflectChangesFromReal(paths);
+    this.#runtime.updateModules(files);
   }
 
 }

@@ -144,6 +144,8 @@ export class FileSys {
   }
 
   reflectChangesFromReal(realFilePaths: Set<string>) {
+    const files = [];
+
     for (const realFilePath of realFilePaths) {
       const fsFilePath = realFilePath.slice(this.realBase.length);
       const fsFile = this.root.find(fsFilePath) as FsFile | null;
@@ -153,6 +155,7 @@ export class FileSys {
 
         if (fsFile) {
           fsFile.content = contents;
+          files.push(fsFile);
         }
         else {
           const dirs = fsFilePath.slice(1).split(path.sep);
@@ -171,6 +174,7 @@ export class FileSys {
           const file = new FsFile(name, dir);
           file.content = contents;
           dir.children.push(file);
+          files.push(file);
         }
       }
       else {
@@ -179,6 +183,8 @@ export class FileSys {
         }
       }
     }
+
+    return files;
   }
 
 }
