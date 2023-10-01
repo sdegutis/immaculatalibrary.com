@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path/posix";
-import { Module } from "./runtime";
+import { Module } from "./module";
 
 abstract class FsNode {
 
