@@ -1,4 +1,4 @@
-import { renderElement } from './core/jsx';
+import { renderElement } from './jsx';
 import siteDir from './site/';
 
 const out = siteDir.clone();

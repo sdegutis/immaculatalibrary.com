@@ -3,7 +3,7 @@ import { pathToFileURL } from 'url';
 import vm from 'vm';
 import { FileSys, FsDir, FsFile } from "./filesys";
 
-const JSX_IMPL_PATH = '/core/jsx.ts';
+const JSX_IMPL_PATH = '/jsx.ts';
 
 export class Runtime {
 
