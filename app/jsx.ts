@@ -1,5 +1,5 @@
 export function renderElement(element: JsxElement): string {
-  element = createJsxElement('', null, [element]);
+  element = createJsxElement('', null, element);
 
   const context: RenderContext = { head: element, hoisted: new Set() };
   hoistHeadThings(element, context);
