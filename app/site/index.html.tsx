@@ -5,47 +5,14 @@ import { booksBySlug, categoriesBySlug } from "../model/models";
 import { sortedTags } from "../model/tag";
 
 const featuredBooks = [
-  {
-    id: 'introduction-to-the-devout-life',
-    why: `Practical advice for living in a fallen world while building devotion and avoiding sin, useful both for those new to the faith and those looking to reinvigorate their spiritual life.`,
-    image: 'instruction',
-  },
-  {
-    id: 'imitation-of-christ',
-    why: `One of the most popular and widely acclaimed books in all of Christian history, the Imitation of Christ is densely packed with devotional material for reflection and prayer.`,
-    image: 'devotion',
-  },
-  {
-    id: 'st-john-henry-newman-reply-to-eirenicon',
-    why: `A thorough defense of the Church's core teachings about Mary, which many useful tangents like the process of conversion and an explanation of how the Church's devotions emerge.`,
-    image: 'st-john-henry-newman',
-  },
-  {
-    id: 'catena-aurea',
-    why: `Commentary of the Church Fathers on the four Gospels, compiled and weaved together seamlessly by St. Thomas Aquinas and translated into English by St. John Henry Newman.`,
-    image: 'classics',
-  },
-  {
-    id: 'the-sinners-guide',
-    why: `Exhortations to practice virtue and avoid sin, tackling this topic from practically every angle possible, with extremely thorough explanations and reasoned theology at every step along the way.`,
-    image: 'holy-spirit',
-  },
-  {
-    id: 'the-spiritual-combat',
-    why: `Practical guide to the temptations we will face by trying to live a devout life and how to overcome them, with practical theology about the nature of sin, temptation, grace, and virtue.`,
-    image: 'apologetics',
-  },
-  {
-    id: 'the-glories-of-mary',
-    why: `A comprehensive explanation and defense of all the devotions and doctrines relating to the Blessed Virgin Mary, structured around the Hail Holy Queen prayer, with historical examples and prayers.`,
-    image: 'mary',
-  },
-  {
-    id: 'catholic-encyclopedia',
-    why: `The 1912 edition of the Catholic Encyclopedia, a 15 volume set series containing thorough and invaluable information on nearly every topic from the eyes of nearly 100 years ago.`,
-    image: 'reference',
-  },
-
+  'introduction-to-the-devout-life',
+  'imitation-of-christ',
+  'st-john-henry-newman-reply-to-eirenicon',
+  'catena-aurea',
+  'the-sinners-guide',
+  'the-spiritual-combat',
+  'the-glories-of-mary',
+  'catholic-encyclopedia',
 ];
 
 export default <>
@@ -97,16 +64,17 @@ export default <>
           <h2>Featured books</h2>
 
           <ul id='featured-books'>
-            {featuredBooks.map(({ id, why, image }) => {
+            {featuredBooks.map(id => {
               const book = booksBySlug[id]!;
-              const imageUrl = categoriesBySlug[image]!.imageBig;
+
+              const imageUrl = categoriesBySlug[book.frontpage!.image]!.imageBig;
               return <>
                 <li class='featured-book'>
                   <h3><a href={book.route}>{book.title}</a></h3>
                   <a href={book.route}>
                     <div class='thumb' style={`background-image: url(${imageUrl})`} />
                   </a>
-                  <Common.Typography><p>{why}</p></Common.Typography>
+                  <Common.Typography><p>{book.frontpage!.why}</p></Common.Typography>
                 </li>
               </>;
             })}

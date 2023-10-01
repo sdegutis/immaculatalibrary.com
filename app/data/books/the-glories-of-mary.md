@@ -6,6 +6,9 @@ author: 'St. Alphonsus Liguori'
 translator: ''
 score: 110
 rating: 5
+frontpage:
+  image: mary
+  why: A comprehensive explanation and defense of all the devotions and doctrines relating to the Blessed Virgin Mary, structured around the Hail Holy Queen prayer, with historical examples and prayers.
 files:
   - archiveId: 'thegloriesofmary00liguuoft'
     pdfFile: 'The Glories of Mary.pdf'

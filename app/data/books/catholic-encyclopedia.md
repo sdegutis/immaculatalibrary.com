@@ -6,6 +6,9 @@ author: 'Charles G. Herbermann, Ph.D., L.L.D., Edward A. Pace, Ph.D., D.D., Cond
 translator: ''
 score: 90
 rating: 0
+frontpage:
+  image: reference
+  why: The 1912 edition of the Catholic Encyclopedia, a 15 volume set series containing thorough and invaluable information on nearly every topic from the eyes of nearly 100 years ago.
 files:
   - archiveId: 'catholicencyclop00herbuoft'
     pdfFile: 'Catholic Encyclopedia (00 - Index).pdf'

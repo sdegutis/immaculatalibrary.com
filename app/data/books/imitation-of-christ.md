@@ -6,6 +6,9 @@ author: 'Thomas a Kempis'
 translator: 'Richard Challoner, D.D. V.A.'
 score: 120
 rating: 5
+frontpage:
+  image: devotion
+  why: One of the most popular and widely acclaimed books in all of Christian history, the Imitation of Christ is densely packed with devotional material for reflection and prayer.
 files:
   - archiveId: 'followingofchris00thom'
     pdfFile: 'Imitation of Christ.pdf'

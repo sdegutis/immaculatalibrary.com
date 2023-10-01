@@ -23,6 +23,10 @@ export interface Book {
     title: string;
   }[];
   complete?: boolean;
+  frontpage?: {
+    image: string;
+    why: string;
+  },
 
   route: string;
 

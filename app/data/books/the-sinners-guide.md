@@ -6,6 +6,9 @@ author: 'Venerable Louis of Granada'
 translator: ''
 score: 120
 rating: 5
+frontpage:
+  image: holy-spirit
+  why: Exhortations to practice virtue and avoid sin, tackling this topic from practically every angle possible, with extremely thorough explanations and reasoned theology at every step along the way.
 files:
   - archiveId: 'sinnersguide00luis'
     pdfFile: 'The Sinner’s Guide.pdf'

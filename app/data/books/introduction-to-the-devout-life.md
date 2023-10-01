@@ -7,6 +7,10 @@ author: 'St. Francis de Sales'
 translator: ''
 score: 130
 rating: 5
+frontpage:
+  image: instruction
+  why:
+    Practical advice for living in a fallen world while building devotion and avoiding sin, useful both for those new to the faith and those looking to reinvigorate their spiritual life.
 files:
   - archiveId: 'an-introduction-to-the-devout-life'
     pdfFile: 'Introduction to the Devout Life.pdf'

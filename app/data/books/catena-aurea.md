@@ -6,6 +6,9 @@ author: 'St. Thomas Aquinas and the Fathers of the Church'
 translator: ''
 score: 100
 rating: 0
+frontpage:
+  image: classics
+  why: Commentary of the Church Fathers on the four Gospels, compiled and weaved together seamlessly by St. Thomas Aquinas and translated into English by St. John Henry Newman.
 files:
   - archiveId: 'catenaaureacomme04thom'
     pdfFile: 'Catena Aurea - John.pdf'
