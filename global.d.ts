@@ -1,9 +1,6 @@
 declare type FsFile = import('./src/filesys').FsFile;
 declare type FsDir = import('./src/filesys').FsDir;
 
-declare const __file: FsFile;
-declare const __dir: FsDir;
-
 declare module JSX {
   export type IntrinsicElements = {
     [tag: string]: Record<string, string | boolean>;
