@@ -53,18 +53,17 @@ export class Runtime {
 
   #resetDepTree(path: string, seen: Set<string>) {
     if (seen.has(path)) return;
+    seen.add(path);
 
     const deps = this.#deps.get(path);
     if (deps) {
+      this.#deps.delete(path);
       for (const dep of deps) {
         const file = this.fs.root.find(dep) as FsFile;
         file.module?.resetExports();
-        seen.add(dep);
         this.#resetDepTree(dep, seen);
       }
     }
-
-    this.#deps.delete(path);
   }
 
 }
