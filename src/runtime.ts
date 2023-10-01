@@ -107,7 +107,7 @@ export class Module {
   }
 
   createRunFunction() {
-    const rawCode = this.file.text;
+    const rawCode = this.file.content.toString('utf8');
 
     const filename = this.runtime.fs.realPath(this.file);
     const fileUrl = pathToFileURL(filename);
@@ -160,10 +160,10 @@ export class Module {
     const file = this.file.parent.find(toPath);
     if (!file) throw new Error(`Can't find file at path: ${toPath}`);
 
+    this.runtime.addDep(this.file.path, file.path);
+
     const mod = file instanceof FsFile && file.module;
     if (!mod) return file;
-
-    this.runtime.addDep(this.file.path, file.path);
 
     return mod.require();
   }

@@ -94,10 +94,6 @@ export class FsFile extends FsNode {
   content!: Buffer | string;
   module?: Module;
 
-  get text() {
-    return this.content.toString('utf8');
-  }
-
   clone(parent: FsDir) {
     const file = new FsFile(this.name, parent);
     file.content = this.content;
