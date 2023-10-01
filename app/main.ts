@@ -1,11 +1,10 @@
-import { renderElement } from './jsx';
 import siteDir from './site/';
 
 const out = siteDir.clone();
 
 console.time('Building views');
 renderDynamic(out);
-out.createFile('sitemap.xml', renderElement(require('/site/sitemap.xml.tsx').default(out)));
+out.createFile('sitemap.xml', require('/site/sitemap.xml.tsx').default(out).toString());
 console.timeEnd('Building views');
 
 export default out;
@@ -25,11 +24,11 @@ function renderDynamic(dir: FsDir) {
 
       if (Array.isArray(exported)) {
         for (const [name, jsx] of exported) {
-          dir.createFile(name, renderElement(jsx));
+          dir.createFile(name, jsx.toString());
         }
       }
       else {
-        dir.createFile(file.name.slice(0, -4), renderElement(exported));
+        dir.createFile(file.name.slice(0, -4), exported.toString());
       }
     }
   }

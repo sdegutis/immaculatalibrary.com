@@ -2,8 +2,7 @@ import * as sucrase from 'sucrase';
 import { pathToFileURL } from 'url';
 import vm from 'vm';
 import { FileSys, FsDir, FsFile } from "./filesys";
-
-const JSX_IMPL_PATH = '/jsx.ts';
+import createJsxElement from './jsx';
 
 export class Runtime {
 
@@ -11,11 +10,6 @@ export class Runtime {
 
   constructor(public fs: FileSys) {
     this.#createModules(fs.root);
-  }
-
-  getJsxFunction() {
-    const jsxFile = this.fs.root.find(JSX_IMPL_PATH) as FsFile;
-    return jsxFile.module!.require().default;
   }
 
   #createModules(dir: FsDir) {
@@ -43,18 +37,7 @@ export class Runtime {
         }
       }
 
-      if (file.path === JSX_IMPL_PATH) {
-        this.#deps.clear();
-        const resetDir = (dir: FsDir) => {
-          for (const subdir of dir.dirs) resetDir(subdir);
-          for (const file of dir.files) file.module?.resetFunction();
-        };
-        resetDir(this.fs.root);
-        return;
-      }
-      else {
-        this.#resetDepTree(file.path, resetSeen);
-      }
+      this.#resetDepTree(file.path, resetSeen);
     }
   }
 
@@ -127,7 +110,7 @@ export class Module {
     const args = {
       require: (path: string) => this.#requireFromWithinModule(path),
       exports: this.#exports,
-      __createJsxElement: undefined,
+      __createJsxElement: createJsxElement,
     };
 
     const sourceMapBase64 = Buffer.from(JSON.stringify(transformed.sourceMap)).toString('base64url');
@@ -136,10 +119,7 @@ export class Module {
       filename: fileUrl.href,
     });
 
-    return () => {
-      args.__createJsxElement = this.runtime.getJsxFunction();
-      runModule(...Object.values(args));
-    };
+    return () => runModule(...Object.values(args));
   }
 
   require() {

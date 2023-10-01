@@ -5,10 +5,11 @@ declare module JSX {
   export type IntrinsicElements = {
     [tag: string]: Record<string, string | boolean>;
   };
-  export type Element = {
-    tag: string,
-    attrs: Record<string, any> | null,
-    children: any[],
+  export interface Element {
+    tag: string;
+    attrs: Record<string, any> | null;
+    children: any[];
+    toString();
   };
   export type Component<T extends Record<string, any>> =
     (attrs: T, children: any) => Element;

@@ -1,13 +1,23 @@
-export function renderElement(element: JsxElement): string {
-  element = createJsxElement('', null, element);
+class JsxElement {
 
-  const context: RenderContext = { head: element, hoisted: new Set() };
-  hoistHeadThings(element, context);
-  context.head.children.push(...context.hoisted);
+  constructor(
+    public tag: string,
+    public attrs: Record<string, any> | null,
+    public children: any[],
+  ) { }
 
-  const parts: string[] = [];
-  addElement(element, parts);
-  return parts.join('');
+  toString() {
+    const element = createJsxElement('', null, this);
+
+    const context: RenderContext = { head: element, hoisted: new Set() };
+    hoistHeadThings(element, context);
+    context.head.children.push(...context.hoisted);
+
+    const parts: string[] = [];
+    addElement(element, parts);
+    return parts.join('');
+  }
+
 }
 
 interface RenderContext {
@@ -81,14 +91,6 @@ function pushChildren(children: any[], parts: string[]) {
       parts.push(child);
     }
   }
-}
-
-class JsxElement {
-  constructor(
-    public tag: string,
-    public attrs: Record<string, any> | null,
-    public children: any[],
-  ) { }
 }
 
 export default function createJsxElement(tag: string | Function, attrs: any, ...children: any[]) {
