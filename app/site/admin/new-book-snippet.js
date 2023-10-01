@@ -49,6 +49,8 @@ ${markdown}
 fixupButton.onclick = (e) => {
   e.preventDefault();
 
+  editor.getModel().pushStackElement();
+
   const content = editor.getModel().getValue();
   const fixedContent = (content
     .replace(/ {2,}/g, ' ')
@@ -61,7 +63,10 @@ fixupButton.onclick = (e) => {
     .replace(/^/gm, '> ')
     .replace(/ aud /g, " and "));
 
-  editor.getModel().setValue(fixedContent);
+  editor.executeEdits('admin', [{
+    range: editor.getModel().getFullModelRange(),
+    text: fixedContent,
+  }]);
 }
 
 /** @type {import('../../../util/helpers').calculateReadingMins} */
