@@ -35,7 +35,7 @@ bookSlug: ${JSON.stringify(document.querySelector('input[name=bookSlug]').value)
 ---
 
 ${markdown}
-  `.trim();
+  `.trim() + '\n';
 
   const file = new Blob([content], { type: 'plain/text' });
   const a = document.createElement('a');
@@ -53,6 +53,7 @@ fixupButton.onclick = (e) => {
 
   const content = editor.getModel().getValue();
   const fixedContent = (content
+    .trim()
     .replace(/ {2,}/g, ' ')
     .replace(/ ;/g, ';')
     .replace(/ :/g, ';')
@@ -61,7 +62,8 @@ fixupButton.onclick = (e) => {
     .replace(/ \?/g, '?')
     .replace(/(\r?\n)+/gm, '\n\n')
     .replace(/^/gm, '> ')
-    .replace(/ aud /g, " and "));
+    .replace(/ aud /g, " and ")
+    + '\n');
 
   editor.executeEdits('admin', [{
     range: editor.getModel().getFullModelRange(),
