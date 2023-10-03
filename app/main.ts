@@ -2,6 +2,7 @@ import path from 'path/posix';
 import { out } from './out';
 import files from './site/';
 
+out.clear();
 console.time('Building views');
 
 const sitemapIdx = files.findIndex(([filepath, content]) => filepath === '/site/sitemap.xml.tsx');
