@@ -1,8 +1,9 @@
 import path from 'path/posix';
-import { out } from './out';
+import * as routes from './routes';
 import files from './site/';
 
-out.clear();
+routes.reset();
+
 console.time('Building views');
 
 const sitemapIdx = files.findIndex(([filepath, content]) => filepath === '/site/sitemap.xml.tsx');
@@ -19,18 +20,18 @@ for (const [filepath, contents] of files) {
 
     if (Array.isArray(exported)) {
       for (const [name, jsx] of exported) {
-        out.set(path.join(dir, name), (jsx as JSX.Element).stringify());
+        routes.out.set(path.join(dir, name), (jsx as JSX.Element).stringify());
       }
     }
     else {
-      out.set(outpath.slice(0, -4), (exported as JSX.Element).stringify());
+      routes.out.set(outpath.slice(0, -4), (exported as JSX.Element).stringify());
     }
   }
   else {
-    out.set(outpath, contents);
+    routes.out.set(outpath, contents);
   }
 }
 
 console.timeEnd('Building views');
 
-export default out;
+export default routes.out;

@@ -1,4 +1,4 @@
-import { staticFileFor } from '../../core/static';
+import { staticRouteFor } from '../../routes';
 import columnCss from './column.css';
 
 export const Column: JSX.Component<{ centered?: boolean, spaced?: boolean, split?: boolean }> = (attrs, children) => {
@@ -7,7 +7,7 @@ export const Column: JSX.Component<{ centered?: boolean, spaced?: boolean, split
   if (attrs.spaced) cssClass.push('spaced-main-content');
   if (attrs.split) cssClass.push('split-page');
   return <>
-    <link rel="stylesheet" href={staticFileFor(columnCss)} />
+    <link rel="stylesheet" href={staticRouteFor(columnCss)} />
     <div class="container">
       <section class={cssClass.join(' ')}>
         {children}
