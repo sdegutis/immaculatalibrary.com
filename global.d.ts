@@ -16,3 +16,8 @@ declare module '*.css' {
   const file: [string, Buffer];
   export default file;
 }
+
+declare module '*.js' {
+  const file: [string, Buffer];
+  export default file;
+}
