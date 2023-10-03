@@ -3,14 +3,12 @@ import { out } from '../out';
 
 export default <>
   {'<?xml version="1.0" encoding="UTF-8"?>\n'}
-  <urlset
-    {...{
-      'xmlns:xsi': "http://www.w3.org/2001/XMLSchema-instance",
-      'xsi:schemaLocation': "http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd",
-      'xmlns': "http://www.sitemaps.org/schemas/sitemap/0.9",
-    }}
-  >
-    {[...out.keys()].map(filepath => {
+  <urlset {...{
+    'xmlns:xsi': "http://www.w3.org/2001/XMLSchema-instance",
+    'xsi:schemaLocation': "http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd",
+    'xmlns': "http://www.sitemaps.org/schemas/sitemap/0.9",
+  }}>
+    {[...out.keys()].filter(filepath => !filepath.startsWith('/admin')).map(filepath => {
       const name = path.basename(filepath);
       const date = name.match(/^(\d{4}-\d{2}-\d{2})-/)?.[1];
       return <>
