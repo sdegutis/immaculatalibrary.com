@@ -1,4 +1,4 @@
-import { Column } from "./column";
+import { Column } from "./column/column";
 
 export const Navlinks: JSX.Component<{}> = () => <>
   <link rel="stylesheet" href='/css/navlinks.css' />

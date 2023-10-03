@@ -1,4 +1,4 @@
-export { Column } from "./column";
+export { Column } from "./column/column";
 export { Navlinks } from "./navlinks";
 export { TypicalPage } from "./page";
 export { QuickLinks } from "./quicklinks";
