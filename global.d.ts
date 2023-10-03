@@ -13,6 +13,6 @@ declare module '*/' {
 }
 
 declare module '*.css' {
-  const file: Buffer;
+  const file: [string, Buffer];
   export default file;
 }
