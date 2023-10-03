@@ -1,4 +1,4 @@
-import { FileSys, FsDir, FsFile } from './filesys';
+import { FileSys } from './filesys';
 import { Runtime } from "./runtime";
 
 export class Site {
@@ -6,30 +6,33 @@ export class Site {
   #srcFs;
   #runtime;
 
-  constructor(srcPath: string) {
+  constructor(private srcPath: string) {
     this.#srcFs = new FileSys(srcPath);
     this.#runtime = new Runtime(this.#srcFs);
+    this.#runtime.createModules();
   }
 
-  build(): FsDir | undefined {
-    console.log('Building site');
-    const root = this.#srcFs.root;
-
-    const mainFile = root.find('/main') as FsFile;
-    const mainModule = mainFile.module!;
-
+  build() {
     try {
-      return mainModule.require().default;
+      console.log('Building site...');
+      const mainModule = this.#runtime.modules.get('/main.ts')!;
+      const exports = mainModule.require() as { default: Map<string, Buffer | string> };
+      return exports.default;
     }
     catch (e) {
       console.error(e);
       return;
     }
+    finally {
+      console.log('Building site: done.');
+    }
   }
 
-  pathsUpdated(paths: Set<string>) {
-    const files = this.#srcFs.reflectChangesFromReal(paths);
-    this.#runtime.updateModules(files);
+  pathsUpdated(...paths: string[]) {
+    const fixedPaths = paths.map(p => p.slice(this.srcPath.length));
+
+    this.#srcFs.reflectChangesFromReal(fixedPaths);
+    this.#runtime.updateModules(fixedPaths);
   }
 
 }

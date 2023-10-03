@@ -1,7 +1,7 @@
+import path from 'path/posix';
 import * as sucrase from 'sucrase';
 import { pathToFileURL } from 'url';
 import vm from 'vm';
-import { FsFile } from "./filesys";
 import { createJsxElement } from './jsx';
 import { Runtime } from './runtime';
 
@@ -12,28 +12,13 @@ export class Module {
   #run;
 
   constructor(
-    private file: FsFile,
+    public filepath: string,
+    buffer: Buffer,
     private runtime: Runtime,
   ) {
-    this.#run = this.createRunFunction();
-  }
+    const rawCode = buffer.toString('utf8');
 
-  resetExports() {
-    this.#ran = false;
-    for (const key in this.#exports) {
-      delete this.#exports[key];
-    }
-  }
-
-  resetFunction() {
-    this.resetExports();
-    this.#run = this.createRunFunction();
-  }
-
-  createRunFunction() {
-    const rawCode = this.file.content.toString('utf8');
-
-    const filename = this.runtime.fs.realPath(this.file);
+    const filename = this.runtime.fs.realPath(this.filepath);
     const fileUrl = pathToFileURL(filename);
 
     const transformed = sucrase.transform(rawCode, {
@@ -60,7 +45,14 @@ export class Module {
       filename: fileUrl.href,
     });
 
-    return () => runModule(...Object.values(args));
+    this.#run = () => runModule(...Object.values(args));
+  }
+
+  resetExports() {
+    this.#ran = false;
+    for (const key in this.#exports) {
+      delete this.#exports[key];
+    }
   }
 
   require() {
@@ -76,15 +68,35 @@ export class Module {
       return require(toPath);
     }
 
-    const file = this.file.parent.find(toPath);
-    if (!file) throw new Error(`Can't find file at path: ${toPath}`);
+    const absPath = path.resolve(path.dirname(this.filepath), toPath);
 
-    this.runtime.addDep(this.file.path, file.path);
+    const module = (
+      this.runtime.modules.get(absPath) ??
+      this.runtime.modules.get(absPath + '.ts') ??
+      this.runtime.modules.get(absPath + '.tsx')
+    );
 
-    const mod = file instanceof FsFile && file.module;
-    if (!mod) return file;
+    if (module) {
+      this.runtime.addDeps(this.filepath, [module.filepath]);
+      return module.require();
+    }
 
-    return mod.require();
+    if (toPath.endsWith('/')) {
+      const dirPath = absPath + '/';
+      const files = [...this.runtime.fs.files.entries()].filter(([filepath, content]) =>
+        filepath.startsWith(dirPath)
+      );
+      this.runtime.addDeps(this.filepath, files.map(([filepath,]) => filepath));
+      return files;
+    }
+
+    const file = this.runtime.fs.files.get(absPath);
+
+    if (file) {
+      return file;
+    }
+
+    throw new Error(`Can't find file at path: ${toPath}`);
   }
 
 }

@@ -6,28 +6,35 @@ import { movieFromFile, movieSorter } from "./movies";
 import { musicFromFile } from './musics';
 import { snippetFromFile } from './snippets';
 
-export const allMovies = ((require('/data/movies/') as FsDir).files
+import allArticleFiles from '../data/articles/';
+import allBookFiles from '../data/books/';
+import allCategoryFiles from '../data/categories/';
+import allMovieFiles from '../data/movies/';
+import allMusicFiles from '../data/music/';
+import allSnippetFiles from '../data/snippets/';
+
+export const allMovies = (allMovieFiles
   .map(movieFromFile)
   .sort(movieSorter));
 
-export const allArticles = ((require('/data/articles/') as FsDir).files
+export const allArticles = (allArticleFiles
   .map(articleFromFile)
   .sort(sortBy(article => article.date))
   .filter(s => !s.draft)
   .reverse());
 
-export const allBooks = ((require('/data/books/') as FsDir).files
+export const allBooks = (allBookFiles
   .map(bookFromFile)
   .sort(sortBy(b => `${b.dateAdded} ${b.slug}`)));
 
-export const allCategories = ((require('/data/categories/') as FsDir).files
+export const allCategories = (allCategoryFiles
   .map(categoryFromFile)
   .sort(categorySorter));
 
-export const allMusics = ((require('/data/music/') as FsDir).files
+export const allMusics = (allMusicFiles
   .map(musicFromFile));
 
-export const allSnippets = ((require('/data/snippets/') as FsDir).files
+export const allSnippets = (allSnippetFiles
   .map(snippetFromFile)
   .filter((s => s.published))
   .sort(sortBy(s => s.slug))

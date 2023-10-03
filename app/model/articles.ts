@@ -17,7 +17,7 @@ export interface Article {
   previewMarkdown: string | null;
 }
 
-export function articleFromFile(file: FsFile): Article {
+export function articleFromFile(file: [string, Buffer]): Article {
   const data = loadContentFile<Article>(file);
   data.route = `/articles/${data.slug}.html`;
   data.mins = calculateReadingMins(data.content);

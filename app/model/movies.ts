@@ -44,7 +44,7 @@ const movieOrder = [
 
 export const movieSorter = sortBy((m: Movie) => movieOrder.indexOf(m.slug));
 
-export function movieFromFile(file: FsFile): Movie {
+export function movieFromFile(file: [string, Buffer]): Movie {
   const data = loadContentFile<Movie>(file);
   data.route = `/movies/${data.slug}.html`;
   data.imageBig = `/img/movies/${data.slug}-big.jpg`;

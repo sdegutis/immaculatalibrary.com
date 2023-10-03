@@ -9,7 +9,7 @@ export interface Music {
   category: string;
 }
 
-export function musicFromFile(file: FsFile): Music {
+export function musicFromFile(file: [string, Buffer]): Music {
   const data = loadContentFile<Music>(file);
   return data;
 }

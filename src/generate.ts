@@ -1,19 +1,26 @@
 import fs from 'fs';
-import path from 'path';
-import { FsDir, FsFile } from './filesys';
+import path from 'path/posix';
 import { Site } from './site';
 
 const site = new Site('app');
 const out = site.build()!;
 
-createTree(out);
+const madeDirs = new Set<string>();
+const mkdirIfNeeded = (dir: string) => {
+  if (madeDirs.has(dir)) return;
+  madeDirs.add(dir);
+  console.log('mkdir', dir);
+  fs.mkdirSync(dir);
+};
 
-function realPath(node: FsFile | FsDir) {
-  return path.join('docs', node.path);
-}
+for (const [filepath, content] of out) {
+  const newFilepath = path.join('docs', filepath);
+  const parts = newFilepath.split(path.sep);
+  for (let i = 1; i < parts.length; i++) {
+    const dir = path.join(...parts.slice(0, i));
+    mkdirIfNeeded(dir);
+  }
 
-function createTree(dir: FsDir) {
-  fs.mkdirSync(realPath(dir));
-  for (const file of dir.files) { fs.writeFileSync(realPath(file), file.content); }
-  for (const subdir of dir.dirs) { createTree(subdir); }
+  console.log('writefile', newFilepath)
+  fs.writeFileSync(newFilepath, content);
 }

@@ -1,4 +1,4 @@
-import path from 'path';
+import path from 'path/posix';
 import * as Common from "../../../components/common";
 import { SnippetsGroups } from "../../../components/snippet-groups";
 import { allTags } from "../../../model/tag";

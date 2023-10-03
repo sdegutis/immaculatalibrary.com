@@ -1,23 +1,24 @@
-import * as http from "http";
-import { FsDir, FsFile } from "./filesys";
+import http from "http";
+import path from "path/posix";
 
 export class Server {
 
-  outDir: FsDir | undefined;
+  files: Map<string, Buffer | string> | undefined;
 
   startServer(port: number) {
     const server = http.createServer((req, res) => {
-      let node = this.outDir?.find(req.url!);
-      if (node instanceof FsDir) {
-        node = node.filesByName['index.html'];
-      }
+      const url = req.url!;
+      const content = (
+        this.files?.get(url) ??
+        this.files?.get(path.join(url, 'index.html'))
+      );
 
-      if (node instanceof FsFile) {
+      if (content) {
         res.statusCode = 200;
-        if (node.name.endsWith('.js')) {
+        if (url.endsWith('.js')) {
           res.setHeader('content-type', 'text/javascript');
         }
-        res.end(node.content);
+        res.end(content);
       }
       else {
         res.statusCode = 404;

@@ -29,7 +29,7 @@ export interface Snippet {
   tagsForSnippet: Set<Tag>;
 }
 
-export function snippetFromFile(file: FsFile): Snippet {
+export function snippetFromFile(file: [string, Buffer]): Snippet {
   const data = loadContentFile<Snippet>(file);
   data.tags ??= [];
 

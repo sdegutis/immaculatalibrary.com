@@ -1,14 +1,12 @@
 import Yaml from "js-yaml";
 import MarkdownIt from 'markdown-it';
+import path from "path/posix";
 
-export function loadContentFile<T>(file: FsFile) {
-  const slug = file.name.slice(0, -3);
+export function loadContentFile<T>([filepath, rawContent]: [string, Buffer]) {
+  const slug = path.basename(filepath).slice(0, -3);
   const date = slug.match(/^(\d{4}-\d{2}-\d{2})-/)?.[1];
 
-  // Hacky
-  require(file.path);
-
-  const fileContents = file.content.toString('utf8').replace(/\r\n/g, '\n');
+  const fileContents = rawContent.toString('utf8').replace(/\r\n/g, '\n');
   const fileContentsMatch = fileContents.match(/^---\n(.+?)\n---\n\n(.+?)$/s)!;
   const frontmatter = fileContentsMatch[1]!;
   const content = fileContentsMatch[2]!;
