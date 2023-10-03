@@ -1,3 +1,5 @@
+const UNARY = new Set(["img", "br", "hr", "input", "meta", "link"]);
+
 export class JsxElement {
 
   constructor(
@@ -71,9 +73,14 @@ function addElement(element: JsxElement, parts: string[]) {
       parts.push(' ', k, '="', v, '"');
   }
 
-  parts.push('>');
-  pushChildren(element.children, parts);
-  parts.push('</', element.tag, '>');
+  if (UNARY.has(element.tag)) {
+    parts.push('/>');
+  }
+  else {
+    parts.push('>');
+    pushChildren(element.children, parts);
+    parts.push('</', element.tag, '>');
+  }
 }
 
 function pushChildren(children: any[], parts: string[]) {
