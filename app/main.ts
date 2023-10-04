@@ -2,7 +2,7 @@ import path from 'path/posix';
 import * as routes from './routes';
 import files from './site/';
 
-routes.reset();
+routes.out.clear();
 
 console.time('Building views');
 
@@ -30,6 +30,10 @@ for (const [filepath, contents] of files) {
   else {
     routes.out.set(outpath, contents);
   }
+}
+
+for (const [filepath, contents] of routes.resources) {
+  routes.out.set(filepath, contents);
 }
 
 console.timeEnd('Building views');

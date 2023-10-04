@@ -1,17 +1,8 @@
 export const out = new Map<string, Buffer | string>();
 
-const componentRoutes = new Map<Buffer, string>();
+export const resources = new Map<string, Buffer>();
 
 export function staticRouteFor([filepath, buffer]: [string, Buffer]) {
-  let path = componentRoutes.get(buffer);
-  if (!path) {
-    componentRoutes.set(buffer, path = filepath);
-    out.set(path, buffer);
-  }
-  return path;
-}
-
-export function reset() {
-  out.clear();
-  componentRoutes.clear();
+  if (!resources.has(filepath)) resources.set(filepath, buffer);
+  return filepath;
 }
