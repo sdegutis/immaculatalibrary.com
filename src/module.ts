@@ -77,23 +77,21 @@ export class Module {
     );
 
     if (module) {
-      this.runtime.addDeps(this.filepath, [module.filepath]);
+      this.runtime.addDeps(this.filepath, module.filepath);
       return module.require();
     }
 
     if (toPath.endsWith('/')) {
-      const dirPath = absPath + '/';
-      const files = [...this.runtime.fs.files.entries()].filter(([filepath, content]) =>
-        filepath.startsWith(dirPath)
+      this.runtime.addDeps(this.filepath, absPath + '/');
+      return ([...this.runtime.fs.files.entries()]
+        .filter(([filepath, content]) => filepath.startsWith((absPath + '/')))
       );
-      this.runtime.addDeps(this.filepath, files.map(([filepath,]) => filepath));
-      return files;
     }
 
     const file = this.runtime.fs.files.get(absPath);
 
     if (file) {
-      this.runtime.addDeps(this.filepath, [absPath]);
+      this.runtime.addDeps(this.filepath, absPath);
       return [absPath, file];
     }
 

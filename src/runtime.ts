@@ -32,25 +32,24 @@ export class Runtime {
     }
   }
 
-  addDeps(path: string, requiringPaths: string[]) {
-    for (const requiringPath of requiringPaths) {
-      let list = this.#deps.get(requiringPath);
-      if (!list) this.#deps.set(requiringPath, list = new Set());
-      list.add(path);
-    }
+  addDeps(requiredBy: string, requiring: string) {
+    let list = this.#deps.get(requiring);
+    if (!list) this.#deps.set(requiring, list = new Set());
+    list.add(requiredBy);
   }
 
   #resetDepTree(path: string, seen: Set<string>) {
     if (seen.has(path)) return;
     seen.add(path);
 
-    const deps = this.#deps.get(path);
-    if (deps) {
-      this.#deps.delete(path);
-      for (const dep of deps) {
-        const module = this.modules.get(dep);
-        module?.resetExports();
-        this.#resetDepTree(dep, seen);
+    for (const [requiring, requiredBy] of this.#deps) {
+      if (path.startsWith(requiring)) {
+        this.#deps.delete(requiring);
+        for (const dep of requiredBy) {
+          const module = this.modules.get(dep);
+          module?.resetExports();
+          this.#resetDepTree(dep, seen);
+        }
       }
     }
   }
