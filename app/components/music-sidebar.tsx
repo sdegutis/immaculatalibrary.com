@@ -8,7 +8,7 @@ export const MusicSidebar: JSX.Component<{}> = (attrs, children) => <>
     <ul>
       {allMusics.filter(s => s.data.category === 'Christmas').map(song => <>
         <li>
-          <a href={`/music/${song.data.slug}.html`}>{song.data.title}</a>
+          <a href={`/music/${song.slug}.html`}>{song.data.title}</a>
         </li>
       </>)}
     </ul>

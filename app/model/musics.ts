@@ -1,17 +1,19 @@
-import { DataFileWithoutDate, loadContentFile } from '../core/helpers';
+import { DataFile } from '../core/data-files';
 import allMusicFiles from "../data/music/";
 
-interface MusicFile extends DataFileWithoutDate {
+interface MusicFile {
   title: string;
   youtube: string;
   category: string;
 }
 
-export class Music {
+export class Music extends DataFile<MusicFile> {
 
-  constructor(public data: MusicFile) { }
+  constructor(file: [string, Buffer]) {
+    super(file);
+  }
 
 }
 
 export const allMusics = (allMusicFiles
-  .map(file => new Music(loadContentFile(file))));
+  .map(file => new Music(file)));

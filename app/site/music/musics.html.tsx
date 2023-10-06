@@ -5,7 +5,7 @@ import { allMusics } from '../../model/musics';
 
 export default allMusics.map(song => {
   const embedUrl = song.data.youtube.replace('watch?v=', 'embed/').replace(/&t=(\d+)s/, '?start=$1');
-  return [`${song.data.slug}.html`, <>
+  return [`${song.slug}.html`, <>
     <Common.TypicalPage image='/img/page/music.jpg'>
 
       <link rel="stylesheet" href='/css/view-song.css' />
@@ -17,7 +17,7 @@ export default allMusics.map(song => {
           <div class="embed-container">
             <iframe allowfullscreen="allowfullscreen" frameborder="0" src={embedUrl}></iframe>
           </div>
-          {markdown.render(song.data.content)}
+          {markdown.render(song.content)}
         </Common.Typography>
 
         <MusicSidebar />
