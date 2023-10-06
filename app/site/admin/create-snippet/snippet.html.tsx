@@ -29,7 +29,7 @@ handlers.set('/create-snippet', body => {
     bookSlug: bookSlug,
   })}---\n\n${markdown.trim()}` + '\n';
 
-  fs.writeFileSync(path.join(__dirname, '../../../data/snippets/', filename), content);
+  fs.writeFileSync(path.resolve(path.join('app', 'data/snippets', filename)), content);
 
   return `/book-snippets/${date}-${slug}.html`;
 });
