@@ -1,4 +1,5 @@
 import fs from 'fs';
+import Yaml from 'js-yaml';
 import path from "path";
 import { darkModeScript } from "../../../components/darkmode/dark-mode";
 import { EmptyPage } from "../../../components/page";
@@ -20,17 +21,13 @@ handlers.set('/create-snippet', body => {
   const date = new Date().toLocaleDateString('sv');
   const filename = `${date}-${slug}.md`;
 
-  const content = `
----
-published: true
-title: ${JSON.stringify(title)}
-archiveSlug: ${JSON.stringify(archiveSlug)}
-archivePage: ${JSON.stringify(archivePage)}
-bookSlug: ${JSON.stringify(bookSlug)}
----
-
-${markdown}
-  `.trim() + '\n';
+  const content = `---\n${Yaml.dump({
+    published: true,
+    title: title,
+    archiveSlug: archiveSlug,
+    archivePage: archivePage,
+    bookSlug: bookSlug,
+  })}---\n\n${markdown.trim()}` + '\n';
 
   fs.writeFileSync(path.join(__dirname, '../../../data/snippets/', filename), content);
 
@@ -59,7 +56,7 @@ export default allSnippets.map(snippet => [`${snippet.slug}.html`, <>
 
           <span id='readingmins' />
           <span style='display:grid; gap:0.25em; grid-template-columns: 1fr 1fr'>
-            <button id='create-button'>Create</button>
+            <button>Create</button>
             <button id='fixup-button'>Fixup</button>
           </span>
         </form>
