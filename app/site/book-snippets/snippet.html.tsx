@@ -47,7 +47,7 @@ export default allSnippets.map(snippet => {
         </div>
 
         {isDev && <>
-          <details>
+          <details open>
             <summary>Admin</summary>
             <ul>
               <li><a href={`/admin/create-snippet/${snippet.slug}.html`}>Make next snippet</a></li>
