@@ -24,10 +24,6 @@ export class Article {
 
 }
 
-function articleFromFile(file: [string, Buffer]): Article {
-  return new Article(loadContentFile<ArticleFile>(file));
-}
-
 function derivePreview(article: ArticleFile) {
   const paragraphs = article.content.trim().split(/(\r?\n>+ *\r?\n)/);
 
@@ -44,7 +40,7 @@ function derivePreview(article: ArticleFile) {
 }
 
 export const allArticles = (allArticleFiles
-  .map(articleFromFile)
+  .map(file => new Article(loadContentFile(file)))
   .sort(sortBy(article => article.data.date))
   .filter(s => !s.data.draft)
   .reverse());

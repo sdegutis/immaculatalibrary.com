@@ -41,7 +41,7 @@ export class Book {
 }
 
 export const allBooks = (allBookFiles
-  .map(file => new Book(loadContentFile<BookFile>(file)))
+  .map(file => new Book(loadContentFile(file)))
   .sort(sortBy(b => `${b.data.dateAdded} ${b.data.slug}`)));
 
 export const booksBySlug = Object.fromEntries(allBooks.map(book => [book.data.slug, book]));
