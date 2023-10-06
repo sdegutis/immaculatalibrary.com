@@ -17,7 +17,7 @@ export class Site {
   }
 
   handler() {
-    return this.requireSafely<(path: string, body: string) => string>('/post.ts');
+    return this.requireSafely<Map<string, (body: string) => string>>('/post.ts');
   }
 
   requireSafely<T>(path: string) {

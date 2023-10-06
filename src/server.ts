@@ -4,21 +4,21 @@ import path from "path/posix";
 export class Server {
 
   files: Map<string, Buffer | string> | undefined;
-  post?: ((path: string, body: string) => string) | undefined;
+  post?: Map<string, (body: string) => string> | undefined;
 
   startServer(port: number) {
     const server = http.createServer((req, res) => {
       const url = req.url!;
 
       if (req.method === 'POST') {
-        const fn = this.post;
-        if (fn) {
+        const handler = this.post?.get(url);
+        if (handler) {
           let data = '';
           req.on('data', (chunk: Buffer | string) => {
             data += chunk.toString('utf8');
           });
           req.on('end', () => {
-            const redirect = fn(url, data) || '/';
+            const redirect = handler(data) || '/';
             res.statusCode = 302;
             res.setHeader('Location', redirect);
             res.end();

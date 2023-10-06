@@ -1,8 +1,41 @@
+import fs from 'fs';
+import path from "path";
 import { darkModeScript } from "../../../components/darkmode/dark-mode";
 import { EmptyPage } from "../../../components/page";
 import { Typography } from "../../../components/typography";
 import { calculateReadingMins } from "../../../core/helpers";
 import { allSnippets } from "../../../model/models";
+import { handlers } from "../../../post";
+
+handlers.set('/create-snippet', body => {
+  const params = new URLSearchParams(body);
+
+  const archivePage = params.get('archivePage')!;
+  const archiveSlug = params.get('archiveSlug')!;
+  const bookSlug = params.get('bookSlug')!;
+  const markdown = params.get('markdownContent')!;
+  const slug = params.get('slug')!;
+  const title = params.get('title')!;
+
+  const date = new Date().toLocaleDateString('sv');
+  const filename = `${date}-${slug}.md`;
+
+  const content = `
+---
+published: true
+title: ${JSON.stringify(title)}
+archiveSlug: ${JSON.stringify(archiveSlug)}
+archivePage: ${JSON.stringify(archivePage)}
+bookSlug: ${JSON.stringify(bookSlug)}
+---
+
+${markdown}
+  `.trim() + '\n';
+
+  fs.writeFileSync(path.join(__dirname, '../../../data/snippets/', filename), content);
+
+  return `/book-snippets/${date}-${slug}.html`;
+});
 
 export default allSnippets.map(snippet => [`${snippet.slug}.html`, <>
   <EmptyPage>
@@ -16,7 +49,7 @@ export default allSnippets.map(snippet => [`${snippet.slug}.html`, <>
 
     <main>
       <div id='left-panel'>
-        <form>
+        <form method='POST' action='/create-snippet'>
           <span>Page</span>    <input autocomplete='off' name='archivePage' value={snippet.archivePage} autofocus />
           <span>Link</span>    <input autocomplete='off' name='archiveSlug' value={snippet.archiveSlug} />
           <span>Book</span>    <input autocomplete='off' name='bookSlug' value={snippet.bookSlug} />

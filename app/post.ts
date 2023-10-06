@@ -1,4 +1,2 @@
-export default (path: string, body: string) => {
-  console.log({ path, body })
-  return '/';
-};
+export const handlers = new Map<string, (body: string) => string>();
+export default handlers;

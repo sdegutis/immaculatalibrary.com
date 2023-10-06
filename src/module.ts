@@ -36,6 +36,8 @@ export class Module {
     const args = {
       require: (path: string) => this.#requireFromWithinModule(path),
       exports: this.#exports,
+      __filename: path.resolve(filename),
+      __dirname: path.dirname(path.resolve(filename)),
       __createJsxElement: createJsxElement,
     };
 
