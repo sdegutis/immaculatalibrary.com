@@ -1,31 +1,34 @@
-import { calculateReadingMins, loadContentFile } from '../core/helpers';
+import { DataFileWithDate, calculateReadingMins, loadContentFile, sortBy } from '../core/helpers';
+import allArticleFiles from '../data/articles/';
 
 const PREVIEW_LENGTH = 2000;
 
-export interface Article {
-  date: string;
-  slug: string;
-  content: string;
-
+interface ArticleFile extends DataFileWithDate {
   title: string;
   draft?: boolean;
   imageFilename?: string;
   imageCaption?: string;
-  mins: number;
+}
 
+export class Article {
+
+  mins: number;
   route: string;
   previewMarkdown: string | null;
+
+  constructor(public data: ArticleFile) {
+    this.route = `/articles/${data.slug}.html`;
+    this.mins = calculateReadingMins(data.content);
+    this.previewMarkdown = derivePreview(data);
+  }
+
 }
 
 export function articleFromFile(file: [string, Buffer]): Article {
-  const data = loadContentFile<Article>(file);
-  data.route = `/articles/${data.slug}.html`;
-  data.mins = calculateReadingMins(data.content);
-  data.previewMarkdown = derivePreview(data);
-  return data;
+  return new Article(loadContentFile<ArticleFile>(file));
 }
 
-function derivePreview(article: Article) {
+function derivePreview(article: ArticleFile) {
   const paragraphs = article.content.trim().split(/(\r?\n>+ *\r?\n)/);
 
   let running = 0;
@@ -39,3 +42,9 @@ function derivePreview(article: Article) {
   }
   return null;
 }
+
+export const allArticles = (allArticleFiles
+  .map(articleFromFile)
+  .sort(sortBy(article => article.data.date))
+  .filter(s => !s.data.draft)
+  .reverse());

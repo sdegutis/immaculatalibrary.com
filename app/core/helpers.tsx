@@ -4,7 +4,16 @@ import path from "path/posix";
 
 export const isDev = !!process.env['DEV'];
 
-export function loadContentFile<T>([filepath, rawContent]: [string, Buffer]) {
+export interface DataFileWithoutDate {
+  slug: string;
+  content: string;
+}
+
+export interface DataFileWithDate extends DataFileWithoutDate {
+  date: string;
+}
+
+export function loadContentFile<T extends U, U = DataFileWithDate | DataFileWithoutDate>([filepath, rawContent]: [string, Buffer]): T {
   const slug = path.basename(filepath).slice(0, -3);
   const date = slug.match(/^(\d{4}-\d{2}-\d{2})-/)?.[1];
 

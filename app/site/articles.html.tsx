@@ -1,6 +1,6 @@
 import * as Common from "../components/common";
 import { excerpt, markdown } from "../core/helpers";
-import { allArticles } from "../model/models";
+import { allArticles } from "../model/articles";
 
 export default <>
   <Common.TypicalPage image='/img/page/articles.jpg'>
@@ -15,13 +15,13 @@ export default <>
           <li class="post-row">
             <div>
               <a class="title" href={article.route}>
-                {article.title}
+                {article.data.title}
               </a>
               <span class="date">
-                <span class='format-date'>{article.date}</span> &bull; {article.mins} min
+                <span class='format-date'>{article.data.date}</span> &bull; {article.mins} min
               </span>
               <div class="excerpt">
-                {markdown.render(excerpt(article.content))}
+                {markdown.render(excerpt(article.data.content))}
               </div>
             </div>
           </li>
