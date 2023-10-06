@@ -1,17 +1,24 @@
-import { loadContentFile, sortBy } from '../core/helpers';
+import { DataFileWithoutDate, loadContentFile, sortBy } from '../core/helpers';
 
-export interface Movie {
-  slug: string;
-  content: string;
-
+interface MovieFile extends DataFileWithoutDate {
   title: string;
   shortTitle: string;
   subtitle: string | undefined;
   year: string;
+}
+
+export class Movie {
 
   route: string;
   imageBig: string;
   imageSmall: string;
+
+  constructor(public data: MovieFile) {
+    this.route = `/movies/${data.slug}.html`;
+    this.imageBig = `/img/movies/${data.slug}-big.jpg`;
+    this.imageSmall = `/img/movies/${data.slug}-small.jpg`;
+  }
+
 }
 
 const movieOrder = [
@@ -42,12 +49,8 @@ const movieOrder = [
   'saint-john-baptist-de-la-salle',
 ];
 
-export const movieSorter = sortBy((m: Movie) => movieOrder.indexOf(m.slug));
+export const movieSorter = sortBy((m: Movie) => movieOrder.indexOf(m.data.slug));
 
 export function movieFromFile(file: [string, Buffer]): Movie {
-  const data = loadContentFile<Movie>(file);
-  data.route = `/movies/${data.slug}.html`;
-  data.imageBig = `/img/movies/${data.slug}-big.jpg`;
-  data.imageSmall = `/img/movies/${data.slug}-small.jpg`;
-  return data;
+  return new Movie(loadContentFile<MovieFile>(file));
 }
