@@ -3,6 +3,7 @@ title: The Jeweller’s Shop
 shortTitle: The Jeweller’s Shop
 subtitle: A Modern Mystery by Pope John Paul II
 year: '1988'
+sortOrder: 14
 ---
 
 ### Links

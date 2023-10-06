@@ -2,6 +2,7 @@
 title: A Man For All Seasons
 shortTitle: A Man For All Seasons (1966)
 year: '1966'
+sortOrder: 2
 ---
 
 ### Links

@@ -3,6 +3,7 @@ title: Paul VI
 shortTitle: Paul VI
 subtitle: Pope in the Tempest
 year: '2008'
+sortOrder: 23
 ---
 
 ### Links

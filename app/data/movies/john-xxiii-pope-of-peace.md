@@ -3,6 +3,7 @@ title: John XXIII
 shortTitle: John XXIII
 subtitle: Pope of Peace
 year: '2002'
+sortOrder: 22
 ---
 
 ### Links

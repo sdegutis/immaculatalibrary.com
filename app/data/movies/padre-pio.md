@@ -3,6 +3,7 @@ title: Padre Pio
 shortTitle: Padre Pio
 subtitle: Between Heaven and Earth
 year: '2000'
+sortOrder: 21
 ---
 
 ### Links

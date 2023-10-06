@@ -2,6 +2,7 @@
 title: Pope John Paul II
 shortTitle: Pope John Paul II
 year: '2005'
+sortOrder: 24
 ---
 
 ### Links

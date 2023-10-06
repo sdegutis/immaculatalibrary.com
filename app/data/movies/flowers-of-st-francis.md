@@ -2,6 +2,7 @@
 title: Flowers of St. Francis
 shortTitle: Flowers of St. Francis
 year: '1950'
+sortOrder: 13
 ---
 
 ### Links

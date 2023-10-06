@@ -3,6 +3,7 @@ title: Don Bosco
 shortTitle: Don Bosco
 subtitle: The True Story of the Apostle of Youth
 year: '1988'
+sortOrder: 12
 ---
 
 ### Links

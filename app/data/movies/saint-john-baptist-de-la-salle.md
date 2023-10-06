@@ -3,6 +3,7 @@ title: Saint John Baptist de la Salle
 shortTitle: Saint John Baptist de la Salle
 subtitle: Patron Saint of Teachers
 year: '1968'
+sortOrder: 25
 ---
 
 ### Links
