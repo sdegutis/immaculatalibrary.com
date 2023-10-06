@@ -13,18 +13,22 @@ export class Site {
   }
 
   build() {
+    return this.requireSafely<Map<string, Buffer | string>>('/main.ts');
+  }
+
+  handler() {
+    return this.requireSafely<(path: string, body: string) => string>('/post.ts');
+  }
+
+  requireSafely<T>(path: string) {
     try {
-      console.log('Building site...');
-      const mainModule = this.#runtime.modules.get('/main.ts')!;
-      const exports = mainModule.require() as { default: Map<string, Buffer | string> };
+      const mainModule = this.#runtime.modules.get(path)!;
+      const exports = mainModule.require() as { default: T };
       return exports.default;
     }
     catch (e) {
       console.error(e);
       return;
-    }
-    finally {
-      console.log('Building site: done.');
     }
   }
 
