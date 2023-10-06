@@ -1,7 +1,7 @@
 import path from 'path/posix';
+import { isDev } from './core/helpers';
 import * as routes from './routes';
 import files from './site/';
-import { isDev } from './core/helpers';
 
 routes.out.clear();
 
@@ -15,7 +15,7 @@ files.push(sitemap);
 for (const [filepath, contents] of files) {
   const outpath = filepath.slice('/site'.length);
 
-  if (!isDev && outpath.startsWith('/admin/')) contents;
+  if (!isDev && outpath.startsWith('/admin/')) continue;
 
   if (filepath.endsWith('.tsx')) {
     const dir = path.dirname(outpath);
