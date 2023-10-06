@@ -1,4 +1,4 @@
-import { allMovies } from "../model/models";
+import { allMovies } from '../model/movies';
 
 export const MoviesSidebar: JSX.Component<{}> = (attrs, children) => <>
   <div>

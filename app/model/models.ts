@@ -1,19 +1,13 @@
 import { sortBy } from '../core/helpers';
 import { bookFromFile } from "./books";
 import { categoryFromFile, categorySorter } from "./categories";
-import { movieFromFile, movieSorter } from "./movies";
 import { musicFromFile } from './musics';
 import { snippetFromFile } from './snippets';
 
 import allBookFiles from '../data/books/';
 import allCategoryFiles from '../data/categories/';
-import allMovieFiles from '../data/movies/';
 import allMusicFiles from '../data/music/';
 import allSnippetFiles from '../data/snippets/';
-
-export const allMovies = (allMovieFiles
-  .map(movieFromFile)
-  .sort(movieSorter));
 
 export const allBooks = (allBookFiles
   .map(bookFromFile)

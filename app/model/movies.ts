@@ -1,4 +1,5 @@
 import { DataFileWithoutDate, loadContentFile, sortBy } from '../core/helpers';
+import allMovieFiles from "../data/movies/";
 
 interface MovieFile extends DataFileWithoutDate {
   title: string;
@@ -49,8 +50,11 @@ const movieOrder = [
   'saint-john-baptist-de-la-salle',
 ];
 
-export const movieSorter = sortBy((m: Movie) => movieOrder.indexOf(m.data.slug));
 
-export function movieFromFile(file: [string, Buffer]): Movie {
+function movieFromFile(file: [string, Buffer]): Movie {
   return new Movie(loadContentFile<MovieFile>(file));
 }
+
+export const allMovies = (allMovieFiles
+  .map(movieFromFile)
+  .sort(sortBy((m: Movie) => movieOrder.indexOf(m.data.slug))));

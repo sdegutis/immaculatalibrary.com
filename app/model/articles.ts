@@ -24,7 +24,7 @@ export class Article {
 
 }
 
-export function articleFromFile(file: [string, Buffer]): Article {
+function articleFromFile(file: [string, Buffer]): Article {
   return new Article(loadContentFile<ArticleFile>(file));
 }
 
