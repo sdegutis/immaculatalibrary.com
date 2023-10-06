@@ -18,10 +18,10 @@ export default <>
                 {article.data.title}
               </a>
               <span class="date">
-                <span class='format-date'>{article.data.date}</span> &bull; {article.mins} min
+                <span class='format-date'>{article.date}</span> &bull; {article.mins} min
               </span>
               <div class="excerpt">
-                {markdown.render(excerpt(article.data.content))}
+                {markdown.render(excerpt(article.content))}
               </div>
             </div>
           </li>

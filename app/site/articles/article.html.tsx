@@ -2,7 +2,7 @@ import * as Common from "../../components/common";
 import { markdown } from "../../core/helpers";
 import { allArticles } from "../../model/articles";
 
-export default allArticles.map(article => [`${article.data.slug}.html`, <>
+export default allArticles.map(article => [`${article.slug}.html`, <>
   <Common.TypicalPage image={article.data.imageFilename ?? '/img/page/articles.jpg'}>
 
     <link rel="stylesheet" href="/css/article.data.css" />
@@ -16,10 +16,10 @@ export default allArticles.map(article => [`${article.data.slug}.html`, <>
         {article.data.imageCaption && <small>(Image: {article.data.imageCaption})</small>}
 
         <p class="date">
-          <span class='format-date'>{article.data.date}</span> &bull; {article.mins} min
+          <span class='format-date'>{article.date}</span> &bull; {article.mins} min
         </p>
 
-        {markdown.render(article.data.content)}
+        {markdown.render(article.content)}
 
       </Common.Typography>
 
