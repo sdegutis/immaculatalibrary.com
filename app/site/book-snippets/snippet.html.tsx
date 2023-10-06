@@ -7,11 +7,11 @@ import { Snippet } from "../../model/snippets";
 export default allSnippets.map(snippet => {
   const singleFile = snippet.book.data.files.length === 1;
   const specificBookName = (!singleFile && snippet.book.data.files
-    .find(file => file.archiveId === snippet.archiveSlug)
+    .find(file => file.archiveId === snippet.data.archiveSlug)
     ?.pdfFile
     .replace('.pdf', ''));
 
-  return [`${snippet.slug}.html`, <>
+  return [`${snippet.data.slug}.html`, <>
     <Common.TypicalPage image={snippet.book.category.imageBig}>
 
       <link rel="stylesheet" href='/css/snippet.css' />
@@ -21,7 +21,7 @@ export default allSnippets.map(snippet => {
 
           <h1>{snippet.renderedTitle}</h1>
 
-          <p><span class='format-date'>{snippet.date}</span> &bull; {snippet.mins} min</p>
+          <p><span class='format-date'>{snippet.data.date}</span> &bull; {snippet.mins} min</p>
 
           <p>
             {[...snippet.tagsForSnippet].map(tag => <>
@@ -32,7 +32,7 @@ export default allSnippets.map(snippet => {
           <p>
             From <a href={snippet.book.route}>{snippet.book.data.title}</a>, { }
             {specificBookName && <>in file "{specificBookName}", </>}
-            page <a rel="noopener" href={snippet.archiveLink}>{snippet.archivePage}</a>
+            page <a rel="noopener" href={snippet.archiveLink}>{snippet.data.archivePage}</a>
             <br />
             <small>By {snippet.book.data.author}</small>
           </p>
@@ -50,7 +50,7 @@ export default allSnippets.map(snippet => {
           <details open>
             <summary>Admin</summary>
             <ul>
-              <li><a href={`/admin/create-snippet/${snippet.slug}.html`}>Make next snippet</a></li>
+              <li><a href={`/admin/create-snippet/${snippet.data.slug}.html`}>Make next snippet</a></li>
             </ul>
           </details>
         </>}
@@ -83,7 +83,7 @@ function RelativeSnippetLink({ snippet }: { snippet: Snippet | undefined }, chil
     <span>
       {snippet && <>
         <a href={snippet.route}>{children}</a><br />
-        p.{snippet.archivePage}
+        p.{snippet.data.archivePage}
       </>}
     </span>
   </>;

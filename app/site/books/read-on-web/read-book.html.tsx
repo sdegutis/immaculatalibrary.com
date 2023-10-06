@@ -24,7 +24,7 @@ export default allBooks.map(book => {
           <hr />
 
           {orderedSnippets.map((bookSnippet, i) => <>
-            <div class='chapter' id={`snippet-${bookSnippet.slug}`}>
+            <div class='chapter' id={`snippet-${bookSnippet.data.slug}`}>
               <h3 class='chapter-header'>
                 Chapter {i + 1} &mdash; { }
                 <a href={bookSnippet.route}>
@@ -47,7 +47,7 @@ export default allBooks.map(book => {
               <li>
                 <p>
                   Ch.{i + 1} { }
-                  <a href={`#snippet-${bookSnippet.slug}`}>
+                  <a href={`#snippet-${bookSnippet.data.slug}`}>
                     {bookSnippet.renderedTitle}
                   </a>
                 </p>

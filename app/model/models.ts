@@ -28,8 +28,8 @@ export const allMusics = (allMusicFiles
 
 export const allSnippets = (allSnippetFiles
   .map(snippetFromFile)
-  .filter((s => s.published))
-  .sort(sortBy(s => s.slug))
+  .filter((s => s.data.published))
+  .sort(sortBy(s => s.data.slug))
   .reverse());
 
 export const booksBySlug = Object.fromEntries(allBooks.map(book => [book.data.slug, book]));
@@ -44,16 +44,16 @@ for (const category of allCategories) {
 }
 
 for (const snippet of allSnippets) {
-  const book = booksBySlug[snippet.bookSlug]!;
+  const book = booksBySlug[snippet.data.bookSlug]!;
   snippet.book = book;
   book.snippets.push(snippet);
 }
 
 for (const book of allBooks) {
   book.snippets.sort(sortBy(s =>
-    s.archivePage.startsWith('n')
-      ? +s.archivePage.slice(1) - 1000
-      : +s.archivePage));
+    s.data.archivePage.startsWith('n')
+      ? +s.data.archivePage.slice(1) - 1000
+      : +s.data.archivePage));
 
   for (let i = 1; i < book.snippets.length; i++) {
     const s1 = book.snippets[i - 1];

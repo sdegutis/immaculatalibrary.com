@@ -1,20 +1,19 @@
-import { calculateReadingMins, loadContentFile, markdown } from '../core/helpers';
+import { DataFileWithDate, calculateReadingMins, loadContentFile, markdown } from '../core/helpers';
 import { Book } from './books';
 import { Tag } from './tag';
 
 const PREVIEW_LENGTH = 2000;
 
-export interface Snippet {
-  date: string;
-  slug: string;
-  content: string;
-
+interface SnippetFile extends DataFileWithDate {
   published: boolean;
   title: string;
   archiveSlug: string;
   archivePage: string;
   bookSlug: string;
-  tags: string[];
+  tags?: string[];
+}
+
+export class Snippet {
 
   route: string;
   archiveLink: string;
@@ -23,30 +22,33 @@ export interface Snippet {
   renderedTitle: string;
   mins: number;
 
-  book: Book;
+  book!: Book;
   prevSnippet?: Snippet;
   nextSnippet?: Snippet;
   tagsForSnippet: Set<Tag>;
+
+  constructor(public data: SnippetFile) {
+    data.tags ??= [];
+
+    this.route = `/book-snippets/${data.slug}.html`;
+    this.archiveLink = `https://archive.org/details/${data.archiveSlug}/page/${data.archivePage}?view=theater`;
+    this.previewMarkdown = derivePreview(data);
+    this.renderedBody = markdown.render(data.content);
+    this.renderedTitle = markdown.renderInline(data.title);
+    this.mins = calculateReadingMins(data.content);
+
+    this.tagsForSnippet = new Set([...data.tags ?? []].map(Tag.getOrCreate));
+  }
+
 }
 
 export function snippetFromFile(file: [string, Buffer]): Snippet {
-  const data = loadContentFile<Snippet>(file);
-  data.tags ??= [];
-
-  data.route = `/book-snippets/${data.slug}.html`;
-  data.archiveLink = `https://archive.org/details/${data.archiveSlug}/page/${data.archivePage}?view=theater`;
-  data.previewMarkdown = derivePreview(data);
-  data.renderedBody = markdown.render(data.content);
-  data.renderedTitle = markdown.renderInline(data.title);
-  data.mins = calculateReadingMins(data.content);
-
-  data.tagsForSnippet = new Set([...data.tags ?? []].map(Tag.getOrCreate));
-
-  return data;
+  const data = loadContentFile<SnippetFile>(file);
+  return new Snippet(data);
 }
 
-function derivePreview(snippet: Snippet) {
-  const paragraphs = snippet.content.trim().split(/(\r?\n>+ *\r?\n)/);
+function derivePreview(data: SnippetFile) {
+  const paragraphs = data.content.trim().split(/(\r?\n>+ *\r?\n)/);
 
   let running = 0;
   for (let i = 0; i < paragraphs.length; i++) {
@@ -54,8 +56,8 @@ function derivePreview(snippet: Snippet) {
     if (running > PREVIEW_LENGTH) break;
   }
 
-  if (running < snippet.content.trim().length - 1) {
-    return snippet.content.substring(0, running);
+  if (running < data.content.trim().length - 1) {
+    return data.content.substring(0, running);
   }
   return null;
 }

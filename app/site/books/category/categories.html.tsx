@@ -53,7 +53,7 @@ export default allCategories.map(cat => [`${cat.data.slug}.html`, <>
                     {book.snippets.map(bookSnippet => <>
                       <li>
                         <p>
-                          p.{bookSnippet.archivePage} { }
+                          p.{bookSnippet.data.archivePage} { }
                           <a href={bookSnippet.route}>{bookSnippet.renderedTitle}</a>
                         </p>
                       </li>

@@ -34,7 +34,7 @@ handlers.set('/create-snippet', body => {
   return `/book-snippets/${date}-${slug}.html`;
 });
 
-export default allSnippets.map(snippet => [`${snippet.slug}.html`, <>
+export default allSnippets.map(snippet => [`${snippet.data.slug}.html`, <>
   <EmptyPage>
     <link rel='stylesheet' href='/admin/clone-style.css' />
     <link rel='stylesheet' href='/admin/admin-form.css' />
@@ -47,9 +47,9 @@ export default allSnippets.map(snippet => [`${snippet.slug}.html`, <>
     <main>
       <div id='left-panel'>
         <form method='POST' action='/create-snippet'>
-          <span>Page</span>    <input autocomplete='off' name='archivePage' value={snippet.archivePage} autofocus />
-          <span>Link</span>    <input autocomplete='off' name='archiveSlug' value={snippet.archiveSlug} />
-          <span>Book</span>    <input autocomplete='off' name='bookSlug' value={snippet.bookSlug} />
+          <span>Page</span>    <input autocomplete='off' name='archivePage' value={snippet.data.archivePage} autofocus />
+          <span>Link</span>    <input autocomplete='off' name='archiveSlug' value={snippet.data.archiveSlug} />
+          <span>Book</span>    <input autocomplete='off' name='bookSlug' value={snippet.data.bookSlug} />
           <span>Title</span>   <input autocomplete='off' name='title' />
           <span>Slug</span>    <input autocomplete='off' name='slug' />
           <span>Text</span> <textarea name='markdownContent' />
