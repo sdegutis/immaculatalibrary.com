@@ -1,5 +1,6 @@
 import * as Common from "../../components/common";
 import { LatestBookSnippets } from "../../components/latest-snippets";
+import { isDev } from "../../core/helpers";
 import { allSnippets } from "../../model/models";
 import { Snippet } from "../../model/snippets";
 
@@ -45,12 +46,14 @@ export default allSnippets.map(snippet => {
           <LatestBookSnippets />
         </div>
 
-        <details>
-          <summary>Admin</summary>
-          <ul>
-            <li><a href={`/admin/create-snippet/${snippet.slug}.html`}>Make next snippet</a></li>
-          </ul>
-        </details>
+        {isDev && <>
+          <details>
+            <summary>Admin</summary>
+            <ul>
+              <li><a href={`/admin/create-snippet/${snippet.slug}.html`}>Make next snippet</a></li>
+            </ul>
+          </details>
+        </>}
 
       </Common.Column>
 

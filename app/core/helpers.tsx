@@ -2,6 +2,8 @@ import Yaml from "js-yaml";
 import MarkdownIt from 'markdown-it';
 import path from "path/posix";
 
+export const isDev = !!process.env['DEV'];
+
 export function loadContentFile<T>([filepath, rawContent]: [string, Buffer]) {
   const slug = path.basename(filepath).slice(0, -3);
   const date = slug.match(/^(\d{4}-\d{2}-\d{2})-/)?.[1];

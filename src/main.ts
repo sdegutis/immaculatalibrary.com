@@ -3,6 +3,8 @@ import * as path from 'path';
 import { Server } from './server';
 import { Site } from './site';
 
+process.env['DEV'] = '1';
+
 const server = new Server();
 server.startServer(8080);
 
