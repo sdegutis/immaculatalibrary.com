@@ -1,11 +1,12 @@
-import { DataFileWithDate, calculateReadingMins, loadContentFile, markdown, sortBy } from "../core/helpers";
+import { DataFileWithDate } from "../core/data-files";
+import { calculateReadingMins, markdown, sortBy } from "../core/helpers";
 import allSnippetFiles from "../data/snippets/";
 import { Book, allBooks, booksBySlug } from './books';
 import { Tag } from './tag';
 
 const PREVIEW_LENGTH = 2000;
 
-interface SnippetFile extends DataFileWithDate {
+interface SnippetFile {
   published: boolean;
   title: string;
   archiveSlug: string;
@@ -14,7 +15,7 @@ interface SnippetFile extends DataFileWithDate {
   tags?: string[];
 }
 
-export class Snippet {
+export class Snippet extends DataFileWithDate<SnippetFile> {
 
   route: string;
   archiveLink: string;
@@ -28,17 +29,19 @@ export class Snippet {
   nextSnippet?: Snippet;
   tagsForSnippet: Set<Tag>;
 
-  constructor(public data: SnippetFile) {
-    data.tags ??= [];
+  constructor(file: [string, Buffer]) {
+    super(file);
 
-    this.route = `/book-snippets/${data.slug}.html`;
-    this.archiveLink = `https://archive.org/details/${data.archiveSlug}/page/${data.archivePage}?view=theater`;
-    this.previewMarkdown = derivePreview(data);
-    this.renderedBody = markdown.render(data.content);
-    this.renderedTitle = markdown.renderInline(data.title);
-    this.mins = calculateReadingMins(data.content);
+    this.data.tags ??= [];
 
-    this.tagsForSnippet = new Set([...data.tags ?? []].map(Tag.getOrCreate));
+    this.route = `/book-snippets/${this.slug}.html`;
+    this.archiveLink = `https://archive.org/details/${this.data.archiveSlug}/page/${this.data.archivePage}?view=theater`;
+    this.previewMarkdown = derivePreview(this);
+    this.renderedBody = markdown.render(this.content);
+    this.renderedTitle = markdown.renderInline(this.data.title);
+    this.mins = calculateReadingMins(this.content);
+
+    this.tagsForSnippet = new Set([...this.data.tags ?? []].map(Tag.getOrCreate));
 
     const book = booksBySlug[this.data.bookSlug]!;
     this.book = book;
@@ -47,8 +50,8 @@ export class Snippet {
 
 }
 
-function derivePreview(data: SnippetFile) {
-  const paragraphs = data.content.trim().split(/(\r?\n>+ *\r?\n)/);
+function derivePreview(snippet: Snippet) {
+  const paragraphs = snippet.content.trim().split(/(\r?\n>+ *\r?\n)/);
 
   let running = 0;
   for (let i = 0; i < paragraphs.length; i++) {
@@ -56,16 +59,16 @@ function derivePreview(data: SnippetFile) {
     if (running > PREVIEW_LENGTH) break;
   }
 
-  if (running < data.content.trim().length - 1) {
-    return data.content.substring(0, running);
+  if (running < snippet.content.trim().length - 1) {
+    return snippet.content.substring(0, running);
   }
   return null;
 }
 
 export const allSnippets = (allSnippetFiles
-  .map(file => new Snippet(loadContentFile(file)))
+  .map(file => new Snippet(file))
   .filter((s => s.data.published))
-  .sort(sortBy(s => s.data.slug))
+  .sort(sortBy(s => s.slug))
   .reverse());
 
 for (const book of allBooks) {

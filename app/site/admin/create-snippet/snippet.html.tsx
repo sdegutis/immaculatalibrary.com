@@ -34,7 +34,7 @@ handlers.set('/create-snippet', body => {
   return `/book-snippets/${date}-${slug}.html`;
 });
 
-export default allSnippets.map(snippet => [`${snippet.data.slug}.html`, <>
+export default allSnippets.map(snippet => [`${snippet.slug}.html`, <>
   <EmptyPage>
     <link rel='stylesheet' href='/admin/clone-style.css' />
     <link rel='stylesheet' href='/admin/admin-form.css' />

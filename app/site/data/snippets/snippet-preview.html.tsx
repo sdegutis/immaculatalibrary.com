@@ -1,9 +1,9 @@
 import { markdown } from "../../../core/helpers";
 import { allSnippets } from '../../../model/snippets';
 
-export default allSnippets.map(snippet => [`${snippet.data.slug}-preview.html`, <>
+export default allSnippets.map(snippet => [`${snippet.slug}-preview.html`, <>
   <h4><a href={snippet.route}>{snippet.renderedTitle}</a></h4>
-  <p><span class='format-date'>{snippet.data.date}</span> &bull; {snippet.mins} min</p>
+  <p><span class='format-date'>{snippet.date}</span> &bull; {snippet.mins} min</p>
   <p>
     From <a href={snippet.book.route}>{snippet.book.data.title}</a>
     , page <a rel="noopener" href={snippet.archiveLink}>{snippet.data.archivePage}</a>

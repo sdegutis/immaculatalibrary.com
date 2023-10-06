@@ -1,8 +1,7 @@
 import * as Common from "../../components/common";
 import { LatestBookSnippets } from "../../components/latest-snippets";
 import { isDev } from "../../core/helpers";
-import { allSnippets } from '../../model/snippets';
-import { Snippet } from "../../model/snippets";
+import { Snippet, allSnippets } from '../../model/snippets';
 
 export default allSnippets.map(snippet => {
   const singleFile = snippet.book.data.files.length === 1;
@@ -11,7 +10,7 @@ export default allSnippets.map(snippet => {
     ?.pdfFile
     .replace('.pdf', ''));
 
-  return [`${snippet.data.slug}.html`, <>
+  return [`${snippet.slug}.html`, <>
     <Common.TypicalPage image={snippet.book.category.imageBig}>
 
       <link rel="stylesheet" href='/css/snippet.css' />
@@ -21,7 +20,7 @@ export default allSnippets.map(snippet => {
 
           <h1>{snippet.renderedTitle}</h1>
 
-          <p><span class='format-date'>{snippet.data.date}</span> &bull; {snippet.mins} min</p>
+          <p><span class='format-date'>{snippet.date}</span> &bull; {snippet.mins} min</p>
 
           <p>
             {[...snippet.tagsForSnippet].map(tag => <>
@@ -50,7 +49,7 @@ export default allSnippets.map(snippet => {
           <details open>
             <summary>Admin</summary>
             <ul>
-              <li><a href={`/admin/create-snippet/${snippet.data.slug}.html`}>Make next snippet</a></li>
+              <li><a href={`/admin/create-snippet/${snippet.slug}.html`}>Make next snippet</a></li>
             </ul>
           </details>
         </>}
