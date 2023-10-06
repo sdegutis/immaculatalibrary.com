@@ -1,11 +1,8 @@
-import { loadContentFile } from '../core/helpers';
+import { DataFileWithoutDate, loadContentFile } from '../core/helpers';
 import { Category } from './categories';
 import { Snippet } from './snippets';
 
-export interface Book {
-  slug: string;
-  content: string;
-
+interface BookFile extends DataFileWithoutDate {
   title: string;
   subtitle: string;
   dateAdded: string;
@@ -27,16 +24,22 @@ export interface Book {
     image: string;
     why: string;
   },
+}
+
+export class Book {
 
   route: string;
 
-  category: Category;
-  snippets: Snippet[];
+  category!: Category;
+  snippets: Snippet[] = [];
+
+  constructor(public data: BookFile) {
+    this.route = `/books/${data.slug}.html`;
+  }
+
 }
 
 export function bookFromFile(file: [string, Buffer]): Book {
-  const data = loadContentFile<Book>(file);
-  data.route = `/books/${data.slug}.html`;
-  data.snippets = [];
-  return data;
+  const data = loadContentFile<BookFile>(file);
+  return new Book(data);
 }

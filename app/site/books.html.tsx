@@ -20,7 +20,7 @@ export default <>
         <ul id="books-all" style="padding-left: 20px">
           {allBooks.map(book => <>
             <li>
-              <p><a class="link" href={book.route}>{book.title}</a><br /> {book.author}</p>
+              <p><a class="link" href={book.route}>{book.data.title}</a><br /> {book.data.author}</p>
             </li>
           </>)}
         </ul>

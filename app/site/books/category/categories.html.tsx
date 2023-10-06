@@ -25,15 +25,15 @@ export default allCategories.map(cat => [`${cat.slug}.html`, <>
           {cat.booksInCategory.map(book => {
             return <li>
               <div class="title">
-                <a href={book.route}>{book.title}</a>
-                {book.subtitle && <>: {book.subtitle}</>}
+                <a href={book.route}>{book.data.title}</a>
+                {book.data.subtitle && <>: {book.data.subtitle}</>}
                 {' '}
-                <Rating n={book.rating} />
+                <Rating n={book.data.rating} />
               </div>
 
-              <div class="author">{book.author}</div>
+              <div class="author">{book.data.author}</div>
               <Common.Typography>
-                <div class="blurb">{markdown.render(excerpt(book.content))}</div>
+                <div class="blurb">{markdown.render(excerpt(book.data.content))}</div>
               </Common.Typography>
             </li>;
           })}
@@ -48,7 +48,7 @@ export default allCategories.map(cat => [`${cat.slug}.html`, <>
               .filter(book => book.snippets.length > 0)
               .map(book => <>
                 <li>
-                  <h3>{book.title}</h3>
+                  <h3>{book.data.title}</h3>
                   <ul>
                     {book.snippets.map(bookSnippet => <>
                       <li>

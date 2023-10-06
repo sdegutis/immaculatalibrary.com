@@ -65,14 +65,14 @@ export default <>
             ].map(id => {
               const book = booksBySlug[id]!;
 
-              const imageUrl = categoriesBySlug[book.frontpage!.image]!.imageBig;
+              const imageUrl = categoriesBySlug[book.data.frontpage!.image]!.imageBig;
               return <>
                 <li class='featured-book'>
-                  <h3><a href={book.route}>{book.title}</a></h3>
+                  <h3><a href={book.route}>{book.data.title}</a></h3>
                   <a href={book.route}>
                     <div class='thumb' style={`background-image: url(${imageUrl})`} />
                   </a>
-                  <Common.Typography><p>{book.frontpage!.why}</p></Common.Typography>
+                  <Common.Typography><p>{book.data.frontpage!.why}</p></Common.Typography>
                 </li>
               </>;
             })}

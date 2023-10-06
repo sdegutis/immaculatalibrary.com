@@ -17,7 +17,7 @@ export const allMovies = (allMovieFiles
 
 export const allBooks = (allBookFiles
   .map(bookFromFile)
-  .sort(sortBy(b => `${b.dateAdded} ${b.slug}`)));
+  .sort(sortBy(b => `${b.data.dateAdded} ${b.data.slug}`)));
 
 export const allCategories = (allCategoryFiles
   .map(categoryFromFile)
@@ -32,7 +32,7 @@ export const allSnippets = (allSnippetFiles
   .sort(sortBy(s => s.slug))
   .reverse());
 
-export const booksBySlug = Object.fromEntries(allBooks.map(book => [book.slug, book]));
+export const booksBySlug = Object.fromEntries(allBooks.map(book => [book.data.slug, book]));
 export const categoriesBySlug = Object.fromEntries(allCategories.map(cat => [cat.slug, cat]));
 
 for (const category of allCategories) {

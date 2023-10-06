@@ -5,10 +5,10 @@ export default allSnippets.map(snippet => [`${snippet.slug}-preview.html`, <>
   <h4><a href={snippet.route}>{snippet.renderedTitle}</a></h4>
   <p><span class='format-date'>{snippet.date}</span> &bull; {snippet.mins} min</p>
   <p>
-    From <a href={snippet.book.route}>{snippet.book.title}</a>
+    From <a href={snippet.book.route}>{snippet.book.data.title}</a>
     , page <a rel="noopener" href={snippet.archiveLink}>{snippet.archivePage}</a>
     <br />
-    <small>By {snippet.book.author}</small>
+    <small>By {snippet.book.data.author}</small>
   </p>
   <div class='rendered-preview'>
     {snippet.previewMarkdown

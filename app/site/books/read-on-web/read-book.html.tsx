@@ -6,7 +6,7 @@ import { allBooks } from "../../../model/models";
 export default allBooks.map(book => {
   const orderedSnippets = [...book.snippets];
 
-  return [`${book.slug}.html`, <>
+  return [`${book.data.slug}.html`, <>
     <Common.TypicalPage image={book.category.imageBig}>
 
       <Common.Column spaced split>
@@ -15,11 +15,11 @@ export default allBooks.map(book => {
 
           <link rel="stylesheet" href='/css/book.css' />
 
-          <h1>{book.title}</h1>
-          <p class="subtitle">{book.subtitle}</p>
-          <p>By <span class="author">{book.author}</span></p>
-          <p><Rating n={book.rating} /></p>
-          {markdown.render(book.content)}
+          <h1>{book.data.title}</h1>
+          <p class="subtitle">{book.data.subtitle}</p>
+          <p>By <span class="author">{book.data.author}</span></p>
+          <p><Rating n={book.data.rating} /></p>
+          {markdown.render(book.data.content)}
 
           <hr />
 

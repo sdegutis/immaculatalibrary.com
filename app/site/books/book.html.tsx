@@ -3,7 +3,7 @@ import { Rating } from "../../components/rating";
 import { markdown } from "../../core/helpers";
 import { allBooks } from "../../model/models";
 
-export default allBooks.map(book => [`${book.slug}.html`, <>
+export default allBooks.map(book => [`${book.data.slug}.html`, <>
   <Common.TypicalPage image={book.category.imageBig}>
 
     <Common.Column spaced split>
@@ -12,18 +12,18 @@ export default allBooks.map(book => [`${book.slug}.html`, <>
 
         <link rel="stylesheet" href='/css/book.css' />
 
-        <h1>{book.title}</h1>
-        <p class="subtitle">{book.subtitle}</p>
-        <p>By <span class="author">{book.author}</span></p>
-        <p><Rating n={book.rating} /></p>
-        {markdown.render(book.content)}
+        <h1>{book.data.title}</h1>
+        <p class="subtitle">{book.data.subtitle}</p>
+        <p>By <span class="author">{book.data.author}</span></p>
+        <p><Rating n={book.data.rating} /></p>
+        {markdown.render(book.data.content)}
 
         <h4>Read now:</h4>
-        {book.complete && <>
+        {book.data.complete && <>
           <table class="downloads" id='read-online-table'>
             <tr>
               <td>
-                <a href={`/books/read-on-web/${book.slug}.html`}>
+                <a href={`/books/read-on-web/${book.data.slug}.html`}>
                   Read on Web
                 </a>
               </td>
@@ -31,9 +31,9 @@ export default allBooks.map(book => [`${book.slug}.html`, <>
           </table>
         </>}
         <table class="downloads" id='read-online-table'>
-          {book.files.map(file => <>
+          {book.data.files.map(file => <>
             <tr>
-              {book.files.length > 1 && <>
+              {book.data.files.length > 1 && <>
                 <td>
                   {file.pdfFile.replace('.pdf', '')}
                 </td>
@@ -50,12 +50,12 @@ export default allBooks.map(book => [`${book.slug}.html`, <>
           </>)}
         </table>
 
-        {book.storeLinks.length > 0 && <>
+        {book.data.storeLinks.length > 0 && <>
           <h4>Buy physical book:</h4>
           <div class="indent">
             <p>You can purchase this book from these publishers:</p>
             <ul style="display: grid; grid-auto-flow: column;">
-              {book.storeLinks.map(link => <>
+              {book.data.storeLinks.map(link => <>
                 <li style="text-align: center;">
                   <a href={link.link}>
                     {markdown.render(link.title)} <img src={link.image} height="100" />
@@ -100,7 +100,7 @@ export default allBooks.map(book => [`${book.slug}.html`, <>
       <div>
 
         <script type='module' src='/script/random-snippet-in-book.js' />
-        <h3>Book snippets (<a href='#' data-book={book.slug} id='random-snippet-in-book-button'>Random</a>)</h3>
+        <h3>Book snippets (<a href='#' data-book={book.data.slug} id='random-snippet-in-book-button'>Random</a>)</h3>
         <ul class="snippets-latest">
           {book.snippets.length > 0
             ? <>

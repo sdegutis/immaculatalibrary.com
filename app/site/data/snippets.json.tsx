@@ -17,10 +17,10 @@ export default <>
       date: snippet.date,
       searchable: snippet.content.toLowerCase()
         + snippet.title.toLowerCase()
-        + snippet.book.title.toLowerCase()
-        + snippet.book.author.toLowerCase(),
+        + snippet.book.data.title.toLowerCase()
+        + snippet.book.data.author.toLowerCase(),
       title: snippet.renderedTitle,
-      bookTitle: snippet.book.title,
+      bookTitle: snippet.book.data.title,
       url: snippet.route,
       readingMins: snippet.mins,
     }))

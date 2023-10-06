@@ -5,8 +5,8 @@ import { allSnippets } from "../../model/models";
 import { Snippet } from "../../model/snippets";
 
 export default allSnippets.map(snippet => {
-  const singleFile = snippet.book.files.length === 1;
-  const specificBookName = (!singleFile && snippet.book.files
+  const singleFile = snippet.book.data.files.length === 1;
+  const specificBookName = (!singleFile && snippet.book.data.files
     .find(file => file.archiveId === snippet.archiveSlug)
     ?.pdfFile
     .replace('.pdf', ''));
@@ -30,11 +30,11 @@ export default allSnippets.map(snippet => {
           </p>
 
           <p>
-            From <a href={snippet.book.route}>{snippet.book.title}</a>, { }
+            From <a href={snippet.book.route}>{snippet.book.data.title}</a>, { }
             {specificBookName && <>in file "{specificBookName}", </>}
             page <a rel="noopener" href={snippet.archiveLink}>{snippet.archivePage}</a>
             <br />
-            <small>By {snippet.book.author}</small>
+            <small>By {snippet.book.data.author}</small>
           </p>
 
           {snippet.renderedBody}
