@@ -24,6 +24,7 @@ const pathUpdated = (filePath: string) => {
     server.files = site.build();
     server.post = site.handler();
     updatedPaths.clear();
+    server.events.emit('rebuild');
     console.log('Done.');
   }, 100);
 };
