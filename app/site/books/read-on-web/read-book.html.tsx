@@ -1,7 +1,7 @@
 import * as Common from "../../../components/common";
 import { Rating } from "../../../components/rating";
 import { markdown } from "../../../core/helpers";
-import { allBooks } from "../../../model/models";
+import { allBooks } from '../../../model/books';
 
 export default allBooks.map(book => {
   const orderedSnippets = [...book.snippets];

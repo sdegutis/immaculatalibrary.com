@@ -1,5 +1,6 @@
 import { DataFileWithoutDate, loadContentFile, sortBy } from '../core/helpers';
-import { Book } from './books';
+import allCategoryFiles from "../data/categories/";
+import { Book, booksBySlug } from './books';
 
 interface CategoryFile extends DataFileWithoutDate {
   title: string;
@@ -19,6 +20,12 @@ export class Category {
     this.route = `/books/category/${data.slug}.html`;
     this.imageBig = `/img/categories/${data.slug}-big.jpg`;
     this.imageSmall = `/img/categories/${data.slug}-small.jpg`;
+
+    for (const bookSlug of this.data.books) {
+      const book = booksBySlug[bookSlug]!;
+      book.category = this;
+      this.booksInCategory.push(book);
+    }
   }
 
 }
@@ -49,9 +56,8 @@ const categoryOrder = [
   'fr-lasance',
 ];
 
-export const categorySorter = sortBy((c: Category) => categoryOrder.indexOf(c.data.slug));
+export const allCategories = (allCategoryFiles
+  .map(file => new Category(loadContentFile(file)))
+  .sort(sortBy(c => categoryOrder.indexOf(c.data.slug))));
 
-export function categoryFromFile(file: [string, Buffer]): Category {
-  const data = loadContentFile<CategoryFile>(file);
-  return new Category(data);
-}
+export const categoriesBySlug = Object.fromEntries(allCategories.map(cat => [cat.data.slug, cat]));

@@ -1,5 +1,6 @@
-import { DataFileWithDate, calculateReadingMins, loadContentFile, markdown } from '../core/helpers';
-import { Book } from './books';
+import { DataFileWithDate, calculateReadingMins, loadContentFile, markdown, sortBy } from "../core/helpers";
+import allSnippetFiles from "../data/snippets/";
+import { Book, allBooks, booksBySlug } from './books';
 import { Tag } from './tag';
 
 const PREVIEW_LENGTH = 2000;
@@ -38,13 +39,12 @@ export class Snippet {
     this.mins = calculateReadingMins(data.content);
 
     this.tagsForSnippet = new Set([...data.tags ?? []].map(Tag.getOrCreate));
+
+    const book = booksBySlug[this.data.bookSlug]!;
+    this.book = book;
+    book.snippets.push(this);
   }
 
-}
-
-export function snippetFromFile(file: [string, Buffer]): Snippet {
-  const data = loadContentFile<SnippetFile>(file);
-  return new Snippet(data);
 }
 
 function derivePreview(data: SnippetFile) {
@@ -60,4 +60,24 @@ function derivePreview(data: SnippetFile) {
     return data.content.substring(0, running);
   }
   return null;
+}
+
+export const allSnippets = (allSnippetFiles
+  .map(file => new Snippet(loadContentFile(file)))
+  .filter((s => s.data.published))
+  .sort(sortBy(s => s.data.slug))
+  .reverse());
+
+for (const book of allBooks) {
+  book.snippets.sort(sortBy(s =>
+    s.data.archivePage.startsWith('n')
+      ? +s.data.archivePage.slice(1) - 1000
+      : +s.data.archivePage));
+
+  for (let i = 1; i < book.snippets.length; i++) {
+    const s1 = book.snippets[i - 1];
+    const s2 = book.snippets[i];
+    s1!.nextSnippet = s2!;
+    s2!.prevSnippet = s1!;
+  }
 }

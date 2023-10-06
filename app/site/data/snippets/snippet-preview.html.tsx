@@ -1,5 +1,5 @@
 import { markdown } from "../../../core/helpers";
-import { allSnippets } from "../../../model/models";
+import { allSnippets } from '../../../model/snippets';
 
 export default allSnippets.map(snippet => [`${snippet.data.slug}-preview.html`, <>
   <h4><a href={snippet.route}>{snippet.renderedTitle}</a></h4>

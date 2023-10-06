@@ -1,5 +1,5 @@
 import { calculateReadingMins } from "../../core/helpers";
-import { allSnippets } from "../../model/models";
+import { allSnippets } from '../../model/snippets';
 
 const totalReadingMins = calculateReadingMins(allSnippets.map(s => s.data.content).join('\n\n'));
 const mins = Math.round(totalReadingMins % 60);

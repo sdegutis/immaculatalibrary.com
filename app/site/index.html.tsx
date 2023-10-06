@@ -1,7 +1,8 @@
 import * as Common from "../components/common";
 import { LatestBookSnippets } from "../components/latest-snippets";
 import { EmptyPage } from "../components/page";
-import { booksBySlug, categoriesBySlug } from "../model/models";
+import { categoriesBySlug } from '../model/categories';
+import { booksBySlug } from '../model/books';
 import { sortedTags } from "../model/tag";
 
 export default <>

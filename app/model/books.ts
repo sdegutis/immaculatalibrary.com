@@ -1,4 +1,5 @@
-import { DataFileWithoutDate, loadContentFile } from '../core/helpers';
+import { DataFileWithoutDate, loadContentFile, sortBy } from '../core/helpers';
+import allBookFiles from "../data/books/";
 import { Category } from './categories';
 import { Snippet } from './snippets';
 
@@ -39,7 +40,8 @@ export class Book {
 
 }
 
-export function bookFromFile(file: [string, Buffer]): Book {
-  const data = loadContentFile<BookFile>(file);
-  return new Book(data);
-}
+export const allBooks = (allBookFiles
+  .map(file => new Book(loadContentFile<BookFile>(file)))
+  .sort(sortBy(b => `${b.data.dateAdded} ${b.data.slug}`)));
+
+export const booksBySlug = Object.fromEntries(allBooks.map(book => [book.data.slug, book]));

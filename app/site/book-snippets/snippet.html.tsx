@@ -1,7 +1,7 @@
 import * as Common from "../../components/common";
 import { LatestBookSnippets } from "../../components/latest-snippets";
 import { isDev } from "../../core/helpers";
-import { allSnippets } from "../../model/models";
+import { allSnippets } from '../../model/snippets';
 import { Snippet } from "../../model/snippets";
 
 export default allSnippets.map(snippet => {

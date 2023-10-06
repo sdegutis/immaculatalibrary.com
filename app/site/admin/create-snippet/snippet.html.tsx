@@ -5,7 +5,7 @@ import { darkModeScript } from "../../../components/darkmode/dark-mode";
 import { EmptyPage } from "../../../components/page";
 import { Typography } from "../../../components/typography";
 import { calculateReadingMins } from "../../../core/helpers";
-import { allSnippets } from "../../../model/models";
+import { allSnippets } from '../../../model/snippets';
 import { handlers } from "../../../post";
 
 handlers.set('/create-snippet', body => {

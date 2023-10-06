@@ -1,5 +1,5 @@
 import * as Common from "../components/common";
-import { allBooks } from "../model/models";
+import { allBooks } from '../model/books';
 
 export default <>
   <Common.TypicalPage image='/img/categories/reference-big.jpg'>

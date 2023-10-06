@@ -1,4 +1,4 @@
-import { allBooks } from "../../model/models";
+import { allBooks } from '../../model/books';
 
 export default <>
   {JSON.stringify(allBooks.map(book => ({
