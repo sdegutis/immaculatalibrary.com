@@ -3,16 +3,16 @@ import { Rating } from "../../../components/rating";
 import { excerpt, markdown } from "../../../core/helpers";
 import { allCategories } from "../../../model/models";
 
-export default allCategories.map(cat => [`${cat.slug}.html`, <>
-  <Common.TypicalPage image={`/img/categories/${cat.slug}-big.jpg`}>
+export default allCategories.map(cat => [`${cat.data.slug}.html`, <>
+  <Common.TypicalPage image={`/img/categories/${cat.data.slug}-big.jpg`}>
 
     <link rel="stylesheet" href='/css/category.css' />
 
     <Common.Column spaced centered>
       <Common.Typography>
 
-        <h1>{cat.title}</h1>
-        {markdown.render(cat.content)}
+        <h1>{cat.data.title}</h1>
+        {markdown.render(cat.data.content)}
 
       </Common.Typography>
     </Common.Column>

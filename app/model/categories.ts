@@ -1,19 +1,26 @@
-import { loadContentFile, sortBy } from '../core/helpers';
+import { DataFileWithoutDate, loadContentFile, sortBy } from '../core/helpers';
 import { Book } from './books';
 
-export interface Category {
-  slug: string;
-  content: string;
-
+interface CategoryFile extends DataFileWithoutDate {
   title: string;
   shortTitle: string;
   books: string[];
+}
+
+export class Category {
+
+  booksInCategory: Book[] = [];
 
   route: string;
   imageBig: string;
   imageSmall: string;
 
-  booksInCategory: Book[];
+  constructor(public data: CategoryFile) {
+    this.route = `/books/category/${data.slug}.html`;
+    this.imageBig = `/img/categories/${data.slug}-big.jpg`;
+    this.imageSmall = `/img/categories/${data.slug}-small.jpg`;
+  }
+
 }
 
 const categoryOrder = [
@@ -42,13 +49,9 @@ const categoryOrder = [
   'fr-lasance',
 ];
 
-export const categorySorter = sortBy((c: Category) => categoryOrder.indexOf(c.slug));
+export const categorySorter = sortBy((c: Category) => categoryOrder.indexOf(c.data.slug));
 
 export function categoryFromFile(file: [string, Buffer]): Category {
-  const data = loadContentFile<Category>(file);
-  data.route = `/books/category/${data.slug}.html`;
-  data.imageBig = `/img/categories/${data.slug}-big.jpg`;
-  data.imageSmall = `/img/categories/${data.slug}-small.jpg`;
-  data.booksInCategory = [];
-  return data;
+  const data = loadContentFile<CategoryFile>(file);
+  return new Category(data);
 }

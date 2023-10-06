@@ -12,7 +12,7 @@ export const QuickLinks: JSX.Component<{}> = (attrs, children) => {
 
           {allCategories.map(cat => <li>
             <a class="link" href={cat.route} style={`background-image: url(${cat.imageSmall});`}>
-              <span>{cat.shortTitle}</span>
+              <span>{cat.data.shortTitle}</span>
             </a>
           </li>
           )}

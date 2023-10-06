@@ -33,10 +33,10 @@ export const allSnippets = (allSnippetFiles
   .reverse());
 
 export const booksBySlug = Object.fromEntries(allBooks.map(book => [book.data.slug, book]));
-export const categoriesBySlug = Object.fromEntries(allCategories.map(cat => [cat.slug, cat]));
+export const categoriesBySlug = Object.fromEntries(allCategories.map(cat => [cat.data.slug, cat]));
 
 for (const category of allCategories) {
-  for (const bookSlug of category.books) {
+  for (const bookSlug of category.data.books) {
     const book = booksBySlug[bookSlug]!;
     book.category = category;
     category.booksInCategory.push(book);
