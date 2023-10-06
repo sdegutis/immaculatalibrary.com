@@ -1,4 +1,4 @@
-import { allMusics } from "../model/models";
+import { allMusics } from '../model/musics';
 import { Music } from "../model/musics";
 
 export const MusicSidebar: JSX.Component<{}> = (attrs, children) => <>

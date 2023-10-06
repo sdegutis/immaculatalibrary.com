@@ -50,11 +50,6 @@ const movieOrder = [
   'saint-john-baptist-de-la-salle',
 ];
 
-
-function movieFromFile(file: [string, Buffer]): Movie {
-  return new Movie(loadContentFile<MovieFile>(file));
-}
-
 export const allMovies = (allMovieFiles
-  .map(movieFromFile)
+  .map(file => new Movie(loadContentFile(file)))
   .sort(sortBy((m: Movie) => movieOrder.indexOf(m.data.slug))));

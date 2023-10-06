@@ -1,4 +1,5 @@
 import { DataFileWithoutDate, loadContentFile } from '../core/helpers';
+import allMusicFiles from "../data/music/";
 
 interface MusicFile extends DataFileWithoutDate {
   title: string;
@@ -12,7 +13,5 @@ export class Music {
 
 }
 
-export function musicFromFile(file: [string, Buffer]): Music {
-  const data = loadContentFile<MusicFile>(file);
-  return new Music(data);
-}
+export const allMusics = (allMusicFiles
+  .map(file => new Music(loadContentFile(file))));

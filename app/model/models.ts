@@ -1,12 +1,10 @@
 import { sortBy } from '../core/helpers';
 import { bookFromFile } from "./books";
 import { categoryFromFile, categorySorter } from "./categories";
-import { musicFromFile } from './musics';
 import { snippetFromFile } from './snippets';
 
 import allBookFiles from '../data/books/';
 import allCategoryFiles from '../data/categories/';
-import allMusicFiles from '../data/music/';
 import allSnippetFiles from '../data/snippets/';
 
 export const allBooks = (allBookFiles
@@ -16,9 +14,6 @@ export const allBooks = (allBookFiles
 export const allCategories = (allCategoryFiles
   .map(categoryFromFile)
   .sort(categorySorter));
-
-export const allMusics = (allMusicFiles
-  .map(musicFromFile));
 
 export const allSnippets = (allSnippetFiles
   .map(snippetFromFile)
