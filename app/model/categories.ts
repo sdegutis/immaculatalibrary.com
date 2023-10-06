@@ -1,14 +1,15 @@
-import { DataFileWithoutDate, loadContentFile, sortBy } from '../core/helpers';
+import { DataFile } from '../core/data-files';
+import { sortBy } from '../core/helpers';
 import allCategoryFiles from "../data/categories/";
 import { Book, booksBySlug } from './books';
 
-interface CategoryFile extends DataFileWithoutDate {
+interface CategoryFile {
   title: string;
   shortTitle: string;
   books: string[];
 }
 
-export class Category {
+export class Category extends DataFile<CategoryFile> {
 
   booksInCategory: Book[] = [];
 
@@ -16,10 +17,11 @@ export class Category {
   imageBig: string;
   imageSmall: string;
 
-  constructor(public data: CategoryFile) {
-    this.route = `/books/category/${data.slug}.html`;
-    this.imageBig = `/img/categories/${data.slug}-big.jpg`;
-    this.imageSmall = `/img/categories/${data.slug}-small.jpg`;
+  constructor(file: [string, Buffer]) {
+    super(file);
+    this.route = `/books/category/${this.slug}.html`;
+    this.imageBig = `/img/categories/${this.slug}-big.jpg`;
+    this.imageSmall = `/img/categories/${this.slug}-small.jpg`;
 
     for (const bookSlug of this.data.books) {
       const book = booksBySlug[bookSlug]!;
@@ -57,7 +59,7 @@ const categoryOrder = [
 ];
 
 export const allCategories = (allCategoryFiles
-  .map(file => new Category(loadContentFile(file)))
-  .sort(sortBy(c => categoryOrder.indexOf(c.data.slug))));
+  .map(file => new Category(file))
+  .sort(sortBy(c => categoryOrder.indexOf(c.slug))));
 
-export const categoriesBySlug = Object.fromEntries(allCategories.map(cat => [cat.data.slug, cat]));
+export const categoriesBySlug = Object.fromEntries(allCategories.map(cat => [cat.slug, cat]));
