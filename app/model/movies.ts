@@ -1,23 +1,25 @@
-import { DataFileWithoutDate, loadContentFile, sortBy } from '../core/helpers';
+import { DataFile } from '../core/data-files';
+import { sortBy } from '../core/helpers';
 import allMovieFiles from "../data/movies/";
 
-interface MovieFile extends DataFileWithoutDate {
+interface MovieFile {
   title: string;
   shortTitle: string;
   subtitle: string | undefined;
   year: string;
 }
 
-export class Movie {
+export class Movie extends DataFile<MovieFile> {
 
   route: string;
   imageBig: string;
   imageSmall: string;
 
-  constructor(public data: MovieFile) {
-    this.route = `/movies/${data.slug}.html`;
-    this.imageBig = `/img/movies/${data.slug}-big.jpg`;
-    this.imageSmall = `/img/movies/${data.slug}-small.jpg`;
+  constructor(file: [string, Buffer]) {
+    super(file);
+    this.route = `/movies/${this.slug}.html`;
+    this.imageBig = `/img/movies/${this.slug}-big.jpg`;
+    this.imageSmall = `/img/movies/${this.slug}-small.jpg`;
   }
 
 }
@@ -51,5 +53,5 @@ const movieOrder = [
 ];
 
 export const allMovies = (allMovieFiles
-  .map(file => new Movie(loadContentFile(file)))
-  .sort(sortBy((m: Movie) => movieOrder.indexOf(m.data.slug))));
+  .map(file => new Movie(file))
+  .sort(sortBy((m: Movie) => movieOrder.indexOf(m.slug))));
