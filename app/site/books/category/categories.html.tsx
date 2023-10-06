@@ -33,7 +33,7 @@ export default allCategories.map(cat => [`${cat.data.slug}.html`, <>
 
               <div class="author">{book.data.author}</div>
               <Common.Typography>
-                <div class="blurb">{markdown.render(excerpt(book.data.content))}</div>
+                <div class="blurb">{markdown.render(excerpt(book.content))}</div>
               </Common.Typography>
             </li>;
           })}

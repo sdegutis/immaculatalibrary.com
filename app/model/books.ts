@@ -1,9 +1,10 @@
-import { DataFileWithoutDate, loadContentFile, sortBy } from '../core/helpers';
+import { DataFile } from '../core/data-files';
+import { sortBy } from '../core/helpers';
 import allBookFiles from "../data/books/";
 import { Category } from './categories';
 import { Snippet } from './snippets';
 
-interface BookFile extends DataFileWithoutDate {
+interface BookFile {
   title: string;
   subtitle: string;
   dateAdded: string;
@@ -27,21 +28,22 @@ interface BookFile extends DataFileWithoutDate {
   },
 }
 
-export class Book {
+export class Book extends DataFile<BookFile> {
 
   route: string;
 
   category!: Category;
   snippets: Snippet[] = [];
 
-  constructor(public data: BookFile) {
-    this.route = `/books/${data.slug}.html`;
+  constructor(file: [string, Buffer]) {
+    super(file);
+    this.route = `/books/${this.slug}.html`;
   }
 
 }
 
 export const allBooks = (allBookFiles
-  .map(file => new Book(loadContentFile(file)))
-  .sort(sortBy(b => `${b.data.dateAdded} ${b.data.slug}`)));
+  .map(file => new Book(file))
+  .sort(sortBy(b => `${b.data.dateAdded} ${b.slug}`)));
 
-export const booksBySlug = Object.fromEntries(allBooks.map(book => [book.data.slug, book]));
+export const booksBySlug = Object.fromEntries(allBooks.map(book => [book.slug, book]));
