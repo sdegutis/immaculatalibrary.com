@@ -7,6 +7,7 @@ interface CategoryFile {
   title: string;
   shortTitle: string;
   books: string[];
+  sortOrder: number;
 }
 
 export class Category extends DataFile<CategoryFile> {
@@ -32,34 +33,8 @@ export class Category extends DataFile<CategoryFile> {
 
 }
 
-const categoryOrder = [
-  'classics',
-  'devotion',
-  'instruction',
-  'reference',
-  'saints',
-  'mary',
-  'joseph',
-  'apologetics',
-  'blessed-sacrament',
-  'sacred-heart',
-  'holy-spirit',
-  'lourdes',
-  'st-francis-de-sales',
-  'st-alphonsus-de-liguori',
-  'st-catherine-of-siena',
-  'st-teresa-of-avila',
-  'st-john-of-the-cross',
-  'st-john-henry-newman',
-  'st-thomas-more',
-  'st-thomas-aquinas',
-  'st-louis-de-montfort',
-  'jesuits',
-  'fr-lasance',
-];
-
 export const allCategories = (allCategoryFiles
   .map(file => new Category(file))
-  .sort(sortBy(c => categoryOrder.indexOf(c.slug))));
+  .sort(sortBy(c => c.data.sortOrder)));
 
 export const categoriesBySlug = Object.fromEntries(allCategories.map(cat => [cat.slug, cat]));
