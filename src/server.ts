@@ -18,7 +18,7 @@ export class Server {
             data += chunk.toString('utf8');
           });
           req.on('end', () => {
-            const redirect = handler(data) || '/';
+            const redirect = handler(data);
             res.statusCode = 302;
             res.setHeader('Location', redirect);
             res.end();
