@@ -18,8 +18,8 @@ export class Movie extends DataFile<MovieFile> {
   imageBig: string;
   imageSmall: string;
 
-  constructor(file: [string, Buffer]) {
-    super(file);
+  constructor(slug: string, content: string, data: MovieFile) {
+    super(slug, content, data);
     this.route = `/movies/${this.slug}.html`;
     this.imageBig = `/img/movies/${this.slug}-big.jpg`;
     this.imageSmall = `/img/movies/${this.slug}-small.jpg`;
@@ -28,5 +28,5 @@ export class Movie extends DataFile<MovieFile> {
 }
 
 export const allMovies = (allMovieFiles
-  .map(file => new Movie(file))
+  .map(file => Movie.fromFile(file))
   .sort(sortBy((m: Movie) => m.data.sortOrder)));

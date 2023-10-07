@@ -11,11 +11,7 @@ export class Music extends DataFile<MusicFile> {
 
   static override modelDir = 'music';
 
-  constructor(file: [string, Buffer]) {
-    super(file);
-  }
-
 }
 
 export const allMusics = (allMusicFiles
-  .map(file => new Music(file)));
+  .map(file => Music.fromFile(file)));

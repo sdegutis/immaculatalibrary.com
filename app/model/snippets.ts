@@ -31,8 +31,8 @@ export class Snippet extends DataFileWithDate<SnippetFile> {
   nextSnippet?: Snippet;
   tagsForSnippet: Set<Tag>;
 
-  constructor(file: [string, Buffer]) {
-    super(file);
+  constructor(slug: string, content: string, data: SnippetFile) {
+    super(slug, content, data);
 
     this.data.tags ??= [];
 
@@ -68,7 +68,7 @@ function derivePreview(snippet: Snippet) {
 }
 
 export const allSnippets = (allSnippetFiles
-  .map(file => new Snippet(file))
+  .map(file => Snippet.fromFile(file))
   .filter((s => s.data.published))
   .sort(sortBy(s => s.slug))
   .reverse());

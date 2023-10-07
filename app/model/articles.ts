@@ -19,8 +19,8 @@ export class Article extends DataFileWithDate<ArticleFile> {
   route: string;
   previewMarkdown: string | null;
 
-  constructor(file: [string, Buffer]) {
-    super(file);
+  constructor(slug: string, content: string, data: ArticleFile) {
+    super(slug, content, data);
     this.route = `/articles/${this.slug}.html`;
     this.mins = calculateReadingMins(this.content);
     this.previewMarkdown = derivePreview(this);
@@ -44,7 +44,7 @@ function derivePreview(article: Article) {
 }
 
 export const allArticles = (allArticleFiles
-  .map(file => new Article(file))
+  .map(file => Article.fromFile(file))
   .sort(sortBy(article => article.date))
   .filter(s => !s.data.draft)
   .reverse());

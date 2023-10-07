@@ -37,15 +37,15 @@ export class Book extends DataFile<BookFile> {
   category!: Category;
   snippets: Snippet[] = [];
 
-  constructor(file: [string, Buffer]) {
-    super(file);
+  constructor(slug: string, content: string, data: BookFile) {
+    super(slug, content, data);
     this.route = `/books/${this.slug}.html`;
   }
 
 }
 
 export const allBooks = (allBookFiles
-  .map(file => new Book(file))
+  .map(file => Book.fromFile(file))
   .sort(sortBy(b => `${b.data.dateAdded} ${b.slug}`)));
 
 export const booksBySlug = Object.fromEntries(allBooks.map(book => [book.slug, book]));
