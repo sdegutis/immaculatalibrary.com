@@ -1,37 +1,27 @@
-import fs from 'fs';
-import Yaml from 'js-yaml';
-import path from "path";
 import { darkModeScript } from "../../../components/darkmode/dark-mode";
 import { EmptyPage } from "../../../components/page";
 import { Typography } from "../../../components/typography";
 import { calculateReadingMins } from "../../../core/helpers";
-import { allSnippets } from '../../../model/snippets';
+import { Snippet, allSnippets } from '../../../model/snippets';
 import { handlers } from "../../../post";
 
 handlers.set('/create-snippet', body => {
   const params = new URLSearchParams(body);
 
-  const archivePage = params.get('archivePage')!;
-  const archiveSlug = params.get('archiveSlug')!;
-  const bookSlug = params.get('bookSlug')!;
-  const markdown = params.get('markdownContent')!;
-  const slug = params.get('slug')!;
-  const title = params.get('title')!;
-
   const date = new Date().toLocaleDateString('sv');
-  const filename = `${date}-${slug}.md`;
+  const slug = `${date}-${params.get('slug')!}`;
 
-  const content = `---\n${Yaml.dump({
+  const snippet = new Snippet(slug, params.get('markdownContent')!, {
     published: true,
-    title: title,
-    archiveSlug: archiveSlug,
-    archivePage: archivePage,
-    bookSlug: bookSlug,
-  })}---\n\n${markdown.trim()}` + '\n';
+    title: params.get('title')!,
+    archivePage: params.get('archivePage')!,
+    archiveSlug: params.get('archiveSlug')!,
+    bookSlug: params.get('bookSlug')!,
+  });
 
-  fs.writeFileSync(path.resolve(path.join('app', 'data/snippets', filename)), content);
+  snippet.save();
 
-  return `/book-snippets/${date}-${slug}.html`;
+  return `/book-snippets/${slug}.html`;
 });
 
 export default allSnippets.map(snippet => [`${snippet.slug}.html`, <>
