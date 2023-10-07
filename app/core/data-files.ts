@@ -30,13 +30,10 @@ export class DataFile<D> {
 
   save() {
     const modelDir = (this.constructor as typeof DataFile<D>).modelDir;
-    const filepath = path.resolve(path.join('app/data', modelDir, this.#deriveFilename()));
+    const filename = `${this.slug}.md`;
+    const filepath = path.resolve(path.join('app/data', modelDir, filename));
     const content = `---\n${Yaml.dump(this.data)}---\n\n${this.content}`;
     fs.writeFileSync(filepath, content);
-  }
-
-  #deriveFilename() {
-    return `${this.slug}.md`;
   }
 
 }
