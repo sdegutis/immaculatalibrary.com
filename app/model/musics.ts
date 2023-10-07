@@ -9,6 +9,8 @@ interface MusicFile {
 
 export class Music extends DataFile<MusicFile> {
 
+  static override modelDir = 'music';
+
   constructor(file: [string, Buffer]) {
     super(file);
   }

@@ -12,6 +12,8 @@ interface CategoryFile {
 
 export class Category extends DataFile<CategoryFile> {
 
+  static override modelDir = 'categories';
+
   booksInCategory: Book[] = [];
 
   route: string;

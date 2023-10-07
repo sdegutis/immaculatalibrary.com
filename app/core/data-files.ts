@@ -4,14 +4,13 @@ import path from "path/posix";
 
 export class DataFile<D> {
 
+  static modelDir: string;
+
   slug;
   content;
   data;
-  #filepath;
 
   constructor([filepath, rawContent]: [string, Buffer]) {
-    this.#filepath = filepath;
-
     this.slug = path.basename(filepath).slice(0, -3);
 
     const fileContents = rawContent.toString('utf8').replace(/\r\n/g, '\n');
@@ -23,9 +22,14 @@ export class DataFile<D> {
   }
 
   save() {
-    const filepath = path.resolve(path.join('app', this.#filepath));
+    const modelDir = (this.constructor as typeof DataFile<D>).modelDir;
+    const filepath = path.resolve(path.join('app/data', modelDir, this.#deriveFilename()));
     const content = `---\n${Yaml.dump(this.data)}---\n\n${this.content}`;
     fs.writeFileSync(filepath, content);
+  }
+
+  #deriveFilename() {
+    return `${this.slug}.md`;
   }
 
 }

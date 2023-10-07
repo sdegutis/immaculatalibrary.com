@@ -13,6 +13,8 @@ interface ArticleFile {
 
 export class Article extends DataFileWithDate<ArticleFile> {
 
+  static override modelDir = 'articles';
+
   mins: number;
   route: string;
   previewMarkdown: string | null;

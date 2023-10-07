@@ -30,6 +30,8 @@ interface BookFile {
 
 export class Book extends DataFile<BookFile> {
 
+  static override modelDir = 'books';
+
   route: string;
 
   category!: Category;

@@ -17,6 +17,8 @@ interface SnippetFile {
 
 export class Snippet extends DataFileWithDate<SnippetFile> {
 
+  static override modelDir = 'snippets';
+
   route: string;
   archiveLink: string;
   previewMarkdown: string | null;

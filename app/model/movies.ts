@@ -12,6 +12,8 @@ interface MovieFile {
 
 export class Movie extends DataFile<MovieFile> {
 
+  static override modelDir = 'movies';
+
   route: string;
   imageBig: string;
   imageSmall: string;
