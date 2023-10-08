@@ -9,6 +9,13 @@ const md = markdownit({
   breaks: true
 });
 
+const params = new URLSearchParams(window.location.search);
+document.querySelector('input[name=archivePage]').value = params.get('archivePage');
+document.querySelector('input[name=archiveSlug]').value = params.get('archiveSlug');
+document.querySelector('input[name=bookSlug]').value = params.get('bookSlug');
+document.querySelector('iframe').src = params.get('archiveLink');
+document.getElementById('old-body').innerHTML = params.get('renderedBody');
+
 const titleInput = document.querySelector('input[name=title]');
 const slugInput = document.querySelector('input[name=slug]');
 const contentInput = document.querySelector('textarea[name=markdownContent]');

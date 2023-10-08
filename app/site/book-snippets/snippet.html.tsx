@@ -3,6 +3,7 @@ import { FormatDate } from "../../components/format-date";
 import { LatestBookSnippets } from "../../components/latest-snippets";
 import { isDev } from "../../core/helpers";
 import { Snippet, allSnippets } from '../../model/snippets';
+import { createSnippetRoute } from "../admin/create-snippet.html";
 
 export default allSnippets.map(snippet => {
   const singleFile = snippet.book.data.files.length === 1;
@@ -10,6 +11,14 @@ export default allSnippets.map(snippet => {
     .find(file => file.archiveId === snippet.data.archiveSlug)
     ?.pdfFile
     .replace('.pdf', ''));
+
+  const createSnippetParams = new URLSearchParams({
+    'archivePage': snippet.data.archivePage,
+    'archiveSlug': snippet.data.archiveSlug,
+    'bookSlug': snippet.data.bookSlug,
+    'renderedBody': snippet.renderedBody,
+    'archiveLink': snippet.archiveLink,
+  });
 
   return [`${snippet.slug}.html`, <>
     <Common.TypicalPage image={snippet.book.category.imageBig}>
@@ -50,7 +59,7 @@ export default allSnippets.map(snippet => {
           <details open>
             <summary>Admin</summary>
             <ul>
-              <li><a href={`/admin/create-snippet/${snippet.slug}.html`}>Make next snippet</a></li>
+              <li><a href={`${createSnippetRoute}?${createSnippetParams}`}>Make next snippet</a></li>
             </ul>
           </details>
         </>}

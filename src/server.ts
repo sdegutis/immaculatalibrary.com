@@ -11,7 +11,7 @@ export class Server {
 
   startServer(port: number) {
     const server = http.createServer((req, res) => {
-      const url = req.url!;
+      const url = req.url!.split('?')[0]!;
 
       if (req.method === 'POST') {
         const handler = this.post?.get(url);

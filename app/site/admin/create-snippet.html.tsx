@@ -1,9 +1,12 @@
-import { darkModeScript } from "../../../components/darkmode/dark-mode";
-import { EmptyPage } from "../../../components/page";
-import { Typography } from "../../../components/typography";
-import { calculateReadingMins } from "../../../core/helpers";
-import { Snippet, allSnippets } from '../../../model/snippets';
-import { handlers } from "../../../post";
+import { darkModeScript } from "../../components/darkmode/dark-mode";
+import { EmptyPage } from "../../components/page";
+import { Typography } from "../../components/typography";
+import { calculateReadingMins } from "../../core/helpers";
+import { Snippet } from '../../model/snippets';
+import { handlers } from "../../post";
+import { makeRouteFor } from "../../routes";
+
+export const createSnippetRoute = makeRouteFor(__filename);
 
 handlers.set('/create-snippet', body => {
   const params = new URLSearchParams(body);
@@ -24,7 +27,7 @@ handlers.set('/create-snippet', body => {
   return `/book-snippets/${slug}.html`;
 });
 
-export default allSnippets.map(snippet => [`${snippet.slug}.html`, <>
+export default <>
   <EmptyPage>
     <link rel='stylesheet' href='/admin/clone-style.css' />
     <link rel='stylesheet' href='/admin/admin-form.css' />
@@ -37,9 +40,9 @@ export default allSnippets.map(snippet => [`${snippet.slug}.html`, <>
     <main>
       <div id='left-panel'>
         <form method='POST' action='/create-snippet'>
-          <span>Page</span>    <input autocomplete='off' name='archivePage' value={snippet.data.archivePage} autofocus />
-          <span>Link</span>    <input autocomplete='off' name='archiveSlug' value={snippet.data.archiveSlug} />
-          <span>Book</span>    <input autocomplete='off' name='bookSlug' value={snippet.data.bookSlug} />
+          <span>Page</span>    <input autocomplete='off' name='archivePage' autofocus />
+          <span>Link</span>    <input autocomplete='off' name='archiveSlug' />
+          <span>Book</span>    <input autocomplete='off' name='bookSlug' />
           <span>Title</span>   <input autocomplete='off' name='title' />
           <span>Slug</span>    <input autocomplete='off' name='slug' />
           <span>Text</span> <textarea name='markdownContent' />
@@ -51,7 +54,7 @@ export default allSnippets.map(snippet => [`${snippet.slug}.html`, <>
           </span>
         </form>
         <Typography>
-          {snippet.renderedBody}
+          <div id='old-body'></div>
         </Typography>
       </div>
       <div id='editorarea'></div>
@@ -61,13 +64,13 @@ export default allSnippets.map(snippet => [`${snippet.slug}.html`, <>
         </Typography>
       </div>
       <div style='overflow:hidden'>
-        <iframe src={snippet.archiveLink}></iframe>
+        <iframe />
       </div>
     </main>
 
   </EmptyPage>
 
-</>]);
+</>;
 
 function MarkdownClientSide() {
   return <script

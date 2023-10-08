@@ -6,3 +6,7 @@ export function staticRouteFor([filepath, buffer]: [string, Buffer]) {
   resources.set(filepath, buffer);
   return filepath;
 }
+
+export function makeRouteFor(filename: string) {
+  return filename.slice('/site'.length, -'.tsx'.length);
+}
