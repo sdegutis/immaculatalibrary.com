@@ -21,7 +21,7 @@ export default allSnippets.map(snippet => {
 
           <h1>{snippet.renderedTitle}</h1>
 
-          <p><FormatDate>{snippet.date}</FormatDate> &bull; {snippet.mins} min</p>
+          <p><FormatDate date={snippet.date} /> &bull; {snippet.mins} min</p>
 
           <p>
             {[...snippet.tags].map(tag => <>

@@ -1,9 +1,15 @@
-import { staticRouteFor } from '../../routes';
-import script from './formatdate.js';
-
-export const FormatDate: JSX.Component<{}> = (attrs, children) => {
+export const FormatDate: JSX.Component<{ date: string }> = (attrs, children) => {
   return <>
-    <script type="module" src={staticRouteFor(script)}></script>
-    <span class='format-date'>{children}</span>
+    <span class='format-date'>{formatDate(attrs.date)}</span>
   </>;
 };
+
+const formatter = new Intl.DateTimeFormat('en-EN', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+
+function formatDate(date: string) {
+  return formatter.format(new Date(date));
+}

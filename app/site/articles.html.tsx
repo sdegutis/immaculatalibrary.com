@@ -19,7 +19,7 @@ export default <>
                 {article.data.title}
               </a>
               <span class="date">
-                <FormatDate>{article.date}</FormatDate> &bull; {article.mins} min
+                <FormatDate date={article.date} /> &bull; {article.mins} min
               </span>
               <div class="excerpt">
                 {markdown.render(excerpt(article.content))}

@@ -1,5 +1,5 @@
+import { formatAllDates } from './formatdate.js';
 import { snippetsData } from "./modules/load-snippets.js";
-import { formatAllDates } from '/components/format-date/formatdate.js';
 
 export function showSnippetGroups(filter) {
   const host = document.getElementById('snippets-group-area');

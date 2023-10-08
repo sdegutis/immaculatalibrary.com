@@ -17,7 +17,7 @@ export default allArticles.map(article => [`${article.slug}.html`, <>
         {article.data.imageCaption && <small>(Image: {article.data.imageCaption})</small>}
 
         <p class="date">
-          <FormatDate>{article.date}</FormatDate> &bull; {article.mins} min
+          <FormatDate date={article.date} /> &bull; {article.mins} min
         </p>
 
         {markdown.render(article.content)}
