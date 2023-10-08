@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', formatAllDates);
 
-function formatAllDates() {
+export function formatAllDates() {
   for (const el of document.querySelectorAll('.format-date')) {
     el.textContent = formatDate(el.textContent);
     el.classList.remove('format-date');

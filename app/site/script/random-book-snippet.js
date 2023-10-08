@@ -1,4 +1,5 @@
 import { snippetsData } from './modules/load-snippets.js';
+import { formatAllDates } from '/components/format-date/formatdate.js';
 
 makeContinueReadingLinkWork();
 

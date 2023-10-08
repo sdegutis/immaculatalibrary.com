@@ -1,4 +1,5 @@
 import * as Common from "../../components/common";
+import { FormatDate } from "../../components/format-date/format-date";
 import { markdown } from "../../core/helpers";
 import { allArticles } from "../../model/articles";
 
@@ -16,7 +17,7 @@ export default allArticles.map(article => [`${article.slug}.html`, <>
         {article.data.imageCaption && <small>(Image: {article.data.imageCaption})</small>}
 
         <p class="date">
-          <span class='format-date'>{article.date}</span> &bull; {article.mins} min
+          <FormatDate>{article.date}</FormatDate> &bull; {article.mins} min
         </p>
 
         {markdown.render(article.content)}
