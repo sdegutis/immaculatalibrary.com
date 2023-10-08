@@ -1,6 +1,6 @@
 import { allMovies } from '../model/movies';
 
-export const MoviesSidebar: JSX.Component<{}> = (attrs, children) => <>
+export const MoviesSidebar: JSX.Component = (attrs, children) => <>
   <div>
     <ul>
       {allMovies.map(movie => <li>

@@ -1,6 +1,6 @@
 import { SnippetsGroups } from "./snippet-groups";
 
-export const LatestBookSnippets: JSX.Component<{}> = (attrs, children) => {
+export const LatestBookSnippets: JSX.Component = (attrs, children) => {
   return <>
 
     <h3>Latest book snippets</h3>

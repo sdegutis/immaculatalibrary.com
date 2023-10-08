@@ -1,7 +1,7 @@
 import { allCategories } from '../model/categories';
 import { allMovies } from '../model/movies';
 
-export const QuickLinks: JSX.Component<{}> = (attrs, children) => {
+export const QuickLinks: JSX.Component = (attrs, children) => {
   return <>
     <link rel="stylesheet" href='/css/quicklinks.css' />
 

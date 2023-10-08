@@ -3,7 +3,7 @@ declare module JSX {
     [tag: string]: Record<string, string | boolean>;
   };
   export type Element = import('./src/jsx').JsxElement;
-  export type Component<T extends Record<string, any>> =
+  export type Component<T extends Record<string, any> = {}> =
     (attrs: T, children: any) => Element;
 }
 

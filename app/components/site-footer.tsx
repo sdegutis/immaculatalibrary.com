@@ -1,6 +1,6 @@
 import { DarkModeButton } from "./darkmode/dark-mode";
 
-export const SiteFooter: JSX.Component<{}> = (attrs, children) => <>
+export const SiteFooter: JSX.Component = (attrs, children) => <>
   <footer id='site-footer'>
     <link rel="stylesheet" href='/css/site-footer.css' />
     <p>

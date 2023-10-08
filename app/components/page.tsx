@@ -3,7 +3,7 @@ import { QuickLinks } from "./quicklinks";
 import { SiteFooter } from "./site-footer";
 import { SiteHeader } from "./site-header";
 
-export const EmptyPage: JSX.Component<{}> = (attrs, children) => <>
+export const EmptyPage: JSX.Component = (attrs, children) => <>
   {'<!DOCTYPE html>'}
   <html lang="en">
 

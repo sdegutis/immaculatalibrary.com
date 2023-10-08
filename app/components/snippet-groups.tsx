@@ -1,4 +1,4 @@
-export const SnippetsGroups: JSX.Component<{}> = (attrs, children) => <>
+export const SnippetsGroups: JSX.Component = (attrs, children) => <>
   <link rel='stylesheet' href='/css/snippet-groups.css' />
   <script type='module' src='/script/snippet-groups.js' />
 
