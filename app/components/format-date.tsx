@@ -1,7 +1,5 @@
 export const FormatDate: JSX.Component<{ date: string }> = (attrs, children) => {
-  return <>
-    <span>{formatDate(attrs.date)}</span>
-  </>;
+  return <>{formatDate(attrs.date)}</>;
 };
 
 const formatter = new Intl.DateTimeFormat('en-EN', {
