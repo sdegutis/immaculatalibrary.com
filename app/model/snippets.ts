@@ -1,10 +1,8 @@
 import { DataFileWithDate } from "../core/data-files";
-import { calculateReadingMins, markdown, sortBy } from "../core/helpers";
+import { calculateReadingMins, derivePreview, markdown, sortBy } from "../core/helpers";
 import allSnippetFiles from "../data/snippets/";
 import { Book, allBooks, booksBySlug } from './books';
 import { Tag } from './tag';
-
-const PREVIEW_LENGTH = 2000;
 
 interface SnippetFile {
   published: boolean;
@@ -26,7 +24,7 @@ export class Snippet extends DataFileWithDate<SnippetFile> {
   renderedTitle: string;
   mins: number;
 
-  book!: Book;
+  book: Book;
   prevSnippet?: Snippet;
   nextSnippet?: Snippet;
   tagsForSnippet: Set<Tag>;
@@ -50,21 +48,6 @@ export class Snippet extends DataFileWithDate<SnippetFile> {
     book.snippets.push(this);
   }
 
-}
-
-function derivePreview(snippet: Snippet) {
-  const paragraphs = snippet.content.trim().split(/(\r?\n>+ *\r?\n)/);
-
-  let running = 0;
-  for (let i = 0; i < paragraphs.length; i++) {
-    running += paragraphs[i]!.length;
-    if (running > PREVIEW_LENGTH) break;
-  }
-
-  if (running < snippet.content.trim().length - 1) {
-    return snippet.content.substring(0, running);
-  }
-  return null;
 }
 
 export const allSnippets = (allSnippetFiles
