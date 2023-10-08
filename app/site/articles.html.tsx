@@ -1,5 +1,5 @@
 import * as Common from "../components/common";
-import { FormatDate } from "../components/format-date/format-date";
+import { FormatDate } from "../components/format-date";
 import { excerpt, markdown } from "../core/helpers";
 import { allArticles } from "../model/articles";
 

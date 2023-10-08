@@ -1,4 +1,4 @@
-import { FormatDate } from "../../../components/format-date/format-date";
+import { FormatDate } from "../../../components/format-date";
 import { markdown } from "../../../core/helpers";
 import { allSnippets } from '../../../model/snippets';
 

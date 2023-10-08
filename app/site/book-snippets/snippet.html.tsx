@@ -1,5 +1,5 @@
 import * as Common from "../../components/common";
-import { FormatDate } from "../../components/format-date/format-date";
+import { FormatDate } from "../../components/format-date";
 import { LatestBookSnippets } from "../../components/latest-snippets";
 import { isDev } from "../../core/helpers";
 import { Snippet, allSnippets } from '../../model/snippets';
