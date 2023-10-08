@@ -27,7 +27,7 @@ export class Snippet extends DataFileWithDate<SnippetFile> {
   book: Book;
   prevSnippet?: Snippet;
   nextSnippet?: Snippet;
-  tagsForSnippet: Set<Tag>;
+  tags: Set<Tag>;
 
   constructor(slug: string, content: string, data: SnippetFile) {
     super(slug, content, data);
@@ -41,7 +41,7 @@ export class Snippet extends DataFileWithDate<SnippetFile> {
     this.renderedTitle = markdown.renderInline(this.data.title);
     this.mins = calculateReadingMins(this.content);
 
-    this.tagsForSnippet = new Set([...this.data.tags ?? []].map(Tag.getOrCreate));
+    this.tags = new Set([...this.data.tags ?? []].map(Tag.getOrCreate));
 
     const book = booksBySlug[this.data.bookSlug]!;
     this.book = book;

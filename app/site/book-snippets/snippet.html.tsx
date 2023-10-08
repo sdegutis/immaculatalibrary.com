@@ -23,7 +23,7 @@ export default allSnippets.map(snippet => {
           <p><span class='format-date'>{snippet.date}</span> &bull; {snippet.mins} min</p>
 
           <p>
-            {[...snippet.tagsForSnippet].map(tag => <>
+            {[...snippet.tags].map(tag => <>
               <a href={tag.route}>#{tag.oneword}</a> { }
             </>)}
           </p>
