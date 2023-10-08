@@ -1,5 +1,19 @@
-import { formatAllDates } from './formatdate.js';
 import { snippetsData } from "./modules/load-snippets.js";
+
+export function formatAllDates() {
+  for (const el of document.querySelectorAll('.format-date')) {
+    el.textContent = formatDate(el.textContent);
+    el.classList.remove('format-date');
+  }
+}
+
+function formatDate(dateStr) {
+  return new Date(dateStr.split('-')).toLocaleDateString('en-EN', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+}
 
 export function showSnippetGroups(filter) {
   const host = document.getElementById('snippets-group-area');

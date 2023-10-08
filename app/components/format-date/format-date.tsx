@@ -1,6 +1,6 @@
 export const FormatDate: JSX.Component<{ date: string }> = (attrs, children) => {
   return <>
-    <span class='format-date'>{formatDate(attrs.date)}</span>
+    <span>{formatDate(attrs.date)}</span>
   </>;
 };
 

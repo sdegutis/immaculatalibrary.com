@@ -1,4 +1,3 @@
-import { formatAllDates } from './formatdate.js';
 import { snippetsData } from './modules/load-snippets.js';
 
 makeContinueReadingLinkWork();
@@ -33,7 +32,6 @@ function doRandomBookSnippet() {
 function insertRandomBookSnippet(text) {
   const container = document.getElementById('random-book-snippet');
   container.innerHTML = text;
-  formatAllDates();
   makeContinueReadingLinkWork();
 }
 
