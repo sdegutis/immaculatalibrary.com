@@ -34,7 +34,7 @@
   white-space: nowrap;
 }
 
-ul.snippets-latest {
+ul.snippets-in-book {
   padding-left: 0;
   max-height: 700px;
   overflow: auto;

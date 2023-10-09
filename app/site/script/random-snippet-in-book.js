@@ -1,12 +1,8 @@
-import { snippetsData } from "./modules/load-snippets.js";
-
 const button = document.getElementById('random-snippet-in-book-button');
-
 button.onclick = (e) => {
-  e.preventDefault();
-  snippetsData.then(({ snippets }) => {
-    snippets = snippets.filter(s => s.book === button.dataset.book);
-    const i = Math.floor(Math.random() * snippets.length);
-    window.location = snippets[i].url;
-  });
+  const ul = document.querySelector('.snippets-in-book');
+  const as = [...ul.querySelectorAll('a')];
+  const i = Math.floor(Math.random() * as.length);
+  const a = as[i];
+  button.href = a.href;
 };
