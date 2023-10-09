@@ -1,6 +1,6 @@
 import * as Common from "../../components/common";
 import { FormatDate } from "../../components/format-date";
-import { LatestBookSnippets } from "../../components/latest-snippets";
+import { SnippetsGroups } from "../../components/snippet-groups";
 import { isDev } from "../../core/helpers";
 import { Snippet, allSnippets } from '../../model/snippets';
 import { createSnippetRoute } from "../admin/create-snippet.html";
@@ -52,7 +52,12 @@ export default allSnippets.map(snippet => {
 
         </Common.Typography>
         <div>
-          <LatestBookSnippets />
+          <h3>Latest book snippets</h3>
+          <SnippetsGroups />
+          <script type='module'>{`
+            import { showSnippetGroups } from '/script/snippet-groups.js';
+            showSnippetGroups((s, i) => i < 10);
+          `}</script>
         </div>
 
         {isDev && <>
