@@ -21,3 +21,8 @@ declare module '*.js' {
   const file: [string, Buffer];
   export default file;
 }
+
+declare module '*!path' {
+  const filepath: string;
+  export default filepath;
+}

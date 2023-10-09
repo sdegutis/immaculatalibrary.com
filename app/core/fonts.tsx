@@ -1,6 +1,5 @@
 import { randomUUID } from "crypto";
 import path from "path";
-import { staticRouteFor } from "../routes";
 
 export const Font: JSX.Component<{
   use: [string, Buffer][]
@@ -10,7 +9,7 @@ export const Font: JSX.Component<{
   const name = path.basename(dir[0]![0]).split('-')[0]!;
 
   const lines = dir.map(file => {
-    const route = staticRouteFor(file);
+    const route = file[0];
     const weight = path.basename(file[0]).match(/\d+/)![0];
     return `@font-face {
       font-display: block;

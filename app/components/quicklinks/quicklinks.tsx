@@ -1,13 +1,12 @@
 import { allCategories, categoriesBySlug } from '../../model/categories';
 import { allMovies } from '../../model/movies';
-import { staticRouteFor } from '../../routes';
 import { featuredBooks } from '../featured/featured';
 import { Typography } from '../typography';
-import css from './quicklinks.css';
+import css from './quicklinks.css!path';
 
 export const QuickLinks: JSX.Component = (attrs, children) => {
   return <>
-    <link rel="stylesheet" href={staticRouteFor(css)} />
+    <link rel="stylesheet" href={css} />
 
     <div class="recents alt">
 

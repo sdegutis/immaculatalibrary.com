@@ -1,9 +1,6 @@
-import { staticRouteFor } from '../../routes';
-import script from './darkmode.js';
-
-export const darkModeScript = staticRouteFor(script);
+import script from './darkmode.js!path';
 
 export const DarkModeButton: JSX.Component = (attrs, children) => <>
-  <script src={darkModeScript} defer></script>
+  <script src={script} defer></script>
   <a href="#" class="dark-mode-toggle">Dark mode</a>
 </>;

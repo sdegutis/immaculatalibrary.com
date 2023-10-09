@@ -90,11 +90,22 @@ export class Module {
       );
     }
 
-    const file = this.runtime.fs.files.get(absPath);
+    if (absPath.endsWith('!path')) {
+      const fixedPath = absPath.slice(0, -'!path'.length);
+      const file = this.runtime.fs.files.get(fixedPath);
 
-    if (file) {
-      this.runtime.addDeps(this.filepath, absPath);
-      return [absPath, file];
+      if (file) {
+        this.runtime.addDeps(this.filepath, fixedPath);
+        return fixedPath;
+      }
+    }
+    else {
+      const file = this.runtime.fs.files.get(absPath);
+
+      if (file) {
+        this.runtime.addDeps(this.filepath, absPath);
+        return [absPath, file];
+      }
     }
 
     throw new Error(`Can't find file at path: ${toPath}`);

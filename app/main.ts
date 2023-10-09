@@ -1,4 +1,5 @@
 import path from 'path/posix';
+import resources from './components/';
 import { isDev } from './core/helpers';
 import * as routes from './routes';
 import files from './site/';
@@ -35,8 +36,10 @@ for (const [filepath, contents] of files) {
   }
 }
 
-for (const [filepath, contents] of routes.resources) {
-  routes.out.set(filepath, contents);
+for (const [outpath, contents] of resources) {
+  if (!outpath.match(/\.tsx?$/)) {
+    routes.out.set(outpath, contents);
+  }
 }
 
 console.timeEnd('Building views');
