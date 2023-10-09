@@ -8,7 +8,7 @@ export default <>
     'xsi:schemaLocation': "http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd",
     'xmlns': "http://www.sitemaps.org/schemas/sitemap/0.9",
   }}>
-    {[...out.keys()].map(filepath => {
+    {[...out.keys()].filter(filepath => filepath.endsWith('.html')).map(filepath => {
       const name = path.basename(filepath);
       const date = name.match(/^(\d{4}-\d{2}-\d{2})-/)?.[1];
       return <>
