@@ -97,10 +97,10 @@ export default <>
           </div>
           <script type='module' src='/script/random-book-snippet.js' defer />
 
-          <h3>Book Snippets by Tag</h3>
+          {/* <h3>Book Snippets by Tag</h3>
           <p>{sortedTags().map(tag => <>
             <a href={tag.route}>#{tag.oneword}</a> { }
-          </>)}</p>
+          </>)}</p> */}
         </div>
         <div>
 
