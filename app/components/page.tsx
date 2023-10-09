@@ -1,5 +1,5 @@
 import { Navlinks } from "./navlinks";
-import { QuickLinks } from "./quicklinks";
+import { QuickLinks } from "./quicklinks/quicklinks";
 import { SiteFooter } from "./site-footer";
 import { SiteHeader } from "./site-header";
 

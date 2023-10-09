@@ -1,4 +1,5 @@
 import * as Common from "../components/common";
+import { featuredBooks } from "../components/featured/featured";
 import { EmptyPage } from "../components/page";
 import { booksBySlug } from '../model/books';
 
@@ -67,33 +68,19 @@ export default <>
         <div>
 
           <h3>Featured books</h3>
-
-          <ul id='featured-books'>
-            {[
-              'introduction-to-the-devout-life',
-              'imitation-of-christ',
-              'st-john-henry-newman-reply-to-eirenicon',
-              'catena-aurea',
-              'the-sinners-guide',
-              'the-spiritual-combat',
-              'the-glories-of-mary',
-              'catholic-encyclopedia',
-            ].map(id => {
-              const book = booksBySlug[id]!;
-
-              return <>
-                <li>
-                  <h3>
-                    <a href={book.route}>
-                      {book.data.title}
-                    </a>
-                  </h3>
-                  <Common.Typography>
-                    <p>{book.data.frontpage!.why}</p>
-                  </Common.Typography>
-                </li>
-              </>;
-            })}
+          <ul id='home-featured-books'>
+            {featuredBooks.map(book => <>
+              <li>
+                <h3>
+                  <a href={book.route}>
+                    {book.data.title}
+                  </a>
+                </h3>
+                <Common.Typography>
+                  <p>{book.data.frontpage!.why}</p>
+                </Common.Typography>
+              </li>
+            </>)}
           </ul>
 
         </div>
