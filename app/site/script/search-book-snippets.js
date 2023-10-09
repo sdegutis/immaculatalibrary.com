@@ -1,4 +1,3 @@
-import { snippetsData } from './modules/load-snippets.js';
 import { showSnippetGroups } from './snippet-groups.js';
 
 const input = document.getElementById('search-book-snippets-field');
@@ -12,8 +11,6 @@ input.addEventListener('input', (e) => {
 searchBookSnippets();
 
 async function searchBookSnippets() {
-  const snippetInfo = await snippetsData;
-
   const searchTerm = input.value.trim().toLowerCase();
 
   if (searchTerm) {
