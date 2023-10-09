@@ -1,9 +1,6 @@
 import * as Common from "../components/common";
-import { LatestBookSnippets } from "../components/latest-snippets";
 import { EmptyPage } from "../components/page";
-import { categoriesBySlug } from '../model/categories';
 import { booksBySlug } from '../model/books';
-import { sortedTags } from "../model/tag";
 
 export default <>
   <EmptyPage>
@@ -24,8 +21,8 @@ export default <>
 
     <main>
 
-      <Common.Column spaced centered>
-        <div class="home">
+      <div id="letters-from-heaven">
+        <Common.Column spaced centered>
           <Common.Typography>
             <h2>Letters from Heaven</h2>
             <blockquote>
@@ -44,43 +41,7 @@ export default <>
               </ul>
             </blockquote>
           </Common.Typography>
-        </div>
-      </Common.Column>
-
-      <div id='featured-books-area'>
-
-        <div id='featured-books-container'>
-
-          <h2>Featured books</h2>
-
-          <ul id='featured-books'>
-            {[
-              'introduction-to-the-devout-life',
-              'imitation-of-christ',
-              'st-john-henry-newman-reply-to-eirenicon',
-              'catena-aurea',
-              'the-sinners-guide',
-              'the-spiritual-combat',
-              'the-glories-of-mary',
-              'catholic-encyclopedia',
-            ].map(id => {
-              const book = booksBySlug[id]!;
-
-              const imageUrl = categoriesBySlug[book.data.frontpage!.image]!.imageBig;
-              return <>
-                <li class='featured-book'>
-                  <h3><a href={book.route}>{book.data.title}</a></h3>
-                  <a href={book.route}>
-                    <div class='thumb' style={`background-image: url(${imageUrl})`} />
-                  </a>
-                  <Common.Typography><p>{book.data.frontpage!.why}</p></Common.Typography>
-                </li>
-              </>;
-            })}
-          </ul>
-
-        </div>
-
+        </Common.Column>
       </div>
 
       <Common.Column spaced split>
@@ -102,9 +63,38 @@ export default <>
             <a href={tag.route}>#{tag.oneword}</a> { }
           </>)}</p> */}
         </div>
+
         <div>
 
-          <LatestBookSnippets />
+          <h3>Featured books</h3>
+
+          <ul id='featured-books'>
+            {[
+              'introduction-to-the-devout-life',
+              'imitation-of-christ',
+              'st-john-henry-newman-reply-to-eirenicon',
+              'catena-aurea',
+              'the-sinners-guide',
+              'the-spiritual-combat',
+              'the-glories-of-mary',
+              'catholic-encyclopedia',
+            ].map(id => {
+              const book = booksBySlug[id]!;
+
+              return <>
+                <li>
+                  <h3>
+                    <a href={book.route}>
+                      {book.data.title}
+                    </a>
+                  </h3>
+                  <Common.Typography>
+                    <p>{book.data.frontpage!.why}</p>
+                  </Common.Typography>
+                </li>
+              </>;
+            })}
+          </ul>
 
         </div>
 

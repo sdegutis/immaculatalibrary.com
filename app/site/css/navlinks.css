@@ -4,6 +4,9 @@
   justify-content: center;
   gap: 1em;
   margin: 2em 0;
+}
+
+#navlinks.divider {
   padding-bottom: 2em;
   border-bottom: 1px solid var(--border-color);
 }

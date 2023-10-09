@@ -1,9 +1,9 @@
 import { Column } from "./column/column";
 
-export const Navlinks: JSX.Component = () => <>
+export const Navlinks: JSX.Component<{ divider?: boolean }> = (attrs) => <>
   <link rel="stylesheet" href='/css/navlinks.css' />
   <Column>
-    <div id='navlinks'>
+    <div id='navlinks' class={attrs.divider ? 'divider' : ''}>
       <a href='/about.html'>About</a>{' | '}
       <a href='/books.html'>Books</a>{' | '}
       <a href='/movies.html'>Movies</a>{' | '}

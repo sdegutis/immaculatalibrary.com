@@ -37,7 +37,7 @@ export const TypicalPage: JSX.Component<{ image: string }> = (attrs, children) =
   <EmptyPage>
 
     <SiteHeader image={attrs.image} />
-    <Navlinks />
+    <Navlinks divider />
 
     <main>
       {children}

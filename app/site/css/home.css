@@ -56,61 +56,19 @@
   padding: 1em;
 }
 
-.home .typography blockquote li {
+#letters-from-heaven {
+  padding: 1px 0;
+  background: var(--bgalt);
+}
+
+#letters-from-heaven .typography blockquote li {
   list-style-type: none;
 }
 
-.home .typography blockquote li p {
+#letters-from-heaven .typography blockquote li p {
   margin-bottom: 0;
 }
 
-#featured-books-area {
-  background: var(--bgalt);
-  padding: 3em 0;
-}
-
-#featured-books-container {
-  margin: 0 auto;
-  max-width: calc(100% - 4em);
-}
-
 #featured-books {
-  padding-left: 0;
-  list-style-type: none;
-
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 2em;
-}
-
-@media (min-width: 450px) {
-  #featured-books {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 750px) {
-  #featured-books {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (min-width: 1050px) {
-  #featured-books {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media (min-width: 1350px) {
-  #featured-books {
-    grid-template-columns: repeat(5, 1fr);
-  }
-}
-
-.featured-book .thumb {
-  margin-bottom: 1em;
-  width: 100%;
-  height: 10em;
-  background-position: center;
-  background-size: cover;
+  padding-left: 20px;
 }
