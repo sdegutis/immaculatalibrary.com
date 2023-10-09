@@ -1,22 +1,25 @@
 import * as Common from "../components/common";
 import { featuredBooks } from "../components/featured/featured";
+import davidlibre from '../components/fonts/davidlibre/';
 import { EmptyPage } from "../components/page";
-import { booksBySlug } from '../model/books';
+import { Font } from "../core/fonts";
 
 export default <>
   <EmptyPage>
 
     <link rel="stylesheet" href="/css/home.css" />
 
-    <section id="home-hero" style={`background-image: url(/img/page/home.jpg)`}>
-      <div></div>
-      <div>
+    <Font use={davidlibre} fallback='serif'>
+      <section id="home-hero" style={`background-image: url(/img/page/home.jpg)`}>
+        <div></div>
         <div>
-          <h1><a href='/'>Immaculata Library</a></h1>
-          <p>Catholic Digital Library</p>
+          <div>
+            <h1><a href='/'>Immaculata Library</a></h1>
+            <p>Catholic Digital Library</p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </Font>
 
     <Common.Navlinks />
 
