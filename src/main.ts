@@ -10,7 +10,7 @@ server.startServer(8080);
 
 const site = new Site();
 const artifacts = site.build();
-server.files = artifacts?.default;
+server.files = artifacts?.outfiles;
 server.handlers = artifacts?.handlers;
 
 const updatedPaths = new Set<string>();
@@ -24,7 +24,7 @@ const pathUpdated = (filePath: string) => {
     site.pathsUpdated(...updatedPaths);
 
     const artifacts = site.build();
-    server.files = artifacts?.default;
+    server.files = artifacts?.outfiles;
     server.handlers = artifacts?.handlers;
 
     updatedPaths.clear();

@@ -17,7 +17,7 @@ export class Site {
     try {
       const mainModule = this.#runtime.modules.get('/core/main.ts')!;
       return mainModule.require() as {
-        default: Map<string, Buffer | string>,
+        outfiles: Map<string, Buffer | string>,
         handlers: Map<string, (body: string) => string>,
       };
     }

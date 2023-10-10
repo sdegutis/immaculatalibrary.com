@@ -4,7 +4,7 @@ import { isDev } from './helpers';
 import files from '/';
 
 export const handlers = new Map<string, (body: string) => string>();
-export const out = new Map<string, Buffer | string>();
+export const outfiles = new Map<string, Buffer | string>();
 
 console.time('Building views');
 
@@ -23,25 +23,23 @@ for (const [filepath, contents] of files) {
 
       if (Array.isArray(exported)) {
         for (const [name, jsx] of exported) {
-          out.set(path.join(dir, name), (jsx as JSX.Element).stringify());
+          outfiles.set(path.join(dir, name), (jsx as JSX.Element).stringify());
         }
       }
       else {
-        out.set(filepath.slice(0, -4), (exported as JSX.Element).stringify());
+        outfiles.set(filepath.slice(0, -4), (exported as JSX.Element).stringify());
       }
     }
   }
   else if (!filepath.endsWith('.ts') && !filepath.endsWith('.md')) {
-    out.set(filepath, contents);
+    outfiles.set(filepath, contents);
   }
 }
 
 for (const [outpath, contents] of resources) {
   if (!outpath.match(/\.tsx?$/)) {
-    out.set(outpath, contents);
+    outfiles.set(outpath, contents);
   }
 }
 
 console.timeEnd('Building views');
-
-export default out;
