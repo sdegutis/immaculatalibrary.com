@@ -1,5 +1,5 @@
 import martel from '../components/fonts/martel/';
-import { Font } from "../core/fonts";
+import { Font } from "./fonts";
 import { Navlinks } from "./navlinks";
 import { QuickLinks } from "./quicklinks/quicklinks";
 import { SiteFooter } from "./site-footer";
