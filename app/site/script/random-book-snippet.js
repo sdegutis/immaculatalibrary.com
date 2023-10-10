@@ -23,7 +23,7 @@ function doRandomBookSnippet() {
     const i = Math.floor(Math.random() * snippets.length);
     const snippet = snippets[i];
 
-    fetch(`/data/snippets/${snippet.slug}-preview.html`)
+    fetch(`/dynamic/snippets/${snippet.slug}-preview.html`)
       .then(res => res.text())
       .then(insertRandomBookSnippet);
   });

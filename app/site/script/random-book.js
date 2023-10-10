@@ -1,4 +1,4 @@
-const books = fetch('/data/books.json').then(res => res.json());
+const books = fetch('/dynamic/books.json').then(res => res.json());
 
 for (const button of document.querySelectorAll('.random-book-button')) {
   button.onclick = (e) => {

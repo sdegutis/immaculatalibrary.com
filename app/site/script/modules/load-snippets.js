@@ -1,1 +1,1 @@
-export const snippetsData = fetch('/data/snippets.json').then(res => res.json());
+export const snippetsData = fetch('/dynamic/snippets.json').then(res => res.json());
