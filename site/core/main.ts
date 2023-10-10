@@ -8,12 +8,12 @@ export const outfiles = new Map<string, Buffer | string>();
 
 console.time('Building views');
 
-const sitemapIdx = files.findIndex(([filepath, content]) => filepath === '/sitemap.xml.tsx');
+const sitemapIdx = files.findIndex((file) => file.path === '/sitemap.xml.tsx');
 const sitemap = files[sitemapIdx]!;
 files.splice(sitemapIdx, 1);
 files.push(sitemap);
 
-for (const [filepath, contents] of files) {
+for (const { path: filepath, content } of files) {
   if (!isDev && filepath.startsWith('/admin/')) continue;
 
   if (filepath.endsWith('.tsx')) {
@@ -32,13 +32,13 @@ for (const [filepath, contents] of files) {
     }
   }
   else if (!filepath.endsWith('.ts') && !filepath.endsWith('.md')) {
-    outfiles.set(filepath, contents);
+    outfiles.set(filepath, content);
   }
 }
 
-for (const [outpath, contents] of resources) {
+for (const { path: outpath, content } of resources) {
   if (!outpath.match(/\.tsx?$/)) {
-    outfiles.set(outpath, contents);
+    outfiles.set(outpath, content);
   }
 }
 

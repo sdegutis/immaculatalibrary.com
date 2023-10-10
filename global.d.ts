@@ -7,22 +7,22 @@ declare module JSX {
     (attrs: T, children: any) => Element;
 }
 
+type FsFile = {
+  path: string;
+  content: Buffer;
+};
+
 declare module '*/' {
-  const dir: [string, Buffer][];
+  const dir: FsFile[];
   export default dir;
 }
 
 declare module '*.css' {
-  const file: [string, Buffer];
+  const file: FsFile;
   export default file;
 }
 
 declare module '*.js' {
-  const file: [string, Buffer];
+  const file: FsFile;
   export default file;
-}
-
-declare module '*!path' {
-  const filepath: string;
-  export default filepath;
 }

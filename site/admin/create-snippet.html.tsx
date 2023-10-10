@@ -1,4 +1,4 @@
-import darkModeScript from "../components/darkmode/darkmode.js!path";
+import darkModeScript from "../components/darkmode/darkmode.js";
 import { EmptyPage } from "../components/page";
 import { Typography } from "../components/typography";
 import { calculateReadingMins } from "../core/helpers";
@@ -32,7 +32,7 @@ export default <>
     <MonacoClientSide />
     <script>{calculateReadingMins.toString()}</script>
     <script src='/admin/new-book-snippet.js' defer></script>
-    <script src={darkModeScript} defer></script>
+    <script src={darkModeScript.path} defer></script>
 
     <main>
       <div id='left-panel'>

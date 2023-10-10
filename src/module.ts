@@ -89,26 +89,16 @@ export class Module {
       absPath === '/' ? '/' : absPath + '/';
       this.runtime.addDeps(this.filepath, dirPath);
       return ([...this.runtime.fs.files.entries()]
-        .filter(([filepath, content]) => filepath.startsWith((dirPath)))
+        .map(([path, content]) => ({ path, content }))
+        .filter(file => file.path.startsWith((dirPath)))
       );
     }
 
-    if (absPath.endsWith('!path')) {
-      const fixedPath = absPath.slice(0, -'!path'.length);
-      const file = this.runtime.fs.files.get(fixedPath);
+    const file = this.runtime.fs.files.get(absPath);
 
-      if (file) {
-        this.runtime.addDeps(this.filepath, fixedPath);
-        return fixedPath;
-      }
-    }
-    else {
-      const file = this.runtime.fs.files.get(absPath);
-
-      if (file) {
-        this.runtime.addDeps(this.filepath, absPath);
-        return [absPath, file];
-      }
+    if (file) {
+      this.runtime.addDeps(this.filepath, absPath);
+      return { path: absPath, content: file };
     }
 
     throw new Error(`Can't find file at path: ${toPath}`);

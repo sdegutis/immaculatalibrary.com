@@ -2,15 +2,15 @@ import { randomUUID } from "crypto";
 import path from "path";
 
 export const Font: JSX.Component<{
-  use: [string, Buffer][]
+  use: FsFile[]
   fallback: string,
 }> = (attrs, children) => {
   const dir = attrs.use;
-  const name = path.basename(dir[0]![0]).split('-')[0]!;
+  const name = path.basename(dir[0]!.path).split('-')[0]!;
 
   const lines = dir.map(file => {
-    const route = file[0];
-    const weight = path.basename(file[0]).match(/\d+/)![0];
+    const route = file.path;
+    const weight = path.basename(file.path).match(/\d+/)![0];
     return `@font-face {
       font-display: block;
       font-family: ${name};

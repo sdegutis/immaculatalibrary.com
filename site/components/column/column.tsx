@@ -1,4 +1,4 @@
-import columnCss from './column.css!path';
+import columnCss from './column.css';
 
 export const Column: JSX.Component<{ centered?: boolean, spaced?: boolean, split?: boolean }> = (attrs, children) => {
   const cssClass: string[] = [];
@@ -6,7 +6,7 @@ export const Column: JSX.Component<{ centered?: boolean, spaced?: boolean, split
   if (attrs.spaced) cssClass.push('spaced-main-content');
   if (attrs.split) cssClass.push('split-page');
   return <>
-    <link rel="stylesheet" href={columnCss} />
+    <link rel="stylesheet" href={columnCss.path} />
     <div class="container">
       <section class={cssClass.join(' ')}>
         {children}

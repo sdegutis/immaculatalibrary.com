@@ -8,7 +8,7 @@ export class DataFile<D> {
 
   static fromFile<T extends DataFile<any>>(
     this: new (...args: any[]) => T,
-    [filepath, rawContent]: [string, Buffer]
+    { path: filepath, content: rawContent }: FsFile
   ) {
     const slug = path.basename(filepath).slice(0, -3);
 
