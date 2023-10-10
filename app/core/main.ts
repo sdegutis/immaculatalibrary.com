@@ -1,8 +1,8 @@
 import path from 'path/posix';
-import resources from './components/';
-import { isDev } from './core/helpers';
+import resources from '../components/';
+import files from '../site/';
+import { isDev } from './helpers';
 import * as routes from './routes';
-import files from './site/';
 
 routes.out.clear();
 

@@ -1,5 +1,5 @@
 import path from 'path/posix';
-import { out } from '../routes';
+import { out } from '../core/routes';
 
 export default <>
   {'<?xml version="1.0" encoding="UTF-8"?>\n'}

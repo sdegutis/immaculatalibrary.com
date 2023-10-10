@@ -13,11 +13,11 @@ export class Site {
   }
 
   build() {
-    return this.requireSafely<Map<string, Buffer | string>>('/main.ts');
+    return this.requireSafely<Map<string, Buffer | string>>('/core/main.ts');
   }
 
   handler() {
-    return this.requireSafely<Map<string, (body: string) => string>>('/post.ts');
+    return this.requireSafely<Map<string, (body: string) => string>>('/core/post.ts');
   }
 
   requireSafely<T>(path: string) {
