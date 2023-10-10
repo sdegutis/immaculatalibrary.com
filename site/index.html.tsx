@@ -68,7 +68,7 @@ export default <>
           </>)}</p> */}
         </div>
 
-        <div>
+        <div class='hidden-on-mobile'>
 
           <h3>Featured books</h3>
           <ul id='home-featured-books'>

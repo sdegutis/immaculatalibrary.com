@@ -46,6 +46,16 @@
   }
 }
 
+.hidden-on-mobile {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .hidden-on-mobile {
+    display: block;
+  }
+}
+
 #home-hero>div>div {
   display: inline-block;
   background: #0007;
