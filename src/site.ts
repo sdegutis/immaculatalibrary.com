@@ -17,7 +17,7 @@ export class Site {
   }
 
   handler() {
-    return this.requireSafely<Map<string, (body: string) => string>>('/core/post.ts');
+    return this.requireSafely<Map<string, (body: string) => string>>('/core/handlers.ts');
   }
 
   requireSafely<T>(path: string) {
