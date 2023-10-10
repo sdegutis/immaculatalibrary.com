@@ -84,9 +84,12 @@ export class Module {
     }
 
     if (toPath.endsWith('/')) {
-      this.runtime.addDeps(this.filepath, absPath + '/');
+      const dirPath = absPath.endsWith('/') ? absPath : absPath + '/';
+
+      absPath === '/' ? '/' : absPath + '/';
+      this.runtime.addDeps(this.filepath, dirPath);
       return ([...this.runtime.fs.files.entries()]
-        .filter(([filepath, content]) => filepath.startsWith((absPath + '/')))
+        .filter(([filepath, content]) => filepath.startsWith((dirPath)))
       );
     }
 
