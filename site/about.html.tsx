@@ -1,5 +1,7 @@
 import * as Common from "./components/common";
 
+const sourceLink = "https://github.com/sdegutis/immaculatalibrary.com";
+
 export default <>
   <Common.TypicalPage image='/img/page/home.jpg'>
 
@@ -22,6 +24,11 @@ export default <>
           are selected for this website. This means, only books that
           have received official approbations from Bishops, <em>and</em> have
           helped to produce Saints, or are written by Saints, are offered.</p>
+
+        <p>The <a href={sourceLink}>source code</a> for this site has also served
+          as a perpetual pet project for me for the past few years, allowing me
+          to keep my software development skills fresh and keep alive my passion
+          for solving complex problems.</p>
 
       </Common.Typography>
     </Common.Column>
