@@ -2,9 +2,9 @@ import path from 'path/posix';
 import resources from '../components/';
 import files from '../site/';
 import { isDev } from './helpers';
-import * as routes from './routes';
 
-routes.out.clear();
+export const out = new Map<string, Buffer | string>();
+export default out;
 
 console.time('Building views');
 
@@ -24,24 +24,22 @@ for (const [filepath, contents] of files) {
 
     if (Array.isArray(exported)) {
       for (const [name, jsx] of exported) {
-        routes.out.set(path.join(dir, name), (jsx as JSX.Element).stringify());
+        out.set(path.join(dir, name), (jsx as JSX.Element).stringify());
       }
     }
     else {
-      routes.out.set(outpath.slice(0, -4), (exported as JSX.Element).stringify());
+      out.set(outpath.slice(0, -4), (exported as JSX.Element).stringify());
     }
   }
   else {
-    routes.out.set(outpath, contents);
+    out.set(outpath, contents);
   }
 }
 
 for (const [outpath, contents] of resources) {
   if (!outpath.match(/\.tsx?$/)) {
-    routes.out.set(outpath, contents);
+    out.set(outpath, contents);
   }
 }
 
 console.timeEnd('Building views');
-
-export default routes.out;
