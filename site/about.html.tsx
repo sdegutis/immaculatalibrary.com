@@ -1,9 +1,10 @@
 import * as Common from "./components/common";
+import image from './img/page/home.jpg';
 
 const sourceLink = "https://github.com/sdegutis/immaculatalibrary.com";
 
 export default <>
-  <Common.TypicalPage image='/img/page/home.jpg'>
+  <Common.TypicalPage image={image.path}>
 
     <Common.Column spaced centered>
       <Common.Typography>
