@@ -11,8 +11,6 @@ What I always wanted Jekyll to be:
 * **Unmagical**: There are no hard-coded rules about generating or loading anything; it's all done in app/main.ts
 * **Components**: Self-contained, reusable view code including style/script/image resources, in their own folders
 
-It was extracted from the [source code of immaculatalibrary.com](https://github.com/sdegutis/immaculatalibrary.com).
-
 
 ### Why a new SSG?
 
