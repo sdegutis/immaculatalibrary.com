@@ -1,8 +1,8 @@
-import davidlibre from '../components/fonts/davidlibre/';
 import * as Common from "./components/common";
 import { featuredBooks } from "./components/featured/featured";
 import { Font } from "./components/fonts";
 import { EmptyPage } from "./components/page";
+import davidlibre from './fonts/davidlibre/';
 
 export default <>
   <EmptyPage>

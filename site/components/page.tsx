@@ -1,4 +1,4 @@
-import martel from '../components/fonts/martel/';
+import martel from '../fonts/martel/';
 import { Font } from "./fonts";
 import { Navlinks } from "./navlinks";
 import { QuickLinks } from "./quicklinks/quicklinks";
