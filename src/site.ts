@@ -5,9 +5,10 @@ export class Site {
 
   #srcFs;
   #runtime;
+  #srcPath = 'site';
 
-  constructor(private srcPath: string) {
-    this.#srcFs = new FileSys(srcPath);
+  constructor() {
+    this.#srcFs = new FileSys(this.#srcPath);
     this.#runtime = new Runtime(this.#srcFs);
     this.#runtime.createModules();
   }
@@ -33,7 +34,7 @@ export class Site {
   }
 
   pathsUpdated(...paths: string[]) {
-    const fixedPaths = paths.map(p => p.slice(this.srcPath.length));
+    const fixedPaths = paths.map(p => p.slice(this.#srcPath.length));
 
     this.#srcFs.reflectChangesFromReal(fixedPaths);
     this.#runtime.updateModules(fixedPaths);

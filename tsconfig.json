@@ -25,9 +25,9 @@
     "skipLibCheck": true /* Skip type checking all .d.ts files. */,
   },
   "include": [
-    "./app/**/*.ts",
-    "./app/**/*.d.ts",
-    "./app/**/*.tsx",
+    "./site/**/*.ts",
+    "./site/**/*.d.ts",
+    "./site/**/*.tsx",
     "./global.d.ts"
   ],
   "references": [

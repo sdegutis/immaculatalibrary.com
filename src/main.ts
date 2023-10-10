@@ -8,7 +8,7 @@ process.env['DEV'] = '1';
 const server = new Server();
 server.startServer(8080);
 
-const site = new Site('app');
+const site = new Site();
 server.files = site.build();
 server.post = site.handler();
 
@@ -29,7 +29,7 @@ const pathUpdated = (filePath: string) => {
   }, 100);
 };
 
-(chokidar.watch('app', { ignoreInitial: true, cwd: process.cwd() })
+(chokidar.watch('site', { ignoreInitial: true, cwd: process.cwd() })
   .on('add', pathUpdated)
   .on('change', pathUpdated)
   .on('unlink', pathUpdated));
