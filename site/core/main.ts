@@ -1,5 +1,4 @@
 import path from 'path/posix';
-import resources from '../components/';
 import { isDev } from './helpers';
 import files from '/';
 
@@ -33,12 +32,6 @@ for (const { path: filepath, content } of files) {
   }
   else if (!filepath.endsWith('.ts') && !filepath.endsWith('.md')) {
     outfiles.set(filepath, content);
-  }
-}
-
-for (const { path: outpath, content } of resources) {
-  if (!outpath.match(/\.tsx?$/)) {
-    outfiles.set(outpath, content);
   }
 }
 
