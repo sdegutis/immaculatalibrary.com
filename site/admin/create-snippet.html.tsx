@@ -1,8 +1,8 @@
 import darkModeScript from "../components/darkmode/darkmode.js!path";
 import { EmptyPage } from "../components/page";
 import { Typography } from "../components/typography";
-import handlers from "../core/handlers";
 import { calculateReadingMins } from "../core/helpers";
+import { handlers } from "../core/main";
 import { Snippet } from '../model/snippets';
 
 handlers.set('/create-snippet', body => {

@@ -14,18 +14,12 @@ export class Site {
   }
 
   build() {
-    return this.requireSafely<Map<string, Buffer | string>>('/core/main.ts');
-  }
-
-  handler() {
-    return this.requireSafely<Map<string, (body: string) => string>>('/core/handlers.ts');
-  }
-
-  requireSafely<T>(path: string) {
     try {
-      const mainModule = this.#runtime.modules.get(path)!;
-      const exports = mainModule.require() as { default: T };
-      return exports.default;
+      const mainModule = this.#runtime.modules.get('/core/main.ts')!;
+      return mainModule.require() as {
+        default: Map<string, Buffer | string>,
+        handlers: Map<string, (body: string) => string>,
+      };
     }
     catch (e) {
       console.error(e);

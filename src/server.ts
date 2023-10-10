@@ -5,7 +5,7 @@ import path from "path/posix";
 export class Server {
 
   files: Map<string, Buffer | string> | undefined;
-  post?: Map<string, (body: string) => string> | undefined;
+  handlers?: Map<string, (body: string) => string> | undefined;
 
   events = new EventEmitter();
 
@@ -14,7 +14,7 @@ export class Server {
       const url = req.url!.split('?')[0]!;
 
       if (req.method === 'POST') {
-        const handler = this.post?.get(url);
+        const handler = this.handlers?.get(url);
         if (handler) {
           let data = '';
           req.on('data', (chunk: Buffer | string) => {

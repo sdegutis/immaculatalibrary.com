@@ -3,7 +3,7 @@ import path from 'path/posix';
 import { Site } from './site';
 
 const site = new Site();
-const out = site.build()!;
+const out = site.build()!.default;
 
 const madeDirs = new Set<string>();
 const mkdirIfNeeded = (dir: string) => {

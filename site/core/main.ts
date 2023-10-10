@@ -1,8 +1,9 @@
 import path from 'path/posix';
-import files from '/';
 import resources from '../components/';
 import { isDev } from './helpers';
+import files from '/';
 
+export const handlers = new Map<string, (body: string) => string>();
 export const out = new Map<string, Buffer | string>();
 
 console.time('Building views');
