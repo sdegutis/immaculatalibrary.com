@@ -3,10 +3,7 @@ import { EmptyPage } from "../../components/page";
 import { Typography } from "../../components/typography";
 import { calculateReadingMins } from "../../core/helpers";
 import { handlers } from "../../core/post";
-import { makeRouteFor } from "../../core/routes";
 import { Snippet } from '../../model/snippets';
-
-export const createSnippetRoute = makeRouteFor(__filename);
 
 handlers.set('/create-snippet', body => {
   const params = new URLSearchParams(body);

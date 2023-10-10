@@ -3,7 +3,6 @@ import { FormatDate } from "../../components/format-date";
 import { SnippetsGroups } from "../../components/snippet-groups";
 import { isDev } from "../../core/helpers";
 import { Snippet, allSnippets } from '../../model/snippets';
-import { createSnippetRoute } from "../admin/create-snippet.html";
 
 export default allSnippets.map(snippet => {
   const singleFile = snippet.book.data.files.length === 1;
@@ -64,7 +63,7 @@ export default allSnippets.map(snippet => {
           <details open>
             <summary>Admin</summary>
             <ul>
-              <li><a href={`${createSnippetRoute}?${createSnippetParams}`}>Make next snippet</a></li>
+              <li><a href={`/admin/create-snippet.html?${createSnippetParams}`}>Make next snippet</a></li>
             </ul>
           </details>
         </>}
