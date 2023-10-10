@@ -1,6 +1,26 @@
 This is the source to my hobby website, immaculatalibrary.com.
 
 
+### What is it?
+
+What I always wanted Jekyll to be:
+
+* **Fast**: Processing 1.3k+ markdown files and generating 3k+ routes takes <1s on initial load and <.5 on reloads
+* **Simple**: No special template language, just TypeScript views where JSX renders to strings but allows composition
+* **Small**: The core logic is ~365 lines of straightforward TypeScript under src/ split into 8 really small files
+* **Unmagical**: There are no hard-coded rules about generating or loading anything; it's all done in app/main.ts
+* **Components**: Self-contained, reusable view code including style/script/image resources, in their own folders
+
+It was extracted from the [source code of immaculatalibrary.com](https://github.com/sdegutis/immaculatalibrary.com).
+
+
+### Why a new SSG?
+
+I wanted to write my static site with the concept of JSX-based components, but without any client-side logic.
+Other solutions are extremely over-engineered. If they use JSX, they end up requiring React on the back-end.
+If they don't use JSX, they're usually reinventing the wheel with over-engineered template languages.
+
+
 ### Using it as your own JSX-based SSG
 
 1. Clone the repo
