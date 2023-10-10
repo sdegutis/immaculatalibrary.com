@@ -4,7 +4,7 @@ import path from "path";
 export const Font: JSX.Component<{
   use: FsFile[]
   fallback: string,
-}> = (attrs, children) => {
+}, [JSX.Element]> = (attrs, [childEl]) => {
   const dir = attrs.use;
   const name = path.basename(dir[0]!.path).split('-')[0]!;
 
@@ -21,7 +21,6 @@ export const Font: JSX.Component<{
 
   const fontStyle = lines.join('\n');
 
-  const childEl = children[0] as JSX.Element;
   let id = childEl.attrs?.["id"];
   if (!id) id = (childEl.attrs ??= {})["id"] = `generated-${randomUUID()}`;
 
@@ -32,6 +31,6 @@ export const Font: JSX.Component<{
 
   return <>
     <style>{style}</style>
-    {children}
+    {childEl}
   </>;
 };
