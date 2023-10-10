@@ -4,7 +4,6 @@ import files from '../site/';
 import { isDev } from './helpers';
 
 export const out = new Map<string, Buffer | string>();
-export default out;
 
 console.time('Building views');
 
@@ -43,3 +42,5 @@ for (const [outpath, contents] of resources) {
 }
 
 console.timeEnd('Building views');
+
+export default out;
