@@ -14,7 +14,3 @@ export const MusicSidebar: JSX.Component = (attrs, children) => <>
 
   </div>
 </>;
-
-export const SongLink: JSX.Component<{ song: Music }> = ({ song }, children) => <>
-  <a>{song.data.title}</a>
-</>;
