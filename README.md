@@ -57,16 +57,18 @@ Replace everything in `site/` to make it your own site.
 Taken from `site/about.html.tsx`:
 
 ```typescript
-import * as Common from "./components/common";
+import { Column } from './components/column/column';
+import { TypicalPage } from './components/page';
+import { Typography } from './components/typography';
 import image from './img/page/home.jpg';
 
 const sourceLink = "https://github.com/sdegutis/immaculatalibrary.com";
 
 export default <>
-  <Common.TypicalPage image={image.path}>
+  <TypicalPage image={image.path}>
 
-    <Common.Column spaced centered>
-      <Common.Typography>
+    <Column spaced centered>
+      <Typography>
 
         <h1>About Immaculata Library</h1>
 
@@ -90,10 +92,10 @@ export default <>
           to keep my software development skills fresh and keep alive my passion
           for solving complex problems.</p>
 
-      </Common.Typography>
-    </Common.Column>
+      </Typography>
+    </Column>
 
-  </Common.TypicalPage>
+  </TypicalPage>
 </>;
 ```
 
