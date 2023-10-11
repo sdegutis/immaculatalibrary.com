@@ -21,7 +21,7 @@ main>* {
 
 #left-panel {
   display: grid;
-  grid-template-rows: auto auto;
+  grid-template-rows: auto 1fr;
   align-content: start;
   overflow: auto;
 }
@@ -60,4 +60,11 @@ form :read-write:focus {
 
 form button {
   cursor: pointer;
+}
+
+form ul {
+  padding-left: 0;
+  list-style-type: none;
+  max-height: 10em;
+  overflow: auto;
 }

@@ -5,6 +5,7 @@ import { SnippetsGroups } from "../components/snippet-groups";
 import { Typography } from "../components/typography";
 import { isDev } from "../core/helpers";
 import { Snippet, allSnippets } from '../model/snippets';
+import { sortedTags } from "../model/tag";
 
 export default allSnippets.map(snippet => {
   const singleFile = snippet.book.data.files.length === 1;
@@ -63,6 +64,7 @@ export default allSnippets.map(snippet => {
                 'bookSlug': snippet.data.bookSlug,
                 'renderedBody': snippet.renderedBody,
                 'archiveLink': snippet.archiveLink,
+                'tags': JSON.stringify(sortedTags().map(tag => tag.name)),
               })}`}>Make next snippet</a></li>
             </ul>
           </details>

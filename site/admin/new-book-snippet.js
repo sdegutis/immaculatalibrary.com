@@ -16,6 +16,25 @@ document.querySelector('input[name=bookSlug]').value = params.get('bookSlug');
 document.querySelector('iframe').src = params.get('archiveLink');
 document.getElementById('old-body').innerHTML = params.get('renderedBody');
 
+const addTagButton = document.getElementById('addtag');
+const tagsList = document.getElementById('tags');
+
+const tags = JSON.parse(params.get('tags'));
+for (const tag of tags) {
+  const li = document.createElement('li');
+  li.innerHTML = `<label><input type='checkbox' name='tags' value=${JSON.stringify(tag)}> ${tag}</label>`;
+  addTagButton.parentElement.insertAdjacentElement('beforebegin', li);
+}
+
+addTagButton.onclick = (e) => {
+  e.preventDefault();
+
+  const li = document.createElement('li');
+  li.innerHTML = `<label><input type='input' name='tags'></label>`;
+  addTagButton.parentElement.insertAdjacentElement('beforebegin', li);
+  li.querySelector('input').focus();
+};
+
 const titleInput = document.querySelector('input[name=title]');
 const slugInput = document.querySelector('input[name=slug]');
 const contentInput = document.querySelector('textarea[name=markdownContent]');

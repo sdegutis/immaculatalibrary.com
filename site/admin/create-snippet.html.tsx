@@ -17,6 +17,7 @@ handlers.set('/create-snippet', body => {
     archivePage: params.get('archivePage')!,
     archiveSlug: params.get('archiveSlug')!,
     bookSlug: params.get('bookSlug')!,
+    tags: params.getAll('tags').filter(t => t),
   });
 
   snippet.save();
@@ -42,6 +43,7 @@ export default <>
           <span>Title</span> <input autocomplete='off' name='title' />
           <span>Slug</span>  <input autocomplete='off' name='slug' />
           <span>Text</span>  <textarea name='markdownContent' />
+          <span>Tags</span>  <ul id='tags'><li><button id='addtag'>Add</button></li></ul>
 
           <span id='readingmins' />
           <span style='display:grid; gap:0.25em; grid-template-columns: 1fr 1fr'>
