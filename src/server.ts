@@ -16,12 +16,13 @@ export class Server {
       if (req.method === 'POST') {
         const handler = this.handlers?.get(url);
         if (handler) {
-          let data = '';
-          req.on('data', (chunk: Buffer | string) => {
-            data += chunk.toString('utf8');
+          const data: Buffer[] = [];
+          req.on('data', (chunk) => {
+            data.push(chunk);
           });
           req.on('end', () => {
-            const redirect = handler(data);
+            const body = Buffer.concat(data).toString('utf8');
+            const redirect = handler(body);
             this.events.once('rebuild', () => {
               res.statusCode = 302;
               res.setHeader('Location', redirect);
