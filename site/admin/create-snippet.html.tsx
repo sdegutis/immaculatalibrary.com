@@ -26,8 +26,7 @@ handlers.set('/create-snippet', body => {
 
 export default <>
   <EmptyPage>
-    <link rel='stylesheet' href='/admin/clone-style.css' />
-    <link rel='stylesheet' href='/admin/admin-form.css' />
+    <link rel='stylesheet' href='/admin/new-book-snippet.css' />
     <MarkdownClientSide />
     <MonacoClientSide />
     <script>{calculateReadingMins.toString()}</script>
