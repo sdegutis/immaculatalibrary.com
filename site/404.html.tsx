@@ -1,16 +1,18 @@
-import * as Common from "./components/common";
+import { Column } from "./components/column/column";
+import { TypicalPage } from "./components/page";
+import { Typography } from "./components/typography";
 
 export default <>
-  <Common.TypicalPage image='/img/page/404.jpg'>
+  <TypicalPage image='/img/page/404.jpg'>
 
-    <Common.Column spaced>
-      <Common.Typography>
+    <Column spaced>
+      <Typography>
 
         <h1>Page not found</h1>
         <p>Sorry, couldn't find the page you're looking for.</p>
 
-      </Common.Typography>
-    </Common.Column>
+      </Typography>
+    </Column>
 
-  </Common.TypicalPage>
+  </TypicalPage>
 </>;

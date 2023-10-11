@@ -1,23 +1,25 @@
-import * as Common from "../../components/common";
+import { Column } from "../../components/column/column";
+import { TypicalPage } from "../../components/page";
 import { Rating } from "../../components/rating";
+import { Typography } from "../../components/typography";
 import { excerpt, markdown } from "../../core/helpers";
 import { allCategories } from '../../model/categories';
 
 export default allCategories.map(cat => [`${cat.slug}.html`, <>
-  <Common.TypicalPage image={`/img/categories/${cat.slug}-big.jpg`}>
+  <TypicalPage image={`/img/categories/${cat.slug}-big.jpg`}>
 
     <link rel="stylesheet" href='/css/category.css' />
 
-    <Common.Column spaced centered>
-      <Common.Typography>
+    <Column spaced centered>
+      <Typography>
 
         <h1>{cat.data.title}</h1>
         {markdown.render(cat.content)}
 
-      </Common.Typography>
-    </Common.Column>
+      </Typography>
+    </Column>
 
-    <Common.Column spaced split>
+    <Column spaced split>
 
       <section id='category'>
         <h2>Books</h2>
@@ -32,9 +34,9 @@ export default allCategories.map(cat => [`${cat.slug}.html`, <>
               </div>
 
               <div class="author">{book.data.author}</div>
-              <Common.Typography>
+              <Typography>
                 <div class="blurb">{markdown.render(excerpt(book.content))}</div>
-              </Common.Typography>
+              </Typography>
             </li>;
           })}
         </ul>
@@ -65,7 +67,7 @@ export default allCategories.map(cat => [`${cat.slug}.html`, <>
         </div>
       </section>
 
-    </Common.Column>
+    </Column>
 
-  </Common.TypicalPage >
+  </TypicalPage >
 </>]);

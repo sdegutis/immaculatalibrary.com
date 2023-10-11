@@ -1,6 +1,8 @@
-import * as Common from "../components/common";
+import { Column } from "../components/column/column";
 import { formatDate } from "../components/format-date";
+import { TypicalPage } from "../components/page";
 import { SnippetsGroups } from "../components/snippet-groups";
+import { Typography } from "../components/typography";
 import { isDev } from "../core/helpers";
 import { Snippet, allSnippets } from '../model/snippets';
 
@@ -20,12 +22,12 @@ export default allSnippets.map(snippet => {
   });
 
   return [`${snippet.slug}.html`, <>
-    <Common.TypicalPage image={snippet.book.category.imageBig}>
+    <TypicalPage image={snippet.book.category.imageBig}>
 
       <link rel="stylesheet" href='/css/snippet.css' />
 
-      <Common.Column spaced split>
-        <Common.Typography>
+      <Column spaced split>
+        <Typography>
 
           <h1>{snippet.renderedTitle}</h1>
 
@@ -49,7 +51,7 @@ export default allSnippets.map(snippet => {
 
           <PrevNextLinks snippet={snippet} open />
 
-        </Common.Typography>
+        </Typography>
         <div>
           <h3>Latest book snippets</h3>
           <SnippetsGroups />
@@ -68,9 +70,9 @@ export default allSnippets.map(snippet => {
           </details>
         </>}
 
-      </Common.Column>
+      </Column>
 
-    </Common.TypicalPage>
+    </TypicalPage>
   </>];
 });
 

@@ -1,12 +1,13 @@
 import path from 'path/posix';
-import * as Common from "../../components/common";
+import { Column } from '../../components/column/column';
+import { TypicalPage } from '../../components/page';
 import { SnippetsGroups } from "../../components/snippet-groups";
 import { allTags } from "../../model/tag";
 
 export default [...allTags.values()].map(tag => [path.basename(tag.route), <>
-  <Common.TypicalPage image='/img/categories/reference-big.jpg'>
+  <TypicalPage image='/img/categories/reference-big.jpg'>
 
-    <Common.Column spaced split>
+    <Column spaced split>
 
       <div>
         <h1>{tag.name} Book Snippets</h1>
@@ -18,7 +19,7 @@ export default [...allTags.values()].map(tag => [path.basename(tag.route), <>
         showSnippetGroups(s => s.tags.includes(${JSON.stringify(tag.name)}));
       `}</script>
 
-    </Common.Column>
+    </Column>
 
-  </Common.TypicalPage>
+  </TypicalPage>
 </>]);

@@ -1,10 +1,11 @@
-import * as Common from "./components/common";
+import { Column } from "./components/column/column";
 import { featuredBooks } from "./components/featured/featured";
 import { Font } from "./components/fonts";
 import { Navlinks } from "./components/navlinks";
 import { EmptyPage } from "./components/page";
 import { QuickLinks } from "./components/quicklinks/quicklinks";
 import { SiteFooter } from "./components/site-footer";
+import { Typography } from "./components/typography";
 import davidlibre from './fonts/davidlibre/';
 
 export default <>
@@ -29,8 +30,8 @@ export default <>
     <main>
 
       <div id="letters-from-heaven">
-        <Common.Column spaced centered>
-          <Common.Typography>
+        <Column spaced centered>
+          <Typography>
             <h2>Letters from Heaven</h2>
             <blockquote>
               <p>
@@ -47,21 +48,21 @@ export default <>
                 </li>
               </ul>
             </blockquote>
-          </Common.Typography>
-        </Common.Column>
+          </Typography>
+        </Column>
       </div>
 
-      <Common.Column spaced split>
+      <Column spaced split>
 
         <div>
 
           <div>
             <h3>Random Book Snippet (<a href='#' id='refresh-random-book-snippet'>Another</a>)</h3>
-            <Common.Typography>
+            <Typography>
               <div id="random-book-snippet">
                 <p><em>Loading...</em></p>
               </div>
-            </Common.Typography>
+            </Typography>
           </div>
           <script type='module' src='/script/random-book-snippet.js' defer />
 
@@ -82,16 +83,16 @@ export default <>
                     {book.data.title}
                   </a>
                 </h3>
-                <Common.Typography>
+                <Typography>
                   <p>{book.data.frontpage!.why}</p>
-                </Common.Typography>
+                </Typography>
               </li>
             </>)}
           </ul>
 
         </div>
 
-      </Common.Column>
+      </Column>
 
     </main>
 

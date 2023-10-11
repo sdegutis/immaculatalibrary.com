@@ -1,12 +1,14 @@
-import * as Common from "./components/common";
+import { Column } from "./components/column/column";
 import { MusicSidebar } from "./components/music-sidebar";
+import { TypicalPage } from "./components/page";
+import { Typography } from "./components/typography";
 
 export default <>
-  <Common.TypicalPage image='/img/page/music.jpg'>
+  <TypicalPage image='/img/page/music.jpg'>
 
-    <Common.Column spaced split>
+    <Column spaced split>
 
-      <Common.Typography>
+      <Typography>
         <h1>Sacred Music</h1>
         <p>
           Reading holy books can help us grow in devotion to God, and movies can
@@ -15,11 +17,11 @@ export default <>
           (and singing or playing it!) is a powerful way to join these angels in
           praising our Lord and Redeemer, in a way that deeply touches the Father's heart.
         </p>
-      </Common.Typography>
+      </Typography>
 
       <MusicSidebar />
 
-    </Common.Column>
+    </Column>
 
-  </Common.TypicalPage>
+  </TypicalPage>
 </>;

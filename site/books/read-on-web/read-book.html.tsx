@@ -1,5 +1,7 @@
-import * as Common from "../../components/common";
+import { Column } from "../../components/column/column";
+import { TypicalPage } from "../../components/page";
 import { Rating } from "../../components/rating";
+import { Typography } from "../../components/typography";
 import { markdown } from "../../core/helpers";
 import { allBooks } from '../../model/books';
 
@@ -7,11 +9,11 @@ export default allBooks.map(book => {
   const orderedSnippets = [...book.snippets];
 
   return [`${book.slug}.html`, <>
-    <Common.TypicalPage image={book.category.imageBig}>
+    <TypicalPage image={book.category.imageBig}>
 
-      <Common.Column spaced split>
+      <Column spaced split>
 
-        <Common.Typography>
+        <Typography>
 
           <link rel="stylesheet" href='/css/book.css' />
 
@@ -36,7 +38,7 @@ export default allBooks.map(book => {
             </div>
           </>)}
 
-        </Common.Typography>
+        </Typography>
 
         <div>
 
@@ -57,8 +59,8 @@ export default allBooks.map(book => {
 
         </div>
 
-      </Common.Column>
+      </Column>
 
-    </Common.TypicalPage>
+    </TypicalPage>
   </>];
 });

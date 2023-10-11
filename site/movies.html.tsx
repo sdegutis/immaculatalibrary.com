@@ -1,12 +1,14 @@
-import * as Common from "./components/common";
+import { Column } from "./components/column/column";
 import { MoviesSidebar } from "./components/movies-sidebar";
+import { TypicalPage } from "./components/page";
+import { Typography } from "./components/typography";
 
 export default <>
-  <Common.TypicalPage image='/img/movies/passion-of-the-christ-big.jpg'>
+  <TypicalPage image='/img/movies/passion-of-the-christ-big.jpg'>
 
-    <Common.Column spaced split>
+    <Column spaced split>
 
-      <Common.Typography>
+      <Typography>
         <h1>Holy Movies</h1>
         <p>
           Books are not the only way to experience the
@@ -15,11 +17,11 @@ export default <>
           his Saints. This page contains a roughly priotized
           list of recommended and reviewed Catholic movies.
         </p>
-      </Common.Typography>
+      </Typography>
 
       <MoviesSidebar />
 
-    </Common.Column>
+    </Column>
 
-  </Common.TypicalPage>
+  </TypicalPage>
 </>;

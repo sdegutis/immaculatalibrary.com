@@ -1,12 +1,13 @@
-import * as Common from "./components/common";
+import { Column } from "./components/column/column";
 import { formatDate } from "./components/format-date";
+import { TypicalPage } from "./components/page";
 import { excerpt, markdown } from "./core/helpers";
 import { allArticles } from "./model/articles";
 
 export default <>
-  <Common.TypicalPage image='/img/page/articles.jpg'>
+  <TypicalPage image='/img/page/articles.jpg'>
 
-    <Common.Column spaced>
+    <Column spaced>
 
       <link rel="stylesheet" href="/css/articles.css" />
 
@@ -29,7 +30,7 @@ export default <>
         </>)}
       </ul>
 
-    </Common.Column>
+    </Column>
 
-  </Common.TypicalPage>
+  </TypicalPage>
 </>;

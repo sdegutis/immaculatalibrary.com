@@ -1,16 +1,18 @@
-import * as Common from "../components/common";
+import { Column } from "../components/column/column";
 import { formatDate } from "../components/format-date";
+import { TypicalPage } from "../components/page";
+import { Typography } from "../components/typography";
 import { markdown } from "../core/helpers";
 import { allArticles } from "../model/articles";
 
 export default allArticles.map(article => [`${article.slug}.html`, <>
-  <Common.TypicalPage image={article.data.imageFilename ?? '/img/page/articles.jpg'}>
+  <TypicalPage image={article.data.imageFilename ?? '/img/page/articles.jpg'}>
 
     <link rel="stylesheet" href="/css/article.data.css" />
 
-    <Common.Column spaced split>
+    <Column spaced split>
 
-      <Common.Typography>
+      <Typography>
 
         <h1>{markdown.renderInline(article.data.title)}</h1>
 
@@ -22,9 +24,9 @@ export default allArticles.map(article => [`${article.slug}.html`, <>
 
         {markdown.render(article.content)}
 
-      </Common.Typography>
+      </Typography>
 
-    </Common.Column>
+    </Column>
 
-  </Common.TypicalPage>
+  </TypicalPage>
 </>]);

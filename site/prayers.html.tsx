@@ -1,4 +1,6 @@
-import * as Common from "./components/common";
+import { Column } from "./components/column/column";
+import { TypicalPage } from "./components/page";
+import { Typography } from "./components/typography";
 import { markdown } from "./core/helpers";
 
 const prayers = `
@@ -281,17 +283,17 @@ Most Sacred Heart of Jesus
 `;
 
 export default <>
-  <Common.TypicalPage image='/img/categories/blessed-sacrament-big.jpg'>
+  <TypicalPage image='/img/categories/blessed-sacrament-big.jpg'>
 
-    <Common.Column spaced centered>
-      <Common.Typography>
+    <Column spaced centered>
+      <Typography>
 
         <h1>Prayers</h1>
 
         {markdown.render(prayers)}
 
-      </Common.Typography>
-    </Common.Column>
+      </Typography>
+    </Column>
 
-  </Common.TypicalPage>
+  </TypicalPage>
 </>;

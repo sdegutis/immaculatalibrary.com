@@ -1,10 +1,12 @@
-import * as Common from "./components/common";
+import { Column } from "./components/column/column";
+import { TypicalPage } from "./components/page";
+import { Typography } from "./components/typography";
 
 export default <>
-  <Common.TypicalPage image='/img/categories/blessed-sacrament-big.jpg'>
+  <TypicalPage image='/img/categories/blessed-sacrament-big.jpg'>
 
-    <Common.Column spaced centered>
-      <Common.Typography>
+    <Column spaced centered>
+      <Typography>
 
         <h1>Devotions</h1>
 
@@ -15,8 +17,8 @@ export default <>
         <p><a href='http://auxiliumchristianorum.org/'>Auxilium Christianorum</a></p>
         <p><a href='https://www.catholicexorcism.org/'>CatholicExorcism.org</a></p>
 
-      </Common.Typography>
-    </Common.Column>
+      </Typography>
+    </Column>
 
-  </Common.TypicalPage>
+  </TypicalPage>
 </>;

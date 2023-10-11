@@ -1,24 +1,26 @@
-import * as Common from "../components/common";
+import { Column } from "../components/column/column";
 import { MoviesSidebar } from "../components/movies-sidebar";
+import { TypicalPage } from "../components/page";
+import { Typography } from "../components/typography";
 import { markdown } from "../core/helpers";
 import { allMovies } from '../model/movies';
 
 export default allMovies.map(movie => {
   return [`${movie.slug}.html`, <>
-    <Common.TypicalPage image={`/img/movies/${movie.slug}-big.jpg`}>
+    <TypicalPage image={`/img/movies/${movie.slug}-big.jpg`}>
 
-      <Common.Column spaced split>
+      <Column spaced split>
 
-        <Common.Typography>
+        <Typography>
           <h1>{movie.data.title} ({movie.data.year})</h1>
           {movie.data.subtitle && <h4><i>{movie.data.subtitle}</i></h4>}
           {markdown.render(movie.content)}
-        </Common.Typography>
+        </Typography>
 
         <MoviesSidebar />
 
-      </Common.Column>
+      </Column>
 
-    </Common.TypicalPage>
+    </TypicalPage>
   </>];
 });

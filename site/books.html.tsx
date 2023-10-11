@@ -1,10 +1,11 @@
-import * as Common from "./components/common";
+import { Column } from './components/column/column';
+import { TypicalPage } from './components/page';
 import { allBooks } from './model/books';
 
 export default <>
-  <Common.TypicalPage image='/img/categories/reference-big.jpg'>
+  <TypicalPage image='/img/categories/reference-big.jpg'>
 
-    <Common.Column spaced split>
+    <Column spaced split>
 
       <div>
 
@@ -33,7 +34,7 @@ export default <>
 
       </div>
 
-    </Common.Column>
+    </Column>
 
-  </Common.TypicalPage>
+  </TypicalPage>
 </>;

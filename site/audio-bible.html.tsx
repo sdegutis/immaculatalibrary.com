@@ -1,10 +1,12 @@
-import * as Common from "./components/common";
+import { Column } from "./components/column/column";
+import { TypicalPage } from "./components/page";
+import { Typography } from "./components/typography";
 
 export default <>
-  <Common.TypicalPage image='/img/page/audiobible-big.jpg'>
+  <TypicalPage image='/img/page/audiobible-big.jpg'>
 
-    <Common.Column spaced centered>
-      <Common.Typography>
+    <Column spaced centered>
+      <Typography>
 
         <h1>Audio Bible</h1>
 
@@ -19,8 +21,8 @@ export default <>
           the <a href="https://www.truthandlifeapp.com/WebBibleTAL/WebPlayer.aspx">Gospel of Mark</a> for
           free, so you can even sample it now on the web.</p>
 
-      </Common.Typography>
-    </Common.Column>
+      </Typography>
+    </Column>
 
-  </Common.TypicalPage>
+  </TypicalPage>
 </>;
