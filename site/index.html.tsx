@@ -1,7 +1,10 @@
 import * as Common from "./components/common";
 import { featuredBooks } from "./components/featured/featured";
 import { Font } from "./components/fonts";
+import { Navlinks } from "./components/navlinks";
 import { EmptyPage } from "./components/page";
+import { QuickLinks } from "./components/quicklinks/quicklinks";
+import { SiteFooter } from "./components/site-footer";
 import davidlibre from './fonts/davidlibre/';
 
 export default <>
@@ -21,7 +24,7 @@ export default <>
       </section>
     </Font>
 
-    <Common.Navlinks />
+    <Navlinks />
 
     <main>
 
@@ -92,8 +95,8 @@ export default <>
 
     </main>
 
-    <Common.QuickLinks />
-    <Common.SiteFooter />
+    <QuickLinks />
+    <SiteFooter />
 
   </EmptyPage>
 </>;
