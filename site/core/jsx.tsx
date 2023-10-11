@@ -1,33 +1,23 @@
 const UNARY = new Set(["img", "br", "hr", "input", "meta", "link"]);
 
-export class JsxElement {
+export function jsxToString(element: JSX.Element): string {
+  element = <>{element}</>;
 
-  constructor(
-    public tag: string,
-    public attrs: Record<string, any> | null,
-    public children: any[],
-  ) { }
+  const context: RenderContext = { head: element, hoisted: new Set() };
+  hoistHeadThings(element, context);
+  context.head.children.push(...context.hoisted);
 
-  stringify(): string {
-    const element = createJsxElement('', null, this);
-
-    const context: RenderContext = { head: element, hoisted: new Set() };
-    hoistHeadThings(element, context);
-    context.head.children.push(...context.hoisted);
-
-    const parts: string[] = [];
-    addElement(element, parts);
-    return parts.join('');
-  }
-
+  const parts: string[] = [];
+  addElement(element, parts);
+  return parts.join('');
 }
 
 interface RenderContext {
-  head: JsxElement;
+  head: JSX.Element;
   hoisted: Set<string>,
 }
 
-function hoistHeadThings(element: JsxElement, context: RenderContext) {
+function hoistHeadThings(element: JSX.Element, context: RenderContext) {
   if (element.tag === 'head') {
     context.head = element;
   }
@@ -37,7 +27,7 @@ function hoistHeadThings(element: JsxElement, context: RenderContext) {
 function hoistInArray(array: any[], context: RenderContext) {
   for (let i = 0; i < array.length; i++) {
     const child = array[i];
-    if (child instanceof JsxElement) {
+    if (child && typeof child === 'object' && child.jsx) {
       if (child.tag === 'style' || child.tag === 'script' || child.tag === 'link') {
         array.splice(i--, 1);
 
@@ -55,7 +45,7 @@ function hoistInArray(array: any[], context: RenderContext) {
   }
 }
 
-function addElement(element: JsxElement, parts: string[]) {
+function addElement(element: JSX.Element, parts: string[]) {
   if (element.tag === '') {
     pushChildren(element.children, parts);
     return;
@@ -88,21 +78,14 @@ function pushChildren(children: any[], parts: string[]) {
     if (child === undefined || child === null || child === false) {
       continue;
     }
-    else if (child instanceof JsxElement) {
-      addElement(child, parts);
-    }
     else if (Array.isArray(child)) {
       pushChildren(child, parts);
+    }
+    else if (typeof child === 'object' && child.jsx) {
+      addElement(child, parts);
     }
     else {
       parts.push(child);
     }
   }
-}
-
-export function createJsxElement(tag: string | Function, attrs: any, ...children: any[]): JsxElement {
-  if (typeof tag === 'function')
-    return tag(attrs ?? {}, children);
-  else
-    return new JsxElement(tag, attrs, children);
 }

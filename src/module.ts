@@ -2,7 +2,6 @@ import path from 'path/posix';
 import * as sucrase from 'sucrase';
 import { pathToFileURL } from 'url';
 import vm from 'vm';
-import { createJsxElement } from './jsx';
 import { Runtime } from './runtime';
 
 export class Module {
@@ -104,4 +103,11 @@ export class Module {
     throw new Error(`Can't find file at path: ${toPath}`);
   }
 
+}
+
+function createJsxElement(tag: string | Function, attrs: any, ...children: any[]) {
+  if (typeof tag === 'function')
+    return tag(attrs ?? {}, children);
+  else
+    return { jsx: true, tag, attrs, children };
 }

@@ -1,5 +1,6 @@
 import path from 'path/posix';
 import { isDev } from './helpers';
+import { jsxToString } from './jsx';
 import files from '/';
 
 export const handlers = new Map<string, (body: string) => string>();
@@ -22,11 +23,11 @@ for (const { path: filepath, content } of files) {
 
       if (Array.isArray(exported)) {
         for (const [name, jsx] of exported) {
-          outfiles.set(path.join(dir, name), (jsx as JSX.Element).stringify());
+          outfiles.set(path.join(dir, name), jsxToString(jsx as JSX.Element));
         }
       }
       else {
-        outfiles.set(filepath.slice(0, -4), (exported as JSX.Element).stringify());
+        outfiles.set(filepath.slice(0, -4), jsxToString(exported as JSX.Element));
       }
     }
   }
