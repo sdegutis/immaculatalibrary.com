@@ -37,12 +37,12 @@ export default <>
     <main>
       <div id='left-panel'>
         <form method='POST' action='/create-snippet'>
-          <span>Page</span>    <input autocomplete='off' name='archivePage' autofocus />
-          <span>Link</span>    <input autocomplete='off' name='archiveSlug' />
-          <span>Book</span>    <input autocomplete='off' name='bookSlug' />
-          <span>Title</span>   <input autocomplete='off' name='title' />
-          <span>Slug</span>    <input autocomplete='off' name='slug' />
-          <span>Text</span> <textarea name='markdownContent' />
+          <span>Page</span>  <input autocomplete='off' name='archivePage' autofocus />
+          <span>Link</span>  <input autocomplete='off' name='archiveSlug' />
+          <span>Book</span>  <input autocomplete='off' name='bookSlug' />
+          <span>Title</span> <input autocomplete='off' name='title' />
+          <span>Slug</span>  <input autocomplete='off' name='slug' />
+          <span>Text</span>  <textarea name='markdownContent' />
 
           <span id='readingmins' />
           <span style='display:grid; gap:0.25em; grid-template-columns: 1fr 1fr'>
