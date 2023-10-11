@@ -1,7 +1,7 @@
 import { Column } from "./components/column/column";
 import { featuredBooks } from "./components/featured/featured";
 import { Font } from "./components/fonts";
-import { Navlinks } from "./components/navlinks";
+import { Navlinks } from "./components/navlinks/navlinks";
 import { EmptyPage } from "./components/page";
 import { QuickLinks } from "./components/quicklinks/quicklinks";
 import { SiteFooter } from "./components/site-footer";
