@@ -13,14 +13,6 @@ export default allSnippets.map(snippet => {
     ?.pdfFile
     .replace('.pdf', ''));
 
-  const createSnippetParams = new URLSearchParams({
-    'archivePage': snippet.data.archivePage,
-    'archiveSlug': snippet.data.archiveSlug,
-    'bookSlug': snippet.data.bookSlug,
-    'renderedBody': snippet.renderedBody,
-    'archiveLink': snippet.archiveLink,
-  });
-
   return [`${snippet.slug}.html`, <>
     <TypicalPage image={snippet.book.category.imageBig}>
 
@@ -65,7 +57,13 @@ export default allSnippets.map(snippet => {
           <details open>
             <summary>Admin</summary>
             <ul>
-              <li><a href={`/admin/create-snippet.html?${createSnippetParams}`}>Make next snippet</a></li>
+              <li><a href={`/admin/create-snippet.html?${new URLSearchParams({
+                'archivePage': snippet.data.archivePage,
+                'archiveSlug': snippet.data.archiveSlug,
+                'bookSlug': snippet.data.bookSlug,
+                'renderedBody': snippet.renderedBody,
+                'archiveLink': snippet.archiveLink,
+              })}`}>Make next snippet</a></li>
             </ul>
           </details>
         </>}
