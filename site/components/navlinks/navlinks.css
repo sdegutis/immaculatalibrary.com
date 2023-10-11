@@ -1,4 +1,4 @@
-#navlinks {
+#ID {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -6,7 +6,7 @@
   margin: 2em 0;
 }
 
-#navlinks.divider {
+#ID.divider {
   padding-bottom: 2em;
   border-bottom: 1px solid var(--border-color);
 }

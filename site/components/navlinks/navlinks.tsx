@@ -1,17 +1,27 @@
+import { randomUUID } from "crypto";
+import { outfiles } from "../../core/main";
 import { Column } from "../column/column";
 import css from './navlinks.css';
 
-export const Navlinks: JSX.Component<{ divider?: boolean }> = (attrs) => <>
-  <link rel="stylesheet" href={css.path} />
-  <Column>
-    <div id='navlinks' class={attrs.divider ? 'divider' : ''}>
-      <a href='/about.html'>About</a>{' | '}
-      <a href='/books.html'>Books</a>{' | '}
-      <a href='/movies.html'>Movies</a>{' | '}
-      <a href='/articles.html'>Articles</a>{' | '}
-      <a href='/music.html'>Music</a>{' | '}
-      <a href='/audio-bible.html'>Audio Bible</a>{' | '}
-      <a href='/devotions.html'>Devotions</a>
-    </div>
-  </Column>
-</>;
+const newPath = `/generated/navlinks.css`;
+const cssId = `gen-${randomUUID()}`;
+const str = css.content.toString('utf8').replace(/ID/g, cssId);
+const content = Buffer.from(str);
+outfiles.set(newPath, content);
+
+export const Navlinks: JSX.Component<{ divider?: boolean }> = (attrs) => {
+  return <>
+    <link rel="stylesheet" href={newPath} />
+    <Column>
+      <div id={cssId} class={attrs.divider ? 'divider' : ''}>
+        <a href='/about.html'>About</a>{' | '}
+        <a href='/books.html'>Books</a>{' | '}
+        <a href='/movies.html'>Movies</a>{' | '}
+        <a href='/articles.html'>Articles</a>{' | '}
+        <a href='/music.html'>Music</a>{' | '}
+        <a href='/audio-bible.html'>Audio Bible</a>{' | '}
+        <a href='/devotions.html'>Devotions</a>
+      </div>
+    </Column>
+  </>;
+};
