@@ -1,10 +1,10 @@
-import { FormatDate } from "../../components/format-date";
+import { formatDate } from "../../components/format-date";
 import { markdown } from "../../core/helpers";
 import { allSnippets } from '../../model/snippets';
 
 export default allSnippets.map(snippet => [`${snippet.slug}-preview.html`, <>
   <h4><a href={snippet.route}>{snippet.renderedTitle}</a></h4>
-  <p><FormatDate date={snippet.date} /> &bull; {snippet.mins} min</p>
+  <p>{formatDate(snippet.date)} &bull; {snippet.mins} min</p>
   <p>
     From <a href={snippet.book.route}>{snippet.book.data.title}</a>
     , page <a rel="noopener" href={snippet.archiveLink}>{snippet.data.archivePage}</a>

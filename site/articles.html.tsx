@@ -1,5 +1,5 @@
 import * as Common from "./components/common";
-import { FormatDate } from "./components/format-date";
+import { formatDate } from "./components/format-date";
 import { excerpt, markdown } from "./core/helpers";
 import { allArticles } from "./model/articles";
 
@@ -19,7 +19,7 @@ export default <>
                 {article.data.title}
               </a>
               <span class="date">
-                <FormatDate date={article.date} /> &bull; {article.mins} min
+                {formatDate(article.date)} &bull; {article.mins} min
               </span>
               <div class="excerpt">
                 {markdown.render(excerpt(article.content))}

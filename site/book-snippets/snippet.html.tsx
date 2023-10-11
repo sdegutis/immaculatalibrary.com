@@ -1,5 +1,5 @@
 import * as Common from "../components/common";
-import { FormatDate } from "../components/format-date";
+import { formatDate } from "../components/format-date";
 import { SnippetsGroups } from "../components/snippet-groups";
 import { isDev } from "../core/helpers";
 import { Snippet, allSnippets } from '../model/snippets';
@@ -29,7 +29,7 @@ export default allSnippets.map(snippet => {
 
           <h1>{snippet.renderedTitle}</h1>
 
-          <p><FormatDate date={snippet.date} /> &bull; {snippet.mins} min</p>
+          <p>{formatDate(snippet.date)} &bull; {snippet.mins} min</p>
 
           <p>
             {[...snippet.tags].map(tag => <>
