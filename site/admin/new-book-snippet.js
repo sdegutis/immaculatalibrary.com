@@ -48,24 +48,31 @@ fixupButton.onclick = (e) => {
 
   editor.getModel().pushStackElement();
 
-  const content = editor.getModel().getValue();
-  const fixedContent = (content
-    .trim()
-    .replace(/ {2,}/g, ' ')
-    .replace(/ ;/g, ';')
-    .replace(/ :/g, ';')
-    .replace(/- /g, '')
-    .replace(/ !/g, '!')
-    .replace(/ \?/g, '?')
-    .replace(/(\r?\n)+/gm, '\n\n')
-    .replace(/^/gm, '> ')
-    .replace(/ aud /g, " and ")
-    + '\n');
+  let sels = editor.getSelections();
+  if (sels.every(sel => sel.isEmpty())) {
+    sels = [editor.getModel().getFullModelRange()];
+  }
 
-  editor.executeEdits('admin', [{
-    range: editor.getModel().getFullModelRange(),
-    text: fixedContent,
-  }]);
+  editor.executeEdits('admin', sels.map(sel => {
+    const content = editor.getModel().getValueInRange(sel);
+    const fixedContent = (content
+      .trimEnd()
+      .replace(/ {2,}/g, ' ')
+      .replace(/ ;/g, ';')
+      .replace(/ :/g, ';')
+      .replace(/- /g, '')
+      .replace(/ !/g, '!')
+      .replace(/ \?/g, '?')
+      .replace(/(\r?\n)+/gm, '\n\n')
+      .replace(/^/gm, '> ')
+      .replace(/ aud /g, " and ")
+      + '\n');
+
+    return {
+      range: sel,
+      text: fixedContent,
+    };
+  }));
 }
 
 /** @type {import('../../../util/helpers').calculateReadingMins} */
