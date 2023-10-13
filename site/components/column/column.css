@@ -4,10 +4,6 @@
   margin: 0 auto;
 }
 
-.spaced-main-content {
-  margin: 3em 0;
-}
-
 .split-page {
   display: grid;
   gap: 1em;
