@@ -35,7 +35,12 @@ export default allSnippets.map(snippet => {
                     'archivePage': snippet.data.archivePage,
                     'archiveSlug': snippet.data.archiveSlug,
                     'bookSlug': snippet.data.bookSlug,
-                    'renderedBody': snippet.renderedBody,
+                    'renderedBody': [
+                      snippet.data.archivePage,
+                      snippet.renderedBody,
+                      snippet.nextSnippet?.data.archivePage,
+                      snippet.nextSnippet?.renderedBody,
+                    ].filter(s => s).join('<p>'),
                     'archiveLink': snippet.archiveLink,
                     'tags': JSON.stringify(sortedTags().map(tag => tag.name)),
                   })}`}>Make next snippet</a></li>
