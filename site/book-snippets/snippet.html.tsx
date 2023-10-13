@@ -27,6 +27,22 @@ export default allSnippets.map(snippet => {
 
             <p>{formatDate(snippet.date)} &bull; {snippet.mins} min</p>
 
+            {isDev && <>
+              <details open>
+                <summary>Admin</summary>
+                <ul>
+                  <li><a href={`/admin/create-snippet.html?${new URLSearchParams({
+                    'archivePage': snippet.data.archivePage,
+                    'archiveSlug': snippet.data.archiveSlug,
+                    'bookSlug': snippet.data.bookSlug,
+                    'renderedBody': snippet.renderedBody,
+                    'archiveLink': snippet.archiveLink,
+                    'tags': JSON.stringify(sortedTags().map(tag => tag.name)),
+                  })}`}>Make next snippet</a></li>
+                </ul>
+              </details>
+            </>}
+
             <p>
               {[...snippet.tags].map(tag => <>
                 <a href={tag.route}>#{tag.oneword}</a> { }
@@ -54,22 +70,6 @@ export default allSnippets.map(snippet => {
             showSnippetGroups((s, i) => i < 10);
           `}</script>
           </div>
-
-          {isDev && <>
-            <details open>
-              <summary>Admin</summary>
-              <ul>
-                <li><a href={`/admin/create-snippet.html?${new URLSearchParams({
-                  'archivePage': snippet.data.archivePage,
-                  'archiveSlug': snippet.data.archiveSlug,
-                  'bookSlug': snippet.data.bookSlug,
-                  'renderedBody': snippet.renderedBody,
-                  'archiveLink': snippet.archiveLink,
-                  'tags': JSON.stringify(sortedTags().map(tag => tag.name)),
-                })}`}>Make next snippet</a></li>
-              </ul>
-            </details>
-          </>}
 
         </Column>
       </Spaced>
