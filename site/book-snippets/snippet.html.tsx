@@ -1,4 +1,4 @@
-import { Column } from "../components/column/column";
+import { Column, Spaced } from "../components/column/column";
 import { formatDate } from "../components/format-date";
 import { TypicalPage } from "../components/page";
 import { SnippetsGroups } from "../components/snippet-groups";
@@ -19,58 +19,60 @@ export default allSnippets.map(snippet => {
 
       <link rel="stylesheet" href='/css/snippet.css' />
 
-      <Column spaced split>
-        <Typography>
+      <Spaced>
+        <Column split>
+          <Typography>
 
-          <h1>{snippet.renderedTitle}</h1>
+            <h1>{snippet.renderedTitle}</h1>
 
-          <p>{formatDate(snippet.date)} &bull; {snippet.mins} min</p>
+            <p>{formatDate(snippet.date)} &bull; {snippet.mins} min</p>
 
-          <p>
-            {[...snippet.tags].map(tag => <>
-              <a href={tag.route}>#{tag.oneword}</a> { }
-            </>)}
-          </p>
+            <p>
+              {[...snippet.tags].map(tag => <>
+                <a href={tag.route}>#{tag.oneword}</a> { }
+              </>)}
+            </p>
 
-          <p>
-            From <a href={snippet.book.route}>{snippet.book.data.title}</a>, { }
-            {specificBookName && <>in file "{specificBookName}", </>}
-            page <a rel="noopener" href={snippet.archiveLink}>{snippet.data.archivePage}</a>
-            <br />
-            <small>By {snippet.book.data.author}</small>
-          </p>
+            <p>
+              From <a href={snippet.book.route}>{snippet.book.data.title}</a>, { }
+              {specificBookName && <>in file "{specificBookName}", </>}
+              page <a rel="noopener" href={snippet.archiveLink}>{snippet.data.archivePage}</a>
+              <br />
+              <small>By {snippet.book.data.author}</small>
+            </p>
 
-          {snippet.renderedBody}
+            {snippet.renderedBody}
 
-          <PrevNextLinks snippet={snippet} open />
+            <PrevNextLinks snippet={snippet} open />
 
-        </Typography>
-        <div>
-          <h3>Latest book snippets</h3>
-          <SnippetsGroups />
-          <script type='module'>{`
+          </Typography>
+          <div>
+            <h3>Latest book snippets</h3>
+            <SnippetsGroups />
+            <script type='module'>{`
             import { showSnippetGroups } from '/script/snippet-groups.js';
             showSnippetGroups((s, i) => i < 10);
           `}</script>
-        </div>
+          </div>
 
-        {isDev && <>
-          <details open>
-            <summary>Admin</summary>
-            <ul>
-              <li><a href={`/admin/create-snippet.html?${new URLSearchParams({
-                'archivePage': snippet.data.archivePage,
-                'archiveSlug': snippet.data.archiveSlug,
-                'bookSlug': snippet.data.bookSlug,
-                'renderedBody': snippet.renderedBody,
-                'archiveLink': snippet.archiveLink,
-                'tags': JSON.stringify(sortedTags().map(tag => tag.name)),
-              })}`}>Make next snippet</a></li>
-            </ul>
-          </details>
-        </>}
+          {isDev && <>
+            <details open>
+              <summary>Admin</summary>
+              <ul>
+                <li><a href={`/admin/create-snippet.html?${new URLSearchParams({
+                  'archivePage': snippet.data.archivePage,
+                  'archiveSlug': snippet.data.archiveSlug,
+                  'bookSlug': snippet.data.bookSlug,
+                  'renderedBody': snippet.renderedBody,
+                  'archiveLink': snippet.archiveLink,
+                  'tags': JSON.stringify(sortedTags().map(tag => tag.name)),
+                })}`}>Make next snippet</a></li>
+              </ul>
+            </details>
+          </>}
 
-      </Column>
+        </Column>
+      </Spaced>
 
     </TypicalPage>
   </>];

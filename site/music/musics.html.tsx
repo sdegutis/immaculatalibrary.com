@@ -1,4 +1,4 @@
-import { Column } from "../components/column/column";
+import { Column, Spaced } from "../components/column/column";
 import { MusicSidebar } from "../components/music-sidebar";
 import { TypicalPage } from "../components/page";
 import { Typography } from "../components/typography";
@@ -12,19 +12,21 @@ export default allMusics.map(song => {
 
       <link rel="stylesheet" href='/css/view-song.css' />
 
-      <Column spaced split>
+      <Spaced>
+        <Column split>
 
-        <Typography>
-          <h1>{song.data.title}</h1>
-          <div class="embed-container">
-            <iframe allowfullscreen="allowfullscreen" frameborder="0" src={embedUrl}></iframe>
-          </div>
-          {markdown.render(song.content)}
-        </Typography>
+          <Typography>
+            <h1>{song.data.title}</h1>
+            <div class="embed-container">
+              <iframe allowfullscreen="allowfullscreen" frameborder="0" src={embedUrl}></iframe>
+            </div>
+            {markdown.render(song.content)}
+          </Typography>
 
-        <MusicSidebar />
+          <MusicSidebar />
 
-      </Column>
+        </Column>
+      </Spaced>
 
     </TypicalPage >
   </>];

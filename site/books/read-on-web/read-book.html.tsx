@@ -1,4 +1,4 @@
-import { Column } from "../../components/column/column";
+import { Column, Spaced } from "../../components/column/column";
 import { TypicalPage } from "../../components/page";
 import { Rating } from "../../components/rating";
 import { Typography } from "../../components/typography";
@@ -11,55 +11,57 @@ export default allBooks.map(book => {
   return [`${book.slug}.html`, <>
     <TypicalPage image={book.category.imageBig}>
 
-      <Column spaced split>
+      <Spaced>
+        <Column split>
 
-        <Typography>
+          <Typography>
 
-          <link rel="stylesheet" href='/css/book.css' />
+            <link rel="stylesheet" href='/css/book.css' />
 
-          <h1>{book.data.title}</h1>
-          <p class="subtitle">{book.data.subtitle}</p>
-          <p>By <span class="author">{book.data.author}</span></p>
-          <p><Rating n={book.data.rating} /></p>
-          {markdown.render(book.content)}
+            <h1>{book.data.title}</h1>
+            <p class="subtitle">{book.data.subtitle}</p>
+            <p>By <span class="author">{book.data.author}</span></p>
+            <p><Rating n={book.data.rating} /></p>
+            {markdown.render(book.content)}
 
-          <hr />
-
-          {orderedSnippets.map((bookSnippet, i) => <>
-            <div class='chapter' id={`snippet-${bookSnippet.slug}`}>
-              <h3 class='chapter-header'>
-                Chapter {i + 1} &mdash; { }
-                <a href={bookSnippet.route}>
-                  {bookSnippet.renderedTitle}
-                </a>
-              </h3>
-              {bookSnippet.renderedBody}
-              <hr />
-            </div>
-          </>)}
-
-        </Typography>
-
-        <div>
-
-          <ul class="readonline-chapters">
-            <h3>Chapter Index</h3>
+            <hr />
 
             {orderedSnippets.map((bookSnippet, i) => <>
-              <li>
-                <p>
-                  Ch.{i + 1} { }
-                  <a href={`#snippet-${bookSnippet.slug}`}>
+              <div class='chapter' id={`snippet-${bookSnippet.slug}`}>
+                <h3 class='chapter-header'>
+                  Chapter {i + 1} &mdash; { }
+                  <a href={bookSnippet.route}>
                     {bookSnippet.renderedTitle}
                   </a>
-                </p>
-              </li>
+                </h3>
+                {bookSnippet.renderedBody}
+                <hr />
+              </div>
             </>)}
-          </ul>
 
-        </div>
+          </Typography>
 
-      </Column>
+          <div>
+
+            <ul class="readonline-chapters">
+              <h3>Chapter Index</h3>
+
+              {orderedSnippets.map((bookSnippet, i) => <>
+                <li>
+                  <p>
+                    Ch.{i + 1} { }
+                    <a href={`#snippet-${bookSnippet.slug}`}>
+                      {bookSnippet.renderedTitle}
+                    </a>
+                  </p>
+                </li>
+              </>)}
+            </ul>
+
+          </div>
+
+        </Column>
+      </Spaced>
 
     </TypicalPage>
   </>];

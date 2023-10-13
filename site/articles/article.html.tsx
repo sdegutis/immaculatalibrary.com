@@ -1,4 +1,4 @@
-import { Column } from "../components/column/column";
+import { Column, Spaced } from "../components/column/column";
 import { formatDate } from "../components/format-date";
 import { TypicalPage } from "../components/page";
 import { Typography } from "../components/typography";
@@ -10,23 +10,25 @@ export default allArticles.map(article => [`${article.slug}.html`, <>
 
     <link rel="stylesheet" href="/css/article.data.css" />
 
-    <Column spaced split>
+    <Spaced>
+      <Column split>
 
-      <Typography>
+        <Typography>
 
-        <h1>{markdown.renderInline(article.data.title)}</h1>
+          <h1>{markdown.renderInline(article.data.title)}</h1>
 
-        {article.data.imageCaption && <small>(Image: {article.data.imageCaption})</small>}
+          {article.data.imageCaption && <small>(Image: {article.data.imageCaption})</small>}
 
-        <p class="date">
-          {formatDate(article.date)} &bull; {article.mins} min
-        </p>
+          <p class="date">
+            {formatDate(article.date)} &bull; {article.mins} min
+          </p>
 
-        {markdown.render(article.content)}
+          {markdown.render(article.content)}
 
-      </Typography>
+        </Typography>
 
-    </Column>
+      </Column>
+    </Spaced>
 
   </TypicalPage>
 </>]);

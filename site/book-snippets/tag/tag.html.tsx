@@ -1,5 +1,5 @@
 import path from 'path/posix';
-import { Column } from '../../components/column/column';
+import { Column, Spaced } from '../../components/column/column';
 import { TypicalPage } from '../../components/page';
 import { SnippetsGroups } from "../../components/snippet-groups";
 import { allTags } from "../../model/tag";
@@ -7,19 +7,21 @@ import { allTags } from "../../model/tag";
 export default [...allTags.values()].map(tag => [path.basename(tag.route), <>
   <TypicalPage image='/img/categories/reference-big.jpg'>
 
-    <Column spaced split>
+    <Spaced>
+      <Column split>
 
-      <div>
-        <h1>{tag.name} Book Snippets</h1>
-        <SnippetsGroups />
-      </div>
+        <div>
+          <h1>{tag.name} Book Snippets</h1>
+          <SnippetsGroups />
+        </div>
 
-      <script type='module'>{`
+        <script type='module'>{`
         import { showSnippetGroups } from '/script/snippet-groups.js';
         showSnippetGroups(s => s.tags.includes(${JSON.stringify(tag.name)}));
       `}</script>
 
-    </Column>
+      </Column>
+    </Spaced>
 
   </TypicalPage>
 </>]);

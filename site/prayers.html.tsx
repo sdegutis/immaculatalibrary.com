@@ -1,4 +1,4 @@
-import { Column } from "./components/column/column";
+import { Column, Spaced } from "./components/column/column";
 import { TypicalPage } from "./components/page";
 import { Typography } from "./components/typography";
 import { markdown } from "./core/helpers";
@@ -285,15 +285,17 @@ Most Sacred Heart of Jesus
 export default <>
   <TypicalPage image='/img/categories/blessed-sacrament-big.jpg'>
 
-    <Column spaced centered>
-      <Typography>
+    <Spaced>
+      <Column centered>
+        <Typography>
 
-        <h1>Prayers</h1>
+          <h1>Prayers</h1>
 
-        {markdown.render(prayers)}
+          {markdown.render(prayers)}
 
-      </Typography>
-    </Column>
+        </Typography>
+      </Column>
+    </Spaced>
 
   </TypicalPage>
 </>;
