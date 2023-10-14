@@ -28,8 +28,7 @@ export default allSnippets.map(snippet => {
             <p>{formatDate(snippet.date)} &bull; {snippet.mins} min</p>
 
             {isDev && <>
-              <details open>
-                <summary>Admin</summary>
+              <div style="border: 1px solid var(--admin-border-color); background-color: var(--admin-bg-color); padding: 1em;">
                 <ul>
                   <li><a href={`/admin/create-snippet.html?${new URLSearchParams({
                     'archivePage': snippet.data.archivePage,
@@ -45,7 +44,7 @@ export default allSnippets.map(snippet => {
                     'tags': JSON.stringify(sortedTags().map(tag => tag.name)),
                   })}`}>Make next snippet</a></li>
                 </ul>
-              </details>
+              </div>
             </>}
 
             <p>
