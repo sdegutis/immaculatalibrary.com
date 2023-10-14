@@ -17,7 +17,7 @@ tags:
 > 
 > I teach to despise all earthly things, to loathe things present, to seek things eternal, to relish things eternal, to fly honours, to endure scandals, to repose all hope in me, to desire nothing out of me, and above all things ardently to love me.
 > 
-> 4. For a certain person, by loving me, entirely learned divine things, and spoke wonders.
+> 4\. For a certain person, by loving me, entirely learned divine things, and spoke wonders.
 > 
 > He profited more by forsaking all things, than by studying subtleties.
 > 
