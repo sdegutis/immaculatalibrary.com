@@ -1,5 +1,6 @@
 import { Column, Spaced } from './components/column/column';
 import { TypicalPage } from './components/page';
+import { SnippetsGroups } from './components/snippet-groups';
 import { allBooks } from './model/books';
 
 export default <>
@@ -33,6 +34,15 @@ export default <>
 
           <script src='/script/search-books.js' defer></script>
 
+        </div>
+
+        <div>
+          <h3>Latest book snippets</h3>
+          <SnippetsGroups />
+          <script type='module'>{`
+            import { showSnippetGroups } from '/script/snippet-groups.js';
+            showSnippetGroups((s, i) => i < 10);
+          `}</script>
         </div>
 
       </Column>
