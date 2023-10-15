@@ -70,7 +70,7 @@ input[type=text] {
 
 input[type=text]:focus {
   outline: 1px solid var(--blue-bg);
-  background-color: inherit;
+  background-color: var(--bgalt);
 }
 
 @media screen and (max-width: 767px) {
