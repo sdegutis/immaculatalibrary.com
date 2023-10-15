@@ -10,12 +10,7 @@ async function doRandomBookSnippet() {
   const i = Math.floor(Math.random() * slugs.length);
   const slug = slugs[i];
 
-  fetch(`/dynamic/snippets/${slug}-preview.html`)
-    .then(res => res.text())
-    .then(insertRandomBookSnippet);
-}
-
-function insertRandomBookSnippet(text) {
+  const text = await fetch(`/dynamic/snippets/${slug}-preview.html`).then(res => res.text());
   const container = document.getElementById('random-book-snippet');
   container.innerHTML = text;
 
