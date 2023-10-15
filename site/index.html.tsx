@@ -60,7 +60,10 @@ export default <>
           <div>
 
             <div>
-              <h3>Random Book Snippet (<a href='#' id='refresh-random-book-snippet'>Another</a>)</h3>
+              <h3>Random Book Snippet</h3>
+              <p>
+                (<a href='#' id='refresh-random-book-snippet'>Another</a>)
+              </p>
               <Typography>
                 <div id="random-book-snippet">
                   <p><em>Loading...</em></p>
