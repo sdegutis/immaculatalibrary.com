@@ -6,12 +6,6 @@ export function showSnippetGroups(filter) {
     const snippets = snippetInfo.snippets.filter(filter);
     const groups = Object.entries(groupByDate(snippets));
     host.innerHTML = `
-      <p>
-        <a href='/snippets.html'>Search</a> |
-        <a href='#' class='get-random-book-snippet'>Random</a> |
-        ${snippetInfo.snippets.length} total |
-        ${snippetInfo.totalReadingTime}
-      </p>
       <ul class="snippets-latest">
         ${groups.map(([date, group]) => `
           <li>
