@@ -59,17 +59,18 @@ hr {
 }
 
 input[type=text] {
-  border: 1px solid currentColor;
   padding: 0.5em;
-  border-radius: 0.25em;
-  background: inherit;
+  background-color: var(--border-color);
   color: inherit;
+  border: none;
   outline: none;
+  box-sizing: border-box;
   width: 100%;
 }
 
 input[type=text]:focus {
-  border-color: var(--blue-bg);
+  outline: 1px solid var(--blue-bg);
+  background-color: inherit;
 }
 
 @media screen and (max-width: 767px) {
