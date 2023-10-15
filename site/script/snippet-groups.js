@@ -1,20 +1,5 @@
 import { snippetsData } from "./modules/load-snippets.js";
 
-export function formatAllDates() {
-  for (const el of document.querySelectorAll('.format-date')) {
-    el.textContent = formatDate(el.textContent);
-    el.classList.remove('format-date');
-  }
-}
-
-function formatDate(dateStr) {
-  return new Date(dateStr.split('-')).toLocaleDateString('en-EN', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  });
-}
-
 export function showSnippetGroups(filter) {
   const host = document.getElementById('snippets-group-area');
   snippetsData.then(snippetInfo => {
@@ -30,7 +15,7 @@ export function showSnippetGroups(filter) {
       <ul class="snippets-latest">
         ${groups.map(([date, group]) => `
           <li>
-            <h4 class='format-date'>${date}</h4>
+            <h4>${formatDate(date)}</h4>
             <ul>
               ${group.map(snippet => `
                 <li>
@@ -45,8 +30,6 @@ export function showSnippetGroups(filter) {
         `).join('')}
       </ul>
     `;
-
-    formatAllDates();
 
     const randomButton = host.querySelector('.get-random-book-snippet');
     randomButton.addEventListener('click', e => {
@@ -66,4 +49,14 @@ function groupByDate(array) {
     groups[d].push(o);
   }
   return groups;
+}
+
+const dateFormatter = new Intl.DateTimeFormat('en-EN', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+
+function formatDate(dateStr) {
+  return dateFormatter.format(new Date(dateStr.split('-')));
 }
