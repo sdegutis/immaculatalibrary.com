@@ -2,6 +2,7 @@ import { Column, Spaced } from './components/column/column';
 import { TypicalPage } from './components/page';
 import { SnippetsGroups } from './components/snippet-groups';
 import { allBooks } from './model/books';
+import { allSnippets } from './model/snippets';
 
 export default <>
   <TypicalPage image='/img/categories/reference-big.jpg'>
@@ -38,11 +39,7 @@ export default <>
 
         <div>
           <h3>Latest book snippets</h3>
-          <SnippetsGroups />
-          <script type='module'>{`
-            import { showSnippetGroups } from '/script/snippet-groups.js';
-            showSnippetGroups((s, i) => i < 10);
-          `}</script>
+          <SnippetsGroups snippets={allSnippets.slice(0, 10)} />
         </div>
 
       </Column>

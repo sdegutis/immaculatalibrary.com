@@ -67,7 +67,7 @@ export default <>
                 </div>
               </Typography>
             </div>
-            <script type='module' src='/script/random-book-snippet.js' defer />
+            <script src='/script/random-book-snippet.js' defer />
 
             {/* <h3>Book Snippets by Tag</h3>
           <p>{sortedTags().map(tag => <>

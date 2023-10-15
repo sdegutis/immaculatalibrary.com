@@ -2,6 +2,7 @@ import path from 'path/posix';
 import { Column, Spaced } from '../../components/column/column';
 import { TypicalPage } from '../../components/page';
 import { SnippetsGroups } from "../../components/snippet-groups";
+import { allSnippets } from '../../model/snippets';
 import { allTags } from "../../model/tag";
 
 export default [...allTags.values()].map(tag => [path.basename(tag.route), <>
@@ -12,13 +13,8 @@ export default [...allTags.values()].map(tag => [path.basename(tag.route), <>
 
         <div>
           <h1>{tag.name} Book Snippets</h1>
-          <SnippetsGroups />
+          <SnippetsGroups snippets={allSnippets.filter(s => s.tags.has(tag))} />
         </div>
-
-        <script type='module'>{`
-        import { showSnippetGroups } from '/script/snippet-groups.js';
-        showSnippetGroups(s => s.tags.includes(${JSON.stringify(tag.name)}));
-      `}</script>
 
       </Column>
     </Spaced>
