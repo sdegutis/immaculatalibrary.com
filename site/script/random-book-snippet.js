@@ -9,7 +9,10 @@ window.addEventListener('popstate', e => {
   reflectUrl();
 });
 
-if (!window.location.hash) {
+if (window.location.hash) {
+  reflectUrl();
+}
+else {
   doRandomBookSnippet();
 }
 
