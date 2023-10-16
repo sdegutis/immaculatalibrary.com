@@ -3,7 +3,7 @@ import { outfiles } from "../../core/main";
 import { Column } from "../column/column";
 import css from './navlinks.css';
 
-const newPath = `/generated/navlinks.css`;
+const newPath = `/generated` + css.path;
 const cssId = `gen-${randomUUID()}`;
 const str = css.content.toString('utf8').replace(/ID/g, cssId);
 const content = Buffer.from(str);
