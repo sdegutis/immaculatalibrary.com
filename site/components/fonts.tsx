@@ -1,5 +1,6 @@
 import { randomUUID } from "crypto";
 import path from "path";
+import { outfiles } from "../core/main";
 
 export const Font: JSX.Component<{
   use: FsFile[]
@@ -20,16 +21,16 @@ export const Font: JSX.Component<{
   });
 
   const fontStyle = lines.join('\n');
+  const cssPath = `/generated/fonts/${name}.css`;
+  outfiles.set(cssPath, fontStyle);
 
   let id = childEl.attrs?.["id"];
   if (!id) id = (childEl.attrs ??= {})["id"] = `generated-${randomUUID()}`;
 
-  const style = `
-    #${id} { font-family: ${name},  ${attrs.fallback} }
-  `;
+  const style = `#${id} { font-family: ${name},  ${attrs.fallback} }`;
 
   return <>
-    <style>{fontStyle}</style>
+    <link rel="stylesheet" href={cssPath} />
     <style>{style}</style>
     {childEl}
   </>;
