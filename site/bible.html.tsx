@@ -9,7 +9,15 @@ export default <>
       <Column centered>
         <Typography>
 
-          <h1>Audio Bible</h1>
+          <h1>Bible</h1>
+
+          <h2>Translation</h2>
+
+          <p>My favorite translation of the Bible is
+            the <a href="https://www.amazon.com/dp/0898708338">RSV-CE</a>.
+          </p>
+
+          <h2>Audio Bible</h2>
 
           <p>The <strong>Truth and Life Dramatized Audio New Testament</strong> is
             an incredible 22-hour audiobook of the New Testament.</p>

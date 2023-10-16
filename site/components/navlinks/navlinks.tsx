@@ -19,8 +19,8 @@ export const Navlinks: JSX.Component<{ divider?: boolean }> = (attrs) => {
         <a href='/movies.html'>Movies</a>{' | '}
         <a href='/articles.html'>Articles</a>{' | '}
         <a href='/music.html'>Music</a>{' | '}
-        <a href='/audio-bible.html'>Audio Bible</a>{' | '}
-        <a href='/devotions.html'>Devotions</a>
+        <a href='/bible.html'>Bible</a>{' | '}
+        <a href='/devotions.html'>Prayers</a>
       </div>
     </Column>
   </>;

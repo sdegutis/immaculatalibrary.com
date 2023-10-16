@@ -9,7 +9,7 @@ export default <>
       <Column centered>
         <Typography>
 
-          <h1>Devotions</h1>
+          <h1>Prayers</h1>
 
           <p><a href='/prayers.html'>Daily Prayers</a></p>
           <p><a href='https://mass-online.org/daily-holy-mass-live-online/'>Online Masses</a></p>
