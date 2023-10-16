@@ -8,8 +8,8 @@ const newPath = generated(css.path, () => css.content.toString('utf8').replace(/
 
 export const Navlinks: JSX.Component<{ divider?: boolean }> = (attrs) => {
   return <>
-    <link rel="stylesheet" href={newPath} />
     <Column>
+      <link rel="stylesheet" href={newPath} />
       <div id={cssId} class={attrs.divider ? 'divider' : ''}>
         <a href='/about.html'>About</a>{' | '}
         <a href='/books.html'>Books</a>{' | '}
