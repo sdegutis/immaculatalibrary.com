@@ -1,51 +1,3 @@
-#home-hero {
-  box-sizing: border-box;
-
-  background-size: cover;
-  background-position-y: center;
-  height: 230px;
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  padding: 1em;
-  align-content: center;
-  justify-content: center;
-}
-
-@media (min-width: 600px) {
-  #home-hero {
-    height: 335px;
-  }
-}
-
-#home-hero h1 {
-  color: inherit;
-  margin-bottom: 7px;
-  margin: 0;
-}
-
-#home-hero a {
-  color: inherit;
-  text-decoration: underline;
-}
-
-#home-hero p {
-  font-variant: small-caps;
-  margin-bottom: 0;
-  margin: 0;
-}
-
-#home-hero>div {
-  color: white;
-  font-size: 125%;
-  text-shadow: 0px 1px 7px #000;
-}
-
-@media (min-width: 600px) {
-  #home-hero>div {
-    font-size: 200%;
-  }
-}
-
 .hidden-on-mobile {
   display: none;
 }
@@ -56,15 +8,48 @@
   }
 }
 
-#home-hero>div>div {
-  display: inline-block;
-  background: #0007;
-  padding: 1em;
-}
+
 
 #letters-from-heaven {
-  padding: 1px 0;
-  background: var(--bgalt);
+  position: relative;
+  overflow: hidden;
+}
+
+#letters-from-heaven::before {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background-color: var(--bgalt);
+  background-image: url(/img/page/home.jpg);
+  background-size: cover;
+  background-position-y: center;
+  opacity: 0.42;
+}
+
+#letters-from-heaven::after {
+  position: absolute;
+  z-index: -2;
+  content: '';
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background-color: var(--bgalt);
+}
+
+#letters-from-heaven a {
+  color: inherit;
+}
+
+#letters-from-heaven .typography blockquote {
+  border: none;
+  padding: 0;
 }
 
 #letters-from-heaven .typography blockquote li {

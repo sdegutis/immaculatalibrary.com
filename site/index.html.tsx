@@ -13,27 +13,14 @@ export default <>
 
     <link rel="stylesheet" href="/css/home.css" />
 
-    <Font use={davidlibre} fallback='serif'>
-      <section id="home-hero" style={`background-image: url(/img/page/home.jpg)`}>
-        <div></div>
-        <div>
-          <div>
-            <h1><a href='/'>Immaculata Library</a></h1>
-            <p>Catholic Digital Library</p>
-          </div>
-        </div>
-      </section>
-    </Font>
-
-    <Navlinks />
-
     <main>
 
       <div id="letters-from-heaven">
+        <Navlinks />
         <Spaced>
           <Column centered>
             <Typography>
-              <h2>Letters from Heaven</h2>
+              <h1>Immaculata Library</h1>
               <blockquote>
                 <p>
                   “Have always at hand some approved book of devotion, and read a little of them every day with as much devotion as if you
