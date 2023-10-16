@@ -16,8 +16,8 @@ export default <>
     <main>
 
       <div id="letters-from-heaven">
-        <Navlinks />
         <Spaced>
+          <Navlinks />
           <Column centered>
             <Typography>
               <h1>Immaculata Library</h1>
