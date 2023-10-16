@@ -3,8 +3,6 @@ import { TypicalPage } from './components/page';
 import { Typography } from './components/typography';
 import image from './img/page/home.jpg';
 
-const sourceLink = "https://github.com/sdegutis/immaculatalibrary.com";
-
 export default <>
   <TypicalPage image={image.path}>
 

@@ -1,11 +1,9 @@
 import { Column, Spaced } from "./components/column/column";
-import { Font } from "./components/fonts";
 import { Navlinks } from "./components/navlinks";
 import { EmptyPage } from "./components/page";
 import { QuickLinks } from "./components/quicklinks/quicklinks";
 import { SiteFooter } from "./components/site-footer";
 import { Typography } from "./components/typography";
-import davidlibre from './fonts/davidlibre/';
 import { featuredBooks } from "./model/featured";
 
 export default <>
