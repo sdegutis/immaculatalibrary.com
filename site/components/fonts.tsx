@@ -1,6 +1,6 @@
 import { randomUUID } from "crypto";
 import path from "path";
-import { outfiles } from "../core/main";
+import { generated } from "../core/generated";
 
 export const Font: JSX.Component<{
   use: FsFile[]
@@ -9,20 +9,21 @@ export const Font: JSX.Component<{
   const dir = attrs.use;
   const name = path.basename(dir[0]!.path).split('-')[0]!;
 
-  const lines = dir.map(file => {
-    const route = file.path;
-    const weight = path.basename(file.path).match(/\d+/)![0];
-    return `@font-face {
-      font-display: block;
-      font-family: ${name};
-      font-weight: ${weight};
-      src: url(${route});
-    }`;
+  const filename = `font-${name}.css`;
+  const cssPath = generated(filename, () => {
+    const lines = dir.map(file => {
+      const route = file.path;
+      const weight = path.basename(file.path).match(/\d+/)![0];
+      return `@font-face {
+        font-display: block;
+        font-family: ${name};
+        font-weight: ${weight};
+        src: url(${route});
+      }`;
+    });
+    const fontStyle = lines.join('\n');
+    return fontStyle;
   });
-
-  const fontStyle = lines.join('\n');
-  const cssPath = `/generated/fonts/${name}.css`;
-  outfiles.set(cssPath, fontStyle);
 
   let id = childEl.attrs?.["id"];
   if (!id) id = (childEl.attrs ??= {})["id"] = `generated-${randomUUID()}`;

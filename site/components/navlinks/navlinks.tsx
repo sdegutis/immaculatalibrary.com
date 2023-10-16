@@ -1,13 +1,10 @@
 import { randomUUID } from "crypto";
-import { outfiles } from "../../core/main";
+import { generated } from "../../core/generated";
 import { Column } from "../column/column";
 import css from './navlinks.css';
 
-const newPath = `/generated` + css.path;
 const cssId = `gen-${randomUUID()}`;
-const str = css.content.toString('utf8').replace(/ID/g, cssId);
-const content = Buffer.from(str);
-outfiles.set(newPath, content);
+const newPath = generated(css.path, () => css.content.toString('utf8').replace(/ID/g, cssId));
 
 export const Navlinks: JSX.Component<{ divider?: boolean }> = (attrs) => {
   return <>
