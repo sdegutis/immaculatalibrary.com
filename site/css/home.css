@@ -27,7 +27,7 @@
   background-color: var(--bgalt);
   background-image: url(/img/page/home.jpg);
   background-size: cover;
-  background-position-y: center;
+  background-position: -7em, center;
   opacity: 0.42;
 }
 
