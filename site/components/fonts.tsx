@@ -14,11 +14,12 @@ export const Font: JSX.Component<{
     const lines = dir.map(file => {
       const route = file.path;
       const weight = path.basename(file.path).match(/\d+/)![0];
-      return `@font-face {
+      return /*css*/ `@font-face {
         font-display: block;
         font-family: ${name};
         font-weight: ${weight};
         src: url(${route});
+        font-display: fallback;
       }`;
     });
     const fontStyle = lines.join('\n');
@@ -31,6 +32,9 @@ export const Font: JSX.Component<{
   const style = `#${id} { font-family: ${name},  ${attrs.fallback} }`;
 
   return <>
+    {attrs.use.map(file =>
+      <link rel="preload" href={file.path} as="font" type="font/woff" crossorigin />
+    )}
     <link rel="stylesheet" href={cssPath} />
     <style>{style}</style>
     {childEl}
