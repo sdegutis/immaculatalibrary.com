@@ -1,9 +1,10 @@
 import { Column, Spaced } from "./components/column/column";
 import { TypicalPage } from "./components/page";
 import { Typography } from "./components/typography";
+import image from './img/categories/reference-big.jpg';
 
 export default <>
-  <TypicalPage image='/img/page/audiobible-big.jpg'>
+  <TypicalPage image={image.path}>
 
     <Spaced>
       <Column centered>
