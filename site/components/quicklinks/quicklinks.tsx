@@ -1,6 +1,6 @@
 import { allCategories, categoriesBySlug } from '../../model/categories';
+import { featuredBooks } from '../../model/featured';
 import { allMovies } from '../../model/movies';
-import { featuredBooks } from '../featured/featured';
 import { Typography } from '../typography';
 import css from './quicklinks.css';
 

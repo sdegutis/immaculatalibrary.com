@@ -1,4 +1,4 @@
-import { booksBySlug } from "../../model/books";
+import { booksBySlug } from "./books";
 
 export const featuredBooks = [
   'introduction-to-the-devout-life',
