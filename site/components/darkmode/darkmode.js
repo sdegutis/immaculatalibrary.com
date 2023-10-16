@@ -1,12 +1,17 @@
 reflectDarkMode();
 
-for (const button of getDarkModeButtons()) {
-  button.onclick = (e) => {
-    e.preventDefault();
-    localStorage.setItem('dark-mode', Number(!isDarkMode()));
-    reflectDarkMode();
-  };
-}
+document.addEventListener('DOMContentLoaded', () => {
+  reflectDarkMode();
+
+  for (const button of getDarkModeButtons()) {
+    button.onclick = (e) => {
+      e.preventDefault();
+      localStorage.setItem('dark-mode', Number(!isDarkMode()));
+      reflectDarkMode();
+    };
+  }
+});
+
 
 function getDarkModeButtons() {
   return document.querySelectorAll('.dark-mode-toggle');
