@@ -25,11 +25,11 @@ export const Font: JSX.Component<{
   if (!id) id = (childEl.attrs ??= {})["id"] = `generated-${randomUUID()}`;
 
   const style = `
-    ${fontStyle}
     #${id} { font-family: ${name},  ${attrs.fallback} }
   `;
 
   return <>
+    <style>{fontStyle}</style>
     <style>{style}</style>
     {childEl}
   </>;
