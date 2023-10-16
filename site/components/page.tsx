@@ -1,7 +1,7 @@
 import martel from '../fonts/martel/';
 import { Font } from "./fonts";
 import { Meta } from './meta/meta';
-import { Navlinks } from "./navlinks/navlinks";
+import { Navlinks } from "./navlinks";
 import { QuickLinks } from "./quicklinks/quicklinks";
 import { SiteFooter } from "./site-footer";
 import { SiteHeader } from "./site-header";

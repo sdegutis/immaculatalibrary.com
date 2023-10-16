@@ -1,10 +1,24 @@
 import { randomUUID } from "crypto";
-import { generated } from "../../core/generated";
-import { Column } from "../column/column";
-import css from './navlinks.css';
+import { generated } from "../core/generated";
+import { Column } from "./column/column";
+
+const css = /*css*/`
+  #ID {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    margin: 2em 0;
+  }
+
+  #ID.divider {
+    padding-bottom: 2em;
+    border-bottom: 1px solid var(--border-color);
+  }
+`;
 
 const cssId = `gen-${randomUUID()}`;
-const newPath = generated(css.path, () => css.content.toString('utf8').replace(/ID/g, cssId));
+const newPath = generated('navlinks.css', () => css.replace(/ID/g, cssId));
 
 export const Navlinks: JSX.Component<{ divider?: boolean }> = (attrs) => {
   return <>

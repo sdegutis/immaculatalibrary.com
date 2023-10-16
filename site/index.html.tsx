@@ -1,6 +1,6 @@
 import { Column, Spaced } from "./components/column/column";
 import { Font } from "./components/fonts";
-import { Navlinks } from "./components/navlinks/navlinks";
+import { Navlinks } from "./components/navlinks";
 import { EmptyPage } from "./components/page";
 import { QuickLinks } from "./components/quicklinks/quicklinks";
 import { SiteFooter } from "./components/site-footer";
