@@ -1,7 +1,6 @@
 import martel from '../fonts/martel/';
 import { Font } from "./fonts";
 import { Meta } from './meta/meta';
-import { Navlinks } from "./navlinks";
 import { QuickLinks } from "./quicklinks/quicklinks";
 import { SiteFooter } from "./site-footer";
 import { SiteHeader } from "./site-header";
@@ -38,7 +37,6 @@ export const TypicalPage: JSX.Component<{ image: string }> = (attrs, children) =
   <EmptyPage>
 
     <SiteHeader image={attrs.image} />
-    <Navlinks divider />
 
     <main>
       {children}

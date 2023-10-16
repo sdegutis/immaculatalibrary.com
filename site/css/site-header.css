@@ -1,26 +1,27 @@
-#site-header {
-  background: #1a1f3333;
-  padding: 0 0.5em;
+header#page-hero {
+  height: 18vh;
+  padding: 1em 0;
+
+  position: relative;
+  background-color: var(--bgalt);
 }
 
-#site-header nav {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  grid-auto-flow: column;
-  gap: 0.25em;
+header#page-hero>div {
+  position: relative;
 }
 
-#site-header nav a {
-  color: #fff;
-  font-weight: bold;
-  text-decoration: none;
-  font-variant: small-caps;
-  padding: 1em;
-  margin-left: -1em;
-  display: inline-block;
+header#page-hero>section {
+  background-size: cover;
+  background-position-y: center;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.42;
 }
 
-#site-header nav a:hover {
-  background: #20294e;
+header#page-hero a {
+  color: inherit;
 }
