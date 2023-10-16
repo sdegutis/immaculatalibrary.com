@@ -26,13 +26,13 @@ export const Navlinks: JSX.Component<{ divider?: boolean }> = (attrs) => {
       <link rel="stylesheet" href={newPath} />
       <div id={cssId} class={attrs.divider ? 'divider' : ''}>
         <a href='/'>Immaculata Library</a> { }
-        <a href='/about.html'>About</a> { }
         <a href='/books.html'>Books</a> { }
         <a href='/movies.html'>Movies</a> { }
         <a href='/articles.html'>Articles</a> { }
         <a href='/music.html'>Music</a> { }
         <a href='/bible.html'>Bible</a> { }
-        <a href='/devotions.html'>Prayers</a>
+        <a href='/devotions.html'>Prayers</a> { }
+        <a href='/about.html'>About</a>
       </div>
     </Column>
   </>;
