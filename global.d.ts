@@ -36,3 +36,8 @@ declare module '*.jpg' {
   const file: FsFile;
   export default file;
 }
+
+declare module '*.png' {
+  const file: FsFile;
+  export default file;
+}
