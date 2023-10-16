@@ -1,7 +1,7 @@
 import { Column, Spaced } from "./components/column/column";
 import { TypicalPage } from "./components/page";
 import { Typography } from "./components/typography";
-import image from './img/categories/reference-big.jpg';
+import image from './img/categories/classics-big.jpg';
 
 export default <>
   <TypicalPage image={image.path}>
