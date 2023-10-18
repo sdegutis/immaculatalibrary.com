@@ -17,6 +17,7 @@ export class Snippet extends DataFileWithDate<SnippetFile> {
 
   static override modelDir = 'snippets';
 
+  shortLink: string;
   route: string;
   archiveLink: string;
   previewMarkdown: string | null;
@@ -35,6 +36,8 @@ export class Snippet extends DataFileWithDate<SnippetFile> {
     this.data.tags ??= [];
 
     this.route = `/book-snippets/${this.slug}.html`;
+    this.shortLink = '';
+
     this.archiveLink = `https://archive.org/details/${this.data.archiveSlug}/page/${this.data.archivePage}?view=theater`;
     this.previewMarkdown = derivePreview(this);
     this.renderedBody = markdown.render(this.content);
@@ -67,5 +70,11 @@ for (const book of allBooks) {
     const s2 = book.snippets[i];
     s1!.nextSnippet = s2!;
     s2!.prevSnippet = s1!;
+  }
+}
+
+for (let len = 12; new Set(allSnippets.map(s => s.shortLink)).size !== allSnippets.length; len++) {
+  for (const snippet of allSnippets) {
+    snippet.shortLink = snippet.slug.slice(0, len);
   }
 }

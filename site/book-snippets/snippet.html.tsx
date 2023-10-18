@@ -7,12 +7,23 @@ import { isDev } from "../core/helpers";
 import { Snippet, allSnippets } from '../model/snippets';
 import { sortedTags } from "../model/tag";
 
+const CopyLink: JSX.Component<{}, [JSX.Element]> = (attrs, [child]) => {
+  child.attrs ??= Object.create(null);
+  child.attrs!["onclick"] = `copylink(event);`;
+  return <span>
+    <script src='/script/copylink.js' />
+    {child}
+  </span>;
+};
+
 export default allSnippets.map(snippet => {
   const singleFile = snippet.book.data.files.length === 1;
   const specificBookName = (!singleFile && snippet.book.data.files
     .find(file => file.archiveId === snippet.data.archiveSlug)
     ?.pdfFile
     .replace('.pdf', ''));
+
+  const copyLinkRoute = `/_/${snippet.shortLink}.html`;
 
   return [`${snippet.slug}.html`, <>
     <TypicalPage image={snippet.book.category.imageBig}>
@@ -24,8 +35,10 @@ export default allSnippets.map(snippet => {
           <Typography>
 
             <h1>{snippet.renderedTitle}</h1>
-
             <p>{formatDate(snippet.date)} &bull; {snippet.mins} min</p>
+            <p>
+              <CopyLink><a href={copyLinkRoute}>Copy link</a></CopyLink>
+            </p>
 
             {isDev && <>
               <div style="border: 1px solid var(--admin-border-color); background-color: var(--admin-bg-color); padding: 1em;">
