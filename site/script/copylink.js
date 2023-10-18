@@ -5,7 +5,7 @@ function copylink(e) {
 
   const done = document.createElement('span');
   done.innerHTML = 'Link copied.';
-  a.parentElement.insertAdjacentElement('beforeend', done);
+  a.insertAdjacentElement('afterend', done);
   a.hidden = true;
 
   setTimeout(() => {

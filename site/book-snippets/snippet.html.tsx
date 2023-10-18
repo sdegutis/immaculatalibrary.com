@@ -10,10 +10,10 @@ import { sortedTags } from "../model/tag";
 const CopyLink: JSX.Component<{}, [JSX.Element]> = (attrs, [child]) => {
   child.attrs ??= Object.create(null);
   child.attrs!["onclick"] = `copylink(event);`;
-  return <span>
+  return <>
     <script src='/script/copylink.js' />
     {child}
-  </span>;
+  </>;
 };
 
 export default allSnippets.map(snippet => {
