@@ -3,7 +3,7 @@ import { Font } from "./fonts";
 import { Meta } from './meta/meta';
 import { QuickLinks } from "./quicklinks/quicklinks";
 import { SiteFooter } from "./site-footer";
-import { SiteHeader } from "./site-header";
+import { SiteHeader } from "./site-header/site-header";
 
 export const EmptyPage: JSX.Component = (attrs, children) => <>
   {'<!DOCTYPE html>'}
