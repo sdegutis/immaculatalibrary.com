@@ -23,7 +23,6 @@ export default allSnippets.map(snippet => {
     ?.pdfFile
     .replace('.pdf', ''));
 
-  const copyLinkRoute = `/_/${snippet.shortLink}.html`;
 
   return [`${snippet.slug}.html`, <>
     <TypicalPage image={snippet.book.category.imageBig}>
@@ -37,7 +36,7 @@ export default allSnippets.map(snippet => {
             <h1>{snippet.renderedTitle}</h1>
             <p>{formatDate(snippet.date)} &bull; {snippet.mins} min</p>
             <p>
-              <CopyLink><a href={copyLinkRoute}>Copy link</a></CopyLink>
+              <CopyLink><a href={`/_/${snippet.shortLink}.html`}>Copy link</a></CopyLink>
             </p>
 
             {isDev && <>
