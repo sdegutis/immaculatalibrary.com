@@ -3,6 +3,7 @@ import { TypicalPage } from './components/page';
 import { SnippetsGroups } from './components/snippet-groups';
 import { allBooks } from './model/books';
 import { allSnippets } from './model/snippets';
+import script from './script/books.js';
 
 export default <>
   <TypicalPage title='Books' image='/img/categories/reference-big.jpg'>
@@ -14,16 +15,21 @@ export default <>
 
           <h2>All Books</h2>
 
-          <script src='/script/random-book.js' defer />
+          <script src={script.path} defer></script>
           <p>Not sure what to read?<br /> Try a <a href='#' class='random-book-button'>Random Book</a>.</p>
           <hr />
 
-          <p>Search:<br /> <input type="text" oninput="searchBooks(this);" /></p>
+          <p>Search:<br /> <input type="text" id='search-books-input' oninput="searchBooks();" /></p>
+          <p>
+            <label><input type='radio' name='booksearch' value='both' checked /> All</label> { }
+            <label><input type='radio' name='booksearch' value='some' /> Has snippets</label> { }
+            <label><input type='radio' name='booksearch' value='none' /> No snippets</label> { }
+          </p>
           <hr />
 
           <ul id="books-all" style="padding-left: 20px">
             {allBooks.map(book => <>
-              <li>
+              <li class={book.snippets.length === 0 ? 'empty' : ''}>
                 <p><a class="link" href={book.route}>{book.data.title}</a><br /> {book.data.author}</p>
               </li>
             </>)}
@@ -33,7 +39,6 @@ export default <>
             No results
           </span>
 
-          <script src='/script/search-books.js' defer></script>
 
         </div>
 
