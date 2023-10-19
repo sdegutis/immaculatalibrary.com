@@ -3,6 +3,7 @@ const notFound = document.getElementById('no-books-found');
 const searchBooksInput = document.getElementById('search-books-input');
 
 let mode = 'both';
+searchBooks();
 
 function inMode(li) {
   if (mode === 'both') return true;
@@ -23,7 +24,9 @@ function searchBooks() {
       .includes(searchString));
   }
 
-  notFound.hidden = (booksList.querySelectorAll('li:not([hidden])').length > 0);
+  const visibleBooks = booksList.querySelectorAll('li:not([hidden])').length;
+  notFound.hidden = (visibleBooks > 0);
+  document.getElementById('bookscount').textContent = visibleBooks;
 }
 
 for (const button of document.querySelectorAll('.random-book-button')) {

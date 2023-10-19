@@ -27,6 +27,8 @@ export default <>
           </p>
           <hr />
 
+          <p>Showing <span id='bookscount'>0</span> books</p>
+
           <ul id="books-all" style="padding-left: 20px">
             {allBooks.map(book => <>
               <li class={book.snippets.length === 0 ? 'empty' : ''}>
