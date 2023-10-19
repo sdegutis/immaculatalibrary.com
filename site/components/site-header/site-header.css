@@ -1,5 +1,5 @@
 header#page-hero {
-  height: 18vh;
+  min-height: 18vh;
   padding: 1em 0;
 
   position: relative;
