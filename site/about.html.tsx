@@ -4,13 +4,13 @@ import { Typography } from './components/typography';
 import image from './img/page/home.jpg';
 
 export default <>
-  <TypicalPage image={image.path}>
+  <TypicalPage title='About' image={image.path}>
 
     <Spaced>
       <Column centered>
         <Typography>
 
-          <h1>About Immaculata Library</h1>
+          <h2>About Immaculata Library</h2>
 
           <p>The website Immaculata Library began as a quick place
             to store digital copies of invaluable and timeless

@@ -6,7 +6,7 @@ import { markdown } from "../core/helpers";
 import { allArticles } from "../model/articles";
 
 export default allArticles.map(article => [`${article.slug}.html`, <>
-  <TypicalPage image={article.data.imageFilename ?? '/img/page/articles.jpg'}>
+  <TypicalPage title="Articles" image={article.data.imageFilename ?? '/img/page/articles.jpg'}>
 
     <link rel="stylesheet" href="/css/article.data.css" />
 
@@ -15,7 +15,7 @@ export default allArticles.map(article => [`${article.slug}.html`, <>
 
         <Typography>
 
-          <h1>{markdown.renderInline(article.data.title)}</h1>
+          <h2>{markdown.renderInline(article.data.title)}</h2>
 
           {article.data.imageCaption && <small>(Image: {article.data.imageCaption})</small>}
 

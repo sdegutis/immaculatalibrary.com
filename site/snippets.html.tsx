@@ -4,7 +4,7 @@ import { SnippetsGroups } from "./components/snippet-groups";
 import { allSnippets } from "./model/snippets";
 
 export default <>
-  <TypicalPage image='/img/categories/reference-big.jpg'>
+  <TypicalPage title="Book Snippets" image='/img/categories/reference-big.jpg'>
 
     <script type='module' src='/script/search-book-snippets.js' />
 
@@ -13,7 +13,7 @@ export default <>
 
         <div>
 
-          <h1>Book Snippets</h1>
+          <h2>Book Snippets</h2>
 
           <p>
             Search:<br />

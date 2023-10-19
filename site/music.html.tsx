@@ -4,13 +4,13 @@ import { TypicalPage } from "./components/page";
 import { Typography } from "./components/typography";
 
 export default <>
-  <TypicalPage image='/img/page/music.jpg'>
+  <TypicalPage title="Music" image='/img/page/music.jpg'>
 
     <Spaced>
       <Column split>
 
         <Typography>
-          <h1>Sacred Music</h1>
+          <h2>Sacred Music</h2>
           <p>
             Reading holy books can help us grow in devotion to God, and movies can
             help us visualize these sacred mysteries. But countless angels are

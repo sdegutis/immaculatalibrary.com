@@ -5,14 +5,14 @@ import { excerpt, markdown } from "./core/helpers";
 import { allArticles } from "./model/articles";
 
 export default <>
-  <TypicalPage image='/img/page/articles.jpg'>
+  <TypicalPage title="Articles" image='/img/page/articles.jpg'>
 
     <Spaced>
       <Column>
 
         <link rel="stylesheet" href="/css/articles.css" />
 
-        <h1>Articles</h1>
+        <h2>Articles</h2>
         <ul class="all-blog-posts">
           {allArticles.map(article => <>
             <li class="post-row">

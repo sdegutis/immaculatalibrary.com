@@ -33,10 +33,10 @@ export const EmptyPage: JSX.Component = (attrs, children) => <>
   </Font>
 </>;
 
-export const TypicalPage: JSX.Component<{ image: string }> = (attrs, children) => <>
+export const TypicalPage: JSX.Component<{ title: string, image: string }> = (attrs, children) => <>
   <EmptyPage>
 
-    <SiteHeader image={attrs.image} />
+    <SiteHeader image={attrs.image} title={attrs.title} />
 
     <main>
       {children}

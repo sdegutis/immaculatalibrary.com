@@ -283,13 +283,13 @@ Most Sacred Heart of Jesus
 `;
 
 export default <>
-  <TypicalPage image='/img/categories/blessed-sacrament-big.jpg'>
+  <TypicalPage title="Prayers" image='/img/categories/blessed-sacrament-big.jpg'>
 
     <Spaced>
       <Column centered>
         <Typography>
 
-          <h1>Prayers</h1>
+          <h2>Daily Prayers</h2>
 
           {markdown.render(prayers)}
 

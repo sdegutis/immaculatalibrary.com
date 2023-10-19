@@ -6,7 +6,7 @@ import { markdown } from "../core/helpers";
 import { allBooks } from '../model/books';
 
 export default allBooks.map(book => [`${book.slug}.html`, <>
-  <TypicalPage image={book.category.imageBig}>
+  <TypicalPage title="Books" image={book.category.imageBig}>
 
     <Spaced>
       <Column split>
@@ -15,7 +15,7 @@ export default allBooks.map(book => [`${book.slug}.html`, <>
 
           <link rel="stylesheet" href='/css/book.css' />
 
-          <h1>{book.data.title}</h1>
+          <h2>{book.data.title}</h2>
           <p class="subtitle">{book.data.subtitle}</p>
           <p>By <span class="author">{book.data.author}</span></p>
           <p><Rating n={book.data.rating} /></p>

@@ -25,7 +25,7 @@ export default allSnippets.map(snippet => {
 
 
   return [`${snippet.slug}.html`, <>
-    <TypicalPage image={snippet.book.category.imageBig}>
+    <TypicalPage title="Book Snippets" image={snippet.book.category.imageBig}>
 
       <link rel="stylesheet" href='/css/snippet.css' />
 
@@ -33,7 +33,7 @@ export default allSnippets.map(snippet => {
         <Column split>
           <Typography>
 
-            <h1>{snippet.renderedTitle}</h1>
+            <h2>{snippet.renderedTitle}</h2>
             <p>{formatDate(snippet.date)} &bull; {snippet.mins} min</p>
             <p>
               <CopyLink><a href={`/_/${snippet.shortLink}.html`}>Copy link</a></CopyLink>

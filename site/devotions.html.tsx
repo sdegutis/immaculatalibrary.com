@@ -3,13 +3,13 @@ import { TypicalPage } from "./components/page";
 import { Typography } from "./components/typography";
 
 export default <>
-  <TypicalPage image='/img/categories/blessed-sacrament-big.jpg'>
+  <TypicalPage title="Prayers" image='/img/categories/blessed-sacrament-big.jpg'>
 
     <Spaced>
       <Column centered>
         <Typography>
 
-          <h1>Prayers</h1>
+          <h2>Prayers</h2>
 
           <p><a href='/prayers.html'>Daily Prayers</a></p>
           <p><a href='https://mass-online.org/daily-holy-mass-live-online/'>Online Masses</a></p>

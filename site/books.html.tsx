@@ -5,14 +5,14 @@ import { allBooks } from './model/books';
 import { allSnippets } from './model/snippets';
 
 export default <>
-  <TypicalPage image='/img/categories/reference-big.jpg'>
+  <TypicalPage title='Books' image='/img/categories/reference-big.jpg'>
 
     <Spaced>
       <Column split>
 
         <div>
 
-          <h1>All Books</h1>
+          <h2>All Books</h2>
 
           <script src='/script/random-book.js' defer />
           <p>Not sure what to read?<br /> Try a <a href='#' class='random-book-button'>Random Book</a>.</p>

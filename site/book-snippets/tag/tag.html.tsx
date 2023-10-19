@@ -6,13 +6,13 @@ import { allSnippets } from '../../model/snippets';
 import { allTags } from "../../model/tag";
 
 export default [...allTags.values()].map(tag => [path.basename(tag.route), <>
-  <TypicalPage image='/img/categories/reference-big.jpg'>
+  <TypicalPage title='Book Snippets' image='/img/categories/reference-big.jpg'>
 
     <Spaced>
       <Column split>
 
         <div>
-          <h1>{tag.name} Book Snippets</h1>
+          <h2>{tag.name} Book Snippets</h2>
           <SnippetsGroups snippets={allSnippets.filter(s => s.tags.has(tag))} />
         </div>
 

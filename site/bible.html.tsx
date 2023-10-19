@@ -4,21 +4,21 @@ import { Typography } from "./components/typography";
 import image from './img/categories/classics-big.jpg';
 
 export default <>
-  <TypicalPage image={image.path}>
+  <TypicalPage title="Bible" image={image.path}>
 
     <Spaced>
       <Column centered>
         <Typography>
 
-          <h1>Bible</h1>
+          <h2>Bible</h2>
 
-          <h2>Translation</h2>
+          <h3>Translation</h3>
 
           <p>My favorite translation of the Bible is
             the <a href="https://www.amazon.com/dp/0898708338">RSV-CE</a>.
           </p>
 
-          <h2>Audio Bible</h2>
+          <h3>Audio Bible</h3>
 
           <p>The <strong>Truth and Life Dramatized Audio New Testament</strong> is
             an incredible 22-hour audiobook of the New Testament.</p>

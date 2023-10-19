@@ -6,7 +6,7 @@ import { excerpt, markdown } from "../../core/helpers";
 import { allCategories } from '../../model/categories';
 
 export default allCategories.map(cat => [`${cat.slug}.html`, <>
-  <TypicalPage image={`/img/categories/${cat.slug}-big.jpg`}>
+  <TypicalPage title="Book Categories" image={`/img/categories/${cat.slug}-big.jpg`}>
 
     <link rel="stylesheet" href='/css/category.css' />
 
@@ -14,7 +14,7 @@ export default allCategories.map(cat => [`${cat.slug}.html`, <>
       <Column centered>
         <Typography>
 
-          <h1>{cat.data.title}</h1>
+          <h2>{cat.data.title}</h2>
           {markdown.render(cat.content)}
 
         </Typography>
