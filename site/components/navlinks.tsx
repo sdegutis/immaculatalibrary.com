@@ -1,4 +1,4 @@
-import { randomUUID } from "crypto";
+import crypto from 'crypto';
 import { generated } from "../core/generated";
 import { Column } from "./column/column";
 
@@ -17,13 +17,14 @@ const css = /*css*/`
   }
 `;
 
-const cssId = `gen-${randomUUID()}`;
-const newPath = generated('navlinks.css', () => css.replace(/ID/g, cssId));
+const hash = crypto.createHash('md5').update(css).digest('hex');
+const cssId = `gen-${hash}`;
+const cssPath = generated(`navlinks-${hash}.css`, () => css.replace(/ID/g, cssId));
 
 export const Navlinks: JSX.Component<{ divider?: boolean }> = (attrs) => {
   return <>
     <Column>
-      <link rel="stylesheet" href={newPath} />
+      <link rel="stylesheet" href={cssPath} />
       <div id={cssId} class={attrs.divider ? 'divider' : ''}>
         <a href='/'>Immaculata Library</a> { }
         <a href='/books.html'>Books</a> { }

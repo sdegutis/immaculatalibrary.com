@@ -1,4 +1,3 @@
-import { randomUUID } from "crypto";
 import path from "path";
 import { generated } from "../core/generated";
 
@@ -22,12 +21,11 @@ export const Font: JSX.Component<{
         font-display: fallback;
       }`;
     });
-    const fontStyle = lines.join('\n');
-    return fontStyle;
+    return lines.join('\n');
   });
 
   let id = childEl.attrs?.["id"];
-  if (!id) id = (childEl.attrs ??= {})["id"] = `generated-${randomUUID()}`;
+  if (!id) id = (childEl.attrs ??= {})["id"] = `generated-font-${name}`;
 
   const style = `#${id} { font-family: ${name},  ${attrs.fallback} }`;
 
