@@ -22,7 +22,7 @@ export default <>
           <p><input autofocus placeholder='Search' type="text" id='search-books-input' oninput="searchBooks();" /></p>
           <p style='display:flex;gap:1em;align-items:baseline'>
             Has snippets: { }
-            <label><input type='radio' name='booksearch' value='both' checked />All</label> { }
+            <label><input type='radio' name='booksearch' value='both' checked />Either</label> { }
             <label><input type='radio' name='booksearch' value='some' />Some</label> { }
             <label><input type='radio' name='booksearch' value='none' />None</label> { }
           </p>
