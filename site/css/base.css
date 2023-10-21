@@ -69,6 +69,7 @@ button {
   box-sizing: border-box;
   width: 100%;
   font-family: system-ui;
+  font-size: inherit;
 }
 
 :read-write:focus,
