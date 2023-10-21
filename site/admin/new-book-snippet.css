@@ -42,20 +42,9 @@ iframe {
 form {
   display: grid;
   grid-template-columns: auto 1fr;
+  align-items: baseline;
   gap: 0.25em;
   padding: 0.25em;
-}
-
-form :is(input, textarea, button) {
-  background-color: inherit;
-  color: inherit;
-  border: 1px solid #17f;
-  outline: none;
-  padding: 3px;
-}
-
-form :read-write:focus {
-  background-color: #fff1;
 }
 
 form button {

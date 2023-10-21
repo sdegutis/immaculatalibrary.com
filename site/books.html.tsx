@@ -19,11 +19,12 @@ export default <>
           <p>Not sure what to read?<br /> Try a <a href='#' class='random-book-button'>Random Book</a>.</p>
           <hr />
 
-          <p><input placeholder='Search' type="text" id='search-books-input' oninput="searchBooks();" /></p>
-          <p style='display:flex;gap:1em'>
-            <label><input type='radio' name='booksearch' value='both' checked /> All</label> { }
-            <label><input type='radio' name='booksearch' value='some' /> Has snippets</label> { }
-            <label><input type='radio' name='booksearch' value='none' /> No snippets</label> { }
+          <p><input autofocus placeholder='Search' type="text" id='search-books-input' oninput="searchBooks();" /></p>
+          <p style='display:flex;gap:1em;align-items:baseline'>
+            Has snippets: { }
+            <label><input type='radio' name='booksearch' value='both' checked />All</label> { }
+            <label><input type='radio' name='booksearch' value='some' />Some</label> { }
+            <label><input type='radio' name='booksearch' value='none' />None</label> { }
           </p>
           <hr />
 

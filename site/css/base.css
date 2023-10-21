@@ -58,19 +58,44 @@ hr {
   border: 0;
 }
 
-input[type=text] {
+:read-write,
+button {
   padding: 0.5em;
   background-color: var(--bgalt);
   color: inherit;
   border: none;
+  border-radius: 0;
   outline: 1px solid var(--border-color);
   box-sizing: border-box;
   width: 100%;
 }
 
-input[type=text]:focus {
+:read-write:focus,
+button:active {
   outline: 1px solid var(--blue-bg);
   background-color: var(--bgalt);
+}
+
+label:has(input) {
+  cursor: pointer;
+}
+
+label:has(input[type=radio]:checked) {
+  color: var(--blue-bg);
+  border-bottom: 1px solid currentColor;
+}
+
+label:has(input[type=checkbox]) {
+  padding-left: 0.5em;
+}
+
+label:has(input[type=checkbox]:checked) {
+  color: var(--blue-bg);
+  border-left: 1px solid currentColor;
+}
+
+input:not(:read-write) {
+  display: none;
 }
 
 @media screen and (max-width: 767px) {
