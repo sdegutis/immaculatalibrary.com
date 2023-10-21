@@ -1,0 +1,11 @@
+#books-filters {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1em;
+  margin: 1em 0;
+}
+
+#books-filters .radios {
+  display: flex;
+  gap: 1em;
+}

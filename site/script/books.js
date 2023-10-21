@@ -2,13 +2,19 @@ const booksList = document.getElementById('books-all');
 const notFound = document.getElementById('no-books-found');
 const searchBooksInput = document.getElementById('search-books-input');
 
-let mode = 'both';
+let snippetsMode = 'both';
+let starsMode = 'any';
 searchBooks();
 
-function inMode(li) {
-  if (mode === 'both') return true;
-  if (mode === 'none') return li.classList.contains('empty');
-  if (mode === 'some') return !li.classList.contains('empty');
+function meetsSnippetsFilter(li) {
+  if (snippetsMode === 'both') return true;
+  if (snippetsMode === 'none') return li.classList.contains('empty');
+  if (snippetsMode === 'some') return !li.classList.contains('empty');
+}
+
+function meetsStarsFilter(li) {
+  if (starsMode === 'any') return true;
+  return li.classList.contains(`stars-${starsMode}`);
 }
 
 function searchBooks() {
@@ -17,11 +23,17 @@ function searchBooks() {
     .trim()
     .toLowerCase();
 
+  console.log(starsMode)
+
   for (const li of booksList.querySelectorAll('li')) {
-    li.hidden = (!inMode(li)) | (!li
-      .innerText
-      .toLowerCase()
-      .includes(searchString));
+    li.hidden = (
+      !meetsSnippetsFilter(li) |
+      !meetsStarsFilter(li) |
+      (!li
+        .innerText
+        .toLowerCase()
+        .includes(searchString))
+    );
   }
 
   const visibleBooks = booksList.querySelectorAll('li:not([hidden])').length;
@@ -41,7 +53,14 @@ for (const button of document.querySelectorAll('.random-book-button')) {
 
 for (const radio of document.querySelectorAll('input[name=booksearch]')) {
   radio.addEventListener('change', (e) => {
-    mode = e.target.value;
+    snippetsMode = e.target.value;
+    searchBooks();
+  });
+}
+
+for (const radio of document.querySelectorAll('input[name=bookstars]')) {
+  radio.addEventListener('change', (e) => {
+    starsMode = e.target.value;
     searchBooks();
   });
 }
