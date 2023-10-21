@@ -19,8 +19,8 @@ export default <>
           <p>Not sure what to read?<br /> Try a <a href='#' class='random-book-button'>Random Book</a>.</p>
           <hr />
 
-          <p>Search:<br /> <input type="text" id='search-books-input' oninput="searchBooks();" /></p>
-          <p>
+          <p><input placeholder='Search' type="text" id='search-books-input' oninput="searchBooks();" /></p>
+          <p style='display:flex;gap:1em'>
             <label><input type='radio' name='booksearch' value='both' checked /> All</label> { }
             <label><input type='radio' name='booksearch' value='some' /> Has snippets</label> { }
             <label><input type='radio' name='booksearch' value='none' /> No snippets</label> { }

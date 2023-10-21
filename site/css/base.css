@@ -60,10 +60,10 @@ hr {
 
 input[type=text] {
   padding: 0.5em;
-  background-color: var(--border-color);
+  background-color: var(--bgalt);
   color: inherit;
   border: none;
-  outline: none;
+  outline: 1px solid var(--border-color);
   box-sizing: border-box;
   width: 100%;
 }
