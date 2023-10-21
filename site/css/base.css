@@ -68,6 +68,7 @@ button {
   outline: 1px solid var(--border-color);
   box-sizing: border-box;
   width: 100%;
+  font-family: system-ui;
 }
 
 :read-write:focus,
