@@ -15,11 +15,11 @@ export const SnippetsGroups: JSX.Component<{ snippets: Snippet[] }> = (attrs, ch
     <link rel='stylesheet' href='/css/snippet-groups.css' />
 
     <p>
-      <a href='/snippets.html'>Search</a> | { }
+      <a href='/snippets.html'>Search</a> &bullet; { }
       <RandomBookSnippet link={onclick =>
         <a href='#' onclick={onclick}>Random</a>}
-      /> | { }
-      {allSnippets.length} total | { }
+      /> &bullet; { }
+      {allSnippets.length} total &bullet; { }
       {totalReadingTime}
     </p>
 
