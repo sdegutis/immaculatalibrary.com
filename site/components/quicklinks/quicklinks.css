@@ -111,12 +111,11 @@
 
 #featured-books-area {
   background: var(--bgalt);
-  padding: 1em 0;
 }
 
 #featured-books-container {
   margin: 0 auto;
-  max-width: calc(100% - 4em);
+  max-width: calc(100% - 2em);
 }
 
 #featured-books {
