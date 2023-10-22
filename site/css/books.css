@@ -11,6 +11,8 @@
 #books-filters .label {
   opacity: 0.5;
   font-variant: small-caps;
+  cursor: default;
+  user-select: none;
 }
 
 #books-filters .rating-star {
