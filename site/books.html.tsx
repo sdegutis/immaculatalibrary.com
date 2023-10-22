@@ -20,7 +20,7 @@ export default <>
           <h2>All Books</h2>
 
           <script src={script.path} defer></script>
-          <p>Not sure what to read?<br /> Try a <a href='#' class='random-book-button'>Random Book</a>.</p>
+          <p>Not sure what to read?<br /> Try a <a href='#' id='random-book-button'>Random Book</a>.</p>
           <hr />
 
           <p>

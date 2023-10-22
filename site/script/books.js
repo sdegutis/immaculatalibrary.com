@@ -62,15 +62,13 @@ function searchBooks() {
   document.getElementById('bookscount').textContent = visibleBooks;
 }
 
-for (const button of document.querySelectorAll('.random-book-button')) {
-  button.onclick = (e) => {
-    const ul = document.getElementById('books-all');
-    const as = [...ul.querySelectorAll('a')];
-    const i = Math.floor(Math.random() * as.length);
-    const a = as[i];
-    button.href = a.href;
-  };
-}
+document.getElementById('random-book-button').onclick = (e) => {
+  const ul = document.getElementById('books-all');
+  const as = [...ul.querySelectorAll('a')];
+  const i = Math.floor(Math.random() * as.length);
+  const a = as[i];
+  e.target.href = a.href;
+};
 
 for (const radio of document.querySelectorAll('input[name=booksearch]')) {
   radio.addEventListener('change', (e) => {
