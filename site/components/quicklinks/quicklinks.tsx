@@ -22,10 +22,8 @@ export const QuickLinks: JSX.Component = (attrs, children) => {
               const imageUrl = categoriesBySlug[book.data.frontpage!.image]!.imageBig;
               return <>
                 <li class='featured-book'>
+                  <div class='thumb' style={`background-image: url(${imageUrl})`} />
                   <h3><a href={book.route}>{book.data.title}</a></h3>
-                  <a href={book.route}>
-                    <div class='thumb' style={`background-image: url(${imageUrl})`} />
-                  </a>
                   <Typography><p>{book.data.frontpage!.why}</p></Typography>
                 </li>
               </>;
