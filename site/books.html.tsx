@@ -1,5 +1,6 @@
 import { Column, Spaced } from './components/column/column';
 import { TypicalPage } from './components/page';
+import { RatingStar } from './components/rating';
 import { SnippetsGroups } from './components/snippet-groups';
 import css from './css/books.css';
 import { allBooks } from './model/books';
@@ -39,31 +40,11 @@ export default <>
             <span class='radios'>
               <label><input type='radio' name='bookstars' value='any' checked />Any</label>
               <label><input type='radio' name='bookstars' value='0' />Unrated</label>
-              <label><input type='radio' name='bookstars' value='1' />
-                <svg viewBox="0 0 16 16">
-                  <path d="M8 1 L10 6 16 6 11 9.5 12.5 15 8 11.5 3.5 15 5 9.5 1 6 6 6 Z"></path>
-                </svg>
-              </label>
-              <label><input type='radio' name='bookstars' value='2' />
-                <svg viewBox="0 0 16 16">
-                  <path d="M8 1 L10 6 16 6 11 9.5 12.5 15 8 11.5 3.5 15 5 9.5 1 6 6 6 Z"></path>
-                </svg>
-              </label>
-              <label><input type='radio' name='bookstars' value='3' />
-                <svg viewBox="0 0 16 16">
-                  <path d="M8 1 L10 6 16 6 11 9.5 12.5 15 8 11.5 3.5 15 5 9.5 1 6 6 6 Z"></path>
-                </svg>
-              </label>
-              <label><input type='radio' name='bookstars' value='4' />
-                <svg viewBox="0 0 16 16">
-                  <path d="M8 1 L10 6 16 6 11 9.5 12.5 15 8 11.5 3.5 15 5 9.5 1 6 6 6 Z"></path>
-                </svg>
-              </label>
-              <label><input type='radio' name='bookstars' value='5' />
-                <svg viewBox="0 0 16 16">
-                  <path d="M8 1 L10 6 16 6 11 9.5 12.5 15 8 11.5 3.5 15 5 9.5 1 6 6 6 Z"></path>
-                </svg>
-              </label>
+              <label><input type='radio' name='bookstars' value='1' /><RatingStar /></label>
+              <label><input type='radio' name='bookstars' value='2' /><RatingStar /></label>
+              <label><input type='radio' name='bookstars' value='3' /><RatingStar /></label>
+              <label><input type='radio' name='bookstars' value='4' /><RatingStar /></label>
+              <label><input type='radio' name='bookstars' value='5' /><RatingStar /></label>
             </span>
 
           </div>

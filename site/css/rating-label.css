@@ -1,15 +1,5 @@
-.rating-label {
-  color: #777;
-  font: small-caption;
-  padding: 1px;
-  display: inline-block;
-  border: none;
-  outline: none;
-  vertical-align: middle;
+svg.rating-star {
   color: goldenrod;
-}
-
-.rating-label svg {
   height: 10px;
   fill: currentColor;
   stroke: currentColor;
@@ -17,4 +7,9 @@
   stroke-linecap: round;
   stroke-linejoin: round;
   overflow: visible;
+  opacity: 0.25;
+}
+
+svg.rating-star.lit {
+  opacity: 1;
 }

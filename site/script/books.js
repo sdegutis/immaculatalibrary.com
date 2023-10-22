@@ -19,7 +19,7 @@ function meetsStarsFilter(li) {
 
 function updateStars() {
   for (const radio of document.querySelectorAll('input[name=bookstars]')) {
-    radio.classList.toggle('lit', +starsMode >= radio.value);
+    radio.nextElementSibling?.classList.toggle('lit', +starsMode >= radio.value);
   }
 }
 
