@@ -18,3 +18,8 @@
 #books-filters .rating-star {
   color: var(--blue-bg);
 }
+
+#books-filters .rating-star:not(.lit) {
+  opacity: 1;
+  color: inherit;
+}
