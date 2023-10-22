@@ -16,3 +16,7 @@
   opacity: 0.5;
   font-variant: small-caps;
 }
+
+#books-filters .rating-star {
+  color: var(--blue-bg);
+}
