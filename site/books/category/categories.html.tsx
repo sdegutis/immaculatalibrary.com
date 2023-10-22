@@ -1,6 +1,6 @@
 import { Column, Spaced } from "../../components/column/column";
 import { TypicalPage } from "../../components/page";
-import { Rating } from "../../components/rating";
+import { Rating } from "../../components/rating/rating";
 import { Typography } from "../../components/typography";
 import { excerpt, markdown } from "../../core/helpers";
 import { allCategories } from '../../model/categories';

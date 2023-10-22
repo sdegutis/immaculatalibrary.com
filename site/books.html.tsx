@@ -1,6 +1,6 @@
 import { Column, Spaced } from './components/column/column';
 import { TypicalPage } from './components/page';
-import { RatingStar } from './components/rating';
+import { RatingStar } from './components/rating/rating';
 import { SnippetsGroups } from './components/snippet-groups';
 import css from './css/books.css';
 import { allBooks } from './model/books';
