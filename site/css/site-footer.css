@@ -1,8 +1,11 @@
 #site-footer {
-  color: #999;
   margin: 3em 1em;
 }
 
 #site-footer p {
   text-align: center;
+}
+
+#site-footer a {
+  color: inherit;
 }
