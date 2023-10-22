@@ -17,6 +17,12 @@ function meetsStarsFilter(li) {
   return li.classList.contains(`stars-${starsMode}`);
 }
 
+function updateStars() {
+  for (const radio of document.querySelectorAll('input[name=bookstars]')) {
+    radio.classList.toggle('lit', +starsMode >= radio.value);
+  }
+}
+
 function searchBooks() {
   const searchString = searchBooksInput
     .value
@@ -62,5 +68,6 @@ for (const radio of document.querySelectorAll('input[name=bookstars]')) {
   radio.addEventListener('change', (e) => {
     starsMode = e.target.value;
     searchBooks();
+    updateStars();
   });
 }

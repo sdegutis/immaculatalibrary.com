@@ -39,11 +39,31 @@ export default <>
             <span class='radios'>
               <label><input type='radio' name='bookstars' value='any' checked />Any</label>
               <label><input type='radio' name='bookstars' value='0' />Unrated</label>
-              <label><input type='radio' name='bookstars' value='1' />1</label>
-              <label><input type='radio' name='bookstars' value='2' />2</label>
-              <label><input type='radio' name='bookstars' value='3' />3</label>
-              <label><input type='radio' name='bookstars' value='4' />4</label>
-              <label><input type='radio' name='bookstars' value='5' />5</label>
+              <label><input type='radio' name='bookstars' value='1' />
+                <svg viewBox="0 0 16 16">
+                  <path d="M8 1 L10 6 16 6 11 9.5 12.5 15 8 11.5 3.5 15 5 9.5 1 6 6 6 Z"></path>
+                </svg>
+              </label>
+              <label><input type='radio' name='bookstars' value='2' />
+                <svg viewBox="0 0 16 16">
+                  <path d="M8 1 L10 6 16 6 11 9.5 12.5 15 8 11.5 3.5 15 5 9.5 1 6 6 6 Z"></path>
+                </svg>
+              </label>
+              <label><input type='radio' name='bookstars' value='3' />
+                <svg viewBox="0 0 16 16">
+                  <path d="M8 1 L10 6 16 6 11 9.5 12.5 15 8 11.5 3.5 15 5 9.5 1 6 6 6 Z"></path>
+                </svg>
+              </label>
+              <label><input type='radio' name='bookstars' value='4' />
+                <svg viewBox="0 0 16 16">
+                  <path d="M8 1 L10 6 16 6 11 9.5 12.5 15 8 11.5 3.5 15 5 9.5 1 6 6 6 Z"></path>
+                </svg>
+              </label>
+              <label><input type='radio' name='bookstars' value='5' />
+                <svg viewBox="0 0 16 16">
+                  <path d="M8 1 L10 6 16 6 11 9.5 12.5 15 8 11.5 3.5 15 5 9.5 1 6 6 6 Z"></path>
+                </svg>
+              </label>
             </span>
 
           </div>

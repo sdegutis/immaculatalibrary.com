@@ -9,3 +9,19 @@
   display: flex;
   gap: 1em;
 }
+
+input[name=bookstars]+svg {
+  height: 10px;
+  color: goldenrod;
+  fill: currentColor;
+  stroke: currentColor;
+  stroke-width: 3px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  overflow: visible;
+  opacity: 0.25;
+}
+
+input[name=bookstars].lit+svg {
+  opacity: 1;
+}
