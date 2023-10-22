@@ -28,14 +28,14 @@ export default <>
 
           <div id='books-filters'>
 
-            <span>Snippets:</span>
+            <span class='label'>snippets</span>
             <span class='radios'>
               <label><input type='radio' name='booksearch' value='both' checked />Any</label>
               <label><input type='radio' name='booksearch' value='some' />Some</label>
               <label><input type='radio' name='booksearch' value='none' />None</label>
             </span>
 
-            <span>Stars:</span>
+            <span class='label'>stars</span>
             <span class='radios'>
               <label><input type='radio' name='bookstars' value='any' checked />Any</label>
               <label><input type='radio' name='bookstars' value='0' />Unrated</label>
