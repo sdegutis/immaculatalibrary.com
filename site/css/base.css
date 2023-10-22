@@ -82,9 +82,13 @@ label:has(input) {
   cursor: pointer;
 }
 
+label:has(input[type=radio]) {
+  padding: 3px 7px;
+}
+
 label:has(input[type=radio]:checked) {
   color: var(--blue-bg);
-  border-bottom: 1px solid currentColor;
+  outline: 1px solid currentColor;
 }
 
 label:has(input[type=checkbox]) {
