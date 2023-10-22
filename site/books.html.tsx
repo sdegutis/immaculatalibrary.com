@@ -24,7 +24,7 @@ export default <>
           <hr />
 
           <p>
-            <input autofocus placeholder='Search' type="text" id='search-books-input' oninput="searchBooks();" />
+            <input autofocus placeholder='Search' type="text" id='search-books-input' />
           </p>
 
           <div id='books-filters'>

@@ -2,34 +2,49 @@ const booksList = document.getElementById('books-all');
 const notFound = document.getElementById('no-books-found');
 const searchBooksInput = document.getElementById('search-books-input');
 
-let snippetsMode = 'both';
-let starsMode = 'any';
+class Reactive {
+  static link(fn, deps) { for (const dep of deps) dep.onChange(fn); }
+  fns = [];
+  constructor(init) { this.val = init; }
+  onChange(fn) { this.fns.push(fn); }
+  set(val) {
+    this.val = val;
+    for (const fn of this.fns) fn();
+  }
+}
+
+const snippetsMode = new Reactive('both');
+const starsMode = new Reactive('any');
+const searchTerm = new Reactive('');
+
+Reactive.link(searchBooks, [searchTerm, snippetsMode, starsMode]);
+Reactive.link(updateStars, [starsMode]);
+
 searchBooks();
 
+searchBooksInput.oninput = (e) => { searchTerm.set(e.target.value); };
+
 function meetsSnippetsFilter(li) {
-  if (snippetsMode === 'both') return true;
-  if (snippetsMode === 'none') return li.classList.contains('empty');
-  if (snippetsMode === 'some') return !li.classList.contains('empty');
+  if (snippetsMode.val === 'both') return true;
+  if (snippetsMode.val === 'none') return li.classList.contains('empty');
+  if (snippetsMode.val === 'some') return !li.classList.contains('empty');
 }
 
 function meetsStarsFilter(li) {
-  if (starsMode === 'any') return true;
-  return li.classList.contains(`stars-${starsMode}`);
+  if (starsMode.val === 'any') return true;
+  return li.classList.contains(`stars-${starsMode.val}`);
 }
 
 function updateStars() {
   for (const radio of document.querySelectorAll('input[name=bookstars]')) {
-    radio.nextElementSibling?.classList.toggle('lit', +starsMode >= radio.value);
+    radio.nextElementSibling?.classList.toggle('lit', +starsMode.val >= radio.value);
   }
 }
 
 function searchBooks() {
-  const searchString = searchBooksInput
-    .value
+  const searchString = searchTerm.val
     .trim()
     .toLowerCase();
-
-  console.log(starsMode)
 
   for (const li of booksList.querySelectorAll('li')) {
     li.hidden = (
@@ -59,15 +74,12 @@ for (const button of document.querySelectorAll('.random-book-button')) {
 
 for (const radio of document.querySelectorAll('input[name=booksearch]')) {
   radio.addEventListener('change', (e) => {
-    snippetsMode = e.target.value;
-    searchBooks();
+    snippetsMode.set(e.target.value);
   });
 }
 
 for (const radio of document.querySelectorAll('input[name=bookstars]')) {
   radio.addEventListener('change', (e) => {
-    starsMode = e.target.value;
-    searchBooks();
-    updateStars();
+    starsMode.set(e.target.value);
   });
 }
