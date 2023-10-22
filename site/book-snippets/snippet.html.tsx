@@ -68,7 +68,7 @@ export default allSnippets.map(snippet => {
             <p>
               From <a href={snippet.book.route}>{snippet.book.data.title}</a>, { }
               {specificBookName && <>in file "{specificBookName}", </>}
-              page <a rel="noopener" href={snippet.archiveLink}>{snippet.data.archivePage}</a>
+              page <a rel="noopener" target='_blank' href={snippet.archiveLink}>{snippet.data.archivePage}</a>
               <br />
               <small>By {snippet.book.data.author}</small>
             </p>

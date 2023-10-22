@@ -7,7 +7,7 @@ export default allSnippets.map(snippet => [`${snippet.slug}-preview.html`, <>
   <p>{formatDate(snippet.date)} &bull; {snippet.mins} min</p>
   <p>
     From <a href={snippet.book.route}>{snippet.book.data.title}</a>
-    , page <a rel="noopener" href={snippet.archiveLink}>{snippet.data.archivePage}</a>
+    , page <a rel="noopener" target='_blank' href={snippet.archiveLink}>{snippet.data.archivePage}</a>
     <br />
     <small>By {snippet.book.data.author}</small>
   </p>

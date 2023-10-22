@@ -9,9 +9,4 @@ export const SiteFooter: JSX.Component = (attrs, children) => <>
       <DarkModeButton />
     </p>
   </footer>
-  <script>
-    {`for (const link of document.querySelectorAll('a[href^="https://archive.org/details/"]')) {
-        link.target = '_blank';
-      }`}
-  </script>
 </>;
