@@ -17,11 +17,7 @@ export default <>
 
           <link rel="stylesheet" href={css.path} />
 
-          <h2>All Books</h2>
-
-          <script src={script.path} defer></script>
-          <p>Not sure what to read?<br /> Try a <a href='#' id='random-book-button'>Random Book</a>.</p>
-          <hr />
+          <h2>Find Books</h2>
 
           <p>
             <input autofocus placeholder='Search' type="text" id='search-books-input' />
@@ -51,7 +47,14 @@ export default <>
 
           <hr />
 
-          <p>Showing <span id='bookscount'>0</span> books</p>
+          <script src={script.path} defer></script>
+          <p>Not sure what to read?<br /> Try a <a href='#' id='random-book-button'>Random Book</a>.</p>
+
+        </div>
+
+        <div>
+
+          <h2>Showing <span id='bookscount'>0</span> books</h2>
 
           <ul id="books-all" style="padding-left: 20px">
             {allBooks.map(book => {
@@ -71,12 +74,6 @@ export default <>
             No results
           </span>
 
-
-        </div>
-
-        <div>
-          <h3>Latest book snippets</h3>
-          <SnippetsGroups snippets={allSnippets.slice(0, 10)} />
         </div>
 
       </Column>
