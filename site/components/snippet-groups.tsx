@@ -2,6 +2,7 @@ import { calculateReadingMins } from "../core/helpers";
 import { Snippet, allSnippets } from "../model/snippets";
 import { formatDate } from "./format-date";
 import { RandomBookSnippet } from "./random-snippet/random-snippet";
+import { WordSep } from "./word-sep";
 
 const totalReadingMins = calculateReadingMins(allSnippets.map(s => s.content).join('\n\n'));
 const mins = Math.round(totalReadingMins % 60);
@@ -15,11 +16,14 @@ export const SnippetsGroups: JSX.Component<{ snippets: Snippet[] }> = (attrs, ch
     <link rel='stylesheet' href='/css/snippet-groups.css' />
 
     <p>
-      <a href='/snippets.html'>Search</a> &bullet; { }
+      <a href='/snippets.html'>Search</a>
+      <WordSep />
       <RandomBookSnippet link={onclick =>
-        <a href='#' onclick={onclick}>Random</a>}
-      /> &bullet; { }
-      {allSnippets.length} total &bullet; { }
+        <a href='#' onclick={onclick}>Random</a>
+      } />
+      <WordSep />
+      {allSnippets.length} total
+      <WordSep />
       {totalReadingTime}
     </p>
 
