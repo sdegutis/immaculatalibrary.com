@@ -22,8 +22,8 @@ export class Module {
 
     const transformed = sucrase.transform(rawCode, {
       transforms: ['typescript', 'imports', 'jsx'],
-      jsxPragma: '__createJsxElement',
-      jsxFragmentPragma: '""',
+      jsxRuntime: 'automatic',
+      jsxImportSource: '/core',
       disableESTransforms: true,
       production: true,
       filePath: fileUrl.href,
@@ -35,7 +35,6 @@ export class Module {
     const args = {
       require: (path: string) => this.#requireFromWithinModule(path),
       exports: this.#exports,
-      __createJsxElement: createJsxElement,
     };
 
     const sourceMapBase64 = Buffer.from(JSON.stringify(transformed.sourceMap)).toString('base64url');
@@ -101,11 +100,4 @@ export class Module {
     throw new Error(`Can't find file at path: ${toPath}`);
   }
 
-}
-
-function createJsxElement(tag: string | Function, attrs: any, ...children: any[]) {
-  if (typeof tag === 'function')
-    return tag(attrs ?? {}, children);
-  else
-    return { jsx: true, tag, attrs, children };
 }
