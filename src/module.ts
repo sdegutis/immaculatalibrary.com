@@ -2,7 +2,7 @@ import * as path from 'path/posix';
 import * as sucrase from 'sucrase';
 import { pathToFileURL } from 'url';
 import * as vm from 'vm';
-import { Runtime } from './runtime';
+import { Runtime } from './runtime.js';
 
 export class Module {
 

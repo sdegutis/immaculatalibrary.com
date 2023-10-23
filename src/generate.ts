@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import * as path from 'path/posix';
-import { Site } from './site';
+import { Site } from './site.js';
 
 const site = new Site();
 const out = site.build()!.outfiles;

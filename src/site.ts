@@ -1,5 +1,5 @@
-import { FileSys } from './filesys';
-import { Runtime } from "./runtime";
+import { FileSys } from "./filesys.js";
+import { Runtime } from "./runtime.js";
 
 export class Site {
 
