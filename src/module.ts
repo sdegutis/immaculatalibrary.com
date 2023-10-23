@@ -38,12 +38,11 @@ export class Module {
       exports: this.#exports,
     };
 
-    const code = transformed.code.replace(`"/core/jsx-runtime"`, `"/core/jsx-runtime.js"`);
+    this.content = transformed.code.replace(`"/core/jsx-runtime"`, `"/core/jsx-runtime.js"`);
     const sourceMapBase64 = Buffer.from(JSON.stringify(transformed.sourceMap)).toString('base64url');
     const sourceMapUrlStr = `\n//# sourceMappingURL=data:application/json;base64,${sourceMapBase64}`;
-    this.content = code + sourceMapUrlStr;
 
-    const runModule = vm.compileFunction(this.content, Object.keys(args), {
+    const runModule = vm.compileFunction(this.content + sourceMapUrlStr, Object.keys(args), {
       filename: fileUrl.href,
     });
 
