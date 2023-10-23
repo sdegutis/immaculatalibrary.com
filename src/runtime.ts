@@ -44,10 +44,15 @@ export class Runtime {
       }
       else if (stat.isFile()) {
         const filepath = path.join(base, name);
-        const content = fs.readFileSync(realFilePath);
-        this.files.set(filepath, new FsFile(filepath, content));
+        this.#createFile(filepath);
       }
     }
+  }
+
+  #createFile(filepath: string) {
+    const realFilePath = path.join(this.realBase, filepath);
+    const content = fs.readFileSync(realFilePath);
+    this.files.set(filepath, new FsFile(filepath, content));
   }
 
   realPath(filepath: string) {
@@ -59,8 +64,7 @@ export class Runtime {
       const realFilePath = path.join(this.realBase, filepath);
 
       if (fs.existsSync(realFilePath)) {
-        const content = fs.readFileSync(realFilePath);
-        this.files.set(filepath, new FsFile(filepath, content));
+        this.#createFile(filepath);
       }
       else {
         this.files.delete(filepath);
