@@ -1,4 +1,4 @@
-import { generated } from '../../core/generated';
+import { generated } from '../../core/generated.js';
 import image192 from './android-chrome-192x192.png';
 import image512 from './android-chrome-512x512.png';
 import apple from './apple-touch-icon.png';

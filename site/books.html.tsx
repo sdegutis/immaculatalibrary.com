@@ -1,8 +1,8 @@
-import { Column, Spaced } from './components/column/column';
-import { TypicalPage } from './components/page';
-import { RatingStar } from './components/rating/rating';
+import { Column, Spaced } from './components/column/column.js';
+import { TypicalPage } from './components/page.js';
+import { RatingStar } from './components/rating/rating.js';
 import css from './css/books.css';
-import { allBooks } from './model/books';
+import { allBooks } from './model/books.js';
 
 export default <>
   <TypicalPage title='Books' image='/img/categories/reference-big.jpg'>

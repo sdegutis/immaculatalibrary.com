@@ -1,7 +1,7 @@
-import { Column, Spaced } from "./components/column/column";
-import { TypicalPage } from "./components/page";
-import { Typography } from "./components/typography";
-import { markdown } from "./core/helpers";
+import { Column, Spaced } from "./components/column/column.js";
+import { TypicalPage } from "./components/page.js";
+import { Typography } from "./components/typography.js";
+import { markdown } from "./core/helpers.js";
 
 const prayers = `
 

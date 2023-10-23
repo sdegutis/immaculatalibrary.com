@@ -1,10 +1,10 @@
-import { Column, Spaced } from "./components/column/column";
-import { Navlinks } from "./components/navlinks";
-import { EmptyPage } from "./components/page";
-import { QuickLinks } from "./components/quicklinks/quicklinks";
-import { SiteFooter } from "./components/site-footer";
-import { Typography } from "./components/typography";
-import { featuredBooks } from "./model/featured";
+import { Column, Spaced } from "./components/column/column.js";
+import { Navlinks } from "./components/navlinks.js";
+import { EmptyPage } from "./components/page.js";
+import { QuickLinks } from "./components/quicklinks/quicklinks.js";
+import { SiteFooter } from "./components/site-footer.js";
+import { Typography } from "./components/typography.js";
+import { featuredBooks } from "./model/featured.js";
 
 export default <>
   <EmptyPage>

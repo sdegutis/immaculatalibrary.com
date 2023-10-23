@@ -1,9 +1,9 @@
-import { Column, Spaced } from "../components/column/column";
-import { MoviesSidebar } from "../components/movies-sidebar";
-import { TypicalPage } from "../components/page";
-import { Typography } from "../components/typography";
-import { markdown } from "../core/helpers";
-import { allMovies } from '../model/movies';
+import { Column, Spaced } from "../components/column/column.js";
+import { MoviesSidebar } from "../components/movies-sidebar.js";
+import { TypicalPage } from "../components/page.js";
+import { Typography } from "../components/typography.js";
+import { markdown } from "../core/helpers.js";
+import { allMovies } from "../model/movies.js";
 
 export default allMovies.map(movie => {
   return [`${movie.slug}.html`, <>

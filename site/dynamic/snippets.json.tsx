@@ -1,4 +1,4 @@
-import { allSnippets } from '../model/snippets';
+import { allSnippets } from '../model/snippets.js';
 
 export default <>
   {JSON.stringify(Object.fromEntries(allSnippets.map(snippet => [

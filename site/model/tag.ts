@@ -1,4 +1,4 @@
-import { sortBy } from "../core/helpers";
+import { sortBy } from "../core/helpers.js";
 
 export const allTags = new Map<string, Tag>();
 

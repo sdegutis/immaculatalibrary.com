@@ -1,8 +1,8 @@
-import { DataFile } from '../core/data-files';
-import { sortBy } from '../core/helpers';
+import { DataFile } from "../core/data-files.js";
+import { sortBy } from "../core/helpers.js";
 import allBookFiles from "../data/books/";
-import { Category } from './categories';
-import { Snippet } from './snippets';
+import { Category } from "./categories.js";
+import { Snippet } from "./snippets.js";
 
 interface BookFile {
   title: string;

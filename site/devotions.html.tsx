@@ -1,6 +1,6 @@
-import { Column, Spaced } from "./components/column/column";
-import { TypicalPage } from "./components/page";
-import { Typography } from "./components/typography";
+import { Column, Spaced } from "./components/column/column.js";
+import { TypicalPage } from "./components/page.js";
+import { Typography } from "./components/typography.js";
 
 export default <>
   <TypicalPage title="Prayers" image='/img/categories/blessed-sacrament-big.jpg'>

@@ -1,8 +1,8 @@
-import { EmptyPage } from "../components/page";
-import { Typography } from "../components/typography";
-import { calculateReadingMins } from "../core/helpers";
-import { handlers } from "../core/main";
-import { Snippet } from '../model/snippets';
+import { EmptyPage } from "../components/page.js";
+import { Typography } from "../components/typography.js";
+import { calculateReadingMins } from "../core/helpers.js";
+import { handlers } from "../core/main.js";
+import { Snippet } from '../model/snippets.js';
 
 handlers.set('/create-snippet', body => {
   const params = new URLSearchParams(body);

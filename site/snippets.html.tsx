@@ -1,7 +1,7 @@
-import { Column, Spaced } from "./components/column/column";
-import { TypicalPage } from "./components/page";
-import { SnippetsGroups } from "./components/snippet-groups";
-import { allSnippets } from "./model/snippets";
+import { Column, Spaced } from "./components/column/column.js";
+import { TypicalPage } from "./components/page.js";
+import { SnippetsGroups } from "./components/snippet-groups.js";
+import { allSnippets } from "./model/snippets.js";
 
 export default <>
   <TypicalPage title="Book Snippets" image='/img/categories/reference-big.jpg'>

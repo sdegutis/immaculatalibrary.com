@@ -1,11 +1,11 @@
-import { Column, Spaced } from "../components/column/column";
-import { formatDate } from "../components/format-date";
-import { TypicalPage } from "../components/page";
-import { SnippetsGroups } from "../components/snippet-groups";
-import { Typography } from "../components/typography";
-import { isDev } from "../core/helpers";
-import { Snippet, allSnippets } from '../model/snippets';
-import { sortedTags } from "../model/tag";
+import { Column, Spaced } from "../components/column/column.js";
+import { formatDate } from "../components/format-date.js";
+import { TypicalPage } from "../components/page.js";
+import { SnippetsGroups } from "../components/snippet-groups.js";
+import { Typography } from "../components/typography.js";
+import { isDev } from "../core/helpers.js";
+import { Snippet, allSnippets } from "../model/snippets.js";
+import { sortedTags } from "../model/tag.js";
 
 const CopyLink: JSX.Component<{}, [JSX.Element]> = (attrs, [child]) => {
   child.attrs ??= Object.create(null);

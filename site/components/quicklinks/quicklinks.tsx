@@ -1,7 +1,7 @@
-import { allCategories, categoriesBySlug } from '../../model/categories';
-import { featuredBooks } from '../../model/featured';
-import { allMovies } from '../../model/movies';
-import { Typography } from '../typography';
+import { allCategories, categoriesBySlug } from '../../model/categories.js';
+import { featuredBooks } from '../../model/featured.js';
+import { allMovies } from '../../model/movies.js';
+import { Typography } from '../typography.js';
 import css from './quicklinks.css';
 
 export const QuickLinks: JSX.Component = (attrs, children) => {

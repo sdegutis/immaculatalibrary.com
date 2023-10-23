@@ -1,6 +1,6 @@
-import { Column, Spaced } from "./components/column/column";
-import { TypicalPage } from "./components/page";
-import { Typography } from "./components/typography";
+import { Column, Spaced } from './components/column/column.js';
+import { TypicalPage } from './components/page.js';
+import { Typography } from './components/typography.js';
 import image from './img/categories/classics-big.jpg';
 
 export default <>

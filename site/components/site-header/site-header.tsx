@@ -1,4 +1,4 @@
-import { Navlinks } from "../navlinks";
+import { Navlinks } from "../navlinks.js";
 import css from './site-header.css';
 
 export const SiteHeader: JSX.Component<{ title: string, image: string }> = (attrs, children) => <>

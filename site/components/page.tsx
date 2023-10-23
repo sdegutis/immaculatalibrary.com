@@ -1,9 +1,9 @@
 import martel from '../fonts/martel/';
-import { Font } from "./fonts";
-import { Meta } from './meta/meta';
-import { QuickLinks } from "./quicklinks/quicklinks";
-import { SiteFooter } from "./site-footer";
-import { SiteHeader } from "./site-header/site-header";
+import { Font } from './fonts.js';
+import { Meta } from './meta/meta.js';
+import { QuickLinks } from './quicklinks/quicklinks.js';
+import { SiteFooter } from './site-footer.js';
+import { SiteHeader } from './site-header/site-header.js';
 
 export const EmptyPage: JSX.Component = (attrs, children) => <>
   {'<!DOCTYPE html>'}

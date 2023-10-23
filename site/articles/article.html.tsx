@@ -1,9 +1,9 @@
-import { Column, Spaced } from "../components/column/column";
-import { formatDate } from "../components/format-date";
-import { TypicalPage } from "../components/page";
-import { Typography } from "../components/typography";
-import { markdown } from "../core/helpers";
-import { allArticles } from "../model/articles";
+import { Column, Spaced } from "../components/column/column.js";
+import { formatDate } from "../components/format-date.js";
+import { TypicalPage } from "../components/page.js";
+import { Typography } from "../components/typography.js";
+import { markdown } from "../core/helpers.js";
+import { allArticles } from "../model/articles.js";
 
 export default allArticles.map(article => [`${article.slug}.html`, <>
   <TypicalPage title="Articles" image={article.data.imageFilename ?? '/img/page/articles.jpg'}>

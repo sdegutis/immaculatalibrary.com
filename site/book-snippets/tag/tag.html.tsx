@@ -1,9 +1,9 @@
-import * as path from 'path/posix';
-import { Column, Spaced } from '../../components/column/column';
-import { TypicalPage } from '../../components/page';
-import { SnippetsGroups } from "../../components/snippet-groups";
-import { allSnippets } from '../../model/snippets';
-import { allTags } from "../../model/tag";
+import * as path from "path";
+import { Column, Spaced } from "../../components/column/column.js";
+import { TypicalPage } from "../../components/page.js";
+import { SnippetsGroups } from "../../components/snippet-groups.js";
+import { allSnippets } from "../../model/snippets.js";
+import { allTags } from "../../model/tag.js";
 
 export default [...allTags.values()].map(tag => [path.basename(tag.route), <>
   <TypicalPage title='Book Snippets' image='/img/categories/reference-big.jpg'>

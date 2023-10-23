@@ -1,9 +1,9 @@
-import { Column, Spaced } from "../components/column/column";
-import { MusicSidebar } from "../components/music-sidebar";
-import { TypicalPage } from "../components/page";
-import { Typography } from "../components/typography";
-import { markdown } from "../core/helpers";
-import { allMusics } from '../model/musics';
+import { Column, Spaced } from "../components/column/column.js";
+import { MusicSidebar } from "../components/music-sidebar.js";
+import { TypicalPage } from "../components/page.js";
+import { Typography } from "../components/typography.js";
+import { markdown } from "../core/helpers.js";
+import { allMusics } from "../model/musics.js";
 
 export default allMusics.map(song => {
   const embedUrl = song.data.youtube.replace('watch?v=', 'embed/').replace(/&t=(\d+)s/, '?start=$1');

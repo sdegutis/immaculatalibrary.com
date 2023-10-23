@@ -1,5 +1,5 @@
 import * as path from "path";
-import { generated } from "../core/generated";
+import { generated } from "../core/generated.js";
 
 export const Font: JSX.Component<{
   use: FsFile[]

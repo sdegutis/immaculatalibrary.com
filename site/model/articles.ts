@@ -1,5 +1,5 @@
-import { DataFileWithDate } from '../core/data-files';
-import { calculateReadingMins, derivePreview, sortBy } from '../core/helpers';
+import { DataFileWithDate } from '../core/data-files.js';
+import { calculateReadingMins, derivePreview, sortBy } from '../core/helpers.js';
 import allArticleFiles from '../data/articles/';
 
 interface ArticleFile {

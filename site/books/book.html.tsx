@@ -1,9 +1,9 @@
-import { Column, Spaced } from "../components/column/column";
-import { TypicalPage } from "../components/page";
-import { Rating } from "../components/rating/rating";
-import { Typography } from "../components/typography";
-import { markdown } from "../core/helpers";
-import { allBooks } from '../model/books';
+import { Column, Spaced } from "../components/column/column.js";
+import { TypicalPage } from "../components/page.js";
+import { Rating } from "../components/rating/rating.js";
+import { Typography } from "../components/typography.js";
+import { markdown } from "../core/helpers.js";
+import { allBooks } from "../model/books.js";
 
 export default allBooks.map(book => [`${book.slug}.html`, <>
   <TypicalPage title="Books" image={book.category.imageBig}>

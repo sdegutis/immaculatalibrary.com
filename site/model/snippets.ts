@@ -1,8 +1,8 @@
-import { DataFileWithDate } from "../core/data-files";
-import { calculateReadingMins, derivePreview, markdown, sortBy } from "../core/helpers";
+import { DataFileWithDate } from "../core/data-files.js";
+import { calculateReadingMins, derivePreview, markdown, sortBy } from "../core/helpers.js";
 import allSnippetFiles from "../data/snippets/";
-import { Book, allBooks, booksBySlug } from './books';
-import { Tag } from './tag';
+import { Book, allBooks, booksBySlug } from './books.js';
+import { Tag } from './tag.js';
 
 interface SnippetFile {
   published: boolean;

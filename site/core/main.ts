@@ -1,6 +1,6 @@
 import * as path from 'path/posix';
-import { isDev } from './helpers';
-import { jsxToString } from "./jsx-runtime";
+import { isDev } from './helpers.js';
+import { jsxToString } from './jsx-runtime.js';
 import files from '/';
 
 export const handlers = new Map<string, (body: string) => string>();

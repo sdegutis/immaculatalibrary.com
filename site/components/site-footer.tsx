@@ -1,5 +1,5 @@
-import { DarkModeButton } from "./darkmode/dark-mode";
-import { WordSep } from "./word-sep";
+import { DarkModeButton } from "./darkmode/dark-mode.js";
+import { WordSep } from "./word-sep.js";
 
 export const SiteFooter: JSX.Component = (attrs, children) => <>
   <footer id='site-footer'>

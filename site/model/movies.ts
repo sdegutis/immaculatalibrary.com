@@ -1,5 +1,5 @@
-import { DataFile } from '../core/data-files';
-import { sortBy } from '../core/helpers';
+import { DataFile } from '../core/data-files.js';
+import { sortBy } from '../core/helpers.js';
 import allMovieFiles from "../data/movies/";
 
 interface MovieFile {

@@ -37,9 +37,10 @@ export class Module {
       exports: this.#exports,
     };
 
+    const code = transformed.code.replace(`"/core/jsx-runtime"`, `"/core/jsx-runtime.js"`);
     const sourceMapBase64 = Buffer.from(JSON.stringify(transformed.sourceMap)).toString('base64url');
     const sourceMapUrlStr = `\n//# sourceMappingURL=data:application/json;base64,${sourceMapBase64}`;
-    const runModule = vm.compileFunction(transformed.code + sourceMapUrlStr, Object.keys(args), {
+    const runModule = vm.compileFunction(code + sourceMapUrlStr, Object.keys(args), {
       filename: fileUrl.href,
     });
 
@@ -70,8 +71,8 @@ export class Module {
 
     const module = (
       this.runtime.modules.get(absPath) ??
-      this.runtime.modules.get(absPath + '.ts') ??
-      this.runtime.modules.get(absPath + '.tsx')
+      this.runtime.modules.get(absPath.replace(/\.js$/, '.ts')) ??
+      this.runtime.modules.get(absPath.replace(/\.js$/, '.tsx'))
     );
 
     if (module) {

@@ -1,4 +1,4 @@
-import { DataFile } from '../core/data-files';
+import { DataFile } from '../core/data-files.js';
 import allMusicFiles from "../data/music/";
 
 interface MusicFile {
