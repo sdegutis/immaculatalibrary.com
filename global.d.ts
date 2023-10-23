@@ -27,11 +27,6 @@ declare module '*.css' {
   export default file;
 }
 
-declare module '*.js' {
-  const file: FsFile;
-  export default file;
-}
-
 declare module '*.jpg' {
   const file: FsFile;
   export default file;

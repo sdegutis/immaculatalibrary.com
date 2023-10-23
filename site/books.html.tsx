@@ -3,7 +3,6 @@ import { TypicalPage } from './components/page';
 import { RatingStar } from './components/rating/rating';
 import css from './css/books.css';
 import { allBooks } from './model/books';
-import script from './script/books.js';
 
 export default <>
   <TypicalPage title='Books' image='/img/categories/reference-big.jpg'>
@@ -45,7 +44,7 @@ export default <>
 
           <hr />
 
-          <script src={script.path} defer></script>
+          <script src='/script/books.js' defer></script>
           <p>Not sure what to read?<br /> Try a <a href='#' id='random-book-button'>Random Book</a>.</p>
 
         </div>
