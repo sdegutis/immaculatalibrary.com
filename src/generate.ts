@@ -1,5 +1,5 @@
-import fs from 'fs';
-import path from 'path/posix';
+import * as fs from 'fs';
+import * as path from 'path/posix';
 import { Site } from './site';
 
 const site = new Site();

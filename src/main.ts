@@ -1,4 +1,4 @@
-import chokidar from 'chokidar';
+import * as chokidar from 'chokidar';
 import * as path from 'path';
 import { Server } from './server';
 import { Site } from './site';

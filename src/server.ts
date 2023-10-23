@@ -1,6 +1,6 @@
-import EventEmitter from "events";
-import http from "http";
-import path from "path/posix";
+import { EventEmitter } from "events";
+import * as http from "http";
+import * as path from "path/posix";
 
 export class Server {
 
