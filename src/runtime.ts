@@ -52,7 +52,7 @@ export class Runtime {
     if (isTS) {
       const rawCode = content.toString('utf8');
       const transformed = sucrase.transform(rawCode, {
-        transforms: ['typescript', 'imports', 'jsx'],
+        transforms: ['typescript', 'jsx'],
         jsxRuntime: 'automatic',
         jsxImportSource: '/core',
         disableESTransforms: true,

@@ -31,7 +31,7 @@ export class Module {
 
   #requireFromWithinModule(toPath: string) {
     if (!toPath.match(/^[./]/)) {
-      return require(toPath);
+      return import(toPath);
     }
 
     const absPath = path.resolve(path.dirname(this.filepath), toPath);
