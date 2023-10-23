@@ -1,4 +1,4 @@
-import path from 'path/posix';
+import * as path from 'path/posix';
 import { isDev } from './helpers';
 import { jsxToString } from "./jsx-runtime";
 import files from '/';

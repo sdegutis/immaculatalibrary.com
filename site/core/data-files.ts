@@ -1,6 +1,6 @@
-import fs from "fs";
-import Yaml from "js-yaml";
-import path from "path/posix";
+import * as fs from "fs";
+import * as Yaml from "js-yaml";
+import * as path from "path/posix";
 
 export class DataFile<D> {
 

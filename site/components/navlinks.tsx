@@ -1,4 +1,4 @@
-import crypto from 'crypto';
+import * as crypto from 'crypto';
 import { generated } from "../core/generated";
 import { Column } from "./column/column";
 

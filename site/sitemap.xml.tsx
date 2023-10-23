@@ -1,4 +1,4 @@
-import path from 'path/posix';
+import * as path from 'path/posix';
 import { outfiles } from "./core/main";
 
 export default <>

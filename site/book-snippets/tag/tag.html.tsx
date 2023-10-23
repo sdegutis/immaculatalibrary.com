@@ -1,4 +1,4 @@
-import path from 'path/posix';
+import * as path from 'path/posix';
 import { Column, Spaced } from '../../components/column/column';
 import { TypicalPage } from '../../components/page';
 import { SnippetsGroups } from "../../components/snippet-groups";

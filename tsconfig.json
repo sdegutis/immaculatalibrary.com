@@ -8,6 +8,7 @@
     "jsx": "preserve",
     "target": "ES2020",
     "noEmit": true,
+    "allowSyntheticDefaultImports": false,
     "moduleResolution": "Node",
     "forceConsistentCasingInFileNames": true, /* Ensure that casing is correct in imports. */
     "strict": true, /* Enable all strict type-checking options. */

@@ -1,4 +1,4 @@
-import path from "path";
+import * as path from "path";
 import { generated } from "../core/generated";
 
 export const Font: JSX.Component<{
