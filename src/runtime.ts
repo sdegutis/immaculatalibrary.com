@@ -22,12 +22,6 @@ export class Runtime {
 
   constructor(private realBase: string) {
     this.#loadDir('/');
-
-    for (const [filepath, file] of this.files) {
-      if (filepath.match(/\.tsx?$/)) {
-        file.module = new Module(filepath, file.content, this);
-      }
-    }
   }
 
   #loadDir(base: string) {
@@ -52,7 +46,12 @@ export class Runtime {
   #createFile(filepath: string) {
     const realFilePath = path.join(this.realBase, filepath);
     const content = fs.readFileSync(realFilePath);
-    this.files.set(filepath, new FsFile(filepath, content));
+    const file = new FsFile(filepath, content);
+    this.files.set(filepath, file);
+
+    if (filepath.match(/\.tsx?$/)) {
+      file.module = new Module(filepath, file.content, this);
+    }
   }
 
   realPath(filepath: string) {
@@ -74,13 +73,7 @@ export class Runtime {
 
   updateModules(filepaths: string[]) {
     const resetSeen = new Set<string>();
-
     for (const filepath of filepaths) {
-      const file = this.files.get(filepath);
-      if (file && filepath.match(/\.tsx?$/)) {
-        file.module = new Module(filepath, file.content, this);
-      }
-
       this.#resetDepTree(filepath, resetSeen);
     }
   }
