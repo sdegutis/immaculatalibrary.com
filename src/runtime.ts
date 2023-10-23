@@ -38,13 +38,12 @@ export class Runtime {
       }
       else if (stat.isFile()) {
         const filepath = path.join(base, name);
-        this.#createFile(filepath);
+        this.#createFile(filepath, realFilePath);
       }
     }
   }
 
-  #createFile(filepath: string) {
-    const realFilePath = path.join(this.realBase, filepath);
+  #createFile(filepath: string, realFilePath: string) {
     const content = fs.readFileSync(realFilePath);
     const file = new FsFile(filepath, content);
     this.files.set(filepath, file);
@@ -63,7 +62,7 @@ export class Runtime {
       const realFilePath = path.join(this.realBase, filepath);
 
       if (fs.existsSync(realFilePath)) {
-        this.#createFile(filepath);
+        this.#createFile(filepath, realFilePath);
       }
       else {
         this.files.delete(filepath);
