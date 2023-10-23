@@ -69,12 +69,7 @@ export class Module {
 
     const absPath = path.resolve(path.dirname(this.filepath), toPath);
 
-    const module = (
-      this.runtime.files.get(absPath)?.module ??
-      this.runtime.files.get(absPath.replace(/\.js$/, '.ts'))?.module ??
-      this.runtime.files.get(absPath.replace(/\.js$/, '.tsx'))?.module
-    );
-
+    const module = this.runtime.files.get(absPath)?.module;
     if (module) {
       this.runtime.addDeps(this.filepath, module.filepath);
       return module.require();

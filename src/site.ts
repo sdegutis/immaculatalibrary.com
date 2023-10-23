@@ -11,7 +11,7 @@ export class Site {
 
   build() {
     try {
-      const mainModule = this.#srcFs.files.get('/core/main.ts')!.module!;
+      const mainModule = this.#srcFs.files.get('/core/main.js')!.module!;
       return mainModule.require() as {
         outfiles: Map<string, Buffer | string>,
         handlers: Map<string, (body: string) => string>,

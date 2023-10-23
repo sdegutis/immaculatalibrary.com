@@ -38,17 +38,24 @@ export class Runtime {
       }
       else if (stat.isFile()) {
         const filepath = path.join(base, name);
-        this.#createFile(filepath, realFilePath);
+        this.#createFile(filepath);
       }
     }
   }
 
-  #createFile(filepath: string, realFilePath: string) {
+  #createFile(filepath: string) {
+    const realFilePath = path.join(this.realBase, filepath);
+    const needsModule = filepath.match(/\.tsx?$/);
+
+    if (needsModule) {
+      filepath = filepath.replace(/\.tsx?$/, '.js');
+    }
+
     const content = fs.readFileSync(realFilePath);
     const file = new FsFile(filepath, content);
     this.files.set(filepath, file);
 
-    if (filepath.match(/\.tsx?$/)) {
+    if (needsModule) {
       file.module = new Module(filepath, file.content, this);
     }
   }
@@ -62,7 +69,7 @@ export class Runtime {
       const realFilePath = path.join(this.realBase, filepath);
 
       if (fs.existsSync(realFilePath)) {
-        this.#createFile(filepath, realFilePath);
+        this.#createFile(filepath);
       }
       else {
         this.files.delete(filepath);
