@@ -2,11 +2,10 @@ import { allCategories, categoriesBySlug } from '../../model/categories.js';
 import { featuredBooks } from '../../model/featured.js';
 import { allMovies } from '../../model/movies.js';
 import { Typography } from '../typography.js';
-import css from './quicklinks.css';
 
 export const QuickLinks: JSX.Component = (attrs, children) => {
   return <>
-    <link rel="stylesheet" href={css.path} />
+    <link rel="stylesheet" href='/components/quicklinks/quicklinks.css' />
 
     <div class="recents alt">
 

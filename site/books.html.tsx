@@ -1,7 +1,6 @@
 import { Column, Spaced } from './components/column/column.js';
 import { TypicalPage } from './components/page.js';
 import { RatingStar } from './components/rating/rating.js';
-import css from './css/books.css';
 import { allBooks } from './model/books.js';
 
 export default <>
@@ -12,7 +11,7 @@ export default <>
 
         <div>
 
-          <link rel="stylesheet" href={css.path} />
+          <link rel="stylesheet" href='/css/books.css' />
 
           <h2>Find Books</h2>
 

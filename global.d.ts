@@ -23,16 +23,16 @@ declare module '*/' {
 }
 
 declare module '*.css' {
-  const file: FsFile;
+  const file: { content: Buffer };
   export default file;
 }
 
 declare module '*.jpg' {
-  const file: FsFile;
+  const file: { content: Buffer };
   export default file;
 }
 
 declare module '*.png' {
-  const file: FsFile;
+  const file: { content: Buffer };
   export default file;
 }

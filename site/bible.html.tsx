@@ -1,10 +1,9 @@
 import { Column, Spaced } from './components/column/column.js';
 import { TypicalPage } from './components/page.js';
 import { Typography } from './components/typography.js';
-import image from './img/categories/classics-big.jpg';
 
 export default <>
-  <TypicalPage title="Bible" image={image.path}>
+  <TypicalPage title="Bible" image='/img/categories/classics-big.jpg'>
 
     <Spaced>
       <Column centered>
