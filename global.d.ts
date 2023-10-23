@@ -21,18 +21,3 @@ declare module '*/' {
   const dir: FsFile[];
   export default dir;
 }
-
-declare module '*.css' {
-  const file: { content: Buffer };
-  export default file;
-}
-
-declare module '*.jpg' {
-  const file: { content: Buffer };
-  export default file;
-}
-
-declare module '*.png' {
-  const file: { content: Buffer };
-  export default file;
-}

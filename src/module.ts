@@ -91,13 +91,6 @@ export class Module {
       );
     }
 
-    const file = this.runtime.fs.files.get(absPath);
-
-    if (file) {
-      this.runtime.addDeps(this.filepath, absPath);
-      return { path: absPath, content: file };
-    }
-
     throw new Error(`Can't find file at path: ${toPath}`);
   }
 
