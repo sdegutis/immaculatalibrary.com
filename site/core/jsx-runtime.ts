@@ -1,5 +1,5 @@
-export const jsx = (tag: string | undefined | Function, attrs: Record<string, any>) => {
-  return createJsxElement(tag ?? '', attrs, attrs["children"]);
+export const jsx = (tag: string | undefined | Function, { children, ...attrs }: Record<string, any>) => {
+  return createJsxElement(tag ?? '', attrs, children);
 }
 
 export const jsxs = jsx;
