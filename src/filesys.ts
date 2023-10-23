@@ -1,9 +1,20 @@
 import * as fs from "fs";
 import * as path from "path/posix";
 
+class File {
+
+  constructor(
+    public path: string,
+    public content: Buffer,
+  ) {
+
+  }
+
+}
+
 export class FileSys {
 
-  files = new Map<string, Buffer>();
+  files = new Map<string, File>();
 
   constructor(private realBase: string) {
     this.#loadDir('/');
@@ -15,16 +26,16 @@ export class FileSys {
     for (const name of files) {
       if (name.startsWith('.')) continue;
 
-      const fileRealPath = path.join(dirRealPath, name);
-      const stat = fs.statSync(fileRealPath);
+      const realFilePath = path.join(dirRealPath, name);
+      const stat = fs.statSync(realFilePath);
 
       if (stat.isDirectory()) {
         this.#loadDir(path.join(base, name));
       }
       else if (stat.isFile()) {
         const filepath = path.join(base, name);
-        const content = fs.readFileSync(fileRealPath);
-        this.files.set(filepath, content);
+        const content = fs.readFileSync(realFilePath);
+        this.files.set(filepath, new File(filepath, content));
       }
     }
   }
@@ -38,8 +49,8 @@ export class FileSys {
       const realFilePath = path.join(this.realBase, filepath);
 
       if (fs.existsSync(realFilePath)) {
-        const contents = fs.readFileSync(realFilePath);
-        this.files.set(filepath, contents);
+        const content = fs.readFileSync(realFilePath);
+        this.files.set(filepath, new File(filepath, content));
       }
       else {
         this.files.delete(filepath);

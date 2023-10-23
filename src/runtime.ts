@@ -9,26 +9,26 @@ export class Runtime {
   constructor(public fs: FileSys) { }
 
   createModules() {
-    for (const [filepath, contents] of this.fs.files) {
+    for (const [filepath, file] of this.fs.files) {
       if (filepath.match(/\.tsx?$/)) {
-        this.modules.set(filepath, new Module(filepath, contents, this));
+        this.modules.set(filepath, new Module(filepath, file.content, this));
       }
     }
   }
 
-  updateModules(files: string[]) {
+  updateModules(filepaths: string[]) {
     const resetSeen = new Set<string>();
 
-    for (const file of files) {
-      const buffer = this.fs.files.get(file);
-      if (buffer && file.match(/\.tsx?$/)) {
-        this.modules.set(file, new Module(file, buffer, this));
+    for (const filepath of filepaths) {
+      const file = this.fs.files.get(filepath);
+      if (file && filepath.match(/\.tsx?$/)) {
+        this.modules.set(filepath, new Module(filepath, file.content, this));
       }
       else {
-        this.modules.delete(file);
+        this.modules.delete(filepath);
       }
 
-      this.#resetDepTree(file, resetSeen);
+      this.#resetDepTree(filepath, resetSeen);
     }
   }
 

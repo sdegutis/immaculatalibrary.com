@@ -85,8 +85,7 @@ export class Module {
 
       absPath === '/' ? '/' : absPath + '/';
       this.runtime.addDeps(this.filepath, dirPath);
-      return ([...this.runtime.fs.files.entries()]
-        .map(([path, content]) => ({ path, content }))
+      return ([...this.runtime.fs.files.values()]
         .filter(file => file.path.startsWith((dirPath)))
       );
     }
