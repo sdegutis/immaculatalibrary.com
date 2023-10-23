@@ -4,6 +4,8 @@ import { Module } from "./module.js";
 
 class File {
 
+  module?: Module;
+
   constructor(
     public path: string,
     public content: Buffer,
@@ -16,7 +18,6 @@ class File {
 export class Runtime {
 
   files = new Map<string, File>();
-  modules = new Map<string, Module>();
   #deps = new Map<string, Set<string>>();
 
   constructor(private realBase: string) {
@@ -24,7 +25,7 @@ export class Runtime {
 
     for (const [filepath, file] of this.files) {
       if (filepath.match(/\.tsx?$/)) {
-        this.modules.set(filepath, new Module(filepath, file.content, this));
+        file.module = new Module(filepath, file.content, this);
       }
     }
   }
@@ -73,10 +74,7 @@ export class Runtime {
     for (const filepath of filepaths) {
       const file = this.files.get(filepath);
       if (file && filepath.match(/\.tsx?$/)) {
-        this.modules.set(filepath, new Module(filepath, file.content, this));
-      }
-      else {
-        this.modules.delete(filepath);
+        file.module = new Module(filepath, file.content, this);
       }
 
       this.#resetDepTree(filepath, resetSeen);
@@ -97,7 +95,7 @@ export class Runtime {
       if (path.startsWith(requiring)) {
         this.#deps.delete(requiring);
         for (const dep of requiredBy) {
-          const module = this.modules.get(dep);
+          const module = this.files.get(dep)?.module;
           module?.resetExports();
           this.#resetDepTree(dep, seen);
         }

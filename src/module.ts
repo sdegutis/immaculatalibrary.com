@@ -70,9 +70,9 @@ export class Module {
     const absPath = path.resolve(path.dirname(this.filepath), toPath);
 
     const module = (
-      this.runtime.modules.get(absPath) ??
-      this.runtime.modules.get(absPath.replace(/\.js$/, '.ts')) ??
-      this.runtime.modules.get(absPath.replace(/\.js$/, '.tsx'))
+      this.runtime.files.get(absPath)?.module ??
+      this.runtime.files.get(absPath.replace(/\.js$/, '.ts'))?.module ??
+      this.runtime.files.get(absPath.replace(/\.js$/, '.tsx'))?.module
     );
 
     if (module) {
