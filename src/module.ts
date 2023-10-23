@@ -9,6 +9,7 @@ export class Module {
   #exports = Object.create(null);
   #ran = false;
   #run;
+  content;
 
   constructor(
     public filepath: string,
@@ -40,7 +41,9 @@ export class Module {
     const code = transformed.code.replace(`"/core/jsx-runtime"`, `"/core/jsx-runtime.js"`);
     const sourceMapBase64 = Buffer.from(JSON.stringify(transformed.sourceMap)).toString('base64url');
     const sourceMapUrlStr = `\n//# sourceMappingURL=data:application/json;base64,${sourceMapBase64}`;
-    const runModule = vm.compileFunction(code + sourceMapUrlStr, Object.keys(args), {
+    this.content = code + sourceMapUrlStr;
+
+    const runModule = vm.compileFunction(this.content, Object.keys(args), {
       filename: fileUrl.href,
     });
 

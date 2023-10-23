@@ -57,6 +57,7 @@ export class Runtime {
 
     if (needsModule) {
       file.module = new Module(filepath, file.content, this);
+      file.content = Buffer.from(file.module.content);
     }
   }
 
