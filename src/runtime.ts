@@ -2,7 +2,7 @@ import * as fs from "fs";
 import * as path from "path/posix";
 import { Module } from "./module.js";
 
-class File {
+class FsFile {
 
   module?: Module;
 
@@ -17,7 +17,7 @@ class File {
 
 export class Runtime {
 
-  files = new Map<string, File>();
+  files = new Map<string, FsFile>();
   #deps = new Map<string, Set<string>>();
 
   constructor(private realBase: string) {
@@ -45,7 +45,7 @@ export class Runtime {
       else if (stat.isFile()) {
         const filepath = path.join(base, name);
         const content = fs.readFileSync(realFilePath);
-        this.files.set(filepath, new File(filepath, content));
+        this.files.set(filepath, new FsFile(filepath, content));
       }
     }
   }
@@ -60,7 +60,7 @@ export class Runtime {
 
       if (fs.existsSync(realFilePath)) {
         const content = fs.readFileSync(realFilePath);
-        this.files.set(filepath, new File(filepath, content));
+        this.files.set(filepath, new FsFile(filepath, content));
       }
       else {
         this.files.delete(filepath);
