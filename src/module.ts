@@ -17,7 +17,7 @@ export class Module {
   ) {
     const rawCode = buffer.toString('utf8');
 
-    const filename = this.runtime.fs.realPath(this.filepath);
+    const filename = this.runtime.realPath(this.filepath);
     const fileUrl = pathToFileURL(filename);
 
     const transformed = sucrase.transform(rawCode, {
@@ -85,7 +85,7 @@ export class Module {
 
       absPath === '/' ? '/' : absPath + '/';
       this.runtime.addDeps(this.filepath, dirPath);
-      return ([...this.runtime.fs.files.values()]
+      return ([...this.runtime.files.values()]
         .filter(file => file.path.startsWith((dirPath)))
       );
     }
