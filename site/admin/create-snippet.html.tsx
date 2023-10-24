@@ -31,7 +31,7 @@ export default <>
     <MonacoClientSide />
     <script>{calculateReadingMins.toString()}</script>
     <script src='/admin/new-book-snippet.js' defer></script>
-    <script src='/components/darkmode/darkmode.js' defer></script>
+    <script src='/script/darkmode.js' defer></script>
 
     <main>
       <div id='left-panel'>
