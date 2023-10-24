@@ -7,7 +7,7 @@ export const Column: JSX.Component<{ centered?: boolean, split?: boolean }> = (a
   if (attrs.centered) cssClass.push('centered-page');
   if (attrs.split) cssClass.push('split-page');
   return <>
-    <link rel="stylesheet" href='/components/column/column.css' />
+    <link rel="stylesheet" href='/css/components/column.css' />
     <div class="container">
       <section class={cssClass.join(' ')}>
         {children}

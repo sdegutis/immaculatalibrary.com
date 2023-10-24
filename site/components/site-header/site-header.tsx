@@ -1,7 +1,7 @@
 import { Navlinks } from "../navlinks.js";
 
 export const SiteHeader: JSX.Component<{ title: string, image: string }> = (attrs, children) => <>
-  <link rel="stylesheet" href='/components/site-header/site-header.css' />
+  <link rel="stylesheet" href='/css/components/site-header.css' />
 
   <header id="page-hero">
     <section style={`background-image: url(${attrs.image});`} />

@@ -13,7 +13,7 @@ export default allBooks.map(book => [`${book.slug}.html`, <>
 
         <Typography>
 
-          <link rel="stylesheet" href='/css/book.css' />
+          <link rel="stylesheet" href='/css/page/book.css' />
 
           <h2>{book.data.title}</h2>
           <p class="subtitle">{book.data.subtitle}</p>

@@ -5,7 +5,7 @@ import { Typography } from '../typography.js';
 
 export const QuickLinks: JSX.Component = (attrs, children) => {
   return <>
-    <link rel="stylesheet" href='/components/quicklinks/quicklinks.css' />
+    <link rel="stylesheet" href='/css/components/quicklinks.css' />
 
     <div class="recents alt">
 

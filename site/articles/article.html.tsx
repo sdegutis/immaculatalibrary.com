@@ -8,7 +8,7 @@ import { allArticles } from "../model/articles.js";
 export default allArticles.map(article => [`${article.slug}.html`, <>
   <TypicalPage title="Articles" image={article.data.imageFilename ?? '/img/page/articles.jpg'}>
 
-    <link rel="stylesheet" href="/css/article.css" />
+    <link rel="stylesheet" href="/css/page/article.css" />
 
     <Spaced>
       <Column split>

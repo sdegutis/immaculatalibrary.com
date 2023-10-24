@@ -10,7 +10,7 @@ export default allMusics.map(song => {
   return [`${song.slug}.html`, <>
     <TypicalPage title="Music" image='/img/page/music.jpg'>
 
-      <link rel="stylesheet" href='/css/view-song.css' />
+      <link rel="stylesheet" href='/css/page/song.css' />
 
       <Spaced>
         <Column split>

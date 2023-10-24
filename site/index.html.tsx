@@ -9,7 +9,7 @@ import { featuredBooks } from "./model/featured.js";
 export default <>
   <EmptyPage>
 
-    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/page/home.css" />
 
     <main>
 

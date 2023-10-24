@@ -10,7 +10,7 @@ export default <>
     <Spaced>
       <Column>
 
-        <link rel="stylesheet" href="/css/articles.css" />
+        <link rel="stylesheet" href="/css/page/articles.css" />
 
         <h2>Articles</h2>
         <ul class="all-blog-posts">

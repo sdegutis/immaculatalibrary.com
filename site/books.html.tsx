@@ -11,7 +11,7 @@ export default <>
 
         <div>
 
-          <link rel="stylesheet" href='/css/books.css' />
+          <link rel="stylesheet" href='/css/page/books.css' />
 
           <h2>Find Books</h2>
 

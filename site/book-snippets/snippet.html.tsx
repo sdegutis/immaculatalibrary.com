@@ -27,7 +27,7 @@ export default allSnippets.map(snippet => {
   return [`${snippet.slug}.html`, <>
     <TypicalPage title="Book Snippets" image={snippet.book.category.imageBig}>
 
-      <link rel="stylesheet" href='/css/snippet.css' />
+      <link rel="stylesheet" href='/css/page/snippet.css' />
 
       <Spaced>
         <Column split>

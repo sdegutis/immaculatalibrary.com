@@ -13,7 +13,7 @@ export const SnippetsGroups: JSX.Component<{ snippets: Snippet[] }> = (attrs, ch
   const groups = Object.entries(groupByDate(attrs.snippets));
 
   return <>
-    <link rel='stylesheet' href='/css/snippet-groups.css' />
+    <link rel='stylesheet' href='/css/components/snippet-groups.css' />
 
     <p>
       <a href='/snippets.html'>Search</a>
