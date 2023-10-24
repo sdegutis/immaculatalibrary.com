@@ -1,4 +1,4 @@
 export const DarkModeButton: JSX.Component = (attrs, children) => <>
-  <script src='/script/darkmode.js' />
+  <script src='/scripts/darkmode.js' />
   <a href="#" class="dark-mode-toggle">Dark mode</a>
 </>;

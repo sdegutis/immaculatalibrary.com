@@ -11,7 +11,7 @@ const CopyLink: JSX.Component<{}, [JSX.Element]> = (attrs, [child]) => {
   child.attrs ??= Object.create(null);
   child.attrs!["onclick"] = `copylink(event);`;
   return <>
-    <script src='/script/copylink.js' />
+    <script src='/scripts/copylink.js' />
     {child}
   </>;
 };

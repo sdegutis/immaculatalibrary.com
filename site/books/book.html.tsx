@@ -102,7 +102,7 @@ export default allBooks.map(book => [`${book.slug}.html`, <>
 
         <div>
 
-          <script type='module' src='/script/random-snippet-in-book.js' />
+          <script type='module' src='/scripts/random-snippet-in-book.js' />
           <h3>Book snippets</h3>
           <p>
             <a href='#' id='random-snippet-in-book-button'>Random in book</a>

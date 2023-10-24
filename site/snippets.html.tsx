@@ -6,7 +6,7 @@ import { allSnippets } from "./model/snippets.js";
 export default <>
   <TypicalPage title="Book Snippets" image='/img/categories/reference-big.jpg'>
 
-    <script type='module' src='/script/search-book-snippets.js' />
+    <script type='module' src='/scripts/search-book-snippets.js' />
 
     <Spaced>
       <Column split>

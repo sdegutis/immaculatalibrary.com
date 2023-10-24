@@ -43,7 +43,7 @@ export default <>
 
           <hr />
 
-          <script src='/script/books.js' defer></script>
+          <script src='/scripts/books.js' defer></script>
           <p>Not sure what to read?<br /> Try a <a href='#' id='random-book-button'>Random Book</a>.</p>
 
         </div>
