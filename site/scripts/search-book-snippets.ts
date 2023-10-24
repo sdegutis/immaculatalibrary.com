@@ -1,8 +1,8 @@
 const data = fetch('/dynamic/snippets.json').then(res => res.json());
 
-const input = document.getElementById('search-book-snippets-field');
+const input = document.getElementById('search-book-snippets-field') as HTMLInputElement;
 
-let timer = null;
+let timer: NodeJS.Timeout | undefined;
 input.addEventListener('input', (e) => {
   if (timer) clearTimeout(timer);
   timer = setTimeout(searchBookSnippets, 250);
@@ -11,13 +11,13 @@ input.addEventListener('input', (e) => {
 searchBookSnippets();
 
 async function searchBookSnippets() {
-  const host = document.querySelector('.snippets-latest');
+  const host = document.querySelector<HTMLDivElement>('.snippets-latest')!;
   const searchable = await data;
   const searchTerm = input.value.trim().toLowerCase();
 
-  for (const li of host.querySelectorAll('li ul li')) {
+  for (const li of host.querySelectorAll<HTMLLIElement>('li ul li')) {
     if (searchTerm) {
-      const slug = li.dataset['slug'];
+      const slug = li.dataset['slug']!;
       li.hidden = !(searchable[slug].includes(searchTerm));
     }
     else {
@@ -26,6 +26,6 @@ async function searchBookSnippets() {
   }
 
   for (const li of host.children) {
-    li.hidden = [...li.querySelectorAll('li')].every(li => li.hidden);
+    (li as HTMLLIElement).hidden = [...li.querySelectorAll('li')].every(li => li.hidden);
   }
 }
