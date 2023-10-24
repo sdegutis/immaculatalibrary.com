@@ -2,16 +2,15 @@ import { Runtime } from "./runtime.js";
 
 export class Site {
 
-  #srcFs;
-  #srcPath = 'site';
+  #runtime;
 
-  constructor() {
-    this.#srcFs = new Runtime(this.#srcPath);
+  constructor(private srcPath: string) {
+    this.#runtime = new Runtime(this.srcPath);
   }
 
   build() {
     try {
-      const mainModule = this.#srcFs.files.get('/core/main.js')!.module!;
+      const mainModule = this.#runtime.files.get('/core/main.js')!.module!;
       return mainModule.require() as {
         outfiles: Map<string, Buffer | string>,
         handlers: Map<string, (body: string) => string>,
@@ -24,10 +23,10 @@ export class Site {
   }
 
   pathsUpdated(...paths: string[]) {
-    const fixedPaths = paths.map(p => p.slice(this.#srcPath.length));
+    const fixedPaths = paths.map(p => p.slice(this.srcPath.length));
 
-    this.#srcFs.reflectChangesFromReal(fixedPaths);
-    this.#srcFs.updateModules(fixedPaths);
+    this.#runtime.reflectChangesFromReal(fixedPaths);
+    this.#runtime.updateModules(fixedPaths);
   }
 
 }

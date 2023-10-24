@@ -8,7 +8,7 @@ process.env['DEV'] = '1';
 const server = new Server();
 server.startServer(8080);
 
-const site = new Site();
+const site = new Site("site");
 const artifacts = site.build();
 server.files = artifacts?.outfiles;
 server.handlers = artifacts?.handlers;

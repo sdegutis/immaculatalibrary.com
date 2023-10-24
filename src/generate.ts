@@ -2,7 +2,7 @@ import * as fs from 'fs';
 import * as path from 'path/posix';
 import { Site } from './site.js';
 
-const site = new Site();
+const site = new Site("site");
 const out = site.build()!.outfiles;
 
 const madeDirs = new Set<string>();
