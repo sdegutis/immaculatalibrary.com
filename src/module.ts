@@ -40,7 +40,6 @@ export class Module {
 
     this.content = (transformed.code
       .replace(/"\/core\/jsx-runtime"/g, `"/core/jsx-runtime.js"`)
-      .replace(/\.jsx(['"])/g, `.js$1`)
     );
 
     const sourceMapBase64 = Buffer.from(JSON.stringify(transformed.sourceMap)).toString('base64url');

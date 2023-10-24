@@ -1,7 +1,7 @@
 import { calculateReadingMins } from "../core/helpers.js";
 import { allSnippets, Snippet } from "../model/snippets.js";
 import { formatDate } from "./format-date.js";
-import { RandomBookSnippet } from "./random-snippet.jsx";
+import { RandomBookSnippet } from "./random-snippet.js";
 import { WordSep } from "./word-sep.js";
 
 const totalReadingMins = calculateReadingMins(allSnippets.map(s => s.content).join('\n\n'));

@@ -1,7 +1,7 @@
-import { Column, Spaced } from "./components/column.jsx";
+import { Column, Spaced } from "./components/column.js";
 import { Navlinks } from "./components/navlinks.js";
 import { EmptyPage } from "./components/page.js";
-import { QuickLinks } from "./components/quicklinks.jsx";
+import { QuickLinks } from "./components/quicklinks.js";
 import { SiteFooter } from "./components/site-footer.js";
 import { Typography } from "./components/typography.js";
 import { featuredBooks } from "./model/featured.js";

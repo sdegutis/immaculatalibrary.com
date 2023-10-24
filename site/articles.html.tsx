@@ -1,4 +1,4 @@
-import { Column, Spaced } from "./components/column.jsx";
+import { Column, Spaced } from "./components/column.js";
 import { formatDate } from "./components/format-date.js";
 import { TypicalPage } from "./components/page.js";
 import { excerpt, markdown } from "./core/helpers.js";

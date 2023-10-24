@@ -1,4 +1,4 @@
-import { Navlinks } from "./navlinks.jsx";
+import { Navlinks } from "./navlinks.js";
 
 export const SiteHeader: JSX.Component<{ title: string, image: string }> = (attrs, children) => <>
   <link rel="stylesheet" href='/css/components/site-header.css' />

@@ -1,5 +1,5 @@
 import * as path from "path";
-import { Column, Spaced } from "../../components/column.jsx";
+import { Column, Spaced } from "../../components/column.js";
 import { TypicalPage } from "../../components/page.js";
 import { SnippetsGroups } from "../../components/snippet-groups.js";
 import { allSnippets } from "../../model/snippets.js";

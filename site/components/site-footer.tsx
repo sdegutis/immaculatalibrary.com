@@ -1,4 +1,4 @@
-import { DarkModeButton } from "./dark-mode.jsx";
+import { DarkModeButton } from "./dark-mode.js";
 import { WordSep } from "./word-sep.js";
 
 export const SiteFooter: JSX.Component = (attrs, children) => <>

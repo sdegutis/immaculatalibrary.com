@@ -5,7 +5,7 @@
       "DOM",
       "DOM.Iterable"
     ],
-    "jsx": "preserve",
+    "jsx": "react-native",
     "target": "ES2022",
     "noEmit": true,
     "allowSyntheticDefaultImports": false,
