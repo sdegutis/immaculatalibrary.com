@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   for (const button of getDarkModeButtons()) {
     button.onclick = (e) => {
       e.preventDefault();
-      localStorage.setItem('dark-mode', Number(!isDarkMode()));
+      localStorage.setItem('dark-mode', Number(!isDarkMode()).toString());
       reflectDarkMode();
     };
   }
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 function getDarkModeButtons() {
-  return document.querySelectorAll('.dark-mode-toggle');
+  return document.querySelectorAll<HTMLButtonElement>('.dark-mode-toggle');
 }
 
 function reflectDarkMode() {
