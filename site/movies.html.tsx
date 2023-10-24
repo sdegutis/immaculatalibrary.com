@@ -1,4 +1,4 @@
-import { Column, Spaced } from "./components/column/column.js";
+import { Column, Spaced } from "./components/column.jsx";
 import { MoviesSidebar } from "./components/movies-sidebar.js";
 import { TypicalPage } from "./components/page.js";
 import { Typography } from "./components/typography.js";

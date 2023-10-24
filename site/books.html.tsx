@@ -1,6 +1,6 @@
-import { Column, Spaced } from './components/column/column.js';
+import { Column, Spaced } from './components/column.jsx';
 import { TypicalPage } from './components/page.js';
-import { RatingStar } from './components/rating/rating.js';
+import { RatingStar } from './components/rating.jsx';
 import { allBooks } from './model/books.js';
 
 export default <>

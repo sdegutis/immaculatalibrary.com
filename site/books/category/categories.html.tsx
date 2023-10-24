@@ -1,6 +1,6 @@
-import { Column, Spaced } from "../../components/column/column.js";
+import { Column, Spaced } from "../../components/column.jsx";
 import { TypicalPage } from "../../components/page.js";
-import { Rating } from "../../components/rating/rating.js";
+import { Rating } from "../../components/rating.jsx";
 import { Typography } from "../../components/typography.js";
 import { excerpt, markdown } from "../../core/helpers.js";
 import { allCategories } from "../../model/categories.js";
