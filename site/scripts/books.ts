@@ -1,13 +1,16 @@
-const booksList = document.getElementById('books-all');
-const notFound = document.getElementById('no-books-found');
-const searchBooksInput = document.getElementById('search-books-input');
+const booksList = document.getElementById('books-all')!;
+const notFound = document.getElementById('no-books-found')!;
+const searchBooksInput = document.getElementById('search-books-input')!;
 
-class Reactive {
-  static link(fn, deps) { for (const dep of deps) dep.onChange(fn); }
-  fns = [];
-  constructor(init) { this.val = init; }
-  onChange(fn) { this.fns.push(fn); }
-  set(val) {
+class Reactive<T> {
+  static link<T>(fn: () => void, deps: Reactive<T>[]) {
+    for (const dep of deps) dep.onChange(fn);
+  }
+  fns: (() => void)[] = [];
+  val: T;
+  constructor(init: T) { this.val = init; }
+  onChange(fn: () => void) { this.fns.push(fn); }
+  set(val: T) {
     this.val = val;
     for (const fn of this.fns) fn();
   }
@@ -22,22 +25,22 @@ Reactive.link(updateStars, [starsMode]);
 
 searchBooks();
 
-searchBooksInput.oninput = (e) => { searchTerm.set(e.target.value); };
+searchBooksInput.oninput = (e) => { searchTerm.set((e.target as HTMLInputElement).value); };
 
-function meetsSnippetsFilter(li) {
-  if (snippetsMode.val === 'both') return true;
+function meetsSnippetsFilter(li: HTMLLIElement) {
   if (snippetsMode.val === 'none') return li.classList.contains('empty');
   if (snippetsMode.val === 'some') return !li.classList.contains('empty');
+  return true;
 }
 
-function meetsStarsFilter(li) {
+function meetsStarsFilter(li: HTMLLIElement) {
   if (starsMode.val === 'any') return true;
   return li.classList.contains(`stars-${starsMode.val}`);
 }
 
 function updateStars() {
-  for (const radio of document.querySelectorAll('input[name=bookstars]')) {
-    radio.nextElementSibling?.classList.toggle('lit', +starsMode.val >= radio.value);
+  for (const radio of document.querySelectorAll<HTMLInputElement>('input[name=bookstars]')) {
+    radio.nextElementSibling?.classList.toggle('lit', +starsMode.val >= +radio.value);
   }
 }
 
@@ -48,8 +51,8 @@ function searchBooks() {
 
   for (const li of booksList.querySelectorAll('li')) {
     li.hidden = (
-      !meetsSnippetsFilter(li) |
-      !meetsStarsFilter(li) |
+      !meetsSnippetsFilter(li) ||
+      !meetsStarsFilter(li) ||
       (!li
         .innerText
         .toLowerCase()
@@ -59,25 +62,25 @@ function searchBooks() {
 
   const visibleBooks = booksList.querySelectorAll('li:not([hidden])').length;
   notFound.hidden = (visibleBooks > 0);
-  document.getElementById('bookscount').textContent = visibleBooks;
+  document.getElementById('bookscount')!.textContent = visibleBooks.toFixed();
 }
 
-document.getElementById('random-book-button').onclick = (e) => {
-  const ul = document.getElementById('books-all');
+document.getElementById('random-book-button')!.onclick = (e) => {
+  const ul = document.getElementById('books-all')!;
   const as = [...ul.querySelectorAll('a')];
   const i = Math.floor(Math.random() * as.length);
-  const a = as[i];
-  e.target.href = a.href;
+  const a = as[i]!;
+  (e.target as HTMLAnchorElement).href = a.href;
 };
 
 for (const radio of document.querySelectorAll('input[name=booksearch]')) {
   radio.addEventListener('change', (e) => {
-    snippetsMode.set(e.target.value);
+    snippetsMode.set((e.target as HTMLInputElement).value);
   });
 }
 
 for (const radio of document.querySelectorAll('input[name=bookstars]')) {
   radio.addEventListener('change', (e) => {
-    starsMode.set(e.target.value);
+    starsMode.set((e.target as HTMLInputElement).value);
   });
 }
