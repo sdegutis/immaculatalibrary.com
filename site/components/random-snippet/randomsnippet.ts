@@ -1,4 +1,4 @@
-const snippets = fetch('/components/random-snippet/snippets.json').then(res => res.json());
+const snippets = fetch('/dynamic/snippet-ids.json').then(res => res.json());
 
 async function goToRandomSnippet(e: Event) {
   const slugs = await snippets;
