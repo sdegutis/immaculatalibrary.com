@@ -9,9 +9,7 @@ class FsFile {
   constructor(
     public path: string,
     public content: Buffer,
-  ) {
-
-  }
+  ) { }
 
 }
 
