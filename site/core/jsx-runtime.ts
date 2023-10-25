@@ -4,6 +4,8 @@ export const jsx = (tag: string | undefined | Function, { children, ...attrs }: 
 
 export const jsxs = jsx;
 
+export const Fragment = undefined;
+
 function createJsxElement(tag: string | Function, attrs: any, ...children: any[]) {
   if (typeof tag === 'function')
     return tag(attrs ?? {}, children);

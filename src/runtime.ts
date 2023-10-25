@@ -87,19 +87,7 @@ export class Runtime {
   }
 
   async createModules() {
-    this.modules.clear();
-
-    for (const file of this.files.values()) {
-      if (file.needsModule) {
-        const module = new vm.SourceTextModule(file.content.toString('utf8'), {
-          identifier: file.path,
-        });
-
-        this.modules.set(file.path, module);
-      }
-    }
-
-    await this.modules.get('/core/main.js')!.link(async (specifier, referencingModule) => {
+    const linker = async (specifier: string, referencingModule: vm.Module) => {
       if (!specifier.match(/^[./]/)) {
         const result = await import(specifier);
         const m = new vm.SyntheticModule(Object.keys(result), () => {
@@ -125,12 +113,31 @@ export class Runtime {
             .filter(file => file.path.startsWith((dirPath)))
           ));
         });
-
         return m;
       }
 
       throw new Error(`Can't find file at path: ${specifier}`);
-    });
+    };
+
+    this.modules.clear();
+
+    for (const file of this.files.values()) {
+      if (file.needsModule) {
+        const module = new vm.SourceTextModule(file.content.toString('utf8'), {
+          identifier: file.path,
+          importModuleDynamically: (async (specifier: string, referencingModule: vm.Module) => {
+            const mod = await linker(specifier, referencingModule);
+            await mod.link(linker);
+            await mod.evaluate();
+            return mod.namespace;
+          }) as any,
+        });
+
+        this.modules.set(file.path, module);
+      }
+    }
+
+    await this.modules.get('/core/main.js')!.link(linker);
   }
 
 }
