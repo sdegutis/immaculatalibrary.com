@@ -1,6 +1,7 @@
 import * as fs from "fs";
 import * as path from "path/posix";
 import * as sucrase from 'sucrase';
+import { pathToFileURL } from "url";
 import * as vm from 'vm';
 
 class FsFile {
@@ -9,6 +10,8 @@ class FsFile {
     public path: string,
     public content: Buffer,
     public needsModule: boolean,
+    public sourceMap: string | undefined,
+    public fileUrl: string | undefined,
   ) { }
 
 }
@@ -48,22 +51,37 @@ export class Runtime {
     const realFilePath = path.join(this.realBase, filepath);
     let content = fs.readFileSync(realFilePath);
 
+    let sourceMap: string | undefined;
+    let fileUrl: string | undefined;
+
     if (isTS) {
       const rawCode = content.toString('utf8');
+
+      fileUrl = pathToFileURL(realFilePath).href;
+
       const transformed = sucrase.transform(rawCode, {
         transforms: ['typescript', 'jsx'],
         jsxRuntime: 'automatic',
         jsxImportSource: '/core',
         disableESTransforms: true,
         production: true,
+        filePath: fileUrl,
+        sourceMapOptions: {
+          compiledFilename: realFilePath,
+        },
       });
 
       content = Buffer.from(transformed.code
         .replace(/"\/core\/jsx-runtime"/g, `"/core/jsx-runtime.js"`)
       );
+
+      const sourceMapBase64 = Buffer.from(JSON.stringify(transformed.sourceMap)).toString('base64url');
+      sourceMap = `\n//# sourceMappingURL=data:application/json;base64,${sourceMapBase64}`;
+
+      fileUrl = fileUrl;
     }
 
-    const file = new FsFile(finalFilePath, content, isTS);
+    const file = new FsFile(finalFilePath, content, isTS, sourceMap, fileUrl);
     this.files.set(file.path, file);
   }
 
@@ -103,7 +121,8 @@ export class Runtime {
         return await pkg;
       }
 
-      const absPath = path.resolve(path.dirname(referencingModule.identifier), specifier);
+      const prefixLen = `${pathToFileURL(process.cwd()).href}/${this.realBase}`.length;
+      const absPath = path.resolve(path.dirname(referencingModule.identifier.slice(prefixLen)), specifier);
 
       const module = this.modules.get(absPath);
       if (module) {
@@ -127,8 +146,8 @@ export class Runtime {
 
     for (const file of this.files.values()) {
       if (file.needsModule) {
-        const module = new vm.SourceTextModule(file.content.toString('utf8'), {
-          identifier: file.path,
+        const module = new vm.SourceTextModule(file.content.toString('utf8') + file.sourceMap!, {
+          identifier: file.fileUrl!,
           importModuleDynamically: (async (specifier: string, referencingModule: vm.Module) => {
             const mod = await linker(specifier, referencingModule);
             await mod.link(linker);
