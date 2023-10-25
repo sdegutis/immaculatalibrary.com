@@ -87,14 +87,20 @@ export class Runtime {
   }
 
   async createModules() {
+    const packages = new Map<string, Promise<vm.Module>>();
+
     const linker = async (specifier: string, referencingModule: vm.Module) => {
       if (!specifier.match(/^[./]/)) {
-        const result = await import(specifier);
-        return new vm.SyntheticModule(Object.keys(result), function () {
-          for (const [key, val] of Object.entries(result)) {
-            this.setExport(key, val);
-          }
-        });
+        let pkg = packages.get(specifier);
+        if (!pkg) packages.set(specifier, pkg = new Promise(async (resolve) => {
+          const result = await import(specifier);
+          resolve(new vm.SyntheticModule(Object.keys(result), function () {
+            for (const [key, val] of Object.entries(result)) {
+              this.setExport(key, val);
+            }
+          }));
+        }));
+        return await pkg;
       }
 
       const absPath = path.resolve(path.dirname(referencingModule.identifier), specifier);
