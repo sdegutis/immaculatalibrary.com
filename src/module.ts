@@ -11,10 +11,13 @@ export class Module {
   #run;
   content;
 
+  cachedData?: Buffer;
+
   constructor(
     public filepath: string,
     buffer: Buffer,
     private runtime: Runtime,
+    cachedData: Buffer | undefined,
   ) {
     const rawCode = buffer.toString('utf8');
 
@@ -33,10 +36,8 @@ export class Module {
       },
     });
 
-    const args = {
-      require: (path: string) => this.#requireFromWithinModule(path),
-      exports: this.#exports,
-    };
+    const require = (path: string) => this.#requireFromWithinModule(path);
+    const exports = this.#exports;
 
     this.content = (transformed.code
       .replace(/"\/core\/jsx-runtime"/g, `"/core/jsx-runtime.js"`)
@@ -45,11 +46,15 @@ export class Module {
     const sourceMapBase64 = Buffer.from(JSON.stringify(transformed.sourceMap)).toString('base64url');
     const sourceMapUrlStr = `\n//# sourceMappingURL=data:application/json;base64,${sourceMapBase64}`;
 
-    const runModule = vm.compileFunction(this.content + sourceMapUrlStr, Object.keys(args), {
+    const script = new vm.Script(`(require,exports)=>{\n${this.content + sourceMapUrlStr}\n}`, {
       filename: fileUrl.href,
+      cachedData,
     });
 
-    this.#run = () => runModule(...Object.values(args));
+    this.#run = () => {
+      script.runInThisContext()(require, exports);
+      this.cachedData = script.createCachedData();
+    };
   }
 
   resetExports() {
