@@ -90,12 +90,11 @@ export class Runtime {
     const linker = async (specifier: string, referencingModule: vm.Module) => {
       if (!specifier.match(/^[./]/)) {
         const result = await import(specifier);
-        const m = new vm.SyntheticModule(Object.keys(result), () => {
+        return new vm.SyntheticModule(Object.keys(result), function () {
           for (const [key, val] of Object.entries(result)) {
-            m.setExport(key, val);
+            this.setExport(key, val);
           }
         });
-        return m;
       }
 
       const absPath = path.resolve(path.dirname(referencingModule.identifier), specifier);
@@ -107,13 +106,12 @@ export class Runtime {
 
       if (specifier.endsWith('/')) {
         const dirPath = absPath.endsWith('/') ? absPath : absPath + '/';
+        const files = [...this.files.values()]
+          .filter(file => file.path.startsWith((dirPath)));
 
-        const m = new vm.SyntheticModule(['default'], () => {
-          m.setExport('default', ([...this.files.values()]
-            .filter(file => file.path.startsWith((dirPath)))
-          ));
+        return new vm.SyntheticModule(['default'], function () {
+          this.setExport('default', files);
         });
-        return m;
       }
 
       throw new Error(`Can't find file at path: ${specifier}`);
