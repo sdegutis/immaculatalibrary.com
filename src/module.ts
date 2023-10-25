@@ -10,13 +10,10 @@ export class Module {
   #run;
   content;
 
-  cachedData?: Buffer;
-
   constructor(
     private filepath: string,
     buffer: Buffer,
     private runtime: Runtime,
-    cachedData: Buffer | undefined,
   ) {
     const rawCode = buffer.toString('utf8');
 
@@ -35,13 +32,10 @@ export class Module {
       .replace(/"\/core\/jsx-runtime"/g, `"/core/jsx-runtime.js"`)
     );
 
-    const script = new vm.Script(`(require,exports)=>{\n${this.content}\n}`, {
-      cachedData,
-    });
+    const script = new vm.Script(`(require,exports)=>{\n${this.content}\n}`);
 
     this.#run = () => {
       script.runInThisContext()(require, exports);
-      this.cachedData = script.createCachedData();
     };
   }
 

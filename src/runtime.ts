@@ -77,8 +77,7 @@ export class Runtime {
   #createModules() {
     for (const file of this.files.values()) {
       if (file.needsModule) {
-        const cacheData = file.module?.cachedData;
-        file.module = new Module(file.path, file.content, this, cacheData);
+        file.module = new Module(file.path, file.content, this);
         file.content = Buffer.from(file.module.content);
       }
     }
