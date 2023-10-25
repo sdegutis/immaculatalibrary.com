@@ -57,13 +57,6 @@ export class Module {
     };
   }
 
-  resetExports() {
-    this.#ran = false;
-    for (const key in this.#exports) {
-      delete this.#exports[key];
-    }
-  }
-
   require() {
     if (!this.#ran) {
       this.#ran = true;
