@@ -9,6 +9,7 @@ class FsFile {
   constructor(
     public path: string,
     public content: Buffer,
+    public needsModule: boolean,
   ) { }
 
 }
@@ -19,6 +20,7 @@ export class Runtime {
 
   constructor(private realBase: string) {
     this.#loadDir('/');
+    this.#createModules();
   }
 
   #loadDir(base: string) {
@@ -49,13 +51,8 @@ export class Runtime {
     }
 
     const content = fs.readFileSync(realFilePath);
-    const file = new FsFile(filepath, content);
+    const file = new FsFile(filepath, content, !!needsModule);
     this.files.set(filepath, file);
-
-    if (needsModule) {
-      file.module = new Module(filepath, file.content, this);
-      file.content = Buffer.from(file.module.content);
-    }
   }
 
   realPath(filepath: string) {
@@ -74,8 +71,15 @@ export class Runtime {
       }
     }
 
+    this.#createModules();
+  }
+
+  #createModules() {
     for (const file of this.files.values()) {
-      file.module?.resetExports();
+      if (file.needsModule) {
+        file.module = new Module(file.path, file.content, this);
+        file.content = Buffer.from(file.module.content);
+      }
     }
   }
 
