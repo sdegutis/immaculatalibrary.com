@@ -76,9 +76,7 @@ export class Runtime {
         this.files.delete(filepath);
       }
     }
-  }
 
-  updateModules(filepaths: string[]) {
     const resetSeen = new Set<string>();
     for (const filepath of filepaths) {
       this.#resetDepTree(filepath, resetSeen);

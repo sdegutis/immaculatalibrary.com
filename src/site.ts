@@ -24,9 +24,7 @@ export class Site {
 
   pathsUpdated(...paths: string[]) {
     const fixedPaths = paths.map(p => p.slice(this.srcPath.length));
-
     this.#runtime.reflectChangesFromReal(fixedPaths);
-    this.#runtime.updateModules(fixedPaths);
   }
 
 }
