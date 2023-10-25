@@ -1,6 +1,5 @@
 import * as path from 'path/posix';
 import * as sucrase from 'sucrase';
-import { pathToFileURL } from 'url';
 import * as vm from 'vm';
 import { Runtime } from './runtime.js';
 
@@ -14,15 +13,12 @@ export class Module {
   cachedData?: Buffer;
 
   constructor(
-    public filepath: string,
+    private filepath: string,
     buffer: Buffer,
     private runtime: Runtime,
     cachedData: Buffer | undefined,
   ) {
     const rawCode = buffer.toString('utf8');
-
-    const filename = this.runtime.realPath(this.filepath);
-    const fileUrl = pathToFileURL(filename);
 
     const transformed = sucrase.transform(rawCode, {
       transforms: ['typescript', 'imports', 'jsx'],
@@ -30,10 +26,6 @@ export class Module {
       jsxImportSource: '/core',
       disableESTransforms: true,
       production: true,
-      filePath: fileUrl.href,
-      sourceMapOptions: {
-        compiledFilename: filename,
-      },
     });
 
     const require = (path: string) => this.#requireFromWithinModule(path);
@@ -43,11 +35,7 @@ export class Module {
       .replace(/"\/core\/jsx-runtime"/g, `"/core/jsx-runtime.js"`)
     );
 
-    const sourceMapBase64 = Buffer.from(JSON.stringify(transformed.sourceMap)).toString('base64url');
-    const sourceMapUrlStr = `\n//# sourceMappingURL=data:application/json;base64,${sourceMapBase64}`;
-
-    const script = new vm.Script(`(require,exports)=>{\n${this.content + sourceMapUrlStr}\n}`, {
-      filename: fileUrl.href,
+    const script = new vm.Script(`(require,exports)=>{\n${this.content}\n}`, {
       cachedData,
     });
 
