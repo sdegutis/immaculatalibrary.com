@@ -1,6 +1,7 @@
 import * as fs from "fs";
 import * as path from "path/posix";
 import * as sucrase from 'sucrase';
+import * as vm from 'vm';
 import { Module } from "./module.js";
 
 class FsFile {
@@ -20,7 +21,6 @@ export class Runtime {
 
   constructor(private realBase: string) {
     this.#loadDir('/');
-    this.#createModules();
   }
 
   #loadDir(base: string) {
@@ -72,7 +72,7 @@ export class Runtime {
     return path.join(this.realBase, filepath);
   }
 
-  reflectChangesFromReal(filepaths: string[]) {
+  async reflectChangesFromReal(filepaths: string[]) {
     for (const filepath of filepaths) {
       const realFilePath = path.join(this.realBase, filepath);
 
@@ -84,17 +84,50 @@ export class Runtime {
       }
     }
 
-    this.#createModules();
+    await this.createModules();
   }
 
-  #createModules() {
+  async createModules() {
     this.modules.clear();
 
     for (const file of this.files.values()) {
       if (file.needsModule) {
-        this.modules.set(file.path, new Module(file.path, file.content, this));
+        this.modules.set(file.path, new Module(file.path, file.content));
       }
     }
+
+    await this.modules.get('/core/main.js')!.script.link(async (specifier, referencingModule) => {
+      if (!specifier.match(/^[./]/)) {
+        const result = await import(specifier);
+        const m = new vm.SyntheticModule(Object.keys(result), () => {
+          for (const [key, val] of Object.entries(result)) {
+            m.setExport(key, val);
+          }
+        });
+        return m;
+      }
+
+      const absPath = path.resolve(path.dirname(referencingModule.identifier), specifier);
+
+      const module = this.modules.get(absPath);
+      if (module) {
+        return module.script;
+      }
+
+      if (specifier.endsWith('/')) {
+        const dirPath = absPath.endsWith('/') ? absPath : absPath + '/';
+
+        const m = new vm.SyntheticModule(['default'], () => {
+          m.setExport('default', ([...this.files.values()]
+            .filter(file => file.path.startsWith((dirPath)))
+          ));
+        });
+
+        return m;
+      }
+
+      throw new Error(`Can't find file at path: ${specifier}`);
+    });
   }
 
 }

@@ -9,7 +9,9 @@ const server = new Server();
 server.startServer(8080);
 
 const site = new Site("site");
-const artifacts = site.build();
+await site.setup();
+
+const artifacts = await site.build();
 server.files = artifacts?.outfiles;
 server.handlers = artifacts?.handlers;
 
@@ -19,11 +21,11 @@ let reloadFsTimer: NodeJS.Timeout;
 const pathUpdated = (filePath: string) => {
   updatedPaths.add(filePath.split(path.sep).join(path.posix.sep));
   clearTimeout(reloadFsTimer);
-  reloadFsTimer = setTimeout(() => {
+  reloadFsTimer = setTimeout(async () => {
     console.log('Rebuilding site...');
-    site.pathsUpdated(...updatedPaths);
+    await site.pathsUpdated(...updatedPaths);
 
-    const artifacts = site.build();
+    const artifacts = await site.build();
     server.files = artifacts?.outfiles;
     server.handlers = artifacts?.handlers;
 

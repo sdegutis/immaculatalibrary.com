@@ -3,7 +3,9 @@ import * as path from 'path/posix';
 import { Site } from './site.js';
 
 const site = new Site("site");
-const out = site.build()!.outfiles;
+await site.setup();
+
+const out = (await site.build())!.outfiles;
 
 const madeDirs = new Set<string>();
 const mkdirIfNeeded = (dir: string) => {

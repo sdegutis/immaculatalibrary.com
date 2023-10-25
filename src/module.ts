@@ -1,55 +1,22 @@
-import * as path from 'path/posix';
 import * as vm from 'vm';
-import { Runtime } from './runtime.js';
 
 export class Module {
 
-  #exports = Object.create(null);
-  #ran = false;
-  #run;
+  script;
 
   constructor(
-    private filepath: string,
+    filepath: string,
     buffer: Buffer,
-    private runtime: Runtime,
   ) {
-    const require = (path: string) => this.#requireFromWithinModule(path);
-    const exports = this.#exports;
-    const script = new vm.Script(`(require,exports)=>{\n${buffer.toString('utf8')}\n}`);
-    this.#run = () => {
-      script.runInThisContext()(require, exports);
-    };
+    this.script = new vm.SourceTextModule(buffer.toString('utf8'), {
+      identifier: filepath,
+    });
   }
 
-  require() {
-    if (!this.#ran) {
-      this.#ran = true;
-      this.#run();
-    }
-    return this.#exports;
-  }
-
-  #requireFromWithinModule(toPath: string) {
-    if (!toPath.match(/^[./]/)) {
-      return import(toPath);
-    }
-
-    const absPath = path.resolve(path.dirname(this.filepath), toPath);
-
-    const module = this.runtime.modules.get(absPath);
-    if (module) {
-      return module.require();
-    }
-
-    if (toPath.endsWith('/')) {
-      const dirPath = absPath.endsWith('/') ? absPath : absPath + '/';
-
-      return ([...this.runtime.files.values()]
-        .filter(file => file.path.startsWith((dirPath)))
-      );
-    }
-
-    throw new Error(`Can't find file at path: ${toPath}`);
+  async require() {
+    console.log('requiring', this.script.identifier, this.script.status);
+    await this.script.evaluate();
+    return this.script.namespace as any;
   }
 
 }

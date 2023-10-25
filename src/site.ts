@@ -8,10 +8,15 @@ export class Site {
     this.#runtime = new Runtime(this.srcPath);
   }
 
-  build() {
+  async setup() {
+    await this.#runtime.createModules();
+  }
+
+  async build() {
     try {
       const mainModule = this.#runtime.modules.get('/core/main.js')!;
-      return mainModule.require() as {
+
+      return await mainModule.require() as {
         outfiles: Map<string, Buffer | string>,
         handlers: Map<string, (body: string) => string>,
       };
@@ -22,9 +27,9 @@ export class Site {
     }
   }
 
-  pathsUpdated(...paths: string[]) {
+  async pathsUpdated(...paths: string[]) {
     const fixedPaths = paths.map(p => p.slice(this.srcPath.length));
-    this.#runtime.reflectChangesFromReal(fixedPaths);
+    await this.#runtime.reflectChangesFromReal(fixedPaths);
   }
 
 }
