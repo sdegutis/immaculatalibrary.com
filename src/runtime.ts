@@ -2,7 +2,6 @@ import * as fs from "fs";
 import * as path from "path/posix";
 import * as sucrase from 'sucrase';
 import * as vm from 'vm';
-import { Module } from "./module.js";
 
 class FsFile {
 
@@ -17,7 +16,7 @@ class FsFile {
 export class Runtime {
 
   files = new Map<string, FsFile>();
-  modules = new Map<string, Module>();
+  modules = new Map<string, vm.Module>();
 
   constructor(private realBase: string) {
     this.#loadDir('/');
@@ -92,11 +91,15 @@ export class Runtime {
 
     for (const file of this.files.values()) {
       if (file.needsModule) {
-        this.modules.set(file.path, new Module(file.path, file.content));
+        const module = new vm.SourceTextModule(file.content.toString('utf8'), {
+          identifier: file.path,
+        });
+
+        this.modules.set(file.path, module);
       }
     }
 
-    await this.modules.get('/core/main.js')!.script.link(async (specifier, referencingModule) => {
+    await this.modules.get('/core/main.js')!.link(async (specifier, referencingModule) => {
       if (!specifier.match(/^[./]/)) {
         const result = await import(specifier);
         const m = new vm.SyntheticModule(Object.keys(result), () => {
@@ -111,7 +114,7 @@ export class Runtime {
 
       const module = this.modules.get(absPath);
       if (module) {
-        return module.script;
+        return module;
       }
 
       if (specifier.endsWith('/')) {
