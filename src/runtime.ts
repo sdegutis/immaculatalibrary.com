@@ -44,13 +44,13 @@ export class Runtime {
   }
 
   #createFile(filepath: string) {
+    const finalFilePath = filepath.replace(/\.tsx?$/, '.js');
+    const isTS = finalFilePath !== filepath;
+
     const realFilePath = path.join(this.realBase, filepath);
-    const isTS = filepath.match(/\.tsx?$/);
     let content = fs.readFileSync(realFilePath);
 
     if (isTS) {
-      filepath = filepath.replace(/\.tsx?$/, '.js');
-
       const rawCode = content.toString('utf8');
       const transformed = sucrase.transform(rawCode, {
         transforms: ['typescript', 'imports', 'jsx'],
@@ -65,8 +65,8 @@ export class Runtime {
       );
     }
 
-    const file = new FsFile(filepath, content, !!isTS);
-    this.files.set(filepath, file);
+    const file = new FsFile(finalFilePath, content, isTS);
+    this.files.set(file.path, file);
   }
 
   realPath(filepath: string) {
