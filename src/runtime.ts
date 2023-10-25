@@ -1,5 +1,6 @@
 import * as fs from "fs";
 import * as path from "path/posix";
+import * as sucrase from 'sucrase';
 import { Module } from "./module.js";
 
 class FsFile {
@@ -44,14 +45,27 @@ export class Runtime {
 
   #createFile(filepath: string) {
     const realFilePath = path.join(this.realBase, filepath);
-    const needsModule = filepath.match(/\.tsx?$/);
+    const isTS = filepath.match(/\.tsx?$/);
+    let content = fs.readFileSync(realFilePath);
 
-    if (needsModule) {
+    if (isTS) {
       filepath = filepath.replace(/\.tsx?$/, '.js');
+
+      const rawCode = content.toString('utf8');
+      const transformed = sucrase.transform(rawCode, {
+        transforms: ['typescript', 'imports', 'jsx'],
+        jsxRuntime: 'automatic',
+        jsxImportSource: '/core',
+        disableESTransforms: true,
+        production: true,
+      });
+
+      content = Buffer.from(transformed.code
+        .replace(/"\/core\/jsx-runtime"/g, `"/core/jsx-runtime.js"`)
+      );
     }
 
-    const content = fs.readFileSync(realFilePath);
-    const file = new FsFile(filepath, content, !!needsModule);
+    const file = new FsFile(filepath, content, !!isTS);
     this.files.set(filepath, file);
   }
 
@@ -78,7 +92,6 @@ export class Runtime {
     for (const file of this.files.values()) {
       if (file.needsModule) {
         file.module = new Module(file.path, file.content, this);
-        file.content = Buffer.from(file.module.content);
       }
     }
   }

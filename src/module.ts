@@ -1,5 +1,4 @@
 import * as path from 'path/posix';
-import * as sucrase from 'sucrase';
 import * as vm from 'vm';
 import { Runtime } from './runtime.js';
 
@@ -8,32 +7,15 @@ export class Module {
   #exports = Object.create(null);
   #ran = false;
   #run;
-  content;
 
   constructor(
     private filepath: string,
     buffer: Buffer,
     private runtime: Runtime,
   ) {
-    const rawCode = buffer.toString('utf8');
-
-    const transformed = sucrase.transform(rawCode, {
-      transforms: ['typescript', 'imports', 'jsx'],
-      jsxRuntime: 'automatic',
-      jsxImportSource: '/core',
-      disableESTransforms: true,
-      production: true,
-    });
-
     const require = (path: string) => this.#requireFromWithinModule(path);
     const exports = this.#exports;
-
-    this.content = (transformed.code
-      .replace(/"\/core\/jsx-runtime"/g, `"/core/jsx-runtime.js"`)
-    );
-
-    const script = new vm.Script(`(require,exports)=>{\n${this.content}\n}`);
-
+    const script = new vm.Script(`(require,exports)=>{\n${buffer.toString('utf8')}\n}`);
     this.#run = () => {
       script.runInThisContext()(require, exports);
     };
