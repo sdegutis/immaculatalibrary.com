@@ -82,7 +82,6 @@ export class Module {
     if (toPath.endsWith('/')) {
       const dirPath = absPath.endsWith('/') ? absPath : absPath + '/';
 
-      absPath === '/' ? '/' : absPath + '/';
       return ([...this.runtime.files.values()]
         .filter(file => file.path.startsWith((dirPath)))
       );
