@@ -10,7 +10,7 @@ export class Site {
 
   build() {
     try {
-      const mainModule = this.#runtime.files.get('/core/main.js')!.module!;
+      const mainModule = this.#runtime.modules.get('/core/main.js')!;
       return mainModule.require() as {
         outfiles: Map<string, Buffer | string>,
         handlers: Map<string, (body: string) => string>,

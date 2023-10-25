@@ -5,8 +5,6 @@ import { Module } from "./module.js";
 
 class FsFile {
 
-  module?: Module;
-
   constructor(
     public path: string,
     public content: Buffer,
@@ -18,6 +16,7 @@ class FsFile {
 export class Runtime {
 
   files = new Map<string, FsFile>();
+  modules = new Map<string, Module>();
 
   constructor(private realBase: string) {
     this.#loadDir('/');
@@ -89,9 +88,11 @@ export class Runtime {
   }
 
   #createModules() {
+    this.modules.clear();
+
     for (const file of this.files.values()) {
       if (file.needsModule) {
-        file.module = new Module(file.path, file.content, this);
+        this.modules.set(file.path, new Module(file.path, file.content, this));
       }
     }
   }

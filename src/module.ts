@@ -36,7 +36,7 @@ export class Module {
 
     const absPath = path.resolve(path.dirname(this.filepath), toPath);
 
-    const module = this.runtime.files.get(absPath)?.module;
+    const module = this.runtime.modules.get(absPath);
     if (module) {
       return module.require();
     }
