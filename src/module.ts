@@ -76,7 +76,6 @@ export class Module {
 
     const module = this.runtime.files.get(absPath)?.module;
     if (module) {
-      this.runtime.addDeps(this.filepath, module.filepath);
       return module.require();
     }
 
@@ -84,7 +83,6 @@ export class Module {
       const dirPath = absPath.endsWith('/') ? absPath : absPath + '/';
 
       absPath === '/' ? '/' : absPath + '/';
-      this.runtime.addDeps(this.filepath, dirPath);
       return ([...this.runtime.files.values()]
         .filter(file => file.path.startsWith((dirPath)))
       );

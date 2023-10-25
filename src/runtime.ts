@@ -16,7 +16,6 @@ class FsFile {
 export class Runtime {
 
   files = new Map<string, FsFile>();
-  #deps = new Map<string, Set<string>>();
 
   constructor(private realBase: string) {
     this.#loadDir('/');
@@ -75,31 +74,8 @@ export class Runtime {
       }
     }
 
-    const resetSeen = new Set<string>();
-    for (const filepath of filepaths) {
-      this.#resetDepTree(filepath, resetSeen);
-    }
-  }
-
-  addDeps(requiredBy: string, requiring: string) {
-    let list = this.#deps.get(requiring);
-    if (!list) this.#deps.set(requiring, list = new Set());
-    list.add(requiredBy);
-  }
-
-  #resetDepTree(path: string, seen: Set<string>) {
-    if (seen.has(path)) return;
-    seen.add(path);
-
-    for (const [requiring, requiredBy] of this.#deps) {
-      if (path.startsWith(requiring)) {
-        this.#deps.delete(requiring);
-        for (const dep of requiredBy) {
-          const module = this.files.get(dep)?.module;
-          module?.resetExports();
-          this.#resetDepTree(dep, seen);
-        }
-      }
+    for (const file of this.files.values()) {
+      file.module?.resetExports();
     }
   }
 
