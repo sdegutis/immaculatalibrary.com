@@ -9,14 +9,10 @@ interface ModuleData {
   fileUrl: string;
 }
 
-class FsFile {
-
-  constructor(
-    public path: string,
-    public content: Buffer,
-    public moduleData?: ModuleData,
-  ) { }
-
+interface FsFile {
+  path: string;
+  content: Buffer;
+  moduleData: ModuleData | undefined;
 }
 
 export class Runtime {
@@ -81,7 +77,7 @@ export class Runtime {
       moduleData = { sourceMap, fileUrl };
     }
 
-    const file = new FsFile(finalFilePath, content, moduleData);
+    const file = { path: finalFilePath, content, moduleData };
     this.files.set(file.path, file);
   }
 
