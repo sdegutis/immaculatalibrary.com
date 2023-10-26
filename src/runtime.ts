@@ -10,7 +10,6 @@ interface ModuleData {
 }
 
 interface FsFile {
-  path: string;
   content: Buffer;
   moduleData: ModuleData | undefined;
 }
@@ -77,8 +76,8 @@ export class Runtime {
       moduleData = { sourceMap, fileUrl };
     }
 
-    const file = { path: finalFilePath, content, moduleData };
-    this.files.set(file.path, file);
+    const file = { content, moduleData };
+    this.files.set(finalFilePath, file);
   }
 
   realPath(filepath: string) {
@@ -116,7 +115,8 @@ export class Runtime {
 
       if (specifier.endsWith('/')) {
         const dirPath = absPath.endsWith('/') ? absPath : absPath + '/';
-        const files = [...this.files.values()]
+        const files = [...this.files.entries()]
+          .map(([filepath, file]) => ({ path: filepath, content: file.content }))
           .filter(file => file.path.startsWith((dirPath)));
 
         return new vm.SyntheticModule(['default'], function () {
@@ -129,7 +129,7 @@ export class Runtime {
 
     this.modules.clear();
 
-    for (const file of this.files.values()) {
+    for (const [filepath, file] of this.files.entries()) {
       if (file.moduleData) {
         const module = new vm.SourceTextModule(file.content.toString('utf8') + file.moduleData.sourceMap!, {
           identifier: file.moduleData.fileUrl!,
@@ -141,7 +141,7 @@ export class Runtime {
           }) as any,
         });
 
-        this.modules.set(file.path, module);
+        this.modules.set(filepath, module);
       }
     }
 
