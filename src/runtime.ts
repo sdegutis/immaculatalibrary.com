@@ -4,14 +4,17 @@ import * as sucrase from 'sucrase';
 import { pathToFileURL } from "url";
 import * as vm from 'vm';
 
+interface ModuleData {
+  sourceMap: string;
+  fileUrl: string;
+}
+
 class FsFile {
 
   constructor(
     public path: string,
     public content: Buffer,
-    public needsModule: boolean,
-    public sourceMap: string | undefined,
-    public fileUrl: string | undefined,
+    public moduleData?: ModuleData,
   ) { }
 
 }
@@ -51,13 +54,10 @@ export class Runtime {
     const realFilePath = path.join(this.realBase, filepath);
     let content = fs.readFileSync(realFilePath);
 
-    let sourceMap: string | undefined;
-    let fileUrl: string | undefined;
-
+    let moduleData: ModuleData | undefined;
     if (isTS) {
       const rawCode = content.toString('utf8');
-
-      fileUrl = pathToFileURL(realFilePath).href;
+      const fileUrl = pathToFileURL(realFilePath).href;
 
       const transformed = sucrase.transform(rawCode, {
         transforms: ['typescript', 'jsx'],
@@ -76,12 +76,12 @@ export class Runtime {
       );
 
       const sourceMapBase64 = Buffer.from(JSON.stringify(transformed.sourceMap)).toString('base64url');
-      sourceMap = `\n//# sourceMappingURL=data:application/json;base64,${sourceMapBase64}`;
+      const sourceMap = `\n//# sourceMappingURL=data:application/json;base64,${sourceMapBase64}`;
 
-      fileUrl = fileUrl;
+      moduleData = { sourceMap, fileUrl };
     }
 
-    const file = new FsFile(finalFilePath, content, isTS, sourceMap, fileUrl);
+    const file = new FsFile(finalFilePath, content, moduleData);
     this.files.set(file.path, file);
   }
 
@@ -134,9 +134,9 @@ export class Runtime {
     this.modules.clear();
 
     for (const file of this.files.values()) {
-      if (file.needsModule) {
-        const module = new vm.SourceTextModule(file.content.toString('utf8') + file.sourceMap!, {
-          identifier: file.fileUrl!,
+      if (file.moduleData) {
+        const module = new vm.SourceTextModule(file.content.toString('utf8') + file.moduleData.sourceMap!, {
+          identifier: file.moduleData.fileUrl!,
           importModuleDynamically: (async (specifier: string, referencingModule: vm.Module) => {
             const mod = await linker(specifier, referencingModule);
             await mod.link(linker);
