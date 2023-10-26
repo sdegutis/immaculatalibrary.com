@@ -18,9 +18,9 @@ export const SnippetsGroups: JSX.Component<{ snippets: Snippet[] }> = (attrs, ch
     <p>
       <a href='/snippets.html'>Search</a>
       <WordSep />
-      <RandomBookSnippet link={onclick =>
-        <a href='#' onclick={onclick}>Random</a>
-      } />
+      <RandomBookSnippet>
+        <a href='#'>Random</a>
+      </RandomBookSnippet>
       <WordSep />
       {allSnippets.length} total
       <WordSep />

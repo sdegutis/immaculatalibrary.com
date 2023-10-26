@@ -1,4 +1,4 @@
-const snippetIds = fetch('/dynamic/snippet-ids.json').then(res => res.json());
+import { snippetIds } from "./snippet-ids.js";
 
 document.getElementById('refresh-random-book-snippet')!.addEventListener('click', (e) => {
   e.preventDefault();
