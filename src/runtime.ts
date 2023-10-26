@@ -149,11 +149,11 @@ export class Runtime {
 
 class PackageCache {
 
-  packages = new Map<string, vm.Module>();
+  #packages = new Map<string, vm.Module>();
 
   async import(specifier: string): Promise<vm.Module> {
-    let pkg = this.packages.get(specifier);
-    if (!pkg) this.packages.set(specifier, pkg = await moduleFor(await import(specifier)));
+    let pkg = this.#packages.get(specifier);
+    if (!pkg) this.#packages.set(specifier, pkg = await moduleFor(await import(specifier)));
     return pkg;
   }
 
