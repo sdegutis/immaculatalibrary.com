@@ -1,5 +1,5 @@
 import * as path from 'path/posix';
-import { outfiles } from "./core/main.js";
+import { outfiles } from './core/outfiles.js';
 
 export default <>
   {'<?xml version="1.0" encoding="UTF-8"?>\n'}

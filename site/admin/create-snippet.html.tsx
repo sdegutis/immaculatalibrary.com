@@ -1,7 +1,7 @@
 import { EmptyPage } from "../components/page.js";
 import { Typography } from "../components/typography.js";
+import { handlers } from '../core/handlers.js';
 import { calculateReadingMins } from "../core/helpers.js";
-import { handlers } from "../core/main.js";
 import { Snippet } from '../model/snippets.js';
 
 handlers.set('/create-snippet', body => {

@@ -1,4 +1,4 @@
-import { outfiles } from "./main.js";
+import { outfiles } from './outfiles.js';
 
 export function generated(name: string, generateContent: () => string) {
   const fullpath = `/generated/${name}`;

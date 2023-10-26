@@ -1,10 +1,10 @@
 import * as path from 'path/posix';
+import { handlers } from './handlers.js';
 import { isDev } from './helpers.js';
 import { jsxToString } from './jsx-runtime.js';
+import { outfiles } from './outfiles.js';
 import files from '/';
-
-export const handlers = new Map<string, (body: string) => string>();
-export const outfiles = new Map<string, Buffer | string>();
+export { handlers, outfiles };
 
 console.time('Building views');
 
