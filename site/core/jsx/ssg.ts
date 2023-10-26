@@ -1,11 +1,3 @@
-export const jsx = (tag: string | undefined | Function, { children, ...attrs }: Record<string, any>) => {
-  return createJsxElement(tag ?? '', attrs, children);
-}
-
-export const jsxs = jsx;
-
-export const Fragment = undefined;
-
 function createJsxElement(tag: string | Function, attrs: any, ...children: any[]) {
   if (typeof tag === 'function')
     return tag(attrs ?? {}, children);
@@ -16,7 +8,7 @@ function createJsxElement(tag: string | Function, attrs: any, ...children: any[]
 const UNARY = new Set(["img", "br", "hr", "input", "meta", "link"]);
 
 export function jsxToString(element: JSX.Element): string {
-  element = jsx(undefined, { children: [element] })
+  element = createJsxElement('', {}, element);
 
   const context: RenderContext = { head: element, hoisted: new Set() };
   hoistHeadThings(element, context);
