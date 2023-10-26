@@ -1,6 +1,7 @@
 import { Column, Spaced } from "../components/column.js";
 import { formatDate } from "../components/format-date.js";
 import { TypicalPage } from "../components/page.js";
+import { RandomBookSnippet } from "../components/random-snippet.js";
 import { SnippetsGroups } from "../components/snippet-groups.js";
 import { Typography } from "../components/typography.js";
 import { isDev } from "../core/helpers.js";
@@ -79,6 +80,11 @@ export default allSnippets.map(snippet => {
           </Typography>
           <div>
             <h3>Latest book snippets</h3>
+            <p>
+              <RandomBookSnippet>
+                <a href='#'>Random</a>
+              </RandomBookSnippet>
+            </p>
             <SnippetsGroups snippets={allSnippets.slice(0, 10)} />
           </div>
 
