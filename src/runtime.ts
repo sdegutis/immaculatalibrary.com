@@ -118,10 +118,7 @@ export class Runtime {
         const files = [...this.files.entries()]
           .map(([filepath, file]) => ({ path: filepath, content: file.content }))
           .filter(file => file.path.startsWith((dirPath)));
-
-        return new vm.SyntheticModule(['default'], function () {
-          this.setExport('default', files);
-        });
+        return moduleFor({ default: files });
       }
 
       throw new Error(`Can't find file at path: ${specifier}`);
@@ -156,18 +153,18 @@ class PackageCache {
 
   async import(specifier: string): Promise<vm.Module> {
     let pkg = this.packages.get(specifier);
-    if (!pkg) this.packages.set(specifier, pkg = await this.#wrap(await import(specifier)));
+    if (!pkg) this.packages.set(specifier, pkg = await moduleFor(await import(specifier)));
     return pkg;
-  }
-
-  async #wrap(ns: Record<string, any>) {
-    return new vm.SyntheticModule(Object.keys(ns), function () {
-      for (const [key, val] of Object.entries(ns)) {
-        this.setExport(key, val);
-      }
-    });
   }
 
 }
 
 const packageCache = new PackageCache();
+
+async function moduleFor(ns: Record<string, any>) {
+  return new vm.SyntheticModule(Object.keys(ns), function () {
+    for (const [key, val] of Object.entries(ns)) {
+      this.setExport(key, val);
+    }
+  });
+}
