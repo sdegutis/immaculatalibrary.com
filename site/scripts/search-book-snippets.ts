@@ -15,7 +15,7 @@ async function searchBookSnippets() {
   const searchable = await data;
   const searchTerm = input.value.trim().toLowerCase();
 
-  for (const li of host.querySelectorAll<HTMLLIElement>('li ul li')) {
+  for (const li of host.querySelectorAll('li')) {
     if (searchTerm) {
       const slug = li.dataset['slug']!;
       li.hidden = !(searchable[slug].includes(searchTerm));
@@ -23,9 +23,5 @@ async function searchBookSnippets() {
     else {
       li.hidden = false;
     }
-  }
-
-  for (const li of host.children) {
-    (li as HTMLLIElement).hidden = [...li.querySelectorAll('li')].every(li => li.hidden);
   }
 }
