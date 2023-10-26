@@ -21,18 +21,24 @@ export default <>
 
         <div>
 
-          <h2>Book Snippets</h2>
+          <h2>Find Book Snippets</h2>
+
+          <p><input placeholder='Search' autofocus type="text" id="search-book-snippets-field" /></p>
 
           <p>
-            Search:<br />
-            <input type="text" id="search-book-snippets-field" />
+            Not sure what to read?<br />
+            Try a <RandomBookSnippet>
+              <a href='#'>Random Book Snippet</a>
+            </RandomBookSnippet>.
           </p>
 
+        </div>
+
+        <div>
+
+          <h2>Showing book snippets</h2>
+
           <p>
-            <RandomBookSnippet>
-              <a href='#'>Random</a>
-            </RandomBookSnippet>
-            <WordSep />
             {allSnippets.length} total
             <WordSep />
             {totalReadingTime}
