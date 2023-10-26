@@ -9,14 +9,14 @@ interface ModuleData {
   fileUrl: string;
 }
 
-interface FsFile {
+interface File {
   content: Buffer;
   moduleData: ModuleData | undefined;
 }
 
 export class Runtime {
 
-  files = new Map<string, FsFile>();
+  files = new Map<string, File>();
   modules = new Map<string, vm.Module>();
 
   constructor(private realBase: string) {
