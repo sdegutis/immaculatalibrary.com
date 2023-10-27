@@ -1,7 +1,21 @@
 let content = localStorage.getItem('text') ?? '';
 
-function processTextChange() {
+const words = new Map<string, number>();
 
+function processTextChange() {
+  const [first, second] = content.split(/\n---\n/);
+
+  words.clear();
+
+  const lowerCaseWords = first!.toLowerCase().split(/[\t\n]/);
+  const uniqueWords = [...new Set(lowerCaseWords)];
+  for (const word of uniqueWords.sort()) {
+
+    console.log(word, [...second!.matchAll(new RegExp(word, 'gi'))].length);
+
+    words.set(word, 1);
+  }
+  console.log(words);
 }
 
 var monaco = (window as any).monaco;
@@ -23,6 +37,7 @@ const processTextChangeSoon = throttle(1000, processTextChange);
 
 editor.getModel().onDidChangeContent(() => {
   content = editor.getModel().getValue();
+  content = content.replace(/\r\n/g, '\n');
   saveSoon();
   processTextChangeSoon();
 });
