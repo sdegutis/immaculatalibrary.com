@@ -1,8 +1,8 @@
 import * as fs from 'fs';
 import * as path from 'path/posix';
-import { Site } from './site.js';
+import { Runtime } from './runtime.js';
 
-const site = new Site("site");
+const site = new Runtime("site");
 await site.setup();
 
 const out = (await site.build())!.outfiles;

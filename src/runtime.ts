@@ -4,16 +4,6 @@ import * as sucrase from 'sucrase';
 import { pathToFileURL } from "url";
 import * as vm from 'vm';
 
-interface ModuleData {
-  sourceMap: string;
-  fileUrl: string;
-}
-
-interface File {
-  content: Buffer;
-  moduleData: ModuleData | undefined;
-}
-
 export class Runtime {
 
   files = new Map<string, File>();
@@ -21,6 +11,46 @@ export class Runtime {
 
   constructor(private realBase: string) {
     this.#loadDir('/');
+  }
+
+  async setup() {
+    await this.#createModules();
+  }
+
+  async build() {
+    console.time('Running /core/main.js');
+    try {
+      const mainModule = this.modules.get('/core/main.js')!;
+      await mainModule.evaluate();
+      return mainModule.namespace as {
+        outfiles: Map<string, Buffer | string>,
+        handlers: Map<string, (body: string) => string>,
+      };
+    }
+    catch (e) {
+      console.error(e);
+      return;
+    }
+    finally {
+      console.timeEnd('Running /core/main.js');
+    }
+  }
+
+  async pathsUpdated(...paths: string[]) {
+    const filepaths = paths.map(p => p.slice(this.realBase.length));
+
+    for (const filepath of filepaths) {
+      const realFilePath = path.join(this.realBase, filepath);
+
+      if (fs.existsSync(realFilePath)) {
+        this.#createFile(filepath);
+      }
+      else {
+        this.files.delete(filepath);
+      }
+    }
+
+    await this.#createModules();
   }
 
   #loadDir(base: string) {
@@ -80,22 +110,7 @@ export class Runtime {
     this.files.set(finalFilePath, file);
   }
 
-  async reflectChangesFromReal(filepaths: string[]) {
-    for (const filepath of filepaths) {
-      const realFilePath = path.join(this.realBase, filepath);
-
-      if (fs.existsSync(realFilePath)) {
-        this.#createFile(filepath);
-      }
-      else {
-        this.files.delete(filepath);
-      }
-    }
-
-    await this.createModules();
-  }
-
-  async createModules() {
+  async #createModules() {
     const linker = async (specifier: string, referencingModule: vm.Module) => {
       if (!specifier.match(/^[./]/)) {
         return await packageCache.import(specifier);
@@ -114,7 +129,7 @@ export class Runtime {
         const files = [...this.files.entries()]
           .map(([filepath, file]) => ({ path: filepath, content: file.content }))
           .filter(file => file.path.startsWith((dirPath)));
-        return moduleFor({ default: files });
+        return await moduleFor({ default: files });
       }
 
       throw new Error(`Can't find file at path: ${specifier}`);
@@ -141,6 +156,16 @@ export class Runtime {
     await this.modules.get('/core/main.js')!.link(linker);
   }
 
+}
+
+interface ModuleData {
+  sourceMap: string;
+  fileUrl: string;
+}
+
+interface File {
+  content: Buffer;
+  moduleData: ModuleData | undefined;
 }
 
 class PackageCache {

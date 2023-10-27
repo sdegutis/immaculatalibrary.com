@@ -1,14 +1,14 @@
 import * as chokidar from 'chokidar';
 import * as path from 'path';
+import { Runtime } from './runtime.js';
 import { Server } from './server.js';
-import { Site } from './site.js';
 
 process.env['DEV'] = '1';
 
 const server = new Server();
 server.startServer(8080);
 
-const site = new Site("site");
+const site = new Runtime("site");
 await site.setup();
 
 const artifacts = await site.build();
