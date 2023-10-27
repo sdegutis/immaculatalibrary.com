@@ -11,10 +11,6 @@ export const markdown = new MarkdownIt({
   breaks: true,
 });
 
-export function calculateReadingMins(str: string) {
-  return Math.round(str.length / 888);
-}
-
 export function excerpt(s: string) {
   return s.split(/\r?\n\r?\n/)[0]!;
 }

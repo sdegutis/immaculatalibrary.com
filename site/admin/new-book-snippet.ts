@@ -1,8 +1,11 @@
+import MarkdownIt from 'https://cdn.jsdelivr.net/npm/markdown-it@13.0.2/+esm';
+import { calculateReadingMins } from '../shared/helpers.js';
+
 window.addEventListener('beforeunload', (e) => {
   e.returnValue = 'Abandon all changes!?';
 });
 
-const md = markdownit({
+const md = MarkdownIt({
   typographer: true,
   html: true,
   linkify: true,
@@ -75,8 +78,6 @@ fixupButton.onclick = (e) => {
   }));
 }
 
-var calculateReadingMins: (n: number) => string;
-
 const slugify = (str: string) => str.toLowerCase().replace(/ /g, '-').replace(/[^a-z0-9-]/g, '');
 
 titleInput.addEventListener('input', (e) => {
@@ -85,7 +86,7 @@ titleInput.addEventListener('input', (e) => {
 
 let wordWrap = true;
 
-var monaco: any;
+var monaco = (window as any).monaco;
 
 const editor = monaco.editor.create(document.getElementById('editorarea'), {
   value: '',

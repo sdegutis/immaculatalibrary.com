@@ -1,7 +1,6 @@
 import { EmptyPage } from "../components/page.js";
 import { Typography } from "../components/typography.js";
 import { handlers } from '../core/handlers.js';
-import { calculateReadingMins } from "../core/helpers.js";
 import { Snippet } from '../model/snippets.js';
 
 handlers.set('/create-snippet', body => {
@@ -27,10 +26,8 @@ handlers.set('/create-snippet', body => {
 export default <>
   <EmptyPage>
     <link rel='stylesheet' href='/admin/new-book-snippet.css' />
-    <MarkdownClientSide />
     <MonacoClientSide />
-    <script>{calculateReadingMins.toString()}</script>
-    <script src='/admin/new-book-snippet.js' defer></script>
+    <script src='/admin/new-book-snippet.js' type='module'></script>
     <script src='/scripts/darkmode.js' defer></script>
 
     <main>
@@ -68,15 +65,6 @@ export default <>
   </EmptyPage>
 
 </>;
-
-function MarkdownClientSide() {
-  return <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/13.0.2/markdown-it.min.js"
-    integrity="sha512-ohlWmsCxOu0bph1om5eDL0jm/83eH09fvqLDhiEdiqfDeJbEvz4FSbeY0gLJSVJwQAp0laRhTXbUQG+ZUuifUQ=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />;
-}
 
 function MonacoClientSide() {
   return <>

@@ -3,8 +3,8 @@ import { TypicalPage } from "./components/page.js";
 import { RandomBookSnippet } from "./components/random-snippet.js";
 import { SnippetsGroups } from "./components/snippet-groups.js";
 import { WordSep } from "./components/word-sep.js";
-import { calculateReadingMins } from "./core/helpers.js";
 import { allSnippets } from "./model/snippets.js";
+import { calculateReadingMins } from './shared/helpers.js';
 
 const totalReadingMins = calculateReadingMins(allSnippets.map(s => s.content).join('\n\n'));
 const mins = Math.round(totalReadingMins % 60);

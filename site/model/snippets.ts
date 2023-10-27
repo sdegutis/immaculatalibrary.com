@@ -1,6 +1,7 @@
 import { DataFileWithDate } from "../core/data-files.js";
-import { calculateReadingMins, derivePreview, markdown, sortBy } from "../core/helpers.js";
+import { derivePreview, markdown, sortBy } from "../core/helpers.js";
 import allSnippetFiles from "../data/snippets/";
+import { calculateReadingMins } from '../shared/helpers.js';
 import { Book, allBooks, booksBySlug } from './books.js';
 import { Tag } from './tag.js';
 

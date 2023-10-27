@@ -1,6 +1,7 @@
 import { DataFileWithDate } from '../core/data-files.js';
-import { calculateReadingMins, derivePreview, sortBy } from '../core/helpers.js';
+import { derivePreview, sortBy } from '../core/helpers.js';
 import allArticleFiles from '../data/articles/';
+import { calculateReadingMins } from '../shared/helpers.js';
 
 interface ArticleFile {
   title: string;
