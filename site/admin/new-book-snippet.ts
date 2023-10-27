@@ -10,20 +10,20 @@ const md = markdownit({
 });
 
 const params = new URLSearchParams(window.location.search);
-document.querySelector('input[name=archivePage]').value = params.get('archivePage');
-document.querySelector('input[name=archiveSlug]').value = params.get('archiveSlug');
-document.querySelector('input[name=bookSlug]').value = params.get('bookSlug');
-document.querySelector('iframe').src = params.get('archiveLink');
-document.getElementById('old-body').innerHTML = params.get('renderedBody');
+document.querySelector<HTMLInputElement>('input[name=archivePage]')!.value = params.get('archivePage')!;
+document.querySelector<HTMLInputElement>('input[name=archiveSlug]')!.value = params.get('archiveSlug')!;
+document.querySelector<HTMLInputElement>('input[name=bookSlug]')!.value = params.get('bookSlug')!;
+document.querySelector('iframe')!.src = params.get('archiveLink')!;
+document.getElementById('old-body')!.innerHTML = params.get('renderedBody')!;
 
-const addTagButton = document.getElementById('addtag');
-const tagsList = document.getElementById('tags');
+const addTagButton = document.getElementById('addtag')!;
+// const tagsList = document.getElementById('tags');
 
-const tags = JSON.parse(params.get('tags'));
+const tags = JSON.parse(params.get('tags')!);
 for (const tag of tags) {
   const li = document.createElement('li');
   li.innerHTML = `<label><input type='checkbox' name='tags' value=${JSON.stringify(tag)}> ${tag}</label>`;
-  addTagButton.parentElement.insertAdjacentElement('beforebegin', li);
+  addTagButton.parentElement!.insertAdjacentElement('beforebegin', li);
 }
 
 addTagButton.onclick = (e) => {
@@ -31,17 +31,17 @@ addTagButton.onclick = (e) => {
 
   const li = document.createElement('li');
   li.innerHTML = `<label><input type='input' name='tags'></label>`;
-  addTagButton.parentElement.insertAdjacentElement('beforebegin', li);
-  li.querySelector('input').focus();
+  addTagButton.parentElement!.insertAdjacentElement('beforebegin', li);
+  li.querySelector('input')!.focus();
 };
 
-const titleInput = document.querySelector('input[name=title]');
-const slugInput = document.querySelector('input[name=slug]');
-const contentInput = document.querySelector('textarea[name=markdownContent]');
-const previewArea = document.getElementById('previewarea');
-const readingMinsEl = document.getElementById('readingmins');
+const titleInput = document.querySelector<HTMLInputElement>('input[name=title]')!;
+const slugInput = document.querySelector<HTMLInputElement>('input[name=slug]')!;
+const contentInput = document.querySelector<HTMLTextAreaElement>('textarea[name=markdownContent]')!;
+const previewArea = document.getElementById('previewarea') as HTMLDivElement;
+const readingMinsEl = document.getElementById('readingmins') as HTMLSpanElement;
 
-const fixupButton = document.getElementById('fixup-button');
+const fixupButton = document.getElementById('fixup-button')!;
 
 fixupButton.onclick = (e) => {
   e.preventDefault();
@@ -49,11 +49,11 @@ fixupButton.onclick = (e) => {
   editor.getModel().pushStackElement();
 
   let sels = editor.getSelections();
-  if (sels.every(sel => sel.isEmpty())) {
+  if (sels.every((sel: any) => sel.isEmpty())) {
     sels = [editor.getModel().getFullModelRange()];
   }
 
-  editor.executeEdits('admin', sels.map(sel => {
+  editor.executeEdits('admin', sels.map((sel: any) => {
     const content = editor.getModel().getValueInRange(sel);
     const fixedContent = (content
       .trimEnd()
@@ -75,16 +75,17 @@ fixupButton.onclick = (e) => {
   }));
 }
 
-/** @type {import('../../../util/helpers').calculateReadingMins} */
-var calculateReadingMins;
+var calculateReadingMins: (n: number) => string;
 
-const slugify = str => str.toLowerCase().replace(/ /g, '-').replace(/[^a-z0-9-]/g, '');
+const slugify = (str: string) => str.toLowerCase().replace(/ /g, '-').replace(/[^a-z0-9-]/g, '');
 
 titleInput.addEventListener('input', (e) => {
   slugInput.value = slugify(titleInput.value);
 });
 
 let wordWrap = true;
+
+var monaco: any;
 
 const editor = monaco.editor.create(document.getElementById('editorarea'), {
   value: '',
