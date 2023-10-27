@@ -80,10 +80,6 @@ export class Runtime {
     this.files.set(finalFilePath, file);
   }
 
-  realPath(filepath: string) {
-    return path.join(this.realBase, filepath);
-  }
-
   async reflectChangesFromReal(filepaths: string[]) {
     for (const filepath of filepaths) {
       const realFilePath = path.join(this.realBase, filepath);
