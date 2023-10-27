@@ -21,3 +21,7 @@ declare module '*/' {
   const dir: FsFile[];
   export default dir;
 }
+
+declare module 'https://cdn.jsdelivr.net/npm/markdown-it@13.0.2/+esm' {
+  export default await import('markdown-it');
+}
