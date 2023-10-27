@@ -15,7 +15,9 @@ export class Site {
   async build() {
     try {
       const mainModule = this.#runtime.modules.get('/core/main.js')!;
+      console.time('Running /core/main.js');
       await mainModule.evaluate();
+      console.timeEnd('Running /core/main.js');
       return mainModule.namespace as {
         outfiles: Map<string, Buffer | string>,
         handlers: Map<string, (body: string) => string>,

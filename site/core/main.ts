@@ -6,8 +6,6 @@ import { outfiles } from './outfiles.js';
 import files from '/';
 export { handlers, outfiles };
 
-console.time('Building views');
-
 const sitemapIdx = files.findIndex((file) => file.path === '/sitemap.xml.js');
 const sitemap = files[sitemapIdx]!;
 files.splice(sitemapIdx, 1);
@@ -33,5 +31,3 @@ for (const { path: filepath, content } of files) {
     outfiles.set(filepath, content);
   }
 }
-
-console.timeEnd('Building views');
