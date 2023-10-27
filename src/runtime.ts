@@ -8,6 +8,7 @@ export class Runtime {
 
   files = new Map<string, File>();
   modules = new Map<string, vm.Module>();
+  pathsForModules = new WeakMap<vm.Module, string>();
 
   constructor(private realBase: string) {
     this.#loadDir('/');
@@ -116,8 +117,8 @@ export class Runtime {
         return await packageCache.import(specifier);
       }
 
-      const prefixLen = `${pathToFileURL(process.cwd()).href}/${this.realBase}`.length;
-      const absPath = path.resolve(path.dirname(referencingModule.identifier.slice(prefixLen)), specifier);
+      const referencingAbsPath = this.pathsForModules.get(referencingModule)!;
+      const absPath = path.resolve(path.dirname(referencingAbsPath), specifier);
 
       const module = this.modules.get(absPath);
       if (module) {
@@ -150,6 +151,7 @@ export class Runtime {
         });
 
         this.modules.set(filepath, module);
+        this.pathsForModules.set(module, filepath);
       }
     }
 
