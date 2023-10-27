@@ -1,9 +1,9 @@
-export const jsx = (tag: string | undefined | Function, { children, ...attrs }: Record<string, any>) => {
-  return createJsxElement(tag ?? '', attrs, children);
+export const jsx = (tag: string | Function, { children, ...attrs }: Record<string, any>) => {
+  return createJsxElement(tag, attrs, children);
 }
 
 export const jsxs = jsx;
-export const Fragment = undefined;
+export const Fragment = '';
 
 function createJsxElement(tag: string | Function, attrs: any, ...children: any[]) {
   if (typeof tag === 'function')
