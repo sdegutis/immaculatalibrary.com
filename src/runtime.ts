@@ -67,7 +67,7 @@ export class Runtime {
       });
 
       content = Buffer.from(transformed.code
-        .replace(/"\/core\/jsx-runtime"/g, `"/core/jsx/compiler.js"`)
+        .replace(/"\/core\/jsx-runtime"/g, `"/core/jsx-transform.js"`)
       );
 
       const sourceMapBase64 = Buffer.from(JSON.stringify(transformed.sourceMap)).toString('base64url');
