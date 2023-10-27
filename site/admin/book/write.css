@@ -1,0 +1,11 @@
+html,
+body,
+main {
+  width: 100vw;
+  height: 100vh;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
