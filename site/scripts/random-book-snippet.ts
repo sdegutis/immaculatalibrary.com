@@ -2,7 +2,7 @@ import { snippetIds } from "./snippet-ids.js";
 
 document.getElementById('refresh-random-book-snippet')!.addEventListener('click', (e) => {
   e.preventDefault();
-  doRandomBookSnippet();
+  doRandomBookSnippet(slugs => Math.floor(Math.random() * slugs.length));
 });
 
 window.addEventListener('popstate', e => {
@@ -13,7 +13,11 @@ if (window.location.hash) {
   reflectUrl();
 }
 else {
-  doRandomBookSnippet();
+  const yearStart = new Date(new Date().getFullYear(), 0, 1).getTime();
+  const yearDuration = (1000 * 60 * 60 * 24 * 365);
+  const now = Date.now();
+  const percent = (now - yearStart) / yearDuration;
+  doRandomBookSnippet(slugs => Math.floor(percent * slugs.length));
 }
 
 async function reflectUrl() {
@@ -34,9 +38,9 @@ async function reflectUrl() {
   });
 }
 
-async function doRandomBookSnippet() {
+async function doRandomBookSnippet(fn: (slugs: string[]) => number) {
   const slugs = await snippetIds;
-  const i = Math.floor(Math.random() * slugs.length);
+  const i = fn(slugs);
   const slug = slugs[i];
 
   history.pushState('', '', '#' + slug);
