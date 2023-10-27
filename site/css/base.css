@@ -106,11 +106,12 @@ label:has(input[type=radio]:checked) {
 
 label:has(input[type=checkbox]) {
   padding-left: 0.5em;
+  border-left: 1px solid transparent;
 }
 
 label:has(input[type=checkbox]:checked) {
   color: var(--blue-bg);
-  border-left: 1px solid currentColor;
+  border-left-color: currentColor;
 }
 
 input:not(:read-write) {
