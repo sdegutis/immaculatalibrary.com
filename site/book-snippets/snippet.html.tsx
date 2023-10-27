@@ -37,7 +37,7 @@ export default allSnippets.map(snippet => {
 
             <h2>{snippet.renderedTitle}</h2>
             <p>{formatDate(snippet.date)} &bull; {snippet.mins} min</p>
-            <p><CopyLink><a href={`/_/${snippet.shortLink}.html`}>Copy link</a></CopyLink></p>
+            {/* <p><CopyLink><a href={`/_/${snippet.shortLink}.html`}>Copy link</a></CopyLink></p> */}
 
             {isDev && <>
               <div style="border: 1px solid var(--admin-border-color); background-color: var(--admin-bg-color); padding: 1em;">
