@@ -1,10 +1,9 @@
 import { Column, Spaced } from "../components/column.js";
-import { formatDate } from "../components/format-date.js";
 import { TypicalPage } from "../components/page.js";
 import { RandomBookSnippet } from "../components/random-snippet.js";
 import { SnippetsGroups } from "../components/snippet-groups.js";
 import { Typography } from "../components/typography.js";
-import { isDev } from "../core/helpers.js";
+import { formatDate, isDev } from "../core/helpers.js";
 import { Snippet, allSnippets } from "../model/snippets.js";
 import { sortedTags } from "../model/tag.js";
 

@@ -1,8 +1,7 @@
 import { Column, Spaced } from "../components/column.js";
-import { formatDate } from "../components/format-date.js";
 import { TypicalPage } from "../components/page.js";
 import { Typography } from "../components/typography.js";
-import { markdown } from "../core/helpers.js";
+import { formatDate, markdown } from "../core/helpers.js";
 import { allArticles } from "../model/articles.js";
 
 export default allArticles.map(article => [`${article.slug}.html`, <>

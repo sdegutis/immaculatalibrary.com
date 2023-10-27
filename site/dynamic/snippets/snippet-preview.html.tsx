@@ -1,5 +1,4 @@
-import { formatDate } from "../../components/format-date.js";
-import { markdown } from "../../core/helpers.js";
+import { formatDate, markdown } from "../../core/helpers.js";
 import { allSnippets } from "../../model/snippets.js";
 
 export default allSnippets.map(snippet => [`${snippet.slug}-preview.html`, <>

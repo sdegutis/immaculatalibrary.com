@@ -1,7 +1,6 @@
 import { Column, Spaced } from "./components/column.js";
-import { formatDate } from "./components/format-date.js";
 import { TypicalPage } from "./components/page.js";
-import { excerpt, markdown } from "./core/helpers.js";
+import { excerpt, formatDate, markdown } from "./core/helpers.js";
 import { allArticles } from "./model/articles.js";
 
 export default <>
