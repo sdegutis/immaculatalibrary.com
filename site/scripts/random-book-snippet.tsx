@@ -38,7 +38,6 @@ async function reflectUrl() {
   const snippet = await fetch(`/dynamic/snippets/${slug}-preview.json`).then(res => res.json()) as SnippetJson;
   const container = document.getElementById('random-book-snippet') as HTMLDivElement;
   container.innerHTML = '';
-
   container.append(jsxToElement(<>
     <h4><a href={snippet.route}>{snippet.renderedTitle}</a></h4>
     <p>{formatDate(snippet.date)} &bull; {snippet.mins} min</p>
@@ -52,17 +51,14 @@ async function reflectUrl() {
       {snippet.previewMarkdown
         ? <>
           <div innerHTML={markdown.render(snippet.previewMarkdown)} />
-          <p><a href='#' className='continue-reading-snippet-link'><i>Continue reading...</i></a></p>
+          <p><a href='#' onclick={(function (this: HTMLAnchorElement, e: Event) {
+            e.preventDefault();
+            this.parentElement!.parentElement!.innerHTML = snippet.renderedBody;
+          }) as any}><i>Continue reading...</i></a></p>
         </>
         : <div innerHTML={snippet.renderedBody} />}
     </div>
   </>));
-
-  const link = document.querySelector<HTMLAnchorElement>('.continue-reading-snippet-link');
-  link?.addEventListener('click', e => {
-    e.preventDefault();
-    link.parentElement!.parentElement!.innerHTML = snippet.renderedBody;
-  });
 }
 
 async function doRandomBookSnippet(fn: (slugs: string[]) => number) {
