@@ -45,7 +45,7 @@ export default <>
           </p>
 
           <div id='search-results'>
-            <SnippetsGroups snippets={allSnippets} />
+            <SnippetsGroups filter={{ type: 'all' }} />
           </div>
 
         </div>

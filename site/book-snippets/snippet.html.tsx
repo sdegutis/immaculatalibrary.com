@@ -85,7 +85,7 @@ export default allSnippets.map(snippet => {
                 <a href='#'>Random</a>
               </RandomBookSnippet>
             </p>
-            <SnippetsGroups snippets={allSnippets.slice(0, 10)} />
+            <SnippetsGroups filter={{ type: 'latest' }} />
           </div>
 
         </Column>

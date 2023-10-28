@@ -1,15 +1,13 @@
-import { Snippet } from "../model/snippets.js";
+type Filter = { type: 'all' } | { type: 'latest' } | { type: 'tag', tag: string };
 
-export const SnippetsGroups: JSX.Component<{ snippets: Snippet[] }> = ({ snippets }, children) => <>
-  <ul style='padding-left: 20px'>
-    {snippets.map(snippet => <>
-      <li data-slug={snippet.slug}>
-        <p>
-          <a href={snippet.route}>{snippet.renderedTitle}</a>
-          <br />
-          {snippet.mins} min &mdash; {snippet.book.data.title}
-        </p>
-      </li>
-    </>)}
-  </ul>
+export const SnippetsGroups: JSX.Component<{ filter: Filter }> = (attrs, children) => <>
+  <script type='module' src='/scripts/snippets.js' />
+  <script type='module'>{`
+    import { showSnippets } from '/scripts/snippets.js';
+    showSnippets(${attrs.filter.type === 'all' ? 's => true' :
+      attrs.filter.type === 'latest' ? '(s, i) => i < 10' :
+        `s => s.tags.includes(${JSON.stringify(attrs.filter.tag)})`});
+  `}</script>
+  <p id='dynamic-snippets-loading'><em>Loading...</em></p>
+  <ul id='dynamic-snippets' style='padding-left: 20px' hidden />
 </>;

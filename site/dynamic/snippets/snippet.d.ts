@@ -11,3 +11,12 @@ export type SnippetJson = {
   previewMarkdown: string | null;
   renderedBody: string;
 };
+
+export type SnippetSmallerJson = {
+  slug: string;
+  route: string;
+  renderedTitle: string;
+  mins: number;
+  bookTitle: string;
+  tags: string[];
+};

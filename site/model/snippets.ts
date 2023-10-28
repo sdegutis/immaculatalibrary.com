@@ -11,7 +11,7 @@ interface SnippetFile {
   archiveSlug: string;
   archivePage: string;
   bookSlug: string;
-  tags?: string[];
+  tags: string[];
 }
 
 export class Snippet extends DataFileWithDate<SnippetFile> {
