@@ -150,7 +150,10 @@ export class Runtime {
         const module = new vm.SourceTextModule(file.content.toString('utf8') + file.moduleData.sourceMap!, {
           identifier: file.moduleData.fileUrl!,
           importModuleDynamically: importDynamic as any,
+          cachedData: file.moduleData.cachedData,
         });
+
+        file.moduleData.cachedData = (module as any).createCachedData();
 
         this.modules.set(filepath, module);
         this.pathsForModules.set(module, filepath);
@@ -165,6 +168,7 @@ export class Runtime {
 interface ModuleData {
   sourceMap: string;
   fileUrl: string;
+  cachedData?: Buffer;
 }
 
 interface File {
