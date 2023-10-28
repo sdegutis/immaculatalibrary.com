@@ -1,9 +1,7 @@
 import { Snippet } from "../model/snippets.js";
 
 export const SnippetsGroups: JSX.Component<{ snippets: Snippet[] }> = ({ snippets }, children) => <>
-  <link rel='stylesheet' href='/css/components/snippet-groups.css' />
-
-  <ul class="snippets-latest">
+  <ul style='padding-left: 20px'>
     {snippets.map(snippet => <>
       <li data-slug={snippet.slug}>
         <p>

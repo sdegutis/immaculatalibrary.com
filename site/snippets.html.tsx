@@ -44,7 +44,9 @@ export default <>
             {totalReadingTime}
           </p>
 
-          <SnippetsGroups snippets={allSnippets} />
+          <div id='search-results'>
+            <SnippetsGroups snippets={allSnippets} />
+          </div>
 
         </div>
 

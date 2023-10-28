@@ -11,7 +11,7 @@ input.addEventListener('input', (e) => {
 searchBookSnippets();
 
 async function searchBookSnippets() {
-  const host = document.querySelector<HTMLDivElement>('.snippets-latest')!;
+  const host = document.getElementById('search-results') as HTMLDivElement;
   const searchable = await data;
   const searchTerm = input.value.trim().toLowerCase();
 
