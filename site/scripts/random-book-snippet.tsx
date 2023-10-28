@@ -49,9 +49,8 @@ async function reflectUrl() {
     <div class='rendered-preview'>
       {snippet.previewMarkdown
         ? <>
-          <div>{markdown.render(snippet.previewMarkdown)}</div>
-          <div hidden>{snippet.renderedBody}</div>
-          <a href='#' class='continue-reading-snippet-link'><i>Continue reading...</i></a>
+          {markdown.render(snippet.previewMarkdown)}
+          <p><a href='#' class='continue-reading-snippet-link'><i>Continue reading...</i></a></p>
         </>
         : snippet.renderedBody}
     </div>
@@ -60,10 +59,7 @@ async function reflectUrl() {
   const link = document.querySelector<HTMLAnchorElement>('.continue-reading-snippet-link');
   link?.addEventListener('click', e => {
     e.preventDefault();
-    const prevLink = link.previousElementSibling as HTMLAnchorElement;
-    prevLink.previousElementSibling!.remove();
-    prevLink.hidden = false;
-    link.remove();
+    link.parentElement!.parentElement!.innerHTML = snippet.renderedBody;
   });
 }
 
