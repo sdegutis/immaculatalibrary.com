@@ -140,7 +140,7 @@ export class Runtime {
       const mod = await linker(specifier, referencingModule);
       await mod.link(linker);
       await mod.evaluate();
-      return mod.namespace;
+      return mod;
     }
 
     this.modules.clear();
