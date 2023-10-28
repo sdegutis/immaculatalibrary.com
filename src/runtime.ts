@@ -136,18 +136,20 @@ export class Runtime {
       throw new Error(`Can't find file at path: ${specifier}`);
     };
 
+    async function importDynamic(specifier: string, referencingModule: vm.Module) {
+      const mod = await linker(specifier, referencingModule);
+      await mod.link(linker);
+      await mod.evaluate();
+      return mod.namespace;
+    }
+
     this.modules.clear();
 
     for (const [filepath, file] of this.files.entries()) {
       if (file.moduleData) {
         const module = new vm.SourceTextModule(file.content.toString('utf8') + file.moduleData.sourceMap!, {
           identifier: file.moduleData.fileUrl!,
-          importModuleDynamically: (async (specifier: string, referencingModule: vm.Module) => {
-            const mod = await linker(specifier, referencingModule);
-            await mod.link(linker);
-            await mod.evaluate();
-            return mod.namespace;
-          }) as any,
+          importModuleDynamically: importDynamic as any,
         });
 
         this.modules.set(filepath, module);
