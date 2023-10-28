@@ -3,10 +3,7 @@ import { TypicalPage } from "./components/page.js";
 import { Typography } from "./components/typography.js";
 import { markdown } from "./core/helpers.js";
 
-const prayers = `
-
-### Morning
-
+const morning = `
 Angel of God, my Guardian dear
 To Whom God's love commits me here
 Ever this day be at my side
@@ -121,11 +118,9 @@ The Father
 And of the Son
 And of the Holy Spirit
 Amen
+`;
 
-
-
-### Night
-
+const night = `
 Angel of God, my Guardian dear
 To Whom God's love commits me here
 Ever this night be at my side
@@ -213,10 +208,9 @@ The Father
 And of the Son
 And of the Holy Spirit
 Amen
+`;
 
-
-### Litany of Saints
-
+const litany = `
 St. Jane Frances de Chantal
 
 
@@ -282,7 +276,11 @@ Most Sacred Heart of Jesus
 
 `;
 
-// TODO: tabs
+const tabs = {
+  "Morning": markdown.render(morning),
+  "Night": markdown.render(night),
+  "Litany of Saints": markdown.render(litany),
+};
 
 export default <>
   <TypicalPage title="Prayers" image='/img/categories/blessed-sacrament-big.jpg'>
@@ -293,7 +291,26 @@ export default <>
 
           <h2>Daily Prayers</h2>
 
-          {markdown.render(prayers)}
+          <script type='module' src='/scripts/prayers.js' />
+          <link rel='stylesheet' href='/css/page/prayers.css' />
+
+          <ul id='tabs-head'>
+            {Object.keys(tabs).map((tab, i) => <>
+              <li>
+                <a class={i === 0 ? 'selected' : ''} data-tab={tab} href='#'>
+                  {tab}
+                </a>
+              </li>
+            </>)}
+          </ul>
+
+          <div id='tabs-body'>
+            {Object.entries(tabs).map(([name, body], i) => <>
+              <div hidden={i !== 0} class='tab' data-tab={name}>
+                {body}
+              </div>
+            </>)}
+          </div>
 
         </Typography>
       </Column>

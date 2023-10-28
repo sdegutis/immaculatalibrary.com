@@ -1,0 +1,22 @@
+#tabs-head {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: left;
+  gap: 1em;
+  font-weight: bold;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+#tabs-head a {
+  text-decoration: none;
+}
+
+#tabs-head a:not(.selected) {
+  color: inherit;
+
+}
+
+#tabs-head a.selected {
+  border-bottom: 1px solid currentColor;
+}
