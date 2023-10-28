@@ -153,7 +153,7 @@ export class Runtime {
           cachedData: file.moduleData.cachedData,
         });
 
-        file.moduleData.cachedData = (module as any).createCachedData();
+        // file.moduleData.cachedData = (module as any).createCachedData();
 
         this.modules.set(filepath, module);
         this.pathsForModules.set(module, filepath);
