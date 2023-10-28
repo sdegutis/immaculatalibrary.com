@@ -273,14 +273,21 @@ Most Immaculate Heart of the Blessed Virgin Mary
 Most Sacred Heart of Jesus
 Most Sacred Heart of Jesus
 Most Sacred Heart of Jesus
-
 `;
 
-const tabs = {
-  "Morning": markdown.render(morning),
-  "Night": markdown.render(night),
-  "Litany of Saints": markdown.render(litany),
-};
+const tabs = [
+  makeTab("Morning", morning),
+  makeTab("Night", night),
+  makeTab("Litany of Saints", litany),
+];
+
+function makeTab(name: string, md: string) {
+  return {
+    name,
+    body: markdown.render(md),
+    id: name.toLowerCase().replace(/ /g, '-'),
+  };
+}
 
 export default <>
   <TypicalPage title="Prayers" image='/img/categories/blessed-sacrament-big.jpg'>
@@ -295,19 +302,19 @@ export default <>
           <link rel='stylesheet' href='/css/page/prayers.css' />
 
           <ul id='tabs-head'>
-            {Object.keys(tabs).map((tab, i) => <>
+            {tabs.map((tab, i) => <>
               <li>
-                <a class={i === 0 ? 'selected' : ''} data-tab={tab} href='#'>
-                  {tab}
+                <a href={`#${tab.id}`}>
+                  {tab.name}
                 </a>
               </li>
             </>)}
           </ul>
 
           <div id='tabs-body'>
-            {Object.entries(tabs).map(([name, body], i) => <>
-              <div hidden={i !== 0} class='tab' data-tab={name}>
-                {body}
+            {tabs.map((tab, i) => <>
+              <div class='tab' data-tab={tab.id}>
+                {tab.body}
               </div>
             </>)}
           </div>
