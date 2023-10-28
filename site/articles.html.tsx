@@ -1,7 +1,8 @@
 import { Column, Spaced } from "./components/column.js";
 import { TypicalPage } from "./components/page.js";
-import { excerpt, formatDate, markdown } from "./core/helpers.js";
+import { excerpt, markdown } from "./core/helpers.js";
 import { allArticles } from "./model/articles.js";
+import { formatDate } from './shared/format-date.js';
 
 export default <>
   <TypicalPage title="Articles" image='/img/page/articles.jpg'>

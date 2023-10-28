@@ -1,22 +1,22 @@
-import { formatDate, markdown } from "../../core/helpers.js";
-import { allSnippets } from "../../model/snippets.js";
+import { Snippet, allSnippets } from "../../model/snippets.js";
+import { SnippetJson } from "./snippet.js";
 
-export default allSnippets.map(snippet => [`${snippet.slug}-preview.html`, <>
-  <h4><a href={snippet.route}>{snippet.renderedTitle}</a></h4>
-  <p>{formatDate(snippet.date)} &bull; {snippet.mins} min</p>
-  <p>
-    From <a href={snippet.book.route}>{snippet.book.data.title}</a>
-    , page <a rel="noopener" target='_blank' href={snippet.archiveLink}>{snippet.data.archivePage}</a>
-    <br />
-    <small>By {snippet.book.data.author}</small>
-  </p>
-  <div class='rendered-preview'>
-    {snippet.previewMarkdown
-      ? <>
-        <div>{markdown.render(snippet.previewMarkdown)}</div>
-        <div hidden>{snippet.renderedBody}</div>
-        <a href='#' class='continue-reading-snippet-link'><i>Continue reading...</i></a>
-      </>
-      : snippet.renderedBody}
-  </div>
+function snippetToJson(snippet: Snippet): SnippetJson {
+  return {
+    route: snippet.route,
+    renderedTitle: snippet.renderedTitle,
+    date: snippet.date,
+    mins: snippet.mins,
+    bookAuthor: snippet.book.data.author,
+    bookRoute: snippet.book.route,
+    bookTitle: snippet.book.data.title,
+    archiveLink: snippet.archiveLink,
+    archivePage: snippet.data.archivePage,
+    previewMarkdown: snippet.previewMarkdown,
+    renderedBody: snippet.renderedBody,
+  };
+}
+
+export default allSnippets.map(snippet => [`${snippet.slug}-preview.json`, <>
+  {JSON.stringify(snippetToJson(snippet))}
 </>]);

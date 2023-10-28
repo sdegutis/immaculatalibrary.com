@@ -3,9 +3,10 @@ import { TypicalPage } from "../components/page.js";
 import { RandomBookSnippet } from "../components/random-snippet.js";
 import { SnippetsGroups } from "../components/snippet-groups.js";
 import { Typography } from "../components/typography.js";
-import { formatDate, isDev } from "../core/helpers.js";
+import { isDev } from "../core/helpers.js";
 import { Snippet, allSnippets } from "../model/snippets.js";
 import { sortedTags } from "../model/tag.js";
+import { formatDate } from '../shared/format-date.js';
 
 const CopyLink: JSX.Component<{}, [JSX.Element]> = (attrs, [child]) => {
   child.attrs ??= Object.create(null);
