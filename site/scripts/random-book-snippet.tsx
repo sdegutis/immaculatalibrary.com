@@ -1,7 +1,7 @@
 import MarkdownIt from 'https://cdn.jsdelivr.net/npm/markdown-it@13.0.2/+esm';
-import { jsxToString } from "../core/jsx-ssg.js";
 import { SnippetJson } from '../dynamic/snippets/snippet.js';
 import { formatDate } from "../shared/format-date.js";
+import { jsxToString } from "../shared/jsx-stringify.js";
 import { snippetIds } from "./snippet-ids.js";
 
 const markdown = MarkdownIt({
