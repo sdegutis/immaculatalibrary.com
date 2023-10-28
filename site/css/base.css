@@ -12,9 +12,7 @@ html {
   --disclaimer-border-color: var(--blue-bg);
   --disclaimer-bg-color: #def;
 
-  --input-bg: #fff;
   --input-color: #000;
-  --input-bg-active: #0001;
 }
 
 html.dark-mode {
@@ -33,9 +31,7 @@ html.dark-mode {
   --disclaimer-border-color: var(--blue-bg);
   --disclaimer-bg-color: #004;
 
-  --input-bg: #000;
-  --input-color: #fff;
-  --input-bg-active: #fff1;
+  --input-color: #fff7;
 }
 
 /* General resets and fixes */
@@ -76,6 +72,10 @@ button {
 button:active {
   outline: 1px solid var(--blue-bg);
   background-color: var(--bgalt);
+}
+
+:read-write::placeholder {
+  color: var(--input-color);
 }
 
 label:has(input) {
