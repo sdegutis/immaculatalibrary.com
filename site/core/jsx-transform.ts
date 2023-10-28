@@ -2,6 +2,8 @@ export const jsx = (tag: string | Function, { children, ...attrs }: Record<strin
   return createJsxElement(tag, attrs, children);
 }
 
+// TODO: figure this mess out
+
 export const jsxs = jsx;
 export const Fragment = '';
 

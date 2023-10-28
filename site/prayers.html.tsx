@@ -282,6 +282,8 @@ Most Sacred Heart of Jesus
 
 `;
 
+// TODO: tabs
+
 export default <>
   <TypicalPage title="Prayers" image='/img/categories/blessed-sacrament-big.jpg'>
 

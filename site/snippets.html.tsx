@@ -36,7 +36,7 @@ export default <>
 
         <div>
 
-          <h2>Showing book snippets</h2>
+          <h2>Showing <span id='showing-snippet-count' /> book snippets</h2>
 
           <p>
             {allSnippets.length} total
