@@ -2,11 +2,7 @@ const data = fetch('/dynamic/snippets.json').then(res => res.json());
 
 const input = document.getElementById('search-book-snippets-field') as HTMLInputElement;
 
-let timer: NodeJS.Timeout | undefined;
-input.addEventListener('input', (e) => {
-  if (timer) clearTimeout(timer);
-  timer = setTimeout(searchBookSnippets, 250);
-});
+input.addEventListener('input', e => searchBookSnippets());
 
 searchBookSnippets();
 
