@@ -2,10 +2,10 @@ import * as fs from 'fs';
 import * as path from 'path/posix';
 import { Runtime } from './runtime.js';
 
-const site = new Runtime("site");
-await site.setup();
+const runtime = new Runtime("site");
+await runtime.setup();
 
-const out = (await site.build())!.outfiles;
+const out = (await runtime.build())!.outfiles;
 
 const madeDirs = new Set<string>();
 const mkdirIfNeeded = (dir: string) => {
