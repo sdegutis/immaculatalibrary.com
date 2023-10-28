@@ -27,13 +27,13 @@ const editor = monaco.editor.create(document.getElementById('editorarea'), {
   tabSize: 2,
 });
 
-const saveSoon = throttle(1000, () => {
+const saveSoon = debounce(1000, () => {
   console.log('saving');
   localStorage.setItem('text', content);
 });
 
 processTextChange();
-const processTextChangeSoon = throttle(1000, processTextChange);
+const processTextChangeSoon = debounce(1000, processTextChange);
 
 editor.getModel().onDidChangeContent(() => {
   content = editor.getModel().getValue();
@@ -57,7 +57,7 @@ editor.addAction({
   }
 });
 
-function throttle(ms: number, fn: () => void) {
+function debounce(ms: number, fn: () => void) {
   let timer: NodeJS.Timeout;
   return () => {
     clearTimeout(timer);
