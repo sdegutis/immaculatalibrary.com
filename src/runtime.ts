@@ -85,9 +85,8 @@ export class Runtime {
 
     if (toPath.endsWith('/')) {
       const dirPath = absPath.endsWith('/') ? absPath : absPath + '/';
-      const files = [...this.files.entries()]
-        .filter(([filepath,]) => filepath.startsWith((dirPath)))
-        .map(([filepath, file]) => ({ path: filepath, content: file.content }));
+      const files = [...this.files.values()]
+        .filter(file => file.path.startsWith((dirPath)));
       return files;
     }
 
@@ -121,6 +120,7 @@ class File {
 
 class Module {
 
+  #fn: (() => void) | undefined;
   #exports: object | undefined;
 
   constructor(
@@ -132,7 +132,13 @@ class Module {
   require(): any {
     if (!this.#exports) {
       this.#exports = Object.create(null);
+      this.#run();
+    }
+    return this.#exports;
+  }
 
+  #run() {
+    if (!this.#fn) {
       const realFilePath = this.runtime.realPathFor(this.filepath);
       const transformed = compileTSX(this.content, realFilePath);
       const sourceCode = transformed.code;
@@ -146,9 +152,9 @@ class Module {
       });
 
       const require = (toPath: string) => this.runtime.requireFromModule(toPath, this.filepath);
-      fn(require, this.#exports);
+      this.#fn = () => fn(require, this.#exports);
     }
-    return this.#exports;
+    this.#fn();
   }
 
   resetExports() {
