@@ -7,6 +7,7 @@ import * as vm from 'vm';
 export class Runtime {
 
   files = new Map<string, File>();
+  #deps = new Map<string, Set<string>>();
 
   constructor(private realBase: string) {
     this.#loadDir('/');
@@ -44,8 +45,9 @@ export class Runtime {
       }
     }
 
-    for (const file of this.files.values()) {
-      file.module?.resetExports();
+    const resetSeen = new Set<string>();
+    for (const filepath of filepaths) {
+      this.#resetDepTree(filepath, resetSeen);
     }
   }
 
@@ -84,11 +86,13 @@ export class Runtime {
 
     const module = this.files.get(absPath)?.module;
     if (module) {
+      this.addDeps(fromPath, module.filepath);
       return module.require();
     }
 
     if (toPath.endsWith('/')) {
       const dirPath = absPath.endsWith('/') ? absPath : absPath + '/';
+      this.addDeps(fromPath, dirPath);
       const files = [...this.files.values()]
         .filter(file => file.path.startsWith((dirPath)));
       return files;
@@ -99,6 +103,28 @@ export class Runtime {
 
   realPathFor(filepath: string) {
     return path.join(this.realBase, filepath);
+  }
+
+  addDeps(requiredBy: string, requiring: string) {
+    let list = this.#deps.get(requiring);
+    if (!list) this.#deps.set(requiring, list = new Set());
+    list.add(requiredBy);
+  }
+
+  #resetDepTree(path: string, seen: Set<string>) {
+    if (seen.has(path)) return;
+    seen.add(path);
+
+    for (const [requiring, requiredBy] of this.#deps) {
+      if (path.startsWith(requiring)) {
+        this.#deps.delete(requiring);
+        for (const dep of requiredBy) {
+          const module = this.files.get(convertTsExts(dep))?.module;
+          module?.resetExports();
+          this.#resetDepTree(dep, seen);
+        }
+      }
+    }
   }
 
 }
@@ -116,7 +142,7 @@ class File {
       const code = content.toString('utf8');
       this.module = new Module(code, this.path, runtime);
       this.content = compileTSX(code).code;
-      this.path = path.replace(/\.tsx?$/, '.js');
+      this.path = convertTsExts(path);
     }
   }
 
@@ -129,7 +155,7 @@ class Module {
 
   constructor(
     private content: string,
-    private filepath: string,
+    public filepath: string,
     private runtime: Runtime,
   ) { }
 
@@ -183,4 +209,8 @@ function compileTSX(code: string, realFilePath?: string) {
   const result = sucrase.transform(code, options);
   result.code = result.code.replace(/"\/core\/jsx-runtime"/g, `"/core/jsx-transform.js"`)
   return result;
+}
+
+function convertTsExts(path: string) {
+  return path.replace(/\.tsx?$/, '.js');
 }
