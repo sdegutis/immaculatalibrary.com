@@ -43,6 +43,10 @@ export class Runtime {
         this.files.delete(filepath);
       }
     }
+
+    for (const file of this.files.values()) {
+      file.module?.resetExports();
+    }
   }
 
   #loadDir(base: string) {
