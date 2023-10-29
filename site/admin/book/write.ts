@@ -31,26 +31,27 @@ function processTextChange() {
 
     // console.log(word, [...second!.matchAll(new RegExp(word, 'gi'))].length);
 
-    words[word] ??= 0;
+    // words[word] ??= 0;
+    words[word] = [...second!.matchAll(new RegExp(word, 'gi'))].length;
 
     const el = document.createElement('span');
     el.textContent = word;
     wordsArea.append(el, ' ');
 
-    el.oncontextmenu = (e) => {
-      e.preventDefault();
-      words[word]--;
-      if (words[word]! < 0) words[word] = 0;
-      processTextChange();
-      saveSoon();
-    };
+    // el.oncontextmenu = (e) => {
+    //   e.preventDefault();
+    //   words[word]--;
+    //   if (words[word]! < 0) words[word] = 0;
+    //   processTextChange();
+    //   saveSoon();
+    // };
 
-    el.onclick = (e) => {
-      e.preventDefault();
-      words[word]++;
-      processTextChange();
-      saveSoon();
-    };
+    // el.onclick = (e) => {
+    //   e.preventDefault();
+    //   words[word]++;
+    //   processTextChange();
+    //   saveSoon();
+    // };
     el.style.backgroundColor = `#139${words[word]?.toString(16)}`;
   }
   console.log(words);
