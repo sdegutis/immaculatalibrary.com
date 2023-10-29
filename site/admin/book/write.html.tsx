@@ -8,6 +8,7 @@ export default <>
     <script src='/scripts/darkmode.js' defer></script>
 
     <main>
+      <div id='saved' hidden>Saved</div>
       <div id='words' />
       <div id='editorarea' />
     </main>
