@@ -106,23 +106,13 @@ class File {
 
   constructor(
     public path: string,
-    public content: Buffer,
+    public content: Buffer | string,
     runtime: Runtime,
   ) {
     if (path.match(/\.tsx?$/)) {
       const code = content.toString('utf8');
       this.module = new Module(code, this.path, runtime);
-
-      const transformed = sucrase.transform(code, {
-        transforms: ['typescript', 'jsx'],
-        jsxRuntime: 'automatic',
-        jsxImportSource: '/core',
-        disableESTransforms: true,
-        production: true,
-      });
-
-      const browserCompatibleCode = transformed.code.replace(/"\/core\/jsx-runtime"/g, `"/core/jsx-transform.js"`);
-      this.content = Buffer.from(browserCompatibleCode);
+      this.content = Buffer.from(compileTSX(code).code);
       this.path = path.replace(/\.tsx?$/, '.js');
     }
   }
@@ -145,30 +135,15 @@ class Module {
       this.#ran = true;
 
       const realFilePath = this.runtime.realPathFor(this.filepath);
-
-      const rawCode = this.content;
-      const fileUrl = pathToFileURL(realFilePath).href;
-
-      const transformed = sucrase.transform(rawCode, {
-        transforms: ['typescript', 'imports', 'jsx'],
-        jsxRuntime: 'automatic',
-        jsxImportSource: '/core',
-        disableESTransforms: true,
-        production: true,
-        filePath: fileUrl,
-        sourceMapOptions: {
-          compiledFilename: realFilePath,
-        },
-      });
-
-      const sourceCode = transformed.code.replace(/"\/core\/jsx-runtime"/g, `"/core/jsx-transform.js"`);
+      const transformed = compileTSX(this.content, realFilePath);
+      const sourceCode = transformed.code;
       const sourceMapBase64 = Buffer.from(JSON.stringify(transformed.sourceMap)).toString('base64url');
       const sourceMap = `\n//# sourceMappingURL=data:application/json;base64,${sourceMapBase64}`;
 
       this.content = sourceCode + sourceMap;
 
       const fn = vm.compileFunction(sourceCode + sourceMap, ['require', 'exports'], {
-        filename: fileUrl,
+        filename: pathToFileURL(realFilePath).href,
       });
 
       const require = (toPath: string) => this.runtime.requireFromModule(toPath, this.filepath);
@@ -185,4 +160,22 @@ class Module {
     }
   }
 
+}
+
+function compileTSX(code: string, realFilePath?: string) {
+  const options: sucrase.Options = {
+    transforms: ['typescript', 'jsx'],
+    jsxRuntime: 'automatic',
+    jsxImportSource: '/core',
+    disableESTransforms: true,
+    production: true,
+  };
+  if (realFilePath) {
+    options.transforms.push('imports');
+    options.sourceMapOptions = { compiledFilename: realFilePath };
+    options.filePath = pathToFileURL(realFilePath).href;
+  }
+  const result = sucrase.transform(code, options);
+  result.code = result.code.replace(/"\/core\/jsx-runtime"/g, `"/core/jsx-transform.js"`)
+  return result;
 }
