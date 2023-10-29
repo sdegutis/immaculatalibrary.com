@@ -4,72 +4,12 @@ import * as sucrase from 'sucrase';
 import { pathToFileURL } from "url";
 import * as vm from 'vm';
 
-class File {
-
-  module?: Module;
-
-  constructor(public path: string, public content: Buffer, public realFilePath: string) {
-    if (path.match(/\.tsx?$/)) {
-      this.path = path.replace(/\.tsx?$/, '.js');
-
-      const rawCode = content.toString('utf8');
-      const fileUrl = pathToFileURL(realFilePath).href;
-
-      const transformed = sucrase.transform(rawCode, {
-        transforms: ['typescript', 'jsx'],
-        jsxRuntime: 'automatic',
-        jsxImportSource: '/core',
-        disableESTransforms: true,
-        production: true,
-        filePath: fileUrl,
-        sourceMapOptions: {
-          compiledFilename: realFilePath,
-        },
-      });
-
-      const sourceCode = transformed.code.replace(/"\/core\/jsx-runtime"/g, `"/core/jsx-transform.js"`);
-      this.content = Buffer.from(sourceCode);
-
-      const sourceMapBase64 = Buffer.from(JSON.stringify(transformed.sourceMap)).toString('base64url');
-      const sourceMap = `\n//# sourceMappingURL=data:application/json;base64,${sourceMapBase64}`;
-
-      this.module = new Module(sourceCode, sourceMap, fileUrl);
-    }
-  }
-
-}
-
-class Module {
-
-  constructor(
-    private sourceCode: string,
-    private sourceMap: string,
-    private fileUrl: string,
-  ) {
-
-  }
-
-  create() {
-
-  }
-
-  require(): any {
-
-  }
-
-  resetExports() {
-
-  }
-
-}
-
 export class Runtime {
 
   files = new Map<string, File>();
 
   constructor(private realBase: string) {
     this.#loadDir('/');
-    this.#createModules();
   }
 
   build() {
@@ -94,7 +34,7 @@ export class Runtime {
     const filepaths = paths.map(p => p.slice(this.realBase.length));
 
     for (const filepath of filepaths) {
-      const realFilePath = path.join(this.realBase, filepath);
+      const realFilePath = this.realPathFor(filepath);
 
       if (fs.existsSync(realFilePath)) {
         this.#createFile(filepath);
@@ -103,12 +43,10 @@ export class Runtime {
         this.files.delete(filepath);
       }
     }
-
-    await this.#createModules();
   }
 
   #loadDir(base: string) {
-    const dirRealPath = path.join(this.realBase, base);
+    const dirRealPath = this.realPathFor(base);
     const files = fs.readdirSync(dirRealPath);
     for (const name of files) {
       if (name.startsWith('.')) continue;
@@ -127,49 +65,124 @@ export class Runtime {
   }
 
   #createFile(filepath: string) {
-    const realFilePath = path.join(this.realBase, filepath);
+    const realFilePath = this.realPathFor(filepath);
     let content = fs.readFileSync(realFilePath);
-    const file = new File(filepath, content, realFilePath);
+    const file = new File(filepath, content, this);
     this.files.set(file.path, file);
   }
 
-  async #createModules() {
-    // const linker = async (specifier: string, referencingModule: vm.Module) => {
-    //   if (!specifier.match(/^[./]/)) {
-    //     return await packageCache.import(specifier);
-    //   }
-
-    //   const referencingAbsPath = this.pathsForModules.get(referencingModule)!;
-    //   const absPath = path.resolve(path.dirname(referencingAbsPath), specifier);
-
-    //   const module = this.modules.get(absPath);
-    //   if (module) {
-    //     return module;
-    //   }
-
-    //   if (specifier.endsWith('/')) {
-    //     const dirPath = absPath.endsWith('/') ? absPath : absPath + '/';
-    //     const files = [...this.files.entries()]
-    //       .map(([filepath, file]) => ({ path: filepath, content: file.content }))
-    //       .filter(file => file.path.startsWith((dirPath)));
-    //     return await moduleFor({ default: files });
-    //   }
-
-    //   throw new Error(`Can't find file at path: ${specifier}`);
-    // };
-
-    // async function importDynamic(specifier: string, referencingModule: vm.Module) {
-    //   const mod = await linker(specifier, referencingModule);
-    //   await mod.link(linker);
-    //   await mod.evaluate();
-    //   return mod;
-    // }
-
-    for (const [filepath, file] of this.files.entries()) {
-      file.module?.create();
+  requireFromModule(toPath: string, fromPath: string) {
+    if (!toPath.match(/^[./]/)) {
+      return require(toPath);
     }
 
-    // await this.modules.get('/core/main.js')!.link(linker);
+    const absPath = path.resolve(path.dirname(fromPath), toPath);
+
+    const module = this.files.get(absPath)?.module;
+    if (module) {
+      return module.require();
+    }
+
+    if (toPath.endsWith('/')) {
+      const dirPath = absPath.endsWith('/') ? absPath : absPath + '/';
+      const files = [...this.files.entries()]
+        .filter(([filepath,]) => filepath.startsWith((dirPath)))
+        .map(([filepath, file]) => ({ path: filepath, content: file.content }));
+      return files;
+    }
+
+    throw new Error(`Can't find file at path: ${toPath}`);
+  }
+
+  realPathFor(filepath: string) {
+    return path.join(this.realBase, filepath);
+  }
+
+}
+
+class File {
+
+  module?: Module;
+
+  constructor(
+    public path: string,
+    public content: Buffer,
+    runtime: Runtime,
+  ) {
+    if (path.match(/\.tsx?$/)) {
+      const code = content.toString('utf8');
+      this.module = new Module(code, this.path, runtime);
+
+      const transformed = sucrase.transform(code, {
+        transforms: ['typescript', 'jsx'],
+        jsxRuntime: 'automatic',
+        jsxImportSource: '/core',
+        disableESTransforms: true,
+        production: true,
+      });
+
+      const browserCompatibleCode = transformed.code.replace(/"\/core\/jsx-runtime"/g, `"/core/jsx-transform.js"`);
+      this.content = Buffer.from(browserCompatibleCode);
+      this.path = path.replace(/\.tsx?$/, '.js');
+    }
+  }
+
+}
+
+class Module {
+
+  #ran = false;
+  #exports = Object.create(null);
+
+  constructor(
+    private content: string,
+    private filepath: string,
+    private runtime: Runtime,
+  ) { }
+
+  require(): any {
+    if (!this.#ran) {
+      this.#ran = true;
+
+      const realFilePath = this.runtime.realPathFor(this.filepath);
+
+      const rawCode = this.content;
+      const fileUrl = pathToFileURL(realFilePath).href;
+
+      const transformed = sucrase.transform(rawCode, {
+        transforms: ['typescript', 'imports', 'jsx'],
+        jsxRuntime: 'automatic',
+        jsxImportSource: '/core',
+        disableESTransforms: true,
+        production: true,
+        filePath: fileUrl,
+        sourceMapOptions: {
+          compiledFilename: realFilePath,
+        },
+      });
+
+      const sourceCode = transformed.code.replace(/"\/core\/jsx-runtime"/g, `"/core/jsx-transform.js"`);
+      const sourceMapBase64 = Buffer.from(JSON.stringify(transformed.sourceMap)).toString('base64url');
+      const sourceMap = `\n//# sourceMappingURL=data:application/json;base64,${sourceMapBase64}`;
+
+      this.content = sourceCode + sourceMap;
+
+      const fn = vm.compileFunction(sourceCode + sourceMap, ['require', 'exports'], {
+        filename: fileUrl,
+      });
+
+      const require = (toPath: string) => this.runtime.requireFromModule(toPath, this.filepath);
+      fn(require, this.#exports);
+    }
+
+    return this.#exports;
+  }
+
+  resetExports() {
+    this.#ran = false;
+    for (const key in this.#exports) {
+      delete this.#exports[key];
+    }
   }
 
 }

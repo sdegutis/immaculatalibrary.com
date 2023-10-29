@@ -16,7 +16,7 @@ for (const { path: filepath, content } of files) {
 
   if (filepath.includes('.html') || filepath.includes('.xml') || filepath.includes('.json')) {
     const dir = path.dirname(filepath);
-    const exported = (await import(filepath)).default;
+    const exported = require(filepath).default;
 
     if (Array.isArray(exported)) {
       for (const [name, jsx] of exported) {
