@@ -4,11 +4,68 @@ import * as sucrase from 'sucrase';
 import { pathToFileURL } from "url";
 import * as vm from 'vm';
 
+class File {
+
+  module?: Module;
+
+  constructor(public path: string, public content: Buffer, public realFilePath: string) {
+    if (path.match(/\.tsx?$/)) {
+      this.path = path.replace(/\.tsx?$/, '.js');
+
+      const rawCode = content.toString('utf8');
+      const fileUrl = pathToFileURL(realFilePath).href;
+
+      const transformed = sucrase.transform(rawCode, {
+        transforms: ['typescript', 'jsx'],
+        jsxRuntime: 'automatic',
+        jsxImportSource: '/core',
+        disableESTransforms: true,
+        production: true,
+        filePath: fileUrl,
+        sourceMapOptions: {
+          compiledFilename: realFilePath,
+        },
+      });
+
+      const sourceCode = transformed.code.replace(/"\/core\/jsx-runtime"/g, `"/core/jsx-transform.js"`);
+      this.content = Buffer.from(sourceCode);
+
+      const sourceMapBase64 = Buffer.from(JSON.stringify(transformed.sourceMap)).toString('base64url');
+      const sourceMap = `\n//# sourceMappingURL=data:application/json;base64,${sourceMapBase64}`;
+
+      this.module = new Module(sourceCode, sourceMap, fileUrl);
+    }
+  }
+
+}
+
+class Module {
+
+  constructor(
+    private sourceCode: string,
+    private sourceMap: string,
+    private fileUrl: string,
+  ) {
+
+  }
+
+  create() {
+
+  }
+
+  require(): any {
+
+  }
+
+  resetExports() {
+
+  }
+
+}
+
 export class Runtime {
 
   files = new Map<string, File>();
-  modules = new Map<string, vm.Script>();
-  pathsForModules = new WeakMap<vm.Script, string>();
 
   constructor(private realBase: string) {
     this.#loadDir('/');
@@ -18,9 +75,8 @@ export class Runtime {
   build() {
     console.time('Running /core/main.js');
     try {
-      const mainModule = this.modules.get('/core/main.js')!;
-      await mainModule.evaluate();
-      return mainModule.namespace as {
+      const mainModule = this.files.get('/core/main.js')!.module!;
+      return mainModule.require() as {
         outfiles: Map<string, Buffer | string>,
         handlers: Map<string, (body: string) => string>,
       };
@@ -71,41 +127,10 @@ export class Runtime {
   }
 
   #createFile(filepath: string) {
-    const finalFilePath = filepath.replace(/\.tsx?$/, '.js');
-    const isTS = finalFilePath !== filepath;
-
     const realFilePath = path.join(this.realBase, filepath);
     let content = fs.readFileSync(realFilePath);
-
-    let moduleData: ModuleData | undefined;
-    if (isTS) {
-      const rawCode = content.toString('utf8');
-      const fileUrl = pathToFileURL(realFilePath).href;
-
-      const transformed = sucrase.transform(rawCode, {
-        transforms: ['typescript', 'jsx'],
-        jsxRuntime: 'automatic',
-        jsxImportSource: '/core',
-        disableESTransforms: true,
-        production: true,
-        filePath: fileUrl,
-        sourceMapOptions: {
-          compiledFilename: realFilePath,
-        },
-      });
-
-      content = Buffer.from(transformed.code
-        .replace(/"\/core\/jsx-runtime"/g, `"/core/jsx-transform.js"`)
-      );
-
-      const sourceMapBase64 = Buffer.from(JSON.stringify(transformed.sourceMap)).toString('base64url');
-      const sourceMap = `\n//# sourceMappingURL=data:application/json;base64,${sourceMapBase64}`;
-
-      moduleData = { sourceMap, fileUrl };
-    }
-
-    const file = { content, moduleData };
-    this.files.set(finalFilePath, file);
+    const file = new File(filepath, content, realFilePath);
+    this.files.set(file.path, file);
   }
 
   async #createModules() {
@@ -140,57 +165,11 @@ export class Runtime {
     //   return mod;
     // }
 
-    this.modules.clear();
-
     for (const [filepath, file] of this.files.entries()) {
-      if (file.moduleData) {
-        const module = new vm.Script(file.content.toString('utf8') + file.moduleData.sourceMap!, {
-          filename: file.moduleData.fileUrl!,
-          // importModuleDynamically: importDynamic as any,
-          cachedData: file.moduleData.cachedData,
-        });
-
-        // file.moduleData.cachedData = (module as any).createCachedData();
-
-        this.modules.set(filepath, module);
-        this.pathsForModules.set(module, filepath);
-      }
+      file.module?.create();
     }
 
     // await this.modules.get('/core/main.js')!.link(linker);
   }
 
 }
-
-interface ModuleData {
-  sourceMap: string;
-  fileUrl: string;
-  cachedData?: Buffer;
-}
-
-interface File {
-  content: Buffer;
-  moduleData: ModuleData | undefined;
-}
-
-// class PackageCache {
-
-//   #packages = new Map<string, vm.Module>();
-
-//   async import(specifier: string): Promise<vm.Module> {
-//     let pkg = this.#packages.get(specifier);
-//     if (!pkg) this.#packages.set(specifier, pkg = await moduleFor(await import(specifier)));
-//     return pkg;
-//   }
-
-// }
-
-// const packageCache = new PackageCache();
-
-// async function moduleFor(ns: Record<string, any>) {
-//   return new vm.SyntheticModule(Object.keys(ns), function () {
-//     for (const [key, val] of Object.entries(ns)) {
-//       this.setExport(key, val);
-//     }
-//   });
-// }
