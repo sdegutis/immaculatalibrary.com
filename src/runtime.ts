@@ -121,8 +121,7 @@ class File {
 
 class Module {
 
-  #ran = false;
-  #exports = Object.create(null);
+  #exports: object | undefined;
 
   constructor(
     private content: string,
@@ -131,8 +130,8 @@ class Module {
   ) { }
 
   require(): any {
-    if (!this.#ran) {
-      this.#ran = true;
+    if (!this.#exports) {
+      this.#exports = Object.create(null);
 
       const realFilePath = this.runtime.realPathFor(this.filepath);
       const transformed = compileTSX(this.content, realFilePath);
@@ -149,15 +148,11 @@ class Module {
       const require = (toPath: string) => this.runtime.requireFromModule(toPath, this.filepath);
       fn(require, this.#exports);
     }
-
     return this.#exports;
   }
 
   resetExports() {
-    this.#ran = false;
-    for (const key in this.#exports) {
-      delete this.#exports[key];
-    }
+    this.#exports = undefined;
   }
 
 }
