@@ -7,7 +7,7 @@
       "DOM",
       "DOM.Iterable"
     ], /* Specify a set of bundled library declaration files that describe the target runtime environment. */
-    "module": "ES2022", /* Specify what module code is generated. */
+    "module": "CommonJS", /* Specify what module code is generated. */
     "declaration": true,
     "allowSyntheticDefaultImports": false,
     "rootDir": "./", /* Specify the root folder within your source files. */

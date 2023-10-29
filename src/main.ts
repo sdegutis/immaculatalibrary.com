@@ -5,37 +5,41 @@ import { Server } from './server.js';
 
 process.env['DEV'] = '1';
 
-const server = new Server();
-server.startServer(8080);
+(async () => {
 
-const runtime = new Runtime("site");
-await runtime.setup();
+  const server = new Server();
+  server.startServer(8080);
 
-const artifacts = await runtime.build();
-server.files = artifacts?.outfiles;
-server.handlers = artifacts?.handlers;
+  const runtime = new Runtime("site");
+  await runtime.setup();
 
-const updatedPaths = new Set<string>();
-let reloadFsTimer: NodeJS.Timeout;
+  const artifacts = await runtime.build();
+  server.files = artifacts?.outfiles;
+  server.handlers = artifacts?.handlers;
 
-const pathUpdated = (filePath: string) => {
-  updatedPaths.add(filePath.split(path.sep).join(path.posix.sep));
-  clearTimeout(reloadFsTimer);
-  reloadFsTimer = setTimeout(async () => {
-    console.log('Rebuilding site...');
-    await runtime.pathsUpdated(...updatedPaths);
+  const updatedPaths = new Set<string>();
+  let reloadFsTimer: NodeJS.Timeout;
 
-    const artifacts = await runtime.build();
-    server.files = artifacts?.outfiles;
-    server.handlers = artifacts?.handlers;
+  const pathUpdated = (filePath: string) => {
+    updatedPaths.add(filePath.split(path.sep).join(path.posix.sep));
+    clearTimeout(reloadFsTimer);
+    reloadFsTimer = setTimeout(async () => {
+      console.log('Rebuilding site...');
+      await runtime.pathsUpdated(...updatedPaths);
 
-    updatedPaths.clear();
-    server.events.emit('rebuild');
-    console.log('Done.');
-  }, 100);
-};
+      const artifacts = await runtime.build();
+      server.files = artifacts?.outfiles;
+      server.handlers = artifacts?.handlers;
 
-(chokidar.watch('site', { ignoreInitial: true, cwd: process.cwd() })
-  .on('add', pathUpdated)
-  .on('change', pathUpdated)
-  .on('unlink', pathUpdated));
+      updatedPaths.clear();
+      server.events.emit('rebuild');
+      console.log('Done.');
+    }, 100);
+  };
+
+  (chokidar.watch('site', { ignoreInitial: true, cwd: process.cwd() })
+    .on('add', pathUpdated)
+    .on('change', pathUpdated)
+    .on('unlink', pathUpdated));
+
+})();
