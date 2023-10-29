@@ -7,18 +7,15 @@ import * as vm from 'vm';
 export class Runtime {
 
   files = new Map<string, File>();
-  modules = new Map<string, vm.Module>();
-  pathsForModules = new WeakMap<vm.Module, string>();
+  modules = new Map<string, vm.Script>();
+  pathsForModules = new WeakMap<vm.Script, string>();
 
   constructor(private realBase: string) {
     this.#loadDir('/');
+    this.#createModules();
   }
 
-  async setup() {
-    await this.#createModules();
-  }
-
-  async build() {
+  build() {
     console.time('Running /core/main.js');
     try {
       const mainModule = this.modules.get('/core/main.js')!;
@@ -112,44 +109,44 @@ export class Runtime {
   }
 
   async #createModules() {
-    const linker = async (specifier: string, referencingModule: vm.Module) => {
-      if (!specifier.match(/^[./]/)) {
-        return await packageCache.import(specifier);
-      }
+    // const linker = async (specifier: string, referencingModule: vm.Module) => {
+    //   if (!specifier.match(/^[./]/)) {
+    //     return await packageCache.import(specifier);
+    //   }
 
-      const referencingAbsPath = this.pathsForModules.get(referencingModule)!;
-      const absPath = path.resolve(path.dirname(referencingAbsPath), specifier);
+    //   const referencingAbsPath = this.pathsForModules.get(referencingModule)!;
+    //   const absPath = path.resolve(path.dirname(referencingAbsPath), specifier);
 
-      const module = this.modules.get(absPath);
-      if (module) {
-        return module;
-      }
+    //   const module = this.modules.get(absPath);
+    //   if (module) {
+    //     return module;
+    //   }
 
-      if (specifier.endsWith('/')) {
-        const dirPath = absPath.endsWith('/') ? absPath : absPath + '/';
-        const files = [...this.files.entries()]
-          .map(([filepath, file]) => ({ path: filepath, content: file.content }))
-          .filter(file => file.path.startsWith((dirPath)));
-        return await moduleFor({ default: files });
-      }
+    //   if (specifier.endsWith('/')) {
+    //     const dirPath = absPath.endsWith('/') ? absPath : absPath + '/';
+    //     const files = [...this.files.entries()]
+    //       .map(([filepath, file]) => ({ path: filepath, content: file.content }))
+    //       .filter(file => file.path.startsWith((dirPath)));
+    //     return await moduleFor({ default: files });
+    //   }
 
-      throw new Error(`Can't find file at path: ${specifier}`);
-    };
+    //   throw new Error(`Can't find file at path: ${specifier}`);
+    // };
 
-    async function importDynamic(specifier: string, referencingModule: vm.Module) {
-      const mod = await linker(specifier, referencingModule);
-      await mod.link(linker);
-      await mod.evaluate();
-      return mod;
-    }
+    // async function importDynamic(specifier: string, referencingModule: vm.Module) {
+    //   const mod = await linker(specifier, referencingModule);
+    //   await mod.link(linker);
+    //   await mod.evaluate();
+    //   return mod;
+    // }
 
     this.modules.clear();
 
     for (const [filepath, file] of this.files.entries()) {
       if (file.moduleData) {
-        const module = new vm.SourceTextModule(file.content.toString('utf8') + file.moduleData.sourceMap!, {
-          identifier: file.moduleData.fileUrl!,
-          importModuleDynamically: importDynamic as any,
+        const module = new vm.Script(file.content.toString('utf8') + file.moduleData.sourceMap!, {
+          filename: file.moduleData.fileUrl!,
+          // importModuleDynamically: importDynamic as any,
           cachedData: file.moduleData.cachedData,
         });
 
@@ -160,7 +157,7 @@ export class Runtime {
       }
     }
 
-    await this.modules.get('/core/main.js')!.link(linker);
+    // await this.modules.get('/core/main.js')!.link(linker);
   }
 
 }
@@ -176,24 +173,24 @@ interface File {
   moduleData: ModuleData | undefined;
 }
 
-class PackageCache {
+// class PackageCache {
 
-  #packages = new Map<string, vm.Module>();
+//   #packages = new Map<string, vm.Module>();
 
-  async import(specifier: string): Promise<vm.Module> {
-    let pkg = this.#packages.get(specifier);
-    if (!pkg) this.#packages.set(specifier, pkg = await moduleFor(await import(specifier)));
-    return pkg;
-  }
+//   async import(specifier: string): Promise<vm.Module> {
+//     let pkg = this.#packages.get(specifier);
+//     if (!pkg) this.#packages.set(specifier, pkg = await moduleFor(await import(specifier)));
+//     return pkg;
+//   }
 
-}
+// }
 
-const packageCache = new PackageCache();
+// const packageCache = new PackageCache();
 
-async function moduleFor(ns: Record<string, any>) {
-  return new vm.SyntheticModule(Object.keys(ns), function () {
-    for (const [key, val] of Object.entries(ns)) {
-      this.setExport(key, val);
-    }
-  });
-}
+// async function moduleFor(ns: Record<string, any>) {
+//   return new vm.SyntheticModule(Object.keys(ns), function () {
+//     for (const [key, val] of Object.entries(ns)) {
+//       this.setExport(key, val);
+//     }
+//   });
+// }
