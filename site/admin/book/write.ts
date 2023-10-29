@@ -32,7 +32,7 @@ function processTextChange() {
     // console.log(word, [...second!.matchAll(new RegExp(word, 'gi'))].length);
 
     // words[word] ??= 0;
-    words[word] = [...second!.matchAll(new RegExp(word, 'gi'))].length;
+    words[word] = [...second!.matchAll(new RegExp(`\\b${word}\\b`, 'gi'))].length;
 
     const el = document.createElement('span');
     el.textContent = word;
@@ -52,7 +52,7 @@ function processTextChange() {
     //   processTextChange();
     //   saveSoon();
     // };
-    el.style.backgroundColor = `#139${words[word]?.toString(16)}`;
+    el.style.backgroundColor = `#139${(words[word]! + 1).toString(16)}`;
   }
   console.log(words);
 }
