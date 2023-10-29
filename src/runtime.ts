@@ -112,7 +112,7 @@ class File {
     if (path.match(/\.tsx?$/)) {
       const code = content.toString('utf8');
       this.module = new Module(code, this.path, runtime);
-      this.content = Buffer.from(compileTSX(code).code);
+      this.content = compileTSX(code).code;
       this.path = path.replace(/\.tsx?$/, '.js');
     }
   }
