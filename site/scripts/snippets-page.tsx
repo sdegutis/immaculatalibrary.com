@@ -13,6 +13,14 @@ const ul = jsxToElement(<SnippetsList snippets={snippets} />);
 host.innerHTML = '';
 host.append(ul);
 
+const noResults = jsxToElement(
+  <p hidden id="no-results" style="font-style: italic">
+    No results
+  </p>
+) as HTMLParagraphElement;
+
+host.append(noResults);
+
 updateCount();
 
 input.addEventListener('input', async e => {
@@ -28,9 +36,12 @@ input.addEventListener('input', async e => {
     }
   }
 
-  updateCount();
+  const count = updateCount();
+  noResults.hidden = count > 0;
 });
 
 function updateCount() {
-  countEl.textContent = host.querySelectorAll('li:not([hidden])').length.toFixed();
+  const count = host.querySelectorAll('li:not([hidden])').length;
+  countEl.textContent = count.toFixed();
+  return count;
 }
