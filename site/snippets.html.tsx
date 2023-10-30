@@ -1,7 +1,6 @@
 import { Column, Spaced } from "./components/column.js";
 import { TypicalPage } from "./components/page.js";
 import { RandomBookSnippet } from "./components/random-snippet.js";
-import { WordSep } from "./components/word-sep.js";
 import { allSnippets } from "./model/snippets.js";
 import { calculateReadingMins } from './shared/helpers.js';
 
@@ -36,12 +35,6 @@ export default <>
         <div>
 
           <h2>Showing <span id='showing-snippet-count' /> book snippets</h2>
-
-          <p>
-            {allSnippets.length} total
-            <WordSep />
-            {totalReadingTime}
-          </p>
 
           <div id='search-results'>
             <p><em>Loading...</em></p>
