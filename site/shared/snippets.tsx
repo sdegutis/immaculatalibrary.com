@@ -13,7 +13,7 @@ export const SnippetItem: JSX.Component<{ snippet: SnippetSmallerJson }> = ({ sn
     <p>
       <a href={snippet.route}>{snippet.renderedTitle}</a>
       <br />
-      {snippet.mins} min &mdash; {snippet.book.data.title}
+      {snippet.mins} min &bull; {snippet.book.data.title}
     </p>
   </li>
 </>;
