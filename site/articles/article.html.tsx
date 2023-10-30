@@ -9,13 +9,10 @@ import { formatDate } from '../shared/format-date.js';
 export default allArticles.map(article => [`${article.slug}.html`, <>
   <TypicalPage title="Articles" image={article.data.imageFilename ?? '/img/page/articles.jpg'}>
 
-    <link rel="stylesheet" href="/css/page/article.css" />
-
     <Spaced>
       <Column split>
 
-        <Typography>
-
+        <div>
           <h2>{markdown.renderInline(article.data.title)}</h2>
 
           {article.data.imageCaption &&
@@ -24,9 +21,11 @@ export default allArticles.map(article => [`${article.slug}.html`, <>
 
           <p><small>{article.mins} min &bull; {formatDate(article.date)}</small></p>
 
-          {markdown.render(article.content)}
-
-        </Typography>
+          <style>{`.typography > p { text-indent: 1em; }`}</style>
+          <Typography>
+            {markdown.render(article.content)}
+          </Typography>
+        </div>
 
         <ArticlesList />
 

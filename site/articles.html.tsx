@@ -9,8 +9,6 @@ export default <>
     <Spaced>
       <Column split>
 
-        <link rel="stylesheet" href="/css/page/articles.css" />
-
         <Typography>
           <h2>About the Articles</h2>
           <p>
