@@ -1,35 +1,27 @@
+import { ArticlesList } from "./components/articles-list.js";
 import { Column, Spaced } from "./components/column.js";
 import { TypicalPage } from "./components/page.js";
-import { excerpt, markdown } from "./core/helpers.js";
-import { allArticles } from "./model/articles.js";
-import { formatDate } from './shared/format-date.js';
+import { Typography } from "./components/typography.js";
 
 export default <>
   <TypicalPage title="Articles" image='/img/page/articles.jpg'>
 
     <Spaced>
-      <Column>
+      <Column split>
 
         <link rel="stylesheet" href="/css/page/articles.css" />
 
-        <h2>Articles</h2>
-        <ul class="all-blog-posts">
-          {allArticles.map(article => <>
-            <li class="post-row">
-              <div>
-                <a class="title" href={article.route}>
-                  {article.data.title}
-                </a>
-                <span class="date">
-                  {formatDate(article.date)} &bull; {article.mins} min
-                </span>
-                <div class="excerpt">
-                  {markdown.render(excerpt(article.content))}
-                </div>
-              </div>
-            </li>
-          </>)}
-        </ul>
+        <Typography>
+          <h2>About the Articles</h2>
+          <p>
+            Most of these articles were written to my children
+            during a time in which they were unlawfully kept from me,
+            and this site was the only means which I had of
+            communicating to them any of my thoughts or heart.
+          </p>
+        </Typography>
+
+        <ArticlesList />
 
       </Column>
     </Spaced>

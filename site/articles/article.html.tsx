@@ -1,3 +1,4 @@
+import { ArticlesList } from "../components/articles-list.js";
 import { Column, Spaced } from "../components/column.js";
 import { TypicalPage } from "../components/page.js";
 import { Typography } from "../components/typography.js";
@@ -17,15 +18,17 @@ export default allArticles.map(article => [`${article.slug}.html`, <>
 
           <h2>{markdown.renderInline(article.data.title)}</h2>
 
-          {article.data.imageCaption && <small>(Image: {article.data.imageCaption})</small>}
+          {article.data.imageCaption &&
+            <p><small>(Image: {article.data.imageCaption})</small></p>
+          }
 
-          <p class="date">
-            {formatDate(article.date)} &bull; {article.mins} min
-          </p>
+          <p><small>{article.mins} min &bull; {formatDate(article.date)}</small></p>
 
           {markdown.render(article.content)}
 
         </Typography>
+
+        <ArticlesList />
 
       </Column>
     </Spaced>
