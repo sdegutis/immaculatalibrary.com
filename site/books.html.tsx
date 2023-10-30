@@ -52,7 +52,7 @@ export default <>
 
           <h2>Showing <span id='bookscount'>0</span> books</h2>
 
-          <ul id="books-all" style="padding-left: 20px">
+          <ul id="books-all">
             {allBooks.map(book => {
               const classes = [];
               if (book.snippets.length === 0) classes.push('empty');

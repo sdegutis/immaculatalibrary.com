@@ -1,7 +1,7 @@
 import { SnippetSmallerJson } from "../dynamic/snippets/snippet.js";
 
 export const SnippetsList: JSX.Component<{ snippets: SnippetSmallerJson[] }> = (attrs, children) => <>
-  <ul style='padding-left: 20px'>
+  <ul>
     {attrs.snippets.map(s => <>
       <SnippetItem snippet={s} />
     </>)}

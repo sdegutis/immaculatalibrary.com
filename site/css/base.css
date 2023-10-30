@@ -48,11 +48,17 @@ a {
   color: var(--blue-bg);
 }
 
+:is(ul, ol) {
+  padding-left: 20px;
+}
+
 hr {
   height: 1px;
   background-color: var(--border-color);
   border: 0;
 }
+
+/* Forms */
 
 :read-write,
 button {
