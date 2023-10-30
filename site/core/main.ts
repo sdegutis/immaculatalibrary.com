@@ -1,7 +1,7 @@
 import * as path from 'path/posix';
-import { jsxToString } from '../shared/jsx-stringify.js';
 import { handlers } from './handlers.js';
 import { isDev } from './helpers.js';
+import { jsxToString } from './jsx-stringify.js';
 import { outfiles } from './outfiles.js';
 import files from '/';
 export { handlers, outfiles };
