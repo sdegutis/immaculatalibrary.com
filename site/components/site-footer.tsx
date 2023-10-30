@@ -6,7 +6,7 @@ export const SiteFooter: JSX.Component = (attrs, children) => <>
     <p>
       <span>2020-{new Date().getFullYear()} Steven Degutis &copy; All Rights Reserved</span>
       <> &bull; </>
-      <a href="mailto:immaculatalibrary@gmail.com">Contact</a>
+      <a href="mailto:sbdegutis@gmail.com">Contact</a>
       <> &bull; </>
       <DarkModeButton />
     </p>
