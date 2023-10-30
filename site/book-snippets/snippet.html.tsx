@@ -36,7 +36,7 @@ export default allSnippets.map(snippet => {
           <Typography>
 
             <h2>{snippet.renderedTitle}</h2>
-            <p>{formatDate(snippet.date)} &bull; {snippet.mins} min</p>
+            <p>{snippet.mins} min &bull; Digitized on {formatDate(snippet.date)}</p>
             {/* <p><CopyLink><a href={`/_/${snippet.shortLink}.html`}>Copy link</a></CopyLink></p> */}
 
             {isDev && <>

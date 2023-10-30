@@ -40,7 +40,7 @@ async function reflectUrl() {
   container.innerHTML = '';
   container.append(jsxToElement(<>
     <h4><a href={snippet.route}>{snippet.renderedTitle}</a></h4>
-    <p>{formatDate(snippet.date)} &bull; {snippet.mins} min</p>
+    <p><small>{snippet.mins} min &bull; Digitized on {formatDate(snippet.date)}</small></p>
     <p>
       From <a href={snippet.bookRoute}>{snippet.bookTitle}</a>
       , page <a rel="noopener" target='_blank' href={snippet.archiveLink}>{snippet.archivePage}</a>
