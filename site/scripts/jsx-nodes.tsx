@@ -24,14 +24,8 @@ export function jsxToElement(jsx: JSX.Element) {
 
   const el = document.createElement(jsx.tag);
   for (const [key, val] of Object.entries(jsx.attrs ?? {})) {
-    if (key.startsWith('data-')) {
-      const dataKey = key.slice(5);
-      el.dataset[dataKey] = val;
-    }
-    else {
-      const jsKey = key.replace(/-\w/, (s) => `${s.toUpperCase()}`);
-      (el as any)[jsKey] = val;
-    }
+    const jsKey = key.replace(/-\w/, (s) => `${s.toUpperCase()}`);
+    (el as any)[jsKey] = val;
   }
   pushChildren(el, jsx.children);
   return el;

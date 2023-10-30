@@ -8,12 +8,12 @@ export const SnippetsList: JSX.Component<{ snippets: SnippetSmallerJson[] }> = (
   </ul>
 </>;
 
-export const SnippetItem: JSX.Component<{ snippet: SnippetSmallerJson }> = ({ snippet }, children) => <>
-  <li data-slug={snippet.slug}>
+export const SnippetItem: JSX.Component<{ snippet: SnippetSmallerJson }> = ({ snippet }, children) => (
+  <li>
     <p>
       <a href={snippet.route}>{snippet.renderedTitle}</a>
       <br />
       {snippet.mins} min &bull; {snippet.book.data.title}
     </p>
   </li>
-</>;
+);

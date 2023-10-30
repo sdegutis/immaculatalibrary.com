@@ -1,17 +1,19 @@
 import { SnippetSmallerJson } from "../dynamic/snippets/snippet.js";
-import { SnippetsList } from "../shared/snippets.js";
+import { SnippetItem } from "../shared/snippets.js";
 import { jsxToElement } from "./jsx-nodes.js";
 
 const snippets = await (fetch('/dynamic/snippets.json').then(res => res.json()) as Promise<SnippetSmallerJson[]>);
-const snippetsBySlug = Object.fromEntries(snippets.map(s => [s.slug, s]));
+const snippetItems = snippets.map(snippet => ({
+  snippet,
+  element: jsxToElement(<SnippetItem snippet={snippet} />) as HTMLLIElement
+}));
 
 const host = document.getElementById('search-results') as HTMLDivElement;
 const input = document.getElementById('search-book-snippets-field') as HTMLInputElement;
 const countEl = document.getElementById('showing-snippet-count') as HTMLSpanElement;
 
-const ul = jsxToElement(<SnippetsList snippets={snippets} />);
 host.innerHTML = '';
-host.append(ul);
+host.append(jsxToElement(<ul>{snippetItems.map(s => s.element)}</ul>));
 
 const noResults = jsxToElement(
   <p hidden id="no-results" style="font-style: italic">
@@ -26,14 +28,8 @@ updateCount();
 input.addEventListener('input', async e => {
   const searchTerm = input.value.trim();
 
-  for (const li of host.querySelectorAll('li')) {
-    if (searchTerm) {
-      const slug = li.dataset['slug']!;
-      li.hidden = !termInSnippet(searchTerm, snippetsBySlug[slug]!);
-    }
-    else {
-      li.hidden = false;
-    }
+  for (const snippet of snippetItems) {
+    snippet.element.hidden = !termInSnippet(searchTerm, snippet.snippet);
   }
 
   const count = updateCount();
@@ -41,12 +37,14 @@ input.addEventListener('input', async e => {
 });
 
 function updateCount() {
-  const count = host.querySelectorAll('li:not([hidden])').length;
+  const count = snippetItems.filter(item => !item.element.hidden).length;
   countEl.textContent = count.toFixed();
   return count;
 }
 
 function termInSnippet(term: string, snippet: SnippetSmallerJson) {
+  if (!term) return true;
+
   term = term.toLowerCase();
   return (
     snippet.renderedTitle.toLowerCase().includes(term) ||
