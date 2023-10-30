@@ -1,8 +1,9 @@
 import * as path from "path";
 import { Column, Spaced } from "../../components/column.js";
 import { TypicalPage } from "../../components/page.js";
-import { SnippetsGroups } from "../../components/snippet-groups.js";
+import { allSnippets } from "../../model/snippets.js";
 import { allTags } from "../../model/tag.js";
+import { SnippetsList } from "../../shared/snippets.js";
 
 export default [...allTags.values()].map(tag => [path.basename(tag.route), <>
   <TypicalPage title='Book Snippets' image='/img/categories/reference-big.jpg'>
@@ -12,7 +13,7 @@ export default [...allTags.values()].map(tag => [path.basename(tag.route), <>
 
         <div>
           <h2>{tag.name} Book Snippets</h2>
-          <SnippetsGroups filter={{ type: 'tag', tag: tag.name }} />
+          <SnippetsList snippets={allSnippets.filter(s => s.tags.has(tag))} />
         </div>
 
       </Column>

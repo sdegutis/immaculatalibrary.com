@@ -17,6 +17,6 @@ export type SnippetSmallerJson = {
   route: string;
   renderedTitle: string;
   mins: number;
-  bookTitle: string;
-  tags: string[];
+  book: { data: { title: string } },
+  data: { tags: string[] },
 };

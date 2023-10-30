@@ -1,12 +1,12 @@
 import { Column, Spaced } from "../components/column.js";
 import { TypicalPage } from "../components/page.js";
 import { RandomBookSnippet } from "../components/random-snippet.js";
-import { SnippetsGroups } from "../components/snippet-groups.js";
 import { Typography } from "../components/typography.js";
 import { isDev } from "../core/helpers.js";
 import { Snippet, allSnippets } from "../model/snippets.js";
 import { sortedTags } from "../model/tag.js";
 import { formatDate } from '../shared/format-date.js';
+import { SnippetsList } from "../shared/snippets.js";
 
 const CopyLink: JSX.Component<{}, [JSX.Element]> = (attrs, [child]) => {
   child.attrs ??= Object.create(null);
@@ -85,7 +85,7 @@ export default allSnippets.map(snippet => {
                 <a href='#'>Random</a>
               </RandomBookSnippet>
             </p>
-            <SnippetsGroups filter={{ type: 'latest' }} />
+            <SnippetsList snippets={allSnippets.slice(0, 7)} />
           </div>
 
         </Column>

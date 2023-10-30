@@ -7,8 +7,8 @@ function snippetToJson(snippet: Snippet): SnippetSmallerJson {
     route: snippet.route,
     renderedTitle: snippet.renderedTitle,
     mins: snippet.mins,
-    bookTitle: snippet.book.data.title,
-    tags: snippet.data.tags,
+    book: { data: { title: snippet.book.data.title } },
+    data: { tags: snippet.data.tags },
   };
 }
 

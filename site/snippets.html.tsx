@@ -1,7 +1,6 @@
 import { Column, Spaced } from "./components/column.js";
 import { TypicalPage } from "./components/page.js";
 import { RandomBookSnippet } from "./components/random-snippet.js";
-import { SnippetsGroups } from "./components/snippet-groups.js";
 import { WordSep } from "./components/word-sep.js";
 import { allSnippets } from "./model/snippets.js";
 import { calculateReadingMins } from './shared/helpers.js';
@@ -14,7 +13,7 @@ const totalReadingTime = `${hours}h ${mins}m`;
 export default <>
   <TypicalPage title="Book Snippets" image='/img/categories/reference-big.jpg'>
 
-    <script type='module' src='/scripts/search-book-snippets.js' />
+    <script type='module' src='/scripts/snippets-page.js' />
 
     <Spaced>
       <Column split>
@@ -45,7 +44,7 @@ export default <>
           </p>
 
           <div id='search-results'>
-            <SnippetsGroups filter={{ type: 'all' }} />
+            <p><em>Loading...</em></p>
           </div>
 
         </div>
