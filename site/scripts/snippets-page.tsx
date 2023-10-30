@@ -11,18 +11,17 @@ const input = document.getElementById('search-book-snippets-field') as HTMLInput
 const countEl = document.getElementById('showing-snippet-count') as HTMLSpanElement;
 const host = document.getElementById('search-results') as HTMLDivElement;
 
-const ul = jsxToElement(<ul>
-  {snippets.map(snippet => <SnippetItem snippet={snippet} />)}
-</ul>);
 host.innerHTML = '';
-host.append(ul);
+host.append(jsxToElement(<ul>
+  {snippets.map(snippet => <SnippetItem snippet={snippet} />)}
+</ul>));
 
 updateCount();
 
 input.addEventListener('input', async e => {
   const searchTerm = input.value.trim().toLowerCase();
 
-  for (const li of ul.querySelectorAll('li')) {
+  for (const li of host.querySelectorAll('li')) {
     if (searchTerm) {
       const slug = li.dataset['slug']!;
       li.hidden = !(searchable[slug].includes(searchTerm));
