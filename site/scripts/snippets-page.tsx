@@ -11,13 +11,11 @@ const input = document.getElementById('search-book-snippets-field') as HTMLInput
 const countEl = document.getElementById('showing-snippet-count') as HTMLSpanElement;
 const host = document.getElementById('search-results') as HTMLDivElement;
 
-const ul = jsxToElement(<ul />);
+const ul = jsxToElement(<ul>
+  {snippets.map(snippet => <SnippetItem snippet={snippet} />)}
+</ul>);
 host.innerHTML = '';
 host.append(ul);
-
-for (const snippet of snippets) {
-  ul.append(jsxToElement(<SnippetItem snippet={snippet} />));
-}
 
 updateCount();
 
