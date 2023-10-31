@@ -1,6 +1,4 @@
-import * as MarkdownItTypingNeedsToBeUpdated from 'markdown-it';
-
-const MarkdownIt = (MarkdownItTypingNeedsToBeUpdated as { default: typeof import('markdown-it') }).default;
+import MarkdownIt from 'markdown-it';
 
 export const isDev = !!process.env['DEV'];
 
@@ -39,4 +37,3 @@ export function derivePreview(model: { content: string }) {
   }
   return null;
 }
-

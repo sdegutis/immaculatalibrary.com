@@ -26,3 +26,8 @@ declare module 'https://cdn.jsdelivr.net/npm/markdown-it@13.0.2/+esm' {
   import md = require('markdown-it');
   export default md;
 }
+
+declare module 'markdown-it' {
+  import md = require('markdown-it/lib');
+  export default md;
+}
