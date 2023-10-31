@@ -13,7 +13,7 @@ export class DataFile<D> {
     const slug = path.basename(filepath).slice(0, -3);
 
     const fileContents = rawContent.toString('utf8').replace(/\r\n/g, '\n');
-    const fileContentsMatch = fileContents.match(/^---\n(.+?)\n---\n\n(.+?)$/s)!;
+    const fileContentsMatch = fileContents.match(/^---\n(.+?)\n---\n\n?(.*?)$/s)!;
     const frontmatter = fileContentsMatch[1]!;
     const content = fileContentsMatch[2]!;
 
