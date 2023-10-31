@@ -7,7 +7,7 @@ import { allVideos } from "../model/videos.js";
 
 export default allVideos.map(video => {
   return [`${video.slug}.html`, <>
-    <TypicalPage title="Fulton Sheen Videos" image={`/img/movies/${video.slug}-big.jpg`}>
+    <TypicalPage title="Fulton Sheen Videos" image={`/img/categories/blessed-sacrament-big.jpg`}>
 
       <Spaced>
         <Column split>
