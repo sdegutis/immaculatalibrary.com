@@ -1,5 +1,5 @@
 import { DataFileWithDate } from '../core/data-files.js';
-import { derivePreview, sortBy } from '../core/helpers.js';
+import { sortBy } from '../core/helpers.js';
 import allArticleFiles from '../data/articles/';
 import { calculateReadingMins } from '../shared/helpers.js';
 
@@ -16,13 +16,11 @@ export class Article extends DataFileWithDate<ArticleFile> {
 
   mins: number;
   route: string;
-  previewMarkdown: string | null;
 
   constructor(slug: string, content: string, data: ArticleFile) {
     super(slug, content, data);
     this.route = `/articles/${this.slug}.html`;
     this.mins = calculateReadingMins(this.content);
-    this.previewMarkdown = derivePreview(this);
   }
 
 }
