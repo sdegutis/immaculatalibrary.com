@@ -1,16 +1,12 @@
 import MarkdownIt from 'https://cdn.jsdelivr.net/npm/markdown-it@13.0.2/+esm';
 import { calculateReadingMins } from '../shared/helpers.js';
+import { mdOptions } from '../shared/markdown.js';
 
 window.addEventListener('beforeunload', (e) => {
   e.returnValue = 'Abandon all changes!?';
 });
 
-const md = MarkdownIt({
-  typographer: true,
-  html: true,
-  linkify: true,
-  breaks: true
-});
+const md = MarkdownIt(mdOptions);
 
 const params = new URLSearchParams(window.location.search);
 document.querySelector<HTMLInputElement>('input[name=archivePage]')!.value = params.get('archivePage')!;

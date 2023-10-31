@@ -1,15 +1,11 @@
 import MarkdownIt from 'https://cdn.jsdelivr.net/npm/markdown-it@13.0.2/+esm';
 import { SnippetJson } from '../dynamic/snippets/snippet.js';
 import { formatDate } from "../shared/format-date.js";
+import { mdOptions } from '../shared/markdown.js';
 import { jsxToElement } from './jsx-nodes.js';
 import { snippetIds } from "./snippet-ids.js";
 
-const markdown = MarkdownIt({
-  html: true,
-  typographer: true,
-  linkify: true,
-  breaks: true,
-});
+const markdown = MarkdownIt(mdOptions);
 
 document.getElementById('refresh-random-book-snippet')!.addEventListener('click', (e) => {
   e.preventDefault();
