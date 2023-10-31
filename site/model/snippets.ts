@@ -1,9 +1,11 @@
 import { DataFileWithDate } from "../core/data-files.js";
-import { derivePreview, markdown, sortBy } from "../core/helpers.js";
+import { markdown, sortBy } from "../core/helpers.js";
 import allSnippetFiles from "../data/snippets/";
 import { calculateReadingMins } from '../shared/helpers.js';
 import { Book, allBooks, booksBySlug } from './books.js';
 import { Tag } from './tag.js';
+
+const PREVIEW_LENGTH = 2000;
 
 interface SnippetFile {
   published: boolean;
@@ -70,4 +72,19 @@ for (const book of allBooks) {
     s1!.nextSnippet = s2!;
     s2!.prevSnippet = s1!;
   }
+}
+
+function derivePreview(model: { content: string }) {
+  const paragraphs = model.content.split(/(\r?\n>+ *\r?\n)/);
+
+  let running = 0;
+  for (let i = 0; i < paragraphs.length; i++) {
+    running += paragraphs[i]!.length;
+    if (running > PREVIEW_LENGTH) break;
+  }
+
+  if (running < model.content.length - 1) {
+    return model.content.substring(0, running);
+  }
+  return null;
 }
