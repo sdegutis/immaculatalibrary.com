@@ -1,8 +1,6 @@
 import * as fs from "fs";
 import * as path from "path/posix";
-import * as sucrase from 'sucrase';
-import { pathToFileURL } from "url";
-import * as vm from 'vm';
+import { File, convertTsExts } from "./file.js";
 
 export class Runtime {
 
@@ -77,30 +75,6 @@ export class Runtime {
     this.files.set(file.path, file);
   }
 
-  requireFromModule(toPath: string, fromPath: string) {
-    if (!toPath.match(/^[./]/)) {
-      return require(toPath);
-    }
-
-    const absPath = path.resolve(path.dirname(fromPath), toPath);
-
-    const module = this.files.get(absPath)?.module;
-    if (module) {
-      this.addDeps(fromPath, module.filepath);
-      return module.require();
-    }
-
-    if (toPath.endsWith('/')) {
-      const dirPath = absPath.endsWith('/') ? absPath : absPath + '/';
-      this.addDeps(fromPath, dirPath);
-      const files = [...this.files.values()]
-        .filter(file => file.path.startsWith((dirPath)));
-      return files;
-    }
-
-    throw new Error(`Can't find file at path: ${toPath}`);
-  }
-
   realPathFor(filepath: string) {
     return path.join(this.realBase, filepath);
   }
@@ -127,90 +101,4 @@ export class Runtime {
     }
   }
 
-}
-
-class File {
-
-  module?: Module;
-
-  constructor(
-    public path: string,
-    public content: Buffer | string,
-    runtime: Runtime,
-  ) {
-    if (path.match(/\.tsx?$/)) {
-      const code = content.toString('utf8');
-      this.module = new Module(code, this.path, runtime);
-      this.content = compileTSX(code).code;
-      this.path = convertTsExts(path);
-    }
-  }
-
-}
-
-class Module {
-
-  #fn: (() => void) | undefined;
-  #exports: object | undefined;
-
-  constructor(
-    private content: string,
-    public filepath: string,
-    private runtime: Runtime,
-  ) { }
-
-  require(): any {
-    if (!this.#exports) {
-      this.#exports = Object.create(null);
-      this.#run();
-    }
-    return this.#exports;
-  }
-
-  #run() {
-    if (!this.#fn) {
-      const realFilePath = this.runtime.realPathFor(this.filepath);
-      const transformed = compileTSX(this.content, realFilePath);
-      const sourceCode = transformed.code;
-      const sourceMapBase64 = Buffer.from(JSON.stringify(transformed.sourceMap)).toString('base64url');
-      const sourceMap = `\n//# sourceMappingURL=data:application/json;base64,${sourceMapBase64}`;
-
-      this.content = sourceCode + sourceMap;
-
-      const fn = vm.compileFunction(sourceCode + sourceMap, ['require', 'exports'], {
-        filename: pathToFileURL(realFilePath).href,
-      });
-
-      const require = (toPath: string) => this.runtime.requireFromModule(toPath, this.filepath);
-      this.#fn = () => fn(require, this.#exports);
-    }
-    this.#fn();
-  }
-
-  resetExports() {
-    this.#exports = undefined;
-  }
-
-}
-
-function compileTSX(code: string, realFilePath?: string) {
-  const options: sucrase.Options = {
-    transforms: ['typescript', 'jsx'],
-    jsxRuntime: 'automatic',
-    jsxImportSource: '/core',
-    disableESTransforms: true,
-    production: true,
-  };
-  if (realFilePath) {
-    options.transforms.push('imports');
-    options.sourceMapOptions = { compiledFilename: realFilePath };
-    options.filePath = pathToFileURL(realFilePath).href;
-  }
-  const result = sucrase.transform(code, options);
-  result.code = result.code.replace(/"\/core\/jsx-runtime"/g, `"/core/jsx-transform.js"`)
-  return result;
-}
-
-function convertTsExts(path: string) {
-  return path.replace(/\.tsx?$/, '.js');
 }
