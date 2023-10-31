@@ -2,7 +2,7 @@ import { Column, Spaced } from "../../components/column.js";
 import { TypicalPage } from "../../components/page.js";
 import { Rating } from "../../components/rating.js";
 import { Typography } from "../../components/typography.js";
-import { excerpt, markdown } from "../../core/helpers.js";
+import { markdown } from "../../core/helpers.js";
 import { allCategories } from "../../model/categories.js";
 
 export default allCategories.map(cat => [`${cat.slug}.html`, <>
@@ -75,3 +75,7 @@ export default allCategories.map(cat => [`${cat.slug}.html`, <>
 
   </TypicalPage >
 </>]);
+
+function excerpt(s: string) {
+  return s.split(/\r?\n\r?\n/)[0]!;
+}

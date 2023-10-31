@@ -9,10 +9,6 @@ export const markdown = new MarkdownIt({
   breaks: true,
 });
 
-export function excerpt(s: string) {
-  return s.split(/\r?\n\r?\n/)[0]!;
-}
-
 export function sortBy<T>(fn: (o: T) => string | number) {
   return (l: T, r: T) => {
     const a = fn(l);
