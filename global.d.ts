@@ -23,7 +23,7 @@ declare module '*/' {
 }
 
 declare module 'https://cdn.jsdelivr.net/npm/markdown-it@13.0.2/+esm' {
-  import md = require('markdown-it');
+  import md = require('markdown-it/lib');
   export default md;
 }
 
