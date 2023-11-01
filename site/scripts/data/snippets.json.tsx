@@ -1,7 +1,8 @@
 import { Snippet, allSnippets } from "../../model/snippets.js";
-import { SnippetSmallerJson } from "../../shared/snippet.js";
 
-function snippetToJson(snippet: Snippet): SnippetSmallerJson {
+export type SnippetSmallerJson = ReturnType<typeof snippetToJson>;
+
+function snippetToJson(snippet: Snippet) {
   return {
     slug: snippet.slug,
     route: snippet.route,

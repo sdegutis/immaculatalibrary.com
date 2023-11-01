@@ -1,6 +1,11 @@
-import { SnippetSmallerJson } from "./snippet.js";
+type SnippetUiInfo = {
+  route: string;
+  renderedTitle: string;
+  mins: number;
+  book: { data: { title: string } };
+};
 
-export const SnippetsList: JSX.Component<{ snippets: SnippetSmallerJson[] }> = (attrs, children) => <>
+export const SnippetsList: JSX.Component<{ snippets: SnippetUiInfo[] }> = (attrs, children) => <>
   <ul>
     {attrs.snippets.map(s => <>
       <SnippetItem snippet={s} />
@@ -8,7 +13,7 @@ export const SnippetsList: JSX.Component<{ snippets: SnippetSmallerJson[] }> = (
   </ul>
 </>;
 
-export const SnippetItem: JSX.Component<{ snippet: SnippetSmallerJson }> = ({ snippet }, children) => (
+export const SnippetItem: JSX.Component<{ snippet: SnippetUiInfo }> = ({ snippet }, children) => (
   <li>
     <p>
       <a href={snippet.route}>{snippet.renderedTitle}</a>

@@ -1,5 +1,5 @@
-import { SnippetSmallerJson } from "../shared/snippet.js";
 import { SnippetItem } from "../shared/snippets.js";
+import { SnippetSmallerJson } from "./data/snippets.json.js";
 import { jsxToElement } from "./jsx-nodes.js";
 
 const snippets = await (fetch('/scripts/data/snippets.json').then(res => res.json()) as Promise<SnippetSmallerJson[]>);
