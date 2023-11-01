@@ -47,9 +47,9 @@ function termInSnippet(term: string, snippet: SnippetSmallerJson) {
 
   term = term.toLowerCase();
   return (
-    snippet.renderedTitle.toLowerCase().includes(term) ||
-    snippet.content.toLowerCase().includes(term) ||
-    snippet.book.data.author.toLowerCase().includes(term) ||
-    snippet.book.data.title.toLowerCase().includes(term)
+    snippet.title.toLowerCase().includes(term) ||
+    snippet.markdown.toLowerCase().includes(term) ||
+    snippet.bookAuthor.toLowerCase().includes(term) ||
+    snippet.bookTitle.toLowerCase().includes(term)
   );
 }

@@ -6,16 +6,12 @@ function snippetToJson(snippet: Snippet) {
   return {
     slug: snippet.slug,
     route: snippet.route,
-    renderedTitle: snippet.renderedTitle,
+    title: snippet.renderedTitle,
     mins: snippet.mins,
-    book: {
-      data: {
-        title: snippet.book.data.title,
-        author: snippet.book.data.author,
-      }
-    },
-    data: { tags: snippet.data.tags },
-    content: snippet.content,
+    bookTitle: snippet.book.data.title,
+    bookAuthor: snippet.book.data.author,
+    tags: snippet.data.tags,
+    markdown: snippet.content,
   };
 }
 

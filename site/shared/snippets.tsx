@@ -1,9 +1,20 @@
+import { Snippet } from "../model/snippets.js";
+
 type SnippetUiInfo = {
   route: string;
-  renderedTitle: string;
+  title: string;
   mins: number;
-  book: { data: { title: string } };
+  bookTitle: string;
 };
+
+export function snippetToViewable(snippet: Snippet): SnippetUiInfo {
+  return {
+    route: snippet.route,
+    title: snippet.renderedTitle,
+    mins: snippet.mins,
+    bookTitle: snippet.book.data.title,
+  };
+}
 
 export const SnippetsList: JSX.Component<{ snippets: SnippetUiInfo[] }> = (attrs, children) => <>
   <ul>
@@ -16,9 +27,9 @@ export const SnippetsList: JSX.Component<{ snippets: SnippetUiInfo[] }> = (attrs
 export const SnippetItem: JSX.Component<{ snippet: SnippetUiInfo }> = ({ snippet }, children) => (
   <li>
     <p>
-      <a href={snippet.route}>{snippet.renderedTitle}</a>
+      <a href={snippet.route}>{snippet.title}</a>
       <br />
-      {snippet.mins} min &bull; {snippet.book.data.title}
+      {snippet.mins} min &bull; {snippet.bookTitle}
     </p>
   </li>
 );
