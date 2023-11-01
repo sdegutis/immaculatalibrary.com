@@ -16,10 +16,6 @@ const searchTerm = new Reactive('');
 
 const bookFiltersContainer = document.getElementById('books-filters') as HTMLDivElement;
 
-function changeSnippetsFilter(this: HTMLInputElement) {
-  snippetsMode.set(this.value);
-}
-
 function changeStarsFilter(this: HTMLInputElement) {
   starsMode.set(this.value);
 }
@@ -30,9 +26,9 @@ bookFiltersContainer.append(jsxToElement(<>
 
   <span class='label'>snippets</span>
   <span class='radios'>
-    <label><input type='radio' name='booksearch' onclick={changeSnippetsFilter} value='both' checked />Any</label>
-    <label><input type='radio' name='booksearch' onclick={changeSnippetsFilter} value='some' />Some</label>
-    <label><input type='radio' name='booksearch' onclick={changeSnippetsFilter} value='none' />None</label>
+    <label><input type='radio' name='booksearch' onclick={() => snippetsMode.set('both')} checked />Any</label>
+    <label><input type='radio' name='booksearch' onclick={() => snippetsMode.set('some')} />Some</label>
+    <label><input type='radio' name='booksearch' onclick={() => snippetsMode.set('none')} />None</label>
   </span>
 
   <span class='label'>stars</span>
