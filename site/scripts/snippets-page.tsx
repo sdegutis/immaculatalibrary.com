@@ -2,7 +2,7 @@ import { SnippetItem } from "../shared/snippets.js";
 import { SnippetJson } from "./data/snippets.json.js";
 import { jsxToElement } from "./jsx-nodes.js";
 
-const snippets = await (fetch('/scripts/data/snippets.json').then(res => res.json()) as Promise<SnippetJson[]>);
+const snippets = await fetch('/scripts/data/snippets.json').then<SnippetJson[]>(res => res.json());
 const snippetItems = snippets.map(snippet => ({
   snippet,
   element: jsxToElement(<SnippetItem snippet={snippet} />) as HTMLLIElement
