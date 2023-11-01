@@ -6,7 +6,7 @@ import { isDev } from "../core/helpers.js";
 import { Snippet, allSnippets } from "../model/snippets.js";
 import { sortedTags } from "../model/tag.js";
 import { formatDate } from '../shared/format-date.js';
-import { SnippetsList } from "../shared/snippets.js";
+import { SnippetsList, snippetToViewable } from "../shared/snippets.js";
 
 const CopyLink: JSX.Component<{}, [JSX.Element]> = (attrs, [child]) => {
   child.attrs ??= Object.create(null);
@@ -85,7 +85,7 @@ export default allSnippets.map(snippet => {
                 <a href='#'>Random</a>
               </RandomBookSnippet>
             </p>
-            <SnippetsList snippets={allSnippets.slice(0, 7)} />
+            <SnippetsList snippets={allSnippets.slice(0, 7).map(snippetToViewable)} />
           </div>
 
         </Column>
