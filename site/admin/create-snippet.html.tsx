@@ -28,7 +28,6 @@ export default <>
     <link rel='stylesheet' href='/admin/new-book-snippet.css' />
     <MonacoClientSide />
     <script src='/admin/new-book-snippet.js' type='module'></script>
-    <script src='/scripts/darkmode.js' defer></script>
 
     <main>
       <div id='left-panel'>

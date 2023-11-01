@@ -5,7 +5,6 @@ export default <>
     <MonacoClientSide />
     <link rel='stylesheet' href='/admin/book/write.css' />
     <script src='/admin/book/write.js' type='module'></script>
-    <script src='/scripts/darkmode.js' defer></script>
 
     <main>
       <div id='saved' hidden>Saved</div>

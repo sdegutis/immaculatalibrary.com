@@ -1,26 +1,10 @@
 html {
-  font-size: 14px;
-  color: #333;
-  --border-color: #d3dde8;
-  --bold-color: #000;
-  --bgalt: #f0f0f0;
-  --post-snippet-bg: #fff;
-  --post-snippet-shadow: 0px 1px 5px #7772;
-  --blue-bg: #2af;
-  --admin-border-color: var(--blue-bg);
-  --admin-bg-color: #def;
-  --disclaimer-border-color: var(--blue-bg);
-  --disclaimer-bg-color: #def;
-
-  --input-color: #000;
-}
-
-html.dark-mode {
   color-scheme: dark;
-
+  font-size: 14px;
   background: #111;
-  --bgalt: #000;
   color: #ccc;
+
+  --bgalt: #000;
   --border-color: #2d343c;
   --bold-color: #fff;
   --post-snippet-bg: #111;
@@ -30,7 +14,6 @@ html.dark-mode {
   --admin-bg-color: #004;
   --disclaimer-border-color: var(--blue-bg);
   --disclaimer-bg-color: #004;
-
   --input-color: #fff7;
 }
 
