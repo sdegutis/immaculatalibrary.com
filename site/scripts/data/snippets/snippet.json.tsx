@@ -1,5 +1,5 @@
-import { Snippet, allSnippets } from "../../model/snippets.js";
-import { SnippetJson } from "../../shared/snippet.js";
+import { Snippet, allSnippets } from "../../../model/snippets.js";
+import { SnippetJson } from "../../../shared/snippet.js";
 
 function snippetToJson(snippet: Snippet): SnippetJson {
   return {
@@ -28,6 +28,6 @@ function derivePreview(model: { content: string }) {
     return null;
 }
 
-export default allSnippets.map(snippet => [`${snippet.slug}-preview.json`, <>
+export default allSnippets.map(snippet => [`${snippet.slug}.json`, <>
   {JSON.stringify(snippetToJson(snippet))}
 </>]);

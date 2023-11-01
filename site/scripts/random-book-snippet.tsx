@@ -31,7 +31,7 @@ async function reflectUrl() {
   const slug = window.location.hash.slice(1);
   if (!slug) return;
 
-  const snippet = await fetch(`/dynamic/snippets/${slug}-preview.json`).then(res => res.json()) as SnippetJson;
+  const snippet = await fetch(`/scripts/data/snippets/${slug}.json`).then(res => res.json()) as SnippetJson;
   const container = document.getElementById('random-book-snippet') as HTMLDivElement;
   container.innerHTML = '';
   container.append(jsxToElement(<>
