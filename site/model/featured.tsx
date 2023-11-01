@@ -3,10 +3,10 @@ import { booksBySlug } from "./books.js";
 export const featuredBooks = [
   'introduction-to-the-devout-life',
   'imitation-of-christ',
-  'st-john-henry-newman-reply-to-eirenicon',
-  'catena-aurea',
-  'the-sinners-guide',
   'the-spiritual-combat',
+  'the-sinners-guide',
+  'st-john-henry-newman-reply-to-eirenicon',
   'the-glories-of-mary',
+  'catena-aurea',
   // 'catholic-encyclopedia',
 ].map(id => booksBySlug[id]!)
