@@ -8,5 +8,5 @@ export const featuredBooks = [
   'the-sinners-guide',
   'the-spiritual-combat',
   'the-glories-of-mary',
-  'catholic-encyclopedia',
+  // 'catholic-encyclopedia',
 ].map(id => booksBySlug[id]!)
