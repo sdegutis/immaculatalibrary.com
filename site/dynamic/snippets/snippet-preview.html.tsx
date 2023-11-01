@@ -17,21 +17,15 @@ function snippetToJson(snippet: Snippet): SnippetJson {
   };
 }
 
-const PREVIEW_LENGTH = 2000;
+const PREVIEW_LINES = 30;
+const AVERAGE_LINE_LENGTH = 50;
 
 function derivePreview(model: { content: string }) {
-  const paragraphs = model.content.split(/(\r?\n>+ *\r?\n)/);
-
-  let running = 0;
-  for (let i = 0; i < paragraphs.length; i++) {
-    running += paragraphs[i]!.length;
-    if (running > PREVIEW_LENGTH) break;
-  }
-
-  if (running < model.content.length - 1) {
-    return model.content.substring(0, running);
-  }
-  return null;
+  const newline = model.content.indexOf(' ', PREVIEW_LINES * AVERAGE_LINE_LENGTH);
+  if (newline !== -1)
+    return model.content.slice(0, newline) + ' ...';
+  else
+    return null;
 }
 
 export default allSnippets.map(snippet => [`${snippet.slug}-preview.json`, <>
