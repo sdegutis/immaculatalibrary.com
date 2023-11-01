@@ -1,7 +1,7 @@
 import MarkdownIt from 'https://cdn.jsdelivr.net/npm/markdown-it@13.0.2/+esm';
 import { formatDate } from "../shared/format-date.js";
 import { mdOptions } from '../shared/markdown.js';
-import { SnippetJson } from '../shared/snippet.js';
+import { SnippetJson } from './data/snippets/snippet.json.js';
 import { jsxToElement } from './jsx-nodes.js';
 import { snippetIds } from "./snippet-ids.js";
 

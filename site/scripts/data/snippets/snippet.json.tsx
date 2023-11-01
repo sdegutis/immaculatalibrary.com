@@ -1,7 +1,6 @@
 import { Snippet, allSnippets } from "../../../model/snippets.js";
-import { SnippetJson } from "../../../shared/snippet.js";
 
-function snippetToJson(snippet: Snippet): SnippetJson {
+function snippetToJson(snippet: Snippet) {
   return {
     route: snippet.route,
     renderedTitle: snippet.renderedTitle,
@@ -16,6 +15,8 @@ function snippetToJson(snippet: Snippet): SnippetJson {
     renderedBody: snippet.renderedBody,
   };
 }
+
+export type SnippetJson = ReturnType<typeof snippetToJson>;
 
 const PREVIEW_LINES = 30;
 const AVERAGE_LINE_LENGTH = 50;
