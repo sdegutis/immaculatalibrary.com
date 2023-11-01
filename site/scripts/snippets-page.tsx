@@ -1,8 +1,8 @@
 import { SnippetItem } from "../shared/snippets.js";
-import { SnippetSmallerJson } from "./data/snippets.json.js";
+import { SnippetJson } from "./data/snippets.json.js";
 import { jsxToElement } from "./jsx-nodes.js";
 
-const snippets = await (fetch('/scripts/data/snippets.json').then(res => res.json()) as Promise<SnippetSmallerJson[]>);
+const snippets = await (fetch('/scripts/data/snippets.json').then(res => res.json()) as Promise<SnippetJson[]>);
 const snippetItems = snippets.map(snippet => ({
   snippet,
   element: jsxToElement(<SnippetItem snippet={snippet} />) as HTMLLIElement
@@ -42,7 +42,7 @@ function updateCount() {
   return count;
 }
 
-function termInSnippet(term: string, snippet: SnippetSmallerJson) {
+function termInSnippet(term: string, snippet: SnippetJson) {
   if (!term) return true;
 
   term = term.toLowerCase();

@@ -1,6 +1,6 @@
 import { Snippet, allSnippets } from "../../model/snippets.js";
 
-export type SnippetSmallerJson = ReturnType<typeof snippetToJson>;
+export type SnippetJson = ReturnType<typeof snippetToJson>;
 
 function snippetToJson(snippet: Snippet) {
   return {
