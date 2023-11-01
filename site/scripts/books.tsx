@@ -16,11 +16,17 @@ const searchTerm = new Reactive('');
 
 const bookFiltersContainer = document.getElementById('books-filters') as HTMLDivElement;
 
-const starInputs = Array(5).fill('').map((_, i) => ({
-  input: jsxToElement(<input type='radio' name='bookstars' onclick={() => starsMode.set((i + 1).toFixed())} />),
-  rating: jsxToElement(<RatingStar />) as SVGElement,
-  num: i + 1,
-}));
+const starInputs = Array(5).fill('').map((_, i) => {
+  const input = jsxToElement(<input type='radio' name='bookstars' onclick={() => starsMode.set(num.toFixed())} />);
+  const star = jsxToElement(<RatingStar />) as SVGElement;
+  const num = i + 1;
+
+  starsMode.onChange(() => {
+    star.classList.toggle('lit', +starsMode.val >= num);
+  });
+
+  return { input, star, num };
+});
 
 bookFiltersContainer.append(jsxToElement(<>
 
@@ -36,7 +42,7 @@ bookFiltersContainer.append(jsxToElement(<>
     <label><input type='radio' name='bookstars' onclick={() => starsMode.set('any')} checked />Any</label>
     <label><input type='radio' name='bookstars' onclick={() => starsMode.set('0')} />Unrated</label>
     {starInputs.map(star => <>
-      <label>{star.input}{star.rating}</label>
+      <label>{star.input}{star.star}</label>
     </>)}
   </span>
 
@@ -61,7 +67,6 @@ for (const book of books) {
 }
 
 Reactive.link(searchBooks, [searchTerm, snippetsMode, starsMode]);
-Reactive.link(updateStars, [starsMode]);
 
 searchBooks();
 
@@ -76,12 +81,6 @@ function meetsSnippetsFilter(book: BookJson) {
 function meetsStarsFilter(book: BookJson) {
   if (starsMode.val === 'any') return true;
   return book.stars === +starsMode.val;
-}
-
-function updateStars() {
-  for (const star of starInputs) {
-    star.rating.classList.toggle('lit', +starsMode.val >= star.num);
-  }
 }
 
 function textInBook(book: BookJson, term: string) {
