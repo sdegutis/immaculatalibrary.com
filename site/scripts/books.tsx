@@ -16,37 +16,11 @@ const searchTerm = new Reactive('');
 
 const bookFiltersContainer = document.getElementById('books-filters') as HTMLDivElement;
 
-function changeStarsFilter(this: HTMLInputElement) {
-  starsMode.set(this.value);
-}
-
-const starInputs = [
-  {
-    input: jsxToElement(<input type='radio' name='bookstars' onclick={() => starsMode.set('1')} />),
-    rating: jsxToElement(<RatingStar />) as SVGElement,
-    num: 1,
-  },
-  {
-    input: jsxToElement(<input type='radio' name='bookstars' onclick={() => starsMode.set('2')} />),
-    rating: jsxToElement(<RatingStar />) as SVGElement,
-    num: 2,
-  },
-  {
-    input: jsxToElement(<input type='radio' name='bookstars' onclick={() => starsMode.set('3')} />),
-    rating: jsxToElement(<RatingStar />) as SVGElement,
-    num: 3,
-  },
-  {
-    input: jsxToElement(<input type='radio' name='bookstars' onclick={() => starsMode.set('4')} />),
-    rating: jsxToElement(<RatingStar />) as SVGElement,
-    num: 4,
-  },
-  {
-    input: jsxToElement(<input type='radio' name='bookstars' onclick={() => starsMode.set('5')} />),
-    rating: jsxToElement(<RatingStar />) as SVGElement,
-    num: 5,
-  },
-];
+const starInputs = Array(5).fill('').map((_, i) => ({
+  input: jsxToElement(<input type='radio' name='bookstars' onclick={() => starsMode.set((i + 1).toFixed())} />),
+  rating: jsxToElement(<RatingStar />) as SVGElement,
+  num: i + 1,
+}));
 
 bookFiltersContainer.append(jsxToElement(<>
 
@@ -59,8 +33,8 @@ bookFiltersContainer.append(jsxToElement(<>
 
   <span class='label'>stars</span>
   <span class='radios'>
-    <label><input type='radio' name='bookstars' onclick={changeStarsFilter} value='any' checked />Any</label>
-    <label><input type='radio' name='bookstars' onclick={changeStarsFilter} value='0' />Unrated</label>
+    <label><input type='radio' name='bookstars' onclick={() => starsMode.set('any')} checked />Any</label>
+    <label><input type='radio' name='bookstars' onclick={() => starsMode.set('0')} />Unrated</label>
     {starInputs.map(star => <>
       <label>{star.input}{star.rating}</label>
     </>)}
