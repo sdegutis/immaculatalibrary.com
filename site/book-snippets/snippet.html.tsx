@@ -8,16 +8,6 @@ import { sortedTags } from "../model/tag.js";
 import { formatDate } from '../shared/format-date.js';
 import { SnippetsList, snippetToViewable } from "../shared/snippets.js";
 
-const CopyLink: JSX.Component<{}, [JSX.Element]> = (attrs, [child]) => {
-  child.attrs ??= Object.create(null);
-  child.attrs!["class"] ??= '';
-  child.attrs!["class"] += ' copylink';
-  return <>
-    <script type='module' src='/scripts/copylink.js' />
-    {child}
-  </>;
-};
-
 export default allSnippets.map(snippet => {
   const singleFile = snippet.book.data.files.length === 1;
   const specificBookName = (!singleFile && snippet.book.data.files
@@ -37,7 +27,6 @@ export default allSnippets.map(snippet => {
 
             <h2>{snippet.renderedTitle}</h2>
             <p>{snippet.mins} min &bull; Digitized on {formatDate(snippet.date)}</p>
-            {/* <p><CopyLink><a href={`/_/${snippet.shortLink}.html`}>Copy link</a></CopyLink></p> */}
 
             {isDev && <>
               <div style="border: 1px solid var(--admin-border-color); background-color: var(--admin-bg-color); padding: 1em;">
