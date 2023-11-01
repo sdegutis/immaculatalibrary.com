@@ -17,7 +17,7 @@ const books = booksData.map(data => ({
   data: data,
   element: jsxToElement(
     <li>
-      <p><a className="link" href={data.route}>{data.title}</a><br /> {data.author}</p>
+      <p><a href={data.route}>{data.title}</a><br /> {data.author}</p>
     </li>
   ) as HTMLLIElement,
 }));
