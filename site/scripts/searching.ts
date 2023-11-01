@@ -16,7 +16,9 @@ export class Reactive<T> {
 
   set(val: T) {
     this.val = val;
-    for (const fn of this.#fns) fn();
+    for (const fn of this.#fns) {
+      fn();
+    }
   }
 
 }
