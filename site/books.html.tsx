@@ -1,7 +1,6 @@
 import { Column, Spaced } from './components/column.js';
 import { TypicalPage } from './components/page.js';
 import { RatingStar } from './components/rating.js';
-import { allBooks } from './model/books.js';
 
 export default <>
   <TypicalPage title='Books' image='/img/categories/reference-big.jpg'>
@@ -53,17 +52,6 @@ export default <>
           <h2>Showing <span id='bookscount' /> books</h2>
 
           <ul id="books-all">
-            {allBooks.map(book => {
-              const classes = [];
-              if (book.snippets.length === 0) classes.push('empty');
-              classes.push(`stars-${book.data.rating}`);
-
-              return <>
-                <li class={classes.join(' ')}>
-                  <p><a class="link" href={book.route}>{book.data.title}</a><br /> {book.data.author}</p>
-                </li>
-              </>;
-            })}
           </ul>
 
           <span hidden id="no-books-found" style="font-style: italic">

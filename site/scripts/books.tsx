@@ -1,4 +1,8 @@
+import { BookJson } from "./data/books.json.js";
+import { jsxToElement } from "./jsx-nodes.js";
 import { Reactive } from "./searching.js";
+
+const books = await fetch('/scripts/data/books.json').then<BookJson[]>(res => res.json());
 
 const booksList = document.getElementById('books-all')!;
 const notFound = document.getElementById('no-books-found')!;
@@ -7,6 +11,18 @@ const searchBooksInput = document.getElementById('search-books-input')!;
 const snippetsMode = new Reactive('both');
 const starsMode = new Reactive('any');
 const searchTerm = new Reactive('');
+
+for (const book of books) {
+  const classes = [];
+  if (book.empty) classes.push('empty');
+  classes.push(`stars-${book.stars}`);
+
+  booksList.append(jsxToElement(<>
+    <li className={classes.join(' ')}>
+      <p><a className="link" href={book.route}>{book.title}</a><br /> {book.author}</p>
+    </li>
+  </>));
+}
 
 Reactive.link(searchBooks, [searchTerm, snippetsMode, starsMode]);
 Reactive.link(updateStars, [starsMode]);
