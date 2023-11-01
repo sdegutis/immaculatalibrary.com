@@ -1,6 +1,6 @@
 declare module JSX {
   export type IntrinsicElements = {
-    [tag: string]: Record<string, string | boolean>;
+    [tag: string]: Record<string, string | boolean | Function>;
   };
   export type Element = {
     jsx: true,

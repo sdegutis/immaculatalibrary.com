@@ -1,3 +1,4 @@
+import { RatingStar } from "../shared/rating.js";
 import { BookJson } from "./data/books.json.js";
 import { jsxToElement } from "./jsx-nodes.js";
 import { Reactive } from "./searching.js";
@@ -12,6 +13,43 @@ const searchBooksInput = document.getElementById('search-books-input')!;
 const snippetsMode = new Reactive('both');
 const starsMode = new Reactive('any');
 const searchTerm = new Reactive('');
+
+const bookFiltersContainer = document.getElementById('books-filters') as HTMLDivElement;
+
+function changeSnippetsFilter(this: HTMLInputElement) {
+  snippetsMode.set(this.value);
+}
+
+function changeStarsFilter(this: HTMLInputElement) {
+  starsMode.set(this.value);
+}
+
+
+
+bookFiltersContainer.append(jsxToElement(<>
+
+  <span class='label'>snippets</span>
+  <span class='radios'>
+    <label><input type='radio' name='booksearch' onclick={changeSnippetsFilter} value='both' checked />Any</label>
+    <label><input type='radio' name='booksearch' onclick={changeSnippetsFilter} value='some' />Some</label>
+    <label><input type='radio' name='booksearch' onclick={changeSnippetsFilter} value='none' />None</label>
+  </span>
+
+  <span class='label'>stars</span>
+  <span class='radios'>
+    <label><input type='radio' name='bookstars' onclick={changeStarsFilter} value='any' checked />Any</label>
+    <label><input type='radio' name='bookstars' onclick={changeStarsFilter} value='0' />Unrated</label>
+    <label><input type='radio' name='bookstars' onclick={changeStarsFilter} value='1' /><RatingStar /></label>
+    <label><input type='radio' name='bookstars' onclick={changeStarsFilter} value='2' /><RatingStar /></label>
+    <label><input type='radio' name='bookstars' onclick={changeStarsFilter} value='3' /><RatingStar /></label>
+    <label><input type='radio' name='bookstars' onclick={changeStarsFilter} value='4' /><RatingStar /></label>
+    <label><input type='radio' name='bookstars' onclick={changeStarsFilter} value='5' /><RatingStar /></label>
+  </span>
+
+</>));
+
+
+
 
 const books = booksData.map(data => ({
   data: data,
@@ -84,15 +122,3 @@ document.getElementById('random-book-button')!.onclick = (e) => {
   const a = as[i]!;
   (e.target as HTMLAnchorElement).href = a.href;
 };
-
-for (const radio of document.querySelectorAll('input[name=booksearch]')) {
-  radio.addEventListener('change', (e) => {
-    snippetsMode.set((e.target as HTMLInputElement).value);
-  });
-}
-
-for (const radio of document.querySelectorAll('input[name=bookstars]')) {
-  radio.addEventListener('change', (e) => {
-    starsMode.set((e.target as HTMLInputElement).value);
-  });
-}

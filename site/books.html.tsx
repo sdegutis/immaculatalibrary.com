@@ -1,6 +1,5 @@
 import { Column, Spaced } from './components/column.js';
 import { TypicalPage } from './components/page.js';
-import { RatingStar } from './components/rating.js';
 
 export default <>
   <TypicalPage title='Books' image='/img/categories/reference-big.jpg'>
@@ -19,25 +18,6 @@ export default <>
           </p>
 
           <div id='books-filters'>
-
-            <span class='label'>snippets</span>
-            <span class='radios'>
-              <label><input type='radio' name='booksearch' value='both' checked />Any</label>
-              <label><input type='radio' name='booksearch' value='some' />Some</label>
-              <label><input type='radio' name='booksearch' value='none' />None</label>
-            </span>
-
-            <span class='label'>stars</span>
-            <span class='radios'>
-              <label><input type='radio' name='bookstars' value='any' checked />Any</label>
-              <label><input type='radio' name='bookstars' value='0' />Unrated</label>
-              <label><input type='radio' name='bookstars' value='1' /><RatingStar /></label>
-              <label><input type='radio' name='bookstars' value='2' /><RatingStar /></label>
-              <label><input type='radio' name='bookstars' value='3' /><RatingStar /></label>
-              <label><input type='radio' name='bookstars' value='4' /><RatingStar /></label>
-              <label><input type='radio' name='bookstars' value='5' /><RatingStar /></label>
-            </span>
-
           </div>
 
           <hr />
