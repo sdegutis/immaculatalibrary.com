@@ -13,6 +13,14 @@ const searchBooksInput = document.getElementById('search-books-input')!;
 const snippetsMode = new Reactive('both');
 const starsMode = new Reactive('any');
 const searchTerm = new Reactive('');
+const visibleBooks = new Reactive<typeof books>([]);
+
+visibleBooks.onChange(() => {
+  const howMany = visibleBooks.val.length;
+
+  notFound.hidden = howMany !== 0;
+  document.getElementById('bookscount')!.textContent = howMany.toFixed();
+});
 
 const bookFiltersContainer = document.getElementById('books-filters') as HTMLDivElement;
 
@@ -51,16 +59,21 @@ bookFiltersContainer.append(jsxToElement(<>
 </>));
 
 
-
-
-const books = booksData.map(data => ({
-  data: data,
-  element: jsxToElement(
+const books = booksData.map(data => {
+  const element = jsxToElement(
     <li>
       <p><a href={data.route}>{data.title}</a><br /> {data.author}</p>
     </li>
-  ) as HTMLLIElement,
-}));
+  ) as HTMLLIElement;
+
+  const book = { data, element };
+
+  visibleBooks.onChange(() => {
+    element.hidden = !visibleBooks.val.includes(book);
+  });
+
+  return book;
+});
 
 container.innerHTML = '';
 container.append(booksList);
@@ -97,17 +110,11 @@ function searchBooks() {
     .trim()
     .toLowerCase();
 
-  for (const book of books) {
-    book.element.hidden = (
-      !meetsSnippetsFilter(book.data) ||
-      !meetsStarsFilter(book.data) ||
-      !textInBook(book.data, searchString)
-    );
-  }
-
-  const visibleBooks = booksList.querySelectorAll('li:not([hidden])').length;
-  notFound.hidden = (visibleBooks > 0);
-  document.getElementById('bookscount')!.textContent = visibleBooks.toFixed();
+  visibleBooks.set(books.filter(book => !(
+    !meetsSnippetsFilter(book.data) ||
+    !meetsStarsFilter(book.data) ||
+    !textInBook(book.data, searchString)
+  )));
 }
 
 document.getElementById('random-book-button')!.onclick = (e) => {
