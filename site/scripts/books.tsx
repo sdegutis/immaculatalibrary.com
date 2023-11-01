@@ -2,7 +2,7 @@ import { BookJson } from "./data/books.json.js";
 import { jsxToElement } from "./jsx-nodes.js";
 import { Reactive } from "./searching.js";
 
-const books = await fetch('/scripts/data/books.json').then<BookJson[]>(res => res.json());
+const booksData = await fetch('/scripts/data/books.json').then<BookJson[]>(res => res.json());
 
 const booksList = document.getElementById('books-all')!;
 const notFound = document.getElementById('no-books-found')!;
@@ -12,16 +12,17 @@ const snippetsMode = new Reactive('both');
 const starsMode = new Reactive('any');
 const searchTerm = new Reactive('');
 
-for (const book of books) {
-  const classes = [];
-  if (book.empty) classes.push('empty');
-  classes.push(`stars-${book.stars}`);
-
-  booksList.append(jsxToElement(<>
-    <li className={classes.join(' ')}>
-      <p><a className="link" href={book.route}>{book.title}</a><br /> {book.author}</p>
+const books = booksData.map(data => ({
+  data: data,
+  element: jsxToElement(
+    <li>
+      <p><a className="link" href={data.route}>{data.title}</a><br /> {data.author}</p>
     </li>
-  </>));
+  ) as HTMLLIElement,
+}));
+
+for (const book of books) {
+  booksList.append(book.element);
 }
 
 Reactive.link(searchBooks, [searchTerm, snippetsMode, starsMode]);
@@ -31,15 +32,15 @@ searchBooks();
 
 searchBooksInput.oninput = (e) => { searchTerm.set((e.target as HTMLInputElement).value); };
 
-function meetsSnippetsFilter(li: HTMLLIElement) {
-  if (snippetsMode.val === 'none') return li.classList.contains('empty');
-  if (snippetsMode.val === 'some') return !li.classList.contains('empty');
+function meetsSnippetsFilter(book: BookJson) {
+  if (snippetsMode.val === 'none') return book.empty;
+  if (snippetsMode.val === 'some') return !book.empty;
   return true;
 }
 
-function meetsStarsFilter(li: HTMLLIElement) {
+function meetsStarsFilter(book: BookJson) {
   if (starsMode.val === 'any') return true;
-  return li.classList.contains(`stars-${starsMode.val}`);
+  return book.stars === +starsMode.val;
 }
 
 function updateStars() {
@@ -48,19 +49,23 @@ function updateStars() {
   }
 }
 
+function textInBook(book: BookJson, term: string) {
+  return (
+    book.author.toLowerCase().includes(term) ||
+    book.title.toLowerCase().includes(term)
+  );
+}
+
 function searchBooks() {
   const searchString = searchTerm.val
     .trim()
     .toLowerCase();
 
-  for (const li of booksList.querySelectorAll('li')) {
-    li.hidden = (
-      !meetsSnippetsFilter(li) ||
-      !meetsStarsFilter(li) ||
-      (!li
-        .innerText
-        .toLowerCase()
-        .includes(searchString))
+  for (const book of books) {
+    book.element.hidden = (
+      !meetsSnippetsFilter(book.data) ||
+      !meetsStarsFilter(book.data) ||
+      !textInBook(book.data, searchString)
     );
   }
 
