@@ -50,7 +50,7 @@ export default <>
 
         <div>
 
-          <h2>Showing <span id='bookscount'>0</span> books</h2>
+          <h2>Showing <span id='bookscount' /> books</h2>
 
           <ul id="books-all">
             {allBooks.map(book => {
