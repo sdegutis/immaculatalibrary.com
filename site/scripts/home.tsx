@@ -43,7 +43,7 @@ async function reflectUrl() {
       <br />
       <small>By {snippet.bookAuthor}</small>
     </p>
-    <div className='rendered-preview'>
+    <div>
       {snippet.previewMarkdown
         ? <>
           <div innerHTML={markdown.render(snippet.previewMarkdown)} />
