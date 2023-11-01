@@ -1,20 +1,8 @@
+import { Reactive } from "./searching.js";
+
 const booksList = document.getElementById('books-all')!;
 const notFound = document.getElementById('no-books-found')!;
 const searchBooksInput = document.getElementById('search-books-input')!;
-
-class Reactive<T> {
-  static link<T>(fn: () => void, deps: Reactive<T>[]) {
-    for (const dep of deps) dep.onChange(fn);
-  }
-  fns: (() => void)[] = [];
-  val: T;
-  constructor(init: T) { this.val = init; }
-  onChange(fn: () => void) { this.fns.push(fn); }
-  set(val: T) {
-    this.val = val;
-    for (const fn of this.fns) fn();
-  }
-}
 
 const snippetsMode = new Reactive('both');
 const starsMode = new Reactive('any');
