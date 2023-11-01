@@ -1,8 +1,8 @@
-import { SnippetSmallerJson } from "../dynamic/snippets/snippet.js";
+import { SnippetSmallerJson } from "../shared/snippet.js";
 import { SnippetItem } from "../shared/snippets.js";
 import { jsxToElement } from "./jsx-nodes.js";
 
-const snippets = await (fetch('/dynamic/snippets.json').then(res => res.json()) as Promise<SnippetSmallerJson[]>);
+const snippets = await (fetch('/scripts/data/snippets.json').then(res => res.json()) as Promise<SnippetSmallerJson[]>);
 const snippetItems = snippets.map(snippet => ({
   snippet,
   element: jsxToElement(<SnippetItem snippet={snippet} />) as HTMLLIElement

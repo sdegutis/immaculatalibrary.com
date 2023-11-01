@@ -1,4 +1,4 @@
-import { SnippetSmallerJson } from "../dynamic/snippets/snippet.js";
+import { SnippetSmallerJson } from "./snippet.js";
 
 export const SnippetsList: JSX.Component<{ snippets: SnippetSmallerJson[] }> = (attrs, children) => <>
   <ul>

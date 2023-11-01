@@ -1,5 +1,5 @@
 import { Snippet, allSnippets } from "../../model/snippets.js";
-import { SnippetJson } from "./snippet.js";
+import { SnippetJson } from "../../shared/snippet.js";
 
 function snippetToJson(snippet: Snippet): SnippetJson {
   return {
