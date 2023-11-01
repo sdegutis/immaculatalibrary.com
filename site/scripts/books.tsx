@@ -4,7 +4,8 @@ import { Reactive } from "./searching.js";
 
 const booksData = await fetch('/scripts/data/books.json').then<BookJson[]>(res => res.json());
 
-const booksList = document.getElementById('books-all')!;
+const container = document.getElementById('search-results') as HTMLDivElement;
+const booksList = jsxToElement(<ul id="books-all" />) as HTMLUListElement;
 const notFound = document.getElementById('no-books-found')!;
 const searchBooksInput = document.getElementById('search-books-input')!;
 
@@ -21,6 +22,8 @@ const books = booksData.map(data => ({
   ) as HTMLLIElement,
 }));
 
+container.innerHTML = '';
+container.append(booksList);
 for (const book of books) {
   booksList.append(book.element);
 }

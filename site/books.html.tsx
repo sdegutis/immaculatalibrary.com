@@ -51,8 +51,9 @@ export default <>
 
           <h2>Showing <span id='bookscount' /> books</h2>
 
-          <ul id="books-all">
-          </ul>
+          <div id='search-results'>
+            <p><em>Loading...</em></p>
+          </div>
 
           <span hidden id="no-books-found" style="font-style: italic">
             No results
