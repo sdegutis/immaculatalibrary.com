@@ -1,24 +1,38 @@
 function pushChildren(el: HTMLElement | SVGElement | DocumentFragment, children: any[]) {
+  const added: (HTMLElement | SVGElement | DocumentFragment)[] = [];
   for (const child of children) {
     if (Array.isArray(child)) {
-      pushChildren(el, child);
+      added.push(...pushChildren(el, child));
     }
     else if (child && child.jsx) {
-      el.append(jsxToElement(child));
+      const childEl = jsxToElement(child);
+      if (childEl.nodeName === 'LINK') {
+        document.head.append(childEl);
+      }
+      else {
+        el.append(childEl);
+        added.push(childEl);
+      }
     }
     else if (!child) {
       // skip
     }
     else {
       el.append(child);
+      added.push(child);
     }
   }
+  return added;
 }
 
 export function jsxToElement(jsx: JSX.Element) {
   if (jsx.tag === '') {
     const el = document.createDocumentFragment();
-    pushChildren(el, jsx.children);
+    const added = pushChildren(el, jsx.children);
+    if (added.length === 1) {
+      const onlyChild = added[0]!;
+      return onlyChild;
+    }
     return el;
   }
 

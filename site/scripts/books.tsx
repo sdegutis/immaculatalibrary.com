@@ -20,7 +20,33 @@ function changeStarsFilter(this: HTMLInputElement) {
   starsMode.set(this.value);
 }
 
-
+const starInputs = [
+  {
+    input: jsxToElement(<input type='radio' name='bookstars' onclick={() => starsMode.set('1')} />),
+    rating: jsxToElement(<RatingStar />) as SVGElement,
+    num: 1,
+  },
+  {
+    input: jsxToElement(<input type='radio' name='bookstars' onclick={() => starsMode.set('2')} />),
+    rating: jsxToElement(<RatingStar />) as SVGElement,
+    num: 2,
+  },
+  {
+    input: jsxToElement(<input type='radio' name='bookstars' onclick={() => starsMode.set('3')} />),
+    rating: jsxToElement(<RatingStar />) as SVGElement,
+    num: 3,
+  },
+  {
+    input: jsxToElement(<input type='radio' name='bookstars' onclick={() => starsMode.set('4')} />),
+    rating: jsxToElement(<RatingStar />) as SVGElement,
+    num: 4,
+  },
+  {
+    input: jsxToElement(<input type='radio' name='bookstars' onclick={() => starsMode.set('5')} />),
+    rating: jsxToElement(<RatingStar />) as SVGElement,
+    num: 5,
+  },
+];
 
 bookFiltersContainer.append(jsxToElement(<>
 
@@ -35,11 +61,9 @@ bookFiltersContainer.append(jsxToElement(<>
   <span class='radios'>
     <label><input type='radio' name='bookstars' onclick={changeStarsFilter} value='any' checked />Any</label>
     <label><input type='radio' name='bookstars' onclick={changeStarsFilter} value='0' />Unrated</label>
-    <label><input type='radio' name='bookstars' onclick={changeStarsFilter} value='1' /><RatingStar /></label>
-    <label><input type='radio' name='bookstars' onclick={changeStarsFilter} value='2' /><RatingStar /></label>
-    <label><input type='radio' name='bookstars' onclick={changeStarsFilter} value='3' /><RatingStar /></label>
-    <label><input type='radio' name='bookstars' onclick={changeStarsFilter} value='4' /><RatingStar /></label>
-    <label><input type='radio' name='bookstars' onclick={changeStarsFilter} value='5' /><RatingStar /></label>
+    {starInputs.map(star => <>
+      <label>{star.input}{star.rating}</label>
+    </>)}
   </span>
 
 </>));
@@ -81,8 +105,8 @@ function meetsStarsFilter(book: BookJson) {
 }
 
 function updateStars() {
-  for (const radio of document.querySelectorAll<HTMLInputElement>('input[name=bookstars]')) {
-    radio.nextElementSibling?.classList.toggle('lit', +starsMode.val >= +radio.value);
+  for (const star of starInputs) {
+    star.rating.classList.toggle('lit', +starsMode.val >= star.num);
   }
 }
 
