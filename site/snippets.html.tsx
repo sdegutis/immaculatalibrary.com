@@ -2,13 +2,6 @@ import { Column, Spaced } from "./components/column.js";
 import { LoadingItem } from "./components/loading.js";
 import { TypicalPage } from "./components/page.js";
 import { RandomBookSnippet } from "./components/random-snippet.js";
-import { allSnippets } from "./model/snippets.js";
-import { calculateReadingMins } from './shared/helpers.js';
-
-const totalReadingMins = calculateReadingMins(allSnippets.map(s => s.content).join('\n\n'));
-const mins = Math.round(totalReadingMins % 60);
-const hours = Math.floor(totalReadingMins / 60);
-const totalReadingTime = `${hours}h ${mins}m`;
 
 export default <>
   <TypicalPage title="Book Snippets" image='/img/categories/reference-big.jpg'>
