@@ -91,9 +91,8 @@ const textFilter: SearchFilter<BookJson> = {
 
 
 
-const { results } = createSearch({
+const { results, visibleCount } = createSearch({
   data: books,
-  counter: document.getElementById('search-count')!,
   Item: ({ item: book }) => (
     <li>
       <p><a href={book.route}>{book.title}</a><br /> {book.author}</p>
@@ -107,3 +106,7 @@ const { results } = createSearch({
 });
 
 document.getElementById('search-results')!.replaceChildren(results);
+
+visibleCount.onChange(() => {
+  document.getElementById('search-count')!.textContent = visibleCount.val.toFixed();
+});
