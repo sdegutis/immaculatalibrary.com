@@ -10,7 +10,6 @@ const booksList = jsxToElement(<ul id="books-all" />) as HTMLUListElement;
 const notFound = jsxToElement(<em>No results</em>) as HTMLElement;
 const searchBooksInput = document.getElementById('search-books-input')!;
 
-const starsMode = new Reactive('any');
 const visibleBooks = new Reactive<typeof books>([]);
 const visibleBookCount = new Reactive(0);
 
@@ -23,6 +22,10 @@ visibleBookCount.onChange(() => {
   document.getElementById('bookscount')!.textContent = visibleBookCount.val.toFixed();
 });
 
+
+
+const starsMode = new Reactive('any');
+
 const starInputs = Array(5).fill('').map((_, i) => {
   const star = jsxToElement(<RatingStar />) as SVGElement;
   const num = i + 1;
@@ -34,18 +37,41 @@ const starInputs = Array(5).fill('').map((_, i) => {
   return { star, num };
 });
 
+const starFilterUi = jsxToElement(<>
+  <span class='label'>stars</span>
+  <span class='radios'>
+    <label><input type='radio' name='bookstars' onclick={() => starsMode.set('any')} checked />Any</label>
+    <label><input type='radio' name='bookstars' onclick={() => starsMode.set('0')} />Unrated</label>
+    {starInputs.map(star => <>
+      <label>
+        <input type='radio' name='bookstars' onclick={() => starsMode.set(star.num.toFixed())} />
+        {star.star}
+      </label>
+    </>)}
+  </span>
+</>);
+
+starsMode.onChange(searchBooks);
+
+function meetsStarsFilter(book: BookJson) {
+  if (starsMode.val === 'any') return true;
+  return book.stars === +starsMode.val;
+}
+
+
+
 
 
 const snippetsMode = new Reactive('both');
 
-const snippetsFilterUi = <>
+const snippetsFilterUi = jsxToElement(<>
   <span class='label'>snippets</span>
   <span class='radios'>
     <label><input type='radio' name='booksearch' onclick={() => snippetsMode.set('both')} checked />Any</label>
     <label><input type='radio' name='booksearch' onclick={() => snippetsMode.set('some')} />Some</label>
     <label><input type='radio' name='booksearch' onclick={() => snippetsMode.set('none')} />None</label>
   </span>
-</>;
+</>);
 
 snippetsMode.onChange(searchBooks);
 
@@ -59,23 +85,8 @@ function meetsSnippetsFilter(book: BookJson) {
 
 
 const bookFiltersContainer = document.getElementById('books-filters') as HTMLDivElement;
-bookFiltersContainer.append(jsxToElement(<>
-
-  {snippetsFilterUi}
-
-  <span class='label'>stars</span>
-  <span class='radios'>
-    <label><input type='radio' name='bookstars' onclick={() => starsMode.set('any')} checked />Any</label>
-    <label><input type='radio' name='bookstars' onclick={() => starsMode.set('0')} />Unrated</label>
-    {starInputs.map(star => <>
-      <label>
-        <input type='radio' name='bookstars' onclick={() => starsMode.set(star.num.toFixed())} />
-        {star.star}
-      </label>
-    </>)}
-  </span>
-
-</>));
+bookFiltersContainer.append(snippetsFilterUi);
+bookFiltersContainer.append(starFilterUi);
 
 
 const books = booksData.map(data => {
@@ -120,14 +131,7 @@ function textInBook(book: BookJson) {
 
 
 
-starsMode.onChange(searchBooks);
-
 searchBooks();
-
-function meetsStarsFilter(book: BookJson) {
-  if (starsMode.val === 'any') return true;
-  return book.stars === +starsMode.val;
-}
 
 function searchBooks() {
   visibleBooks.set(books.filter(book => !(
