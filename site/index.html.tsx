@@ -1,4 +1,5 @@
 import { Column, Spaced } from "./components/column.js";
+import { LoadingItem } from "./components/loading.js";
 import { Navlinks } from "./components/navlinks.js";
 import { EmptyPage } from "./components/page.js";
 import { QuickLinks } from "./components/quicklinks.js";
@@ -51,7 +52,13 @@ export default <>
               </p>
               <Typography>
                 <div id="random-book-snippet">
-                  <p><em>Loading...</em></p>
+                  <LoadingItem lines={7} />
+                  <LoadingItem lines={7} />
+                  <LoadingItem lines={7} />
+                  <LoadingItem lines={7} />
+                  <LoadingItem lines={7} />
+                  <LoadingItem lines={7} />
+                  <LoadingItem lines={7} />
                 </div>
               </Typography>
             </div>
