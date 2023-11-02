@@ -93,16 +93,12 @@ const textFilter: SearchFilter<BookJson> = {
 
 const { results, visibleCount } = createSearch({
   data: books,
+  filters: [snippetsFilter, starsFilter, textFilter],
   Item: ({ item: book }) => (
     <li>
       <p><a href={book.route}>{book.title}</a><br /> {book.author}</p>
     </li>
   ),
-  filters: [
-    snippetsFilter,
-    starsFilter,
-    textFilter,
-  ],
 });
 
 document.getElementById('search-results')!.replaceChildren(results);
