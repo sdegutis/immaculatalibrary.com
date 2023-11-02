@@ -52,14 +52,7 @@ export function createSearch<T>({ data, Item, filters, container, counter }: {
   </>));
 
   const search = () => {
-    visibleItems.set(data.filter(item => {
-      for (const filter of filters) {
-        if (!filter.matches(item)) {
-          return false;
-        }
-      }
-      return true;
-    }));
+    visibleItems.set(data.filter(item => filters.every(filter => filter.matches(item))));
   };
 
   for (const filter of filters) {
