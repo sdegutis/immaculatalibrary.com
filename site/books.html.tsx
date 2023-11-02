@@ -1,4 +1,5 @@
 import { Column, Spaced } from './components/column.js';
+import { LoadingItem } from './components/loading.js';
 import { TypicalPage } from './components/page.js';
 
 export default <>
@@ -32,7 +33,15 @@ export default <>
           <h2>Showing <span id='bookscount' /> books</h2>
 
           <div id='search-results'>
-            <p><em>Loading...</em></p>
+            <ul>
+              <li><LoadingItem lines={3} /></li>
+              <li><LoadingItem lines={3} /></li>
+              <li><LoadingItem lines={3} /></li>
+              <li><LoadingItem lines={3} /></li>
+              <li><LoadingItem lines={3} /></li>
+              <li><LoadingItem lines={3} /></li>
+              <li><LoadingItem lines={3} /></li>
+            </ul>
           </div>
 
           <span hidden id="no-books-found" style="font-style: italic">

@@ -1,4 +1,5 @@
 import { Column, Spaced } from "./components/column.js";
+import { LoadingItem } from "./components/loading.js";
 import { TypicalPage } from "./components/page.js";
 import { RandomBookSnippet } from "./components/random-snippet.js";
 import { allSnippets } from "./model/snippets.js";
@@ -37,7 +38,15 @@ export default <>
           <h2>Showing <span id='showing-snippet-count' /> book snippets</h2>
 
           <div id='search-results'>
-            <p><em>Loading...</em></p>
+            <ul>
+              <li><LoadingItem lines={4} /></li>
+              <li><LoadingItem lines={4} /></li>
+              <li><LoadingItem lines={4} /></li>
+              <li><LoadingItem lines={4} /></li>
+              <li><LoadingItem lines={4} /></li>
+              <li><LoadingItem lines={4} /></li>
+              <li><LoadingItem lines={4} /></li>
+            </ul>
           </div>
 
         </div>
