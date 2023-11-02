@@ -12,7 +12,6 @@ const searchBooksInput = document.getElementById('search-books-input')!;
 
 const snippetsMode = new Reactive('both');
 const starsMode = new Reactive('any');
-const searchTerm = new Reactive('');
 const visibleBooks = new Reactive<typeof books>([]);
 const visibleBookCount = new Reactive(0);
 
@@ -84,13 +83,29 @@ for (const book of books) {
   booksList.append(book.element);
 }
 
-for (const source of [searchTerm, snippetsMode, starsMode]) {
-  source.onChange(searchBooks);
+
+
+const searchTerm = new Reactive('');
+
+searchBooksInput.oninput = (e) => {
+  searchTerm.set((e.target as HTMLInputElement).value.trim().toLowerCase());
+};
+
+searchTerm.onChange(searchBooks);
+
+function textInBook(book: BookJson) {
+  return (
+    book.author.toLowerCase().includes(searchTerm.val) ||
+    book.title.toLowerCase().includes(searchTerm.val)
+  );
 }
 
-searchBooks();
 
-searchBooksInput.oninput = (e) => { searchTerm.set((e.target as HTMLInputElement).value.trim().toLowerCase()); };
+
+snippetsMode.onChange(searchBooks);
+starsMode.onChange(searchBooks);
+
+searchBooks();
 
 function meetsSnippetsFilter(book: BookJson) {
   if (snippetsMode.val === 'none') return book.empty;
@@ -101,13 +116,6 @@ function meetsSnippetsFilter(book: BookJson) {
 function meetsStarsFilter(book: BookJson) {
   if (starsMode.val === 'any') return true;
   return book.stars === +starsMode.val;
-}
-
-function textInBook(book: BookJson) {
-  return (
-    book.author.toLowerCase().includes(searchTerm.val) ||
-    book.title.toLowerCase().includes(searchTerm.val)
-  );
 }
 
 function searchBooks() {
