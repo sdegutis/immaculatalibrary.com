@@ -14,6 +14,20 @@ const NotFound: JSX.Component<{ visibleCount: Reactive<number> }> = ({ visibleCo
   return <>{notFound}</>;
 }
 
+const LiveItem: JSX.Component<{
+  Item: JSX.Component<any>,
+  visibleItems: Reactive<any[]>,
+  item: any,
+}> = ({ Item, visibleItems, item }) => {
+  const element = jsxToElement(<Item item={item} />) as HTMLLIElement;
+
+  visibleItems.onChange(() => {
+    element.hidden = !visibleItems.val.includes(item);
+  });
+
+  return <>{element}</>;
+};
+
 export function createSearch<T>({ data, Item, filters, container, counter }: {
   data: T[];
   Item: JSX.Component<{ item: T }>;
@@ -31,15 +45,9 @@ export function createSearch<T>({ data, Item, filters, container, counter }: {
   container.append(jsxToElement(<>
     <NotFound visibleCount={visibleCount} />
     <ul>
-      {data.map(item => {
-        const element = jsxToElement(<Item item={item} />) as HTMLLIElement;
-
-        visibleItems.onChange(() => {
-          element.hidden = !visibleItems.val.includes(item);
-        });
-
-        return element;
-      })}
+      {data.map(item => jsxToElement(
+        <LiveItem item={item} visibleItems={visibleItems} Item={Item} />
+      ))}
     </ul>
   </>));
 
