@@ -89,7 +89,7 @@ Reactive.link(searchBooks, [searchTerm, snippetsMode, starsMode]);
 
 searchBooks();
 
-searchBooksInput.oninput = (e) => { searchTerm.set((e.target as HTMLInputElement).value); };
+searchBooksInput.oninput = (e) => { searchTerm.set((e.target as HTMLInputElement).value.trim().toLowerCase()); };
 
 function meetsSnippetsFilter(book: BookJson) {
   if (snippetsMode.val === 'none') return book.empty;
@@ -110,14 +110,10 @@ function textInBook(book: BookJson, term: string) {
 }
 
 function searchBooks() {
-  const searchString = searchTerm.val
-    .trim()
-    .toLowerCase();
-
   visibleBooks.set(books.filter(book => !(
     !meetsSnippetsFilter(book.data) ||
     !meetsStarsFilter(book.data) ||
-    !textInBook(book.data, searchString)
+    !textInBook(book.data, searchTerm.val)
   )));
 }
 
