@@ -95,7 +95,7 @@ createSearch({
   data: books,
   container: document.getElementById('search-results')!,
   counter: document.getElementById('search-count')!,
-  makeUi: book => (
+  Item: ({ item: book }) => (
     <li>
       <p><a href={book.route}>{book.title}</a><br /> {book.author}</p>
     </li>

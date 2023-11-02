@@ -14,9 +14,9 @@ const NotFound: JSX.Component<{ visibleCount: Reactive<number> }> = ({ visibleCo
   return <>{notFound}</>;
 }
 
-export function createSearch<T>({ data, makeUi, filters, container, counter }: {
+export function createSearch<T>({ data, Item, filters, container, counter }: {
   data: T[];
-  makeUi: (item: T) => JSX.Element;
+  Item: JSX.Component<{ item: T }>;
   filters: SearchFilter<T>[];
   container: HTMLElement,
   counter: HTMLElement,
@@ -36,7 +36,7 @@ export function createSearch<T>({ data, makeUi, filters, container, counter }: {
   container.append(jsxToElement(<>
     <ul>
       {data.map(item => {
-        const element = jsxToElement(makeUi(item)) as HTMLLIElement;
+        const element = jsxToElement(<Item item={item} />) as HTMLLIElement;
 
         visibleItems.onChange(() => {
           element.hidden = !visibleItems.val.includes(item);

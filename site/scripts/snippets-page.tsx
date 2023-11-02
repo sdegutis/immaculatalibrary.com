@@ -51,7 +51,7 @@ createSearch({
   data: snippets,
   container: document.getElementById('search-results')!,
   counter: document.getElementById('search-count')!,
-  makeUi: snippet => <SnippetItem snippet={snippet} />,
+  Item: ({ item: snippet }) => <SnippetItem snippet={snippet} />,
   filters: [
     tagsFilter,
     textFilter,
