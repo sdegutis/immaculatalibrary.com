@@ -84,7 +84,9 @@ for (const book of books) {
   booksList.append(book.element);
 }
 
-Reactive.link(searchBooks, [searchTerm, snippetsMode, starsMode]);
+for (const source of [searchTerm, snippetsMode, starsMode]) {
+  source.onChange(searchBooks);
+}
 
 searchBooks();
 

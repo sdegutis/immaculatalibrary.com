@@ -1,11 +1,5 @@
 export class Reactive<T> {
 
-  static link<T>(fn: () => void, deps: Reactive<T>[]) {
-    for (const dep of deps) {
-      dep.onChange(fn);
-    }
-  }
-
   #fns: (() => void)[] = [];
 
   constructor(public val: T) { }
