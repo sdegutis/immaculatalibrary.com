@@ -14,11 +14,11 @@ const NotFound: JSX.Component<{ visibleCount: Reactive<number> }> = ({ visibleCo
   return <>{notFound}</>;
 }
 
-const LiveItem: JSX.Component<{
-  Item: JSX.Component<any>,
-  visibleItems: Reactive<any[]>,
-  item: any,
-}> = ({ Item, visibleItems, item }) => {
+function LiveItem<T>({ Item, visibleItems, item }: {
+  Item: JSX.Component<{ item: T }>,
+  visibleItems: Reactive<T[]>,
+  item: T,
+}) {
   const element = jsxToElement(<Item item={item} />) as HTMLLIElement;
 
   visibleItems.onChange(() => {
@@ -26,7 +26,7 @@ const LiveItem: JSX.Component<{
   });
 
   return <>{element}</>;
-};
+}
 
 export function createSearch<T>({ data, Item, filters, container, counter }: {
   data: T[];
