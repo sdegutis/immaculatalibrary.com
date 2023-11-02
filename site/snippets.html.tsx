@@ -35,7 +35,7 @@ export default <>
 
         <div>
 
-          <h2>Showing <span id='showing-snippet-count' /> book snippets</h2>
+          <h2>Showing <span id='search-count' /> book snippets</h2>
 
           <div id='search-results'>
             <ul>

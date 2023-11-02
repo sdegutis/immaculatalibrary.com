@@ -1,55 +1,32 @@
 import { SnippetItem } from "../shared/snippets.js";
 import { SnippetJson } from "./data/snippets.json.js";
-import { jsxToElement } from "./jsx-nodes.js";
+import { Reactive } from "./reactive.js";
+import { SearchFilter, createSearch } from "./searchlist.js";
 
 const snippets = await fetch('/scripts/data/snippets.json').then<SnippetJson[]>(res => res.json());
-const snippetItems = snippets.map(snippet => ({
-  snippet,
-  element: jsxToElement(<SnippetItem snippet={snippet} />) as HTMLLIElement
-}));
 
-const host = document.getElementById('search-results') as HTMLDivElement;
-const input = document.getElementById('search-book-snippets-field') as HTMLInputElement;
-const countEl = document.getElementById('showing-snippet-count') as HTMLSpanElement;
+const searchTerm = new Reactive('');
 
-host.innerHTML = '';
-host.append(jsxToElement(<ul>{snippetItems.map(s => s.element)}</ul>));
+document.getElementById('search-book-snippets-field')!.oninput = (e) => {
+  searchTerm.set((e.target as HTMLInputElement).value.trim().toLowerCase());
+};
 
-const noResults = jsxToElement(
-  <p hidden id="no-results" style="font-style: italic">
-    No results
-  </p>
-) as HTMLParagraphElement;
+const textFilter: SearchFilter<SnippetJson> = {
+  source: searchTerm,
+  matches: (snippet: SnippetJson) => (
+    snippet.title.toLowerCase().includes(searchTerm.val) ||
+    snippet.markdown.toLowerCase().includes(searchTerm.val) ||
+    snippet.bookAuthor.toLowerCase().includes(searchTerm.val) ||
+    snippet.bookTitle.toLowerCase().includes(searchTerm.val)
+  ),
+};
 
-host.append(noResults);
-
-updateCount();
-
-input.addEventListener('input', async e => {
-  const searchTerm = input.value.trim();
-
-  for (const snippet of snippetItems) {
-    snippet.element.hidden = !termInSnippet(searchTerm, snippet.snippet);
-  }
-
-  const count = updateCount();
-  noResults.hidden = count > 0;
+createSearch({
+  data: snippets,
+  container: document.getElementById('search-results')!,
+  counter: document.getElementById('search-count')!,
+  makeUi: snippet => <SnippetItem snippet={snippet} />,
+  filters: [
+    textFilter,
+  ],
 });
-
-function updateCount() {
-  const count = snippetItems.filter(item => !item.element.hidden).length;
-  countEl.textContent = count.toFixed();
-  return count;
-}
-
-function termInSnippet(term: string, snippet: SnippetJson) {
-  if (!term) return true;
-
-  term = term.toLowerCase();
-  return (
-    snippet.title.toLowerCase().includes(term) ||
-    snippet.markdown.toLowerCase().includes(term) ||
-    snippet.bookAuthor.toLowerCase().includes(term) ||
-    snippet.bookTitle.toLowerCase().includes(term)
-  );
-}
