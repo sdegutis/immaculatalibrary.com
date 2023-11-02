@@ -55,7 +55,5 @@ export function createSearch<T>({ data, Item, filters }: {
     filter.source.onChange(search);
   }
 
-  search();
-
-  return { results, visibleCount };
+  return { results, visibleCount, search };
 }

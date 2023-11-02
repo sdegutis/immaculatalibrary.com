@@ -91,7 +91,7 @@ const textFilter: SearchFilter<BookJson> = {
 
 
 
-const { results, visibleCount } = createSearch({
+const { results, visibleCount, search } = createSearch({
   data: books,
   filters: [snippetsFilter, starsFilter, textFilter],
   Item: ({ item: book }) => (
@@ -106,3 +106,5 @@ document.getElementById('search-results')!.replaceChildren(results);
 visibleCount.onChange(() => {
   document.getElementById('search-count')!.textContent = visibleCount.val.toFixed();
 });
+
+search();

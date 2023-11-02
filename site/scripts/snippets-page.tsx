@@ -47,7 +47,7 @@ const textFilter: SearchFilter<SnippetJson> = {
   ),
 };
 
-const { results, visibleCount } = createSearch({
+const { results, visibleCount, search } = createSearch({
   data: snippets,
   filters: [tagsFilter, textFilter],
   Item: ({ item: snippet }) => <SnippetItem snippet={snippet} />,
@@ -58,3 +58,5 @@ document.getElementById('search-results')!.replaceChildren(results);
 visibleCount.onChange(() => {
   document.getElementById('search-count')!.textContent = visibleCount.val.toFixed();
 });
+
+search();
