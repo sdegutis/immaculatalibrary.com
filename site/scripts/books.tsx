@@ -4,14 +4,14 @@ import { jsxToElement } from "./jsx-nodes.js";
 import { Reactive } from "./reactive.js";
 import { SearchFilter, createSearch } from "./searchlist.js";
 
-const booksData = await fetch('/scripts/data/books.json').then<BookJson[]>(res => res.json());
+const books = await fetch('/scripts/data/books.json').then<BookJson[]>(res => res.json());
 
-const bookFiltersContainer = document.getElementById('books-filters') as HTMLDivElement;
+const filtersContainer = document.getElementById('books-filters') as HTMLDivElement;
 
 
 document.getElementById('random-book-button')!.onclick = (e) => {
-  const i = Math.floor(Math.random() * booksData.length);
-  const a = booksData[i]!;
+  const i = Math.floor(Math.random() * books.length);
+  const a = books[i]!;
   (e.target as HTMLAnchorElement).href = a.route;
 };
 
@@ -21,7 +21,7 @@ document.getElementById('random-book-button')!.onclick = (e) => {
 
 const snippetsFilterSource = new Reactive('both');
 
-bookFiltersContainer.append(jsxToElement(<>
+filtersContainer.append(jsxToElement(<>
   <span class='label'>snippets</span>
   <span class='radios'>
     <label><input type='radio' name='booksearch' onclick={() => snippetsFilterSource.set('both')} checked />Any</label>
@@ -56,7 +56,7 @@ const starInputs = Array(5).fill('').map((_, i) => {
   return { star, num };
 });
 
-bookFiltersContainer.append(jsxToElement(<>
+filtersContainer.append(jsxToElement(<>
   <span class='label'>stars</span>
   <span class='radios'>
     <label><input type='radio' name='bookstars' onclick={() => starsFilterSource.set('any')} checked />Any</label>
@@ -106,7 +106,7 @@ const textFilter: SearchFilter<BookJson> = {
 
 
 createSearch({
-  data: booksData,
+  data: books,
   container: document.getElementById('search-results')!,
   makeUi: book => (
     <li>
