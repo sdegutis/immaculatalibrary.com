@@ -101,10 +101,10 @@ function meetsStarsFilter(book: BookJson) {
   return book.stars === +starsMode.val;
 }
 
-function textInBook(book: BookJson, term: string) {
+function textInBook(book: BookJson) {
   return (
-    book.author.toLowerCase().includes(term) ||
-    book.title.toLowerCase().includes(term)
+    book.author.toLowerCase().includes(searchTerm.val) ||
+    book.title.toLowerCase().includes(searchTerm.val)
   );
 }
 
@@ -112,7 +112,7 @@ function searchBooks() {
   visibleBooks.set(books.filter(book => !(
     !meetsSnippetsFilter(book.data) ||
     !meetsStarsFilter(book.data) ||
-    !textInBook(book.data, searchTerm.val)
+    !textInBook(book.data)
   )));
 }
 
