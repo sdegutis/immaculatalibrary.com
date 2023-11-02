@@ -5,145 +5,180 @@ import { Reactive } from "./searching.js";
 
 const booksData = await fetch('/scripts/data/books.json').then<BookJson[]>(res => res.json());
 
-const container = document.getElementById('search-results') as HTMLDivElement;
-const booksList = jsxToElement(<ul id="books-all" />) as HTMLUListElement;
-const notFound = jsxToElement(<em>No results</em>) as HTMLElement;
-
-const visibleBooks = new Reactive<typeof books>([]);
-const visibleBookCount = new Reactive(0);
-
-visibleBooks.onChange(() => {
-  visibleBookCount.set(visibleBooks.val.length);
-});
-
-visibleBookCount.onChange(() => {
-  notFound.hidden = visibleBookCount.val !== 0;
-  document.getElementById('bookscount')!.textContent = visibleBookCount.val.toFixed();
-});
-
-
-
-const starsMode = new Reactive('any');
-
-const starInputs = Array(5).fill('').map((_, i) => {
-  const star = jsxToElement(<RatingStar />) as SVGElement;
-  const num = i + 1;
-
-  starsMode.onChange(() => {
-    star.classList.toggle('lit', +starsMode.val >= num);
-  });
-
-  return { star, num };
-});
-
-const starFilterUi = jsxToElement(<>
-  <span class='label'>stars</span>
-  <span class='radios'>
-    <label><input type='radio' name='bookstars' onclick={() => starsMode.set('any')} checked />Any</label>
-    <label><input type='radio' name='bookstars' onclick={() => starsMode.set('0')} />Unrated</label>
-    {starInputs.map(star => <>
-      <label>
-        <input type='radio' name='bookstars' onclick={() => starsMode.set(star.num.toFixed())} />
-        {star.star}
-      </label>
-    </>)}
-  </span>
-</>);
-
-starsMode.onChange(searchBooks);
-
-function meetsStarsFilter(book: BookJson) {
-  if (starsMode.val === 'any') return true;
-  return book.stars === +starsMode.val;
-}
-
-
-
-
-
-const snippetsMode = new Reactive('both');
-
-const snippetsFilterUi = jsxToElement(<>
-  <span class='label'>snippets</span>
-  <span class='radios'>
-    <label><input type='radio' name='booksearch' onclick={() => snippetsMode.set('both')} checked />Any</label>
-    <label><input type='radio' name='booksearch' onclick={() => snippetsMode.set('some')} />Some</label>
-    <label><input type='radio' name='booksearch' onclick={() => snippetsMode.set('none')} />None</label>
-  </span>
-</>);
-
-snippetsMode.onChange(searchBooks);
-
-function meetsSnippetsFilter(book: BookJson) {
-  if (snippetsMode.val === 'none') return book.empty;
-  if (snippetsMode.val === 'some') return !book.empty;
-  return true;
-}
-
-
-
-
 const bookFiltersContainer = document.getElementById('books-filters') as HTMLDivElement;
-bookFiltersContainer.append(snippetsFilterUi);
-bookFiltersContainer.append(starFilterUi);
 
-
-const books = booksData.map(data => {
-  const element = jsxToElement(
-    <li>
-      <p><a href={data.route}>{data.title}</a><br /> {data.author}</p>
-    </li>
-  ) as HTMLLIElement;
-
-  const book = { data, element };
-
-  visibleBooks.onChange(() => {
-    element.hidden = !visibleBooks.val.includes(book);
-  });
-
-  return book;
-});
-
-container.innerHTML = '';
-container.append(booksList);
-container.append(notFound);
-for (const book of books) {
-  booksList.append(book.element);
-}
-
-
-
-const searchTerm = new Reactive('');
-
-const searchBooksInput = document.getElementById('search-books-input')!;
-
-searchBooksInput.oninput = (e) => {
-  searchTerm.set((e.target as HTMLInputElement).value.trim().toLowerCase());
-};
-
-searchTerm.onChange(searchBooks);
-
-function textInBook(book: BookJson) {
-  return (
-    book.author.toLowerCase().includes(searchTerm.val) ||
-    book.title.toLowerCase().includes(searchTerm.val)
-  );
-}
-
-
-
-searchBooks();
-
-function searchBooks() {
-  visibleBooks.set(books.filter(book => !(
-    !meetsSnippetsFilter(book.data) ||
-    !meetsStarsFilter(book.data) ||
-    !textInBook(book.data)
-  )));
-}
 
 document.getElementById('random-book-button')!.onclick = (e) => {
   const i = Math.floor(Math.random() * booksData.length);
   const a = booksData[i]!;
   (e.target as HTMLAnchorElement).href = a.route;
 };
+
+
+
+
+
+const snippetsFilterSource = new Reactive('both');
+
+bookFiltersContainer.append(jsxToElement(<>
+  <span class='label'>snippets</span>
+  <span class='radios'>
+    <label><input type='radio' name='booksearch' onclick={() => snippetsFilterSource.set('both')} checked />Any</label>
+    <label><input type='radio' name='booksearch' onclick={() => snippetsFilterSource.set('some')} />Some</label>
+    <label><input type='radio' name='booksearch' onclick={() => snippetsFilterSource.set('none')} />None</label>
+  </span>
+</>));
+
+const snippetsFilter: SearchFilter<BookJson> = {
+  source: snippetsFilterSource,
+  matches: (book: BookJson) => {
+    if (snippetsFilterSource.val === 'none') return book.empty;
+    if (snippetsFilterSource.val === 'some') return !book.empty;
+    return true;
+  },
+};
+
+
+
+
+
+const starsFilterSource = new Reactive('any');
+
+const starInputs = Array(5).fill('').map((_, i) => {
+  const star = jsxToElement(<RatingStar />) as SVGElement;
+  const num = i + 1;
+
+  starsFilterSource.onChange(() => {
+    star.classList.toggle('lit', +starsFilterSource.val >= num);
+  });
+
+  return { star, num };
+});
+
+bookFiltersContainer.append(jsxToElement(<>
+  <span class='label'>stars</span>
+  <span class='radios'>
+    <label><input type='radio' name='bookstars' onclick={() => starsFilterSource.set('any')} checked />Any</label>
+    <label><input type='radio' name='bookstars' onclick={() => starsFilterSource.set('0')} />Unrated</label>
+    {starInputs.map(star => <>
+      <label>
+        <input type='radio' name='bookstars' onclick={() => starsFilterSource.set(star.num.toFixed())} />
+        {star.star}
+      </label>
+    </>)}
+  </span>
+</>));
+
+const starsFilter: SearchFilter<BookJson> = {
+  source: starsFilterSource,
+  matches: (book: BookJson) => {
+    if (starsFilterSource.val === 'any') return true;
+    return book.stars === +starsFilterSource.val;
+  },
+};
+
+
+
+
+
+
+
+
+
+
+
+
+const searchTerm = new Reactive('');
+
+document.getElementById('search-books-input')!.oninput = (e) => {
+  searchTerm.set((e.target as HTMLInputElement).value.trim().toLowerCase());
+};
+
+const textFilter: SearchFilter<BookJson> = {
+  source: searchTerm,
+  matches: (book: BookJson) => (
+    book.author.toLowerCase().includes(searchTerm.val) ||
+    book.title.toLowerCase().includes(searchTerm.val)
+  ),
+};
+
+
+
+interface SearchFilter<T> {
+  source: Reactive<any>;
+  matches: (data: T) => boolean,
+}
+
+createSearch({
+  data: booksData,
+  container: document.getElementById('search-results')!,
+  makeUi: book => (
+    <li>
+      <p><a href={book.route}>{book.title}</a><br /> {book.author}</p>
+    </li>
+  ),
+  filters: [
+    snippetsFilter,
+    starsFilter,
+    textFilter,
+  ],
+});
+
+
+
+function createSearch<T>({ data, makeUi, filters, container }: {
+  data: T[];
+  makeUi: (item: T) => JSX.Element;
+  filters: SearchFilter<T>[];
+  container: HTMLElement,
+}) {
+  const visibleItems = new Reactive<typeof items>([]);
+  const visibleCount = new Reactive(0);
+
+  container.innerHTML = '';
+
+  const ul = jsxToElement(<ul id="books-all" />) as HTMLUListElement;
+  container.append(ul);
+
+  const notFound = jsxToElement(<em>No results</em>) as HTMLElement;
+  container.append(notFound);
+
+  visibleCount.onChange(() => {
+    notFound.hidden = visibleCount.val !== 0;
+    document.getElementById('bookscount')!.textContent = visibleCount.val.toFixed();
+  });
+
+  visibleItems.onChange(() => {
+    visibleCount.set(visibleItems.val.length);
+  });
+
+  const items = data.map(data => {
+    const element = jsxToElement(makeUi(data)) as HTMLLIElement;
+    const item = { data, element };
+    visibleItems.onChange(() => {
+      element.hidden = !visibleItems.val.includes(item);
+    });
+    return item;
+  });
+
+  for (const item of items) {
+    ul.append(item.element);
+  }
+
+  for (const filter of filters) {
+    filter.source.onChange(search);
+  }
+
+  function search() {
+    visibleItems.set(items.filter(item => {
+      for (const filter of filters) {
+        if (!filter.matches(item.data)) {
+          return false;
+        }
+      }
+      return true;
+    }));
+  }
+
+  search();
+}
