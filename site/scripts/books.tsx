@@ -10,7 +10,6 @@ const booksList = jsxToElement(<ul id="books-all" />) as HTMLUListElement;
 const notFound = jsxToElement(<em>No results</em>) as HTMLElement;
 const searchBooksInput = document.getElementById('search-books-input')!;
 
-const snippetsMode = new Reactive('both');
 const starsMode = new Reactive('any');
 const visibleBooks = new Reactive<typeof books>([]);
 const visibleBookCount = new Reactive(0);
@@ -35,15 +34,34 @@ const starInputs = Array(5).fill('').map((_, i) => {
   return { star, num };
 });
 
-const bookFiltersContainer = document.getElementById('books-filters') as HTMLDivElement;
-bookFiltersContainer.append(jsxToElement(<>
 
+
+const snippetsMode = new Reactive('both');
+
+const snippetsFilterUi = <>
   <span class='label'>snippets</span>
   <span class='radios'>
     <label><input type='radio' name='booksearch' onclick={() => snippetsMode.set('both')} checked />Any</label>
     <label><input type='radio' name='booksearch' onclick={() => snippetsMode.set('some')} />Some</label>
     <label><input type='radio' name='booksearch' onclick={() => snippetsMode.set('none')} />None</label>
   </span>
+</>;
+
+snippetsMode.onChange(searchBooks);
+
+function meetsSnippetsFilter(book: BookJson) {
+  if (snippetsMode.val === 'none') return book.empty;
+  if (snippetsMode.val === 'some') return !book.empty;
+  return true;
+}
+
+
+
+
+const bookFiltersContainer = document.getElementById('books-filters') as HTMLDivElement;
+bookFiltersContainer.append(jsxToElement(<>
+
+  {snippetsFilterUi}
 
   <span class='label'>stars</span>
   <span class='radios'>
@@ -102,16 +120,9 @@ function textInBook(book: BookJson) {
 
 
 
-snippetsMode.onChange(searchBooks);
 starsMode.onChange(searchBooks);
 
 searchBooks();
-
-function meetsSnippetsFilter(book: BookJson) {
-  if (snippetsMode.val === 'none') return book.empty;
-  if (snippetsMode.val === 'some') return !book.empty;
-  return true;
-}
 
 function meetsStarsFilter(book: BookJson) {
   if (starsMode.val === 'any') return true;
