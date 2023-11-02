@@ -8,14 +8,11 @@ const books = await fetch('/scripts/data/books.json').then<BookJson[]>(res => re
 
 const filtersContainer = document.getElementById('books-filters') as HTMLDivElement;
 
-
 document.getElementById('random-book-button')!.onclick = (e) => {
   const i = Math.floor(Math.random() * books.length);
   const a = books[i]!;
   (e.target as HTMLAnchorElement).href = a.route;
 };
-
-
 
 
 
@@ -38,8 +35,6 @@ const snippetsFilter: SearchFilter<BookJson> = {
     return true;
   },
 };
-
-
 
 
 
@@ -77,15 +72,6 @@ const starsFilter: SearchFilter<BookJson> = {
     return book.stars === +starsFilterSource.val;
   },
 };
-
-
-
-
-
-
-
-
-
 
 
 
