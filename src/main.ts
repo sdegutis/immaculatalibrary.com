@@ -20,11 +20,11 @@ let reloadFsTimer: NodeJS.Timeout;
 const pathUpdated = (filePath: string) => {
   updatedPaths.add(filePath.split(path.sep).join(path.posix.sep));
   clearTimeout(reloadFsTimer);
-  reloadFsTimer = setTimeout(async () => {
+  reloadFsTimer = setTimeout(() => {
     console.log('Rebuilding site...');
-    await runtime.pathsUpdated(...updatedPaths);
+    runtime.pathsUpdated(...updatedPaths);
 
-    const artifacts = await runtime.build();
+    const artifacts = runtime.build();
     server.files = artifacts?.outfiles;
     server.handlers = artifacts?.handlers;
 
