@@ -9,10 +9,10 @@ await new Promise(r => setTimeout(r, 1000));
 
 const markdown = MarkdownIt(mdOptions);
 
-document.getElementById('refresh-random-book-snippet')!.addEventListener('click', (e) => {
+const doRandomBookSnippetReal = (e: Event) => {
   e.preventDefault();
   doRandomBookSnippet(slugs => Math.floor(Math.random() * slugs.length));
-});
+};
 
 window.addEventListener('popstate', e => {
   reflectUrl();
@@ -35,8 +35,9 @@ async function reflectUrl() {
 
   const snippet = await fetch(`/scripts/data/snippets/${slug}.json`).then<SnippetJson>(res => res.json());
   const container = document.getElementById('random-book-snippet') as HTMLDivElement;
-  container.innerHTML = '';
-  container.append(jsxToElement(<>
+  container.replaceChildren(jsxToElement(<>
+    <p>(Read <a href='#' onclick={doRandomBookSnippetReal}>another</a>)</p>
+
     <h4><a href={snippet.route}>{snippet.renderedTitle}</a></h4>
     <p><small>{snippet.mins} min &bull; Digitized on {formatDate(snippet.date)}</small></p>
     <p>

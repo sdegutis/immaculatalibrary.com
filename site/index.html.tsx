@@ -47,9 +47,6 @@ export default <>
 
             <div>
               <h3>Random Book Snippet</h3>
-              <p>
-                (Read <a href='#' id='refresh-random-book-snippet'>another</a>)
-              </p>
               <Typography>
                 <div id="random-book-snippet">
                   <LoadingItem lines={7} />
