@@ -66,7 +66,7 @@ export const QuickLinks: JSX.Component = (attrs, children) => {
           )}
 
           <li>
-            <a class="link" href='/movies.html' style={`background-image: url(/img/page/videos.jpg);`}>
+            <a class="link" href='/videos.html' style={`background-image: url(/img/page/videos.jpg);`}>
               <span>Fulton Sheen</span>
             </a>
           </li>

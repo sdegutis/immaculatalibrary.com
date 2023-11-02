@@ -1,5 +1,5 @@
 import { Column, Spaced } from "../components/column.js";
-import { MoviesSidebar } from "../components/movies-sidebar.js";
+import { MoviesList, VideosList } from "../components/movies-sidebar.js";
 import { TypicalPage } from "../components/page.js";
 import { Typography } from "../components/typography.js";
 import { markdown } from "../core/helpers.js";
@@ -35,7 +35,10 @@ export default allVideos.map(video => {
 
           </Typography>
 
-          <MoviesSidebar />
+          <div>
+            <VideosList />
+            <MoviesList />
+          </div>
 
         </Column>
       </Spaced>

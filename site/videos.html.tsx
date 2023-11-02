@@ -10,19 +10,18 @@ export default <>
       <Column split>
 
         <Typography>
-          <h2>Holy Movies</h2>
+          <h2>Fulton Sheen Videos</h2>
           <p>
-            Books are not the only way to experience the
-            lives of the saints! Movies can be a great way
-            to increase our devotion and love for God through
-            his Saints. This page contains a roughly priotized
-            list of recommended and reviewed Catholic movies.
+            Venerable Fulton Sheen was a passionate and powerful
+            speaker who explained the Catholic faith in terms
+            that made complicated topics easy to understand
+            and often ignited the faithful with a passion for God.
           </p>
         </Typography>
 
         <div>
-          <MoviesList />
           <VideosList />
+          <MoviesList />
         </div>
 
       </Column>
