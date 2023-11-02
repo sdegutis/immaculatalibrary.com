@@ -91,9 +91,8 @@ const textFilter: SearchFilter<BookJson> = {
 
 
 
-createSearch({
+const { results } = createSearch({
   data: books,
-  container: document.getElementById('search-results')!,
   counter: document.getElementById('search-count')!,
   Item: ({ item: book }) => (
     <li>
@@ -106,3 +105,5 @@ createSearch({
     textFilter,
   ],
 });
+
+document.getElementById('search-results')!.replaceChildren(results);

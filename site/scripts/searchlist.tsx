@@ -28,11 +28,10 @@ function LiveItem<T>({ Item, visibleItems, item }: {
   return <>{element}</>;
 }
 
-export function createSearch<T>({ data, Item, filters, container, counter }: {
+export function createSearch<T>({ data, Item, filters, counter }: {
   data: T[];
   Item: JSX.Component<{ item: T }>;
   filters: SearchFilter<T>[];
-  container: HTMLElement,
   counter: HTMLElement,
 }) {
   const visibleItems = new Reactive<T[]>([]);
@@ -41,14 +40,14 @@ export function createSearch<T>({ data, Item, filters, container, counter }: {
   visibleCount.onChange(() => counter.textContent = visibleCount.val.toFixed());
   visibleItems.onChange(() => visibleCount.set(visibleItems.val.length));
 
-  container.replaceChildren(jsxToElement(<>
+  const results = jsxToElement(<>
     <NotFound visibleCount={visibleCount} />
     <ul>
       {data.map(item => jsxToElement(
         <LiveItem item={item} visibleItems={visibleItems} Item={Item} />
       ))}
     </ul>
-  </>));
+  </>);
 
   const search = () => {
     visibleItems.set(data.filter(item => filters.every(filter => filter.matches(item))));
@@ -59,4 +58,6 @@ export function createSearch<T>({ data, Item, filters, container, counter }: {
   }
 
   search();
+
+  return { results };
 }

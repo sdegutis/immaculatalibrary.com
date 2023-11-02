@@ -47,9 +47,8 @@ const textFilter: SearchFilter<SnippetJson> = {
   ),
 };
 
-createSearch({
+const { results } = createSearch({
   data: snippets,
-  container: document.getElementById('search-results')!,
   counter: document.getElementById('search-count')!,
   Item: ({ item: snippet }) => <SnippetItem snippet={snippet} />,
   filters: [
@@ -57,3 +56,5 @@ createSearch({
     textFilter,
   ],
 });
+
+document.getElementById('search-results')!.replaceChildren(results);
