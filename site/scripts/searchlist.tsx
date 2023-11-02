@@ -6,6 +6,14 @@ export interface SearchFilter<T> {
   matches: (data: T) => boolean,
 }
 
+const NotFound: JSX.Component<{ visibleCount: Reactive<number> }> = ({ visibleCount }, children) => {
+  const notFound = jsxToElement(<em>No results</em>) as HTMLElement;
+  visibleCount.onChange(() => {
+    notFound.hidden = visibleCount.val !== 0;
+  });
+  return <>{notFound}</>;
+}
+
 export function createSearch<T>({ data, makeUi, filters, container, counter }: {
   data: T[];
   makeUi: (item: T) => JSX.Element;
@@ -21,11 +29,11 @@ export function createSearch<T>({ data, makeUi, filters, container, counter }: {
   const ul = document.createElement('ul');
   container.append(ul);
 
-  const notFound = jsxToElement(<em>No results</em>) as HTMLElement;
-  container.append(notFound);
+  container.append(jsxToElement(
+    <NotFound visibleCount={visibleCount} />
+  ));
 
   visibleCount.onChange(() => {
-    notFound.hidden = visibleCount.val !== 0;
     counter.textContent = visibleCount.val.toFixed();
   });
 
