@@ -94,7 +94,7 @@ const textFilter: SearchFilter<BookJson> = {
 createSearch({
   data: books,
   container: document.getElementById('search-results')!,
-  counter: document.getElementById('bookscount')!,
+  counter: document.getElementById('search-count')!,
   makeUi: book => (
     <li>
       <p><a href={book.route}>{book.title}</a><br /> {book.author}</p>

@@ -30,7 +30,7 @@ export default <>
 
         <div>
 
-          <h2>Showing <span id='bookscount' /> books</h2>
+          <h2>Showing <span id='search-count' /> books</h2>
 
           <div id='search-results'>
             <ul>
