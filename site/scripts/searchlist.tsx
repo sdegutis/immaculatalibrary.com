@@ -17,7 +17,7 @@ export function createSearch<T>({ data, makeUi, filters, container }: {
 
   container.innerHTML = '';
 
-  const ul = jsxToElement(<ul id="books-all" />) as HTMLUListElement;
+  const ul = document.createElement('ul');
   container.append(ul);
 
   const notFound = jsxToElement(<em>No results</em>) as HTMLElement;
