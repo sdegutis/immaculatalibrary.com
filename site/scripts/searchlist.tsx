@@ -41,8 +41,7 @@ export function createSearch<T>({ data, Item, filters, container, counter }: {
   visibleCount.onChange(() => counter.textContent = visibleCount.val.toFixed());
   visibleItems.onChange(() => visibleCount.set(visibleItems.val.length));
 
-  container.innerHTML = '';
-  container.append(jsxToElement(<>
+  container.replaceChildren(jsxToElement(<>
     <NotFound visibleCount={visibleCount} />
     <ul>
       {data.map(item => jsxToElement(
