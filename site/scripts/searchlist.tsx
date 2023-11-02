@@ -28,12 +28,8 @@ export function createSearch<T>({ data, Item, filters, container, counter }: {
   visibleItems.onChange(() => visibleCount.set(visibleItems.val.length));
 
   container.innerHTML = '';
-
-  container.append(jsxToElement(
-    <NotFound visibleCount={visibleCount} />
-  ));
-
   container.append(jsxToElement(<>
+    <NotFound visibleCount={visibleCount} />
     <ul>
       {data.map(item => {
         const element = jsxToElement(<Item item={item} />) as HTMLLIElement;
