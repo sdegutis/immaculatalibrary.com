@@ -6,11 +6,12 @@ export interface SearchFilter<T> {
   matches: (data: T) => boolean,
 }
 
-export function createSearch<T>({ data, makeUi, filters, container }: {
+export function createSearch<T>({ data, makeUi, filters, container, counter }: {
   data: T[];
   makeUi: (item: T) => JSX.Element;
   filters: SearchFilter<T>[];
   container: HTMLElement,
+  counter: HTMLElement,
 }) {
   const visibleItems = new Reactive<typeof items>([]);
   const visibleCount = new Reactive(0);
@@ -25,7 +26,7 @@ export function createSearch<T>({ data, makeUi, filters, container }: {
 
   visibleCount.onChange(() => {
     notFound.hidden = visibleCount.val !== 0;
-    document.getElementById('bookscount')!.textContent = visibleCount.val.toFixed();
+    counter.textContent = visibleCount.val.toFixed();
   });
 
   visibleItems.onChange(() => {
