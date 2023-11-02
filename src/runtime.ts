@@ -13,24 +13,16 @@ export class Runtime {
 
   build() {
     const start = Date.now();
-    try {
-      const mainModule = this.files.get('/core/main.js')!.module!;
-      return mainModule.require() as {
-        outfiles: Map<string, Buffer | string>,
-        handlers: Map<string, (body: string) => string>,
-      };
-    }
-    catch (e) {
-      console.error(e);
-      return;
-    }
-    finally {
-      const time = Date.now() - start;
-      console.log(`Time: ${time} ms`);
-    }
+    const main = this.files.get('/core/main.js')!.module!;
+    const exports = main.require() as {
+      outfiles: Map<string, Buffer | string>;
+      handlers: Map<string, (body: string) => string>;
+    };
+    console.log(`Time: ${Date.now() - start} ms`);
+    return exports;
   }
 
-  async pathsUpdated(...paths: string[]) {
+  pathsUpdated(...paths: string[]) {
     const filepaths = paths.map(p => p.slice(this.realBase.length));
 
     for (const filepath of filepaths) {

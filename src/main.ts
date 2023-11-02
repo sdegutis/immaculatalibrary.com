@@ -22,14 +22,21 @@ const pathUpdated = (filePath: string) => {
   clearTimeout(reloadFsTimer);
   reloadFsTimer = setTimeout(() => {
     console.log('Rebuilding site...');
-    runtime.pathsUpdated(...updatedPaths);
 
-    const artifacts = runtime.build();
-    server.files = artifacts?.outfiles;
-    server.handlers = artifacts?.handlers;
+    try {
+      runtime.pathsUpdated(...updatedPaths);
 
-    updatedPaths.clear();
-    server.events.emit('rebuild');
+      const artifacts = runtime.build();
+      server.files = artifacts?.outfiles;
+      server.handlers = artifacts?.handlers;
+
+      updatedPaths.clear();
+      server.events.emit('rebuild');
+    }
+    catch (e) {
+      console.error(e);
+    }
+
     console.log('Done.');
   }, 100);
 };
