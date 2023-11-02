@@ -21,13 +21,10 @@ export function createSearch<T>({ data, makeUi, filters, container, counter }: {
   container: HTMLElement,
   counter: HTMLElement,
 }) {
-  const visibleItems = new Reactive<typeof items>([]);
+  const visibleItems = new Reactive<T[]>([]);
   const visibleCount = new Reactive(0);
 
   container.innerHTML = '';
-
-  const ul = document.createElement('ul');
-  container.append(ul);
 
   container.append(jsxToElement(
     <NotFound visibleCount={visibleCount} />
@@ -41,27 +38,28 @@ export function createSearch<T>({ data, makeUi, filters, container, counter }: {
     visibleCount.set(visibleItems.val.length);
   });
 
-  const items = data.map(data => {
-    const element = jsxToElement(makeUi(data)) as HTMLLIElement;
-    const item = { data, element };
-    visibleItems.onChange(() => {
-      element.hidden = !visibleItems.val.includes(item);
-    });
-    return item;
-  });
+  container.append(jsxToElement(<>
+    <ul>
+      {data.map(item => {
+        const element = jsxToElement(makeUi(item)) as HTMLLIElement;
 
-  for (const item of items) {
-    ul.append(item.element);
-  }
+        visibleItems.onChange(() => {
+          element.hidden = !visibleItems.val.includes(item);
+        });
+
+        return element;
+      })}
+    </ul>
+  </>));
 
   for (const filter of filters) {
     filter.source.onChange(search);
   }
 
   function search() {
-    visibleItems.set(items.filter(item => {
+    visibleItems.set(data.filter(item => {
       for (const filter of filters) {
-        if (!filter.matches(item.data)) {
+        if (!filter.matches(item)) {
           return false;
         }
       }
