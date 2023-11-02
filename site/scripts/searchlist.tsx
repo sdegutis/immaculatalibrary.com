@@ -30,13 +30,8 @@ export function createSearch<T>({ data, makeUi, filters, container, counter }: {
     <NotFound visibleCount={visibleCount} />
   ));
 
-  visibleCount.onChange(() => {
-    counter.textContent = visibleCount.val.toFixed();
-  });
-
-  visibleItems.onChange(() => {
-    visibleCount.set(visibleItems.val.length);
-  });
+  visibleCount.onChange(() => counter.textContent = visibleCount.val.toFixed());
+  visibleItems.onChange(() => visibleCount.set(visibleItems.val.length));
 
   container.append(jsxToElement(<>
     <ul>
