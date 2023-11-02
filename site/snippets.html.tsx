@@ -25,7 +25,7 @@ export default <>
           <p><input placeholder='Search' autofocus type="text" id="search-book-snippets-field" /></p>
           <div id='snippets-filters' />
           <hr />
-          <p>Not sure what to read?<br /> Try a <RandomBookSnippet> <a href='#'>Random Book Snippet</a> </RandomBookSnippet>.</p>
+          <p>Not sure what to read?<br /> Try a <RandomBookSnippet><a href='#'>Random Book Snippet</a></RandomBookSnippet>.</p>
 
         </div>
 
