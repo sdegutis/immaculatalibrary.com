@@ -1,7 +1,7 @@
 import { RatingStar } from "../shared/rating.js";
 import { BookJson } from "./data/books.json.js";
 import { jsxToElement } from "./jsx-nodes.js";
-import { Reactive } from "./searching.js";
+import { Reactive } from "./reactive.js";
 
 const booksData = await fetch('/scripts/data/books.json').then<BookJson[]>(res => res.json());
 
