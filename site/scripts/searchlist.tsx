@@ -47,11 +47,7 @@ export function createSearch<T>({ data, Item, filters, container, counter }: {
     </ul>
   </>));
 
-  for (const filter of filters) {
-    filter.source.onChange(search);
-  }
-
-  function search() {
+  const search = () => {
     visibleItems.set(data.filter(item => {
       for (const filter of filters) {
         if (!filter.matches(item)) {
@@ -60,6 +56,10 @@ export function createSearch<T>({ data, Item, filters, container, counter }: {
       }
       return true;
     }));
+  };
+
+  for (const filter of filters) {
+    filter.source.onChange(search);
   }
 
   search();
