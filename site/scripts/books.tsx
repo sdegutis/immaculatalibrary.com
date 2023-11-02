@@ -8,7 +8,6 @@ const booksData = await fetch('/scripts/data/books.json').then<BookJson[]>(res =
 const container = document.getElementById('search-results') as HTMLDivElement;
 const booksList = jsxToElement(<ul id="books-all" />) as HTMLUListElement;
 const notFound = jsxToElement(<em>No results</em>) as HTMLElement;
-const searchBooksInput = document.getElementById('search-books-input')!;
 
 const visibleBooks = new Reactive<typeof books>([]);
 const visibleBookCount = new Reactive(0);
@@ -115,6 +114,8 @@ for (const book of books) {
 
 
 const searchTerm = new Reactive('');
+
+const searchBooksInput = document.getElementById('search-books-input')!;
 
 searchBooksInput.oninput = (e) => {
   searchTerm.set((e.target as HTMLInputElement).value.trim().toLowerCase());
