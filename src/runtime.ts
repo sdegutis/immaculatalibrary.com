@@ -12,7 +12,7 @@ export class Runtime {
   }
 
   build() {
-    console.time('Running /core/main.js');
+    const start = Date.now();
     try {
       const mainModule = this.files.get('/core/main.js')!.module!;
       return mainModule.require() as {
@@ -25,7 +25,8 @@ export class Runtime {
       return;
     }
     finally {
-      console.timeEnd('Running /core/main.js');
+      const time = Date.now() - start;
+      console.log(`Time: ${time} ms`);
     }
   }
 
