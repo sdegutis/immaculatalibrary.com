@@ -5,6 +5,8 @@ import { SnippetJson } from './data/snippets/snippet.json.js';
 import { jsxToElement } from './jsx-nodes.js';
 import { snippetIds } from "./snippet-ids.js";
 
+await new Promise(r => setTimeout(r, 1000));
+
 const markdown = MarkdownIt(mdOptions);
 
 document.getElementById('refresh-random-book-snippet')!.addEventListener('click', (e) => {
