@@ -24,14 +24,14 @@ export function createSearch<T>({ data, Item, filters, container, counter }: {
   const visibleItems = new Reactive<T[]>([]);
   const visibleCount = new Reactive(0);
 
+  visibleCount.onChange(() => counter.textContent = visibleCount.val.toFixed());
+  visibleItems.onChange(() => visibleCount.set(visibleItems.val.length));
+
   container.innerHTML = '';
 
   container.append(jsxToElement(
     <NotFound visibleCount={visibleCount} />
   ));
-
-  visibleCount.onChange(() => counter.textContent = visibleCount.val.toFixed());
-  visibleItems.onChange(() => visibleCount.set(visibleItems.val.length));
 
   container.append(jsxToElement(<>
     <ul>
