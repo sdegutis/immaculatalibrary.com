@@ -7,19 +7,22 @@ const booksData = await fetch('/scripts/data/books.json').then<BookJson[]>(res =
 
 const container = document.getElementById('search-results') as HTMLDivElement;
 const booksList = jsxToElement(<ul id="books-all" />) as HTMLUListElement;
-const notFound = document.getElementById('no-books-found')!;
+const notFound = jsxToElement(<em>No results</em>) as HTMLElement;
 const searchBooksInput = document.getElementById('search-books-input')!;
 
 const snippetsMode = new Reactive('both');
 const starsMode = new Reactive('any');
 const searchTerm = new Reactive('');
 const visibleBooks = new Reactive<typeof books>([]);
+const visibleBookCount = new Reactive(0);
 
 visibleBooks.onChange(() => {
-  const howMany = visibleBooks.val.length;
+  visibleBookCount.set(visibleBooks.val.length);
+});
 
-  notFound.hidden = howMany !== 0;
-  document.getElementById('bookscount')!.textContent = howMany.toFixed();
+visibleBookCount.onChange(() => {
+  notFound.hidden = visibleBookCount.val !== 0;
+  document.getElementById('bookscount')!.textContent = visibleBookCount.val.toFixed();
 });
 
 const bookFiltersContainer = document.getElementById('books-filters') as HTMLDivElement;
@@ -77,6 +80,7 @@ const books = booksData.map(data => {
 
 container.innerHTML = '';
 container.append(booksList);
+container.append(notFound);
 for (const book of books) {
   booksList.append(book.element);
 }

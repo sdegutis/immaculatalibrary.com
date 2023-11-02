@@ -44,10 +44,6 @@ export default <>
             </ul>
           </div>
 
-          <span hidden id="no-books-found" style="font-style: italic">
-            No results
-          </span>
-
         </div>
 
       </Column>
