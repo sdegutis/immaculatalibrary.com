@@ -143,9 +143,7 @@ function searchBooks() {
 }
 
 document.getElementById('random-book-button')!.onclick = (e) => {
-  const ul = document.getElementById('books-all')!;
-  const as = [...ul.querySelectorAll('a')];
-  const i = Math.floor(Math.random() * as.length);
-  const a = as[i]!;
-  (e.target as HTMLAnchorElement).href = a.href;
+  const i = Math.floor(Math.random() * booksData.length);
+  const a = booksData[i]!;
+  (e.target as HTMLAnchorElement).href = a.route;
 };
