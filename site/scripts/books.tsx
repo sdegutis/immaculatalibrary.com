@@ -25,8 +25,6 @@ visibleBookCount.onChange(() => {
   document.getElementById('bookscount')!.textContent = visibleBookCount.val.toFixed();
 });
 
-const bookFiltersContainer = document.getElementById('books-filters') as HTMLDivElement;
-
 const starInputs = Array(5).fill('').map((_, i) => {
   const star = jsxToElement(<RatingStar />) as SVGElement;
   const num = i + 1;
@@ -38,6 +36,7 @@ const starInputs = Array(5).fill('').map((_, i) => {
   return { star, num };
 });
 
+const bookFiltersContainer = document.getElementById('books-filters') as HTMLDivElement;
 bookFiltersContainer.append(jsxToElement(<>
 
   <span class='label'>snippets</span>
