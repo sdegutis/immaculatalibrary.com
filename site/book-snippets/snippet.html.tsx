@@ -69,11 +69,7 @@ export default allSnippets.map(snippet => {
           </Typography>
           <div>
             <h3>Latest book snippets</h3>
-            <p>
-              <RandomBookSnippet>
-                <a href='#'>Random</a>
-              </RandomBookSnippet>
-            </p>
+            <p><RandomBookSnippet>Random</RandomBookSnippet></p>
             <SnippetsList snippets={allSnippets.slice(0, 7).map(snippetToViewable)} />
           </div>
 
