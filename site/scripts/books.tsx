@@ -20,10 +20,10 @@ const snippetsFilterSource = new Reactive('both');
 
 filtersContainer.append(jsxToElement(<>
   <span class='label'>snippets</span>
-  <span class='radios'>
-    <label><input type='radio' name='booksearch' onclick={() => snippetsFilterSource.set('both')} checked />Any</label>
-    <label><input type='radio' name='booksearch' onclick={() => snippetsFilterSource.set('some')} />Some</label>
-    <label><input type='radio' name='booksearch' onclick={() => snippetsFilterSource.set('none')} />None</label>
+  <span>
+    <label><input type='radio' name='has-snippets' onclick={() => snippetsFilterSource.set('both')} checked />Any</label>
+    <label><input type='radio' name='has-snippets' onclick={() => snippetsFilterSource.set('some')} />Some</label>
+    <label><input type='radio' name='has-snippets' onclick={() => snippetsFilterSource.set('none')} />None</label>
   </span>
 </>));
 
@@ -54,11 +54,11 @@ const starInputs = Array(5).fill('').map((_, i) => {
 filtersContainer.append(jsxToElement(<>
   <span class='label'>stars</span>
   <span class='radios'>
-    <label><input type='radio' name='bookstars' onclick={() => starsFilterSource.set('any')} checked />Any</label>
-    <label><input type='radio' name='bookstars' onclick={() => starsFilterSource.set('0')} />Unrated</label>
+    <label><input type='radio' name='stars' onclick={() => starsFilterSource.set('any')} checked />Any</label>
+    <label><input type='radio' name='stars' onclick={() => starsFilterSource.set('0')} />Unrated</label>
     {starInputs.map(star => <>
       <label>
-        <input type='radio' name='bookstars' onclick={() => starsFilterSource.set(star.num.toFixed())} />
+        <input type='radio' name='stars' onclick={() => starsFilterSource.set(star.num.toFixed())} />
         {star.star}
       </label>
     </>)}

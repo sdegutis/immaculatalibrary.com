@@ -10,20 +10,13 @@ export default <>
 
         <div>
 
+          <script src='/scripts/books.js' type='module'></script>
           <link rel="stylesheet" href='/css/page/books.css' />
 
           <h2>Find Books</h2>
-
-          <p>
-            <input autofocus placeholder='Search' type="text" id='search-books-input' />
-          </p>
-
-          <div id='books-filters'>
-          </div>
-
+          <p><input autofocus placeholder='Search' type="text" id='search-books-input' /></p>
+          <div id='books-filters' />
           <hr />
-
-          <script src='/scripts/books.js' type='module'></script>
           <p>Not sure what to read?<br /> Try a <a href='#' id='random-book-button'>Random Book</a>.</p>
 
         </div>
@@ -31,7 +24,6 @@ export default <>
         <div>
 
           <h2>Showing <span id='search-count' /> books</h2>
-
           <div id='search-results'>
             <ul>
               <li><LoadingItem lines={3} /></li>
