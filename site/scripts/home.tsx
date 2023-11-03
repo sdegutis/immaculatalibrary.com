@@ -44,6 +44,17 @@ async function reflectUrl() {
   alreadyLoaded = true;
 
   const snippet = await fetching;
+
+  const renderedBody = markdown.render(snippet.content);
+
+  const PREVIEW_LINES = 30;
+  const AVERAGE_LINE_LENGTH = 50;
+  let previewMarkdown;
+  const previewSplitSpot = snippet.content.indexOf(' ', PREVIEW_LINES * AVERAGE_LINE_LENGTH);
+  if (previewSplitSpot !== -1) {
+    previewMarkdown = snippet.content.slice(0, previewSplitSpot) + ' ...';
+  }
+
   container.replaceChildren(jsxToElement(<>
     <p>(Read <a href='#' onclick={doRandomBookSnippetReal}>another</a>)</p>
 
@@ -56,15 +67,15 @@ async function reflectUrl() {
       <small>By {snippet.bookAuthor}</small>
     </p>
     <div>
-      {snippet.previewMarkdown
+      {previewMarkdown
         ? <>
-          <div innerHTML={markdown.render(snippet.previewMarkdown)} />
+          <div innerHTML={markdown.render(previewMarkdown)} />
           <p><a href='#' onclick={(function (this: HTMLAnchorElement, e: Event) {
             e.preventDefault();
-            this.parentElement!.parentElement!.innerHTML = snippet.renderedBody;
+            this.parentElement!.parentElement!.innerHTML = renderedBody;
           }) as any}><i>Continue reading...</i></a></p>
         </>
-        : <div innerHTML={snippet.renderedBody} />}
+        : <div innerHTML={renderedBody} />}
     </div>
   </>));
 }
