@@ -13,6 +13,8 @@ const doRandomBookSnippetReal = (e: Event) => {
   doRandomBookSnippet(slugs => Math.floor(Math.random() * slugs.length));
 };
 
+let alreadyLoaded = false;
+
 window.addEventListener('popstate', e => {
   reflectUrl();
 });
@@ -38,7 +40,8 @@ async function reflectUrl() {
 
   const fetching = fetch(`/scripts/data/snippets/${slug}.json`).then<SnippetJson>(res => res.json());
 
-  await new Promise(r => setTimeout(r, 1000));
+  await new Promise(r => setTimeout(r, alreadyLoaded ? 300 : 1000));
+  alreadyLoaded = true;
 
   const snippet = await fetching;
   container.replaceChildren(jsxToElement(<>
