@@ -1,12 +1,16 @@
 .loading-item {
-  margin: 0.5em 0;
   height: 1em;
   border-radius: 3px;
-  background-color: currentColor;
-  color: #222;
+  background-color: #222;
+  color: transparent;
   position: relative;
   overflow: hidden;
-  display: block;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+blockquote p:has(.loading-item) {
+  text-indent: 0;
 }
 
 .loading-item::after {
