@@ -15,3 +15,16 @@ export const LoadingLine: JSX.Component<{ size: string }> = ({ size }) => <>
   <link rel='stylesheet' href='/css/components/loading.css' />
   <span style={`width: ${size};`} class='loading-item' />
 </>;
+
+export const HomeLoading = () => <>
+  <LoadingLine size="7em" />
+  <LoadingParagraph lines={7} />
+  <blockquote>
+    <LoadingParagraph lines={7} fullWidth />
+    <LoadingParagraph lines={7} fullWidth />
+    <LoadingParagraph lines={7} fullWidth />
+    <LoadingParagraph lines={7} fullWidth />
+    <LoadingParagraph lines={7} fullWidth />
+  </blockquote>
+  <LoadingLine size="7em" />
+</>;

@@ -1,6 +1,6 @@
 import { Column, Spaced } from './components/column.js';
-import { LoadingParagraph } from './components/loading.js';
 import { TypicalPage } from './components/page.js';
+import { LoadingParagraph } from './shared/loading.js';
 
 export default <>
   <TypicalPage title='Books' image='/img/categories/reference-big.jpg'>

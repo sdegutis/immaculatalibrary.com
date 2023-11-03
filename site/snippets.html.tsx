@@ -1,7 +1,7 @@
 import { Column, Spaced } from "./components/column.js";
-import { LoadingLine, LoadingParagraph } from "./components/loading.js";
 import { TypicalPage } from "./components/page.js";
 import { RandomBookSnippet } from "./components/random-snippet.js";
+import { LoadingLine, LoadingParagraph } from "./shared/loading.js";
 
 export default <>
   <TypicalPage title="Book Snippets" image='/img/categories/reference-big.jpg'>

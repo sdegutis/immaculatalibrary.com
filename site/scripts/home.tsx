@@ -1,11 +1,10 @@
 import MarkdownIt from 'https://cdn.jsdelivr.net/npm/markdown-it@13.0.2/+esm';
 import { formatDate } from "../shared/format-date.js";
+import { HomeLoading } from '../shared/loading.js';
 import { mdOptions } from '../shared/markdown.js';
 import { SnippetJson } from './data/snippets/snippet.json.js';
 import { jsxToElement } from './jsx-nodes.js';
 import { snippetIds } from "./snippet-ids.js";
-
-await new Promise(r => setTimeout(r, 1000));
 
 const markdown = MarkdownIt(mdOptions);
 
@@ -33,8 +32,15 @@ async function reflectUrl() {
   const slug = window.location.hash.slice(1);
   if (!slug) return;
 
-  const snippet = await fetch(`/scripts/data/snippets/${slug}.json`).then<SnippetJson>(res => res.json());
   const container = document.getElementById('random-book-snippet') as HTMLDivElement;
+
+  container.replaceChildren(jsxToElement(<HomeLoading />));
+
+  const fetching = fetch(`/scripts/data/snippets/${slug}.json`).then<SnippetJson>(res => res.json());
+
+  await new Promise(r => setTimeout(r, 1000));
+
+  const snippet = await fetching;
   container.replaceChildren(jsxToElement(<>
     <p>(Read <a href='#' onclick={doRandomBookSnippetReal}>another</a>)</p>
 

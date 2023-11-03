@@ -1,11 +1,11 @@
 import { Column, Spaced } from "./components/column.js";
-import { LoadingLine, LoadingParagraph } from "./components/loading.js";
 import { Navlinks } from "./components/navlinks.js";
 import { EmptyPage } from "./components/page.js";
 import { QuickLinks } from "./components/quicklinks.js";
 import { SiteFooter } from "./components/site-footer.js";
 import { Typography } from "./components/typography.js";
 import { featuredBooks } from "./model/featured.js";
+import { HomeLoading } from "./shared/loading.js";
 
 export default <>
   <EmptyPage>
@@ -49,16 +49,7 @@ export default <>
               <h3>Random Book Snippet</h3>
               <Typography>
                 <div id="random-book-snippet">
-                  <LoadingLine size="7em" />
-                  <LoadingParagraph lines={7} />
-                  <blockquote>
-                    <LoadingParagraph lines={7} fullWidth />
-                    <LoadingParagraph lines={7} fullWidth />
-                    <LoadingParagraph lines={7} fullWidth />
-                    <LoadingParagraph lines={7} fullWidth />
-                    <LoadingParagraph lines={7} fullWidth />
-                  </blockquote>
-                  <LoadingLine size="7em" />
+                  <HomeLoading />
                 </div>
               </Typography>
             </div>
