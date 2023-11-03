@@ -6,6 +6,7 @@
   color: #222;
   position: relative;
   overflow: hidden;
+  display: block;
 }
 
 .loading-item::after {

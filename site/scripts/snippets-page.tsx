@@ -11,7 +11,7 @@ const filtersContainer = document.getElementById('snippets-filters') as HTMLDivE
 
 const tagsFilterSource = new Reactive('both');
 
-filtersContainer.append(jsxToElement(<>
+filtersContainer.replaceChildren(jsxToElement(<>
   <span class='label'>tags</span>
   <span>
     <label><input type='radio' name='has-tags' onclick={() => tagsFilterSource.set('both')} checked />Any</label>
