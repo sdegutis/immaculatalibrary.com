@@ -20,7 +20,7 @@ handlers.set('/create-snippet', body => {
 
   snippet.save();
 
-  return `/book-snippets/${slug}.html`;
+  return snippet.route;
 });
 
 export default <>

@@ -34,7 +34,7 @@ export class Snippet extends DataFileWithDate<SnippetFile> {
 
     this.data.tags ??= [];
 
-    this.route = `/book-snippets/${this.slug}.html`;
+    this.route = `/snippets/${this.slug}.html`;
 
     this.archiveLink = `https://archive.org/details/${this.data.archiveSlug}/page/${this.data.archivePage}?view=theater`;
     this.renderedBody = markdown.render(this.content);
