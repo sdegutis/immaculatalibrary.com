@@ -108,9 +108,9 @@ export default allBooks.map(book => [`${book.slug}.html`, <>
             <p><LoadingLine width="7em" /></p>
             <p><LoadingLine width="100%" height="2em" /></p>
             <p style='display:flex; gap:1em'>
-              <LoadingLine width='1.4em' height='2.4em' />
-              <LoadingLine width='1.4em' height='2.4em' />
-              <LoadingLine width='1.4em' height='2.4em' />
+              <LoadingLine width='2em' height='2.4em' />
+              <LoadingLine width='3em' height='2.4em' />
+              <LoadingLine width='2em' height='2.4em' />
             </p>
             <ul>
               <li><LoadingParagraph lines={2} /></li>

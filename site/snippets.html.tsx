@@ -32,9 +32,9 @@ export default <>
           <h2>Showing <span id='search-count' /> book snippets</h2>
           <div id='search-results'>
             <p style='display:flex; gap:1em'>
-              <LoadingLine width='1.4em' height='2.4em' />
-              <LoadingLine width='1.4em' height='2.4em' />
-              <LoadingLine width='1.4em' height='2.4em' />
+              <LoadingLine width='2em' height='2.4em' />
+              <LoadingLine width='3em' height='2.4em' />
+              <LoadingLine width='2em' height='2.4em' />
             </p>
             <ul>
               <li><LoadingParagraph lines={3} /></li>
