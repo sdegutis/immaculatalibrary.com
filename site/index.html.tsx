@@ -54,11 +54,6 @@ export default <>
               </Typography>
             </div>
             <script type='module' src='/scripts/home.js' defer />
-
-            {/* <h3>Book Snippets by Tag</h3>
-          <p>{sortedTags().map(tag => <>
-            <a href={tag.route}>#{tag.oneword}</a> { }
-          </>)}</p> */}
           </div>
 
           <div class='hidden-on-mobile'>

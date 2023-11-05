@@ -11,11 +11,9 @@ export class Tag {
   }
 
   oneword;
-  route;
 
   constructor(public name: string) {
     this.oneword = this.name.split(' ').map(capitalize).join('');
-    this.route = `/book-snippets/tag/${this.oneword.toLowerCase()}.html`;
   }
 
 }

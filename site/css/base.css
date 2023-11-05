@@ -48,7 +48,8 @@ hr {
 /* Forms */
 
 :read-write,
-button {
+button,
+select {
   padding: 0.5em;
   background-color: var(--bgalt);
   color: inherit;
@@ -62,7 +63,8 @@ button {
 }
 
 :read-write:focus,
-button:active {
+button:active,
+select:focus {
   outline: 1px solid var(--blue-bg);
   background-color: var(--bgalt);
 }

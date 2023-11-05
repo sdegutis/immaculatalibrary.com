@@ -9,8 +9,9 @@ const snippetsFetch = fetch('/scripts/data/snippets.json').then<SnippetJson[]>(r
 await sleep(1);
 const snippets = await snippetsFetch;
 
+const tags = [...new Set(snippets.flatMap(s => s.tags))].sort();
 
-const tagsFilterSource = new Reactive('both');
+const currentTag = new Reactive(new URL(window.location.href).searchParams.get('tag') ?? '_any');
 const searchTerm = new Reactive('');
 
 document.getElementById('filters-container')!.replaceChildren(jsxToElement(<>
@@ -18,12 +19,15 @@ document.getElementById('filters-container')!.replaceChildren(jsxToElement(<>
     searchTerm.set(this.value.trim().toLowerCase());
   }} /></p>
   <div id='snippets-filters'>
-    <span class='label'>tags</span>
-    <span>
-      <label><input type='radio' name='has-tags' onclick={() => tagsFilterSource.set('both')} checked />Any</label>
-      <label><input type='radio' name='has-tags' onclick={() => tagsFilterSource.set('some')} />Some</label>
-      <label><input type='radio' name='has-tags' onclick={() => tagsFilterSource.set('none')} />None</label>
-    </span>
+    <span class='label'>tag</span>
+    <select onchange={function (this: HTMLSelectElement) { currentTag.set(this.value) }}>
+      <option value='' selected={currentTag.val === '_any'}>Any</option>
+      <option value='' selected={currentTag.val === '_none'}>None</option>
+      <hr />
+      {tags.map(tag =>
+        <option value={tag} selected={currentTag.val === tag}>{tag}</option>
+      )}
+    </select>
   </div>
   <hr />
   <p>
@@ -39,11 +43,11 @@ const { results, matchingCount } = createSearch({
   data: snippets,
   filters: [
     {
-      source: tagsFilterSource,
+      source: currentTag,
       matches: (snippet: SnippetJson) => {
-        if (tagsFilterSource.val === 'none') return snippet.tags.length === 0;
-        if (tagsFilterSource.val === 'some') return snippet.tags.length !== 0;
-        return true;
+        if (currentTag.val === '_any') return true;
+        if (currentTag.val === '_none') return snippet.tags.length === 0;
+        return snippet.tags.includes(currentTag.val);
       },
     },
     {

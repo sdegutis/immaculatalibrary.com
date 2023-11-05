@@ -49,7 +49,7 @@ export default allSnippets.map(snippet => {
 
             <p>
               {[...snippet.tags].map(tag => <>
-                <a href={tag.route}>#{tag.oneword}</a> { }
+                <a href={`/snippets.html?tag=${tag.name}`}>#{tag.oneword}</a> { }
               </>)}
             </p>
 

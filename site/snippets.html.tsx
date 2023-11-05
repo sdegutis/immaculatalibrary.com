@@ -18,7 +18,7 @@ export default <>
             <LoadingLine width="100%" height="2em" />
             <div id='snippets-filters'>
               <LoadingLine width="2em" />
-              <LoadingLine width="7em" />
+              <LoadingLine width="100%" height="2em" />
             </div>
             <hr />
             <br /><LoadingLine width="12em" />
