@@ -33,18 +33,25 @@ export function createSearch<T>({ data, Item, filters }: {
   Item: JSX.Component<{ item: T }>;
   filters: SearchFilter<T>[];
 }) {
-  const matchingItems = new Reactive<T[]>([]);
-  const matchingCount = new Reactive(0);
-
-  matchingItems.onChange(() => matchingCount.set(matchingItems.val.length));
-
-  const page = new Reactive(0);
-  const visibleItems = new Reactive<T[]>([]);
-
   const PER_PAGE = 7;
 
-  const highestPage = new Reactive(0);
-  matchingItems.onChange(() => highestPage.set(Math.max(0, Math.floor((matchingItems.val.length - 1) / PER_PAGE))));
+  const matchingItems = new Reactive<T[]>([]);
+  const page = new Reactive(0);
+
+  const matchingCount = Reactive.from({ matchingItems }, deps => deps.matchingItems.val.length);
+  const visibleItems = Reactive.from({
+    matchingItems,
+    page
+  }, deps => {
+    const start = deps.page.val * PER_PAGE;
+    return deps.matchingItems.val.slice(start, start + PER_PAGE);
+  });
+
+  const highestPage = Reactive.from({
+    matchingItems,
+  }, (deps) => {
+    return Math.max(0, Math.floor((deps.matchingItems.val.length - 1) / PER_PAGE));
+  });
 
   const prevButton = jsxToElement(<a href='#' onclick={function (this: HTMLAnchorElement, e: Event) {
     e.preventDefault();
@@ -63,11 +70,9 @@ export function createSearch<T>({ data, Item, filters }: {
   highestPage.onChange(reflectNextButtonEnabled);
   page.onChange(reflectNextButtonEnabled);
 
-  const reflectPrevButtonEnabled = () => {
+  page.onChange((() => {
     prevButton.toggleAttribute('disabled', page.val === 0);
-  };
-
-  page.onChange(reflectPrevButtonEnabled);
+  }));
 
   const currentPage = jsxToElement(<span />);
   page.onChange(() => currentPage.textContent = `Page ${page.val + 1}`);
@@ -85,11 +90,6 @@ export function createSearch<T>({ data, Item, filters }: {
   const search = () => {
     matchingItems.set(data.filter(item => filters.every(filter => filter.matches(item))));
   };
-
-  matchingItems.onChange(() => {
-    const start = page.val * PER_PAGE;
-    visibleItems.set(matchingItems.val.slice(start, start + PER_PAGE));
-  });
 
   page.onChange(search);
 
