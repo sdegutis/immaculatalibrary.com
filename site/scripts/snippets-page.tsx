@@ -21,12 +21,16 @@ document.getElementById('filters-container')!.replaceChildren(jsxToElement(<>
   <div id='snippets-filters'>
     <span class='label'>tag</span>
     <select onchange={function (this: HTMLSelectElement) { currentTag.set(this.value) }}>
-      <option value='' selected={currentTag.val === '_any'}>Any</option>
-      <option value='' selected={currentTag.val === '_none'}>None</option>
-      <hr />
-      {tags.map(tag =>
-        <option value={tag} selected={currentTag.val === tag}>{tag}</option>
-      )}
+      <optgroup label='Whether it has tags'>
+        <option value='_any' selected={currentTag.val === '_any'}>Any</option>
+        <option value='_some' selected={currentTag.val === '_some'}>Some</option>
+        <option value='_none' selected={currentTag.val === '_none'}>None</option>
+      </optgroup>
+      <optgroup label='Tags'>
+        {tags.map(tag =>
+          <option value={tag} selected={currentTag.val === tag}>{tag}</option>
+        )}
+      </optgroup>
     </select>
   </div>
   <hr />
@@ -46,6 +50,7 @@ const { results, matchingCount } = createSearch({
       source: currentTag,
       matches: (snippet: SnippetJson) => {
         if (currentTag.val === '_any') return true;
+        if (currentTag.val === '_some') return snippet.tags.length > 0;
         if (currentTag.val === '_none') return snippet.tags.length === 0;
         return snippet.tags.includes(currentTag.val);
       },
