@@ -1,5 +1,6 @@
 import { Column, Spaced } from "./components/column.js";
 import { TypicalPage } from "./components/page.js";
+import { PaginatorLoading } from "./components/paginator.js";
 import { LoadingLine, LoadingParagraph } from "./shared/loading.js";
 
 export default <>
@@ -31,11 +32,7 @@ export default <>
 
           <h2>Showing <span id='search-count' /> book snippets</h2>
           <div id='search-results'>
-            <p style='display:flex; gap:1em'>
-              <LoadingLine width='2em' height='2.4em' />
-              <LoadingLine width='3em' height='2.4em' />
-              <LoadingLine width='2em' height='2.4em' />
-            </p>
+            <PaginatorLoading />
             <ul>
               <li><LoadingParagraph lines={3} /></li>
               <li><LoadingParagraph lines={3} /></li>

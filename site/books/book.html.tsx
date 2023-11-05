@@ -1,5 +1,6 @@
 import { Column, Spaced } from "../components/column.js";
 import { TypicalPage } from "../components/page.js";
+import { PaginatorLoading } from "../components/paginator.js";
 import { Rating } from "../components/rating.js";
 import { Typography } from "../components/typography.js";
 import { markdown } from "../core/helpers.js";
@@ -107,11 +108,7 @@ export default allBooks.map(book => [`${book.slug}.html`, <>
           <div id='snippets-in-book' data-book={book.slug}>
             <p><LoadingLine width="7em" /></p>
             <p><LoadingLine width="100%" height="2em" /></p>
-            <p style='display:flex; gap:1em'>
-              <LoadingLine width='2em' height='2.4em' />
-              <LoadingLine width='3em' height='2.4em' />
-              <LoadingLine width='2em' height='2.4em' />
-            </p>
+            <PaginatorLoading />
             <ul>
               <li><LoadingParagraph lines={2} /></li>
               <li><LoadingParagraph lines={2} /></li>

@@ -81,7 +81,7 @@ export function createSearch<T>({ data, Item, filters, perPage = 7 }: {
     prevButton.toggleAttribute('disabled', page.val === 0);
   }));
 
-  const currentPage = jsxToElement(<span />);
+  const currentPage = jsxToElement(<span style='min-width:7em; text-align:center' />);
   const reflectCurrentPage = () => {
     if (matchingCount.val === 0) {
       currentPage.textContent = 'n/a';
