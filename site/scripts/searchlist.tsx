@@ -38,22 +38,69 @@ export function createSearch<T>({ data, Item, filters }: {
 
   matchingItems.onChange(() => matchingCount.set(matchingItems.val.length));
 
+  const page = new Reactive(0);
+  const visibleItems = new Reactive<T[]>([]);
+
+  const PER_PAGE = 7;
+
+  const highestPage = new Reactive(0);
+  matchingItems.onChange(() => highestPage.set(Math.max(0, Math.floor((matchingItems.val.length - 1) / PER_PAGE))));
+
+  const prevButton = jsxToElement(<a href='#' onclick={function (this: HTMLAnchorElement, e: Event) {
+    e.preventDefault();
+    page.set(Math.max(0, page.val - 1));
+  }}>Previous</a>) as HTMLAnchorElement;
+
+  const nextButton = jsxToElement(<a href='#' onclick={function (this: HTMLAnchorElement, e: Event) {
+    e.preventDefault();
+    page.set(Math.min(highestPage.val, page.val + 1));
+  }}>Next</a>) as HTMLAnchorElement;
+
+  const reflectNextButtonEnabled = () => {
+    console.log('efld', page.val, highestPage.val);
+    nextButton.toggleAttribute('disabled', page.val === highestPage.val);
+  };
+
+  highestPage.onChange(reflectNextButtonEnabled);
+  page.onChange(reflectNextButtonEnabled);
+
+  const reflectPrevButtonEnabled = () => {
+    prevButton.toggleAttribute('disabled', page.val === 0);
+  };
+
+  page.onChange(reflectPrevButtonEnabled);
+
+  const currentPage = jsxToElement(<span>Page 1</span>);
+  page.onChange(() => currentPage.textContent = `Page ${page.val + 1}`);
+
   const results = jsxToElement(<>
+    <p style='display:flex; gap:1em'>{prevButton} {currentPage} {nextButton}</p>
     <NotFound visibleCount={matchingCount} />
     <ul>
       {data.map(item => jsxToElement(
-        <LiveItem item={item} visibleItems={matchingItems} Item={Item} />
+        <LiveItem item={item} visibleItems={visibleItems} Item={Item} />
       ))}
     </ul>
   </>);
 
   const search = () => {
     matchingItems.set(data.filter(item => filters.every(filter => filter.matches(item))));
+    const start = page.val * PER_PAGE;
+    visibleItems.set(matchingItems.val.slice(start, start + PER_PAGE));
+    console.log(page.val);
   };
 
+  page.onChange(search);
+
   for (const filter of filters) {
-    filter.source.onChange(search);
+    filter.source.onChange(() => {
+      page.set(0);
+      search();
+    });
   }
+
+  reflectPrevButtonEnabled();
+  reflectNextButtonEnabled();
 
   return { results, matchingCount, search };
 }

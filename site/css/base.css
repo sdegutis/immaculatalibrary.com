@@ -31,6 +31,10 @@ a {
   color: var(--blue-bg);
 }
 
+[disabled] {
+  opacity: 0.5;
+}
+
 :is(ul, ol) {
   padding-left: 20px;
 }
