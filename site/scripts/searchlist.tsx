@@ -57,7 +57,6 @@ export function createSearch<T>({ data, Item, filters }: {
   }}>Next</a>) as HTMLAnchorElement;
 
   const reflectNextButtonEnabled = () => {
-    console.log('efld', page.val, highestPage.val);
     nextButton.toggleAttribute('disabled', page.val === highestPage.val);
   };
 
@@ -87,7 +86,6 @@ export function createSearch<T>({ data, Item, filters }: {
     matchingItems.set(data.filter(item => filters.every(filter => filter.matches(item))));
     const start = page.val * PER_PAGE;
     visibleItems.set(matchingItems.val.slice(start, start + PER_PAGE));
-    console.log(page.val);
   };
 
   page.onChange(search);
