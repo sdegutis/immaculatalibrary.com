@@ -4,8 +4,9 @@ import { HomeLoading } from '../shared/loading.js';
 import { mdOptions } from '../shared/markdown.js';
 import { SnippetJson } from './data/snippets/snippet.json.js';
 import { jsxToElement } from './jsx-nodes.js';
-import { snippetIds } from "./snippet-ids.js";
 import { randomElement, sleep } from './util.js';
+
+const snippetIds = fetch('/scripts/data/snippet-ids.json').then<string[]>(res => res.json());
 
 const markdown = MarkdownIt(mdOptions);
 
