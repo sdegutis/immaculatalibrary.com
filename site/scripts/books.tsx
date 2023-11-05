@@ -13,10 +13,6 @@ const snippetsFilterSource = new Reactive('both');
 const starsFilterSource = new Reactive('any');
 const searchTerm = new Reactive('');
 
-document.getElementById('random-book-button')!.onclick = (e) => {
-  (e.target as HTMLAnchorElement).href = randomElement(books).route;
-};
-
 document.getElementById('filters-container')!.replaceChildren(jsxToElement(<>
   <p>
     <input autofocus placeholder='Search' type="text" oninput={(e: Event) => {
@@ -52,6 +48,13 @@ document.getElementById('filters-container')!.replaceChildren(jsxToElement(<>
       })}
     </span>
   </div>
+  <hr />
+  <p>
+    Not sure what to read?<br />
+    Try a <a href='#' onclick={(e: Event) => {
+      (e.target as HTMLAnchorElement).href = randomElement(books).route;
+    }}>Random Book</a>.
+  </p>
 </>));
 
 

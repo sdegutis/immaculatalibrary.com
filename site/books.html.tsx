@@ -22,9 +22,10 @@ export default <>
               <LoadingLine width="4em" />
               <LoadingLine width="14em" />
             </div>
+            <hr />
+            <br /><LoadingLine width="12em" />
+            <br /><LoadingLine width="12em" />
           </div>
-          <hr />
-          <p>Not sure what to read?<br /> Try a <a href='#' id='random-book-button'>Random Book</a>.</p>
 
         </div>
 
