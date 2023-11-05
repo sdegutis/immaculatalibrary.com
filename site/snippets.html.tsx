@@ -1,6 +1,5 @@
 import { Column, Spaced } from "./components/column.js";
 import { TypicalPage } from "./components/page.js";
-import { RandomBookSnippet } from "./components/random-snippet.js";
 import { LoadingLine, LoadingParagraph } from "./shared/loading.js";
 
 export default <>
@@ -15,13 +14,16 @@ export default <>
           <link rel="stylesheet" href='/css/page/snippets.css' />
 
           <h2>Find Book Snippets</h2>
-          <p><input placeholder='Search' autofocus type="text" id="search-book-snippets-field" /></p>
-          <div id='snippets-filters'>
-            <LoadingLine width="2em" />
-            <LoadingLine width="7em" />
+          <div id='filters-container'>
+            <LoadingLine width="100%" height="2em" />
+            <div id='snippets-filters'>
+              <LoadingLine width="2em" />
+              <LoadingLine width="7em" />
+            </div>
+            <hr />
+            <br /><LoadingLine width="12em" />
+            <br /><LoadingLine width="12em" />
           </div>
-          <hr />
-          <p>Not sure what to read?<br /> Try a <RandomBookSnippet>Random Book Snippet</RandomBookSnippet>.</p>
 
         </div>
 
