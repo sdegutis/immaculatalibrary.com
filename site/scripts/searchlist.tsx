@@ -30,13 +30,12 @@ function LiveItem<T>({ Item, visibleItems, item }: {
   return <>{element}</>;
 }
 
-export function createSearch<T>({ data, Item, filters }: {
+export function createSearch<T>({ data, Item, filters, perPage = 7 }: {
   data: T[];
   Item: JSX.Component<{ item: T }>;
   filters: SearchFilter<T>[];
+  perPage?: number,
 }) {
-  const PER_PAGE = 7;
-
   const matchingItems = new Reactive<T[]>([]);
   const page = new Reactive(0);
 
@@ -45,14 +44,14 @@ export function createSearch<T>({ data, Item, filters }: {
     matchingItems,
     page
   }, deps => {
-    const start = deps.page.val * PER_PAGE;
-    return deps.matchingItems.val.slice(start, start + PER_PAGE);
+    const start = deps.page.val * perPage;
+    return deps.matchingItems.val.slice(start, start + perPage);
   });
 
   const highestPage = Reactive.from({
     matchingItems,
   }, (deps) => {
-    return Math.max(0, Math.floor((deps.matchingItems.val.length - 1) / PER_PAGE));
+    return Math.max(0, Math.floor((deps.matchingItems.val.length - 1) / perPage));
   });
 
   const prevButton = jsxToElement<HTMLButtonElement>(<button
