@@ -14,3 +14,7 @@
   cursor: default;
   user-select: none;
 }
+
+#search-results {
+  min-height: 50em;
+}
