@@ -58,7 +58,7 @@ document.getElementById('filters-container')!.replaceChildren(jsxToElement(<>
 </>));
 
 
-const { results, visibleCount, search } = createSearch({
+const { results, matchingCount, search } = createSearch({
   data: books,
   filters: [
     {
@@ -93,8 +93,8 @@ const { results, visibleCount, search } = createSearch({
 
 document.getElementById('search-results')!.replaceChildren(results);
 
-visibleCount.onChange(() => {
-  document.getElementById('search-count')!.textContent = visibleCount.val.toFixed();
+matchingCount.onChange(() => {
+  document.getElementById('search-count')!.textContent = matchingCount.val.toFixed();
 });
 
 search();

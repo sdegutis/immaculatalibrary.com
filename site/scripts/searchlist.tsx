@@ -33,27 +33,27 @@ export function createSearch<T>({ data, Item, filters }: {
   Item: JSX.Component<{ item: T }>;
   filters: SearchFilter<T>[];
 }) {
-  const visibleItems = new Reactive<T[]>([]);
-  const visibleCount = new Reactive(0);
+  const matchingItems = new Reactive<T[]>([]);
+  const matchingCount = new Reactive(0);
 
-  visibleItems.onChange(() => visibleCount.set(visibleItems.val.length));
+  matchingItems.onChange(() => matchingCount.set(matchingItems.val.length));
 
   const results = jsxToElement(<>
-    <NotFound visibleCount={visibleCount} />
+    <NotFound visibleCount={matchingCount} />
     <ul>
       {data.map(item => jsxToElement(
-        <LiveItem item={item} visibleItems={visibleItems} Item={Item} />
+        <LiveItem item={item} visibleItems={matchingItems} Item={Item} />
       ))}
     </ul>
   </>);
 
   const search = () => {
-    visibleItems.set(data.filter(item => filters.every(filter => filter.matches(item))));
+    matchingItems.set(data.filter(item => filters.every(filter => filter.matches(item))));
   };
 
   for (const filter of filters) {
     filter.source.onChange(search);
   }
 
-  return { results, visibleCount, search };
+  return { results, matchingCount, search };
 }
