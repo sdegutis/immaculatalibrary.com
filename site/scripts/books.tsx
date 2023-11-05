@@ -15,8 +15,8 @@ const searchTerm = new Reactive('');
 
 document.getElementById('filters-container')!.replaceChildren(jsxToElement(<>
   <p>
-    <input autofocus placeholder='Search' type="text" oninput={(e: Event) => {
-      searchTerm.set((e.target as HTMLInputElement).value.trim().toLowerCase());
+    <input autofocus placeholder='Search' type="text" oninput={function (this: HTMLInputElement) {
+      searchTerm.set(this.value.trim().toLowerCase());
     }} />
   </p>
   <div id='books-filters'>
@@ -51,8 +51,8 @@ document.getElementById('filters-container')!.replaceChildren(jsxToElement(<>
   <hr />
   <p>
     Not sure what to read?<br />
-    Try a <a href='#' onclick={(e: Event) => {
-      (e.target as HTMLAnchorElement).href = randomElement(books).route;
+    Try a <a href='#' onclick={function (this: HTMLAnchorElement) {
+      this.href = randomElement(books).route;
     }}>Random Book</a>.
   </p>
 </>));
