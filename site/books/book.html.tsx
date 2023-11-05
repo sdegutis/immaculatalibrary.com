@@ -120,6 +120,9 @@ export default allBooks.map(book => [`${book.slug}.html`, <>
               <li><LoadingParagraph lines={2} /></li>
               <li><LoadingParagraph lines={2} /></li>
               <li><LoadingParagraph lines={2} /></li>
+              <li><LoadingParagraph lines={2} /></li>
+              <li><LoadingParagraph lines={2} /></li>
+              <li><LoadingParagraph lines={2} /></li>
             </ul>
           </div>
         </div>

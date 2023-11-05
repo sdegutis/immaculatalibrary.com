@@ -17,6 +17,7 @@ if (snippetsInBook.length > 0) {
 
   const { results } = createSearch({
     data: snippetsInBook,
+    perPage: 10,
     filters: [{
       source: searchTerm,
       matches: (snippet: SnippetJson) => (
