@@ -61,6 +61,10 @@ select {
   font-size: inherit;
 }
 
+button {
+  cursor: pointer;
+}
+
 :read-write:focus,
 button:active,
 select:focus {
