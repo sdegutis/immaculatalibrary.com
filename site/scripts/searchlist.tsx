@@ -55,15 +55,23 @@ export function createSearch<T>({ data, Item, filters }: {
     return Math.max(0, Math.floor((deps.matchingItems.val.length - 1) / PER_PAGE));
   });
 
-  const prevButton = jsxToElement<HTMLAnchorElement>(<a href='#' onclick={function (this: HTMLAnchorElement, e: Event) {
-    e.preventDefault();
-    page.set(Math.max(0, page.val - 1));
-  }}>Previous</a>);
+  const prevButton = jsxToElement<HTMLButtonElement>(<button
+    style='width:2em'
+    href='#'
+    onclick={function (this: HTMLButtonElement, e: Event) {
+      e.preventDefault();
+      page.set(Math.max(0, page.val - 1));
+    }}
+  >&lsaquo;</button>);
 
-  const nextButton = jsxToElement<HTMLAnchorElement>(<a href='#' onclick={function (this: HTMLAnchorElement, e: Event) {
-    e.preventDefault();
-    page.set(Math.min(highestPage.val, page.val + 1));
-  }}>Next</a>);
+  const nextButton = jsxToElement<HTMLButtonElement>(<button
+    style='width:2em'
+    href='#'
+    onclick={function (this: HTMLButtonElement, e: Event) {
+      e.preventDefault();
+      page.set(Math.min(highestPage.val, page.val + 1));
+    }}
+  >&rsaquo;</button>);
 
   const reflectNextButtonEnabled = () => {
     nextButton.toggleAttribute('disabled', page.val === highestPage.val);
@@ -77,10 +85,10 @@ export function createSearch<T>({ data, Item, filters }: {
   }));
 
   const currentPage = jsxToElement(<span />);
-  page.onChange(() => currentPage.textContent = `Page ${page.val + 1}`);
+  page.onChange(() => currentPage.textContent = `${page.val + 1}`);
 
   const results = jsxToElement(<>
-    <p style='display:flex; gap:1em'>{prevButton} {currentPage} {nextButton}</p>
+    <p style='display:flex; gap:1em; justify-content:space-evenly; align-items:baseline'>{prevButton} {currentPage} {nextButton}</p>
     <NotFound visibleCount={matchingCount} />
     <ul>
       {data.map(item => jsxToElement(

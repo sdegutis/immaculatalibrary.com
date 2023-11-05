@@ -40,7 +40,14 @@ if (snippetsInBook.length > 0) {
         this.href = randomElement(snippetsInBook).route;
       }}>Random in book</a>
     </p>
-    <input placeholder='Search within book' autofocus oninput={function (this: HTMLInputElement) { searchTerm.set(this.value.trim().toLowerCase()) }} />
+    <input
+      placeholder='Search within book'
+      autofocus
+      style='width: 100%'
+      oninput={function (this: HTMLInputElement) {
+        searchTerm.set(this.value.trim().toLowerCase())
+      }}
+    />
     {results}
   </>));
 }

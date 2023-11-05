@@ -15,7 +15,7 @@ const searchTerm = new Reactive('');
 
 document.getElementById('filters-container')!.replaceChildren(jsxToElement(<>
   <p>
-    <input autofocus placeholder='Search' type="text" oninput={function (this: HTMLInputElement) {
+    <input autofocus style='width: 100%' placeholder='Search' type="text" oninput={function (this: HTMLInputElement) {
       searchTerm.set(this.value.trim().toLowerCase());
     }} />
   </p>

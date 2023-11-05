@@ -15,7 +15,7 @@ const currentTag = new Reactive(new URL(window.location.href).searchParams.get('
 const searchTerm = new Reactive('');
 
 document.getElementById('filters-container')!.replaceChildren(jsxToElement(<>
-  <p><input placeholder='Search' autofocus type="text" oninput={function (this: HTMLInputElement) {
+  <p><input style='width: 100%' placeholder='Search' autofocus type="text" oninput={function (this: HTMLInputElement) {
     searchTerm.set(this.value.trim().toLowerCase());
   }} /></p>
   <div id='snippets-filters'>
