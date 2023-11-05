@@ -36,8 +36,6 @@
 
 #snippets-in-book ul {
   padding-left: 0;
-  max-height: 700px;
-  overflow: auto;
   list-style-type: none;
 }
 
