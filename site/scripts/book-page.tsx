@@ -40,5 +40,6 @@ container.replaceChildren(jsxToElement(<>
       this.href = randomElement(snippetsInBook).route;
     }}>Random in book</a>
   </p>
+  <input autofocus oninput={function (this: HTMLInputElement) { searchTerm.set(this.value.trim().toLowerCase()) }} />
   {results}
 </>));

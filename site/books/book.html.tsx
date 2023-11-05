@@ -106,6 +106,7 @@ export default allBooks.map(book => [`${book.slug}.html`, <>
           <h3>Book snippets</h3>
           <div id='snippets-in-book' data-book={book.slug}>
             <p><LoadingLine width="7em" /></p>
+            <p><LoadingLine width="100%" height="2em" /></p>
             <p style='display:flex; gap:1em'>
               <LoadingLine width='4em' height='1.6em' />
               <LoadingLine width='4em' height='1.6em' />
