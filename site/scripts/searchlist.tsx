@@ -88,7 +88,7 @@ export function createSearch<T>({ data, Item, filters }: {
   page.onChange(() => currentPage.textContent = `${page.val + 1}`);
 
   const results = jsxToElement(<>
-    <p style='display:flex; gap:1em; justify-content:space-evenly; align-items:baseline'>{prevButton} {currentPage} {nextButton}</p>
+    <p style='display:flex; gap:1em; align-items:baseline'>{prevButton} {currentPage} {nextButton}</p>
     <NotFound visibleCount={matchingCount} />
     <ul>
       {data.map(item => jsxToElement(
