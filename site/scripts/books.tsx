@@ -32,7 +32,7 @@ document.getElementById('filters-container')!.replaceChildren(jsxToElement(<>
       <label><input type='radio' name='stars' onclick={() => starsFilterSource.set('any')} checked />Any</label>
       <label><input type='radio' name='stars' onclick={() => starsFilterSource.set('0')} />Unrated</label>
       {Array(5).fill(0).map((_, i) => {
-        const star = jsxToElement(<RatingStar />) as SVGElement;
+        const star = jsxToElement<SVGElement>(<RatingStar />);
         const num = i + 1;
 
         starsFilterSource.onChange(() => {

@@ -25,15 +25,17 @@ function pushChildren(el: HTMLElement | SVGElement | DocumentFragment, children:
   return added;
 }
 
-export function jsxToElement(jsx: JSX.Element) {
+type JSXElementKind = HTMLElement | SVGElement | DocumentFragment;
+
+export function jsxToElement<T extends JSXElementKind = JSXElementKind>(jsx: JSX.Element): T {
   if (jsx.tag === '') {
     const el = document.createDocumentFragment();
     const added = pushChildren(el, jsx.children);
     if (added.length === 1) {
       const onlyChild = added[0]!;
-      return onlyChild;
+      return onlyChild as T;
     }
-    return el;
+    return el as T;
   }
 
   const isSvg = svgs.has(jsx.tag);
@@ -54,7 +56,7 @@ export function jsxToElement(jsx: JSX.Element) {
     }
   }
   pushChildren(el, jsx.children);
-  return el;
+  return el as T;
 }
 
 const replacements: Record<string, string> = {

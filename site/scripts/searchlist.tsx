@@ -7,7 +7,7 @@ export interface SearchFilter<T> {
 }
 
 const NotFound: JSX.Component<{ visibleCount: Reactive<number> }> = ({ visibleCount }, children) => {
-  const notFound = jsxToElement(<em>No results</em>) as HTMLElement;
+  const notFound = jsxToElement<HTMLElement>(<em>No results</em>);
   visibleCount.onChange(() => {
     notFound.hidden = visibleCount.val !== 0;
   });
@@ -19,7 +19,7 @@ function LiveItem<T>({ Item, visibleItems, item }: {
   visibleItems: Reactive<T[]>,
   item: T,
 }) {
-  const element = jsxToElement(<Item item={item} />) as HTMLLIElement;
+  const element = jsxToElement<HTMLLIElement>(<Item item={item} />);
 
   visibleItems.onChange(() => {
     element.hidden = !visibleItems.val.includes(item);
@@ -53,15 +53,15 @@ export function createSearch<T>({ data, Item, filters }: {
     return Math.max(0, Math.floor((deps.matchingItems.val.length - 1) / PER_PAGE));
   });
 
-  const prevButton = jsxToElement(<a href='#' onclick={function (this: HTMLAnchorElement, e: Event) {
+  const prevButton = jsxToElement<HTMLAnchorElement>(<a href='#' onclick={function (this: HTMLAnchorElement, e: Event) {
     e.preventDefault();
     page.set(Math.max(0, page.val - 1));
-  }}>Previous</a>) as HTMLAnchorElement;
+  }}>Previous</a>);
 
-  const nextButton = jsxToElement(<a href='#' onclick={function (this: HTMLAnchorElement, e: Event) {
+  const nextButton = jsxToElement<HTMLAnchorElement>(<a href='#' onclick={function (this: HTMLAnchorElement, e: Event) {
     e.preventDefault();
     page.set(Math.min(highestPage.val, page.val + 1));
-  }}>Next</a>) as HTMLAnchorElement;
+  }}>Next</a>);
 
   const reflectNextButtonEnabled = () => {
     nextButton.toggleAttribute('disabled', page.val === highestPage.val);
