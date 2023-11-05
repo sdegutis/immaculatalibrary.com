@@ -2,7 +2,7 @@ import { RatingStar } from "../shared/rating.js";
 import { BookJson } from "./data/books.json.js";
 import { jsxToElement } from "./jsx-nodes.js";
 import { Reactive } from "./reactive.js";
-import { SearchFilter, createSearch } from "./searchlist.js";
+import { createSearch } from "./searchlist.js";
 import { randomElement, sleep } from "./util.js";
 
 const booksFetch = fetch('/scripts/data/books.json').then<BookJson[]>(res => res.json());
@@ -58,41 +58,32 @@ document.getElementById('filters-container')!.replaceChildren(jsxToElement(<>
 </>));
 
 
-const snippetsFilter: SearchFilter<BookJson> = {
-  source: snippetsFilterSource,
-  matches: (book: BookJson) => {
-    if (snippetsFilterSource.val === 'none') return book.empty;
-    if (snippetsFilterSource.val === 'some') return !book.empty;
-    return true;
-  },
-};
-
-
-
-
-const starsFilter: SearchFilter<BookJson> = {
-  source: starsFilterSource,
-  matches: (book: BookJson) => {
-    if (starsFilterSource.val === 'any') return true;
-    return book.stars === +starsFilterSource.val;
-  },
-};
-
-
-
-const textFilter: SearchFilter<BookJson> = {
-  source: searchTerm,
-  matches: (book: BookJson) => (
-    book.author.toLowerCase().includes(searchTerm.val) ||
-    book.title.toLowerCase().includes(searchTerm.val)
-  ),
-};
-
-
-
 const { results, visibleCount, search } = createSearch({
   data: books,
-  filters: [snippetsFilter, starsFilter, textFilter],
+  filters: [
+    {
+      source: snippetsFilterSource,
+      matches: (book: BookJson) => {
+        if (snippetsFilterSource.val === 'none') return book.empty;
+        if (snippetsFilterSource.val === 'some') return !book.empty;
+        return true;
+      },
+    },
+    {
+      source: starsFilterSource,
+      matches: (book: BookJson) => {
+        if (starsFilterSource.val === 'any') return true;
+        return book.stars === +starsFilterSource.val;
+      },
+    },
+    {
+      source: searchTerm,
+      matches: (book: BookJson) => (
+        book.author.toLowerCase().includes(searchTerm.val) ||
+        book.title.toLowerCase().includes(searchTerm.val)
+      ),
+    },
+  ],
   Item: ({ item: book }) => (
     <li>
       <p><a href={book.route}>{book.title}</a><br /> {book.author}</p>
