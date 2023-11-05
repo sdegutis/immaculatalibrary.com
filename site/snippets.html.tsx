@@ -17,8 +17,8 @@ export default <>
           <h2>Find Book Snippets</h2>
           <p><input placeholder='Search' autofocus type="text" id="search-book-snippets-field" /></p>
           <div id='snippets-filters'>
-            <LoadingLine size="2em" />
-            <LoadingLine size="7em" />
+            <LoadingLine width="2em" />
+            <LoadingLine width="7em" />
           </div>
           <hr />
           <p>Not sure what to read?<br /> Try a <RandomBookSnippet>Random Book Snippet</RandomBookSnippet>.</p>

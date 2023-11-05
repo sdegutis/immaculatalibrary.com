@@ -15,10 +15,12 @@ export default <>
 
           <h2>Find Books</h2>
           <div id='filters-container'>
-            <LoadingLine size="100%" />
+            <LoadingLine width="100%" height='2.4em' />
             <div id='books-filters'>
-              <LoadingLine size="2em" />
-              <LoadingLine size="7em" />
+              <LoadingLine width="4em" />
+              <LoadingLine width="9em" />
+              <LoadingLine width="4em" />
+              <LoadingLine width="14em" />
             </div>
           </div>
           <hr />
