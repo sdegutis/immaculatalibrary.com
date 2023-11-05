@@ -1,12 +1,11 @@
 import { Column, Spaced } from "../components/column.js";
 import { TypicalPage } from "../components/page.js";
-import { RandomBookSnippet } from "../components/random-snippet.js";
 import { Typography } from "../components/typography.js";
 import { isDev } from "../core/helpers.js";
 import { Snippet, allSnippets } from "../model/snippets.js";
 import { sortedTags } from "../model/tag.js";
 import { formatDate } from '../shared/format-date.js';
-import { SnippetsList, snippetToViewable } from "../shared/snippets.js";
+import { LoadingLine, LoadingParagraph } from "../shared/loading.js";
 
 export default allSnippets.map(snippet => {
   const singleFile = snippet.book.data.files.length === 1;
@@ -69,8 +68,19 @@ export default allSnippets.map(snippet => {
           </Typography>
           <div>
             <h3>Latest book snippets</h3>
-            <p><RandomBookSnippet>Random</RandomBookSnippet></p>
-            <SnippetsList snippets={allSnippets.slice(0, 7).map(snippetToViewable)} />
+            <div id='latest-book-snippets-area'>
+              <LoadingLine width="4em" />
+              <ul>
+                <li><LoadingParagraph lines={3} /></li>
+                <li><LoadingParagraph lines={3} /></li>
+                <li><LoadingParagraph lines={3} /></li>
+                <li><LoadingParagraph lines={3} /></li>
+                <li><LoadingParagraph lines={3} /></li>
+                <li><LoadingParagraph lines={3} /></li>
+                <li><LoadingParagraph lines={3} /></li>
+              </ul>
+            </div>
+            <script type='module' src='/scripts/latest-book-snippets.js' />
           </div>
 
         </Column>
