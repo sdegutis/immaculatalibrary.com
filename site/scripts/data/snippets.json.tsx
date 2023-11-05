@@ -12,6 +12,8 @@ function snippetToJson(snippet: Snippet) {
     bookAuthor: snippet.book.data.author,
     tags: snippet.data.tags,
     markdown: snippet.content,
+    book: snippet.data.bookSlug,
+    archivePage: snippet.data.archivePage,
   };
 }
 

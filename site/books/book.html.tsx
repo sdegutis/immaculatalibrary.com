@@ -4,6 +4,7 @@ import { Rating } from "../components/rating.js";
 import { Typography } from "../components/typography.js";
 import { markdown } from "../core/helpers.js";
 import { allBooks } from "../model/books.js";
+import { LoadingLine, LoadingParagraph } from "../shared/loading.js";
 
 export default allBooks.map(book => [`${book.slug}.html`, <>
   <TypicalPage title="Books" image={book.category.imageBig}>
@@ -101,31 +102,25 @@ export default allBooks.map(book => [`${book.slug}.html`, <>
         </Typography>
 
         <div>
-
-          <script type='module' src='/scripts/random-snippet-in-book.js' />
+          <script type='module' src='/scripts/book-page.js' />
           <h3>Book snippets</h3>
-          <p>
-            <a href='#' id='random-snippet-in-book-button'>Random in book</a>
-          </p>
-          <ul class="snippets-in-book">
-            {book.snippets.length > 0
-              ? <>
-                {[...book.snippets].map(bookSnippet => <>
-                  <li>
-                    <p>
-                      p.{bookSnippet.data.archivePage} { }
-                      <a href={bookSnippet.route}>{bookSnippet.renderedTitle}</a>
-                    </p>
-                  </li>
-                </>)}
-              </>
-              : <>
-                <li>
-                  <em>No snippets have been posted for this book yet.</em>
-                </li>
-              </>}
-          </ul>
-
+          <div id='snippets-in-book' data-book={book.slug}>
+            <p><LoadingLine width="7em" /></p>
+            <p style='display:flex; gap:1em'>
+              <LoadingLine width='4em' height='1.6em' />
+              <LoadingLine width='4em' height='1.6em' />
+              <LoadingLine width='4em' height='1.6em' />
+            </p>
+            <ul>
+              <li><LoadingParagraph lines={2} /></li>
+              <li><LoadingParagraph lines={2} /></li>
+              <li><LoadingParagraph lines={2} /></li>
+              <li><LoadingParagraph lines={2} /></li>
+              <li><LoadingParagraph lines={2} /></li>
+              <li><LoadingParagraph lines={2} /></li>
+              <li><LoadingParagraph lines={2} /></li>
+            </ul>
+          </div>
         </div>
 
       </Column>
