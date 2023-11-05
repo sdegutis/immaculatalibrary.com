@@ -4,7 +4,7 @@
   margin: 0;
 }
 
-.typography blockquote>p {
+.typography blockquote p {
   text-indent: 1em;
 }
 
@@ -17,15 +17,6 @@
 .typography p {
   hyphens: auto;
   text-align: justify;
-}
-
-.typography :is(ol, ul) p:first-child {
-  text-indent: 2.5em;
-}
-
-.typography :is(ol, ul) p {
-  text-indent: 1em;
-  margin-left: -2em;
 }
 
 .typography :is(ol, ul) ::marker {
