@@ -6,10 +6,10 @@ export interface SearchFilter<T> {
   matches: (data: T) => boolean,
 }
 
-const NotFound: JSX.Component<{ content?: HTMLElement | undefined, visibleCount: Reactive<number> }> = ({
+const NotFound: JSX.Component<{ visibleCount: Reactive<number> }> = ({
   visibleCount,
-  content: notFound = jsxToElement<HTMLElement>(<em>No results</em>),
 }) => {
+  const notFound = jsxToElement<HTMLElement>(<em>No results</em>);
   visibleCount.onChange(() => {
     notFound.hidden = visibleCount.val !== 0;
   });
@@ -30,11 +30,10 @@ function LiveItem<T>({ Item, visibleItems, item }: {
   return <>{element}</>;
 }
 
-export function createSearch<T>({ data, Item, filters, notFound }: {
+export function createSearch<T>({ data, Item, filters }: {
   data: T[];
   Item: JSX.Component<{ item: T }>;
   filters: SearchFilter<T>[];
-  notFound?: HTMLElement,
 }) {
   const PER_PAGE = 7;
 
@@ -82,7 +81,7 @@ export function createSearch<T>({ data, Item, filters, notFound }: {
 
   const results = jsxToElement(<>
     <p style='display:flex; gap:1em'>{prevButton} {currentPage} {nextButton}</p>
-    <NotFound content={notFound} visibleCount={matchingCount} />
+    <NotFound visibleCount={matchingCount} />
     <ul>
       {data.map(item => jsxToElement(
         <LiveItem item={item} visibleItems={visibleItems} Item={Item} />
