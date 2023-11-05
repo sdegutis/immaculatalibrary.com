@@ -1,6 +1,6 @@
 import { Column, Spaced } from './components/column.js';
 import { TypicalPage } from './components/page.js';
-import { LoadingParagraph } from './shared/loading.js';
+import { LoadingLine, LoadingParagraph } from './shared/loading.js';
 
 export default <>
   <TypicalPage title='Books' image='/img/categories/reference-big.jpg'>
@@ -14,8 +14,13 @@ export default <>
           <link rel="stylesheet" href='/css/page/books.css' />
 
           <h2>Find Books</h2>
-          <p><input autofocus placeholder='Search' type="text" id='search-books-input' /></p>
-          <div id='books-filters' />
+          <div id='filters-container'>
+            <LoadingLine size="100%" />
+            <div id='books-filters'>
+              <LoadingLine size="2em" />
+              <LoadingLine size="7em" />
+            </div>
+          </div>
           <hr />
           <p>Not sure what to read?<br /> Try a <a href='#' id='random-book-button'>Random Book</a>.</p>
 

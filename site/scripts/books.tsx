@@ -6,7 +6,9 @@ import { SearchFilter, createSearch } from "./searchlist.js";
 
 const books = await fetch('/scripts/data/books.json').then<BookJson[]>(res => res.json());
 
-const filtersContainer = document.getElementById('books-filters') as HTMLDivElement;
+const snippetsFilterSource = new Reactive('both');
+const starsFilterSource = new Reactive('any');
+const searchTerm = new Reactive('');
 
 document.getElementById('random-book-button')!.onclick = (e) => {
   const i = Math.floor(Math.random() * books.length);
@@ -14,18 +16,43 @@ document.getElementById('random-book-button')!.onclick = (e) => {
   (e.target as HTMLAnchorElement).href = a.route;
 };
 
+document.getElementById('filters-container')!.replaceChildren(jsxToElement(<>
+  <p>
+    <input autofocus placeholder='Search' type="text" oninput={(e: Event) => {
+      searchTerm.set((e.target as HTMLInputElement).value.trim().toLowerCase());
+    }} />
+  </p>
+  <div id='books-filters'>
+    <span class='label'>snippets</span>
+    <span>
+      <label><input type='radio' name='has-snippets' onclick={() => snippetsFilterSource.set('both')} checked />Any</label>
+      <label><input type='radio' name='has-snippets' onclick={() => snippetsFilterSource.set('some')} />Some</label>
+      <label><input type='radio' name='has-snippets' onclick={() => snippetsFilterSource.set('none')} />None</label>
+    </span>
 
+    <span class='label'>stars</span>
+    <span class='radios'>
+      <label><input type='radio' name='stars' onclick={() => starsFilterSource.set('any')} checked />Any</label>
+      <label><input type='radio' name='stars' onclick={() => starsFilterSource.set('0')} />Unrated</label>
+      {Array(5).fill(0).map((_, i) => {
+        const star = jsxToElement(<RatingStar />) as SVGElement;
+        const num = i + 1;
 
-const snippetsFilterSource = new Reactive('both');
+        starsFilterSource.onChange(() => {
+          star.classList.toggle('lit', +starsFilterSource.val >= num);
+        });
 
-filtersContainer.append(jsxToElement(<>
-  <span class='label'>snippets</span>
-  <span>
-    <label><input type='radio' name='has-snippets' onclick={() => snippetsFilterSource.set('both')} checked />Any</label>
-    <label><input type='radio' name='has-snippets' onclick={() => snippetsFilterSource.set('some')} />Some</label>
-    <label><input type='radio' name='has-snippets' onclick={() => snippetsFilterSource.set('none')} />None</label>
-  </span>
+        return <>
+          <label>
+            <input type='radio' name='stars' onclick={() => starsFilterSource.set(num.toFixed())} />
+            {star}
+          </label>
+        </>;
+      })}
+    </span>
+  </div>
 </>));
+
 
 const snippetsFilter: SearchFilter<BookJson> = {
   source: snippetsFilterSource,
@@ -38,32 +65,6 @@ const snippetsFilter: SearchFilter<BookJson> = {
 
 
 
-const starsFilterSource = new Reactive('any');
-
-const starInputs = Array(5).fill('').map((_, i) => {
-  const star = jsxToElement(<RatingStar />) as SVGElement;
-  const num = i + 1;
-
-  starsFilterSource.onChange(() => {
-    star.classList.toggle('lit', +starsFilterSource.val >= num);
-  });
-
-  return { star, num };
-});
-
-filtersContainer.append(jsxToElement(<>
-  <span class='label'>stars</span>
-  <span class='radios'>
-    <label><input type='radio' name='stars' onclick={() => starsFilterSource.set('any')} checked />Any</label>
-    <label><input type='radio' name='stars' onclick={() => starsFilterSource.set('0')} />Unrated</label>
-    {starInputs.map(star => <>
-      <label>
-        <input type='radio' name='stars' onclick={() => starsFilterSource.set(star.num.toFixed())} />
-        {star.star}
-      </label>
-    </>)}
-  </span>
-</>));
 
 const starsFilter: SearchFilter<BookJson> = {
   source: starsFilterSource,
@@ -74,12 +75,6 @@ const starsFilter: SearchFilter<BookJson> = {
 };
 
 
-
-const searchTerm = new Reactive('');
-
-document.getElementById('search-books-input')!.oninput = (e) => {
-  searchTerm.set((e.target as HTMLInputElement).value.trim().toLowerCase());
-};
 
 const textFilter: SearchFilter<BookJson> = {
   source: searchTerm,
