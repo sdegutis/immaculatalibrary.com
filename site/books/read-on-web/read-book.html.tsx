@@ -5,7 +5,7 @@ import { Typography } from "../../components/typography.js";
 import { markdown } from "../../core/helpers.js";
 import { allBooks } from "../../model/books.js";
 
-export default allBooks.map(book => {
+export default allBooks.filter(book => book.data.complete).map(book => {
   const orderedSnippets = [...book.snippets];
 
   return [`${book.slug}.html`, <>
