@@ -87,16 +87,16 @@ export function createSearch<T>({ data, Item, filters }: {
     </ul>
   </>);
 
-  const search = () => {
+  const updateMatchingItems = () => {
     matchingItems.set(data.filter(item => filters.every(filter => filter.matches(item))));
   };
 
-  page.onChange(search);
+  page.onChange(updateMatchingItems);
 
   for (const filter of filters) {
     filter.source.onChange(() => {
       page.set(0);
-      search();
+      updateMatchingItems();
     });
   }
 
