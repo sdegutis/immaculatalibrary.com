@@ -5,13 +5,13 @@ import { mdOptions } from '../shared/markdown.js';
 import { SnippetJson } from './data/snippets/snippet.json.js';
 import { jsxToElement } from './jsx-nodes.js';
 import { snippetIds } from "./snippet-ids.js";
-import { sleep } from './sleep.js';
+import { randomElement, sleep } from './util.js';
 
 const markdown = MarkdownIt(mdOptions);
 
 const doRandomBookSnippetReal = (e: Event) => {
   e.preventDefault();
-  doRandomBookSnippet(slugs => Math.floor(Math.random() * slugs.length));
+  doRandomBookSnippet(randomElement);
 };
 
 let alreadyLoaded = false;
@@ -28,7 +28,7 @@ else {
   const yearDuration = (1000 * 60 * 60 * 24 * 365);
   const now = Date.now();
   const percent = (now - yearStart) / yearDuration;
-  doRandomBookSnippet(slugs => Math.floor(percent * slugs.length));
+  doRandomBookSnippet(slugs => slugs[Math.floor(percent * slugs.length)]!);
 }
 
 async function reflectUrl() {
@@ -81,11 +81,8 @@ async function reflectUrl() {
   </>));
 }
 
-async function doRandomBookSnippet(fn: (slugs: string[]) => number) {
-  const slugs = await snippetIds;
-  const i = fn(slugs);
-  const slug = slugs[i];
-
+async function doRandomBookSnippet(fn: (slugs: string[]) => string) {
+  const slug = fn(await snippetIds);
   history.pushState('', '', '#' + slug);
   reflectUrl();
 }

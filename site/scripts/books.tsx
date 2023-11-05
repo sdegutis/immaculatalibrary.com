@@ -3,7 +3,7 @@ import { BookJson } from "./data/books.json.js";
 import { jsxToElement } from "./jsx-nodes.js";
 import { Reactive } from "./reactive.js";
 import { SearchFilter, createSearch } from "./searchlist.js";
-import { sleep } from "./sleep.js";
+import { randomElement, sleep } from "./util.js";
 
 const booksFetch = fetch('/scripts/data/books.json').then<BookJson[]>(res => res.json());
 await sleep(1);
@@ -14,9 +14,7 @@ const starsFilterSource = new Reactive('any');
 const searchTerm = new Reactive('');
 
 document.getElementById('random-book-button')!.onclick = (e) => {
-  const i = Math.floor(Math.random() * books.length);
-  const a = books[i]!;
-  (e.target as HTMLAnchorElement).href = a.route;
+  (e.target as HTMLAnchorElement).href = randomElement(books).route;
 };
 
 document.getElementById('filters-container')!.replaceChildren(jsxToElement(<>
