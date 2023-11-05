@@ -84,9 +84,12 @@ export function createSearch<T>({ data, Item, filters }: {
 
   const search = () => {
     matchingItems.set(data.filter(item => filters.every(filter => filter.matches(item))));
+  };
+
+  matchingItems.onChange(() => {
     const start = page.val * PER_PAGE;
     visibleItems.set(matchingItems.val.slice(start, start + PER_PAGE));
-  };
+  });
 
   page.onChange(search);
 
