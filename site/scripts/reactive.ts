@@ -5,6 +5,7 @@ export class Reactive<T> {
   constructor(public val: T) { }
 
   onChange(fn: () => void) {
+    fn();
     this.#fns.push(fn);
   }
 

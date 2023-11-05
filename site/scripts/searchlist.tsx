@@ -69,7 +69,7 @@ export function createSearch<T>({ data, Item, filters }: {
 
   page.onChange(reflectPrevButtonEnabled);
 
-  const currentPage = jsxToElement(<span>Page 1</span>);
+  const currentPage = jsxToElement(<span />);
   page.onChange(() => currentPage.textContent = `Page ${page.val + 1}`);
 
   const results = jsxToElement(<>
@@ -100,8 +100,5 @@ export function createSearch<T>({ data, Item, filters }: {
     });
   }
 
-  reflectPrevButtonEnabled();
-  reflectNextButtonEnabled();
-
-  return { results, matchingCount, search };
+  return { results, matchingCount };
 }
