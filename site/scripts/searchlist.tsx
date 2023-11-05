@@ -84,7 +84,18 @@ export function createSearch<T>({ data, Item, filters, perPage = 7 }: {
   }));
 
   const currentPage = jsxToElement(<span />);
-  page.onChange(() => currentPage.textContent = `${page.val + 1}`);
+  const reflectCurrentPage = () => {
+    if (matchingCount.val === 0) {
+      currentPage.textContent = 'n/a';
+      return;
+    }
+
+    const start = (page.val * perPage) + 1;
+    const end = Math.min(matchingCount.val, start + perPage - 1);
+    currentPage.textContent = `${start} - ${end}`;
+  };
+  page.onChange(reflectCurrentPage);
+  matchingCount.onChange(reflectCurrentPage);
 
   const results = jsxToElement(<>
     <p style='display:flex; gap:1em; align-items:baseline'>{prevButton} {currentPage} {nextButton}</p>
