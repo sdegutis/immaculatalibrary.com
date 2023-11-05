@@ -5,6 +5,7 @@ import { mdOptions } from '../shared/markdown.js';
 import { SnippetJson } from './data/snippets/snippet.json.js';
 import { jsxToElement } from './jsx-nodes.js';
 import { snippetIds } from "./snippet-ids.js";
+import { sleep } from './sleep.js';
 
 const markdown = MarkdownIt(mdOptions);
 
@@ -40,7 +41,7 @@ async function reflectUrl() {
 
   const fetching = fetch(`/scripts/data/snippets/${slug}.json`).then<SnippetJson>(res => res.json());
 
-  await new Promise(r => setTimeout(r, alreadyLoaded ? 300 : 1000));
+  await sleep(alreadyLoaded ? .3 : 1);
   alreadyLoaded = true;
 
   const snippet = await fetching;

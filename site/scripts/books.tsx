@@ -3,8 +3,11 @@ import { BookJson } from "./data/books.json.js";
 import { jsxToElement } from "./jsx-nodes.js";
 import { Reactive } from "./reactive.js";
 import { SearchFilter, createSearch } from "./searchlist.js";
+import { sleep } from "./sleep.js";
 
-const books = await fetch('/scripts/data/books.json').then<BookJson[]>(res => res.json());
+const booksFetch = fetch('/scripts/data/books.json').then<BookJson[]>(res => res.json());
+await sleep(1);
+const books = await booksFetch;
 
 const snippetsFilterSource = new Reactive('both');
 const starsFilterSource = new Reactive('any');
