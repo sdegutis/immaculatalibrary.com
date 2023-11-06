@@ -20,7 +20,10 @@ export const HomeLoading = () => <>
   <LoadingLine width="7em" />
   <h4><LoadingLine width="18em" height="1.2em" /></h4>
   <p><LoadingLine width="14em" /></p>
-  <LoadingParagraph lines={2} />
+  <p>
+    <LoadingLine width="70%" /><br />
+    <LoadingLine width="40%" />
+  </p>
   <blockquote>
     <LoadingParagraph lines={7} fullWidth />
     <LoadingParagraph lines={7} fullWidth />
