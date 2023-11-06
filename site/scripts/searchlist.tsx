@@ -70,30 +70,25 @@ export function createSearch<T>({ data, Item, filters, perPage = 7 }: {
     }}
   >&rsaquo;</button>);
 
-  const reflectNextButtonEnabled = () => {
-    nextButton.toggleAttribute('disabled', page.val === highestPage.val);
-  };
+  reactTo({ page, highestPage }, deps => {
+    nextButton.toggleAttribute('disabled', deps.page.val === deps.highestPage.val);
+  });
 
-  highestPage.onChange(reflectNextButtonEnabled);
-  page.onChange(reflectNextButtonEnabled);
-
-  page.onChange((() => {
-    prevButton.toggleAttribute('disabled', page.val === 0);
-  }));
+  reactTo({ page }, deps => {
+    prevButton.toggleAttribute('disabled', deps.page.val === 0);
+  });
 
   const currentPage = jsxToElement(<span style='min-width:7em; text-align:center' />);
-  const reflectCurrentPage = () => {
-    if (matchingCount.val === 0) {
+  reactTo({ page, matchingCount }, deps => {
+    if (deps.matchingCount.val === 0) {
       currentPage.textContent = 'n/a';
       return;
     }
 
-    const start = (page.val * perPage) + 1;
-    const end = Math.min(matchingCount.val, start + perPage - 1);
+    const start = (deps.page.val * perPage) + 1;
+    const end = Math.min(deps.matchingCount.val, start + perPage - 1);
     currentPage.textContent = `${start} - ${end}`;
-  };
-  page.onChange(reflectCurrentPage);
-  matchingCount.onChange(reflectCurrentPage);
+  });
 
   const results = jsxToElement(<>
     <p style='display:flex; gap:1em; align-items:baseline'>{prevButton} {currentPage} {nextButton}</p>
@@ -119,4 +114,13 @@ export function createSearch<T>({ data, Item, filters, perPage = 7 }: {
   }
 
   return { results, matchingCount };
+}
+
+function reactTo<T extends { [key: string]: Reactive<any> }>(
+  deps: T,
+  fn: (deps: T) => void,
+) {
+  for (const dep of Object.values(deps)) {
+    dep.onChange(() => fn(deps));
+  }
 }
