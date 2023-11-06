@@ -20,6 +20,8 @@ export default <>
             <div id='snippets-filters' style='align-items:center'>
               <LoadingLine width="2em" />
               <LoadingLine width="100%" height="2em" />
+              <LoadingLine width="2em" />
+              <LoadingLine width="100%" height="2em" />
             </div>
             <hr />
             <br /><LoadingLine width="12em" />

@@ -12,6 +12,7 @@ const snippets = await snippetsFetch;
 const tags = [...new Set(snippets.flatMap(s => s.tags))].sort();
 
 const currentTag = new Reactive(new URL(window.location.href).searchParams.get('tag') ?? '_any');
+const lengthFilter = new Reactive('');
 const searchTerm = new Reactive('');
 
 document.getElementById('filters-container')!.replaceChildren(jsxToElement(<>
@@ -19,6 +20,7 @@ document.getElementById('filters-container')!.replaceChildren(jsxToElement(<>
     searchTerm.set(this.value.trim().toLowerCase());
   }} /></p>
   <div id='snippets-filters'>
+
     <span class='label'>tag</span>
     <select onchange={function (this: HTMLSelectElement) { currentTag.set(this.value) }}>
       <optgroup label='Whether it has tags'>
@@ -32,6 +34,16 @@ document.getElementById('filters-container')!.replaceChildren(jsxToElement(<>
         )}
       </optgroup>
     </select>
+
+    <span class='label'>length</span>
+    <span>
+      <label><input type='radio' name='has-snippets' onclick={() => lengthFilter.set('')} checked />Any</label>
+      <label><input type='radio' name='has-snippets' onclick={() => lengthFilter.set('short')} />Short</label>
+      <label><input type='radio' name='has-snippets' onclick={() => lengthFilter.set('medium')} />Medium</label>
+      <label><input type='radio' name='has-snippets' onclick={() => lengthFilter.set('long')} />Long</label>
+      <label><input type='radio' name='has-snippets' onclick={() => lengthFilter.set('very-long')} />Very Long</label>
+    </span>
+
   </div>
   <hr />
   <p>
@@ -53,6 +65,18 @@ const { results, matchingCount } = createSearch({
         if (currentTag.val === '_some') return snippet.tags.length > 0;
         if (currentTag.val === '_none') return snippet.tags.length === 0;
         return snippet.tags.includes(currentTag.val);
+      },
+    },
+    {
+      source: lengthFilter,
+      matches: (snippet: SnippetJson) => {
+        switch (lengthFilter.val) {
+          case 'short': return snippet.mins <= 3;
+          case 'medium': return snippet.mins > 3 && snippet.mins <= 5;
+          case 'long': return snippet.mins > 5 && snippet.mins <= 8;
+          case 'very-long': return snippet.mins > 8;
+          default: return true;
+        }
       },
     },
     {
