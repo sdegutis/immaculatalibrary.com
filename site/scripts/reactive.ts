@@ -30,3 +30,12 @@ export class Reactive<T> {
   }
 
 }
+
+export function reactTo<T extends { [key: string]: Reactive<any> }>(
+  deps: T,
+  fn: (deps: T) => void,
+) {
+  for (const dep of Object.values(deps)) {
+    dep.onChange(() => fn(deps));
+  }
+}

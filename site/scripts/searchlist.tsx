@@ -1,5 +1,5 @@
 import { jsxToElement } from "./jsx-nodes.js";
-import { Reactive } from "./reactive.js";
+import { Reactive, reactTo } from "./reactive.js";
 
 export interface SearchFilter<T> {
   source: Reactive<any>;
@@ -114,13 +114,4 @@ export function createSearch<T>({ data, Item, filters, perPage = 7 }: {
   }
 
   return { results, matchingCount };
-}
-
-function reactTo<T extends { [key: string]: Reactive<any> }>(
-  deps: T,
-  fn: (deps: T) => void,
-) {
-  for (const dep of Object.values(deps)) {
-    dep.onChange(() => fn(deps));
-  }
 }
