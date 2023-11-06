@@ -56,7 +56,7 @@ export function createSearch<T>({ data, Item, filters, perPage = 7 }: {
 
   const prevButton = jsxToElement<HTMLButtonElement>(<button
     style='width:2em'
-    onclick={function (this: HTMLButtonElement, e: Event) {
+    onclick={(e: Event) => {
       e.preventDefault();
       page.set(Math.max(0, page.val - 1));
     }}
@@ -64,7 +64,7 @@ export function createSearch<T>({ data, Item, filters, perPage = 7 }: {
 
   const nextButton = jsxToElement<HTMLButtonElement>(<button
     style='width:2em'
-    onclick={function (this: HTMLButtonElement, e: Event) {
+    onclick={(e: Event) => {
       e.preventDefault();
       page.set(Math.min(highestPage.val, page.val + 1));
     }}
