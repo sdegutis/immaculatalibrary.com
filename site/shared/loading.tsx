@@ -18,7 +18,9 @@ export const LoadingLine: JSX.Component<{ width: string, height?: string }> = ({
 
 export const HomeLoading = () => <>
   <LoadingLine width="7em" />
-  <LoadingParagraph lines={7} />
+  <h4><LoadingLine width="18em" height="1.2em" /></h4>
+  <p><LoadingLine width="14em" /></p>
+  <LoadingParagraph lines={2} />
   <blockquote>
     <LoadingParagraph lines={7} fullWidth />
     <LoadingParagraph lines={7} fullWidth />
