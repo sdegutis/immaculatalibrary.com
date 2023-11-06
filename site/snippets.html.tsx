@@ -17,7 +17,7 @@ export default <>
           <h2>Find Book Snippets</h2>
           <div id='filters-container'>
             <LoadingLine width="100%" height="2em" />
-            <div id='snippets-filters'>
+            <div id='snippets-filters' style='align-items:center'>
               <LoadingLine width="2em" />
               <LoadingLine width="100%" height="2em" />
             </div>
