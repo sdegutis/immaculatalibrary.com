@@ -10,8 +10,8 @@ const NotFound: JSX.Component<{ visibleCount: Reactive<number> }> = ({
   visibleCount,
 }) => {
   const notFound = jsxToElement<HTMLElement>(<em>No results</em>);
-  visibleCount.onChange(() => {
-    notFound.hidden = visibleCount.val !== 0;
+  reactTo({ visibleCount }, deps => {
+    notFound.hidden = deps.visibleCount.val !== 0;
   });
   return <>{notFound}</>;
 }
@@ -23,8 +23,8 @@ function LiveItem<T>({ Item, visibleItems, item }: {
 }) {
   const element = jsxToElement<HTMLLIElement>(<Item item={item} />);
 
-  visibleItems.onChange(() => {
-    element.hidden = !visibleItems.val.includes(item);
+  reactTo({ visibleItems }, deps => {
+    element.hidden = !deps.visibleItems.val.includes(item);
   });
 
   return <>{element}</>;
