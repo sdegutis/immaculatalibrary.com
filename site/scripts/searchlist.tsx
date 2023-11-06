@@ -40,17 +40,13 @@ export function createSearch<T>({ data, Item, filters, perPage = 7 }: {
   const page = new Reactive(0);
 
   const matchingCount = Reactive.from({ matchingItems }, deps => deps.matchingItems.val.length);
-  const visibleItems = Reactive.from({
-    matchingItems,
-    page
-  }, deps => {
+
+  const visibleItems = Reactive.from({ matchingItems, page }, deps => {
     const start = deps.page.val * perPage;
     return deps.matchingItems.val.slice(start, start + perPage);
   });
 
-  const highestPage = Reactive.from({
-    matchingItems,
-  }, (deps) => {
+  const highestPage = Reactive.from({ matchingItems, }, (deps) => {
     return Math.max(0, Math.floor((deps.matchingItems.val.length - 1) / perPage));
   });
 
