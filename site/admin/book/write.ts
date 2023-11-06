@@ -54,7 +54,7 @@ function processTextChange() {
     // };
     el.style.backgroundColor = `#139${(words[word]! + 1).toString(16)}`;
   }
-  console.log(words);
+  // console.log(words);
 }
 
 var monaco = (window as any).monaco;
