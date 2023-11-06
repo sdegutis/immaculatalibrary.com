@@ -35,13 +35,13 @@ document.getElementById('filters-container')!.replaceChildren(jsxToElement(<>
       </optgroup>
     </select>
 
-    <span class='label'>length</span>
+    <span class='label'>minutes</span>
     <span>
       <label><input type='radio' name='has-snippets' onclick={() => lengthFilter.set('')} checked />Any</label>
-      <label><input type='radio' name='has-snippets' onclick={() => lengthFilter.set('short')} />Short</label>
-      <label><input type='radio' name='has-snippets' onclick={() => lengthFilter.set('medium')} />Medium</label>
-      <label><input type='radio' name='has-snippets' onclick={() => lengthFilter.set('long')} />Long</label>
-      <label><input type='radio' name='has-snippets' onclick={() => lengthFilter.set('very-long')} />Very Long</label>
+      <label><input type='radio' name='has-snippets' onclick={() => lengthFilter.set('short')} />1-2</label>
+      <label><input type='radio' name='has-snippets' onclick={() => lengthFilter.set('medium')} />3-5</label>
+      <label><input type='radio' name='has-snippets' onclick={() => lengthFilter.set('long')} />6-8</label>
+      <label><input type='radio' name='has-snippets' onclick={() => lengthFilter.set('very-long')} />9+</label>
     </span>
 
   </div>
@@ -71,11 +71,11 @@ const { results, matchingCount } = createSearch({
       source: lengthFilter,
       matches: (snippet: SnippetJson) => {
         switch (lengthFilter.val) {
-          case 'short': return snippet.mins <= 3;
-          case 'medium': return snippet.mins > 3 && snippet.mins <= 5;
-          case 'long': return snippet.mins > 5 && snippet.mins <= 8;
-          case 'very-long': return snippet.mins > 8;
-          default: return true;
+          case 'short': return snippet.mins < 3;
+          case 'medium': return snippet.mins >= 3 && snippet.mins <= 5;
+          case 'long': return snippet.mins >= 6 && snippet.mins <= 8;
+          case 'very-long': return snippet.mins >= 9;
+          case '': default: return true;
         }
       },
     },
