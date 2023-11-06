@@ -83,7 +83,7 @@ export function createSearch<T>({ data, Item, filters, perPage = 7 }: {
 
     const start = (deps.page.val * perPage) + 1;
     const end = Math.min(deps.matchingCount.val, start + perPage - 1);
-    currentPage.textContent = `${start} - ${end}`;
+    currentPage.textContent = `${start} - ${end} / ${deps.matchingCount.val}`;
   });
 
   const results = jsxToElement(<>
