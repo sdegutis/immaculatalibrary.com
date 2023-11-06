@@ -5,7 +5,7 @@ import { createSearch } from "./searchlist.js";
 import { randomElement, sleep } from "./util.js";
 
 const snippetsFetch = fetch('/scripts/data/snippets.json').then<SnippetJson[]>(res => res.json());
-await sleep(1);
+await sleep(0.3);
 const allSnippets = await snippetsFetch;
 
 const container = document.getElementById('snippets-in-book') as HTMLDivElement;
