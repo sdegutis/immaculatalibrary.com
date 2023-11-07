@@ -13,7 +13,7 @@ export function sortBy<T>(fn: (o: T) => string | number) {
   };
 }
 
-const cache = new Map<Function, any>();
+const cache = new Map<() => any, any>();
 export function cached<T>(fn: () => T): T {
   let data = cache.get(fn);
   if (!data) cache.set(fn, data = fn());
