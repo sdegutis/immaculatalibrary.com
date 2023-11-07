@@ -1,8 +1,8 @@
 import { DataFile } from "../core/data-files.js";
-import { sortBy } from "../core/helpers.js";
+import { cached, sortBy } from "../core/helpers.js";
 import allBookFiles from "../data/books/";
 import { Category } from "./categories.js";
-import { cached, categories, snippets } from "./relations.js";
+import * as relations from "./relations.js";
 import { Snippet } from "./snippets.js";
 
 interface BookFile {
@@ -41,12 +41,12 @@ export class Book extends DataFile<BookFile> {
   }
 
   get category(): Category {
-    return cached(() => categories().categoryForBook.get(this)!);
+    return cached(() => relations.categories().forBook.get(this)!);
   }
 
   get snippets(): Snippet[] {
     return cached(() => {
-      const snippetsInBook = snippets().snippetsInBook.get(this)!;
+      const snippetsInBook = relations.snippets().inBook.get(this)!;
 
       snippetsInBook.sort(sortBy(s =>
         s.data.archivePage.startsWith('n')

@@ -2,14 +2,7 @@ import { Book, allBooks, booksBySlug } from "./books.js";
 import { Category, allCategories } from "./categories.js";
 import { Snippet, allSnippets } from "./snippets.js";
 
-const cache = new Map<Function, any>();
-export function cached<T>(fn: () => T): T {
-  let data = cache.get(fn);
-  if (!data) cache.set(fn, data = fn());
-  return data;
-}
-
-export const categories = (() => {
+export function categories() {
   const books = new Map<Category, Book[]>();
   const forBook = new Map<Book, Category>();
 
@@ -24,22 +17,22 @@ export const categories = (() => {
     }
   }
 
-  return { booksInCategory: books, categoryForBook: forBook };
-});
+  return { books, forBook };
+}
 
-export const snippets = (() => {
-  const snippetsInBook = new Map<Book, Snippet[]>();
-  const bookForSnippet = new Map<Snippet, Book>();
+export function snippets() {
+  const inBook = new Map<Book, Snippet[]>();
+  const book = new Map<Snippet, Book>();
 
   for (const book of allBooks) {
-    snippetsInBook.set(book, []);
+    inBook.set(book, []);
   }
 
   for (const snippet of allSnippets) {
-    const book = booksBySlug[snippet.data.bookSlug]!;
-    bookForSnippet.set(snippet, book);
-    snippetsInBook.get(book)!.push(snippet);
+    const bookForSnippet = booksBySlug[snippet.data.bookSlug]!;
+    book.set(snippet, bookForSnippet);
+    inBook.get(bookForSnippet)!.push(snippet);
   }
 
-  return { snippetsInBook, bookForSnippet };
-});
+  return { inBook, book };
+}
