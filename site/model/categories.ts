@@ -14,7 +14,7 @@ export class Category extends DataFile<CategoryFile> {
 
   static override modelDir = 'categories';
 
-  booksInCategory: Book[] = [];
+  books: Book[] = [];
 
   route: string;
   imageBig: string;
@@ -29,7 +29,7 @@ export class Category extends DataFile<CategoryFile> {
     for (const bookSlug of this.data.books) {
       const book = booksBySlug[bookSlug]!;
       book.category = this;
-      this.booksInCategory.push(book);
+      this.books.push(book);
     }
   }
 

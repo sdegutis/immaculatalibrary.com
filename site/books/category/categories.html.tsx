@@ -27,7 +27,7 @@ export default allCategories.map(cat => [`${cat.slug}.html`, <>
         <section id='category'>
           <h2>Books</h2>
           <ul>
-            {cat.booksInCategory.map(book => {
+            {cat.books.map(book => {
               return <li>
                 <div class="title">
                   <a href={book.route}>{book.data.title}</a>
@@ -49,7 +49,7 @@ export default allCategories.map(cat => [`${cat.slug}.html`, <>
           <h2>Book Snippets</h2>
           <div class='scrollable-area'>
             <ul>
-              {cat.booksInCategory
+              {cat.books
                 .filter(book => book.snippets.length > 0)
                 .map(book => <>
                   <li>
