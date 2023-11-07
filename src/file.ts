@@ -36,7 +36,12 @@ export function compileTSX(code: string, realFilePath?: string) {
     options.filePath = pathToFileURL(realFilePath).href;
   }
   const result = sucrase.transform(code, options);
-  result.code = result.code.replace(/"\/core\/jsx-runtime"/g, `"/core/jsx-transform.js"`);
+  if (realFilePath) {
+    result.code = result.code.replace(/"\/core\/jsx-runtime"/g, `"/core/jsx-transform-node.js"`);
+  }
+  else {
+    result.code = result.code.replace(/"\/core\/jsx-runtime"/g, `"/core/jsx-transform-browser.js"`);
+  }
   return result;
 }
 
