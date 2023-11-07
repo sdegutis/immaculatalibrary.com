@@ -70,4 +70,4 @@ export const allBooks = (allBookFiles
   .map(file => Book.fromFile(file))
   .sort(sortBy(b => `${b.data.dateAdded} ${b.slug}`)));
 
-export const booksBySlug = Object.fromEntries(allBooks.map(book => [book.slug, book]));
+export const booksBySlug = new Map(allBooks.map(book => [book.slug, book]));

@@ -8,7 +8,7 @@ export function categories() {
 
   for (const category of allCategories) {
     for (const bookSlug of category.data.books) {
-      const book = booksBySlug[bookSlug]!;
+      const book = booksBySlug.get(bookSlug)!;
       forBook.set(book, category);
 
       let booksInCategory = books.get(category);
@@ -29,7 +29,7 @@ export function snippets() {
   }
 
   for (const snippet of allSnippets) {
-    const bookForSnippet = booksBySlug[snippet.data.bookSlug]!;
+    const bookForSnippet = booksBySlug.get(snippet.data.bookSlug)!;
     book.set(snippet, bookForSnippet);
     inBook.get(bookForSnippet)!.push(snippet);
   }

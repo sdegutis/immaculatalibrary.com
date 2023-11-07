@@ -9,4 +9,4 @@ export const featuredBooks = [
   'the-glories-of-mary',
   'catena-aurea',
   // 'catholic-encyclopedia',
-].map(id => booksBySlug[id]!)
+].map(id => booksBySlug.get(id)!)
