@@ -10,10 +10,10 @@ export class Tag {
     return tag;
   }
 
-  oneword;
+  constructor(public name: string) { }
 
-  constructor(public name: string) {
-    this.oneword = this.name.split(' ').map(capitalize).join('');
+  oneword() {
+    return this.name.split(' ').map(capitalize).join('');
   }
 
 }
