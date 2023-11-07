@@ -2,15 +2,14 @@ import { Book, allBooks, booksBySlug } from "./books.js";
 import { Category, allCategories } from "./categories.js";
 import { Snippet, allSnippets } from "./snippets.js";
 
-function lazy<T>(fn: () => T): () => T {
-  let data: T;
-  return () => {
-    if (!data) data = fn();
-    return data;
-  }
+const cache = new Map<Function, any>();
+export function cached<T>(fn: () => T): T {
+  let data = cache.get(fn);
+  if (!data) cache.set(fn, data = fn());
+  return data;
 }
 
-export const categories = lazy(() => {
+export const categories = (() => {
   const books = new Map<Category, Book[]>();
   const forBook = new Map<Book, Category>();
 
@@ -28,7 +27,7 @@ export const categories = lazy(() => {
   return { booksInCategory: books, categoryForBook: forBook };
 });
 
-export const snippets = lazy(() => {
+export const snippets = (() => {
   const snippetsInBook = new Map<Book, Snippet[]>();
   const bookForSnippet = new Map<Snippet, Book>();
 

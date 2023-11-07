@@ -2,7 +2,7 @@ import { DataFile } from '../core/data-files.js';
 import { sortBy } from '../core/helpers.js';
 import allCategoryFiles from "../data/categories/";
 import { Book } from './books.js';
-import { categories } from './relations.js';
+import { cached, categories } from './relations.js';
 
 interface CategoryFile {
   title: string;
@@ -27,7 +27,7 @@ export class Category extends DataFile<CategoryFile> {
   }
 
   get books(): Book[] {
-    return categories().booksInCategory.get(this)!;
+    return cached(() => categories().booksInCategory.get(this)!);
   }
 
 }

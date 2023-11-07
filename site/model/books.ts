@@ -2,7 +2,7 @@ import { DataFile } from "../core/data-files.js";
 import { sortBy } from "../core/helpers.js";
 import allBookFiles from "../data/books/";
 import { Category } from "./categories.js";
-import { categories, snippets } from "./relations.js";
+import { cached, categories, snippets } from "./relations.js";
 import { Snippet } from "./snippets.js";
 
 interface BookFile {
@@ -41,25 +41,27 @@ export class Book extends DataFile<BookFile> {
   }
 
   get category(): Category {
-    return categories().categoryForBook.get(this)!;
+    return cached(() => categories().categoryForBook.get(this)!);
   }
 
   get snippets(): Snippet[] {
-    const snippetsInBook = snippets().snippetsInBook.get(this)!;
+    return cached(() => {
+      const snippetsInBook = snippets().snippetsInBook.get(this)!;
 
-    snippetsInBook.sort(sortBy(s =>
-      s.data.archivePage.startsWith('n')
-        ? +s.data.archivePage.slice(1) - 1000
-        : +s.data.archivePage));
+      snippetsInBook.sort(sortBy(s =>
+        s.data.archivePage.startsWith('n')
+          ? +s.data.archivePage.slice(1) - 1000
+          : +s.data.archivePage));
 
-    for (let i = 1; i < snippetsInBook.length; i++) {
-      const s1 = snippetsInBook[i - 1];
-      const s2 = snippetsInBook[i];
-      s1!.nextSnippet = s2!;
-      s2!.prevSnippet = s1!;
-    }
+      for (let i = 1; i < snippetsInBook.length; i++) {
+        const s1 = snippetsInBook[i - 1];
+        const s2 = snippetsInBook[i];
+        s1!.nextSnippet = s2!;
+        s2!.prevSnippet = s1!;
+      }
 
-    return snippetsInBook;
+      return snippetsInBook;
+    });
   }
 
 }

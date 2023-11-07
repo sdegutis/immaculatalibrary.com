@@ -3,7 +3,7 @@ import { markdown, sortBy } from "../core/helpers.js";
 import allSnippetFiles from "../data/snippets/";
 import { calculateReadingMins } from '../shared/helpers.js';
 import { Book } from './books.js';
-import { snippets } from "./relations.js";
+import { cached, snippets } from "./relations.js";
 import { Tag } from './tag.js';
 
 interface SnippetFile {
@@ -45,7 +45,7 @@ export class Snippet extends DataFileWithDate<SnippetFile> {
   }
 
   get book(): Book {
-    return snippets().bookForSnippet.get(this)!;
+    return cached(() => snippets().bookForSnippet.get(this)!);
   }
 
 }
