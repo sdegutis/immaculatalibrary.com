@@ -1,7 +1,8 @@
 import { DataFile } from '../core/data-files.js';
 import { sortBy } from '../core/helpers.js';
 import allCategoryFiles from "../data/categories/";
-import { Book, booksBySlug } from './books.js';
+import { Book } from './books.js';
+import { categories } from './relations.js';
 
 interface CategoryFile {
   title: string;
@@ -14,8 +15,6 @@ export class Category extends DataFile<CategoryFile> {
 
   static override modelDir = 'categories';
 
-  books: Book[] = [];
-
   route: string;
   imageBig: string;
   imageSmall: string;
@@ -25,12 +24,10 @@ export class Category extends DataFile<CategoryFile> {
     this.route = `/books/category/${this.slug}.html`;
     this.imageBig = `/img/categories/${this.slug}-big.jpg`;
     this.imageSmall = `/img/categories/${this.slug}-small.jpg`;
+  }
 
-    for (const bookSlug of this.data.books) {
-      const book = booksBySlug[bookSlug]!;
-      book.category = this;
-      this.books.push(book);
-    }
+  get books(): Book[] {
+    return categories().booksInCategory.get(this)!;
   }
 
 }

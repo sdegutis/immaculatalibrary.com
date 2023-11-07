@@ -2,7 +2,8 @@ import { DataFileWithDate } from "../core/data-files.js";
 import { markdown, sortBy } from "../core/helpers.js";
 import allSnippetFiles from "../data/snippets/";
 import { calculateReadingMins } from '../shared/helpers.js';
-import { Book, allBooks, booksBySlug } from './books.js';
+import { Book } from './books.js';
+import { snippets } from "./relations.js";
 import { Tag } from './tag.js';
 
 interface SnippetFile {
@@ -24,7 +25,6 @@ export class Snippet extends DataFileWithDate<SnippetFile> {
   renderedTitle: string;
   mins: number;
 
-  book: Book;
   prevSnippet?: Snippet;
   nextSnippet?: Snippet;
   tags: Set<Tag>;
@@ -42,10 +42,10 @@ export class Snippet extends DataFileWithDate<SnippetFile> {
     this.mins = calculateReadingMins(this.content);
 
     this.tags = new Set([...this.data.tags ?? []].map(Tag.getOrCreate));
+  }
 
-    const book = booksBySlug[this.data.bookSlug]!;
-    this.book = book;
-    book.snippets.push(this);
+  get book(): Book {
+    return snippets().bookForSnippet.get(this)!;
   }
 
 }
@@ -55,17 +55,3 @@ export const allSnippets = (allSnippetFiles
   .filter((s => s.data.published))
   .sort(sortBy(s => s.slug))
   .reverse());
-
-for (const book of allBooks) {
-  book.snippets.sort(sortBy(s =>
-    s.data.archivePage.startsWith('n')
-      ? +s.data.archivePage.slice(1) - 1000
-      : +s.data.archivePage));
-
-  for (let i = 1; i < book.snippets.length; i++) {
-    const s1 = book.snippets[i - 1];
-    const s2 = book.snippets[i];
-    s1!.nextSnippet = s2!;
-    s2!.prevSnippet = s1!;
-  }
-}
