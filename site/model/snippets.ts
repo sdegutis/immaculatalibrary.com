@@ -50,6 +50,8 @@ export class Snippet extends DataFileWithDate<SnippetFile> {
 
 }
 
+console.log('Creating snippets');
+
 export const allSnippets = (allSnippetFiles
   .map(file => Snippet.fromFile(file))
   .filter((s => s.data.published))

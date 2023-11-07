@@ -12,6 +12,8 @@ function bookToJson(book: Book) {
 
 export type BookJson = ReturnType<typeof bookToJson>;
 
+console.log('Exporting books');
+
 export default <>
   {JSON.stringify(allBooks.map(bookToJson))}
 </>;

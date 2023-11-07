@@ -44,6 +44,8 @@ export class Book extends DataFile<BookFile> {
 
 }
 
+console.log('Creating books');
+
 export const allBooks = (allBookFiles
   .map(file => Book.fromFile(file))
   .sort(sortBy(b => `${b.data.dateAdded} ${b.slug}`)));
