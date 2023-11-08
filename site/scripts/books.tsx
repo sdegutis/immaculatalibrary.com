@@ -5,7 +5,7 @@ import { createSearch } from "./searchlist.js";
 import { randomElement, sleep } from "./util.js";
 
 const booksFetch = fetch('/scripts/data/books.json').then<BookJson[]>(res => res.json());
-await sleep(1);
+await sleep(.1);
 const books = await booksFetch;
 
 const snippetsFilterSource = new Reactive('both');

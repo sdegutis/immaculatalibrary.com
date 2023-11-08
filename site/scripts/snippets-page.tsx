@@ -5,7 +5,7 @@ import { createSearch } from "./searchlist.js";
 import { randomElement, sleep } from "./util.js";
 
 const snippetsFetch = fetch('/scripts/data/snippets.json').then<SnippetJson[]>(res => res.json());
-await sleep(1);
+await sleep(.1);
 const snippets = await snippetsFetch;
 
 const tags = [...new Set(snippets.flatMap(s => s.tags))].sort();
