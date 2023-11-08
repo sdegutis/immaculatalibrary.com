@@ -10,22 +10,17 @@ const css = /*css*/`
     gap: 1em;
     margin: 2em 0;
   }
-
-  #ID.divider {
-    padding-bottom: 2em;
-    border-bottom: 1px solid var(--border-color);
-  }
 `;
 
 const hash = crypto.createHash('md5').update(css).digest('hex');
 const cssId = `gen-${hash}`;
 const cssPath = generated(`navlinks-${hash}.css`, () => css.replace(/ID/g, cssId));
 
-export const Navlinks: JSX.Component<{ divider?: boolean }> = (attrs) => {
+export const Navlinks = () => {
   return <>
     <Column>
       <link rel="stylesheet" href={cssPath} />
-      <div id={cssId} class={attrs.divider ? 'divider' : ''}>
+      <div id={cssId}>
         <a href='/'>Immaculata Library</a> { }
         <a href='/books.html'>Books</a> { }
         <a href='/snippets.html'>Snippets</a>
