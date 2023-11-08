@@ -1,11 +1,18 @@
 const UNARY = new Set(["img", "br", "hr", "input", "meta", "link"]);
 
-export function jsxToString(element: JSX.Element): string {
+export type JSXElement = {
+  jsx: true,
+  tag: string,
+  attrs: Record<string, any> | null,
+  children: any[],
+};
+
+export function jsxToString(element: JSXElement): string {
   element = { jsx: true, tag: '', attrs: {}, children: [element] };
 
-  const context: RenderContext = { head: element, hoisted: new Set() };
-  hoistHeadThings(element, context);
-  context.head.children.push(...context.hoisted);
+  // const context: RenderContext = { head: element, hoisted: new Set() };
+  // hoistHeadThings(element, context);
+  // context.head.children.push(...context.hoisted);
 
   const parts: string[] = [];
   addElement(element, parts);
@@ -13,11 +20,11 @@ export function jsxToString(element: JSX.Element): string {
 }
 
 interface RenderContext {
-  head: JSX.Element;
+  head: JSXElement;
   hoisted: Set<string>,
 }
 
-function hoistHeadThings(element: JSX.Element, context: RenderContext) {
+function hoistHeadThings(element: JSXElement, context: RenderContext) {
   if (element.tag === 'head') {
     context.head = element;
   }
@@ -45,7 +52,7 @@ function hoistInArray(array: any[], context: RenderContext) {
   }
 }
 
-function addElement(element: JSX.Element, parts: string[]) {
+function addElement(element: JSXElement, parts: string[]) {
   if (element.tag === '') {
     pushChildren(element.children, parts);
     return;

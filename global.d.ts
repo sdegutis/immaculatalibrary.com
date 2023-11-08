@@ -2,12 +2,7 @@ declare module JSX {
   export type IntrinsicElements = {
     [tag: string]: Record<string, string | boolean | Function>;
   };
-  export type Element = {
-    jsx: true,
-    tag: string,
-    attrs: Record<string, any> | null,
-    children: any[],
-  };
+  export type Element = HTMLElement | SVGElement | DocumentFragment | string;
   export type Component<T extends Record<string, any> = {}, C extends any[] = any[]> =
     (attrs: T, children: C) => Element;
 }

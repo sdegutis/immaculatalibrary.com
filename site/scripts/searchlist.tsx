@@ -1,4 +1,3 @@
-import { jsxToElement } from "./jsx-nodes.js";
 import { Reactive, reactTo } from "./reactive.js";
 
 export interface SearchFilter<T> {
@@ -9,7 +8,7 @@ export interface SearchFilter<T> {
 const NotFound: JSX.Component<{ visibleCount: Reactive<number> }> = ({
   visibleCount,
 }) => {
-  const notFound = jsxToElement<HTMLElement>(<em>No results</em>);
+  const notFound = <em>No results</em> as HTMLElement;
   reactTo({ visibleCount }, deps => {
     notFound.hidden = deps.visibleCount.val !== 0;
   });
@@ -21,7 +20,7 @@ function LiveItem<T>({ Item, visibleItems, item }: {
   visibleItems: Reactive<T[]>,
   item: T,
 }) {
-  const element = jsxToElement<HTMLLIElement>(<Item item={item} />);
+  const element = <Item item={item} /> as HTMLLIElement;
 
   reactTo({ visibleItems }, deps => {
     element.hidden = !deps.visibleItems.val.includes(item);
@@ -50,21 +49,21 @@ export function createSearch<T>({ data, Item, filters, perPage = 7 }: {
     return Math.max(0, Math.floor((deps.matchingItems.val.length - 1) / perPage));
   });
 
-  const prevButton = jsxToElement<HTMLButtonElement>(<button
+  const prevButton = <button
     style='width:2em'
     onclick={(e: Event) => {
       e.preventDefault();
       page.set(Math.max(0, page.val - 1));
     }}
-  >&lsaquo;</button>);
+  >&lsaquo;</button> as HTMLButtonElement;
 
-  const nextButton = jsxToElement<HTMLButtonElement>(<button
+  const nextButton = <button
     style='width:2em'
     onclick={(e: Event) => {
       e.preventDefault();
       page.set(Math.min(highestPage.val, page.val + 1));
     }}
-  >&rsaquo;</button>);
+  >&rsaquo;</button> as HTMLButtonElement;
 
   reactTo({ page, highestPage }, deps => {
     nextButton.toggleAttribute('disabled', deps.page.val === deps.highestPage.val);
@@ -74,7 +73,7 @@ export function createSearch<T>({ data, Item, filters, perPage = 7 }: {
     prevButton.toggleAttribute('disabled', deps.page.val === 0);
   });
 
-  const currentPage = jsxToElement(<span style='min-width:7em; text-align:center' />);
+  const currentPage = <span style='min-width:7em; text-align:center' /> as HTMLSpanElement;
   reactTo({ page, matchingCount }, deps => {
     if (deps.matchingCount.val === 0) {
       currentPage.textContent = 'n/a';
@@ -86,15 +85,15 @@ export function createSearch<T>({ data, Item, filters, perPage = 7 }: {
     currentPage.textContent = `${start} - ${end} / ${deps.matchingCount.val}`;
   });
 
-  const results = jsxToElement(<>
+  const results = <>
     <p style='display:flex; gap:1em; align-items:baseline'>{prevButton} {currentPage} {nextButton}</p>
     <NotFound visibleCount={matchingCount} />
     <ul>
-      {data.map(item => jsxToElement(
+      {data.map(item =>
         <LiveItem item={item} visibleItems={visibleItems} Item={Item} />
-      ))}
+      )}
     </ul>
-  </>);
+  </>;
 
   const updateMatchingItems = () => {
     matchingItems.set(data.filter(item => filters.every(filter => filter.matches(item))));

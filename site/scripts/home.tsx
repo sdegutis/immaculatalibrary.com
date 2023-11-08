@@ -3,7 +3,6 @@ import { formatDate } from "../shared/format-date.js";
 import { HomeLoading } from '../shared/loading.js';
 import { mdOptions } from '../shared/markdown.js';
 import { SnippetJson } from './data/snippets/snippet.json.js';
-import { jsxToElement } from './jsx-nodes.js';
 import { randomElement, sleep } from './util.js';
 
 const snippetIds = fetch('/scripts/data/snippet-ids.json').then<string[]>(res => res.json());
@@ -38,7 +37,9 @@ async function reflectUrl() {
 
   const container = document.getElementById('random-book-snippet') as HTMLDivElement;
 
-  container.replaceChildren(jsxToElement(<HomeLoading />));
+  const loading = <HomeLoading /> as DocumentFragment;
+  console.log(loading.textContent)
+  container.replaceChildren(loading);
 
   const fetching = fetch(`/scripts/data/snippets/${slug}.json`).then<SnippetJson>(res => res.json());
 
@@ -57,7 +58,7 @@ async function reflectUrl() {
     previewMarkdown = snippet.content.slice(0, previewSplitSpot) + ' ...';
   }
 
-  container.replaceChildren(jsxToElement(<>
+  container.replaceChildren(<>
     <p>(Read <a href='#' onclick={doRandomBookSnippetReal}>another</a>)</p>
 
     <h4><a href={snippet.route}>{snippet.renderedTitle}</a></h4>
@@ -79,7 +80,7 @@ async function reflectUrl() {
         </>
         : <div innerHTML={renderedBody} />}
     </div>
-  </>));
+  </>);
 }
 
 async function doRandomBookSnippet(fn: (slugs: string[]) => string) {

@@ -1,6 +1,5 @@
 import { SnippetItem } from "../shared/snippets.js";
 import { SnippetJson } from "./data/snippets.json.js";
-import { jsxToElement } from "./jsx-nodes.js";
 import { Reactive } from "./reactive.js";
 import { createSearch } from "./searchlist.js";
 import { randomElement, sleep } from "./util.js";
@@ -15,7 +14,7 @@ const currentTag = new Reactive(new URL(window.location.href).searchParams.get('
 const lengthFilter = new Reactive('');
 const searchTerm = new Reactive('');
 
-document.getElementById('filters-container')!.replaceChildren(jsxToElement(<>
+document.getElementById('filters-container')!.replaceChildren(<>
   <p><input style='width: 100%' placeholder='Search' autofocus type="text" oninput={function (this: HTMLInputElement) {
     searchTerm.set(this.value.trim().toLowerCase());
   }} /></p>
@@ -52,7 +51,7 @@ document.getElementById('filters-container')!.replaceChildren(jsxToElement(<>
       this.href = randomElement(snippets).route;
     }}>Random Book Snippet</a>.
   </p>
-</>));
+</>);
 
 
 const { results, matchingCount } = createSearch({

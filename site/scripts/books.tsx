@@ -1,6 +1,5 @@
 import { RatingStar } from "../shared/rating.js";
 import { BookJson } from "./data/books.json.js";
-import { jsxToElement } from "./jsx-nodes.js";
 import { Reactive } from "./reactive.js";
 import { createSearch } from "./searchlist.js";
 import { randomElement, sleep } from "./util.js";
@@ -13,7 +12,7 @@ const snippetsFilterSource = new Reactive('both');
 const starsFilterSource = new Reactive('any');
 const searchTerm = new Reactive('');
 
-document.getElementById('filters-container')!.replaceChildren(jsxToElement(<>
+document.getElementById('filters-container')!.replaceChildren(<>
   <p>
     <input autofocus style='width: 100%' placeholder='Search' type="text" oninput={function (this: HTMLInputElement) {
       searchTerm.set(this.value.trim().toLowerCase());
@@ -32,7 +31,7 @@ document.getElementById('filters-container')!.replaceChildren(jsxToElement(<>
       <label><input type='radio' name='stars' onclick={() => starsFilterSource.set('any')} checked />Any</label>
       <label><input type='radio' name='stars' onclick={() => starsFilterSource.set('0')} />Unrated</label>
       {Array(5).fill(0).map((_, i) => {
-        const star = jsxToElement<SVGElement>(<RatingStar />);
+        const star = (<RatingStar /> as DocumentFragment).querySelector('svg')!;
         const num = i + 1;
 
         starsFilterSource.onChange(() => {
@@ -55,7 +54,7 @@ document.getElementById('filters-container')!.replaceChildren(jsxToElement(<>
       this.href = randomElement(books).route;
     }}>Random Book</a>.
   </p>
-</>));
+</>);
 
 
 const { results, matchingCount } = createSearch({

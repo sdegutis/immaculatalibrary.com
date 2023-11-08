@@ -4,7 +4,7 @@ import { generated } from "../core/generated.js";
 export const Font: JSX.Component<{
   use: FsFile[]
   fallback: string,
-}, [JSX.Element]> = (attrs, [childEl]) => {
+}, [Exclude<JSX.Element, string>]> = (attrs, [childEl]) => {
   const dir = attrs.use;
   const name = path.basename(dir[0]!.path).split('-')[0]!;
 
@@ -24,10 +24,12 @@ export const Font: JSX.Component<{
     return lines.join('\n');
   });
 
-  let id = childEl.attrs?.["id"];
-  if (!id) id = (childEl.attrs ??= {})["id"] = `generated-font-${name}`;
+  // let id = childEl.attrs?.["id"];
+  // if (!id) id = (childEl.attrs ??= {})["id"] = `generated-font-${name}`;
 
-  const style = `#${id} { font-family: ${name},  ${attrs.fallback} }`;
+  const id = 'html';
+
+  const style = `${id} { font-family: ${name},  ${attrs.fallback} }`;
 
   return <>
     {attrs.use.map(file =>

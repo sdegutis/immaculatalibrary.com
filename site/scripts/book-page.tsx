@@ -1,5 +1,4 @@
 import { SnippetJson } from "./data/snippets.json.js";
-import { jsxToElement } from "./jsx-nodes.js";
 import { Reactive } from "./reactive.js";
 import { createSearch } from "./searchlist.js";
 import { randomElement, sleep } from "./util.js";
@@ -35,7 +34,7 @@ if (snippetsInBook.length > 0) {
     </>,
   });
 
-  container.replaceChildren(jsxToElement(<>
+  container.replaceChildren(<>
     <p>
       <a href='#' onclick={function (this: HTMLAnchorElement) {
         this.href = randomElement(snippetsInBook).route;
@@ -50,10 +49,10 @@ if (snippetsInBook.length > 0) {
       }}
     />
     {results}
-  </>));
+  </>);
 }
 else {
-  container.replaceChildren(jsxToElement(
+  container.replaceChildren(
     <em>No snippets have been posted for this book yet.</em>
-  ));
+  );
 }
