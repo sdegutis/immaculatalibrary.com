@@ -45,23 +45,7 @@ export class Book extends DataFile<BookFile> {
   }
 
   get snippets(): Snippet[] {
-    return cached(() => {
-      const snippets = relations.snippets().inBook.get(this)!;
-
-      snippets.sort(sortBy(s =>
-        s.data.archivePage.startsWith('n')
-          ? +s.data.archivePage.slice(1) - 1000
-          : +s.data.archivePage));
-
-      for (let i = 1; i < snippets.length; i++) {
-        const s1 = snippets[i - 1];
-        const s2 = snippets[i];
-        s1!.nextSnippet = s2!;
-        s2!.prevSnippet = s1!;
-      }
-
-      return snippets;
-    });
+    return cached(() => relations.snippets().inBook.get(this)!);
   }
 
 }

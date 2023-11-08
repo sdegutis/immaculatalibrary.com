@@ -1,8 +1,9 @@
+import { cached, sortBy } from "../core/helpers.js";
 import { Book, allBooks, booksBySlug } from "./books.js";
 import { Category, allCategories } from "./categories.js";
 import { Snippet, allSnippets } from "./snippets.js";
 
-export function categories() {
+export const categories = () => cached(() => {
   const books = new Map<Category, Book[]>();
   const forBook = new Map<Book, Category>();
 
@@ -18,9 +19,10 @@ export function categories() {
   }
 
   return { books, forBook };
-}
+});
 
-export function snippets() {
+export const snippets = () => cached(() => {
+  // console.time('snippets')
   const inBook = new Map<Book, Snippet[]>();
   const book = new Map<Snippet, Book>();
 
@@ -33,6 +35,21 @@ export function snippets() {
     book.set(snippet, bookForSnippet);
     inBook.get(bookForSnippet)!.push(snippet);
   }
+  // console.timeEnd('snippets')
+
+  for (const snippets of inBook.values()) {
+    snippets.sort(sortBy(s =>
+      s.data.archivePage.startsWith('n')
+        ? +s.data.archivePage.slice(1) - 1000
+        : +s.data.archivePage));
+
+    for (let i = 1; i < snippets.length; i++) {
+      const s1 = snippets[i - 1];
+      const s2 = snippets[i];
+      s1!.nextSnippet = s2!;
+      s2!.prevSnippet = s1!;
+    }
+  }
 
   return { inBook, book };
-}
+});
