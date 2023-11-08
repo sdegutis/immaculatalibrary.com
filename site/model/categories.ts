@@ -1,5 +1,5 @@
 import { DataFile } from '../core/data-files.js';
-import { cached, sortBy } from '../core/helpers.js';
+import { sortBy } from '../core/helpers.js';
 import allCategoryFiles from "../data/categories/";
 import { Book } from './books.js';
 import * as relations from './relations.js';
@@ -27,7 +27,7 @@ export class Category extends DataFile<CategoryFile> {
   }
 
   get books(): Book[] {
-    return cached(() => relations.categories().books.get(this)!);
+    return relations.categories().books.get(this)!;
   }
 
 }

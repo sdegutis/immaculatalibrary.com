@@ -1,5 +1,5 @@
 import { DataFileWithDate } from "../core/data-files.js";
-import { cached, markdown, sortBy } from "../core/helpers.js";
+import { markdown, sortBy } from "../core/helpers.js";
 import allSnippetFiles from "../data/snippets/";
 import { calculateReadingMins } from '../shared/helpers.js';
 import { Book } from './books.js';
@@ -45,7 +45,7 @@ export class Snippet extends DataFileWithDate<SnippetFile> {
   }
 
   get book(): Book {
-    return cached(() => relations.snippets().book.get(this)!);
+    return relations.snippets().book.get(this)!;
   }
 
 }
