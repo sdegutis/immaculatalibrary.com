@@ -7,30 +7,30 @@ import { SiteHeader } from './site-header.js';
 
 export const EmptyPage: JSX.Component = (attrs, children) => <>
   {'<!DOCTYPE html>'}
-  <Font use={martel} fallback="serif">
-    <html lang="en">
+  <html lang="en">
 
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <title>Immaculata Library</title>
-        <meta property="og:title" content='Immaculata Library' />
-        <meta property="og:locale" content="en_US" />
-        {/* {attrs.image && <meta property="og:image" content={`https://www.immaculatalibrary.com${attrs.image}`} />} */}
-        <meta name="description" content="Catholic Digital Library" />
+      <title>Immaculata Library</title>
+      <meta property="og:title" content='Immaculata Library' />
+      <meta property="og:locale" content="en_US" />
+      {/* {attrs.image && <meta property="og:image" content={`https://www.immaculatalibrary.com${attrs.image}`} />} */}
+      <meta name="description" content="Catholic Digital Library" />
 
-        <link rel="stylesheet" href='/css/base.css' />
+      <link rel="stylesheet" href='/css/base.css' />
 
-        <Meta />
-      </head>
+      <Meta />
+    </head>
 
-      <body>
+    <body>
+      <Font use={martel} fallback="serif">
         {children}
-      </body>
+      </Font>
+    </body>
 
-    </html>
-  </Font>
+  </html>
 </>;
 
 export const TypicalPage: JSX.Component<{ title: string, image: string }> = (attrs, children) => <>
