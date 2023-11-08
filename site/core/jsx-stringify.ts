@@ -10,9 +10,9 @@ export type JSXElement = {
 export function jsxToString(element: JSXElement): string {
   element = { jsx: true, tag: '', attrs: {}, children: [element] };
 
-  // const context: RenderContext = { head: element, hoisted: new Set() };
-  // hoistHeadThings(element, context);
-  // context.head.children.push(...context.hoisted);
+  const context: RenderContext = { head: element, hoisted: new Set() };
+  hoistHeadThings(element, context);
+  context.head.children.push(...context.hoisted);
 
   const parts: string[] = [];
   addElement(element, parts);
