@@ -6,6 +6,13 @@ export const jsx = (tag: string | Function, fullAttrs: Record<string, any>) => {
   }
 
   if (tag === '') {
+    if (!Array.isArray(children)) {
+      return children;
+    }
+    else if (children.length === 1) {
+      return children[0];
+    }
+
     const el = document.createDocumentFragment();
     pushChildren(el, children);
     return el;
