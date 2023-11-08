@@ -1,28 +1,12 @@
+const UNARY = new Set(["img", "br", "hr", "input", "meta", "link"]);
+
 export const jsx = (tag: string | Function, { children, ...attrs }: Record<string, any>) => {
-  return createJsxElement(tag, attrs, children);
-}
+  if (children === null || children === undefined) children = [];
+  if (!Array.isArray(children)) children = [children];
 
-export const jsxs = jsx;
-export const Fragment = '';
-
-function createJsxElement(tag: string | Function, attrs: any, ...children: any[]) {
-  if (typeof tag === 'function')
+  if (typeof tag === 'function') {
     return tag(attrs ?? {}, children);
-  else
-    return jsxToString(tag, attrs, ...children);
-}
-
-
-
-
-
-
-
-
-
-
-const jsxToString = (tag: string | Function, attrs: any, ...children: any[]) => {
-  if (typeof tag === 'function') return tag(attrs ?? {}, children);
+  }
 
   const parts: string[] = [];
 
@@ -39,14 +23,21 @@ const jsxToString = (tag: string | Function, attrs: any, ...children: any[]) => 
     else if (v)
       parts.push(' ', k, '="', v, '"');
   }
-  parts.push('>');
 
-  pushChildren(children, parts);
-
-  parts.push('</', tag, '>');
+  if (UNARY.has(tag)) {
+    parts.push('/>');
+  }
+  else {
+    parts.push('>');
+    pushChildren(children, parts);
+    parts.push('</', tag, '>');
+  }
 
   return parts.join('');
-};
+}
+
+export const jsxs = jsx;
+export const Fragment = '';
 
 function pushChildren(children: any[], parts: string[]) {
   for (const child of children) {
