@@ -23,12 +23,9 @@ export const jsx = (tag: string | Function, { children, ...attrs }: Record<strin
     else if (v)
       parts.push(' ', k, '="', v, '"');
   }
+  parts.push('>');
 
-  if (UNARY.has(tag)) {
-    parts.push('/>');
-  }
-  else {
-    parts.push('>');
+  if (!UNARY.has(tag)) {
     pushChildren(children, parts);
     parts.push('</', tag, '>');
   }
