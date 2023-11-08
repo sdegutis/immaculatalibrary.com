@@ -37,9 +37,7 @@ async function reflectUrl() {
 
   const container = document.getElementById('random-book-snippet') as HTMLDivElement;
 
-  const loading = <HomeLoading /> as DocumentFragment;
-  console.log(loading.textContent)
-  container.replaceChildren(loading);
+  container.replaceChildren((<HomeLoading />));
 
   const fetching = fetch(`/scripts/data/snippets/${slug}.json`).then<SnippetJson>(res => res.json());
 
