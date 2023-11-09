@@ -38,7 +38,7 @@ export class Server {
         this.files?.get(path.join(url, 'index.html'))
       );
 
-      if (content) {
+      if (content !== undefined) {
         res.statusCode = 200;
         if (url.endsWith('.js')) {
           res.setHeader('content-type', 'text/javascript');
