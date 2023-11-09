@@ -59,7 +59,7 @@ async function reflectUrl() {
   container.replaceChildren(<>
     <p>(Read <a href='#' onclick={doRandomBookSnippetReal}>another</a>)</p>
 
-    <h4><a href={snippet.route}>{snippet.renderedTitle}</a></h4>
+    <h3><a href={snippet.route}>{snippet.renderedTitle}</a></h3>
     <p><small>{snippet.mins} min &bull; Digitized on {formatDate(snippet.date)}</small></p>
     <p>
       From <a href={snippet.bookRoute}>{snippet.bookTitle}</a>
