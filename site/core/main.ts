@@ -19,14 +19,24 @@ for (const { path: filepath, content } of files) {
 
     if (Array.isArray(exported)) {
       for (const [name, jsx] of exported) {
-        outfiles.set(path.join(dir, name), jsx);
+        outfiles.set(path.join(dir, name), hoist(jsx));
       }
     }
     else {
-      outfiles.set(filepath.slice(0, -3), exported);
+      outfiles.set(filepath.slice(0, -3), hoist(exported));
     }
   }
   else if (!filepath.endsWith('.md')) {
     outfiles.set(filepath, content);
   }
+}
+
+function hoist(jsx: string) {
+  const hoisted = new Set<string>();
+  return (jsx
+    .replace(/<script .+?><\/script>|<link .+?>/g, (s, s2) => {
+      hoisted.add(s);
+      return '';
+    })
+    .replace(/<head>/, [...hoisted].join('')));
 }
