@@ -64,6 +64,20 @@ class Item {
 
 }
 
+const Counter: JSX.Component<{ items: Reactive<Item[]>, filter: 'all' | 'done' | 'left' }> = ({ items, filter }) => {
+  const span = <span /> as HTMLSpanElement;
+  reactTo({ items }, deps => {
+    const items = deps.items.val.filter(item => {
+      if (filter === 'done') return item.done;
+      if (filter === 'left') return !item.done;
+      return true;
+    }
+    );
+    span.textContent = items.length.toFixed();
+  });
+  return span;
+};
+
 document.getElementById('root')!.replaceChildren(<>
   <FadeIn>
     <h1>Todo</h1>
@@ -80,9 +94,9 @@ document.getElementById('root')!.replaceChildren(<>
       />
     </p>
     <p>
-      <label><input type='radio' name='filter' onclick={() => filter.set('all')} checked /> All</label>
-      <label><input type='radio' name='filter' onclick={() => filter.set('done')} /> Done</label>
-      <label><input type='radio' name='filter' onclick={() => filter.set('left')} /> Remainder</label>
+      <label><input type='radio' name='filter' onclick={() => filter.set('all')} checked /> All (<Counter items={items} filter='all' />)</label>
+      <label><input type='radio' name='filter' onclick={() => filter.set('done')} /> Done (<Counter items={items} filter='done' />)</label>
+      <label><input type='radio' name='filter' onclick={() => filter.set('left')} /> Remainder (<Counter items={items} filter='left' />)</label>
     </p>
     <List items={items} />
     <p>
