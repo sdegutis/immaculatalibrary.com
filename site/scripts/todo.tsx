@@ -94,9 +94,20 @@ document.getElementById('root')!.replaceChildren(<>
       />
     </p>
     <p>
-      <label><input type='radio' name='filter' onclick={() => filter.set('all')} checked /> All (<Counter items={items} filter='all' />)</label>
-      <label><input type='radio' name='filter' onclick={() => filter.set('done')} /> Done (<Counter items={items} filter='done' />)</label>
-      <label><input type='radio' name='filter' onclick={() => filter.set('left')} /> Remainder (<Counter items={items} filter='left' />)</label>
+      {Object.entries({
+        all: 'All',
+        done: 'Done',
+        left: 'Remaining',
+      }).map(([val, name]) => (
+        <label>
+          <input
+            type='radio'
+            name='filter'
+            onclick={() => filter.set(val)}
+            checked={val === 'all'}
+          /> {name} (<Counter items={items} filter={val as any} />)
+        </label>
+      ))}
     </p>
     <List items={items} />
     <p>
