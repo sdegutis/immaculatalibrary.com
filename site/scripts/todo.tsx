@@ -100,6 +100,12 @@ document.getElementById('root')!.replaceChildren(<>
         items.set(items.val.filter(item => !item.done));
       }}>Clear done</button>
     </p>
+
+    <h2>Source code</h2>
+    <ul>
+      <li><a href="https://github.com/sdegutis/immaculatalibrary.com/blob/main/site/todo.html.tsx">SSG-side source</a></li>
+      <li><a href="https://github.com/sdegutis/immaculatalibrary.com/blob/main/site/scripts/todo.tsx">Client-side source</a></li>
+    </ul>
   </FadeIn>
 </>);
 
