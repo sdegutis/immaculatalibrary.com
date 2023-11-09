@@ -6,15 +6,12 @@ export const jsx = (tag: string | Function, fullAttrs: Record<string, any>) => {
   }
 
   if (tag === '') {
-    if (!Array.isArray(children)) {
-      return children;
+    const goodChildren = getGoodChildren(children);
+    if (goodChildren.length === 1) {
+      return goodChildren[0];
     }
-    else if (children.length === 1) {
-      return children[0];
-    }
-
     const el = document.createDocumentFragment();
-    pushChildren(el, children);
+    pushChildren(el, goodChildren);
     return el;
   }
 
@@ -23,7 +20,7 @@ export const jsx = (tag: string | Function, fullAttrs: Record<string, any>) => {
     ? document.createElementNS('http://www.w3.org/2000/svg', tag)
     : document.createElement(tag));
 
-  pushChildren(el, children);
+  pushChildren(el, getGoodChildren(children));
 
   for (const [key, val] of Object.entries(attrs ?? {})) {
     if (isSvg) {
@@ -43,9 +40,12 @@ export const jsx = (tag: string | Function, fullAttrs: Record<string, any>) => {
   return el;
 }
 
-function pushChildren(el: DocumentFragment | HTMLElement | SVGElement, children: any) {
-  const goodChildren = [children].flat(Infinity).filter(o => o);
-  for (const child of goodChildren) {
+function getGoodChildren(children: any) {
+  return [children].flat(Infinity).filter(o => o);
+}
+
+function pushChildren(el: DocumentFragment | HTMLElement | SVGElement, children: any[]) {
+  for (const child of children) {
     if (child instanceof HTMLLinkElement || child instanceof HTMLStyleElement) {
       document.head.append(child);
     }
