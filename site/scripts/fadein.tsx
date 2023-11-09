@@ -4,6 +4,6 @@ for (const el of document.querySelectorAll('.fadein')) {
       el.classList.toggle('ready');
       observer.disconnect();
     }
-  }, { threshold: 0.2 });
+  }, { threshold: 0.1 });
   observer.observe(el);
 }
