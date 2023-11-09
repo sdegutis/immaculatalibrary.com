@@ -50,7 +50,7 @@ export default <>
             <div>
 
               <div>
-                <h3>Random Book Snippet</h3>
+                <h2>Random Book Snippet</h2>
                 <Typography>
                   <div id="random-book-snippet">
                     <HomeLoading />
@@ -62,7 +62,7 @@ export default <>
 
             <div class='hidden-on-mobile'>
 
-              <h3>Featured books</h3>
+              <h2>Featured books</h2>
               <ul id='home-featured-books'>
                 {featuredBooks.map(book => <>
                   <li>
@@ -89,7 +89,7 @@ export default <>
           <Column centered>
             <Typography>
 
-              <h2>About Immaculata Library</h2>
+              <h3>About Immaculata Library</h>
 
               <p>The website Immaculata Library began as a quick place
                 to store digital copies of invaluable and timeless
