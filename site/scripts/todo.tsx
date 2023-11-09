@@ -4,11 +4,30 @@ import { sleep } from "./util.js";
 
 await sleep(1);
 
-let items: Item[] = [];
-
+const items = new Reactive<Item[]>([]);
 const filter = new Reactive('all');
 
-const list = <ul /> as HTMLUListElement;
+const List: JSX.Component<{ items: Reactive<Item[]> }> = ({ items }) => {
+  const list = <ul /> as HTMLUListElement;
+  const children = new Set<Item>();
+
+  reactTo({ items }, deps => {
+    const adding = deps.items.val.filter(item => !children.has(item));
+    const removing = [...children].filter(item => !deps.items.val.includes(item));
+
+    for (const item of adding) {
+      list.append(item.li);
+      children.add(item);
+    }
+
+    for (const item of removing) {
+      item.li.remove();
+      children.delete(item);
+    }
+  });
+
+  return list;
+};
 
 class Item {
 
@@ -45,24 +64,6 @@ class Item {
 
 }
 
-const addItem = (text: string, filter: Reactive<string>) => {
-  const item = new Item(text, filter);
-  items.push(item);
-  list.append(item.li);
-};
-
-function clearDone(e: Event) {
-  e.preventDefault();
-
-  for (const item of items) {
-    if (item.done) {
-      item.remove();
-    }
-  }
-
-  items = items.filter(item => !item.done);
-}
-
 document.getElementById('root')!.replaceChildren(<>
   <FadeIn>
     <h1>Todo</h1>
@@ -71,7 +72,8 @@ document.getElementById('root')!.replaceChildren(<>
         autofocus
         onkeydown={function (this: HTMLInputElement, e: KeyboardEvent) {
           if (e.key === 'Enter') {
-            addItem(this.value.trim(), filter);
+            const item = new Item(this.value.trim(), filter);
+            items.set([...items.val, item]);
             this.value = '';
           }
         }}
@@ -82,9 +84,12 @@ document.getElementById('root')!.replaceChildren(<>
       <label><input type='radio' name='filter' onclick={() => filter.set('done')} /> Done</label>
       <label><input type='radio' name='filter' onclick={() => filter.set('left')} /> Remainder</label>
     </p>
-    {list}
+    <List items={items} />
     <p>
-      <button onclick={clearDone}>Clear done</button>
+      <button onclick={(e: Event) => {
+        e.preventDefault();
+        items.set(items.val.filter(item => !item.done));
+      }}>Clear done</button>
     </p>
   </FadeIn>
 </>);
