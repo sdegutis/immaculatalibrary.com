@@ -53,7 +53,7 @@ export default <>
                 </div>
               </Typography>
             </div>
-            <script type='module' src='/scripts/home.js' defer />
+            <script type='module' src='/scripts/home.js' />
           </div>
 
           <div class='hidden-on-mobile'>
