@@ -8,25 +8,9 @@ const items = new Reactive<Item[]>([]);
 const filter = new Reactive('all');
 
 const List: JSX.Component<{ items: Reactive<Item[]> }> = ({ items }) => {
-  const list = <ul /> as HTMLUListElement;
-  const children = new Set<Item>();
-
-  reactTo({ items }, deps => {
-    const adding = deps.items.val.filter(item => !children.has(item));
-    const removing = [...children].filter(item => !deps.items.val.includes(item));
-
-    for (const item of adding) {
-      list.append(item.li);
-      children.add(item);
-    }
-
-    for (const item of removing) {
-      item.li.remove();
-      children.delete(item);
-    }
-  });
-
-  return list;
+  const container = <ul /> as HTMLUListElement;
+  reflectChildren(items, container, (item: Item) => item.li);
+  return container;
 };
 
 class Item {
@@ -118,3 +102,26 @@ document.getElementById('root')!.replaceChildren(<>
     </p>
   </FadeIn>
 </>);
+
+function reflectChildren<T extends C[], C>(
+  items: Reactive<T>,
+  container: HTMLElement,
+  getView: (child: C) => HTMLElement,
+) {
+  const knownChildren = new Set<C>();
+
+  reactTo({ items }, deps => {
+    const adding = deps.items.val.filter(item => !knownChildren.has(item));
+    const removing = [...knownChildren].filter(item => !deps.items.val.includes(item));
+
+    for (const item of adding) {
+      container.append(getView(item));
+      knownChildren.add(item);
+    }
+
+    for (const item of removing) {
+      getView(item).remove();
+      knownChildren.delete(item);
+    }
+  });
+}
