@@ -89,7 +89,7 @@ export default <>
           <Column centered>
             <Typography>
 
-              <h3>About Immaculata Library</h>
+              <h3>About Immaculata Library</h3>
 
               <p>The website Immaculata Library began as a quick place
                 to store digital copies of invaluable and timeless
