@@ -108,5 +108,5 @@ export function createSearch<T>({ data, Item, filters, perPage = 7 }: {
     });
   }
 
-  return { results, matchingCount };
+  return { results, matchingCount, matchingItems };
 }

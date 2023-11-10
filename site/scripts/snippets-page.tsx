@@ -14,47 +14,8 @@ const currentTag = new Reactive(new URL(window.location.href).searchParams.get('
 const lengthFilter = new Reactive('');
 const searchTerm = new Reactive('');
 
-document.getElementById('filters-container')!.replaceChildren(<>
-  <p><input style='width: 100%' placeholder='Search' autofocus type="text" oninput={function (this: HTMLInputElement) {
-    searchTerm.set(this.value.trim().toLowerCase());
-  }} /></p>
-  <div id='snippets-filters'>
 
-    <span class='label'>tag</span>
-    <select onchange={function (this: HTMLSelectElement) { currentTag.set(this.value) }}>
-      <optgroup label='Whether it has tags'>
-        <option value='_any' selected={currentTag.val === '_any'}>Any</option>
-        <option value='_some' selected={currentTag.val === '_some'}>Some</option>
-        <option value='_none' selected={currentTag.val === '_none'}>None</option>
-      </optgroup>
-      <optgroup label='Tags'>
-        {tags.map(tag =>
-          <option value={tag} selected={currentTag.val === tag}>{tag}</option>
-        )}
-      </optgroup>
-    </select>
-
-    <span class='label'>minutes</span>
-    <span>
-      <label><input type='radio' name='has-snippets' onclick={() => lengthFilter.set('')} checked />Any</label>
-      <label><input type='radio' name='has-snippets' onclick={() => lengthFilter.set('short')} />1-2</label>
-      <label><input type='radio' name='has-snippets' onclick={() => lengthFilter.set('medium')} />3-5</label>
-      <label><input type='radio' name='has-snippets' onclick={() => lengthFilter.set('long')} />6-8</label>
-      <label><input type='radio' name='has-snippets' onclick={() => lengthFilter.set('very-long')} />9+</label>
-    </span>
-
-  </div>
-  <hr />
-  <p>
-    Not sure what to read?<br />
-    Try a <a href='#' onclick={function (this: HTMLAnchorElement) {
-      this.href = randomElement(snippets).route;
-    }}>Random Book Snippet</a>.
-  </p>
-</>);
-
-
-const { results, matchingCount } = createSearch({
+const { results, matchingItems } = createSearch({
   data: snippets,
   filters: [
     {
@@ -93,6 +54,51 @@ const { results, matchingCount } = createSearch({
 
 document.getElementById('search-results')!.replaceChildren(results);
 
-matchingCount.onChange(() => {
-  document.getElementById('search-count')!.textContent = matchingCount.val.toFixed();
+matchingItems.onChange(() => {
+  document.getElementById('search-count')!.textContent = matchingItems.val.length.toFixed();
 });
+
+const randomSnippetLink = <a href='#' onclick={function (this: HTMLAnchorElement) {
+  this.href = randomElement(matchingItems.val).route;
+}}>Random Snippet</a> as HTMLAnchorElement;
+
+matchingItems.onChange(() => {
+  randomSnippetLink.toggleAttribute('disabled', matchingItems.val.length === 0);
+});
+
+document.getElementById('filters-container')!.replaceChildren(<>
+  <p><input style='width: 100%' placeholder='Search' autofocus type="text" oninput={function (this: HTMLInputElement) {
+    searchTerm.set(this.value.trim().toLowerCase());
+  }} /></p>
+  <div id='snippets-filters'>
+
+    <span class='label'>tag</span>
+    <select onchange={function (this: HTMLSelectElement) { currentTag.set(this.value) }}>
+      <optgroup label='Whether it has tags'>
+        <option value='_any' selected={currentTag.val === '_any'}>Any</option>
+        <option value='_some' selected={currentTag.val === '_some'}>Some</option>
+        <option value='_none' selected={currentTag.val === '_none'}>None</option>
+      </optgroup>
+      <optgroup label='Tags'>
+        {tags.map(tag =>
+          <option value={tag} selected={currentTag.val === tag}>{tag}</option>
+        )}
+      </optgroup>
+    </select>
+
+    <span class='label'>minutes</span>
+    <span>
+      <label><input type='radio' name='has-snippets' onclick={() => lengthFilter.set('')} checked />Any</label>
+      <label><input type='radio' name='has-snippets' onclick={() => lengthFilter.set('short')} />1-2</label>
+      <label><input type='radio' name='has-snippets' onclick={() => lengthFilter.set('medium')} />3-5</label>
+      <label><input type='radio' name='has-snippets' onclick={() => lengthFilter.set('long')} />6-8</label>
+      <label><input type='radio' name='has-snippets' onclick={() => lengthFilter.set('very-long')} />9+</label>
+    </span>
+
+  </div>
+  <hr />
+  <p>
+    Not sure what to read?<br />
+    Try a {randomSnippetLink} from among those shown here.
+  </p>
+</>);
