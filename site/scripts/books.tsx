@@ -63,7 +63,12 @@ matchingItems.onChange(() => {
   document.getElementById('search-count')!.textContent = matchingItems.val.length.toFixed();
 });
 
-const randomBookLink = <a href='#' onclick={function (this: HTMLAnchorElement) {
+const randomBookLink = <a href='#' onclick={function (this: HTMLAnchorElement, e: Event) {
+  if (matchingItems.val.length === 0) {
+    e.preventDefault();
+    return;
+  }
+
   this.href = randomElement(matchingItems.val).route;
 }}>Random Book</a> as HTMLAnchorElement;
 
