@@ -23,17 +23,21 @@ class Item {
 
     span.textContent = text;
 
-    this.li = <li
-      style='cursor:pointer'
-      onclick={() => {
-        this.done = !this.done;
-        span.style.textDecoration = this.done ? 'line-through' : '';
-        span.style.opacity = this.done ? '0.5' : '';
-      }}
-    >
-      <input type='checkbox' />
-      {span}
-    </li> as HTMLLIElement;
+    this.li = (
+      <FadeIn>
+        <li
+          style='cursor:pointer'
+          onclick={() => {
+            this.done = !this.done;
+            span.style.textDecoration = this.done ? 'line-through' : '';
+            span.style.opacity = this.done ? '0.5' : '';
+          }}
+        >
+          <input type='checkbox' />
+          {span}
+        </li>
+      </FadeIn>
+    ) as HTMLDivElement;
 
     reactTo({ filter }, deps => {
       if (filter.val === 'all') this.li.hidden = false;
