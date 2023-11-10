@@ -3,14 +3,6 @@ import { Book, allBooks, booksBySlug } from "./books.js";
 import { Category, allCategories } from "./categories.js";
 import { Snippet, allSnippets } from "./snippets.js";
 
-export function cached<T>(fn: () => T): () => T {
-  let d: T;
-  return () => {
-    if (!d) d = fn();
-    return d;
-  };
-}
-
 export const categories = cached(() => {
   const books = new Map<Category, Book[]>();
   const forBook = new Map<Book, Category[]>();
@@ -62,3 +54,11 @@ export const snippets = cached(() => {
 
   return { inBook, book };
 });
+
+function cached<T>(fn: () => T): () => T {
+  let d: T;
+  return () => {
+    if (!d) d = fn();
+    return d;
+  };
+}
