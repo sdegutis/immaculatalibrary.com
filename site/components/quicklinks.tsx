@@ -10,11 +10,10 @@ export const QuickLinks: JSX.Component = (attrs, children) => {
 
     <div class="recents alt">
 
-      <div class="container">
-        <h2>Featured Books</h2>
-      </div>
-
       <FadeIn>
+        <div class="container">
+          <h2>Featured Books</h2>
+        </div>
         <div id='featured-books-area'>
           <div id='featured-books-container'>
 
@@ -40,17 +39,15 @@ export const QuickLinks: JSX.Component = (attrs, children) => {
     <div class="recents">
       <div class="container">
 
-        <h2>Books</h2>
         <FadeIn>
+          <h2>Books</h2>
           <ul class="quicklinks">
-
             {allCategories.map(cat => <li>
               <a class="link" href={cat.route} style={`background-image: url(${cat.imageSmall});`}>
                 <span>{cat.data.shortTitle}</span>
               </a>
             </li>
             )}
-
           </ul>
         </FadeIn>
 
@@ -60,16 +57,16 @@ export const QuickLinks: JSX.Component = (attrs, children) => {
     <div class="recents alt">
       <div class="container">
 
-        <h2>Movies</h2>
-
         <FadeIn>
+          <h2>Movies</h2>
           <ul class="quicklinks">
 
-            {allMovies.map(movie => <li>
-              <a class="link" href={movie.route} style={`background-image: url(${movie.imageSmall});`}>
-                <span>{movie.data.shortTitle}</span>
-              </a>
-            </li>
+            {allMovies.map(movie =>
+              <li>
+                <a class="link" href={movie.route} style={`background-image: url(${movie.imageSmall});`}>
+                  <span>{movie.data.shortTitle}</span>
+                </a>
+              </li>
             )}
 
             <li>
