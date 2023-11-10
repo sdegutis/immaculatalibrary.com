@@ -13,12 +13,15 @@ export function cached<T>(fn: () => T): () => T {
 
 export const categories = cached(() => {
   const books = new Map<Category, Book[]>();
-  const forBook = new Map<Book, Category>();
+  const forBook = new Map<Book, Category[]>();
 
   for (const category of allCategories) {
     for (const bookSlug of category.data.books) {
       const book = booksBySlug.get(bookSlug)!;
-      forBook.set(book, category);
+
+      let categories = forBook.get(book);
+      if (!categories) forBook.set(book, categories = []);
+      categories.push(category);
 
       let booksInCategory = books.get(category);
       if (!booksInCategory) books.set(category, booksInCategory = []);

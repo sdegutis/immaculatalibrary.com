@@ -16,7 +16,7 @@ export default allSnippets.map(snippet => {
 
 
   return [`${snippet.slug}.html`, <>
-    <TypicalPage title="Book Snippets" image={snippet.book.category.imageBig}>
+    <TypicalPage title="Book Snippets" image={snippet.book.imageBig}>
 
       <link rel="stylesheet" href='/css/page/snippet.css' />
 

@@ -8,7 +8,7 @@ import { allBooks } from "../model/books.js";
 import { LoadingLine, LoadingParagraph } from "../shared/loading.js";
 
 export default allBooks.map(book => [`${book.slug}.html`, <>
-  <TypicalPage title="Books" image={book.category.imageBig}>
+  <TypicalPage title="Books" image={book.imageBig}>
 
     <Spaced>
       <Column split>

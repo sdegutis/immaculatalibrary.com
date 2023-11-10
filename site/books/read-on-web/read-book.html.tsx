@@ -9,7 +9,7 @@ export default allBooks.filter(book => book.data.complete).map(book => {
   const orderedSnippets = [...book.snippets];
 
   return [`${book.slug}.html`, <>
-    <TypicalPage title="Books" image={book.category.imageBig}>
+    <TypicalPage title="Books" image={book.imageBig}>
 
       <Spaced>
         <Column split>

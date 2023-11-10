@@ -40,8 +40,12 @@ export class Book extends DataFile<BookFile> {
     this.route = `/books/${this.slug}.html`;
   }
 
-  get category(): Category {
+  get categories(): Category[] {
     return relations.categories().forBook.get(this)!;
+  }
+
+  get imageBig(): string {
+    return relations.categories().forBook.get(this)![0]!.imageBig;
   }
 
   get snippets(): Snippet[] {

@@ -8,9 +8,13 @@ const booksFetch = fetch('/scripts/data/books.json').then<BookJson[]>(res => res
 await sleep(.1);
 const books = await booksFetch;
 
+const allCategories = [...new Set(books.flatMap(book => book.categories))].sort();
+
 const snippetsFilterSource = new Reactive('both');
 const starsFilterSource = new Reactive('any');
 const searchTerm = new Reactive('');
+
+const currentCategory = new Reactive('_any');
 
 document.getElementById('filters-container')!.replaceChildren(<>
   <p>
@@ -46,6 +50,15 @@ document.getElementById('filters-container')!.replaceChildren(<>
         </>;
       })}
     </span>
+
+    <span class='label'>category</span>
+    <select onchange={function (this: HTMLSelectElement) { currentCategory.set(this.value) }}>
+      <option value='_any' selected={currentCategory.val === '_any'}>Any</option>
+      {allCategories.map(cat =>
+        <option value={cat} selected={currentCategory.val === cat}>{cat}</option>
+      )}
+    </select>
+
   </div>
   <hr />
   <p>
@@ -60,6 +73,13 @@ document.getElementById('filters-container')!.replaceChildren(<>
 const { results, matchingCount } = createSearch({
   data: books,
   filters: [
+    {
+      source: currentCategory,
+      matches: (book: BookJson) => {
+        if (currentCategory.val === '_any') return true;
+        return book.categories.includes(currentCategory.val);
+      },
+    },
     {
       source: snippetsFilterSource,
       matches: (book: BookJson) => {
