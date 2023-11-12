@@ -1,9 +1,3 @@
-.container {
-  width: 90%;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
 .split-page {
   display: grid;
   gap: 1em;

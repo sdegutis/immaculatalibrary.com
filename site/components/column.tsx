@@ -4,25 +4,24 @@ export const Spaced: JSX.Component = (attrs, children) => <>
 
 export const CenteredColumn: JSX.Component = (attrs, children) => <>
   <link rel="stylesheet" href='/css/components/column.css' />
-  <div class="container">
+  <Column>
     <section class='centered-page'>
       {children}
     </section>
-  </div>
+  </Column>
 </>;
 
 export const SplitColumn: JSX.Component = (attrs, children) => <>
   <link rel="stylesheet" href='/css/components/column.css' />
-  <div class="container">
+  <Column>
     <section class='split-page'>
       {children}
     </section>
-  </div>
+  </Column>
 </>;
 
 export const Column: JSX.Component = (attrs, children) => <>
-  <link rel="stylesheet" href='/css/components/column.css' />
-  <div class="container">
+  <div style='width:90%; max-width: 800px; margin: 0 auto'>
     {children}
   </div>
 </>;
