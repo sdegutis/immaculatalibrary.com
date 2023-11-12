@@ -5,12 +5,12 @@ for (const div of document.querySelectorAll<HTMLElement>('[data-paginate]')) {
   enablePagination(div, (+div.dataset["paginate"]!));
 }
 
-function enablePagination(parent: HTMLElement, perPage: number) {
-  for (const loader of parent.querySelectorAll('.loader')) {
-    loader.remove();
-  }
+function enablePagination(topParent: HTMLElement, perPage: number) {
+  const [loaders, parent] = topParent.children as Iterable<HTMLElement>;
+  loaders!.remove();
+  parent!.hidden = false;
 
-  const items = [...parent.children] as HTMLElement[];
+  const items = [...parent!.children] as HTMLElement[];
 
   const matchingItems = Reactive.from({}, () => items);
 
@@ -22,5 +22,5 @@ function enablePagination(parent: HTMLElement, perPage: number) {
     }
   });
 
-  parent.insertAdjacentElement('afterbegin', paginator.controls);
+  parent!.insertAdjacentElement('afterbegin', paginator.controls);
 }
