@@ -1,19 +1,9 @@
-.split-page {
-  display: grid;
-  gap: 1em;
-}
-
 .centered-page {
   display: grid;
   place-items: center;
 }
 
 @media (min-width: 600px) {
-  .split-page {
-    grid-template-columns: 1fr 1fr;
-    gap: 3em;
-  }
-
   .centered-page>* {
     max-width: 400px;
     width: 50%;

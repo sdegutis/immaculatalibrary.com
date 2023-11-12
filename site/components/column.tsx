@@ -3,7 +3,7 @@ export const Spaced: JSX.Component = (attrs, children) => <>
 </>;
 
 export const CenteredColumn: JSX.Component = (attrs, children) => <>
-  <link rel="stylesheet" href='/css/components/column.css' />
+  <link rel="stylesheet" href='/css/components/centered-column.css' />
   <Column>
     <section class='centered-page'>
       {children}
@@ -12,7 +12,7 @@ export const CenteredColumn: JSX.Component = (attrs, children) => <>
 </>;
 
 export const SplitColumn: JSX.Component = (attrs, children) => <>
-  <link rel="stylesheet" href='/css/components/column.css' />
+  <link rel="stylesheet" href='/css/components/split-column.css' />
   <Column>
     <section class='split-page'>
       {children}
