@@ -24,50 +24,50 @@ export default allCategories.map(cat => [`${cat.slug}.html`, <>
     <Spaced>
       <Column split>
 
-        <section id='category'>
+        <section>
           <h2>Books</h2>
           <ul>
             {cat.books.map(book => {
               return <li>
-                <div class="title">
+                <p>
                   <a href={book.route}>{book.data.title}</a>
-                  {book.data.subtitle && <>: {book.data.subtitle}</>}
-                  {' '}
+                  {book.data.subtitle && <>: {book.data.subtitle}</>} { }
                   <Rating n={book.data.rating} />
-                </div>
+                  <br />
+                  {book.data.author}
+                </p>
 
-                <div class="author">{book.data.author}</div>
                 <Typography>
-                  <div class="blurb">{markdown.render(excerpt(book.content))}</div>
+                  <blockquote>
+                    {markdown.render(excerpt(book.content))}
+                  </blockquote>
                 </Typography>
               </li>;
             })}
           </ul>
         </section>
 
-        <section id='snippets-in-category'>
-          <h2>Book Snippets</h2>
-          <div class='scrollable-area'>
-            <ul>
-              {cat.books
-                .filter(book => book.snippets.length > 0)
-                .map(book => <>
-                  <li>
-                    <h3>{book.data.title}</h3>
-                    <ul>
-                      {book.snippets.map(bookSnippet => <>
-                        <li>
-                          <p>
-                            p.{bookSnippet.data.archivePage} { }
-                            <a href={bookSnippet.route}>{bookSnippet.renderedTitle}</a>
-                          </p>
-                        </li>
-                      </>)}
-                    </ul>
-                  </li>
-                </>)}
-            </ul>
-          </div>
+        <section>
+          <h2>Snippets</h2>
+          <ul>
+            {cat.books
+              .filter(book => book.snippets.length > 0)
+              .map(book => <>
+                <li>
+                  <h3>{book.data.title}</h3>
+                  <ul>
+                    {book.snippets.map(bookSnippet => <>
+                      <li>
+                        <p>
+                          p.{bookSnippet.data.archivePage} { }
+                          <a href={bookSnippet.route}>{bookSnippet.renderedTitle}</a>
+                        </p>
+                      </li>
+                    </>)}
+                  </ul>
+                </li>
+              </>)}
+          </ul>
         </section>
 
       </Column>
