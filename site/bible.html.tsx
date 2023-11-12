@@ -1,4 +1,4 @@
-import { Column, Spaced } from './components/column.js';
+import { CenteredColumn, Spaced } from './components/column.js';
 import { TypicalPage } from './components/page.js';
 import { Typography } from './components/typography.js';
 
@@ -6,7 +6,7 @@ export default <>
   <TypicalPage title="Bible" image='/img/categories/classics-big.jpg'>
 
     <Spaced>
-      <Column centered>
+      <CenteredColumn>
         <Typography>
 
           <h2>Bible</h2>
@@ -31,7 +31,7 @@ export default <>
             free, so you can even sample it now on the web.</p>
 
         </Typography>
-      </Column>
+      </CenteredColumn>
     </Spaced>
 
   </TypicalPage>

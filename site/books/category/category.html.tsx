@@ -1,4 +1,4 @@
-import { Column, Spaced } from "../../components/column.js";
+import { CenteredColumn, Column, Spaced } from "../../components/column.js";
 import { TypicalPage } from "../../components/page.js";
 import { PaginatorLoading } from "../../components/paginator.js";
 import { Rating } from "../../components/rating.js";
@@ -11,14 +11,14 @@ export default allCategories.map(cat => [`${cat.slug}.html`, <>
   <TypicalPage title="Book Categories" image={`/img/categories/${cat.slug}-big.jpg`}>
 
     <Spaced>
-      <Column centered>
+      <CenteredColumn>
         <Typography>
 
           <h2>{cat.data.title}</h2>
           {markdown.render(cat.content)}
 
         </Typography>
-      </Column>
+      </CenteredColumn>
     </Spaced>
 
     <Spaced>

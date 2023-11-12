@@ -1,4 +1,4 @@
-import { Column, Spaced } from "./components/column.js";
+import { CenteredColumn, Spaced } from "./components/column.js";
 import { TypicalPage } from "./components/page.js";
 import { Typography } from "./components/typography.js";
 
@@ -6,7 +6,7 @@ export default <>
   <TypicalPage title="Prayers" image='/img/categories/blessed-sacrament-big.jpg'>
 
     <Spaced>
-      <Column centered>
+      <CenteredColumn>
         <Typography>
 
           <h2>Prayers</h2>
@@ -19,7 +19,7 @@ export default <>
           <p><a href='https://www.catholicexorcism.org/'>CatholicExorcism.org</a></p>
 
         </Typography>
-      </Column>
+      </CenteredColumn>
     </Spaced>
 
   </TypicalPage>

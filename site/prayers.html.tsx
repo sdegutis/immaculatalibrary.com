@@ -1,4 +1,4 @@
-import { Column, Spaced } from "./components/column.js";
+import { CenteredColumn, Spaced } from "./components/column.js";
 import { TypicalPage } from "./components/page.js";
 import { Typography } from "./components/typography.js";
 import { markdown } from "./core/helpers.js";
@@ -293,7 +293,7 @@ export default <>
   <TypicalPage title="Prayers" image='/img/categories/blessed-sacrament-big.jpg'>
 
     <Spaced>
-      <Column centered>
+      <CenteredColumn>
         <Typography>
 
           <h2>Daily Prayers</h2>
@@ -320,7 +320,7 @@ export default <>
           </div>
 
         </Typography>
-      </Column>
+      </CenteredColumn>
     </Spaced>
 
   </TypicalPage>

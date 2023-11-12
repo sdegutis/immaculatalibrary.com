@@ -1,4 +1,4 @@
-import { Column, Spaced } from "./components/column.js";
+import { CenteredColumn, Column, Spaced } from "./components/column.js";
 import { FadeIn } from "./components/fadein.js";
 import { Navlinks } from "./components/navlinks.js";
 import { EmptyPage } from "./components/page.js";
@@ -18,7 +18,7 @@ export default <>
       <div id="letters-from-heaven">
         <Spaced>
           <Navlinks />
-          <Column centered>
+          <CenteredColumn>
             <Typography>
               <FadeIn>
                 <h1>Immaculata Library</h1>
@@ -39,7 +39,7 @@ export default <>
                 </blockquote>
               </FadeIn>
             </Typography>
-          </Column>
+          </CenteredColumn>
         </Spaced>
       </div>
 
@@ -86,7 +86,7 @@ export default <>
 
       <FadeIn>
         <Spaced>
-          <Column centered>
+          <CenteredColumn>
             <Typography>
 
               <h3>About Immaculata Library</h3>
@@ -107,7 +107,7 @@ export default <>
                 helped to produce Saints, or are written by Saints, are offered.</p>
 
             </Typography>
-          </Column>
+          </CenteredColumn>
         </Spaced>
       </FadeIn>
 
