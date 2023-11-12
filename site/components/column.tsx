@@ -23,8 +23,6 @@ export const SplitColumn: JSX.Component = (attrs, children) => <>
 export const Column: JSX.Component = (attrs, children) => <>
   <link rel="stylesheet" href='/css/components/column.css' />
   <div class="container">
-    <section>
-      {children}
-    </section>
+    {children}
   </div>
 </>;
