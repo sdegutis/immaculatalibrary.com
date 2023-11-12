@@ -9,8 +9,6 @@ import { allCategories } from "../../model/categories.js";
 export default allCategories.map(cat => [`${cat.slug}.html`, <>
   <TypicalPage title="Book Categories" image={`/img/categories/${cat.slug}-big.jpg`}>
 
-    <link rel="stylesheet" href='/css/page/category.css' />
-
     <Spaced>
       <Column centered>
         <Typography>
