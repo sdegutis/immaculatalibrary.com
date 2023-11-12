@@ -1,5 +1,6 @@
 import { Column, Spaced } from "../../components/column.js";
 import { TypicalPage } from "../../components/page.js";
+import { PaginatorLoading } from "../../components/paginator.js";
 import { Rating } from "../../components/rating.js";
 import { Typography } from "../../components/typography.js";
 import { markdown } from "../../core/helpers.js";
@@ -29,6 +30,7 @@ export default allCategories.map(cat => [`${cat.slug}.html`, <>
         <section>
           <h2>Books</h2>
           <div data-paginate='7'>
+            <PaginatorLoading />
             {cat.books.map(book => {
               return <div>
                 <p>
@@ -50,6 +52,7 @@ export default allCategories.map(cat => [`${cat.slug}.html`, <>
         <section>
           <h2>Snippets</h2>
           <div data-paginate='10'>
+            <PaginatorLoading />
             {cat.books
               .filter(book => book.snippets.length > 0)
               .map(book => <>

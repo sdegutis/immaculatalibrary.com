@@ -6,6 +6,10 @@ for (const div of document.querySelectorAll<HTMLElement>('[data-paginate]')) {
 }
 
 function enablePagination(parent: HTMLElement, perPage: number) {
+  for (const loader of parent.querySelectorAll('.loader')) {
+    loader.remove();
+  }
+
   const items = [...parent.children] as HTMLElement[];
 
   const matchingItems = Reactive.from({}, () => items);
