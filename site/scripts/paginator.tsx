@@ -1,7 +1,7 @@
 import { Reactive, reactTo } from "./reactive.js";
 
-export function makePaginator(
-  matchingItems: Reactive<any[]>,
+export function makePaginator<T>(
+  matchingItems: Reactive<T[]>,
   perPage: number,
 ) {
   const page = new Reactive(0);
