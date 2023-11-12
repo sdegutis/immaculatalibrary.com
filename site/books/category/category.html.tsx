@@ -24,9 +24,11 @@ export default allCategories.map(cat => [`${cat.slug}.html`, <>
     <Spaced>
       <Column split>
 
+        <script type='module' src='/scripts/paginate.js' />
+
         <section>
           <h2>Books</h2>
-          <div>
+          <div data-paginate='7'>
             {cat.books.map(book => {
               return <div>
                 <p>
@@ -47,7 +49,7 @@ export default allCategories.map(cat => [`${cat.slug}.html`, <>
 
         <section>
           <h2>Snippets</h2>
-          <div>
+          <div data-paginate='10'>
             {cat.books
               .filter(book => book.snippets.length > 0)
               .map(book => <>
