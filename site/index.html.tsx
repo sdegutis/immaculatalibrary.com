@@ -1,4 +1,4 @@
-import { CenteredColumn, Column, Spaced } from "./components/column.js";
+import { CenteredColumn, Spaced, SplitColumn } from "./components/column.js";
 import { FadeIn } from "./components/fadein.js";
 import { Navlinks } from "./components/navlinks.js";
 import { EmptyPage } from "./components/page.js";
@@ -45,7 +45,7 @@ export default <>
 
       <FadeIn>
         <Spaced>
-          <Column split>
+          <SplitColumn>
 
             <div>
 
@@ -80,7 +80,7 @@ export default <>
 
             </div>
 
-          </Column>
+          </SplitColumn>
         </Spaced>
       </FadeIn>
 

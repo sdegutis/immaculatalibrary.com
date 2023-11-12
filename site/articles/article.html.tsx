@@ -1,5 +1,5 @@
 import { ArticlesList } from "../components/articles-list.js";
-import { Column, Spaced } from "../components/column.js";
+import { Spaced, SplitColumn } from "../components/column.js";
 import { TypicalPage } from "../components/page.js";
 import { Typography } from "../components/typography.js";
 import { markdown } from "../core/helpers.js";
@@ -10,7 +10,7 @@ export default allArticles.map(article => [`${article.slug}.html`, <>
   <TypicalPage title="Articles" image={article.data.imageFilename ?? '/img/page/articles.jpg'}>
 
     <Spaced>
-      <Column split>
+      <SplitColumn>
 
         <div>
           <h2>{markdown.renderInline(article.data.title)}</h2>
@@ -29,7 +29,7 @@ export default allArticles.map(article => [`${article.slug}.html`, <>
 
         <ArticlesList />
 
-      </Column>
+      </SplitColumn>
     </Spaced>
 
   </TypicalPage>

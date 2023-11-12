@@ -1,4 +1,4 @@
-import { Column, Spaced } from "./components/column.js";
+import { Spaced, SplitColumn } from "./components/column.js";
 import { TypicalPage } from "./components/page.js";
 import { PaginatorLoading } from "./components/paginator.js";
 import { LoadingLine, LoadingParagraph } from "./shared/loading.js";
@@ -7,7 +7,7 @@ export default <>
   <TypicalPage title="Book Snippets" image='/img/categories/reference-big.jpg'>
 
     <Spaced>
-      <Column split>
+      <SplitColumn>
 
         <div>
 
@@ -48,7 +48,7 @@ export default <>
 
         </div>
 
-      </Column>
+      </SplitColumn>
     </Spaced>
 
   </TypicalPage>

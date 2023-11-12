@@ -1,4 +1,4 @@
-import { Column, Spaced } from "../components/column.js";
+import { Spaced, SplitColumn } from "../components/column.js";
 import { TypicalPage } from "../components/page.js";
 import { PaginatorLoading } from "../components/paginator.js";
 import { Rating } from "../components/rating.js";
@@ -11,7 +11,7 @@ export default allBooks.map(book => [`${book.slug}.html`, <>
   <TypicalPage title="Books" image={book.imageBig}>
 
     <Spaced>
-      <Column split>
+      <SplitColumn>
 
         <Typography>
 
@@ -124,7 +124,7 @@ export default allBooks.map(book => [`${book.slug}.html`, <>
           </div>
         </div>
 
-      </Column>
+      </SplitColumn>
     </Spaced>
 
   </TypicalPage>

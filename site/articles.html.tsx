@@ -1,5 +1,5 @@
 import { ArticlesList } from "./components/articles-list.js";
-import { Column, Spaced } from "./components/column.js";
+import { Spaced, SplitColumn } from "./components/column.js";
 import { TypicalPage } from "./components/page.js";
 import { Typography } from "./components/typography.js";
 
@@ -7,7 +7,7 @@ export default <>
   <TypicalPage title="Articles" image='/img/page/articles.jpg'>
 
     <Spaced>
-      <Column split>
+      <SplitColumn>
 
         <Typography>
           <h2>About the Articles</h2>
@@ -21,7 +21,7 @@ export default <>
 
         <ArticlesList />
 
-      </Column>
+      </SplitColumn>
     </Spaced>
 
   </TypicalPage>

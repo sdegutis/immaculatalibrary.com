@@ -1,4 +1,4 @@
-import { Column, Spaced } from "../components/column.js";
+import { Spaced, SplitColumn } from "../components/column.js";
 import { MusicSidebar } from "../components/music-sidebar.js";
 import { TypicalPage } from "../components/page.js";
 import { Typography } from "../components/typography.js";
@@ -13,7 +13,7 @@ export default allMusics.map(song => {
       <link rel="stylesheet" href='/css/page/song.css' />
 
       <Spaced>
-        <Column split>
+        <SplitColumn>
 
           <Typography>
             <h2>{song.data.title}</h2>
@@ -25,7 +25,7 @@ export default allMusics.map(song => {
 
           <MusicSidebar />
 
-        </Column>
+        </SplitColumn>
       </Spaced>
 
     </TypicalPage >

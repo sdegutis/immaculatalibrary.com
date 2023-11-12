@@ -1,4 +1,4 @@
-import { Column, Spaced } from "../../components/column.js";
+import { Spaced, SplitColumn } from "../../components/column.js";
 import { TypicalPage } from "../../components/page.js";
 import { Rating } from "../../components/rating.js";
 import { Typography } from "../../components/typography.js";
@@ -12,7 +12,7 @@ export default allBooks.filter(book => book.data.complete).map(book => {
     <TypicalPage title="Books" image={book.imageBig}>
 
       <Spaced>
-        <Column split>
+        <SplitColumn>
 
           <Typography>
 
@@ -60,7 +60,7 @@ export default allBooks.filter(book => book.data.complete).map(book => {
 
           </div>
 
-        </Column>
+        </SplitColumn>
       </Spaced>
 
     </TypicalPage>

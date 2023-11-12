@@ -1,4 +1,4 @@
-import { Column, Spaced } from "./components/column.js";
+import { Spaced, SplitColumn } from "./components/column.js";
 import { MoviesList, VideosList } from "./components/movies-sidebar.js";
 import { TypicalPage } from "./components/page.js";
 import { Typography } from "./components/typography.js";
@@ -7,7 +7,7 @@ export default <>
   <TypicalPage title="Movies" image='/img/movies/passion-of-the-christ-big.jpg'>
 
     <Spaced>
-      <Column split>
+      <SplitColumn>
 
         <Typography>
           <h2>Holy Movies</h2>
@@ -25,7 +25,7 @@ export default <>
           <VideosList />
         </div>
 
-      </Column>
+      </SplitColumn>
     </Spaced>
 
   </TypicalPage>

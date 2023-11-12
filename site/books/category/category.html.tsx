@@ -1,4 +1,4 @@
-import { CenteredColumn, Column, Spaced } from "../../components/column.js";
+import { CenteredColumn, Spaced, SplitColumn } from "../../components/column.js";
 import { TypicalPage } from "../../components/page.js";
 import { PaginatorLoading } from "../../components/paginator.js";
 import { Rating } from "../../components/rating.js";
@@ -22,7 +22,7 @@ export default allCategories.map(cat => [`${cat.slug}.html`, <>
     </Spaced>
 
     <Spaced>
-      <Column split>
+      <SplitColumn>
 
         <script type='module' src='/scripts/paginate.js' />
 
@@ -88,7 +88,7 @@ export default allCategories.map(cat => [`${cat.slug}.html`, <>
           </div>
         </section>
 
-      </Column>
+      </SplitColumn>
     </Spaced>
 
   </TypicalPage >

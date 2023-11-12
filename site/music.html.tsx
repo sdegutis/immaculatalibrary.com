@@ -1,4 +1,4 @@
-import { Column, Spaced } from "./components/column.js";
+import { Spaced, SplitColumn } from "./components/column.js";
 import { MusicSidebar } from "./components/music-sidebar.js";
 import { TypicalPage } from "./components/page.js";
 import { Typography } from "./components/typography.js";
@@ -9,7 +9,7 @@ export default <>
   <TypicalPage title="Music" image='/img/page/music.jpg'>
 
     <Spaced>
-      <Column split>
+      <SplitColumn>
 
         <Typography>
           <h2>Sacred Music</h2>
@@ -30,7 +30,7 @@ export default <>
 
         <MusicSidebar />
 
-      </Column>
+      </SplitColumn>
     </Spaced>
 
   </TypicalPage>

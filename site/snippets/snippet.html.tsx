@@ -1,4 +1,4 @@
-import { Column, Spaced } from "../components/column.js";
+import { Spaced, SplitColumn } from "../components/column.js";
 import { TypicalPage } from "../components/page.js";
 import { Typography } from "../components/typography.js";
 import { isDev } from "../core/helpers.js";
@@ -21,7 +21,7 @@ export default allSnippets.map(snippet => {
       <link rel="stylesheet" href='/css/page/snippet.css' />
 
       <Spaced>
-        <Column split>
+        <SplitColumn>
           <Typography>
 
             <h2>{snippet.renderedTitle}</h2>
@@ -83,7 +83,7 @@ export default allSnippets.map(snippet => {
             <script type='module' src='/scripts/latest-book-snippets.js' />
           </div>
 
-        </Column>
+        </SplitColumn>
       </Spaced>
 
     </TypicalPage>
