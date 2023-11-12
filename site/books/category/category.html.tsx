@@ -26,48 +26,40 @@ export default allCategories.map(cat => [`${cat.slug}.html`, <>
 
         <section>
           <h2>Books</h2>
-          <ul>
+          <div>
             {cat.books.map(book => {
-              return <li>
+              return <div>
                 <p>
                   <a href={book.route}>{book.data.title}</a>
                   {book.data.subtitle && <>: {book.data.subtitle}</>} { }
                   <Rating n={book.data.rating} />
                   <br />
-                  {book.data.author}
+                  <small>{book.data.author}</small>
                 </p>
 
-                <Typography>
-                  <blockquote>
-                    {markdown.render(excerpt(book.content))}
-                  </blockquote>
+                <Typography style='font-size:smaller; margin-left:1em'>
+                  {markdown.render(excerpt(book.content))}
                 </Typography>
-              </li>;
+              </div>;
             })}
-          </ul>
+          </div>
         </section>
 
         <section>
           <h2>Snippets</h2>
-          <ul>
+          <div>
             {cat.books
               .filter(book => book.snippets.length > 0)
               .map(book => <>
-                <li>
-                  <h3>{book.data.title}</h3>
-                  <ul>
-                    {book.snippets.map(bookSnippet => <>
-                      <li>
-                        <p>
-                          p.{bookSnippet.data.archivePage} { }
-                          <a href={bookSnippet.route}>{bookSnippet.renderedTitle}</a>
-                        </p>
-                      </li>
-                    </>)}
-                  </ul>
-                </li>
+                <h3>{book.data.title}</h3>
+                {book.snippets.map(bookSnippet => <>
+                  <p style='margin-left:1em'>
+                    p.{bookSnippet.data.archivePage} { }
+                    <a href={bookSnippet.route}>{bookSnippet.renderedTitle}</a>
+                  </p>
+                </>)}
               </>)}
-          </ul>
+          </div>
         </section>
 
       </Column>
