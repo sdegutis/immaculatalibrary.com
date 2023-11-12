@@ -12,7 +12,7 @@ function enablePagination(topParent: HTMLElement, perPage: number) {
 
   const items = [...parent!.children] as HTMLElement[];
 
-  const matchingItems = Reactive.from({}, () => items);
+  const matchingItems = new Reactive(items);
 
   const paginator = makePaginator(matchingItems, perPage);
 
