@@ -6,7 +6,9 @@ title: >-
 archivePage: '251'
 archiveSlug: followingofchris00thom
 bookSlug: imitation-of-christ
-tags: []
+tags:
+  - Exhortation
+  - Wisdom
 ---
 
 > Chap. XLIV.—Of not drawing to ourselves exterior things.
