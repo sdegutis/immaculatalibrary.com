@@ -12,16 +12,8 @@ export class Tag {
 
   constructor(public name: string) { }
 
-  oneword() {
-    return this.name.split(' ').map(capitalize).join('');
-  }
-
 }
 
 export function sortedTags() {
   return [...allTags.values()].sort(sortBy(tag => tag.name));
-}
-
-function capitalize(str: string) {
-  return str[0]?.toUpperCase() + str.slice(1);
 }
