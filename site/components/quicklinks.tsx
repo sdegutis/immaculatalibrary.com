@@ -1,6 +1,7 @@
 import { allCategories, categoriesBySlug } from '../model/categories.js';
 import { featuredBooks } from '../model/featured.js';
 import { allMovies } from '../model/movies.js';
+import { Column } from './column.js';
 import { FadeIn } from './fadein.js';
 import { Typography } from './typography.js';
 
@@ -11,9 +12,9 @@ export const QuickLinks: JSX.Component = (attrs, children) => {
     <div class="recents alt">
 
       <FadeIn>
-        <div class="container">
+        <Column>
           <h2>Featured Books</h2>
-        </div>
+        </Column>
         <div id='featured-books-area'>
           <div id='featured-books-container'>
 
@@ -37,7 +38,7 @@ export const QuickLinks: JSX.Component = (attrs, children) => {
     </div>
 
     <div class="recents">
-      <div class="container">
+      <Column>
 
         <FadeIn>
           <h2>Books</h2>
@@ -51,11 +52,11 @@ export const QuickLinks: JSX.Component = (attrs, children) => {
           </ul>
         </FadeIn>
 
-      </div>
+      </Column>
     </div>
 
     <div class="recents alt">
-      <div class="container">
+      <Column>
 
         <FadeIn>
           <h2>Movies</h2>
@@ -84,7 +85,7 @@ export const QuickLinks: JSX.Component = (attrs, children) => {
           </ul>
         </FadeIn>
 
-      </div>
+      </Column>
     </div>
 
   </>;
