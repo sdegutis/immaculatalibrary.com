@@ -1,11 +1,20 @@
 import { Spaced, SplitColumn } from "../components/column.js";
 import { TypicalPage } from "../components/page.js";
 import { Typography } from "../components/typography.js";
+import { handlers } from "../core/handlers.js";
 import { isDev } from "../core/helpers.js";
 import { Snippet, allSnippets } from "../model/snippets.js";
 import { allTags } from "../model/tag.js";
 import { formatDate } from '../shared/format-date.js';
 import { LoadingLine, LoadingParagraph } from "../shared/loading.js";
+
+handlers.set('/add-tags-to-snippet', body => {
+  const params = new URLSearchParams(body);
+  const snippet = allSnippets.find(s => s.slug === params.get('slug')!)!;
+  snippet.data.tags = params.getAll('tag')!.sort();
+  snippet.save();
+  return snippet.route;
+});
 
 export default allSnippets.map(snippet => {
   const singleFile = snippet.book.data.files.length === 1;
@@ -44,6 +53,20 @@ export default allSnippets.map(snippet => {
                     'tags': JSON.stringify(allTags),
                   })}`}>Make next snippet</a></li>
                 </ul>
+                <details>
+                  <summary>Add tags</summary>
+                  <form method='POST' action='/add-tags-to-snippet'>
+                    <input type='hidden' name='slug' value={snippet.slug} />
+                    <ul>
+                      {allTags.map(tag => <li>
+                        <label>
+                          <input type='checkbox' name='tag' value={tag} checked={snippet.tags.includes(tag)} /> {tag}
+                        </label>
+                      </li>)}
+                    </ul>
+                    <button type='submit'>Save</button>
+                  </form>
+                </details>
               </div>
             </>}
 
