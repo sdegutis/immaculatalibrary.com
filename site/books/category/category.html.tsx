@@ -78,7 +78,7 @@ export default allCategories.map(cat => [`${cat.slug}.html`, <>
                 .map(book => <>
                   <h3>{book.data.title}</h3>
                   {book.snippets.map(bookSnippet => <>
-                    <p style='margin-left:1em'>
+                    <p>
                       p.{bookSnippet.data.archivePage} { }
                       <a href={bookSnippet.route}>{bookSnippet.renderedTitle}</a>
                     </p>
