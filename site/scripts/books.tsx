@@ -123,6 +123,6 @@ document.getElementById('filters-container')!.replaceChildren(<>
   <hr />
   <p>
     Not sure what to read?<br />
-    Try a {randomBookLink} from among those shown here.
+    Try a {randomBookLink} from these.
   </p>
 </>);

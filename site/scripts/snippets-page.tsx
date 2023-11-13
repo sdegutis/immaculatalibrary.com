@@ -104,6 +104,6 @@ document.getElementById('filters-container')!.replaceChildren(<>
   <hr />
   <p>
     Not sure what to read?<br />
-    Try a {randomSnippetLink} from among those shown here.
+    Try a {randomSnippetLink} from these.
   </p>
 </>);
