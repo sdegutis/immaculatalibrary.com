@@ -3,7 +3,7 @@ import { TypicalPage } from "../components/page.js";
 import { Typography } from "../components/typography.js";
 import { isDev } from "../core/helpers.js";
 import { Snippet, allSnippets } from "../model/snippets.js";
-import { sortedTags } from "../model/tag.js";
+import { allTags } from "../model/tag.js";
 import { formatDate } from '../shared/format-date.js';
 import { LoadingLine, LoadingParagraph } from "../shared/loading.js";
 
@@ -41,15 +41,15 @@ export default allSnippets.map(snippet => {
                       snippet.nextSnippet?.renderedBody,
                     ].filter(s => s).join('<p>'),
                     'archiveLink': snippet.archiveLink,
-                    'tags': JSON.stringify(sortedTags().map(tag => tag.name)),
+                    'tags': JSON.stringify(allTags),
                   })}`}>Make next snippet</a></li>
                 </ul>
               </div>
             </>}
 
             <p>
-              {[...snippet.tags].map(tag => <>
-                <a href={`/snippets.html?tag=${tag.name}`}>#{tag.name}</a> { }
+              {snippet.tags.map(tag => <>
+                <a href={`/snippets.html?tag=${tag}`}>#{tag}</a> { }
               </>)}
             </p>
 

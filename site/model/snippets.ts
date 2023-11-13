@@ -4,7 +4,7 @@ import allSnippetFiles from "../data/snippets/";
 import { calculateReadingMins } from '../shared/helpers.js';
 import { Book } from './books.js';
 import * as relations from "./relations.js";
-import { Tag } from './tag.js';
+import { addTags } from './tag.js';
 
 interface SnippetFile {
   published: boolean;
@@ -27,7 +27,7 @@ export class Snippet extends DataFileWithDate<SnippetFile> {
 
   prevSnippet?: Snippet;
   nextSnippet?: Snippet;
-  tags: Set<Tag>;
+  tags: string[];
 
   constructor(slug: string, content: string, data: SnippetFile) {
     super(slug, content, data);
@@ -41,7 +41,8 @@ export class Snippet extends DataFileWithDate<SnippetFile> {
     this.renderedTitle = markdown.renderInline(this.data.title);
     this.mins = calculateReadingMins(this.content);
 
-    this.tags = new Set([...this.data.tags ?? []].map(Tag.getOrCreate));
+    this.tags = [...this.data.tags].sort();
+    addTags(this.tags);
   }
 
   get book(): Book {
