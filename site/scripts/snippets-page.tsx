@@ -1,6 +1,6 @@
 import { SnippetJson } from "./data/snippets.json.js";
 import { Reactive } from "./reactive.js";
-import { createSearch } from "./searchlist.js";
+import { createSearch, highlight } from "./searchlist.js";
 import { randomElement, sleep } from "./util.js";
 
 const snippetsFetch = fetch('/scripts/data/snippets.json').then<SnippetJson[]>(res => res.json());
@@ -13,27 +13,9 @@ const currentTag = new Reactive(new URL(window.location.href).searchParams.get('
 const lengthFilter = new Reactive('');
 const searchTerm = new Reactive('');
 
-function highlight(text: string, search?: string) {
-  if (!search) return text;
-  return <span innerHTML={text.replace(new RegExp(`(${search})`, 'gi'), `<span class='highlight'>$1</span>`)} />;
-}
-
-function viewForSnippet(snippet: SnippetJson, search?: string): HTMLLIElement {
-  return (
-    <li>
-      <p>
-        <a href={snippet.route}>{highlight(snippet.title, search)}</a>
-        <br />
-        {snippet.mins} min &bull; {highlight(snippet.bookTitle, search)}
-      </p>
-    </li> as HTMLLIElement
-  )
-}
-
-const views = new Map(snippets.map(snippet => [snippet, viewForSnippet(snippet)]));
-
 const { results, matchingItems } = createSearch({
   data: snippets,
+  searchTerm,
   filters: [
     {
       source: currentTag,
@@ -66,14 +48,15 @@ const { results, matchingItems } = createSearch({
       ),
     },
   ],
-  viewForItem: item => {
-    if (searchTerm.val) {
-      return viewForSnippet(item, searchTerm.val);
-    }
-    else {
-      return views.get(item)!;
-    }
-  },
+  viewForItem: (snippet, search) => (
+    <li>
+      <p>
+        <a href={snippet.route}>{highlight(snippet.title, search)}</a>
+        <br />
+        {snippet.mins} min &bull; {highlight(snippet.bookTitle, search)}
+      </p>
+    </li>
+  ),
 });
 
 document.getElementById('search-results')!.replaceChildren(results);

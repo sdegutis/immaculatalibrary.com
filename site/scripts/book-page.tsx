@@ -1,6 +1,6 @@
 import { SnippetJson } from "./data/snippets.json.js";
 import { Reactive } from "./reactive.js";
-import { createSearch } from "./searchlist.js";
+import { createSearch, highlight } from "./searchlist.js";
 import { randomElement, sleep } from "./util.js";
 
 const snippetsFetch = fetch('/scripts/data/snippets.json').then<SnippetJson[]>(res => res.json());
@@ -14,13 +14,6 @@ const snippetsInBook = allSnippets.filter(s => s.book === bookSlug);
 if (snippetsInBook.length > 0) {
   const searchTerm = new Reactive('');
 
-  const views = new Map(snippetsInBook.map(snippet => [snippet, (
-    <p>
-      p.{snippet.archivePage} { }
-      <a href={snippet.route}>{snippet.title}</a>
-    </p>
-  )]));
-
   const { results } = createSearch({
     data: snippetsInBook,
     perPage: 10,
@@ -33,7 +26,13 @@ if (snippetsInBook.length > 0) {
         snippet.bookTitle.toLowerCase().includes(searchTerm.val)
       )
     }],
-    viewForItem: item => views.get(item)!,
+    searchTerm,
+    viewForItem: (snippet, search) => (
+      <p>
+        p.{snippet.archivePage} { }
+        <a href={snippet.route}>{highlight(snippet.title, search)}</a>
+      </p>
+    ),
   });
 
   container.replaceChildren(<>

@@ -6,9 +6,10 @@ export interface SearchFilter<T> {
   matches: (data: T) => boolean,
 }
 
-export function createSearch<T>({ data, viewForItem, filters, perPage = 7 }: {
+export function createSearch<T>({ data, searchTerm, viewForItem, filters, perPage = 7 }: {
   data: T[];
-  viewForItem: (item: T) => JSX.Element;
+  searchTerm: Reactive<string>,
+  viewForItem: (item: T, search?: string) => JSX.Element;
   filters: SearchFilter<T>[];
   perPage?: number,
 }) {
@@ -18,12 +19,23 @@ export function createSearch<T>({ data, viewForItem, filters, perPage = 7 }: {
   const noResults = <em>No results</em>;
   const list = <ul /> as HTMLUListElement;
 
+  const views = new Map<T, JSX.Element>();
+
   reactTo({ visibleItems: paginator.visibleItems }, deps => {
     if (deps.visibleItems.val.length === 0) {
       container.replaceChildren(noResults);
     }
     else {
-      list.replaceChildren(...deps.visibleItems.val.map(viewForItem));
+      list.replaceChildren(...deps.visibleItems.val.map(item => {
+        if (!searchTerm.val) {
+          let view = views.get(item);
+          if (!view) views.set(item, view = viewForItem(item));
+          return view;
+        }
+        else {
+          return viewForItem(item, searchTerm.val);
+        }
+      }));
       container.replaceChildren(list);
     }
   });
@@ -48,4 +60,9 @@ export function createSearch<T>({ data, viewForItem, filters, perPage = 7 }: {
   </>;
 
   return { results, matchingItems };
+}
+
+export function highlight(text: string, search?: string) {
+  if (!search) return text;
+  return <span innerHTML={text.replace(new RegExp(`(${search})`, 'gi'), `<span class='highlight'>$1</span>`)} />;
 }
