@@ -1,16 +1,16 @@
 import { Reactive, reactTo } from "./reactive.js";
 
 export function makePaginator<T>(
-  matchingItems: Reactive<T[]>,
+  items: Reactive<T[]>,
   perPage: number,
 ) {
   const page = new Reactive(0);
 
-  const highestPage = Reactive.from({ matchingItems, }, (deps) => {
-    return Math.max(0, Math.floor((deps.matchingItems.val.length - 1) / perPage));
-  });
+  const highestPage = Reactive.from({ items, }, (deps) =>
+    Math.max(0, Math.floor((deps.items.val.length - 1) / perPage))
+  );
 
-  const matchingCount = Reactive.from({ matchingItems }, deps => deps.matchingItems.val.length);
+  const count = Reactive.from({ items }, deps => deps.items.val.length);
 
   const prevButton = <button
     style='width:2em'
@@ -37,20 +37,20 @@ export function makePaginator<T>(
   });
 
   const currentPage = <span style='min-width:7em; text-align:center' /> as HTMLSpanElement;
-  reactTo({ page, matchingCount }, deps => {
-    if (deps.matchingCount.val === 0) {
+  reactTo({ page, count }, deps => {
+    if (deps.count.val === 0) {
       currentPage.textContent = 'n/a';
       return;
     }
 
     const start = (deps.page.val * perPage) + 1;
-    const end = Math.min(deps.matchingCount.val, start + perPage - 1);
-    currentPage.textContent = `${start} - ${end} / ${deps.matchingCount.val}`;
+    const end = Math.min(deps.count.val, start + perPage - 1);
+    currentPage.textContent = `${start} - ${end} / ${deps.count.val}`;
   });
 
-  const visibleItems = Reactive.from({ matchingItems, page }, deps => {
+  const visibleItems = Reactive.from({ items, page }, deps => {
     const start = deps.page.val * perPage;
-    return deps.matchingItems.val.slice(start, start + perPage);
+    return deps.items.val.slice(start, start + perPage);
   });
 
   return {
