@@ -42,6 +42,7 @@ export function createSearch<T>({ data, viewForItem, filters, perPage = 7 }: {
   }
 
   const results = <>
+    <link rel='stylesheet' href='/css/components/searchlist.css' />
     {paginator.controls}
     {container}
   </>;

@@ -1,4 +1,3 @@
-import { SnippetItem } from "../shared/snippets.js";
 import { SnippetJson } from "./data/snippets.json.js";
 import { Reactive } from "./reactive.js";
 import { createSearch } from "./searchlist.js";
@@ -14,7 +13,24 @@ const currentTag = new Reactive(new URL(window.location.href).searchParams.get('
 const lengthFilter = new Reactive('');
 const searchTerm = new Reactive('');
 
-const views = new Map(snippets.map(snippet => [snippet, <SnippetItem snippet={snippet} />]));
+function highlight(text: string, search?: string) {
+  if (!search) return text;
+  return <span innerHTML={text.replace(new RegExp(`(${search})`, 'gi'), `<span class='highlight'>$1</span>`)} />;
+}
+
+function viewForSnippet(snippet: SnippetJson, search?: string): HTMLLIElement {
+  return (
+    <li>
+      <p>
+        <a href={snippet.route}>{highlight(snippet.title, search)}</a>
+        <br />
+        {snippet.mins} min &bull; {highlight(snippet.bookTitle, search)}
+      </p>
+    </li> as HTMLLIElement
+  )
+}
+
+const views = new Map(snippets.map(snippet => [snippet, viewForSnippet(snippet)]));
 
 const { results, matchingItems } = createSearch({
   data: snippets,
@@ -50,7 +66,14 @@ const { results, matchingItems } = createSearch({
       ),
     },
   ],
-  viewForItem: item => views.get(item)!,
+  viewForItem: item => {
+    if (searchTerm.val) {
+      return viewForSnippet(item, searchTerm.val);
+    }
+    else {
+      return views.get(item)!;
+    }
+  },
 });
 
 document.getElementById('search-results')!.replaceChildren(results);
