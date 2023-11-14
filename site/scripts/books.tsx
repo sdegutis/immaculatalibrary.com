@@ -16,6 +16,11 @@ const searchTerm = new Reactive('');
 
 const currentCategory = new Reactive('_any');
 
+const views = new Map(books.map(book => [book, (
+  <li>
+    <p><a href={book.route}>{book.title}</a><br /> {book.author}</p>
+  </li>
+)]));
 
 const { results, matchingItems } = createSearch({
   data: books,
@@ -50,11 +55,7 @@ const { results, matchingItems } = createSearch({
       ),
     },
   ],
-  Item: ({ item: book }) => (
-    <li>
-      <p><a href={book.route}>{book.title}</a><br /> {book.author}</p>
-    </li>
-  ),
+  viewForItem: item => views.get(item)!,
 });
 
 document.getElementById('search-results')!.replaceChildren(results);

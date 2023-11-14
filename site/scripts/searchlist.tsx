@@ -6,49 +6,27 @@ export interface SearchFilter<T> {
   matches: (data: T) => boolean,
 }
 
-const NotFound: JSX.Component<{ matchingItems: Reactive<any[]> }> = ({
-  matchingItems,
-}) => {
-  const notFound = <em>No results</em> as HTMLElement;
-  reactTo({ matchingItems }, deps => {
-    notFound.hidden = deps.matchingItems.val.length !== 0;
-  });
-  return <>{notFound}</>;
-}
-
-function LiveItem<T>({ Item, visibleItems, item }: {
-  Item: JSX.Component<{ item: T }>,
-  visibleItems: Reactive<T[]>,
-  item: T,
-}) {
-  const element = <Item item={item} /> as HTMLLIElement;
-
-  reactTo({ visibleItems }, deps => {
-    element.hidden = !deps.visibleItems.val.includes(item);
-  });
-
-  return <>{element}</>;
-}
-
-export function createSearch<T>({ data, Item, filters, perPage = 7 }: {
+export function createSearch<T>({ data, viewForItem, filters, perPage = 7 }: {
   data: T[];
-  Item: JSX.Component<{ item: T }>;
+  viewForItem: (item: T) => JSX.Element;
   filters: SearchFilter<T>[];
   perPage?: number,
 }) {
   const matchingItems = new Reactive<T[]>([]);
-
   const paginator = makePaginator(matchingItems, perPage);
+  const container = <div /> as HTMLDivElement;
+  const noResults = <em>No results</em>;
+  const list = <ul /> as HTMLUListElement;
 
-  const results = <>
-    {paginator.controls}
-    <NotFound matchingItems={matchingItems} />
-    <ul>
-      {data.map(item =>
-        <LiveItem item={item} visibleItems={paginator.visibleItems} Item={Item} />
-      )}
-    </ul>
-  </>;
+  reactTo({ visibleItems: paginator.visibleItems }, deps => {
+    if (deps.visibleItems.val.length === 0) {
+      container.replaceChildren(noResults);
+    }
+    else {
+      list.replaceChildren(...deps.visibleItems.val.map(viewForItem));
+      container.replaceChildren(list);
+    }
+  });
 
   const updateMatchingItems = () => {
     matchingItems.set(data.filter(item => filters.every(filter => filter.matches(item))));
@@ -62,6 +40,11 @@ export function createSearch<T>({ data, Item, filters, perPage = 7 }: {
       updateMatchingItems();
     });
   }
+
+  const results = <>
+    {paginator.controls}
+    {container}
+  </>;
 
   return { results, matchingItems };
 }

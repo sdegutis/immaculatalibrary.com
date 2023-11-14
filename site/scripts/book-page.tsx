@@ -14,6 +14,13 @@ const snippetsInBook = allSnippets.filter(s => s.book === bookSlug);
 if (snippetsInBook.length > 0) {
   const searchTerm = new Reactive('');
 
+  const views = new Map(snippetsInBook.map(snippet => [snippet, (
+    <p>
+      p.{snippet.archivePage} { }
+      <a href={snippet.route}>{snippet.title}</a>
+    </p>
+  )]));
+
   const { results } = createSearch({
     data: snippetsInBook,
     perPage: 10,
@@ -26,12 +33,7 @@ if (snippetsInBook.length > 0) {
         snippet.bookTitle.toLowerCase().includes(searchTerm.val)
       )
     }],
-    Item: ({ item }) => <>
-      <p>
-        p.{item.archivePage} { }
-        <a href={item.route}>{item.title}</a>
-      </p>
-    </>,
+    viewForItem: item => views.get(item)!,
   });
 
   container.replaceChildren(<>

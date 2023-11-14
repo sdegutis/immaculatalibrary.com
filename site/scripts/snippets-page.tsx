@@ -14,6 +14,7 @@ const currentTag = new Reactive(new URL(window.location.href).searchParams.get('
 const lengthFilter = new Reactive('');
 const searchTerm = new Reactive('');
 
+const views = new Map(snippets.map(snippet => [snippet, <SnippetItem snippet={snippet} />]));
 
 const { results, matchingItems } = createSearch({
   data: snippets,
@@ -49,7 +50,7 @@ const { results, matchingItems } = createSearch({
       ),
     },
   ],
-  Item: ({ item: snippet }) => <SnippetItem snippet={snippet} />,
+  viewForItem: item => views.get(item)!,
 });
 
 document.getElementById('search-results')!.replaceChildren(results);
