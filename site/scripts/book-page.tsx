@@ -55,6 +55,6 @@ if (snippetsInBook.length > 0) {
 }
 else {
   container.replaceChildren(
-    <em>No snippets have been posted for this book yet.</em>
+    <em>No snippets have been digitized for this book yet.</em>
   );
 }
