@@ -1,7 +1,12 @@
+import MarkdownIt from "https://cdn.jsdelivr.net/npm/markdown-it@13.0.2/+esm";
+import { Typography } from "../components/typography.js";
+import { mdOptions } from "../shared/markdown.js";
 import { SnippetJson } from "./data/snippets.json.js";
 import { Reactive } from "./reactive.js";
-import { createSearch, highlight } from "./searchlist.js";
+import { createSearch, highlight, highlightText } from "./searchlist.js";
 import { randomElement, sleep } from "./util.js";
+
+const md = new MarkdownIt(mdOptions);
 
 const snippetsFetch = fetch('/scripts/data/snippets.json').then<SnippetJson[]>(res => res.json());
 await sleep(.1);
@@ -48,16 +53,38 @@ const { results, matchingItems } = createSearch({
       ),
     },
   ],
-  viewForItem: (snippet, search) => (
-    <li>
-      <p>
-        <a href={snippet.route}>{highlight(snippet.title, search)}</a>
-        <br />
-        {snippet.mins} min &bull; {highlight(snippet.bookTitle, search)}
-      </p>
-    </li>
-  ),
+  viewForItem: (snippet, search) => {
+    const matchedBody = findWithinMarkdown(snippet.markdown, search);
+    return (
+      <li>
+        <p>
+          <a href={snippet.route}>{highlight(snippet.title, search)}</a>
+          <br />
+          {snippet.mins} min &bull; {highlight(snippet.bookTitle, search)}
+        </p>
+        {matchedBody && <>
+          <Typography style='font-size:smaller'>
+            <blockquote innerHTML={matchedBody} />
+          </Typography>
+        </>}
+      </li>
+    );
+  },
 });
+
+function findWithinMarkdown(markdown: string, search?: string) {
+  if (!search) return null;
+
+  const match = markdown.match(new RegExp(search, 'i'));
+  if (!match) return null;
+
+  const start = Math.max(0, markdown.lastIndexOf(' ', match.index! - 20));
+  const end = Math.min(markdown.length, markdown.indexOf(' ', match.index! + match[0].length + 20));
+
+  const sliced = markdown.slice(start, end);
+  const highlighted = highlightText(sliced, search);
+  return md.render(highlighted);
+}
 
 document.getElementById('search-results')!.replaceChildren(results);
 

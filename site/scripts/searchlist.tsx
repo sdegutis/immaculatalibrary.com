@@ -63,6 +63,10 @@ export function createSearch<T>({ data, searchTerm, viewForItem, filters, perPag
 }
 
 export function highlight(text: string, search?: string) {
+  return <span innerHTML={highlightText(text, search)} />;
+}
+
+export function highlightText(text: string, search?: string) {
   if (!search) return text;
-  return <span innerHTML={text.replace(new RegExp(`(${search})`, 'gi'), `<span class='highlight'>$1</span>`)} />;
+  return text.replace(new RegExp(`(${search})`, 'gi'), `<span class='highlight'>$1</span>`);
 }
