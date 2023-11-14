@@ -11,7 +11,6 @@ files:
     pdfFile: 'Young Man’s Guide.pdf'
 storeLinks:
   - link: 'http://www.staugustineacademypress.com/the-young-mans-guide/'
-    image: 'https://cdn11.bigcommerce.com/s-oe2kt3y/images/stencil/900x900/products/113/264/YMG_cover_thumb_small__10603.1451927910.png?c=2'
     title: 'St. Augustine Academy Press'
 ---
 

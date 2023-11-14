@@ -11,10 +11,8 @@ files:
     pdfFile: 'The Interior Castle.pdf'
 storeLinks:
   - link: 'https://www.tanbooks.com/tan-classics/interior-castle-tan-classic.html'
-    image: 'https://cdn11.bigcommerce.com/s-iuax7bpgx3/images/stencil/640w/attribute_rule_images/484_source_1614708253.jpg'
     title: 'TAN Classics'
   - link: 'https://www.baroniuspress.com/book.php?wid=56&bid=66#tab=tab-1'
-    image: 'https://www.baroniuspress.com/upimages/66-342.jpg'
     title: 'Baronius Press'
 ---
 

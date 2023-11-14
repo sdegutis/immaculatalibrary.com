@@ -16,7 +16,6 @@ files:
     pdfFile: 'The Spiritual Combat (Haydock edition).pdf'
 storeLinks:
   - link: 'https://www.tanbooks.com/tan-classics/spiritual-combat-and-a-treatise-on-peace-of-soul.html'
-    image: 'https://cdn11.bigcommerce.com/s-iuax7bpgx3/images/stencil/640w/products/1394/1923/The-Spiritual-Combat-and-a-Treatise-on-Peace-of-Soul-cover-TC1115__97088.1595444678.jpg?c=1'
     title: 'TAN Classics'
 ---
 

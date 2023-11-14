@@ -16,13 +16,10 @@ files:
     pdfFile: 'Imitation of Christ, Latin and English.pdf'
 storeLinks:
   - link: 'https://www.tanbooks.com/tan-classics/the-imitation-of-christ.html'
-    image: 'https://cdn11.bigcommerce.com/s-iuax7bpgx3/images/stencil/1280x1280/products/1305/594/The-Imitation-of-Christ-cover-TC0227__93223.1595444551.jpg?c=1'
     title: 'TAN Classics'
   - link: 'https://www.baroniuspress.com/book.php?wid=56&bid=12#tab=tab-1'
-    image: 'https://www.baroniuspress.com/upimages/12-255.jpg'
     title: 'Baronius Press'
   - link: 'https://catholicbookpublishing.com/product/429'
-    image: 'https://cbp-assets.s3.amazonaws.com/products/320-00-4.jpg'
     title: 'Catholic Book Publishing Corp.'
 ---
 

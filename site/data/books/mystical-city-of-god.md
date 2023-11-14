@@ -17,7 +17,6 @@ files:
     pdfFile: 'Mystical City of God - Coronation.pdf'
 storeLinks:
   - link: 'https://www.tanbooks.com/mystical-city-of-god.html'
-    image: 'https://cdn11.bigcommerce.com/s-iuax7bpgx3/images/stencil/640w/products/1456/1737/The-Mystical-City-of-God-cover-2130__52527.1595444609.jpg?c=1'
     title: 'TAN Books'
 ---
 

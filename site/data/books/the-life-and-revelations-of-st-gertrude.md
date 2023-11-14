@@ -11,7 +11,6 @@ files:
     pdfFile: 'The Life and Revelations of St Gertrude.pdf'
 storeLinks:
   - link: 'https://www.tanbooks.com/life-revelations-of-saint-gertrude-the-great.html'
-    image: 'https://cdn11.bigcommerce.com/s-iuax7bpgx3/images/stencil/640w/products/1576/1633/The-Life-and-Revelations-of-Saint-Gertrude-the-Great-cover-1794__76057.1595444604.jpg?c=1'
     title: 'TAN Books'
 ---
 

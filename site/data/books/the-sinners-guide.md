@@ -14,7 +14,6 @@ files:
     pdfFile: 'The Sinner’s Guide.pdf'
 storeLinks:
   - link: 'https://tanbooks.com/sanctification/spiritual-direction-books/the-sinners-guide/'
-    image: 'https://cdn11.bigcommerce.com/s-iuax7bpgx3/images/stencil/1280x1280/products/1719/431/The-Sinners-Guide-cover-1031__76660.1595444545.jpg?c=1'
     title: 'TAN Books'
 ---
 

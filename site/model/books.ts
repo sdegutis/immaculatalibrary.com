@@ -19,7 +19,6 @@ interface BookFile {
   }[];
   storeLinks: {
     link: string;
-    image: string;
     title: string;
   }[];
   complete?: boolean;

@@ -22,7 +22,6 @@ files:
     pdfFile: 'Catena Aurea - Matthew Vol 3.pdf'
 storeLinks:
   - link: 'https://www.baroniuspress.com/book.php?wid=56&bid=53#tab=tab-1'
-    image: 'https://www.baroniuspress.com/upimages/53-253.jpg'
     title: 'Baronius Press'
 ---
 

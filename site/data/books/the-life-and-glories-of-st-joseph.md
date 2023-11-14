@@ -13,7 +13,6 @@ files:
     pdfFile: 'The Life And Glories Of St Joseph (Second Edition).pdf'
 storeLinks:
   - link: 'https://tanbooks.com/saints/saint-biography-books/the-life-and-glories-of-saint-joseph/'
-    image: 'https://cdn11.bigcommerce.com/s-iuax7bpgx3/images/stencil/960w/products/1540/568/The-Life-and-Glories-of-St-Joseph-cover-75__07300.1595444550.jpg?c=1'
     title: 'TAN Books'
 ---
 

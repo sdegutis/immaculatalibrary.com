@@ -57,18 +57,13 @@ export default allBooks.map(book => [`${book.slug}.html`, <>
 
           {book.data.storeLinks.length > 0 && <>
             <h4>Buy physical book:</h4>
-            <div class="indent">
-              <p>You can purchase this book from these publishers:</p>
-              <ul style="display: grid; grid-auto-flow: column;">
-                {book.data.storeLinks.map(link => <>
-                  <li style="text-align: center;">
-                    <a href={link.link}>
-                      {markdown.render(link.title)} <img src={link.image} height="100" />
-                    </a>
-                  </li>
-                </>)}
-              </ul>
-            </div>
+            <ul class='indent'>
+              {book.data.storeLinks.map(link => <>
+                <li>
+                  Purchase from <a href={link.link}>{markdown.renderInline(link.title)}</a>
+                </li>
+              </>)}
+            </ul>
           </>}
 
           <p>

@@ -11,7 +11,6 @@ files:
     pdfFile: 'Meditations and Devotions, by St. John Henry Newman.pdf'
 storeLinks:
   - link: 'https://www.baroniuspress.com/book.php?wid=56&bid=54#tab=tab-1'
-    image: 'https://www.baroniuspress.com/upimages/54-251.jpg'
     title: 'Baronius Press'
 ---
 

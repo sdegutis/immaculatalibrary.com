@@ -53,7 +53,6 @@ files:
     pdfFile: 'Summa Theologica, Vol 22.pdf'
 storeLinks:
   - link: 'https://www.avemariapress.com/products/summa-theologica'
-    image: 'https://assets.avemariapress.com/resize/media/files/8c0170d66f628c0c8c47bbf85cae0ba1/9780870610639.jpg/max_width=352.jpg'
     title: 'Ave Maria Press'
 ---
 

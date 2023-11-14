@@ -11,7 +11,6 @@ files:
     pdfFile: 'The Catholic Controversy.pdf'
 storeLinks:
   - link: 'https://tanbooks.com/saints/books-about-saints/the-catholic-controversy-a-defense-of-the-faith/'
-    image: 'https://cdn11.bigcommerce.com/s-iuax7bpgx3/images/stencil/1280x1280/products/2362/1185/The-Catholic-Controversy-A-Defense-of-the-Faith-cover-1077__98804.1595444579.jpg?c=1'
     title: 'TAN Books'
 ---
 
