@@ -1,4 +1,4 @@
-import { SnippetsList } from "../shared/snippets.js";
+import { SnippetItem } from "../shared/snippets.js";
 import { SnippetJson } from "./data/snippets.json.js";
 import { randomElement, sleep } from "./util.js";
 
@@ -13,5 +13,9 @@ document.getElementById('latest-book-snippets-area')!.replaceChildren(<>
       this.href = randomElement(allSnippets).route;
     }}>Random</a>
   </p>
-  <SnippetsList snippets={latestSnippets} />
+  <ul>
+    {latestSnippets.map(s => <>
+      <SnippetItem snippet={s} />
+    </>)}
+  </ul>
 </>);
