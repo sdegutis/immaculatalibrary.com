@@ -46,6 +46,14 @@ hr {
   border: 0;
 }
 
+details summary {
+  transition: padding-bottom 200ms ease;
+}
+
+details[open] summary {
+  padding-bottom: 1em;
+}
+
 /* Forms */
 
 :read-write,
