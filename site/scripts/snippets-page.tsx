@@ -63,7 +63,7 @@ const { results, matchingItems } = createSearch({
           {snippet.mins} min &bull; {highlight(snippet.bookTitle, search)}
         </p>
         {matchedBody && <>
-          <Typography style='font-size:smaller'>
+          <Typography style='font-size:smaller' deindent>
             <blockquote innerHTML={matchedBody} />
           </Typography>
         </>}

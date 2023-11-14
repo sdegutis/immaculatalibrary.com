@@ -4,7 +4,7 @@
   margin: 0;
 }
 
-.typography blockquote p {
+.typography:not(.deindent) blockquote p {
   text-indent: 1em;
 }
 
