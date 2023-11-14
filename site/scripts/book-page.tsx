@@ -1,6 +1,7 @@
+import { Typography } from "../components/typography.js";
 import { SnippetJson } from "./data/snippets.json.js";
 import { Reactive } from "./reactive.js";
-import { createSearch, highlight } from "./searchlist.js";
+import { createSearch, findWithinMarkdown, highlight } from "./searchlist.js";
 import { randomElement, sleep } from "./util.js";
 
 const snippetsFetch = fetch('/scripts/data/snippets.json').then<SnippetJson[]>(res => res.json());
@@ -27,12 +28,20 @@ if (snippetsInBook.length > 0) {
       )
     }],
     searchTerm,
-    viewForItem: (snippet, search) => (
-      <p>
-        p.{snippet.archivePage} { }
-        <a href={snippet.route}>{highlight(snippet.title, search)}</a>
-      </p>
-    ),
+    viewForItem: (snippet, search) => {
+      const matchedBody = findWithinMarkdown(snippet.markdown, search);
+      return <>
+        <p>
+          p.{snippet.archivePage} { }
+          <a href={snippet.route}>{highlight(snippet.title, search)}</a>
+        </p>
+        {matchedBody &&
+          <Typography style='font-size:smaller' deindent>
+            <blockquote innerHTML={matchedBody} />
+          </Typography>
+        }
+      </>;
+    },
   });
 
   container.replaceChildren(<>
