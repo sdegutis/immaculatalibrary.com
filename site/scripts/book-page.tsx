@@ -30,7 +30,7 @@ if (snippetsInBook.length > 0) {
     searchTerm,
     viewForItem: (snippet, search) => {
       const matchedBody = findWithinMarkdown(snippet.markdown, search);
-      return <>
+      return <li>
         <p>
           p.{snippet.archivePage} { }
           <a href={snippet.route}>{highlight(snippet.title, search)}</a>
@@ -40,7 +40,7 @@ if (snippetsInBook.length > 0) {
             <blockquote innerHTML={matchedBody} />
           </Typography>
         }
-      </>;
+      </li>;
     },
   });
 
