@@ -75,13 +75,14 @@ const { results, matchingItems } = createSearch({
 function findWithinMarkdown(markdown: string, search?: string) {
   if (!search) return null;
 
-  const match = markdown.match(new RegExp(search, 'i'));
+  const content = markdown.replace(/[^\w\d :;,.!?]/g, '');
+  const match = content.match(new RegExp(search, 'i'));
   if (!match) return null;
 
-  const start = Math.max(0, markdown.lastIndexOf(' ', match.index! - 20));
-  const end = Math.min(markdown.length, markdown.indexOf(' ', match.index! + match[0].length + 20));
+  const start = Math.max(0, content.lastIndexOf(' ', match.index! - 20));
+  const end = Math.min(content.length, content.indexOf(' ', match.index! + match[0].length + 20));
 
-  const sliced = markdown.slice(start, end);
+  const sliced = content.slice(start, end);
   const highlighted = highlightText(sliced, search);
   return md.render(highlighted);
 }
