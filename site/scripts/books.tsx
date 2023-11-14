@@ -1,7 +1,8 @@
+import { Typography } from "../components/typography.js";
 import { RatingStar } from "../shared/rating.js";
 import { BookJson } from "./data/books.json.js";
 import { Reactive } from "./reactive.js";
-import { createSearch, highlight } from "./searchlist.js";
+import { createSearch, findWithinMarkdown, highlight } from "./searchlist.js";
 import { randomElement, sleep } from "./util.js";
 
 const booksFetch = fetch('/scripts/data/books.json').then<BookJson[]>(res => res.json());
@@ -46,15 +47,27 @@ const { results, matchingItems } = createSearch({
       source: searchTerm,
       matches: (book: BookJson) => (
         book.author.toLowerCase().includes(searchTerm.val) ||
-        book.title.toLowerCase().includes(searchTerm.val)
+        book.title.toLowerCase().includes(searchTerm.val) ||
+        book.description.toLowerCase().includes(searchTerm.val)
       ),
     },
   ],
-  viewForItem: (book, search) => (
-    <li>
-      <p><a href={book.route}>{highlight(book.title, search)}</a><br /> {highlight(book.author, search)}</p>
-    </li>
-  ),
+  viewForItem: (book, search) => {
+    const matchedBody = findWithinMarkdown(book.description, search);
+    return (
+      <li>
+        <p>
+          <a href={book.route}>{highlight(book.title, search)}</a><br />
+          {highlight(book.author, search)}
+        </p>
+        {matchedBody &&
+          <Typography style='font-size:smaller' deindent>
+            <blockquote innerHTML={matchedBody} />
+          </Typography>
+        }
+      </li>
+    );
+  },
 });
 
 document.getElementById('search-results')!.replaceChildren(results);

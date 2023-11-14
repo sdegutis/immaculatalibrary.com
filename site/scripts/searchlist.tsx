@@ -1,3 +1,4 @@
+import MarkdownIt from "https://cdn.jsdelivr.net/npm/markdown-it@13.0.2/+esm";
 import { makePaginator } from "./paginator.js";
 import { Reactive, reactTo } from "./reactive.js";
 
@@ -69,4 +70,21 @@ export function highlight(text: string, search?: string) {
 export function highlightText(text: string, search?: string) {
   if (!search) return text;
   return text.replace(new RegExp(`(${search})`, 'gi'), `<span class='highlight'>$1</span>`);
+}
+
+const md = new MarkdownIt({ html: true });
+
+export function findWithinMarkdown(markdown: string, search?: string) {
+  if (!search) return null;
+
+  const content = markdown.replace(/\[(.+?)\]\(.+?\)/g, '$1').replace(/([^\w\d :;,.!?])|(<.+?>)/g, '');
+  const match = content.match(new RegExp(search, 'i'));
+  if (!match) return null;
+
+  const start = Math.max(0, content.lastIndexOf(' ', match.index! - 20));
+  const end = Math.min(content.length, content.indexOf(' ', match.index! + match[0].length + 20));
+
+  const sliced = content.slice(start, end);
+  const highlighted = highlightText(sliced, search);
+  return md.render(highlighted);
 }

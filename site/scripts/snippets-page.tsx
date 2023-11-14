@@ -1,12 +1,8 @@
-import MarkdownIt from "https://cdn.jsdelivr.net/npm/markdown-it@13.0.2/+esm";
 import { Typography } from "../components/typography.js";
-import { mdOptions } from "../shared/markdown.js";
 import { SnippetJson } from "./data/snippets.json.js";
 import { Reactive } from "./reactive.js";
-import { createSearch, highlight, highlightText } from "./searchlist.js";
+import { createSearch, findWithinMarkdown, highlight } from "./searchlist.js";
 import { randomElement, sleep } from "./util.js";
-
-const md = new MarkdownIt(mdOptions);
 
 const snippetsFetch = fetch('/scripts/data/snippets.json').then<SnippetJson[]>(res => res.json());
 await sleep(.1);
@@ -71,21 +67,6 @@ const { results, matchingItems } = createSearch({
     );
   },
 });
-
-function findWithinMarkdown(markdown: string, search?: string) {
-  if (!search) return null;
-
-  const content = markdown.replace(/[^\w\d :;,.!?]/g, '');
-  const match = content.match(new RegExp(search, 'i'));
-  if (!match) return null;
-
-  const start = Math.max(0, content.lastIndexOf(' ', match.index! - 20));
-  const end = Math.min(content.length, content.indexOf(' ', match.index! + match[0].length + 20));
-
-  const sliced = content.slice(start, end);
-  const highlighted = highlightText(sliced, search);
-  return md.render(highlighted);
-}
 
 document.getElementById('search-results')!.replaceChildren(results);
 
