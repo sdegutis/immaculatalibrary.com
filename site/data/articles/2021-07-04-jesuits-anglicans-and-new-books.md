@@ -6,7 +6,7 @@ imageCaption: 'Photo by <a href="https://unsplash.com/@aaronburden?utm_source=un
 
 Several new books have been added over the weekend, which are related to the history of English Catholic books.
 
-As the book snippet [How we should do Holy Reading](/book-snippets/2021-06-26-how-we-should-do-holy-reading.html) was added, a good number of the books St. Francis de Sales recommended were linked to, being already present on this website.
+As the book snippet [How we should do Holy Reading](/snippets/2021-06-26-how-we-should-do-holy-reading.html) was added, a good number of the books St. Francis de Sales recommended were linked to, being already present on this website.
 
 But a few notable mentions were missing. Most lamentably, the Confessions of St. Augustine has no public domain English translation by any reputable Catholic.
 

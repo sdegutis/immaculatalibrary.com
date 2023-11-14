@@ -12,4 +12,4 @@ sortOrder: 10
 
 These books are chosen to help increase devotion to the Sacred Heart of Jesus and explain this most famous devotion and its origins.
 
-Consider the [12 promises of Jesus](/book-snippets/2021-06-25-twelve-promises-of-the-sacred-heart.html) to those who practice devotion to the Sacred Heart.
+Consider the [12 promises of Jesus](/snippets/2021-06-25-twelve-promises-of-the-sacred-heart.html) to those who practice devotion to the Sacred Heart.

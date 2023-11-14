@@ -13,4 +13,4 @@ books:
 sortOrder: 22
 ---
 
-The books of the lives of the first Jesuits were specifically mentioned by St. Francis de Sales in his [advice on holy reading](/book-snippets/2021-06-26-how-we-should-do-holy-reading.html) as being helpful to furthering our devotion.
+The books of the lives of the first Jesuits were specifically mentioned by St. Francis de Sales in his [advice on holy reading](/snippets/2021-06-26-how-we-should-do-holy-reading.html) as being helpful to furthering our devotion.

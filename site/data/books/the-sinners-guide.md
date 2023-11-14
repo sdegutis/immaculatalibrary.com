@@ -18,4 +18,4 @@ storeLinks:
     title: 'TAN Books'
 ---
 
-A masterpiece of spiritual writing. Highly recommended by St. Francis de Sales. According to St. Teresa of Avila, it converted over a million souls. Read the [1883 Introduction](/book-snippets/2022-02-04-introduction-to-the-sinners-guide.html) for more info.
+A masterpiece of spiritual writing. Highly recommended by St. Francis de Sales. According to St. Teresa of Avila, it converted over a million souls. Read the [1883 Introduction](/snippets/2022-02-04-introduction-to-the-sinners-guide.html) for more info.

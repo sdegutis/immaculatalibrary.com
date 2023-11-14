@@ -40,4 +40,4 @@ It would be well to add here, that St. Francis de Sales might recommend doing un
 >
 > These latter kind of pains are of more value than the former; for, besides subduing the body, they produce fruits much more desirable, and therefore, generally speaking, it is better to preserve our bodily strength more than may be necessary than to weaken it too much; for we can always decrease it when we will, but we cannot always repair it when we would desire to do so.
 
-This is from his chapter [The Exercise of Exterior Mortification](/book-snippets/2021-06-14-the-exercise-of-exterior-mortification.html), which contains other advice on proper fasting as well.
+This is from his chapter [The Exercise of Exterior Mortification](/snippets/2021-06-14-the-exercise-of-exterior-mortification.html), which contains other advice on proper fasting as well.

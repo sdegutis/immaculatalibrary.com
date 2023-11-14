@@ -38,21 +38,21 @@ And being perfectly loving, she is *willing* to help us, and in fact she wants o
 
 Just consider a few examples already posted on this site in the Book Snippets section:
 
-* At the instigation of St. Dominic, the demons of a possessed man testified that Mary and the Rosary are powerful against them, and the man was immediately freed from them by the Rosary. ([Mary and the Demons](/book-snippets/2021-05-12-mary-demons.html))
+* At the instigation of St. Dominic, the demons of a possessed man testified that Mary and the Rosary are powerful against them, and the man was immediately freed from them by the Rosary. ([Mary and the Demons](/snippets/2021-05-12-mary-demons.html))
 
-* A monastery of nuns which had become very lax due to demonic influence, was reformed by one nun who joined and faithfully persevered in the recitation of the Rosary. ([The Rosary and the reformed abbey](/book-snippets/2021-05-13-rosary-reformed-abbey.html))
+* A monastery of nuns which had become very lax due to demonic influence, was reformed by one nun who joined and faithfully persevered in the recitation of the Rosary. ([The Rosary and the reformed abbey](/snippets/2021-05-13-rosary-reformed-abbey.html))
 
-* A very sinful young woman was granted the grace of having Jesus personally and miraculously rebuke her for her sins, thanks to the Rosary she prayed every day, and changed her life. ([Catherine the beautiful, and the Rosary](/book-snippets/2021-05-21-catherine-the-beautiful-and-the-rosary.html))
+* A very sinful young woman was granted the grace of having Jesus personally and miraculously rebuke her for her sins, thanks to the Rosary she prayed every day, and changed her life. ([Catherine the beautiful, and the Rosary](/snippets/2021-05-21-catherine-the-beautiful-and-the-rosary.html))
 
-* After a man's demonic state was revealed by St. Dominic's prayers, the bad man began to pray the Rosary, which so changed his life that a later miracle showed him crowned with roses. ([Monster converted by Rosary](/book-snippets/2021-05-22-monster-converted-by-rosary.html))
+* After a man's demonic state was revealed by St. Dominic's prayers, the bad man began to pray the Rosary, which so changed his life that a later miracle showed him crowned with roses. ([Monster converted by Rosary](/snippets/2021-05-22-monster-converted-by-rosary.html))
 
-* For over a decade, a demon waited in disguise to strangle a very sinful baron and take him to hell, but could not because the man prayed 7 Hail Marys every day. ([Spared Hell by Hail Marys](/book-snippets/2021-05-24-spared-hell-by-hail-marys.html))
+* For over a decade, a demon waited in disguise to strangle a very sinful baron and take him to hell, but could not because the man prayed 7 Hail Marys every day. ([Spared Hell by Hail Marys](/snippets/2021-05-24-spared-hell-by-hail-marys.html))
 
-* After a man was falsely condemned for murdering his friend, he asked Mary for help, and the dead man spoke by a miracle and admitted that his friend had not killed him. ([Acquitted murder by miracle of Mary](/book-snippets/2021-06-04-acquitted-murder-by-miracle-of-mary.html))
+* After a man was falsely condemned for murdering his friend, he asked Mary for help, and the dead man spoke by a miracle and admitted that his friend had not killed him. ([Acquitted murder by miracle of Mary](/snippets/2021-06-04-acquitted-murder-by-miracle-of-mary.html))
 
-* A priest who continued in sin, was about to be killed by an angel for his wicked life, but suddenly crying out for Mary's protection, was spared, and led a holy life until his death. ([Priest spared death through love of Mary](/book-snippets/2021-06-10-priest-spared-death-through-love-of-mary.html))
+* A priest who continued in sin, was about to be killed by an angel for his wicked life, but suddenly crying out for Mary's protection, was spared, and led a holy life until his death. ([Priest spared death through love of Mary](/snippets/2021-06-10-priest-spared-death-through-love-of-mary.html))
 
-* Consider also these [seven stories of being saved by the Rosary](/book-snippets/2021-06-11-seven-stories-of-being-saved-by-the-rosary.html).
+* Consider also these [seven stories of being saved by the Rosary](/snippets/2021-06-11-seven-stories-of-being-saved-by-the-rosary.html).
 
 So let us entrust ourselves to Mary.
 
