@@ -1,58 +1,13 @@
-.typography h2.title {
-  margin-bottom: 0.25em;
-}
-
-.typography p.subtitle {
-  font-weight: bold;
-  color: var(--bold-color);
-}
-
-.typography .author {
-  font-weight: bold;
-  color: var(--bold-color);
-}
-
-.typography .indent {
-  margin-left: 20px;
-}
-
-.typography ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.typography table.downloads {
+table.downloads {
   border-collapse: collapse;
+  margin: 1em 0;
 }
 
-.typography table.downloads td {
+table.downloads td {
   padding: 1em;
   border: 1px solid var(--border-color);
 }
 
-.typography table.downloads td.link {
+table.downloads td.link {
   white-space: nowrap;
-}
-
-#snippets-in-book ul {
-  padding-left: 0;
-  list-style-type: none;
-}
-
-.readonline-chapters {
-  padding-left: 0;
-  list-style-type: none;
-
-  position: sticky;
-  top: 0;
-  overflow: auto;
-  height: 100vh;
-}
-
-.typography .chapter .chapter-header {
-  position: sticky;
-  top: 0;
-  backdrop-filter: blur(7px);
-  -webkit-backdrop-filter: blur(7px);
-  padding: 1em 0;
 }

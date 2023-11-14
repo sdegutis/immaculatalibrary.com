@@ -18,10 +18,13 @@ export default allBooks.map(book => [`${book.slug}.html`, <>
           <link rel="stylesheet" href='/css/page/book.css' />
 
           <h2>{book.data.title}</h2>
-          <p class="subtitle">{book.data.subtitle}</p>
-          <p>By <span class="author">{book.data.author}</span></p>
+          <p>{book.data.subtitle}</p>
+          <p>By <span>{book.data.author}</span></p>
           <p><Rating n={book.data.rating} /></p>
-          {markdown.render(book.content)}
+
+          <blockquote>
+            {markdown.render(book.content)}
+          </blockquote>
 
           <h4>Read now:</h4>
           {book.data.complete && <>
@@ -56,14 +59,12 @@ export default allBooks.map(book => [`${book.slug}.html`, <>
           </table>
 
           {book.data.storeLinks.length > 0 && <>
-            <h4>Buy physical book:</h4>
-            <ul class='indent'>
+            <details open>
+              <summary>Buy physical book:</summary>
               {book.data.storeLinks.map(link => <>
-                <li>
-                  Purchase from <a href={link.link}>{markdown.renderInline(link.title)}</a>
-                </li>
+                <p>Purchase from <a href={link.link}>{markdown.renderInline(link.title)}</a></p>
               </>)}
-            </ul>
+            </details>
           </>}
 
           <p>
@@ -89,7 +90,7 @@ export default allBooks.map(book => [`${book.slug}.html`, <>
               <summary>
                 <b>Why is this book free?</b>
               </summary>
-              <p class="indent">
+              <p>
                 This book is in the public domain. The copyright it had when printed is no longer in effect.
               </p>
             </details>

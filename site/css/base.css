@@ -46,8 +46,16 @@ hr {
   border: 0;
 }
 
+details {
+  background-color: var(--bgalt);
+  border-radius: 7px;
+  padding: 1em;
+}
+
 details summary {
-  transition: padding-bottom 200ms ease;
+  cursor: pointer;
+  user-select: none;
+  transition: padding-bottom 100ms ease-out;
 }
 
 details[open] summary {
