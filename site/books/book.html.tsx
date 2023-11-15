@@ -28,7 +28,7 @@ export default allBooks.map(book => [`${book.slug}.html`, <>
 
           <h4>Read now:</h4>
           {book.data.complete && <>
-            <table class="downloads" id='read-online-table'>
+            <table class="downloads">
               <tr>
                 <td>
                   <a href={`/books/read-on-web/${book.slug}.html`}>
@@ -38,7 +38,7 @@ export default allBooks.map(book => [`${book.slug}.html`, <>
               </tr>
             </table>
           </>}
-          <table class="downloads" id='read-online-table'>
+          <table class="downloads">
             {book.data.files.map(file => <>
               <tr>
                 {book.data.files.length > 1 && <>
