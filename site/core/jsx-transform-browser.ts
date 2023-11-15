@@ -41,7 +41,7 @@ export const jsx = (tag: string | Function, fullAttrs: Record<string, any>) => {
 }
 
 function getGoodChildren(children: any) {
-  return [children].flat(Infinity).filter(o => o);
+  return [children].flat(Infinity).filter(child => child !== null && child !== undefined && child !== false);
 }
 
 function pushChildren(el: DocumentFragment | HTMLElement | SVGElement, children: any[]) {

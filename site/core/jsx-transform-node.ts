@@ -38,7 +38,7 @@ export const Fragment = '';
 
 function pushChildren(children: any[], parts: string[]) {
   for (const child of children) {
-    if (child) {
+    if (child !== null && child !== undefined && child !== false) {
       if (Array.isArray(child)) {
         pushChildren(child, parts);
       }
