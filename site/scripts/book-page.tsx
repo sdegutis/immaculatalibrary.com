@@ -52,7 +52,6 @@ if (snippetsInBook.length > 0) {
     </p>
     <input
       placeholder='Search within book'
-      autofocus
       style='width: 100%'
       oninput={function (this: HTMLInputElement) {
         searchTerm.set(this.value.trim().toLowerCase())
