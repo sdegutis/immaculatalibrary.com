@@ -28,38 +28,33 @@ export default allBooks.map(book => [`${book.slug}.html`, <>
 
           <h4>Read now:</h4>
           {book.data.complete && <>
-            <table class="downloads">
-              <tr>
-                <td>
-                  <a href={`/books/read-on-web/${book.slug}.html`}>
-                    Read on Web
-                  </a>
-                </td>
-              </tr>
-            </table>
+            <details open class='infobox green'>
+              <summary>Complete book</summary>
+              <p>
+                This book has been fully digitized. { }
+                <a href={`/books/read-on-web/${book.slug}.html`}>Read on web</a>
+              </p>
+            </details>
           </>}
-          <table class="downloads">
-            {book.data.files.map(file => <>
-              <tr>
-                {book.data.files.length > 1 && <>
-                  <td>
-                    {file.pdfFile.replace('.pdf', '')}
-                  </td>
-                </>}
-                <td class="link">
-                  <a href={`http://books.immaculatalibrary.com/${file.pdfFile}`} target="_blank">Download PDF</a>
-                </td>
+          <ul class="downloads">
+            {book.data.files.map(file => <li>
+              {book.data.files.length > 1 && <>
+                <p>
+                  {file.pdfFile.replace('.pdf', '')}
+                </p>
+              </>}
+              <p>
+                <a href={`http://books.immaculatalibrary.com/${file.pdfFile}`} target="_blank">Download PDF</a>
                 {file.archiveId && <>
-                  <td class="link">
-                    <a href={`https://archive.org/details/${file.archiveId}?view=theater`} target="_blank">Read Scans</a>
-                  </td>
+                  { } &bull; { }
+                  <a href={`https://archive.org/details/${file.archiveId}?view=theater`} target="_blank">Read Scans</a>
                 </>}
-              </tr>
-            </>)}
-          </table>
+              </p>
+            </li>)}
+          </ul>
 
           {book.data.storeLinks.length > 0 && <>
-            <details open>
+            <details open class='infobox'>
               <summary>Buy physical book:</summary>
               {book.data.storeLinks.map(link => <>
                 <p>Purchase from <a href={link.link}>{markdown.renderInline(link.title)}</a></p>
@@ -68,9 +63,9 @@ export default allBooks.map(book => [`${book.slug}.html`, <>
           </>}
 
           <p>
-            <details>
+            <details class='infobox yellow'>
               <summary>
-                <b>How to download to iPhone</b>
+                How to download to iPhone
               </summary>
               <ol>
                 <li>Make sure you have the { }
@@ -86,9 +81,9 @@ export default allBooks.map(book => [`${book.slug}.html`, <>
           </p>
 
           <p>
-            <details>
+            <details class='infobox yellow'>
               <summary>
-                <b>Why is this book free?</b>
+                Why is this book free?
               </summary>
               <p>
                 This book is in the public domain. The copyright it had when printed is no longer in effect.

@@ -46,19 +46,39 @@ hr {
   border: 0;
 }
 
-details {
-  background-color: var(--bgalt);
-  border-radius: 7px;
+/* Other things */
+
+details.infobox {
+  /* background-color: var(--bgalt); */
+
+  border: 1px solid var(--admin-border-color);
+  background-color: var(--admin-bg-color);
+
+  /* border-radius: 7px; */
   padding: 1em;
 }
 
-details summary {
+details.infobox.green {
+  border: 1px solid #050;
+  background-color: #020;
+}
+
+details.infobox.yellow {
+  border: 1px solid #550;
+  background-color: #220;
+}
+
+/* details.infobox> :not(:first-child) {
+  margin: 0 1em;
+} */
+
+details.infobox summary {
   cursor: pointer;
   user-select: none;
   transition: padding-bottom 100ms ease-out;
 }
 
-details[open] summary {
+details.infobox[open] summary {
   padding-bottom: 1em;
 }
 
