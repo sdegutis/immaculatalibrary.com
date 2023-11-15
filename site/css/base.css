@@ -51,28 +51,31 @@ hr {
 details.infobox {
   /* background-color: var(--bgalt); */
 
-  border: 1px solid var(--admin-border-color);
-  background-color: var(--admin-bg-color);
+  border: 1px solid #19f7;
+  background-color: #0047;
 
   /* border-radius: 7px; */
   padding: 1em;
+  margin: 1em 0;
 }
 
 details.infobox.green {
-  border: 1px solid #050;
-  background-color: #020;
+  border: 1px solid #0907;
+  background-color: #0307;
 }
 
 details.infobox.yellow {
-  border: 1px solid #550;
-  background-color: #220;
+  border: 1px solid #7707;
+  background-color: #3307;
 }
 
 /* details.infobox> :not(:first-child) {
   margin: 0 1em;
 } */
 
+
 details.infobox summary {
+  font-weight: bold;
   cursor: pointer;
   user-select: none;
   transition: padding-bottom 100ms ease-out;

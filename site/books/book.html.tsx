@@ -26,32 +26,31 @@ export default allBooks.map(book => [`${book.slug}.html`, <>
             {markdown.render(book.content)}
           </blockquote>
 
-          <h4>Read now:</h4>
           {book.data.complete && <>
             <details open class='infobox green'>
-              <summary>Complete book</summary>
+              <summary>Read digitized edition</summary>
               <p>
                 This book has been fully digitized. { }
                 <a href={`/books/read-on-web/${book.slug}.html`}>Read on web</a>
               </p>
             </details>
           </>}
-          <ul class="downloads">
-            {book.data.files.map(file => <li>
-              {book.data.files.length > 1 && <>
-                <p>
-                  {file.pdfFile.replace('.pdf', '')}
-                </p>
-              </>}
+          <details open class='infobox'>
+            <summary>Read originals</summary>
+            {book.data.files.map(file => <>
               <p>
+                {book.data.files.length > 1 && <>
+                  {file.pdfFile.replace('.pdf', '')}
+                  <br />
+                </>}
                 <a href={`http://books.immaculatalibrary.com/${file.pdfFile}`} target="_blank">Download PDF</a>
                 {file.archiveId && <>
-                  { } &bull; { }
+                  { } &mdash; { }
                   <a href={`https://archive.org/details/${file.archiveId}?view=theater`} target="_blank">Read Scans</a>
                 </>}
               </p>
-            </li>)}
-          </ul>
+            </>)}
+          </details>
 
           {book.data.storeLinks.length > 0 && <>
             <details open class='infobox'>
@@ -62,34 +61,30 @@ export default allBooks.map(book => [`${book.slug}.html`, <>
             </details>
           </>}
 
-          <p>
-            <details class='infobox yellow'>
-              <summary>
-                How to download to iPhone
-              </summary>
-              <ol>
-                <li>Make sure you have the { }
-                  <a href="https://apps.apple.com/us/app/apple-books/id364709193">Books app</a> { }
-                  installed from the App Store.
-                </li>
-                <li>Click the link to download the book.</li>
-                <li>Wait for it to fully finish loading.</li>
-                <li>Click the Share button at the bottom of the screen.</li>
-                <li>Click "Copy to Books" and check your Libray tab in Apple Books.</li>
-              </ol>
-            </details>
-          </p>
+          <details class='infobox yellow'>
+            <summary>
+              How to download to iPhone
+            </summary>
+            <ol>
+              <li>Make sure you have the { }
+                <a href="https://apps.apple.com/us/app/apple-books/id364709193">Books app</a> { }
+                installed from the App Store.
+              </li>
+              <li>Click the link to download the book.</li>
+              <li>Wait for it to fully finish loading.</li>
+              <li>Click the Share button at the bottom of the screen.</li>
+              <li>Click "Copy to Books" and check your Libray tab in Apple Books.</li>
+            </ol>
+          </details>
 
-          <p>
-            <details class='infobox yellow'>
-              <summary>
-                Why is this book free?
-              </summary>
-              <p>
-                This book is in the public domain. The copyright it had when printed is no longer in effect.
-              </p>
-            </details>
-          </p>
+          <details class='infobox yellow'>
+            <summary>
+              Why is this book free?
+            </summary>
+            <p>
+              This book is in the public domain. The copyright it had when printed is no longer in effect.
+            </p>
+          </details>
 
         </Typography>
 
