@@ -9,6 +9,7 @@ interface BookFile {
   title: string;
   subtitle: string;
   dateAdded: string;
+  feastday?: string;
   author: string;
   translator: string;
   score: number;

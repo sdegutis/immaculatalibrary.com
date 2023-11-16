@@ -1,6 +1,7 @@
 ---
 title: 'St. Gertrude the Great'
 subtitle: ''
+feastday: 11/16
 dateAdded: '2020-11-16'
 author: 'D. Gilbert Dolan, O.S.B. (possibly)'
 translator: ''
