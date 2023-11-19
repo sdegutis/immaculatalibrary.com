@@ -22,6 +22,8 @@ export default <>
               <LoadingLine width="9em" />
               <LoadingLine width="4em" />
               <LoadingLine width="14em" />
+              <LoadingLine width="4em" />
+              <LoadingLine width="100%" height='2em' />
             </div>
             <hr />
             <br /><LoadingLine width="12em" />
