@@ -20,7 +20,7 @@ export default <>
             <div id='books-filters'>
               <LoadingLine width="4em" />
               <LoadingLine width="9em" />
-              <LoadingLine width="4em" />
+              <LoadingLine width="2em" />
               <LoadingLine width="14em" />
               <LoadingLine width="4em" />
               <LoadingLine width="100%" height='2em' />
