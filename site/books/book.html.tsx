@@ -30,7 +30,7 @@ export default allBooks.map(book => [`${book.slug}.html`, <>
             <details open class='infobox green'>
               <summary>Read digitized edition</summary>
               <p>
-                This book has been fully digitized. { }
+                This book has been fully digitized.<br />
                 <a href={`/books/read-on-web/${book.slug}.html`}>Read on web</a>
               </p>
             </details>
@@ -66,14 +66,12 @@ export default allBooks.map(book => [`${book.slug}.html`, <>
               How to download to iPhone
             </summary>
             <ol>
-              <li>Make sure you have the { }
-                <a href="https://apps.apple.com/us/app/apple-books/id364709193">Books app</a> { }
-                installed from the App Store.
+              <li>Install the <a href="https://apps.apple.com/us/app/apple-books/id364709193">Books app</a>.
               </li>
-              <li>Click the link to download the book.</li>
+              <li>Download the book's PDF above.</li>
               <li>Wait for it to fully finish loading.</li>
-              <li>Click the Share button at the bottom of the screen.</li>
-              <li>Click "Copy to Books" and check your Libray tab in Apple Books.</li>
+              <li>Click the Share button.</li>
+              <li>Click "Copy to Books".</li>
             </ol>
           </details>
 
@@ -82,7 +80,7 @@ export default allBooks.map(book => [`${book.slug}.html`, <>
               Why is this book free?
             </summary>
             <p>
-              This book is in the public domain. The copyright it had when printed is no longer in effect.
+              This book was written so long ago that is now in the public domain; the copyright it had when printed is no longer in effect.
             </p>
           </details>
 
