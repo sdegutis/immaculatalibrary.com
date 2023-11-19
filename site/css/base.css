@@ -59,6 +59,10 @@ details.infobox {
   margin: 1em 0;
 }
 
+details.infobox> :not(summary) {
+  margin: 1em;
+}
+
 details.infobox.green {
   border: 1px solid #0907;
   background-color: #0307;

@@ -80,7 +80,7 @@ export default allBooks.map(book => [`${book.slug}.html`, <>
               Why is this book free?
             </summary>
             <p>
-              This book was written so long ago that is now in the public domain; the copyright it had when printed is no longer in effect.
+              This book was written so long ago that it's now public domain; the copyright it had when printed is no longer in effect.
             </p>
           </details>
 
