@@ -17,11 +17,13 @@ const doRandomBookSnippetReal = (e: Event) => {
 let alreadyLoaded = false;
 
 window.addEventListener('popstate', e => {
-  reflectUrl();
+  if (e.state) {
+    reflectUrl(e.state);
+  }
 });
 
 if (window.location.hash) {
-  reflectUrl();
+  reflectUrl(window.location.hash.slice(1));
 }
 else {
   const yearStart = new Date(new Date().getFullYear(), 0, 1).getTime();
@@ -31,10 +33,7 @@ else {
   doRandomBookSnippet(slugs => slugs[Math.floor(percent * slugs.length)]!);
 }
 
-async function reflectUrl() {
-  const slug = window.location.hash.slice(1);
-  if (!slug) return;
-
+async function reflectUrl(slug: string) {
   const container = document.getElementById('random-book-snippet') as HTMLDivElement;
 
   container.replaceChildren((<HomeLoading />));
@@ -83,6 +82,6 @@ async function reflectUrl() {
 
 async function doRandomBookSnippet(fn: (slugs: string[]) => string) {
   const slug = fn(await snippetIds);
-  history.pushState('', '', '#' + slug);
-  reflectUrl();
+  history.pushState(slug, '');
+  reflectUrl(slug);
 }
