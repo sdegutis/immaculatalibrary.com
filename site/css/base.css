@@ -52,6 +52,10 @@ blockquote {
   margin: 0;
 }
 
+details {
+  margin: 1em 0;
+}
+
 /* Forms */
 
 :read-write,

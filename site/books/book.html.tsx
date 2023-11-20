@@ -58,23 +58,27 @@ export default allBooks.map(book => [`${book.slug}.html`, <>
             </blockquote>
           </>}
 
-          <h3>How to download to iPhone</h3>
-          <blockquote>
-            <ol>
-              <li>Install the <a href="https://apps.apple.com/us/app/apple-books/id364709193">Books app</a>.</li>
-              <li>Download the book's PDF above.</li>
-              <li>Wait for it to fully finish loading.</li>
-              <li>Click the Share button.</li>
-              <li>Click "Copy to Books".</li>
-            </ol>
-          </blockquote>
+          <details>
+            <summary>How to download to iPhone</summary>
+            <blockquote>
+              <ol>
+                <li>Install the <a href="https://apps.apple.com/us/app/apple-books/id364709193">Books app</a>.</li>
+                <li>Download the book's PDF above.</li>
+                <li>Wait for it to fully finish loading.</li>
+                <li>Click the Share button.</li>
+                <li>Click "Copy to Books".</li>
+              </ol>
+            </blockquote>
+          </details>
 
-          <h3>Why is this book free?</h3>
-          <blockquote>
-            <p>
-              This book was written so long ago that it's now public domain; the copyright it had when printed is no longer in effect.
-            </p>
-          </blockquote>
+          <details>
+            <summary>Why is this book free?</summary>
+            <blockquote>
+              <p>
+                This book was written so long ago that it's now public domain; the copyright it had when printed is no longer in effect.
+              </p>
+            </blockquote>
+          </details>
 
         </div>
 
