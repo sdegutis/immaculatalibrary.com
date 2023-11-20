@@ -15,8 +15,6 @@ export default allBooks.map(book => [`${book.slug}.html`, <>
 
         <Typography>
 
-          <link rel="stylesheet" href='/css/page/book.css' />
-
           <h2>{book.data.title}</h2>
           <p>{book.data.subtitle}</p>
           <p>By <span>{book.data.author}</span></p>
@@ -45,7 +43,7 @@ export default allBooks.map(book => [`${book.slug}.html`, <>
                 </>}
                 <a href={`http://books.immaculatalibrary.com/${file.pdfFile}`} target="_blank">Download PDF</a>
                 {file.archiveId && <>
-                  { } &mdash; { }
+                  { } &bull; { }
                   <a href={`https://archive.org/details/${file.archiveId}?view=theater`} target="_blank">Read Scans</a>
                 </>}
               </p>
