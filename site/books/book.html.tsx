@@ -13,16 +13,17 @@ export default allBooks.map(book => [`${book.slug}.html`, <>
     <Spaced>
       <SplitColumn>
 
-        <Typography>
+        <div>
 
-          <h2>{book.data.title}</h2>
-          <p>{book.data.subtitle}</p>
-          <p>By <span>{book.data.author}</span></p>
-          <p><Rating n={book.data.rating} /></p>
-
-          <blockquote>
-            {markdown.render(book.content)}
-          </blockquote>
+          <Typography>
+            <h2>{book.data.title}</h2>
+            <p>{book.data.subtitle}</p>
+            <p>By <span>{book.data.author}</span></p>
+            <p><Rating n={book.data.rating} /></p>
+            <blockquote>
+              {markdown.render(book.content)}
+            </blockquote>
+          </Typography>
 
           {book.data.complete && <>
             <details open class='infobox green'>
@@ -82,7 +83,7 @@ export default allBooks.map(book => [`${book.slug}.html`, <>
             </p>
           </details>
 
-        </Typography>
+        </div>
 
         <div>
           <script type='module' src='/scripts/book-page.js' />
