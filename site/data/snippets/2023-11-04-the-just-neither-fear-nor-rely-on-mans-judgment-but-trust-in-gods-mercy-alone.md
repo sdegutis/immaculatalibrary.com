@@ -42,4 +42,4 @@ tags:
 > 
 > For better to me is thy great mercy, for the obtaining of pardon, than the Justice which I imagine in myself for the defence of my hidden conscience.
 > 
-> Although my conscience accuse me not, yet I cannot hereby justify myself; for setting thy mercy aside, *no wan living shall be justified in thy sight.* Ps. cxlii.
+> Although my conscience accuse me not, yet I cannot hereby justify myself; for setting thy mercy aside, *no man living shall be justified in thy sight.* Ps. cxlii.
