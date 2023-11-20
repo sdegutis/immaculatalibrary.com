@@ -25,17 +25,13 @@ export default allBooks.map(book => [`${book.slug}.html`, <>
             </blockquote>
           </Typography>
 
-          {book.data.complete && <>
-            <details open class='infobox green'>
-              <summary>Read digitized edition</summary>
+          <h3>Read now</h3>
+          <blockquote>
+            {book.data.complete && <>
               <p>
-                This book has been fully digitized.<br />
-                <a href={`/books/read-on-web/${book.slug}.html`}>Read on web</a>
+                <a href={`/books/read-on-web/${book.slug}.html`}>Read digitized edition</a>
               </p>
-            </details>
-          </>}
-          <details open class='infobox'>
-            <summary>Read originals</summary>
+            </>}
             {book.data.files.map(file => <>
               <p>
                 {book.data.files.length > 1 && <>
@@ -49,39 +45,36 @@ export default allBooks.map(book => [`${book.slug}.html`, <>
                 </>}
               </p>
             </>)}
-          </details>
+          </blockquote>
 
           {book.data.storeLinks.length > 0 && <>
-            <details open class='infobox'>
-              <summary>Buy physical book:</summary>
-              {book.data.storeLinks.map(link => <>
-                <p>Purchase from <a href={link.link}>{markdown.renderInline(link.title)}</a></p>
-              </>)}
-            </details>
+            <h3>Buy physical book:</h3>
+            <blockquote>
+              <ul>
+                {book.data.storeLinks.map(link => <>
+                  <li>Purchase from <a href={link.link}>{markdown.renderInline(link.title)}</a></li>
+                </>)}
+              </ul>
+            </blockquote>
           </>}
 
-          <details class='infobox yellow'>
-            <summary>
-              How to download to iPhone
-            </summary>
+          <h3>How to download to iPhone</h3>
+          <blockquote>
             <ol>
-              <li>Install the <a href="https://apps.apple.com/us/app/apple-books/id364709193">Books app</a>.
-              </li>
+              <li>Install the <a href="https://apps.apple.com/us/app/apple-books/id364709193">Books app</a>.</li>
               <li>Download the book's PDF above.</li>
               <li>Wait for it to fully finish loading.</li>
               <li>Click the Share button.</li>
               <li>Click "Copy to Books".</li>
             </ol>
-          </details>
+          </blockquote>
 
-          <details class='infobox yellow'>
-            <summary>
-              Why is this book free?
-            </summary>
+          <h3>Why is this book free?</h3>
+          <blockquote>
             <p>
               This book was written so long ago that it's now public domain; the copyright it had when printed is no longer in effect.
             </p>
-          </details>
+          </blockquote>
 
         </div>
 

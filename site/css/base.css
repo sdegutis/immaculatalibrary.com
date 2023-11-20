@@ -46,47 +46,10 @@ hr {
   border: 0;
 }
 
-/* Other things */
-
-details.infobox {
-  /* background-color: var(--bgalt); */
-
-  border: 1px solid #19f7;
-  background-color: #0047;
-
-  /* border-radius: 7px; */
-  padding: 1em;
-  margin: 1em 0;
-}
-
-details.infobox> :not(summary) {
-  margin: 1em;
-}
-
-details.infobox.green {
-  border: 1px solid #0907;
-  background-color: #0307;
-}
-
-details.infobox.yellow {
-  border: 1px solid #7707;
-  background-color: #3307;
-}
-
-/* details.infobox> :not(:first-child) {
-  margin: 0 1em;
-} */
-
-
-details.infobox summary {
-  font-weight: bold;
-  cursor: pointer;
-  user-select: none;
-  transition: padding-bottom 100ms ease-out;
-}
-
-details.infobox[open] summary {
-  padding-bottom: 1em;
+blockquote {
+  border-left: 3px solid var(--border-color);
+  padding-left: 1em;
+  margin: 0;
 }
 
 /* Forms */
