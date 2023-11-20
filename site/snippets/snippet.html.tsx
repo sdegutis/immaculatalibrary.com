@@ -75,6 +75,14 @@ export default allSnippets.map(snippet => {
                     <button type='submit'>Save</button>
                   </form>
                 </details>
+                <details>
+                  <summary>Edit</summary>
+                  <form method='POST' action='/edit-snippet'>
+                    <input type='hidden' name='slug' value={snippet.slug} />
+                    <textarea name='content' style='width:100%; height: 10em'>{snippet.content}</textarea>
+                    <button>Save changes</button>
+                  </form>
+                </details>
               </div>
             </>}
 
@@ -91,15 +99,6 @@ export default allSnippets.map(snippet => {
               <br />
               <small>By {snippet.book.data.author}</small>
             </p>
-
-            {isDev && <div>
-              <button onclick='this.nextElementSibling.hidden=false; return false'>Edit</button>
-              <form hidden method='POST' action='/edit-snippet'>
-                <input type='hidden' name='slug' value={snippet.slug} />
-                <textarea name='content' style='width:100%; height: 10em'>{snippet.content}</textarea>
-                <button>Save changes</button>
-              </form>
-            </div>}
 
             {snippet.renderedBody}
 
