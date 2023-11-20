@@ -16,6 +16,14 @@ handlers.set('/add-tags-to-snippet', body => {
   return snippet.route;
 });
 
+handlers.set('/edit-snippet', body => {
+  const params = new URLSearchParams(body);
+  const snippet = allSnippets.find(s => s.slug === params.get('slug')!)!;
+  snippet.content = params.get('content')!;
+  snippet.save();
+  return snippet.route;
+});
+
 export default allSnippets.map(snippet => {
   const singleFile = snippet.book.data.files.length === 1;
   const specificBookName = (!singleFile && snippet.book.data.files
@@ -83,6 +91,15 @@ export default allSnippets.map(snippet => {
               <br />
               <small>By {snippet.book.data.author}</small>
             </p>
+
+            {isDev && <div>
+              <button onclick='this.nextElementSibling.hidden=false; return false'>Edit</button>
+              <form hidden method='POST' action='/edit-snippet'>
+                <input type='hidden' name='slug' value={snippet.slug} />
+                <textarea name='content' style='width:100%; height: 10em'>{snippet.content}</textarea>
+                <button>Save changes</button>
+              </form>
+            </div>}
 
             {snippet.renderedBody}
 
