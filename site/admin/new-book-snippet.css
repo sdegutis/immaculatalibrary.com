@@ -1,15 +1,14 @@
 body {
   padding: 0;
   margin: 0;
-  width: 100vw;
-  height: 100vh;
   overflow: hidden;
   display: grid;
   grid-template-rows: minmax(0, 1fr);
 }
 
 main {
-  margin: 1em;
+  width: 100vw;
+  height: 100vh;
   display: grid;
   gap: 1em;
   grid-template-columns: 15fr 20fr 15fr 30fr;
