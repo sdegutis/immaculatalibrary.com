@@ -54,6 +54,9 @@ export default allSnippets.map(snippet => {
                     'renderedBody': [
                       snippet.data.archivePage,
                       snippet.renderedBody,
+                      <hr />,
+                      <hr />,
+                      <hr />,
                       snippet.nextSnippet?.data.archivePage,
                       snippet.nextSnippet?.renderedBody,
                     ].filter(s => s).join('<p>'),
