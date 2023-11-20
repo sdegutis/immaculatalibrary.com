@@ -20,16 +20,22 @@ const addTagButton = document.getElementById('addtag')!;
 
 const tags = JSON.parse(params.get('tags')!);
 for (const tag of tags) {
-  const li = document.createElement('li');
-  li.innerHTML = `<label><input type='checkbox' name='tags' value=${JSON.stringify(tag)}> ${tag}</label>`;
-  addTagButton.parentElement!.insertAdjacentElement('beforebegin', li);
+  addTagButton.parentElement!.insertAdjacentElement('beforebegin',
+    <li>
+      <label>
+        <input type='checkbox' name='tags' value={JSON.stringify(tag)} /> {tag}
+      </label>
+    </li> as HTMLLIElement
+  );
 }
 
 addTagButton.onclick = (e) => {
   e.preventDefault();
-
-  const li = document.createElement('li');
-  li.innerHTML = `<label><input type='input' name='tags'></label>`;
+  const li = <li>
+    <label>
+      <input type='input' name='tags' />
+    </label>
+  </li> as HTMLLIElement;
   addTagButton.parentElement!.insertAdjacentElement('beforebegin', li);
   li.querySelector('input')!.focus();
 };
