@@ -50,7 +50,7 @@ export default <>
             <div>
 
               <div>
-                <h2>Random Book Snippet</h2>
+                <h2>Snippet of the Hour</h2>
                 <Typography>
                   <div id="random-book-snippet">
                     <HomeLoading />
