@@ -4,6 +4,7 @@ title: Remedies against temptations
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '232'
 bookSlug: introduction-to-the-devout-life
+tags: []
 ---
 
 > *Remedies against great temptations.*
@@ -14,7 +15,7 @@ bookSlug: introduction-to-the-devout-life
 >
 > But in making these protestations and in refusing to consent, look not upon the temptation, but only on our Lord; for if you look upon the temptation, especially whilst it is strong, it may shake your courage. Divert your thoughts to some good and pious reflections, for good thoughts, when they occupy your heart, will chase away every evil temptation and suggestion.
 >
-> But the great remedy against all temptations, whether great or small, is to lay open your heart to your spiritual director, and communicate its suggestions, feelings. and affections to him; for you must observe, that silence is the first condition that the enemy makes with a soul which he desires to seduce; whereas God, on the other hand, requires that we should make known his inspirations to our superiors and directors.
+> But the great remedy against all temptations, whether great or small, is to lay open your heart to your spiritual director, and communicate its suggestions, feelings, and affections to him; for you must observe, that silence is the first condition that the enemy makes with a soul which he desires to seduce; whereas God, on the other hand, requires that we should make known his inspirations to our superiors and directors.
 >
 > If after all this, the temptations should still continue to harass and persecute us, we have nothing to do on our part but to continue resolute in our resolution, never to yield our consent; for as a girl can never be married so long as she answers No; so the soul, although she may be ever so long tempted, can never sin so long as she does the same.
 >
