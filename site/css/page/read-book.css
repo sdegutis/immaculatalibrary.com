@@ -29,7 +29,11 @@ section iframe {
 @media (min-width: 1000px) {
 
   section {
-    grid-template-columns: repeat(3, minmax(379px, 1fr));
+    grid-template-columns: 1fr 420px 1fr;
+  }
+
+  section>*:nth-child(2) {
+    padding-right: 1em;
   }
 
   section>div {
