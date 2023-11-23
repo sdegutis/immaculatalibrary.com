@@ -1,20 +1,25 @@
-import { Spaced, SplitColumn } from "../../components/column.js";
-import { TypicalPage } from "../../components/page.js";
+import { Navlinks } from "../../components/navlinks.js";
+import { EmptyPage } from "../../components/page.js";
 import { Rating } from "../../components/rating.js";
+import { SiteFooter } from "../../components/site-footer.js";
 import { Typography } from "../../components/typography.js";
 import { markdown } from "../../core/helpers.js";
 import { allBooks } from "../../model/books.js";
 
 export default allBooks.filter(book => book.data.complete).map(book => {
   const orderedSnippets = [...book.snippets];
+  const file = book.data.files[0]!;
 
   return [`${book.slug}.html`, <>
-    <TypicalPage title="Books" image={book.imageBig}>
+    <EmptyPage>
 
-      <Spaced>
-        <SplitColumn>
+      <link rel="stylesheet" href='/css/page/read-book.css' />
 
-          <link rel="stylesheet" href='/css/page/read-book.css' />
+      <main>
+
+        <Navlinks />
+
+        <section>
 
           <div>
 
@@ -57,9 +62,16 @@ export default allBooks.filter(book => book.data.complete).map(book => {
             </Typography>
           </div>
 
-        </SplitColumn>
-      </Spaced>
+          <div>
+            <iframe src={`https://archive.org/details/${file.archiveId}?view=theater`} />
+          </div>
 
-    </TypicalPage>
+        </section>
+
+        <SiteFooter thin />
+
+      </main>
+
+    </EmptyPage>
   </>];
 });

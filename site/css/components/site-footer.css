@@ -1,4 +1,8 @@
 #site-footer {
+  margin: 1em;
+}
+
+#site-footer:not(.thin) {
   margin: 3em 1em;
 }
 
