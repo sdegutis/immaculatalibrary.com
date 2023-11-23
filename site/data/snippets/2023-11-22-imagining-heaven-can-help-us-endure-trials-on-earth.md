@@ -5,7 +5,7 @@ archivePage: '262'
 archiveSlug: followingofchris00thom
 bookSlug: imitation-of-christ
 tags:
-  - '"Exhortation"'
+  - "Exhortation"
 ---
 
 > 3\. Oh! if thou hadst seen the everlasting crowns of the saints in heaven, and in how great glory they now triumph, who appeared contemptible heretofore to this world, and in a manner unworthy even of life, doubtless thou wouldst immediately cast thyself down to the very earth, and wouldst rather seek to be under the feet of all, than to have command so much as over one.
