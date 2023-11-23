@@ -24,7 +24,7 @@ export default allBooks.filter(book => book.data.complete).map(book => {
           <div>
 
             <Typography>
-              <h2>{book.data.title}</h2>
+              <h2><a href={book.route}>{book.data.title}</a></h2>
               <p class="subtitle">{book.data.subtitle}</p>
               <p>By <span class="author">{book.data.author}</span></p>
               <p><Rating n={book.data.rating} /></p>
