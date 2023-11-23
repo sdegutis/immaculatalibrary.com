@@ -16,14 +16,14 @@ document.querySelector('iframe')!.src = params.get('archiveLink')!;
 document.getElementById('old-body')!.innerHTML = params.get('renderedBody')!;
 
 const addTagButton = document.getElementById('addtag')!;
-// const tagsList = document.getElementById('tags');
 
 const tags = JSON.parse(params.get('tags')!);
+
 for (const tag of tags) {
   addTagButton.parentElement!.insertAdjacentElement('beforebegin',
     <li>
       <label>
-        <input type='checkbox' name='tags' value={JSON.stringify(tag)} /> {tag}
+        <input type='checkbox' name='tags' value={tag} /> {tag}
       </label>
     </li> as HTMLLIElement
   );
