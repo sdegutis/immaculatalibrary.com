@@ -62,9 +62,7 @@ export default allBooks.filter(book => book.data.complete).map(book => {
             </Typography>
           </div>
 
-          <div>
-            <iframe src={`https://archive.org/details/${file.archiveId}?view=theater`} />
-          </div>
+          <iframe src={`https://archive.org/details/${file.archiveId}?view=theater`} />
 
         </section>
 
