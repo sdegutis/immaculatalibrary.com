@@ -77,7 +77,7 @@ export const QuickLinks: JSX.Component = (attrs, children) => {
             </li>
 
             <li>
-              <a class="link" href='/audio-bible.html' style={`background-image: url(/img/page/audiobible.jpg);`}>
+              <a class="link" href='/resources.html' style={`background-image: url(/img/page/audiobible.jpg);`}>
                 <span>Audio Bible</span>
               </a>
             </li>

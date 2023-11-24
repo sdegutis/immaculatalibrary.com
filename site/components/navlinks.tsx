@@ -27,8 +27,7 @@ export const Navlinks = () => {
         <a href='/movies.html'>Movies</a> { }
         <a href='/articles.html'>Articles</a> { }
         <a href='/music.html'>Music</a> { }
-        <a href='/bible.html'>Bible</a> { }
-        <a href='/devotions.html'>Prayers</a> { }
+        <a href='/resources.html'>Resources</a> { }
       </div>
     </Column>
   </>;
