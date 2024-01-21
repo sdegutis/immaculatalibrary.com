@@ -32,9 +32,4 @@
     "./site/**/*.tsx",
     "./global.d.ts"
   ],
-  "references": [
-    {
-      "path": "./src"
-    }
-  ]
 }

@@ -15,7 +15,7 @@
         "${workspaceFolder}/**",
         "!**/node_modules/**"
       ],
-      "program": "${workspaceFolder}\\out\\main.js",
+      "program": "${workspaceFolder}\\main.js",
       "env": {
         "NODE_OPTIONS": "--experimental-vm-modules"
       },
