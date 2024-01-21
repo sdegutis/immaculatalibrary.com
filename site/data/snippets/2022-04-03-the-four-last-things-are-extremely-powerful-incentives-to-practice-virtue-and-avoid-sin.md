@@ -21,4 +21,4 @@ tags:
 > 
 > Moreover, it is a common principle among philosophers that reward and punishment are the most powerful motives for good with the mass of mankind. Such, alas! is our misery that we are not content with virtue alone; it must be accompanied with the fear of punishment or the hope of reward.
 > 
-> But as there is no reward or punishment so worthy of our consideration as those that never end, we will treat of eternal glory and eternal misery, together with death and judgment, which precede them. These are the most powerful incentives to love virtue and hate vice, for we are told in Scripture: “In all thy works remember thy last end, and thou slialt never sin.” [Ecclus. vii. 40.]
+> But as there is no reward or punishment so worthy of our consideration as those that never end, we will treat of eternal glory and eternal misery, together with death and judgment, which precede them. These are the most powerful incentives to love virtue and hate vice, for we are told in Scripture: “In all thy works remember thy last end, and thou shalt never sin.” [Ecclus. vii. 40.]
