@@ -12,7 +12,7 @@ tags:
 
 > We cannot refrain from quoting here a passage from the writings of that great lover of Joseph, St. Leonard of Port Maurice.
 >
->> Let the Evangelists be silent, (he says,) concerning all they could tell us of Joseph, placing in array before us those virtues and singular prerogatives which serve ` as a noble accompaniment to his dignity.
+>> Let the Evangelists be silent, (he says,) concerning all they could tell us of Joseph, placing in array before us those virtues and singular prerogatives which serve as a noble accompaniment to his dignity.
 >>
 >> To me it suffices that they make him known to us as the husband of Mary, that is, the most like among all living beings to the most perfect of pure creatures who ever came out of the hands of God, even His own Blessed Mother.
 >>
