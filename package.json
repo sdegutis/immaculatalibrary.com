@@ -27,6 +27,7 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
+    "@imlib/core": "^2.0.0",
     "chokidar": "^3.5.3",
     "js-yaml": "^4.1.0",
     "markdown-it": "^13.0.2",

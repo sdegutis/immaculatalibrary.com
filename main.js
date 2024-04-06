@@ -1,2 +1,2 @@
-const imlib = require('imlib');
+const imlib = require('@imlib/core');
 imlib.startDevServer();
