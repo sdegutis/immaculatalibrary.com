@@ -4,7 +4,7 @@
   "description": "My website.",
   "module": "out/main.js",
   "scripts": {
-    "generate": "node --experimental-vm-modules out/generate.js",
+    "generate": "node --experimental-vm-modules node_modules/@imlib/core/out/generate.js",
     "build": "tsc --build",
     "watch": "tsc --build --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
