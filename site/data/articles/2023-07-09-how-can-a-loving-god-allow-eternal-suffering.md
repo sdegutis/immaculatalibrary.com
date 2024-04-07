@@ -14,7 +14,7 @@ This reasoning doesn't sit right with me for whatever reason. So I try to tackle
 
 Imagine for a moment that God took everyone and split them into two camps, based on whether they want to do things the right way or not. Those who want to (but often struggle to), he puts on his right, and finally takes away the internal struggle. Those who don't want to, he puts on his left.
 
-The group on the right is called "Heaven", and they finally begin living life to the fullest, the *right* way. This is naturally very happy and goood. The one on the left is called "Hell", and they finally begin living life to the fullest, *on their own terms*.
+The group on the right is called "Heaven", and they finally begin living life to the fullest, the *right* way. This is naturally very happy and good. The one on the left is called "Hell", and they finally begin living life to the fullest, *on their own terms*.
 
 What are those terms? That they want to separate cause and effect. They want to be rich without work. They want to be famous without harassment. They want to eat as much as they can without getting sick. In a word, they want to define their own logic and reality.
 
