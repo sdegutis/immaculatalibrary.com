@@ -23,14 +23,11 @@
   "devDependencies": {
     "@types/js-yaml": "^4.0.8",
     "@types/markdown-it": "^13.0.4",
-    "@types/node": "^20.8.7",
-    "typescript": "^5.2.2"
+    "@types/node": "^20.8.7"
   },
   "dependencies": {
     "@imlib/core": "^2.0.0",
-    "chokidar": "^3.5.3",
     "js-yaml": "^4.1.0",
-    "markdown-it": "^13.0.2",
-    "sucrase": "^3.34.0"
+    "markdown-it": "^13.0.2"
   }
 }
