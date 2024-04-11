@@ -14,9 +14,7 @@ bookSlug: the-sinners-guide
 >
 > Creatures are composed of various substances, while He is a pure and simple Being; were He composed of diverse substances it would presuppose a being above and before Him to ordain the composition of these substances, which is altogether impossible.
 >
-> Creatures are subject to change; God is immutable.
->
-> They all admit of greater perfection; they can increase in possessions, in knowledge. God cannot increase in perfection, containing within Himself all perfection; nor in possessions, for He is the source of all riches; nor in knowledge, for everything is present to His eternal omniscience.
+> Creatures are subject to change; God is immutable. They all admit of greater perfection; they can increase in possessions, in knowledge. God cannot increase in perfection, containing within Himself all perfection; nor in possessions, for He is the source of all riches; nor in knowledge, for everything is present to His eternal omniscience.
 >
 > Therefore Aristotle calls Him a *pure act*---that is, supreme perfection, which admits of no increase.
 >
