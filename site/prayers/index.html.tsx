@@ -14,7 +14,7 @@ export default <>
       <div class="uk-switcher uk-margin">
 
         <Slideshow>
-          <Sunday />
+          <Saturday />
           <AngelMorning />
           <OurFather />
           <HailMary />
@@ -33,6 +33,12 @@ export default <>
           <GloryBe />
           <Litany />
           <Sunday />
+          <Monday />
+          <Tuesday />
+          <Wednesday />
+          <Thursday />
+          <Friday />
+          <Saturday />
           <Conclusion />
         </Slideshow>
 
@@ -106,9 +112,7 @@ function Conclusion() {
 function Sunday() {
   return <div>
     <div class="uk-container uk-container-xsmall uk-text-medium">
-
-      <p class='uk-text-lead'>Sunday</p>
-
+      <p class='uk-text-lead uk-text-success'>Sunday</p>
       <p>
         O Glorious Queen of Heaven and Earth, Virgin Most Powerful, thou who hast the
         power to crush the head of the ancient serpent with thy heel, come and exercise this
@@ -123,21 +127,122 @@ function Sunday() {
         on the way, binding them to the foot of the Cross to be judged and sentenced by
         Jesus Christ Thy Son and to be disposed of by Him as He wills.
       </p>
-
       <p>
         St. Joseph, Patron of the Universal Church, come to our aid in this grave
         battle against the forces of darkness, repel the attacks of the devil and free the
         members of the Auxilium Christianorum, and those for whom the priests of the
         Auxilium Christianorum pray, from the strongholds of the enemy.
       </p>
-
       <p>
         St. Michael, summon the entire heavenly court to engage their forces in this
         fierce battle against the powers of hell. Come O Prince of Heaven with thy mighty
         sword and thrust into hell Satan and all the other evil spirits. O Guardian Angels,
         guide and protect us. Amen.
       </p>
+    </div>
+  </div>;
+}
 
+function Monday() {
+  return <div>
+    <div class="uk-container uk-container-xsmall uk-text-medium">
+      <p class='uk-text-lead uk-text-success'>Monday</p>
+      <p>
+        In Thy name, Lord Jesus Christ, we pray that Thou cover us, our families, and all
+        of our possessions with Thy love and Thy Most Precious Blood and surround us
+        with Thy Heavenly Angels, Saints and the mantle of Our Blessed Mother. Amen.
+      </p>
+    </div>
+  </div>;
+}
+
+function Tuesday() {
+  return <div>
+    <div class="uk-container uk-container-xsmall uk-text-medium">
+      <p class='uk-text-lead uk-text-success'>Tuesday</p>
+      <p>
+        Lord Jesus Christ, we beg Thee for the grace to remain guarded beneath the
+        protective mantle of Mary, surrounded by the holy briar from which was taken the
+        Holy Crown of Thorns, and saturated with Thy Precious Blood in the power of the
+        Holy Spirit, with our Guardian Angels, for the greater glory of the Father. Amen.
+      </p>
+    </div>
+  </div>;
+}
+
+function Wednesday() {
+  return <div>
+    <div class="uk-container uk-container-xsmall uk-text-medium">
+      <p class='uk-text-lead uk-text-success'>Wednesday</p>
+      <p>
+        In the Name of Jesus Christ, Our Lord and God, we ask Thee to render all spirits
+        impotent, paralyzed and ineffective in attempting to take revenge against anyone
+        of the members of the Auxilium Christianorum, our families, friends, communities,
+        those who pray for us and their family members, or anyone associated with us and
+        for whom the priests of the Auxilium Christianorum pray. We ask Thee to bind all
+        evil spirits, all powers in the air, the water, the ground, the fire, under ground, or
+        wherever they exercise their powers, any satanic forces in nature and any and all
+        emissaries of the satanic headquarters. We ask Thee to bind by Thy Precious Blood
+        all of the attributes, aspects and characteristics, interactions, communications and
+        deceitful games of the evil spirits. We ask Thee to break any and all bonds, ties and
+        attachments in the Name of the Father, and of the Son and of the Holy Spirit. Amen.
+      </p>
+    </div>
+  </div>;
+}
+
+function Thursday() {
+  return <div>
+    <div class="uk-container uk-container-small uk-text-medium">
+      <p class='uk-text-lead uk-text-success'>Thursday</p>
+      <p>
+        My Lord, Thou art all powerful, Thou art God, Thou art our Father. We beg Thee
+        through the intercession and help of the Archangels Sts. Michael, Raphael, and
+        Gabriel for the deliverance of our brothers and sisters who are enslaved by the evil
+        one. All Saints of Heaven, come to our aid.
+      </p>
+      <p>
+        From anxiety, sadness and obsessions, <i style='font-style:italic;color:crimson'>We implore Thee, deliver us, O Lord.</i><br />
+        From hatred, fornication, and envy, <i style='font-style:italic;color:crimson'>We implore Thee, deliver us, O Lord.</i><br />
+        From thoughts of jealousy, rage, and death, <i style='font-style:italic;color:crimson'>We implore Thee, deliver us, O Lord.</i><br />
+        From every thought of suicide and abortion, <i style='font-style:italic;color:crimson'>We implore Thee, deliver us, O Lord.</i><br />
+        From every form of sinful sexuality, <i style='font-style:italic;color:crimson'>We implore Thee, deliver us, O Lord.</i><br />
+        From every division in our family, and every harmful friendship, <i style='font-style:italic;color:crimson'>We implore Thee, deliver us, O Lord.</i><br />
+        From every sort of spell, malefice, witchcraft, and every form of the occult, <i style='font-style:italic;color:crimson'>We implore Thee, deliver us, O Lord.</i><br />
+      </p>
+      <p>
+        Thou who said, "Peace I leave with you, my peace I give unto you." Grant that,
+        through the intercession of the Virgin Mary, we may be liberated from every
+        demonic influence and enjoy Thy peace always. In the Name of Christ, our Lord.
+        Amen.
+      </p>
+    </div>
+  </div>;
+}
+
+function Friday() {
+  return <div>
+    <div class="uk-container uk-container-small uk-text-medium">
+      <p class='uk-text-lead uk-text-success'>Friday</p>
+      <p>
+        (Litany of Humility)
+      </p>
+    </div>
+  </div>;
+}
+
+function Saturday() {
+  return <div>
+    <div class="uk-container uk-container-small uk-text-medium">
+      <p class='uk-text-lead uk-text-success'>Saturday</p>
+      <p>
+        O God and Father of our Lord Jesus Christ, we call upon Thy holy Name and
+        humbly beseech Thy clemency, that, through the intercession of the ever
+        immaculate Virgin, our Mother Mary, and of the glorious Archangel Saint Michael,
+        thou wouldst vouchsafe to help us against Satan and all the other unclean spirits that
+        are prowling about the world to the great peril of the human race and the loss of
+        souls. Amen.
+      </p>
     </div>
   </div>;
 }
