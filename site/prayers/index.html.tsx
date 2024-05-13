@@ -14,6 +14,7 @@ export default <>
       <div class="uk-switcher uk-margin">
 
         <Slideshow>
+          <Litany />
           <AngelMorning />
           <OurFather />
           <HailMary />
@@ -53,15 +54,8 @@ export default <>
 function Intro() {
   return <div>
     <div class="uk-container uk-container-xsmall uk-text-large">
-
-      <p>
-        <span style="color: crimson">V.</span> Our help is in the name of the Lord.
-      </p>
-
-      <p>
-        <span style="color: crimson">R.</span> Who made heaven and earth.
-      </p>
-
+      <p><span style="color: crimson">V.</span> Our help is in the name of the Lord.</p>
+      <p><span style="color: crimson">R.</span> Who made heaven and earth.</p>
       <p>Most gracious Virgin Mary, thou who wouldst crush the head of the
         serpent, protect us from the vengeance of the evil one. We offer our prayers,
         supplications, sufferings and good works to thee so that thou may purify them,
@@ -72,6 +66,76 @@ function Intro() {
         not on whom to take vengeance. Blind them so that they may receive the just
         sentence for their works. Cover us with the Precious Blood of thy Son so that we
         may enjoy the protection which flows from His Passion and Death. Amen.
+      </p>
+    </div>
+  </div>;
+}
+
+function Litany() {
+  return <div>
+    <div class="uk-container uk-container-small uk-text-large" style='height: 80vh; overflow: auto'>
+      <p>
+        Lord have mercy.<br />
+        Christ have mercy.<br />
+        Lord have mercy.<br />
+        Christ hear us.<br />
+        Christ graciously hear us.<br />
+        <br />
+        God the Father of Heaven, <i style="color: crimson">have mercy on us.</i><br />
+        God the Son, Redeemer of the world, <i style="color: crimson">have mercy on us.</i><br />
+        God the Holy Spirit, <i style="color: crimson">have mercy on us.</i><br />
+        Holy Trinity, One God, <i style="color: crimson">have mercy on us.</i><br />
+        <br />
+        Blood of Christ, only-begotten Son of the Eternal Father, <i style="color: crimson">save us.</i><br />
+        Blood of Christ, Incarnate Word of God, <i style="color: crimson">save us.</i><br />
+        Blood of Christ, of the New and Eternal Testament, <i style="color: crimson">save us.</i><br />
+        <br />
+        Blood of Christ, falling upon the earth in the Agony, <i style="color: crimson">save us.</i><br />
+        Blood of Christ, shed profusely in the Scourging, <i style="color: crimson">save us.</i><br />
+        Blood of Christ, flowing forth in the Crowning with Thorns, <i style="color: crimson">save us.</i><br />
+        <br />
+        Blood of Christ, poured out on the Cross, <i style="color: crimson">save us.</i><br />
+        Blood of Christ, price of our salvation, <i style="color: crimson">save us.</i><br />
+        Blood of Christ, without which there is no forgiveness, <i style="color: crimson">save us.</i><br />
+        <br />
+        Blood of Christ, Eucharistic drink and refreshment of souls, <i style="color: crimson">save us.</i><br />
+        Blood of Christ, stream of mercy, <i style="color: crimson">save us.</i><br />
+        Blood of Christ, victor over demons, <i style="color: crimson">save us.</i><br />
+        <br />
+        Blood of Christ, courage of Martyrs, <i style="color: crimson">save us.</i><br />
+        Blood of Christ, strength of Confessors, <i style="color: crimson">save us.</i><br />
+        Blood of Christ, bringing forth Virgins, <i style="color: crimson">save us.</i><br />
+        <br />
+        Blood of Christ, help of those in peril, <i style="color: crimson">save us.</i><br />
+        Blood of Christ, relief of the burdened, <i style="color: crimson">save us.</i><br />
+        Blood of Christ, solace in sorrow, <i style="color: crimson">save us.</i><br />
+        <br />
+        Blood of Christ, hope of the penitent, <i style="color: crimson">save us.</i><br />
+        Blood of Christ, consolation of the dying, <i style="color: crimson">save us.</i><br />
+        Blood of Christ, peace and tenderness of hearts, <i style="color: crimson">save us.</i><br />
+        <br />
+        Blood of Christ, pledge of eternal life, <i style="color: crimson">save us.</i><br />
+        Blood of Christ, freeing souls from purgatory, <i style="color: crimson">save us.</i><br />
+        Blood of Christ, most worthy of all glory and honor, <i style="color: crimson">save us.</i><br />
+        <br />
+        Lamb of God, Who takest away the sins of the world, <i style="color: crimson">spare us, O Lord.</i><br />
+        Lamb of God, Who takest away the sins of the world, <i style="color: crimson">graciously hear us, O Lord.</i><br />
+        Lamb of God, Who takest away the sins of the world, <i style="color: crimson">have mercy on us.</i><br />
+      </p>
+
+      <p>
+        <i style="color: crimson">V.</i> Thou hast redeemed us with Thy Blood, O Lord.<br />
+        <i style="color: crimson">R.</i> And made of us a kingdom for our God.
+      </p>
+      <p style='text-align:center; font-style:italic'>Let us pray.</p>
+
+      <p>
+        Almighty, and everlasting God, Who hast appointed Thine only-begotten Son to be
+        the Redeemer of the world, and hast been pleased to be reconciled unto us by His
+        Blood, grant us, we beseech Thee, so to venerate with solemn worship the price of
+        our salvation, that the power thereof may here on earth keep us from all things
+        hurtful, and the fruit of the same may gladden us for ever hereafter in heaven.
+        Through the same Christ our Lord. <i style="color: crimson">Amen.</i>
       </p>
 
     </div>
@@ -239,6 +303,7 @@ function Head() {
         margin: 0;
         box-sizing: border-box;
         background-color: #222 !important;
+        color-scheme: dark;
       }
     `}</style>
   </head>;
