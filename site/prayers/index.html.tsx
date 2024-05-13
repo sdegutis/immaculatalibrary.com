@@ -14,7 +14,6 @@ export default <>
       <div class="uk-switcher uk-margin">
 
         <Slideshow>
-          <Litany />
           <AngelMorning />
           <OurFather />
           <HailMary />
@@ -31,6 +30,8 @@ export default <>
           <OurFather />
           <HailMary />
           <GloryBe />
+          <Litany />
+          <Conclusion />
         </Slideshow>
 
         <Slideshow>
@@ -67,6 +68,35 @@ function Intro() {
         sentence for their works. Cover us with the Precious Blood of thy Son so that we
         may enjoy the protection which flows from His Passion and Death. Amen.
       </p>
+    </div>
+  </div>;
+}
+
+function Conclusion() {
+  return <div>
+    <div class="uk-container uk-container-xsmall uk-text-large">
+
+      <p>August Queen of the Heavens, heavenly Sovereign of the Angels, Thou who from
+        the beginning hast received from God the power and the mission to crush the head
+        of Satan, we humbly beseech Thee to send thy holy legions, so that under Thy
+        command and through Thy power, they may pursue the demons and combat them
+        everywhere, suppress their boldness, and drive them back into the abyss. O good
+        and tender Mother, Thou wilt always be our love and hope! O Divine Mother, send
+        Thy Holy Angels to defend us and to drive far away from us the cruel enemy. Holy
+        Angels and Archangels, defend us, guard us. Amen.
+      </p>
+
+      <p>
+        Most Sacred Heart of Jesus, <i style='color:crimson;font-style:italic'>have mercy on us.</i><br />
+        Mary, Help of Christians, <i style='color:crimson;font-style:italic'>pray for us.</i><br />
+        Virgin Most Powerful, <i style='color:crimson;font-style:italic'>pray for us.</i><br />
+        St. Joseph, <i style='color:crimson;font-style:italic'>pray for us.</i><br />
+        St. Michael the Archangel, <i style='color:crimson;font-style:italic'>pray for us.</i><br />
+        All You Holy Angels, <i style='color:crimson;font-style:italic'>pray for us.</i><br />
+      </p>
+
+      <p>In the name of the Father, the Son and the Holy Spirit. Amen.</p>
+
     </div>
   </div>;
 }
