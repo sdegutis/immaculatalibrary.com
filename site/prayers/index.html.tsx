@@ -14,6 +14,7 @@ export default <>
       <div class="uk-switcher uk-margin">
 
         <Slideshow>
+          <Sunday />
           <AngelMorning />
           <OurFather />
           <HailMary />
@@ -31,6 +32,7 @@ export default <>
           <HailMary />
           <GloryBe />
           <Litany />
+          <Sunday />
           <Conclusion />
         </Slideshow>
 
@@ -96,6 +98,45 @@ function Conclusion() {
       </p>
 
       <p>In the name of the Father, the Son and the Holy Spirit. Amen.</p>
+
+    </div>
+  </div>;
+}
+
+function Sunday() {
+  return <div>
+    <div class="uk-container uk-container-xsmall uk-text-medium">
+
+      <p class='uk-text-lead'>Sunday</p>
+
+      <p>
+        O Glorious Queen of Heaven and Earth, Virgin Most Powerful, thou who hast the
+        power to crush the head of the ancient serpent with thy heel, come and exercise this
+        power flowing from the grace of thine Immaculate Conception. Shield us under the
+        mantle of thy purity and love, draw us into the sweet abode of thy heart and
+        annihilate and render impotent the forces bent on destroying us. Come Most
+        Sovereign Mistress of the Holy Angels and Mistress of the Most Holy Rosary, thou
+        who from the very beginning hast received from God the power and the mission to
+        crush the head of Satan. Send forth thy holy legions, we humbly beseech thee, that
+        under thy command and by thy power they may pursue the evil spirits, counter them
+        on every side, resist their bold attacks and drive them far from us, harming no one
+        on the way, binding them to the foot of the Cross to be judged and sentenced by
+        Jesus Christ Thy Son and to be disposed of by Him as He wills.
+      </p>
+
+      <p>
+        St. Joseph, Patron of the Universal Church, come to our aid in this grave
+        battle against the forces of darkness, repel the attacks of the devil and free the
+        members of the Auxilium Christianorum, and those for whom the priests of the
+        Auxilium Christianorum pray, from the strongholds of the enemy.
+      </p>
+
+      <p>
+        St. Michael, summon the entire heavenly court to engage their forces in this
+        fierce battle against the powers of hell. Come O Prince of Heaven with thy mighty
+        sword and thrust into hell Satan and all the other evil spirits. O Guardian Angels,
+        guide and protect us. Amen.
+      </p>
 
     </div>
   </div>;
