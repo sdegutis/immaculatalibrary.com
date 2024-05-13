@@ -14,7 +14,6 @@ export default <>
       <div class="uk-switcher uk-margin">
 
         <Slideshow>
-          <Saturday />
           <AngelMorning />
           <OurFather />
           <HailMary />
@@ -110,7 +109,7 @@ function Conclusion() {
 }
 
 function Sunday() {
-  return <div>
+  return <div class='day-prayer'>
     <div class="uk-container uk-container-xsmall uk-text-medium">
       <p class='uk-text-lead uk-text-success'>Sunday</p>
       <p>
@@ -144,7 +143,7 @@ function Sunday() {
 }
 
 function Monday() {
-  return <div>
+  return <div class='day-prayer'>
     <div class="uk-container uk-container-xsmall uk-text-medium">
       <p class='uk-text-lead uk-text-success'>Monday</p>
       <p>
@@ -157,7 +156,7 @@ function Monday() {
 }
 
 function Tuesday() {
-  return <div>
+  return <div class='day-prayer'>
     <div class="uk-container uk-container-xsmall uk-text-medium">
       <p class='uk-text-lead uk-text-success'>Tuesday</p>
       <p>
@@ -171,7 +170,7 @@ function Tuesday() {
 }
 
 function Wednesday() {
-  return <div>
+  return <div class='day-prayer'>
     <div class="uk-container uk-container-xsmall uk-text-medium">
       <p class='uk-text-lead uk-text-success'>Wednesday</p>
       <p>
@@ -192,7 +191,7 @@ function Wednesday() {
 }
 
 function Thursday() {
-  return <div>
+  return <div class='day-prayer'>
     <div class="uk-container uk-container-small uk-text-medium">
       <p class='uk-text-lead uk-text-success'>Thursday</p>
       <p>
@@ -221,7 +220,7 @@ function Thursday() {
 }
 
 function Friday() {
-  return <div>
+  return <div class='day-prayer'>
     <div class="uk-container uk-container-small uk-text-medium">
       <p class='uk-text-lead uk-text-success'>Friday</p>
       <p>
@@ -232,7 +231,7 @@ function Friday() {
 }
 
 function Saturday() {
-  return <div>
+  return <div class='day-prayer'>
     <div class="uk-container uk-container-small uk-text-medium">
       <p class='uk-text-lead uk-text-success'>Saturday</p>
       <p>
