@@ -1,48 +1,45 @@
 export default <>
   <Html>
-    <Head />
-    <body class="uk-light uk-padding">
-      <Tabs tabs={{
-        "Morning":
-          <Slideshow>
-            <AngelMorning />
-            <OurFather />
-            <HailMary />
-            <GloryBe />
-            <PreciousBlood />
-            <SaintMichael />
-            <Memorare />
-          </Slideshow>,
-        "Noon":
-          <Slideshow>
-            <Intro />
-            <SaintMichael />
-            <AngelMorning />
-            <OurFather />
-            <HailMary />
-            <GloryBe />
-            <Litany />
-            <Sunday />
-            <Monday />
-            <Tuesday />
-            <Wednesday />
-            <Thursday />
-            <Friday />
-            <Saturday />
-            <Conclusion />
-          </Slideshow>,
-        "Night":
-          <Slideshow>
-            <AngelNight />
-            <OurFather />
-            <HailMary />
-            <GloryBe />
-            <PreciousBlood />
-            <SaintMichael />
-            <Memorare />
-          </Slideshow>
-      }} />
-    </body>
+    <Tabs tabs={{
+      "Morning":
+        <Slideshow>
+          <AngelMorning />
+          <OurFather />
+          <HailMary />
+          <GloryBe />
+          <PreciousBlood />
+          <SaintMichael />
+          <Memorare />
+        </Slideshow>,
+      "Noon":
+        <Slideshow>
+          <Intro />
+          <SaintMichael />
+          <AngelMorning />
+          <OurFather />
+          <HailMary />
+          <GloryBe />
+          <Litany />
+          <Sunday />
+          <Monday />
+          <Tuesday />
+          <Wednesday />
+          <Thursday />
+          <Friday />
+          <Saturday />
+          <Conclusion />
+        </Slideshow>,
+      "Night":
+        <Slideshow>
+          <AngelNight />
+          <OurFather />
+          <HailMary />
+          <GloryBe />
+          <PreciousBlood />
+          <SaintMichael />
+          <Memorare />
+        </Slideshow>
+    }} />
   </Html>
 </>;
 
@@ -57,15 +54,6 @@ function Tabs(attrs: { tabs: Record<string, JSX.Element> }) {
     <div class="uk-switcher uk-margin">
       {Object.values(attrs.tabs)}
     </div>
-  </>;
-}
-
-function Html(attrs: any, children: any) {
-  return <>
-    {'<!DOCTYPE html>'}
-    <html lang="en">
-      {children}
-    </html>
   </>;
 }
 
@@ -476,23 +464,31 @@ function Slideshow(attrs: any, children: any) {
   </div>;
 }
 
-function Head() {
-  return <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Prayers</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.20.5/dist/css/uikit.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.5/dist/js/uikit.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.5/dist/js/uikit-icons.min.js"></script>
-    <style>{`
-      html,
-      body {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        background-color: #222 !important;
-        color-scheme: dark;
-      }
-    `}</style>
-  </head>;
+function Html(attrs: any, children: any) {
+  return <>
+    {'<!DOCTYPE html>'}
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Prayers</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.20.5/dist/css/uikit.min.css" />
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.5/dist/js/uikit.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.5/dist/js/uikit-icons.min.js"></script>
+        <style>{`
+          html,
+          body {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            background-color: #222 !important;
+            color-scheme: dark;
+          }
+        `}</style>
+      </head>
+      <body class="uk-light uk-padding">
+        {children}
+      </body>
+    </html>
+  </>;
 }
