@@ -1,63 +1,73 @@
 export default <>
-
-  {'<!DOCTYPE html>'}
-  <html lang="en">
+  <Html>
     <Head />
-
     <body class="uk-light uk-padding">
-
-      <ul uk-tab>
-        <li class="uk-active"><a href="#">Morning</a></li>
-        <li><a href="#">Noon</a></li>
-        <li><a href="#">Night</a></li>
-      </ul>
-      <div class="uk-switcher uk-margin">
-
-        <Slideshow>
-          <AngelMorning />
-          <OurFather />
-          <HailMary />
-          <GloryBe />
-          <PreciousBlood />
-          <SaintMichael />
-          <Memorare />
-        </Slideshow>
-
-        <Slideshow>
-          <Intro />
-          <SaintMichael />
-          <AngelMorning />
-          <OurFather />
-          <HailMary />
-          <GloryBe />
-          <Litany />
-          <Sunday />
-          <Monday />
-          <Tuesday />
-          <Wednesday />
-          <Thursday />
-          <Friday />
-          <Saturday />
-          <Conclusion />
-        </Slideshow>
-
-        <Slideshow>
-          <AngelNight />
-          <OurFather />
-          <HailMary />
-          <GloryBe />
-          <PreciousBlood />
-          <SaintMichael />
-          <Memorare />
-        </Slideshow>
-
-      </div>
-
+      <Tabs tabs={{
+        "Morning":
+          <Slideshow>
+            <AngelMorning />
+            <OurFather />
+            <HailMary />
+            <GloryBe />
+            <PreciousBlood />
+            <SaintMichael />
+            <Memorare />
+          </Slideshow>,
+        "Noon":
+          <Slideshow>
+            <Intro />
+            <SaintMichael />
+            <AngelMorning />
+            <OurFather />
+            <HailMary />
+            <GloryBe />
+            <Litany />
+            <Sunday />
+            <Monday />
+            <Tuesday />
+            <Wednesday />
+            <Thursday />
+            <Friday />
+            <Saturday />
+            <Conclusion />
+          </Slideshow>,
+        "Night":
+          <Slideshow>
+            <AngelNight />
+            <OurFather />
+            <HailMary />
+            <GloryBe />
+            <PreciousBlood />
+            <SaintMichael />
+            <Memorare />
+          </Slideshow>
+      }} />
     </body>
-
-  </html>
-
+  </Html>
 </>;
+
+function Tabs(attrs: { tabs: Record<string, JSX.Element> }) {
+  const tabs = Object.keys(attrs.tabs).map((tabName, i) => {
+    const a = i === 0 ? { class: "uk-active" } : {};
+    return <li {...a}><a href="#">{tabName}</a></li>;
+  });
+
+  return <>
+    <ul uk-tab>{tabs}</ul>
+    <div class="uk-switcher uk-margin">
+      {Object.values(attrs.tabs)}
+    </div>
+  </>;
+}
+
+function Html(attrs: any, children: any) {
+  return <>
+    {'<!DOCTYPE html>'}
+    <html lang="en">
+      {children}
+    </html>
+  </>;
+}
 
 function Intro() {
   return <div>
