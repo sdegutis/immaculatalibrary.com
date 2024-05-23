@@ -43,25 +43,11 @@ export default <>
   </Html>
 </>;
 
-function Tabs(attrs: { tabs: Record<string, JSX.Element> }) {
-  const tabs = Object.keys(attrs.tabs).map((tabName, i) => {
-    const a = i === 0 ? { class: "uk-active" } : {};
-    return <li {...a}><a href="#">{tabName}</a></li>;
-  });
-
-  return <>
-    <ul uk-tab>{tabs}</ul>
-    <div class="uk-switcher uk-margin">
-      {Object.values(attrs.tabs)}
-    </div>
-  </>;
-}
-
 function Intro() {
   return <div>
     <div class="uk-container uk-container-xsmall uk-text-large">
-      <p><span style="color: crimson">V.</span> Our help is in the name of the Lord.</p>
-      <p><span style="color: crimson">R.</span> Who made heaven and earth.</p>
+      <p>Our help is in the name of the Lord.</p>
+      <p><Red>Who made heaven and earth.</Red></p>
       <p>Most gracious Virgin Mary, thou who wouldst crush the head of the
         serpent, protect us from the vengeance of the evil one. We offer our prayers,
         supplications, sufferings and good works to thee so that thou may purify them,
@@ -108,139 +94,125 @@ function Conclusion() {
 
 function Sunday() {
   return <div class='day-prayer'>
-    <div class="uk-container uk-container-xsmall uk-text-medium">
-      <p class='uk-text-lead uk-text-success'>Sunday</p>
-      <p>
-        O Glorious Queen of Heaven and Earth, Virgin Most Powerful, thou who hast the
-        power to crush the head of the ancient serpent with thy heel, come and exercise this
-        power flowing from the grace of thine Immaculate Conception. Shield us under the
-        mantle of thy purity and love, draw us into the sweet abode of thy heart and
-        annihilate and render impotent the forces bent on destroying us. Come Most
-        Sovereign Mistress of the Holy Angels and Mistress of the Most Holy Rosary, thou
-        who from the very beginning hast received from God the power and the mission to
-        crush the head of Satan. Send forth thy holy legions, we humbly beseech thee, that
-        under thy command and by thy power they may pursue the evil spirits, counter them
-        on every side, resist their bold attacks and drive them far from us, harming no one
-        on the way, binding them to the foot of the Cross to be judged and sentenced by
-        Jesus Christ Thy Son and to be disposed of by Him as He wills.
-      </p>
-      <p>
-        St. Joseph, Patron of the Universal Church, come to our aid in this grave
-        battle against the forces of darkness, repel the attacks of the devil and free the
-        members of the Auxilium Christianorum, and those for whom the priests of the
-        Auxilium Christianorum pray, from the strongholds of the enemy.
-      </p>
-      <p>
-        St. Michael, summon the entire heavenly court to engage their forces in this
-        fierce battle against the powers of hell. Come O Prince of Heaven with thy mighty
-        sword and thrust into hell Satan and all the other evil spirits. O Guardian Angels,
-        guide and protect us. Amen.
-      </p>
-    </div>
+    <p class='day-title'>Sunday</p>
+    <p>
+      O Glorious Queen of Heaven and Earth, Virgin Most Powerful, thou who hast the
+      power to crush the head of the ancient serpent with thy heel, come and exercise this
+      power flowing from the grace of thine Immaculate Conception. Shield us under the
+      mantle of thy purity and love, draw us into the sweet abode of thy heart and
+      annihilate and render impotent the forces bent on destroying us. Come Most
+      Sovereign Mistress of the Holy Angels and Mistress of the Most Holy Rosary, thou
+      who from the very beginning hast received from God the power and the mission to
+      crush the head of Satan. Send forth thy holy legions, we humbly beseech thee, that
+      under thy command and by thy power they may pursue the evil spirits, counter them
+      on every side, resist their bold attacks and drive them far from us, harming no one
+      on the way, binding them to the foot of the Cross to be judged and sentenced by
+      Jesus Christ Thy Son and to be disposed of by Him as He wills.
+    </p>
+    <p>
+      St. Joseph, Patron of the Universal Church, come to our aid in this grave
+      battle against the forces of darkness, repel the attacks of the devil and free the
+      members of the Auxilium Christianorum, and those for whom the priests of the
+      Auxilium Christianorum pray, from the strongholds of the enemy.
+    </p>
+    <p>
+      St. Michael, summon the entire heavenly court to engage their forces in this
+      fierce battle against the powers of hell. Come O Prince of Heaven with thy mighty
+      sword and thrust into hell Satan and all the other evil spirits. O Guardian Angels,
+      guide and protect us. Amen.
+    </p>
   </div>;
 }
 
 function Monday() {
   return <div class='day-prayer'>
-    <div class="uk-container uk-container-xsmall uk-text-medium">
-      <p class='uk-text-lead uk-text-success'>Monday</p>
-      <p>
-        In Thy name, Lord Jesus Christ, we pray that Thou cover us, our families, and all
-        of our possessions with Thy love and Thy Most Precious Blood and surround us
-        with Thy Heavenly Angels, Saints and the mantle of Our Blessed Mother. Amen.
-      </p>
-    </div>
+    <p class='day-title'>Monday</p>
+    <p>
+      In Thy name, Lord Jesus Christ, we pray that Thou cover us, our families, and all
+      of our possessions with Thy love and Thy Most Precious Blood and surround us
+      with Thy Heavenly Angels, Saints and the mantle of Our Blessed Mother. Amen.
+    </p>
   </div>;
 }
 
 function Tuesday() {
   return <div class='day-prayer'>
-    <div class="uk-container uk-container-xsmall uk-text-medium">
-      <p class='uk-text-lead uk-text-success'>Tuesday</p>
-      <p>
-        Lord Jesus Christ, we beg Thee for the grace to remain guarded beneath the
-        protective mantle of Mary, surrounded by the holy briar from which was taken the
-        Holy Crown of Thorns, and saturated with Thy Precious Blood in the power of the
-        Holy Spirit, with our Guardian Angels, for the greater glory of the Father. Amen.
-      </p>
-    </div>
+    <p class='day-title'>Tuesday</p>
+    <p>
+      Lord Jesus Christ, we beg Thee for the grace to remain guarded beneath the
+      protective mantle of Mary, surrounded by the holy briar from which was taken the
+      Holy Crown of Thorns, and saturated with Thy Precious Blood in the power of the
+      Holy Spirit, with our Guardian Angels, for the greater glory of the Father. Amen.
+    </p>
   </div>;
 }
 
 function Wednesday() {
   return <div class='day-prayer'>
-    <div class="uk-container uk-container-xsmall uk-text-medium">
-      <p class='uk-text-lead uk-text-success'>Wednesday</p>
-      <p>
-        In the Name of Jesus Christ, Our Lord and God, we ask Thee to render all spirits
-        impotent, paralyzed and ineffective in attempting to take revenge against anyone
-        of the members of the Auxilium Christianorum, our families, friends, communities,
-        those who pray for us and their family members, or anyone associated with us and
-        for whom the priests of the Auxilium Christianorum pray. We ask Thee to bind all
-        evil spirits, all powers in the air, the water, the ground, the fire, under ground, or
-        wherever they exercise their powers, any satanic forces in nature and any and all
-        emissaries of the satanic headquarters. We ask Thee to bind by Thy Precious Blood
-        all of the attributes, aspects and characteristics, interactions, communications and
-        deceitful games of the evil spirits. We ask Thee to break any and all bonds, ties and
-        attachments in the Name of the Father, and of the Son and of the Holy Spirit. Amen.
-      </p>
-    </div>
+    <p class='day-title'>Wednesday</p>
+    <p>
+      In the Name of Jesus Christ, Our Lord and God, we ask Thee to render all spirits
+      impotent, paralyzed and ineffective in attempting to take revenge against anyone
+      of the members of the Auxilium Christianorum, our families, friends, communities,
+      those who pray for us and their family members, or anyone associated with us and
+      for whom the priests of the Auxilium Christianorum pray. We ask Thee to bind all
+      evil spirits, all powers in the air, the water, the ground, the fire, under ground, or
+      wherever they exercise their powers, any satanic forces in nature and any and all
+      emissaries of the satanic headquarters. We ask Thee to bind by Thy Precious Blood
+      all of the attributes, aspects and characteristics, interactions, communications and
+      deceitful games of the evil spirits. We ask Thee to break any and all bonds, ties and
+      attachments in the Name of the Father, and of the Son and of the Holy Spirit. Amen.
+    </p>
   </div>;
 }
 
 function Thursday() {
   return <div class='day-prayer'>
-    <div class="uk-container uk-container-small uk-text-medium">
-      <p class='uk-text-lead uk-text-success'>Thursday</p>
-      <p>
-        My Lord, Thou art all powerful, Thou art God, Thou art our Father. We beg Thee
-        through the intercession and help of the Archangels Sts. Michael, Raphael, and
-        Gabriel for the deliverance of our brothers and sisters who are enslaved by the evil
-        one. All Saints of Heaven, come to our aid.
-      </p>
-      <p>
-        From anxiety, sadness and obsessions, <i style='font-style:italic;color:crimson'>We implore Thee, deliver us, O Lord.</i><br />
-        From hatred, fornication, and envy, <i style='font-style:italic;color:crimson'>We implore Thee, deliver us, O Lord.</i><br />
-        From thoughts of jealousy, rage, and death, <i style='font-style:italic;color:crimson'>We implore Thee, deliver us, O Lord.</i><br />
-        From every thought of suicide and abortion, <i style='font-style:italic;color:crimson'>We implore Thee, deliver us, O Lord.</i><br />
-        From every form of sinful sexuality, <i style='font-style:italic;color:crimson'>We implore Thee, deliver us, O Lord.</i><br />
-        From every division in our family, and every harmful friendship, <i style='font-style:italic;color:crimson'>We implore Thee, deliver us, O Lord.</i><br />
-        From every sort of spell, malefice, witchcraft, and every form of the occult, <i style='font-style:italic;color:crimson'>We implore Thee, deliver us, O Lord.</i><br />
-      </p>
-      <p>
-        Thou who said, "Peace I leave with you, my peace I give unto you." Grant that,
-        through the intercession of the Virgin Mary, we may be liberated from every
-        demonic influence and enjoy Thy peace always. In the Name of Christ, our Lord.
-        Amen.
-      </p>
-    </div>
+    <p class='day-title'>Thursday</p>
+    <p>
+      My Lord, Thou art all powerful, Thou art God, Thou art our Father. We beg Thee
+      through the intercession and help of the Archangels Sts. Michael, Raphael, and
+      Gabriel for the deliverance of our brothers and sisters who are enslaved by the evil
+      one. All Saints of Heaven, come to our aid.
+    </p>
+    <p>
+      From anxiety, sadness and obsessions, <i style='font-style:italic;color:crimson'>We implore Thee, deliver us, O Lord.</i><br />
+      From hatred, fornication, and envy, <i style='font-style:italic;color:crimson'>We implore Thee, deliver us, O Lord.</i><br />
+      From thoughts of jealousy, rage, and death, <i style='font-style:italic;color:crimson'>We implore Thee, deliver us, O Lord.</i><br />
+      From every thought of suicide and abortion, <i style='font-style:italic;color:crimson'>We implore Thee, deliver us, O Lord.</i><br />
+      From every form of sinful sexuality, <i style='font-style:italic;color:crimson'>We implore Thee, deliver us, O Lord.</i><br />
+      From every division in our family, and every harmful friendship, <i style='font-style:italic;color:crimson'>We implore Thee, deliver us, O Lord.</i><br />
+      From every sort of spell, malefice, witchcraft, and every form of the occult, <i style='font-style:italic;color:crimson'>We implore Thee, deliver us, O Lord.</i><br />
+    </p>
+    <p>
+      Thou who said, "Peace I leave with you, my peace I give unto you." Grant that,
+      through the intercession of the Virgin Mary, we may be liberated from every
+      demonic influence and enjoy Thy peace always. In the Name of Christ, our Lord.
+      Amen.
+    </p>
   </div>;
 }
 
 function Friday() {
   return <div class='day-prayer'>
-    <div class="uk-container uk-container-small uk-text-medium">
-      <p class='uk-text-lead uk-text-success'>Friday</p>
-      <p>
-        (Litany of Humility)
-      </p>
-    </div>
+    <p class='day-title'>Friday</p>
+    <p>
+      (Litany of Humility)
+    </p>
   </div>;
 }
 
 function Saturday() {
   return <div class='day-prayer'>
-    <div class="uk-container uk-container-small uk-text-medium">
-      <p class='uk-text-lead uk-text-success'>Saturday</p>
-      <p>
-        O God and Father of our Lord Jesus Christ, we call upon Thy holy Name and
-        humbly beseech Thy clemency, that, through the intercession of the ever
-        immaculate Virgin, our Mother Mary, and of the glorious Archangel Saint Michael,
-        thou wouldst vouchsafe to help us against Satan and all the other unclean spirits that
-        are prowling about the world to the great peril of the human race and the loss of
-        souls. Amen.
-      </p>
-    </div>
+    <p class='day-title'>Saturday</p>
+    <p>
+      O God and Father of our Lord Jesus Christ, we call upon Thy holy Name and
+      humbly beseech Thy clemency, that, through the intercession of the ever
+      immaculate Virgin, our Mother Mary, and of the glorious Archangel Saint Michael,
+      thou wouldst vouchsafe to help us against Satan and all the other unclean spirits that
+      are prowling about the world to the great peril of the human race and the loss of
+      souls. Amen.
+    </p>
   </div>;
 }
 
@@ -259,46 +231,46 @@ function Litany() {
           Christ hear us.<br />
           Christ graciously hear us.<br />
           <br />
-          God the Father of Heaven, <i style="color: crimson">have mercy on us.</i><br />
-          God the Son, Redeemer of the world, <i style="color: crimson">have mercy on us.</i><br />
-          God the Holy Spirit, <i style="color: crimson">have mercy on us.</i><br />
-          Holy Trinity, One God, <i style="color: crimson">have mercy on us.</i><br />
+          God the Father of Heaven, <Red>have mercy on us.</Red><br />
+          God the Son, Redeemer of the world, <Red>have mercy on us.</Red><br />
+          God the Holy Spirit, <Red>have mercy on us.</Red><br />
+          Holy Trinity, One God, <Red>have mercy on us.</Red><br />
           <br />
-          Blood of Christ, only-begotten Son of the Eternal Father, <i style="color: crimson">save us.</i><br />
-          Blood of Christ, Incarnate Word of God, <i style="color: crimson">save us.</i><br />
-          Blood of Christ, of the New and Eternal Testament, <i style="color: crimson">save us.</i><br />
+          Blood of Christ, only-begotten Son of the Eternal Father, <Red>save us.</Red><br />
+          Blood of Christ, Incarnate Word of God, <Red>save us.</Red><br />
+          Blood of Christ, of the New and Eternal Testament, <Red>save us.</Red><br />
           <br />
-          Blood of Christ, falling upon the earth in the Agony, <i style="color: crimson">save us.</i><br />
-          Blood of Christ, shed profusely in the Scourging, <i style="color: crimson">save us.</i><br />
-          Blood of Christ, flowing forth in the Crowning with Thorns, <i style="color: crimson">save us.</i><br />
+          Blood of Christ, falling upon the earth in the Agony, <Red>save us.</Red><br />
+          Blood of Christ, shed profusely in the Scourging, <Red>save us.</Red><br />
+          Blood of Christ, flowing forth in the Crowning with Thorns, <Red>save us.</Red><br />
           <br />
-          Blood of Christ, poured out on the Cross, <i style="color: crimson">save us.</i><br />
-          Blood of Christ, price of our salvation, <i style="color: crimson">save us.</i><br />
-          Blood of Christ, without which there is no forgiveness, <i style="color: crimson">save us.</i><br />
+          Blood of Christ, poured out on the Cross, <Red>save us.</Red><br />
+          Blood of Christ, price of our salvation, <Red>save us.</Red><br />
+          Blood of Christ, without which there is no forgiveness, <Red>save us.</Red><br />
           <br />
-          Blood of Christ, Eucharistic drink and refreshment of souls, <i style="color: crimson">save us.</i><br />
-          Blood of Christ, stream of mercy, <i style="color: crimson">save us.</i><br />
-          Blood of Christ, victor over demons, <i style="color: crimson">save us.</i><br />
+          Blood of Christ, Eucharistic drink and refreshment of souls, <Red>save us.</Red><br />
+          Blood of Christ, stream of mercy, <Red>save us.</Red><br />
+          Blood of Christ, victor over demons, <Red>save us.</Red><br />
           <br />
-          Blood of Christ, courage of Martyrs, <i style="color: crimson">save us.</i><br />
-          Blood of Christ, strength of Confessors, <i style="color: crimson">save us.</i><br />
-          Blood of Christ, bringing forth Virgins, <i style="color: crimson">save us.</i><br />
+          Blood of Christ, courage of Martyrs, <Red>save us.</Red><br />
+          Blood of Christ, strength of Confessors, <Red>save us.</Red><br />
+          Blood of Christ, bringing forth Virgins, <Red>save us.</Red><br />
           <br />
-          Blood of Christ, help of those in peril, <i style="color: crimson">save us.</i><br />
-          Blood of Christ, relief of the burdened, <i style="color: crimson">save us.</i><br />
-          Blood of Christ, solace in sorrow, <i style="color: crimson">save us.</i><br />
+          Blood of Christ, help of those in peril, <Red>save us.</Red><br />
+          Blood of Christ, relief of the burdened, <Red>save us.</Red><br />
+          Blood of Christ, solace in sorrow, <Red>save us.</Red><br />
           <br />
-          Blood of Christ, hope of the penitent, <i style="color: crimson">save us.</i><br />
-          Blood of Christ, consolation of the dying, <i style="color: crimson">save us.</i><br />
-          Blood of Christ, peace and tenderness of hearts, <i style="color: crimson">save us.</i><br />
+          Blood of Christ, hope of the penitent, <Red>save us.</Red><br />
+          Blood of Christ, consolation of the dying, <Red>save us.</Red><br />
+          Blood of Christ, peace and tenderness of hearts, <Red>save us.</Red><br />
           <br />
-          Blood of Christ, pledge of eternal life, <i style="color: crimson">save us.</i><br />
-          Blood of Christ, freeing souls from purgatory, <i style="color: crimson">save us.</i><br />
-          Blood of Christ, most worthy of all glory and honor, <i style="color: crimson">save us.</i><br />
+          Blood of Christ, pledge of eternal life, <Red>save us.</Red><br />
+          Blood of Christ, freeing souls from purgatory, <Red>save us.</Red><br />
+          Blood of Christ, most worthy of all glory and honor, <Red>save us.</Red><br />
           <br />
-          Lamb of God, Who takest away the sins of the world, <i style="color: crimson">spare us, O Lord.</i><br />
-          Lamb of God, Who takest away the sins of the world, <i style="color: crimson">graciously hear us, O Lord.</i><br />
-          Lamb of God, Who takest away the sins of the world, <i style="color: crimson">have mercy on us.</i><br />
+          Lamb of God, Who takest away the sins of the world, <Red>spare us, O Lord.</Red><br />
+          Lamb of God, Who takest away the sins of the world, <Red>graciously hear us, O Lord.</Red><br />
+          Lamb of God, Who takest away the sins of the world, <Red>have mercy on us.</Red><br />
         </p>
         <p>
           <i style="color: crimson">V.</i> Thou hast redeemed us with Thy Blood, O Lord.<br />
@@ -432,36 +404,50 @@ function Memorare() {
 }
 
 function makePrayer(img: string, text: string) {
-  return <>
+  return (
     <HalfGrid>
       <Img src={img} />
-      <div class='uk-align-center'>
-        <div class='uk-text-lead uk-width-1-4' style='white-space: pre; text-align: left'>
-          {text}
-        </div>
-      </div>
+      <div class='prayer'>{text}</div>
     </HalfGrid>
-  </>;
+  );
+}
+
+function Red(attrs: any, children: any) {
+  return <span class='red'>{children}</span>;
 }
 
 function Img(attrs: { src: string }, children: any) {
-  return <div style='height:100%'><img src={attrs.src} alt="" style='height: 100%' /></div>;
+  return (
+    <div class='img-half'>
+      <img src={attrs.src} alt="" style='height: 100%' />
+    </div>
+  );
 }
 
 function HalfGrid(attrs: any, children: any) {
-  return <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+  return <div class="half-grid">
     {children}
   </div>;
 }
 
 function Slideshow(attrs: any, children: any) {
-  return <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow>
-    <div class="uk-slideshow-items" style='height: 80vh'>
-      {children}
-    </div>
-    <a class="uk-slidenav-large uk-position-center-left" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
-    <a class="uk-slidenav-large uk-position-center-right" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+  return <div class="slideshow">
+    {children}
   </div>;
+}
+
+function Tabs(attrs: { tabs: Record<string, JSX.Element> }) {
+  return <>
+    <ul id='tabs-names'>
+      {Object.keys(attrs.tabs).map((tabName, i) => {
+        const a = i === 0 ? { class: "active" } : {};
+        return <li {...a}><a href="#">{tabName}</a></li>;
+      })}
+    </ul>
+    <div id='tabs-bodies'>
+      {Object.values(attrs.tabs)}
+    </div>
+  </>;
 }
 
 function Html(attrs: any, children: any) {
@@ -472,21 +458,9 @@ function Html(attrs: any, children: any) {
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Prayers</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.20.5/dist/css/uikit.min.css" />
-        <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.5/dist/js/uikit.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.5/dist/js/uikit-icons.min.js"></script>
-        <style>{`
-          html,
-          body {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-            background-color: #222 !important;
-            color-scheme: dark;
-          }
-        `}</style>
+        <link href='./style.css' rel='stylesheet' />
       </head>
-      <body class="uk-light uk-padding">
+      <body>
         {children}
       </body>
     </html>
