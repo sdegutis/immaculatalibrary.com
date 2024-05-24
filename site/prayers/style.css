@@ -57,7 +57,7 @@ body {
 }
 
 .prayer {
-    white-space: pre;
+    white-space: pre-wrap;
     display: grid;
     justify-content: center;
     align-content: center;
