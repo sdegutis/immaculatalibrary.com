@@ -63,6 +63,10 @@ body {
     align-content: center;
 }
 
+.prayer p {
+    /* max-width: 100%; */
+}
+
 .red {
     color: crimson;
 }

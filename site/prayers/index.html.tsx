@@ -79,12 +79,12 @@ function Conclusion() {
       </p>
 
       <p>
-        Most Sacred Heart of Jesus, <i style='color:crimson;font-style:italic'>have mercy on us.</i><br />
-        Mary, Help of Christians, <i style='color:crimson;font-style:italic'>pray for us.</i><br />
-        Virgin Most Powerful, <i style='color:crimson;font-style:italic'>pray for us.</i><br />
-        St. Joseph, <i style='color:crimson;font-style:italic'>pray for us.</i><br />
-        St. Michael the Archangel, <i style='color:crimson;font-style:italic'>pray for us.</i><br />
-        All You Holy Angels, <i style='color:crimson;font-style:italic'>pray for us.</i><br />
+        Most Sacred Heart of Jesus, <Red>have mercy on us.</Red><br />
+        Mary, Help of Christians, <Red>pray for us.</Red><br />
+        Virgin Most Powerful, <Red>pray for us.</Red><br />
+        St. Joseph, <Red>pray for us.</Red><br />
+        St. Michael the Archangel, <Red>pray for us.</Red><br />
+        All You Holy Angels, <Red>pray for us.</Red><br />
       </p>
 
       <p>In the name of the Father, the Son and the Holy Spirit. Amen.</p>
@@ -95,33 +95,35 @@ function Conclusion() {
 
 function Sunday() {
   return <div class='panel prayer'>
-    <p class='day-title'>Sunday</p>
-    <p>
-      O Glorious Queen of Heaven and Earth, Virgin Most Powerful, thou who hast the
-      power to crush the head of the ancient serpent with thy heel, come and exercise this
-      power flowing from the grace of thine Immaculate Conception. Shield us under the
-      mantle of thy purity and love, draw us into the sweet abode of thy heart and
-      annihilate and render impotent the forces bent on destroying us. Come Most
-      Sovereign Mistress of the Holy Angels and Mistress of the Most Holy Rosary, thou
-      who from the very beginning hast received from God the power and the mission to
-      crush the head of Satan. Send forth thy holy legions, we humbly beseech thee, that
-      under thy command and by thy power they may pursue the evil spirits, counter them
-      on every side, resist their bold attacks and drive them far from us, harming no one
-      on the way, binding them to the foot of the Cross to be judged and sentenced by
-      Jesus Christ Thy Son and to be disposed of by Him as He wills.
-    </p>
-    <p>
-      St. Joseph, Patron of the Universal Church, come to our aid in this grave
-      battle against the forces of darkness, repel the attacks of the devil and free the
-      members of the Auxilium Christianorum, and those for whom the priests of the
-      Auxilium Christianorum pray, from the strongholds of the enemy.
-    </p>
-    <p>
-      St. Michael, summon the entire heavenly court to engage their forces in this
-      fierce battle against the powers of hell. Come O Prince of Heaven with thy mighty
-      sword and thrust into hell Satan and all the other evil spirits. O Guardian Angels,
-      guide and protect us. Amen.
-    </p>
+    <div>
+      <p class='day-title'>Sunday</p>
+      <p>
+        O Glorious Queen of Heaven and Earth, Virgin Most Powerful, thou who hast the
+        power to crush the head of the ancient serpent with thy heel, come and exercise this
+        power flowing from the grace of thine Immaculate Conception. Shield us under the
+        mantle of thy purity and love, draw us into the sweet abode of thy heart and
+        annihilate and render impotent the forces bent on destroying us. Come Most
+        Sovereign Mistress of the Holy Angels and Mistress of the Most Holy Rosary, thou
+        who from the very beginning hast received from God the power and the mission to
+        crush the head of Satan. Send forth thy holy legions, we humbly beseech thee, that
+        under thy command and by thy power they may pursue the evil spirits, counter them
+        on every side, resist their bold attacks and drive them far from us, harming no one
+        on the way, binding them to the foot of the Cross to be judged and sentenced by
+        Jesus Christ Thy Son and to be disposed of by Him as He wills.
+      </p>
+      <p>
+        St. Joseph, Patron of the Universal Church, come to our aid in this grave
+        battle against the forces of darkness, repel the attacks of the devil and free the
+        members of the Auxilium Christianorum, and those for whom the priests of the
+        Auxilium Christianorum pray, from the strongholds of the enemy.
+      </p>
+      <p>
+        St. Michael, summon the entire heavenly court to engage their forces in this
+        fierce battle against the powers of hell. Come O Prince of Heaven with thy mighty
+        sword and thrust into hell Satan and all the other evil spirits. O Guardian Angels,
+        guide and protect us. Amen.
+      </p>
+    </div>
   </div>;
 }
 
@@ -177,13 +179,13 @@ function Thursday() {
       one. All Saints of Heaven, come to our aid.
     </p>
     <p>
-      From anxiety, sadness and obsessions, <i style='font-style:italic;color:crimson'>We implore Thee, deliver us, O Lord.</i><br />
-      From hatred, fornication, and envy, <i style='font-style:italic;color:crimson'>We implore Thee, deliver us, O Lord.</i><br />
-      From thoughts of jealousy, rage, and death, <i style='font-style:italic;color:crimson'>We implore Thee, deliver us, O Lord.</i><br />
-      From every thought of suicide and abortion, <i style='font-style:italic;color:crimson'>We implore Thee, deliver us, O Lord.</i><br />
-      From every form of sinful sexuality, <i style='font-style:italic;color:crimson'>We implore Thee, deliver us, O Lord.</i><br />
-      From every division in our family, and every harmful friendship, <i style='font-style:italic;color:crimson'>We implore Thee, deliver us, O Lord.</i><br />
-      From every sort of spell, malefice, witchcraft, and every form of the occult, <i style='font-style:italic;color:crimson'>We implore Thee, deliver us, O Lord.</i><br />
+      From anxiety, sadness and obsessions, <Red>We implore Thee, deliver us, O Lord.</Red><br />
+      From hatred, fornication, and envy, <Red>We implore Thee, deliver us, O Lord.</Red><br />
+      From thoughts of jealousy, rage, and death, <Red>We implore Thee, deliver us, O Lord.</Red><br />
+      From every thought of suicide and abortion, <Red>We implore Thee, deliver us, O Lord.</Red><br />
+      From every form of sinful sexuality, <Red>We implore Thee, deliver us, O Lord.</Red><br />
+      From every division in our family, and every harmful friendship, <Red>We implore Thee, deliver us, O Lord.</Red><br />
+      From every sort of spell, malefice, witchcraft, and every form of the occult, <Red>We implore Thee, deliver us, O Lord.</Red><br />
     </p>
     <p>
       Thou who said, "Peace I leave with you, my peace I give unto you." Grant that,
@@ -274,8 +276,8 @@ function Litany() {
           Lamb of God, Who takest away the sins of the world, <Red>have mercy on us.</Red><br />
         </p>
         <p>
-          <i style="color: crimson">V.</i> Thou hast redeemed us with Thy Blood, O Lord.<br />
-          <i style="color: crimson">R.</i> And made of us a kingdom for our God.
+          <Red>V.</Red> Thou hast redeemed us with Thy Blood, O Lord.<br />
+          <Red>R.</Red> And made of us a kingdom for our God.
         </p>
         <p style='text-align:center; font-style:italic'>Let us pray.</p>
         <p>
@@ -284,7 +286,7 @@ function Litany() {
           Blood, grant us, we beseech Thee, so to venerate with solemn worship the price of
           our salvation, that the power thereof may here on earth keep us from all things
           hurtful, and the fruit of the same may gladden us for ever hereafter in heaven.
-          Through the same Christ our Lord. <i style="color: crimson">Amen.</i>
+          Through the same Christ our Lord. <Red>Amen.</Red>
         </p>
       </div>
     </div>
