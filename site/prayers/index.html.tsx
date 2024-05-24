@@ -44,7 +44,7 @@ export default <>
 </>;
 
 function Intro() {
-  return <div>
+  return <div class='panel'>
     <div class="uk-container uk-container-xsmall uk-text-large">
       <p>Our help is in the name of the Lord.</p>
       <p><Red>Who made heaven and earth.</Red></p>
@@ -64,7 +64,8 @@ function Intro() {
 }
 
 function Conclusion() {
-  return <div>
+  0
+  return <div class='panel'>
     <div class="uk-container uk-container-xsmall uk-text-large">
 
       <p>August Queen of the Heavens, heavenly Sovereign of the Angels, Thou who from
@@ -93,7 +94,7 @@ function Conclusion() {
 }
 
 function Sunday() {
-  return <div class='day-prayer'>
+  return <div class='panel prayer'>
     <p class='day-title'>Sunday</p>
     <p>
       O Glorious Queen of Heaven and Earth, Virgin Most Powerful, thou who hast the
@@ -125,7 +126,7 @@ function Sunday() {
 }
 
 function Monday() {
-  return <div class='day-prayer'>
+  return <div class='panel prayer'>
     <p class='day-title'>Monday</p>
     <p>
       In Thy name, Lord Jesus Christ, we pray that Thou cover us, our families, and all
@@ -136,7 +137,7 @@ function Monday() {
 }
 
 function Tuesday() {
-  return <div class='day-prayer'>
+  return <div class='panel prayer'>
     <p class='day-title'>Tuesday</p>
     <p>
       Lord Jesus Christ, we beg Thee for the grace to remain guarded beneath the
@@ -148,7 +149,7 @@ function Tuesday() {
 }
 
 function Wednesday() {
-  return <div class='day-prayer'>
+  return <div class='panel prayer'>
     <p class='day-title'>Wednesday</p>
     <p>
       In the Name of Jesus Christ, Our Lord and God, we ask Thee to render all spirits
@@ -167,7 +168,7 @@ function Wednesday() {
 }
 
 function Thursday() {
-  return <div class='day-prayer'>
+  return <div class='panel prayer'>
     <p class='day-title'>Thursday</p>
     <p>
       My Lord, Thou art all powerful, Thou art God, Thou art our Father. We beg Thee
@@ -194,7 +195,7 @@ function Thursday() {
 }
 
 function Friday() {
-  return <div class='day-prayer'>
+  return <div class='panel prayer'>
     <p class='day-title'>Friday</p>
     <p>
       (Litany of Humility)
@@ -203,7 +204,7 @@ function Friday() {
 }
 
 function Saturday() {
-  return <div class='day-prayer'>
+  return <div class='panel prayer'>
     <p class='day-title'>Saturday</p>
     <p>
       O God and Father of our Lord Jesus Christ, we call upon Thy holy Name and
@@ -427,7 +428,7 @@ function Img(attrs: { src: string }, children: any) {
 }
 
 function HalfGrid(attrs: any, children: any) {
-  return <div class="half-grid">
+  return <div class="panel half-grid">
     {children}
   </div>;
 }

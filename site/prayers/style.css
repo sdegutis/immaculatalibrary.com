@@ -42,7 +42,6 @@ body {
 #tabs-bodies {
     width: 100%;
     height: 100%;
-
     overflow: auto;
 }
 
@@ -50,22 +49,11 @@ body {
     display: none;
 }
 
-.half-grid {
+.panel {
     width: 100vw;
     height: calc(100vh - 3em);
     overflow: auto;
-
     border: 1px dashed red;
-
-    /* width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: 50% 50%; */
-}
-
-.day-prayer {
-    border: 1px dashed green;
-    width: 80vw;
 }
 
 .prayer {
@@ -98,13 +86,6 @@ body {
 }
 
 .slideshow {
-    /* width: 100%;
-    height: 100%;
     display: grid;
-    grid-auto-flow: column; */
-}
-
-.slideshow>* {
-    /* width: 100%;
-    height: 100%; */
+    grid-auto-flow: column;
 }
