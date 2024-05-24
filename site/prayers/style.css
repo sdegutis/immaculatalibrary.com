@@ -1,26 +1,37 @@
 html,
 body {
-    padding: 0;
-    margin: 0;
     width: 100vw;
     height: 100vh;
-    display: grid;
+    /* display: grid;
     grid-template-rows: auto 1fr;
     overflow: auto;
-    box-sizing: border-box;
+    box-sizing: border-box; */
     background-color: #222 !important;
     color-scheme: dark;
 }
 
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+#tab-container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
 #tabs-names {
+    height: 3em;
+
     display: grid;
     grid-auto-flow: column;
     justify-content: start;
     list-style-type: none;
     margin: 0;
     padding: 0;
-    /* gap: 1em;
-    margin: 1em; */
+    /* margin: 0 1em; */
 }
 
 #tabs-names a {
@@ -31,27 +42,54 @@ body {
 #tabs-bodies {
     width: 100%;
     height: 100%;
+
+    overflow: auto;
+}
+
+#tabs-bodies::-webkit-scrollbar {
+    display: none;
 }
 
 .half-grid {
-    width: 100%;
+    width: 100vw;
+    height: calc(100vh - 3em);
+    overflow: auto;
+
+    border: 1px dashed red;
+
+    /* width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 50% 50%; */
+}
+
+.day-prayer {
+    border: 1px dashed green;
+    width: 80vw;
 }
 
 .prayer {
     white-space: pre;
+    display: grid;
+    justify-content: center;
+    align-content: center;
 }
 
 .red {
     color: crimson;
 }
 
+.half-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
 .img-half {
     width: 100%;
     height: 100%;
     display: grid;
+    justify-content: center;
+    align-content: center;
 }
 
 .img-half img {
@@ -60,13 +98,13 @@ body {
 }
 
 .slideshow {
-    width: 100%;
+    /* width: 100%;
     height: 100%;
     display: grid;
-    grid-auto-flow: column;
+    grid-auto-flow: column; */
 }
 
 .slideshow>* {
-    width: 100%;
-    height: 100%;
+    /* width: 100%;
+    height: 100%; */
 }

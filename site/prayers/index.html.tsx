@@ -407,7 +407,9 @@ function makePrayer(img: string, text: string) {
   return (
     <HalfGrid>
       <Img src={img} />
-      <div class='prayer'>{text}</div>
+      <div class='prayer'>
+        {text}
+      </div>
     </HalfGrid>
   );
 }
@@ -419,7 +421,7 @@ function Red(attrs: any, children: any) {
 function Img(attrs: { src: string }, children: any) {
   return (
     <div class='img-half'>
-      <img src={attrs.src} alt="" style='height: 100%' />
+      <img src={attrs.src} alt="" />
     </div>
   );
 }
@@ -438,14 +440,16 @@ function Slideshow(attrs: any, children: any) {
 
 function Tabs(attrs: { tabs: Record<string, JSX.Element> }) {
   return <>
-    <ul id='tabs-names'>
-      {Object.keys(attrs.tabs).map((tabName, i) => {
-        const a = i === 0 ? { class: "active" } : {};
-        return <li {...a}><a href="#">{tabName}</a></li>;
-      })}
-    </ul>
-    <div id='tabs-bodies'>
-      {Object.values(attrs.tabs)}
+    <div id='tab-container'>
+      <ul id='tabs-names'>
+        {Object.keys(attrs.tabs).map((tabName, i) => {
+          const a = i === 0 ? { class: "active" } : {};
+          return <li {...a}><a href="#">{tabName}</a></li>;
+        })}
+      </ul>
+      <div id='tabs-bodies'>
+        {Object.values(attrs.tabs)}
+      </div>
     </div>
   </>;
 }
