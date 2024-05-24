@@ -45,51 +45,47 @@ export default <>
 
 function Intro() {
   return <div class='panel'>
-    <div class="uk-container uk-container-xsmall uk-text-large">
-      <p>Our help is in the name of the Lord.</p>
-      <p><Red>Who made heaven and earth.</Red></p>
-      <p>Most gracious Virgin Mary, thou who wouldst crush the head of the
-        serpent, protect us from the vengeance of the evil one. We offer our prayers,
-        supplications, sufferings and good works to thee so that thou may purify them,
-        sanctify them and present them to thy Son as a perfect offering. May this offering
-        be given so that the demons that influence or seek to influence the members of the
-        Auxilium Christianorum do not know the source of their expulsion and blindness.
-        Blind them so that they know not our good works. Blind them so that they know
-        not on whom to take vengeance. Blind them so that they may receive the just
-        sentence for their works. Cover us with the Precious Blood of thy Son so that we
-        may enjoy the protection which flows from His Passion and Death. Amen.
-      </p>
-    </div>
+    <p>Our help is in the name of the Lord.</p>
+    <p><Red>Who made heaven and earth.</Red></p>
+    <p>Most gracious Virgin Mary, thou who wouldst crush the head of the
+      serpent, protect us from the vengeance of the evil one. We offer our prayers,
+      supplications, sufferings and good works to thee so that thou may purify them,
+      sanctify them and present them to thy Son as a perfect offering. May this offering
+      be given so that the demons that influence or seek to influence the members of the
+      Auxilium Christianorum do not know the source of their expulsion and blindness.
+      Blind them so that they know not our good works. Blind them so that they know
+      not on whom to take vengeance. Blind them so that they may receive the just
+      sentence for their works. Cover us with the Precious Blood of thy Son so that we
+      may enjoy the protection which flows from His Passion and Death. Amen.
+    </p>
   </div>;
 }
 
 function Conclusion() {
   0
   return <div class='panel'>
-    <div class="uk-container uk-container-xsmall uk-text-large">
 
-      <p>August Queen of the Heavens, heavenly Sovereign of the Angels, Thou who from
-        the beginning hast received from God the power and the mission to crush the head
-        of Satan, we humbly beseech Thee to send thy holy legions, so that under Thy
-        command and through Thy power, they may pursue the demons and combat them
-        everywhere, suppress their boldness, and drive them back into the abyss. O good
-        and tender Mother, Thou wilt always be our love and hope! O Divine Mother, send
-        Thy Holy Angels to defend us and to drive far away from us the cruel enemy. Holy
-        Angels and Archangels, defend us, guard us. Amen.
-      </p>
+    <p>August Queen of the Heavens, heavenly Sovereign of the Angels, Thou who from
+      the beginning hast received from God the power and the mission to crush the head
+      of Satan, we humbly beseech Thee to send thy holy legions, so that under Thy
+      command and through Thy power, they may pursue the demons and combat them
+      everywhere, suppress their boldness, and drive them back into the abyss. O good
+      and tender Mother, Thou wilt always be our love and hope! O Divine Mother, send
+      Thy Holy Angels to defend us and to drive far away from us the cruel enemy. Holy
+      Angels and Archangels, defend us, guard us. Amen.
+    </p>
 
-      <p>
-        Most Sacred Heart of Jesus, <Red>have mercy on us.</Red><br />
-        Mary, Help of Christians, <Red>pray for us.</Red><br />
-        Virgin Most Powerful, <Red>pray for us.</Red><br />
-        St. Joseph, <Red>pray for us.</Red><br />
-        St. Michael the Archangel, <Red>pray for us.</Red><br />
-        All You Holy Angels, <Red>pray for us.</Red><br />
-      </p>
+    <p>
+      Most Sacred Heart of Jesus, <Red>have mercy on us.</Red><br />
+      Mary, Help of Christians, <Red>pray for us.</Red><br />
+      Virgin Most Powerful, <Red>pray for us.</Red><br />
+      St. Joseph, <Red>pray for us.</Red><br />
+      St. Michael the Archangel, <Red>pray for us.</Red><br />
+      All You Holy Angels, <Red>pray for us.</Red><br />
+    </p>
 
-      <p>In the name of the Father, the Son and the Holy Spirit. Amen.</p>
+    <p>In the name of the Father, the Son and the Holy Spirit. Amen.</p>
 
-    </div>
   </div>;
 }
 
@@ -221,74 +217,70 @@ function Saturday() {
 
 function Litany() {
   return <HalfGrid>
-    <div class='uk-width-1-3@m'>
-      <Img src='./images/precious-blood-litany.jpg' />
-    </div>
+    <Img src='./images/precious-blood-litany.jpg' />
 
-    <div style='height: 80vh; overflow: auto' class='uk-width-expand@m'>
-      <div class="uk-container uk-container-large uk-text-large uk-text-left">
-        <p>
-          Lord have mercy.<br />
-          Christ have mercy.<br />
-          Lord have mercy.<br />
-          Christ hear us.<br />
-          Christ graciously hear us.<br />
-          <br />
-          God the Father of Heaven, <Red>have mercy on us.</Red><br />
-          God the Son, Redeemer of the world, <Red>have mercy on us.</Red><br />
-          God the Holy Spirit, <Red>have mercy on us.</Red><br />
-          Holy Trinity, One God, <Red>have mercy on us.</Red><br />
-          <br />
-          Blood of Christ, only-begotten Son of the Eternal Father, <Red>save us.</Red><br />
-          Blood of Christ, Incarnate Word of God, <Red>save us.</Red><br />
-          Blood of Christ, of the New and Eternal Testament, <Red>save us.</Red><br />
-          <br />
-          Blood of Christ, falling upon the earth in the Agony, <Red>save us.</Red><br />
-          Blood of Christ, shed profusely in the Scourging, <Red>save us.</Red><br />
-          Blood of Christ, flowing forth in the Crowning with Thorns, <Red>save us.</Red><br />
-          <br />
-          Blood of Christ, poured out on the Cross, <Red>save us.</Red><br />
-          Blood of Christ, price of our salvation, <Red>save us.</Red><br />
-          Blood of Christ, without which there is no forgiveness, <Red>save us.</Red><br />
-          <br />
-          Blood of Christ, Eucharistic drink and refreshment of souls, <Red>save us.</Red><br />
-          Blood of Christ, stream of mercy, <Red>save us.</Red><br />
-          Blood of Christ, victor over demons, <Red>save us.</Red><br />
-          <br />
-          Blood of Christ, courage of Martyrs, <Red>save us.</Red><br />
-          Blood of Christ, strength of Confessors, <Red>save us.</Red><br />
-          Blood of Christ, bringing forth Virgins, <Red>save us.</Red><br />
-          <br />
-          Blood of Christ, help of those in peril, <Red>save us.</Red><br />
-          Blood of Christ, relief of the burdened, <Red>save us.</Red><br />
-          Blood of Christ, solace in sorrow, <Red>save us.</Red><br />
-          <br />
-          Blood of Christ, hope of the penitent, <Red>save us.</Red><br />
-          Blood of Christ, consolation of the dying, <Red>save us.</Red><br />
-          Blood of Christ, peace and tenderness of hearts, <Red>save us.</Red><br />
-          <br />
-          Blood of Christ, pledge of eternal life, <Red>save us.</Red><br />
-          Blood of Christ, freeing souls from purgatory, <Red>save us.</Red><br />
-          Blood of Christ, most worthy of all glory and honor, <Red>save us.</Red><br />
-          <br />
-          Lamb of God, Who takest away the sins of the world, <Red>spare us, O Lord.</Red><br />
-          Lamb of God, Who takest away the sins of the world, <Red>graciously hear us, O Lord.</Red><br />
-          Lamb of God, Who takest away the sins of the world, <Red>have mercy on us.</Red><br />
-        </p>
-        <p>
-          <Red>V.</Red> Thou hast redeemed us with Thy Blood, O Lord.<br />
-          <Red>R.</Red> And made of us a kingdom for our God.
-        </p>
-        <p style='text-align:center; font-style:italic'>Let us pray.</p>
-        <p>
-          Almighty, and everlasting God, Who hast appointed Thine only-begotten Son to be
-          the Redeemer of the world, and hast been pleased to be reconciled unto us by His
-          Blood, grant us, we beseech Thee, so to venerate with solemn worship the price of
-          our salvation, that the power thereof may here on earth keep us from all things
-          hurtful, and the fruit of the same may gladden us for ever hereafter in heaven.
-          Through the same Christ our Lord. <Red>Amen.</Red>
-        </p>
-      </div>
+    <div>
+      <p>
+        Lord have mercy.<br />
+        Christ have mercy.<br />
+        Lord have mercy.<br />
+        Christ hear us.<br />
+        Christ graciously hear us.<br />
+        <br />
+        God the Father of Heaven, <Red>have mercy on us.</Red><br />
+        God the Son, Redeemer of the world, <Red>have mercy on us.</Red><br />
+        God the Holy Spirit, <Red>have mercy on us.</Red><br />
+        Holy Trinity, One God, <Red>have mercy on us.</Red><br />
+        <br />
+        Blood of Christ, only-begotten Son of the Eternal Father, <Red>save us.</Red><br />
+        Blood of Christ, Incarnate Word of God, <Red>save us.</Red><br />
+        Blood of Christ, of the New and Eternal Testament, <Red>save us.</Red><br />
+        <br />
+        Blood of Christ, falling upon the earth in the Agony, <Red>save us.</Red><br />
+        Blood of Christ, shed profusely in the Scourging, <Red>save us.</Red><br />
+        Blood of Christ, flowing forth in the Crowning with Thorns, <Red>save us.</Red><br />
+        <br />
+        Blood of Christ, poured out on the Cross, <Red>save us.</Red><br />
+        Blood of Christ, price of our salvation, <Red>save us.</Red><br />
+        Blood of Christ, without which there is no forgiveness, <Red>save us.</Red><br />
+        <br />
+        Blood of Christ, Eucharistic drink and refreshment of souls, <Red>save us.</Red><br />
+        Blood of Christ, stream of mercy, <Red>save us.</Red><br />
+        Blood of Christ, victor over demons, <Red>save us.</Red><br />
+        <br />
+        Blood of Christ, courage of Martyrs, <Red>save us.</Red><br />
+        Blood of Christ, strength of Confessors, <Red>save us.</Red><br />
+        Blood of Christ, bringing forth Virgins, <Red>save us.</Red><br />
+        <br />
+        Blood of Christ, help of those in peril, <Red>save us.</Red><br />
+        Blood of Christ, relief of the burdened, <Red>save us.</Red><br />
+        Blood of Christ, solace in sorrow, <Red>save us.</Red><br />
+        <br />
+        Blood of Christ, hope of the penitent, <Red>save us.</Red><br />
+        Blood of Christ, consolation of the dying, <Red>save us.</Red><br />
+        Blood of Christ, peace and tenderness of hearts, <Red>save us.</Red><br />
+        <br />
+        Blood of Christ, pledge of eternal life, <Red>save us.</Red><br />
+        Blood of Christ, freeing souls from purgatory, <Red>save us.</Red><br />
+        Blood of Christ, most worthy of all glory and honor, <Red>save us.</Red><br />
+        <br />
+        Lamb of God, Who takest away the sins of the world, <Red>spare us, O Lord.</Red><br />
+        Lamb of God, Who takest away the sins of the world, <Red>graciously hear us, O Lord.</Red><br />
+        Lamb of God, Who takest away the sins of the world, <Red>have mercy on us.</Red><br />
+      </p>
+      <p>
+        <Red>V.</Red> Thou hast redeemed us with Thy Blood, O Lord.<br />
+        <Red>R.</Red> And made of us a kingdom for our God.
+      </p>
+      <p style='text-align:center; font-style:italic'>Let us pray.</p>
+      <p>
+        Almighty, and everlasting God, Who hast appointed Thine only-begotten Son to be
+        the Redeemer of the world, and hast been pleased to be reconciled unto us by His
+        Blood, grant us, we beseech Thee, so to venerate with solemn worship the price of
+        our salvation, that the power thereof may here on earth keep us from all things
+        hurtful, and the fruit of the same may gladden us for ever hereafter in heaven.
+        Through the same Christ our Lord. <Red>Amen.</Red>
+      </p>
     </div>
   </HalfGrid>;
 }
