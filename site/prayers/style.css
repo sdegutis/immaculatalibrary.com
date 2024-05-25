@@ -101,11 +101,11 @@ body {
     background-size: cover;
 }
 
-#litany::-webkit-scrollbar {
+.panel-body::-webkit-scrollbar {
     display: none;
 }
 
-#litany .litany-body {
+.panel-body {
     padding: 7em 0;
 }
 

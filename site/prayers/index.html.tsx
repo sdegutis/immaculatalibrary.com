@@ -103,7 +103,7 @@ function Conclusion() {
 }
 
 function Sunday() {
-  return <div class='panel centered show-today'>
+  return <div class='panel centered show-today focus'>
     <div class='panel-body'>
       <div class='prayer'>
         <p class='title'>Sunday</p>
@@ -293,7 +293,7 @@ function Saturday() {
 }
 
 function Litany() {
-  return <div class='panel focus'>
+  return <div class='panel'>
     <div id='litany' class='panel-body'>
       <div class='litany-body centered'>
         <p>
