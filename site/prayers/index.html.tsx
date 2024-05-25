@@ -436,6 +436,7 @@ function Slideshow(attrs: any, children: any) {
 function Tabs(attrs: { tabs: Record<string, JSX.Element> }) {
   return <>
     <div id='tab-container'>
+      <script src='./tabs.js' defer />
       <ul id='tabs-names'>
         {Object.keys(attrs.tabs).map((tabName, i) => {
           const a = i === 0 ? { class: "active" } : {};
