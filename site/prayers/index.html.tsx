@@ -89,7 +89,7 @@ function Conclusion() {
         All You Holy Angels, <Red>pray for us.</Red><br />
       </p>
 
-      <p>In the name of the Father, the Son and the Holy Spirit. Amen.</p>
+      <p><Red>In the name of the Father, the Son and the Holy Spirit. Amen.</Red></p>
 
     </div>
   </div>;
@@ -171,7 +171,7 @@ function Wednesday() {
         emissaries of the satanic headquarters. We ask Thee to bind by Thy Precious Blood
         all of the attributes, aspects and characteristics, interactions, communications and
         deceitful games of the evil spirits. We ask Thee to break any and all bonds, ties and
-        attachments in the Name of the Father, and of the Son and of the Holy Spirit. Amen.
+        attachments <Red>in the Name of the Father, and of the Son and of the Holy Spirit. Amen.</Red>
       </p>
     </div>
   </div>;
@@ -237,7 +237,7 @@ function Litany() {
   return <HalfGrid>
     <Img src='./images/precious-blood-litany.jpg' />
 
-    <div>
+    <div class='prayer'>
       <p>
         Lord have mercy.<br />
         Christ have mercy.<br />
