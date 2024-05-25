@@ -14,12 +14,12 @@ for (const a of tabs) {
 }
 
 i = 0;
-const today = new Date().getDay();
-for (const day of document.querySelectorAll<HTMLElement>('.show-today')) {
-    if (today !== i++) {
-        day.remove();
-    }
-}
+// const today = new Date().getDay();
+// for (const day of document.querySelectorAll<HTMLElement>('.show-today')) {
+//     if (today !== i++) {
+//         day.remove();
+//     }
+// }
 
 for (const slideshow of document.querySelectorAll<HTMLDivElement>('.slideshow')) {
     for (let i = 1; i < slideshow.children.length; i++) {
@@ -44,6 +44,4 @@ function PageChanger(attrs: { to: HTMLElement, side: 'left' | 'right' }, childre
     return button;
 }
 
-setTimeout(() => {
-    document.querySelector<HTMLElement>('#tabs-names a')?.click();
-}, 0);
+// document.querySelector<HTMLElement>('#tabs-names a')?.click();

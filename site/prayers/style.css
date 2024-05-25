@@ -68,6 +68,7 @@ body {
     display: grid;
     justify-content: center;
     align-content: center;
+    justify-items: center;
 }
 
 .panel {
@@ -85,15 +86,19 @@ body {
 
 .prayer {
     white-space: pre-wrap;
-    max-width: 30em;
+    max-width: 33em;
     font-size: 125%;
 
     max-height: 100vh;
     overflow: auto;
 }
 
+.prayer.wide {
+    max-width: 60em;
+}
+
 .prayer p {
-    margin: .5em 0;
+    margin: 2em 0;
 }
 
 .red {
@@ -114,8 +119,8 @@ body {
 }
 
 .img-half img {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 50vw;
+    max-height: 100vh;
 }
 
 .slideshow {

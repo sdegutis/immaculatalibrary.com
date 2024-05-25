@@ -50,8 +50,8 @@ function Intro() {
   return <div class='panel centered'>
     <div class='prayer'>
       <p class='title'>Auxilium Christianorum</p>
-      <p>Our help is in the name of the Lord.</p>
-      <p><Red>Who made heaven and earth.</Red></p>
+      <p>Our help is in the name of the Lord.<br />
+        <Red>Who made heaven and earth.</Red></p>
       <p>Most gracious Virgin Mary, thou who wouldst crush the head of the
         serpent, protect us from the vengeance of the evil one. We offer our prayers,
         supplications, sufferings and good works to thee so that thou may purify them,
@@ -84,12 +84,12 @@ function Conclusion() {
       </p>
 
       <p>
-        Most Sacred Heart of Jesus, <Red>have mercy on us.</Red><br />
-        Mary, Help of Christians, <Red>pray for us.</Red><br />
-        Virgin Most Powerful, <Red>pray for us.</Red><br />
-        St. Joseph, <Red>pray for us.</Red><br />
-        St. Michael the Archangel, <Red>pray for us.</Red><br />
-        All You Holy Angels, <Red>pray for us.</Red><br />
+        Most Sacred Heart of Jesus, <FloatRed>have mercy on us.</FloatRed><br />
+        Mary, Help of Christians, <FloatRed>pray for us.</FloatRed><br />
+        Virgin Most Powerful, <FloatRed>pray for us.</FloatRed><br />
+        St. Joseph, <FloatRed>pray for us.</FloatRed><br />
+        St. Michael the Archangel, <FloatRed>pray for us.</FloatRed><br />
+        All You Holy Angels, <FloatRed>pray for us.</FloatRed><br />
       </p>
 
       <p><Red>In the name of the Father, the Son and the Holy Spirit. Amen.</Red></p>
@@ -180,6 +180,10 @@ function Wednesday() {
   </div>;
 }
 
+function FloatRed(attrs: any, children: any) {
+  return <Red><span style='float:right'>{children}</span></Red>;
+}
+
 function Thursday() {
   return <div class='panel centered show-today'>
     <div class='prayer'>
@@ -190,15 +194,19 @@ function Thursday() {
         Gabriel for the deliverance of our brothers and sisters who are enslaved by the evil
         one. All Saints of Heaven, come to our aid.
       </p>
+    </div>
+    <div class='prayer wide'>
       <p>
-        From anxiety, sadness and obsessions, <Red>We implore Thee, deliver us, O Lord.</Red><br />
-        From hatred, fornication, and envy, <Red>We implore Thee, deliver us, O Lord.</Red><br />
-        From thoughts of jealousy, rage, and death, <Red>We implore Thee, deliver us, O Lord.</Red><br />
-        From every thought of suicide and abortion, <Red>We implore Thee, deliver us, O Lord.</Red><br />
-        From every form of sinful sexuality, <Red>We implore Thee, deliver us, O Lord.</Red><br />
-        From every division in our family, and every harmful friendship, <Red>We implore Thee, deliver us, O Lord.</Red><br />
-        From every sort of spell, malefice, witchcraft, and every form of the occult, <Red>We implore Thee, deliver us, O Lord.</Red><br />
+        From anxiety, sadness and obsessions, <FloatRed>We implore Thee, deliver us, O Lord.</FloatRed><br />
+        From hatred, fornication, and envy, <FloatRed>We implore Thee, deliver us, O Lord.</FloatRed><br />
+        From thoughts of jealousy, rage, and death, <FloatRed>We implore Thee, deliver us, O Lord.</FloatRed><br />
+        From every thought of suicide and abortion, <FloatRed>We implore Thee, deliver us, O Lord.</FloatRed><br />
+        From every form of sinful sexuality, <FloatRed>We implore Thee, deliver us, O Lord.</FloatRed><br />
+        From every division in our family, and every harmful friendship, <FloatRed>We implore Thee, deliver us, O Lord.</FloatRed><br />
+        From every sort of spell, malefice, witchcraft, and every form of the occult, <FloatRed>We implore Thee, deliver us, O Lord.</FloatRed><br />
       </p>
+    </div>
+    <div class='prayer'>
       <p>
         Thou who said, "Peace I leave with you, my peace I give unto you." Grant that,
         through the intercession of the Virgin Mary, we may be liberated from every
@@ -460,8 +468,12 @@ function Tabs(attrs: { tabs: Record<string, JSX.Element> }) {
       <script src='./tabs.js' type='module' />
       <ul id='tabs-names'>
         {Object.keys(attrs.tabs).map((tabName, i) => (
-          <li><a href="#">{tabName}</a></li>)
-        )}
+          <li>
+            <a href="#">
+              {tabName}
+            </a>
+          </li>
+        ))}
       </ul>
       <div id='tabs-bodies'>
         {Object.values(attrs.tabs)}
