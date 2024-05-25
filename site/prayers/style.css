@@ -80,6 +80,11 @@ body {
     overflow: hidden;
 }
 
+.panel>.panel-body {
+    overflow: auto;
+    height: 100%;
+}
+
 .title {
     text-align: center;
     color: var(--blue);
@@ -94,8 +99,6 @@ body {
     background-image: url(./images/precious-blood-litany.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    overflow: auto;
-    max-height: 100%;
 }
 
 #litany::-webkit-scrollbar {
