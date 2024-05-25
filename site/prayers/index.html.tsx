@@ -511,7 +511,6 @@ function Slideshow(attrs: any, children: any) {
 function Tabs(attrs: { tabs: Record<string, JSX.Element> }) {
   return <>
     <div id='tab-container'>
-      <script src='./tabs.js' type='module' />
       <div id='tabs-names'>
         {Object.keys(attrs.tabs).map((tabName, i) => (
           <a href="#" class={i === 0 ? 'active' : ''}>
@@ -535,6 +534,7 @@ function Html(attrs: any, children: any) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Prayers</title>
         <link href='./style.css' rel='stylesheet' />
+        <script src='./client.js' type='module' />
       </head>
       <body>
         <Font use={martel} fallback="serif">
