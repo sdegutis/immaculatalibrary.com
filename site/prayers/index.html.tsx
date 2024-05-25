@@ -221,9 +221,46 @@ function Friday() {
   return <div class='panel centered show-today'>
     <div class='prayer'>
       <p class='title'>Friday</p>
+      <p class='title'>Litany of Humility</p>
+
+      <p>O Jesus meek and humble, <FloatRed>hear me.</FloatRed></p>
+
       <p>
-        (Litany of Humility)
+        From the desire of being esteemed, <FloatRed>deliver me Jesus.</FloatRed><br />
+        From the desire of being loved, <FloatRed>deliver me Jesus.</FloatRed><br />
+        From the desire of being extolled, <FloatRed>deliver me Jesus.</FloatRed><br />
+        From the desire of being honored, <FloatRed>deliver me Jesus.</FloatRed><br />
+        From the desire of being praised, <FloatRed>deliver me Jesus.</FloatRed><br />
+        From the desire of being preferred to others, <FloatRed>deliver me Jesus.</FloatRed><br />
+        From the desire of being consulted, <FloatRed>deliver me Jesus.</FloatRed><br />
+        From the desire of being approved, <FloatRed>deliver me Jesus.</FloatRed><br />
       </p>
+
+      <p>
+        From the fear of being humiliated, <FloatRed>deliver me Jesus.</FloatRed><br />
+        From the fear of being despised, <FloatRed>deliver me Jesus.</FloatRed><br />
+        From the fear of suffering rebukes, <FloatRed>deliver me Jesus.</FloatRed><br />
+        From the fear of being calumniated, <FloatRed>deliver me Jesus.</FloatRed><br />
+        From the fear of being forgotten, <FloatRed>deliver me Jesus.</FloatRed><br />
+        From the fear of being ridiculed, <FloatRed>deliver me Jesus.</FloatRed><br />
+        From the fear of being wronged, <FloatRed>deliver me Jesus.</FloatRed><br />
+        From the fear of being suspected, <FloatRed>deliver me Jesus.</FloatRed><br />
+      </p>
+
+    </div>
+    <div class='prayer wide'>
+
+      <p>
+        That others may be loved more than I, <FloatRed>Jesus, grant me the grace to desire it.</FloatRed><br />
+        That others may be esteemed more than I, <FloatRed>Jesus, grant me the grace to desire it.</FloatRed><br />
+        That in the opinion of the world, others may increase and I may decrease, <FloatRed>Jesus, grant me the grace to desire it.</FloatRed><br />
+        That others may be chosen and I set aside, <FloatRed>Jesus, grant me the grace to desire it.</FloatRed><br />
+        That others may be praised and I go unnoticed, <FloatRed>Jesus, grant me the grace to desire it.</FloatRed><br />
+        That others may be preferred to me in everything, <FloatRed>Jesus, grant me the grace to desire it.</FloatRed><br />
+        That others may become holier than I, provided that I become as holy as I should, <FloatRed>Jesus, grant me the grace to desire it.</FloatRed><br />
+
+      </p>
+
     </div>
   </div>;
 }
