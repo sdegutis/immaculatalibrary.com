@@ -47,149 +47,132 @@ export default <>
 </>;
 
 function Intro() {
-  return <div class='panel centered'>
-    <div class='panel-body'>
-      <div class='prayer'>
-        <p class='title'>Auxilium Christianorum</p>
-        <p>Our help is in the name of the Lord.<br />
-          <Red>Who made heaven and earth.</Red></p>
-        <p>Most gracious Virgin Mary, thou who wouldst crush the head of the
-          serpent, protect us from the vengeance of the evil one. We offer our prayers,
-          supplications, sufferings and good works to thee so that thou may purify them,
-          sanctify them and present them to thy Son as a perfect offering. May this offering
-          be given so that the demons that influence or seek to influence the members of the
-          Auxilium Christianorum do not know the source of their expulsion and blindness.
-          Blind them so that they know not our good works. Blind them so that they know
-          not on whom to take vengeance. Blind them so that they may receive the just
-          sentence for their works. Cover us with the Precious Blood of thy Son so that we
-          may enjoy the protection which flows from His Passion and Death. Amen.
-        </p>
-      </div>
+  return <Panel>
+    <div class='prayer'>
+      <p class='title'>Auxilium Christianorum</p>
+      <p>Our help is in the name of the Lord.<br />
+        <Red>Who made heaven and earth.</Red></p>
+      <p>Most gracious Virgin Mary, thou who wouldst crush the head of the
+        serpent, protect us from the vengeance of the evil one. We offer our prayers,
+        supplications, sufferings and good works to thee so that thou may purify them,
+        sanctify them and present them to thy Son as a perfect offering. May this offering
+        be given so that the demons that influence or seek to influence the members of the
+        Auxilium Christianorum do not know the source of their expulsion and blindness.
+        Blind them so that they know not our good works. Blind them so that they know
+        not on whom to take vengeance. Blind them so that they may receive the just
+        sentence for their works. Cover us with the Precious Blood of thy Son so that we
+        may enjoy the protection which flows from His Passion and Death. Amen.
+      </p>
     </div>
-  </div>;
+  </Panel>;
 }
 
 function Conclusion() {
-  return <div class='panel centered'>
-    <div class='panel-body'>
-      <div class='prayer'>
-
-        <p class='title'>Conclusion</p>
-
-        <p>August Queen of the Heavens, heavenly Sovereign of the Angels, Thou who from
-          the beginning hast received from God the power and the mission to crush the head
-          of Satan, we humbly beseech Thee to send thy holy legions, so that under Thy
-          command and through Thy power, they may pursue the demons and combat them
-          everywhere, suppress their boldness, and drive them back into the abyss. O good
-          and tender Mother, Thou wilt always be our love and hope! O Divine Mother, send
-          Thy Holy Angels to defend us and to drive far away from us the cruel enemy. Holy
-          Angels and Archangels, defend us, guard us. Amen.
-        </p>
-
-        <p>
-          Most Sacred Heart of Jesus, <FloatRed>have mercy on us.</FloatRed><br />
-          Mary, Help of Christians, <FloatRed>pray for us.</FloatRed><br />
-          Virgin Most Powerful, <FloatRed>pray for us.</FloatRed><br />
-          St. Joseph, <FloatRed>pray for us.</FloatRed><br />
-          St. Michael the Archangel, <FloatRed>pray for us.</FloatRed><br />
-          All You Holy Angels, <FloatRed>pray for us.</FloatRed><br />
-        </p>
-
-        <p><Red>In the name of the Father, the Son and the Holy Spirit. Amen.</Red></p>
-
-      </div>
+  return <Panel>
+    <div class='prayer'>
+      <p class='title'>Conclusion</p>
+      <p>August Queen of the Heavens, heavenly Sovereign of the Angels, Thou who from
+        the beginning hast received from God the power and the mission to crush the head
+        of Satan, we humbly beseech Thee to send thy holy legions, so that under Thy
+        command and through Thy power, they may pursue the demons and combat them
+        everywhere, suppress their boldness, and drive them back into the abyss. O good
+        and tender Mother, Thou wilt always be our love and hope! O Divine Mother, send
+        Thy Holy Angels to defend us and to drive far away from us the cruel enemy. Holy
+        Angels and Archangels, defend us, guard us. Amen.
+      </p>
+      <p>
+        Most Sacred Heart of Jesus, <FloatRed>have mercy on us.</FloatRed><br />
+        Mary, Help of Christians, <FloatRed>pray for us.</FloatRed><br />
+        Virgin Most Powerful, <FloatRed>pray for us.</FloatRed><br />
+        St. Joseph, <FloatRed>pray for us.</FloatRed><br />
+        St. Michael the Archangel, <FloatRed>pray for us.</FloatRed><br />
+        All You Holy Angels, <FloatRed>pray for us.</FloatRed><br />
+      </p>
+      <p><Red>In the name of the Father, the Son and the Holy Spirit. Amen.</Red></p>
     </div>
-  </div>;
+  </Panel>;
 }
 
 function Sunday() {
-  return <div class='panel centered show-today focus'>
-    <div class='panel-body'>
-      <div class='prayer'>
-        <p class='title'>Sunday</p>
-        <p>
-          O Glorious Queen of Heaven and Earth, Virgin Most Powerful, thou who hast the
-          power to crush the head of the ancient serpent with thy heel, come and exercise this
-          power flowing from the grace of thine Immaculate Conception. Shield us under the
-          mantle of thy purity and love, draw us into the sweet abode of thy heart and
-          annihilate and render impotent the forces bent on destroying us. Come Most
-          Sovereign Mistress of the Holy Angels and Mistress of the Most Holy Rosary, thou
-          who from the very beginning hast received from God the power and the mission to
-          crush the head of Satan. Send forth thy holy legions, we humbly beseech thee, that
-          under thy command and by thy power they may pursue the evil spirits, counter them
-          on every side, resist their bold attacks and drive them far from us, harming no one
-          on the way, binding them to the foot of the Cross to be judged and sentenced by
-          Jesus Christ Thy Son and to be disposed of by Him as He wills.
-        </p>
-        <p>
-          St. Joseph, Patron of the Universal Church, come to our aid in this grave
-          battle against the forces of darkness, repel the attacks of the devil and free the
-          members of the Auxilium Christianorum, and those for whom the priests of the
-          Auxilium Christianorum pray, from the strongholds of the enemy.
-        </p>
-        <p>
-          St. Michael, summon the entire heavenly court to engage their forces in this
-          fierce battle against the powers of hell. Come O Prince of Heaven with thy mighty
-          sword and thrust into hell Satan and all the other evil spirits. O Guardian Angels,
-          guide and protect us. Amen.
-        </p>
-      </div>
+  return <Panel>
+    <div class='prayer show-today focus'>
+      <p class='title'>Sunday</p>
+      <p>
+        O Glorious Queen of Heaven and Earth, Virgin Most Powerful, thou who hast the
+        power to crush the head of the ancient serpent with thy heel, come and exercise this
+        power flowing from the grace of thine Immaculate Conception. Shield us under the
+        mantle of thy purity and love, draw us into the sweet abode of thy heart and
+        annihilate and render impotent the forces bent on destroying us. Come Most
+        Sovereign Mistress of the Holy Angels and Mistress of the Most Holy Rosary, thou
+        who from the very beginning hast received from God the power and the mission to
+        crush the head of Satan. Send forth thy holy legions, we humbly beseech thee, that
+        under thy command and by thy power they may pursue the evil spirits, counter them
+        on every side, resist their bold attacks and drive them far from us, harming no one
+        on the way, binding them to the foot of the Cross to be judged and sentenced by
+        Jesus Christ Thy Son and to be disposed of by Him as He wills.
+      </p>
+      <p>
+        St. Joseph, Patron of the Universal Church, come to our aid in this grave
+        battle against the forces of darkness, repel the attacks of the devil and free the
+        members of the Auxilium Christianorum, and those for whom the priests of the
+        Auxilium Christianorum pray, from the strongholds of the enemy.
+      </p>
+      <p>
+        St. Michael, summon the entire heavenly court to engage their forces in this
+        fierce battle against the powers of hell. Come O Prince of Heaven with thy mighty
+        sword and thrust into hell Satan and all the other evil spirits. O Guardian Angels,
+        guide and protect us. Amen.
+      </p>
     </div>
-  </div>;
+  </Panel>;
 }
 
 function Monday() {
-  return <div class='panel centered show-today'>
-    <div class='panel-body'>
-      <div class='prayer'>
-        <p class='title'>Monday</p>
-        <p>
-          In Thy name, Lord Jesus Christ, we pray that Thou cover us, our families, and all
-          of our possessions with Thy love and Thy Most Precious Blood and surround us
-          with Thy Heavenly Angels, Saints and the mantle of Our Blessed Mother. Amen.
-        </p>
-      </div>
+  return <Panel>
+    <div class='prayer show-today'>
+      <p class='title'>Monday</p>
+      <p>
+        In Thy name, Lord Jesus Christ, we pray that Thou cover us, our families, and all
+        of our possessions with Thy love and Thy Most Precious Blood and surround us
+        with Thy Heavenly Angels, Saints and the mantle of Our Blessed Mother. Amen.
+      </p>
     </div>
-  </div>;
+  </Panel>;
 }
 
 function Tuesday() {
-  return <div class='panel centered show-today'>
-    <div class='panel-body'>
-      <div class='prayer'>
-        <p class='title'>Tuesday</p>
-        <p>
-          Lord Jesus Christ, we beg Thee for the grace to remain guarded beneath the
-          protective mantle of Mary, surrounded by the holy briar from which was taken the
-          Holy Crown of Thorns, and saturated with Thy Precious Blood in the power of the
-          Holy Spirit, with our Guardian Angels, for the greater glory of the Father. Amen.
-        </p>
-      </div>
+  return <Panel>
+    <div class='prayer show-today'>
+      <p class='title'>Tuesday</p>
+      <p>
+        Lord Jesus Christ, we beg Thee for the grace to remain guarded beneath the
+        protective mantle of Mary, surrounded by the holy briar from which was taken the
+        Holy Crown of Thorns, and saturated with Thy Precious Blood in the power of the
+        Holy Spirit, with our Guardian Angels, for the greater glory of the Father. Amen.
+      </p>
     </div>
-  </div>;
+  </Panel>;
 }
 
 function Wednesday() {
-  return <div class='panel centered show-today'>
-    <div class='panel-body'>
-      <div class='prayer'>
-        <p class='title'>Wednesday</p>
-        <p>
-          In the Name of Jesus Christ, Our Lord and God, we ask Thee to render all spirits
-          impotent, paralyzed and ineffective in attempting to take revenge against anyone
-          of the members of the Auxilium Christianorum, our families, friends, communities,
-          those who pray for us and their family members, or anyone associated with us and
-          for whom the priests of the Auxilium Christianorum pray. We ask Thee to bind all
-          evil spirits, all powers in the air, the water, the ground, the fire, under ground, or
-          wherever they exercise their powers, any satanic forces in nature and any and all
-          emissaries of the satanic headquarters. We ask Thee to bind by Thy Precious Blood
-          all of the attributes, aspects and characteristics, interactions, communications and
-          deceitful games of the evil spirits. We ask Thee to break any and all bonds, ties and
-          attachments <Red>in the Name of the Father, and of the Son and of the Holy Spirit. Amen.</Red>
-        </p>
-      </div>
+  return <Panel>
+    <div class='prayer show-today'>
+      <p class='title'>Wednesday</p>
+      <p>
+        In the Name of Jesus Christ, Our Lord and God, we ask Thee to render all spirits
+        impotent, paralyzed and ineffective in attempting to take revenge against anyone
+        of the members of the Auxilium Christianorum, our families, friends, communities,
+        those who pray for us and their family members, or anyone associated with us and
+        for whom the priests of the Auxilium Christianorum pray. We ask Thee to bind all
+        evil spirits, all powers in the air, the water, the ground, the fire, under ground, or
+        wherever they exercise their powers, any satanic forces in nature and any and all
+        emissaries of the satanic headquarters. We ask Thee to bind by Thy Precious Blood
+        all of the attributes, aspects and characteristics, interactions, communications and
+        deceitful games of the evil spirits. We ask Thee to break any and all bonds, ties and
+        attachments <Red>in the Name of the Father, and of the Son and of the Holy Spirit. Amen.</Red>
+      </p>
     </div>
-  </div>;
+  </Panel>;
 }
 
 function FloatRed(attrs: any, children: any) {
@@ -197,104 +180,98 @@ function FloatRed(attrs: any, children: any) {
 }
 
 function Thursday() {
-  return <div class='panel centered show-today'>
-    <div class='panel-body'>
-      <div class='prayer'>
-        <p class='title'>Thursday</p>
-        <p>
-          My Lord, Thou art all powerful, Thou art God, Thou art our Father. We beg Thee
-          through the intercession and help of the Archangels Sts. Michael, Raphael, and
-          Gabriel for the deliverance of our brothers and sisters who are enslaved by the evil
-          one. All Saints of Heaven, come to our aid.
-        </p>
-      </div>
-      <div class='prayer wide'>
-        <p>
-          From anxiety, sadness and obsessions, <FloatRed>We implore Thee, deliver us, O Lord.</FloatRed><br />
-          From hatred, fornication, and envy, <FloatRed>We implore Thee, deliver us, O Lord.</FloatRed><br />
-          From thoughts of jealousy, rage, and death, <FloatRed>We implore Thee, deliver us, O Lord.</FloatRed><br />
-          From every thought of suicide and abortion, <FloatRed>We implore Thee, deliver us, O Lord.</FloatRed><br />
-          From every form of sinful sexuality, <FloatRed>We implore Thee, deliver us, O Lord.</FloatRed><br />
-          From every division in our family, and every harmful friendship, <FloatRed>We implore Thee, deliver us, O Lord.</FloatRed><br />
-          From every sort of spell, malefice, witchcraft, and every form of the occult, <FloatRed>We implore Thee, deliver us, O Lord.</FloatRed><br />
-        </p>
-      </div>
-      <div class='prayer'>
-        <p>
-          Thou who said, "Peace I leave with you, my peace I give unto you." Grant that,
-          through the intercession of the Virgin Mary, we may be liberated from every
-          demonic influence and enjoy Thy peace always. In the Name of Christ, our Lord.
-          Amen.
-        </p>
-      </div>
+  return <Panel>
+    <div class='prayer show-today'>
+      <p class='title'>Thursday</p>
+      <p>
+        My Lord, Thou art all powerful, Thou art God, Thou art our Father. We beg Thee
+        through the intercession and help of the Archangels Sts. Michael, Raphael, and
+        Gabriel for the deliverance of our brothers and sisters who are enslaved by the evil
+        one. All Saints of Heaven, come to our aid.
+      </p>
     </div>
-  </div>;
+    <div class='prayer wide'>
+      <p>
+        From anxiety, sadness and obsessions, <FloatRed>We implore Thee, deliver us, O Lord.</FloatRed><br />
+        From hatred, fornication, and envy, <FloatRed>We implore Thee, deliver us, O Lord.</FloatRed><br />
+        From thoughts of jealousy, rage, and death, <FloatRed>We implore Thee, deliver us, O Lord.</FloatRed><br />
+        From every thought of suicide and abortion, <FloatRed>We implore Thee, deliver us, O Lord.</FloatRed><br />
+        From every form of sinful sexuality, <FloatRed>We implore Thee, deliver us, O Lord.</FloatRed><br />
+        From every division in our family, and every harmful friendship, <FloatRed>We implore Thee, deliver us, O Lord.</FloatRed><br />
+        From every sort of spell, malefice, witchcraft, and every form of the occult, <FloatRed>We implore Thee, deliver us, O Lord.</FloatRed><br />
+      </p>
+    </div>
+    <div class='prayer'>
+      <p>
+        Thou who said, "Peace I leave with you, my peace I give unto you." Grant that,
+        through the intercession of the Virgin Mary, we may be liberated from every
+        demonic influence and enjoy Thy peace always. In the Name of Christ, our Lord.
+        Amen.
+      </p>
+    </div>
+  </Panel>;
 }
 
 function Friday() {
-  return <div class='panel centered show-today'>
-    <div class='panel-body'>
-      <div class='prayer'>
-        <p class='title'>Friday</p>
-        <p class='title'>Litany of Humility</p>
-        <p>O Jesus meek and humble, <FloatRed>hear me.</FloatRed></p>
-        <p>
-          From the desire of being esteemed, <FloatRed>deliver me Jesus.</FloatRed><br />
-          From the desire of being loved, <FloatRed>deliver me Jesus.</FloatRed><br />
-          From the desire of being extolled, <FloatRed>deliver me Jesus.</FloatRed><br />
-          From the desire of being honored, <FloatRed>deliver me Jesus.</FloatRed><br />
-          From the desire of being praised, <FloatRed>deliver me Jesus.</FloatRed><br />
-          From the desire of being preferred to others, <FloatRed>deliver me Jesus.</FloatRed><br />
-          From the desire of being consulted, <FloatRed>deliver me Jesus.</FloatRed><br />
-          From the desire of being approved, <FloatRed>deliver me Jesus.</FloatRed><br />
-        </p>
-        <p>
-          From the fear of being humiliated, <FloatRed>deliver me Jesus.</FloatRed><br />
-          From the fear of being despised, <FloatRed>deliver me Jesus.</FloatRed><br />
-          From the fear of suffering rebukes, <FloatRed>deliver me Jesus.</FloatRed><br />
-          From the fear of being calumniated, <FloatRed>deliver me Jesus.</FloatRed><br />
-          From the fear of being forgotten, <FloatRed>deliver me Jesus.</FloatRed><br />
-          From the fear of being ridiculed, <FloatRed>deliver me Jesus.</FloatRed><br />
-          From the fear of being wronged, <FloatRed>deliver me Jesus.</FloatRed><br />
-          From the fear of being suspected, <FloatRed>deliver me Jesus.</FloatRed><br />
-        </p>
-      </div>
-      <div class='prayer wide'>
-        <p>
-          That others may be loved more than I, <FloatRed>Jesus, grant me the grace to desire it.</FloatRed><br />
-          That others may be esteemed more than I, <FloatRed>Jesus, grant me the grace to desire it.</FloatRed><br />
-          That in the opinion of the world, others may increase and I may decrease, <FloatRed>Jesus, grant me the grace to desire it.</FloatRed><br />
-          That others may be chosen and I set aside, <FloatRed>Jesus, grant me the grace to desire it.</FloatRed><br />
-          That others may be praised and I go unnoticed, <FloatRed>Jesus, grant me the grace to desire it.</FloatRed><br />
-          That others may be preferred to me in everything, <FloatRed>Jesus, grant me the grace to desire it.</FloatRed><br />
-          That others may become holier than I, provided that I become as holy as I should, <FloatRed>Jesus, grant me the grace to desire it.</FloatRed><br />
-        </p>
-      </div>
+  return <Panel>
+    <div class='prayer show-today'>
+      <p class='title'>Friday</p>
+      <p class='title'>Litany of Humility</p>
+      <p>O Jesus meek and humble, <FloatRed>hear me.</FloatRed></p>
+      <p>
+        From the desire of being esteemed, <FloatRed>deliver me Jesus.</FloatRed><br />
+        From the desire of being loved, <FloatRed>deliver me Jesus.</FloatRed><br />
+        From the desire of being extolled, <FloatRed>deliver me Jesus.</FloatRed><br />
+        From the desire of being honored, <FloatRed>deliver me Jesus.</FloatRed><br />
+        From the desire of being praised, <FloatRed>deliver me Jesus.</FloatRed><br />
+        From the desire of being preferred to others, <FloatRed>deliver me Jesus.</FloatRed><br />
+        From the desire of being consulted, <FloatRed>deliver me Jesus.</FloatRed><br />
+        From the desire of being approved, <FloatRed>deliver me Jesus.</FloatRed><br />
+      </p>
+      <p>
+        From the fear of being humiliated, <FloatRed>deliver me Jesus.</FloatRed><br />
+        From the fear of being despised, <FloatRed>deliver me Jesus.</FloatRed><br />
+        From the fear of suffering rebukes, <FloatRed>deliver me Jesus.</FloatRed><br />
+        From the fear of being calumniated, <FloatRed>deliver me Jesus.</FloatRed><br />
+        From the fear of being forgotten, <FloatRed>deliver me Jesus.</FloatRed><br />
+        From the fear of being ridiculed, <FloatRed>deliver me Jesus.</FloatRed><br />
+        From the fear of being wronged, <FloatRed>deliver me Jesus.</FloatRed><br />
+        From the fear of being suspected, <FloatRed>deliver me Jesus.</FloatRed><br />
+      </p>
     </div>
-  </div>;
+    <div class='prayer wide'>
+      <p>
+        That others may be loved more than I, <FloatRed>Jesus, grant me the grace to desire it.</FloatRed><br />
+        That others may be esteemed more than I, <FloatRed>Jesus, grant me the grace to desire it.</FloatRed><br />
+        That in the opinion of the world, others may increase and I may decrease, <FloatRed>Jesus, grant me the grace to desire it.</FloatRed><br />
+        That others may be chosen and I set aside, <FloatRed>Jesus, grant me the grace to desire it.</FloatRed><br />
+        That others may be praised and I go unnoticed, <FloatRed>Jesus, grant me the grace to desire it.</FloatRed><br />
+        That others may be preferred to me in everything, <FloatRed>Jesus, grant me the grace to desire it.</FloatRed><br />
+        That others may become holier than I, provided that I become as holy as I should, <FloatRed>Jesus, grant me the grace to desire it.</FloatRed><br />
+      </p>
+    </div>
+  </Panel>;
 }
 
 function Saturday() {
-  return <div class='panel centered show-today'>
-    <div class='panel-body'>
-      <div class='prayer'>
-        <p class='title'>Saturday</p>
-        <p>
-          O God and Father of our Lord Jesus Christ, we call upon Thy holy Name and
-          humbly beseech Thy clemency, that, through the intercession of the ever
-          immaculate Virgin, our Mother Mary, and of the glorious Archangel Saint Michael,
-          thou wouldst vouchsafe to help us against Satan and all the other unclean spirits that
-          are prowling about the world to the great peril of the human race and the loss of
-          souls. Amen.
-        </p>
-      </div>
+  return <Panel>
+    <div class='prayer show-today'>
+      <p class='title'>Saturday</p>
+      <p>
+        O God and Father of our Lord Jesus Christ, we call upon Thy holy Name and
+        humbly beseech Thy clemency, that, through the intercession of the ever
+        immaculate Virgin, our Mother Mary, and of the glorious Archangel Saint Michael,
+        thou wouldst vouchsafe to help us against Satan and all the other unclean spirits that
+        are prowling about the world to the great peril of the human race and the loss of
+        souls. Amen.
+      </p>
     </div>
-  </div>;
+  </Panel>;
 }
 
 function Litany() {
-  return <div class='panel'>
-    <div id='litany' class='panel-body'>
+  return <Panel>
+    <div id='litany'>
       <div class='litany-body centered'>
         <p>
           Lord have mercy, <FloatRed>Lord have mercy.</FloatRed><br />
@@ -357,8 +334,7 @@ function Litany() {
           Through the same Christ our Lord. <Red>Amen.</Red>
         </p>
       </div>
-    </div>
-  </div>;
+  </Panel>;
 }
 
 function AngelMorning() {
@@ -476,12 +452,14 @@ function Memorare() {
 
 function makePrayer(img: string, text: string) {
   return (
-    <HalfGrid>
-      <Img src={img} />
-      <div class='prayer centered'>
-        {text}
+    <Panel>
+      <div class='half-grid'>
+        <Img src={img} />
+        <div class='prayer centered'>
+          {text}
+        </div>
       </div>
-    </HalfGrid>
+    </Panel>
   );
 }
 
@@ -497,9 +475,9 @@ function Img(attrs: { src: string }, children: any) {
   );
 }
 
-function HalfGrid(attrs: any, children: any) {
+function Panel(attrs: any, children: any) {
   return <div class="panel">
-    <div class='panel-body half-grid'>
+    <div class='panel-body'>
       {children}
     </div>
   </div>;

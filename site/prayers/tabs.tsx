@@ -17,7 +17,7 @@ for (const a of tabs) {
 // const today = new Date().getDay();
 // for (const day of document.querySelectorAll<HTMLElement>('.show-today')) {
 //     if (today !== i++) {
-//         day.remove();
+//         day.closest('.panel')?.remove();
 //     }
 // }
 

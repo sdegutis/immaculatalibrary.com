@@ -80,9 +80,13 @@ body {
     overflow: hidden;
 }
 
-.panel>.panel-body {
+.panel-body {
     overflow: auto;
     height: 100%;
+}
+
+.panel-body::-webkit-scrollbar {
+    display: none;
 }
 
 .title {
@@ -93,28 +97,17 @@ body {
 .prayer {
     white-space: pre-wrap;
     max-width: 33em;
+    padding: 7em 0;
+}
+
+.prayer.wide {
+    max-width: 60em;
 }
 
 #litany {
     background-image: url(./images/precious-blood-litany.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-.panel-body::-webkit-scrollbar {
-    display: none;
-}
-
-.panel-body {
-    padding: 7em 0;
-}
-
-#litany p {
-    max-width: 42em;
-}
-
-.prayer.wide {
-    max-width: 60em;
 }
 
 p {
@@ -126,6 +119,7 @@ p {
 }
 
 .half-grid {
+    height: 100%;
     display: grid;
     grid-template-columns: 50% 50%;
 }
