@@ -44,55 +44,61 @@ export default <>
 </>;
 
 function Intro() {
-  return <div class='panel'>
-    <p>Our help is in the name of the Lord.</p>
-    <p><Red>Who made heaven and earth.</Red></p>
-    <p>Most gracious Virgin Mary, thou who wouldst crush the head of the
-      serpent, protect us from the vengeance of the evil one. We offer our prayers,
-      supplications, sufferings and good works to thee so that thou may purify them,
-      sanctify them and present them to thy Son as a perfect offering. May this offering
-      be given so that the demons that influence or seek to influence the members of the
-      Auxilium Christianorum do not know the source of their expulsion and blindness.
-      Blind them so that they know not our good works. Blind them so that they know
-      not on whom to take vengeance. Blind them so that they may receive the just
-      sentence for their works. Cover us with the Precious Blood of thy Son so that we
-      may enjoy the protection which flows from His Passion and Death. Amen.
-    </p>
+  return <div class='panel centered'>
+    <div class='prayer'>
+      <p class='title'>Auxilium Christianorum</p>
+      <p>Our help is in the name of the Lord.</p>
+      <p><Red>Who made heaven and earth.</Red></p>
+      <p>Most gracious Virgin Mary, thou who wouldst crush the head of the
+        serpent, protect us from the vengeance of the evil one. We offer our prayers,
+        supplications, sufferings and good works to thee so that thou may purify them,
+        sanctify them and present them to thy Son as a perfect offering. May this offering
+        be given so that the demons that influence or seek to influence the members of the
+        Auxilium Christianorum do not know the source of their expulsion and blindness.
+        Blind them so that they know not our good works. Blind them so that they know
+        not on whom to take vengeance. Blind them so that they may receive the just
+        sentence for their works. Cover us with the Precious Blood of thy Son so that we
+        may enjoy the protection which flows from His Passion and Death. Amen.
+      </p>
+    </div>
   </div>;
 }
 
 function Conclusion() {
-  0
-  return <div class='panel'>
+  return <div class='panel centered'>
+    <div class='prayer'>
 
-    <p>August Queen of the Heavens, heavenly Sovereign of the Angels, Thou who from
-      the beginning hast received from God the power and the mission to crush the head
-      of Satan, we humbly beseech Thee to send thy holy legions, so that under Thy
-      command and through Thy power, they may pursue the demons and combat them
-      everywhere, suppress their boldness, and drive them back into the abyss. O good
-      and tender Mother, Thou wilt always be our love and hope! O Divine Mother, send
-      Thy Holy Angels to defend us and to drive far away from us the cruel enemy. Holy
-      Angels and Archangels, defend us, guard us. Amen.
-    </p>
+      <p class='title'>Conclusion</p>
 
-    <p>
-      Most Sacred Heart of Jesus, <Red>have mercy on us.</Red><br />
-      Mary, Help of Christians, <Red>pray for us.</Red><br />
-      Virgin Most Powerful, <Red>pray for us.</Red><br />
-      St. Joseph, <Red>pray for us.</Red><br />
-      St. Michael the Archangel, <Red>pray for us.</Red><br />
-      All You Holy Angels, <Red>pray for us.</Red><br />
-    </p>
+      <p>August Queen of the Heavens, heavenly Sovereign of the Angels, Thou who from
+        the beginning hast received from God the power and the mission to crush the head
+        of Satan, we humbly beseech Thee to send thy holy legions, so that under Thy
+        command and through Thy power, they may pursue the demons and combat them
+        everywhere, suppress their boldness, and drive them back into the abyss. O good
+        and tender Mother, Thou wilt always be our love and hope! O Divine Mother, send
+        Thy Holy Angels to defend us and to drive far away from us the cruel enemy. Holy
+        Angels and Archangels, defend us, guard us. Amen.
+      </p>
 
-    <p>In the name of the Father, the Son and the Holy Spirit. Amen.</p>
+      <p>
+        Most Sacred Heart of Jesus, <Red>have mercy on us.</Red><br />
+        Mary, Help of Christians, <Red>pray for us.</Red><br />
+        Virgin Most Powerful, <Red>pray for us.</Red><br />
+        St. Joseph, <Red>pray for us.</Red><br />
+        St. Michael the Archangel, <Red>pray for us.</Red><br />
+        All You Holy Angels, <Red>pray for us.</Red><br />
+      </p>
 
+      <p>In the name of the Father, the Son and the Holy Spirit. Amen.</p>
+
+    </div>
   </div>;
 }
 
 function Sunday() {
-  return <div class='panel prayer'>
-    <div>
-      <p class='day-title'>Sunday</p>
+  return <div class='panel centered'>
+    <div class='prayer'>
+      <p class='title'>Sunday</p>
       <p>
         O Glorious Queen of Heaven and Earth, Virgin Most Powerful, thou who hast the
         power to crush the head of the ancient serpent with thy heel, come and exercise this
@@ -124,94 +130,106 @@ function Sunday() {
 }
 
 function Monday() {
-  return <div class='panel prayer'>
-    <p class='day-title'>Monday</p>
-    <p>
-      In Thy name, Lord Jesus Christ, we pray that Thou cover us, our families, and all
-      of our possessions with Thy love and Thy Most Precious Blood and surround us
-      with Thy Heavenly Angels, Saints and the mantle of Our Blessed Mother. Amen.
-    </p>
+  return <div class='panel centered'>
+    <div class='prayer'>
+      <p class='title'>Monday</p>
+      <p>
+        In Thy name, Lord Jesus Christ, we pray that Thou cover us, our families, and all
+        of our possessions with Thy love and Thy Most Precious Blood and surround us
+        with Thy Heavenly Angels, Saints and the mantle of Our Blessed Mother. Amen.
+      </p>
+    </div>
   </div>;
 }
 
 function Tuesday() {
-  return <div class='panel prayer'>
-    <p class='day-title'>Tuesday</p>
-    <p>
-      Lord Jesus Christ, we beg Thee for the grace to remain guarded beneath the
-      protective mantle of Mary, surrounded by the holy briar from which was taken the
-      Holy Crown of Thorns, and saturated with Thy Precious Blood in the power of the
-      Holy Spirit, with our Guardian Angels, for the greater glory of the Father. Amen.
-    </p>
+  return <div class='panel centered'>
+    <div class='prayer'>
+      <p class='title'>Tuesday</p>
+      <p>
+        Lord Jesus Christ, we beg Thee for the grace to remain guarded beneath the
+        protective mantle of Mary, surrounded by the holy briar from which was taken the
+        Holy Crown of Thorns, and saturated with Thy Precious Blood in the power of the
+        Holy Spirit, with our Guardian Angels, for the greater glory of the Father. Amen.
+      </p>
+    </div>
   </div>;
 }
 
 function Wednesday() {
-  return <div class='panel prayer'>
-    <p class='day-title'>Wednesday</p>
-    <p>
-      In the Name of Jesus Christ, Our Lord and God, we ask Thee to render all spirits
-      impotent, paralyzed and ineffective in attempting to take revenge against anyone
-      of the members of the Auxilium Christianorum, our families, friends, communities,
-      those who pray for us and their family members, or anyone associated with us and
-      for whom the priests of the Auxilium Christianorum pray. We ask Thee to bind all
-      evil spirits, all powers in the air, the water, the ground, the fire, under ground, or
-      wherever they exercise their powers, any satanic forces in nature and any and all
-      emissaries of the satanic headquarters. We ask Thee to bind by Thy Precious Blood
-      all of the attributes, aspects and characteristics, interactions, communications and
-      deceitful games of the evil spirits. We ask Thee to break any and all bonds, ties and
-      attachments in the Name of the Father, and of the Son and of the Holy Spirit. Amen.
-    </p>
+  return <div class='panel centered'>
+    <div class='prayer'>
+      <p class='title'>Wednesday</p>
+      <p>
+        In the Name of Jesus Christ, Our Lord and God, we ask Thee to render all spirits
+        impotent, paralyzed and ineffective in attempting to take revenge against anyone
+        of the members of the Auxilium Christianorum, our families, friends, communities,
+        those who pray for us and their family members, or anyone associated with us and
+        for whom the priests of the Auxilium Christianorum pray. We ask Thee to bind all
+        evil spirits, all powers in the air, the water, the ground, the fire, under ground, or
+        wherever they exercise their powers, any satanic forces in nature and any and all
+        emissaries of the satanic headquarters. We ask Thee to bind by Thy Precious Blood
+        all of the attributes, aspects and characteristics, interactions, communications and
+        deceitful games of the evil spirits. We ask Thee to break any and all bonds, ties and
+        attachments in the Name of the Father, and of the Son and of the Holy Spirit. Amen.
+      </p>
+    </div>
   </div>;
 }
 
 function Thursday() {
-  return <div class='panel prayer'>
-    <p class='day-title'>Thursday</p>
-    <p>
-      My Lord, Thou art all powerful, Thou art God, Thou art our Father. We beg Thee
-      through the intercession and help of the Archangels Sts. Michael, Raphael, and
-      Gabriel for the deliverance of our brothers and sisters who are enslaved by the evil
-      one. All Saints of Heaven, come to our aid.
-    </p>
-    <p>
-      From anxiety, sadness and obsessions, <Red>We implore Thee, deliver us, O Lord.</Red><br />
-      From hatred, fornication, and envy, <Red>We implore Thee, deliver us, O Lord.</Red><br />
-      From thoughts of jealousy, rage, and death, <Red>We implore Thee, deliver us, O Lord.</Red><br />
-      From every thought of suicide and abortion, <Red>We implore Thee, deliver us, O Lord.</Red><br />
-      From every form of sinful sexuality, <Red>We implore Thee, deliver us, O Lord.</Red><br />
-      From every division in our family, and every harmful friendship, <Red>We implore Thee, deliver us, O Lord.</Red><br />
-      From every sort of spell, malefice, witchcraft, and every form of the occult, <Red>We implore Thee, deliver us, O Lord.</Red><br />
-    </p>
-    <p>
-      Thou who said, "Peace I leave with you, my peace I give unto you." Grant that,
-      through the intercession of the Virgin Mary, we may be liberated from every
-      demonic influence and enjoy Thy peace always. In the Name of Christ, our Lord.
-      Amen.
-    </p>
+  return <div class='panel centered'>
+    <div class='prayer'>
+      <p class='title'>Thursday</p>
+      <p>
+        My Lord, Thou art all powerful, Thou art God, Thou art our Father. We beg Thee
+        through the intercession and help of the Archangels Sts. Michael, Raphael, and
+        Gabriel for the deliverance of our brothers and sisters who are enslaved by the evil
+        one. All Saints of Heaven, come to our aid.
+      </p>
+      <p>
+        From anxiety, sadness and obsessions, <Red>We implore Thee, deliver us, O Lord.</Red><br />
+        From hatred, fornication, and envy, <Red>We implore Thee, deliver us, O Lord.</Red><br />
+        From thoughts of jealousy, rage, and death, <Red>We implore Thee, deliver us, O Lord.</Red><br />
+        From every thought of suicide and abortion, <Red>We implore Thee, deliver us, O Lord.</Red><br />
+        From every form of sinful sexuality, <Red>We implore Thee, deliver us, O Lord.</Red><br />
+        From every division in our family, and every harmful friendship, <Red>We implore Thee, deliver us, O Lord.</Red><br />
+        From every sort of spell, malefice, witchcraft, and every form of the occult, <Red>We implore Thee, deliver us, O Lord.</Red><br />
+      </p>
+      <p>
+        Thou who said, "Peace I leave with you, my peace I give unto you." Grant that,
+        through the intercession of the Virgin Mary, we may be liberated from every
+        demonic influence and enjoy Thy peace always. In the Name of Christ, our Lord.
+        Amen.
+      </p>
+    </div>
   </div>;
 }
 
 function Friday() {
-  return <div class='panel prayer'>
-    <p class='day-title'>Friday</p>
-    <p>
-      (Litany of Humility)
-    </p>
+  return <div class='panel centered'>
+    <div class='prayer'>
+      <p class='title'>Friday</p>
+      <p>
+        (Litany of Humility)
+      </p>
+    </div>
   </div>;
 }
 
 function Saturday() {
-  return <div class='panel prayer'>
-    <p class='day-title'>Saturday</p>
-    <p>
-      O God and Father of our Lord Jesus Christ, we call upon Thy holy Name and
-      humbly beseech Thy clemency, that, through the intercession of the ever
-      immaculate Virgin, our Mother Mary, and of the glorious Archangel Saint Michael,
-      thou wouldst vouchsafe to help us against Satan and all the other unclean spirits that
-      are prowling about the world to the great peril of the human race and the loss of
-      souls. Amen.
-    </p>
+  return <div class='panel centered'>
+    <div class='prayer'>
+      <p class='title'>Saturday</p>
+      <p>
+        O God and Father of our Lord Jesus Christ, we call upon Thy holy Name and
+        humbly beseech Thy clemency, that, through the intercession of the ever
+        immaculate Virgin, our Mother Mary, and of the glorious Archangel Saint Michael,
+        thou wouldst vouchsafe to help us against Satan and all the other unclean spirits that
+        are prowling about the world to the great peril of the human race and the loss of
+        souls. Amen.
+      </p>
+    </div>
   </div>;
 }
 
@@ -402,7 +420,7 @@ function makePrayer(img: string, text: string) {
   return (
     <HalfGrid>
       <Img src={img} />
-      <div class='prayer'>
+      <div class='prayer centered'>
         {text}
       </div>
     </HalfGrid>

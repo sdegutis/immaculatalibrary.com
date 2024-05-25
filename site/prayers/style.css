@@ -2,13 +2,9 @@ html,
 body {
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
-    /* display: grid;
-    grid-template-rows: auto 1fr;
-    overflow: auto;
-    box-sizing: border-box; */
     background-color: #222 !important;
     color-scheme: dark;
+    /* overflow: hidden; */
 }
 
 * {
@@ -20,7 +16,7 @@ body {
 #tab-container {
     /* width: 100vw;
     height: 100vh; */
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 #tabs-names {
@@ -54,6 +50,12 @@ body {
     /* display: none; */
 }
 
+.centered {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
 .panel {
     width: 100vw;
     /* height: calc(100vh - 3em); */
@@ -63,15 +65,21 @@ body {
     border: 1px dashed red;
 }
 
+.title {
+    text-align: center;
+    color: lightblue;
+}
+
 .prayer {
     white-space: pre-wrap;
-    display: grid;
-    justify-content: center;
-    align-content: center;
+
+    max-width: 30em;
+    font-size: 150%;
 }
 
 .prayer p {
     /* max-width: 100%; */
+    margin: .5em 0;
 }
 
 .red {
