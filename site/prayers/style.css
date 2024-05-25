@@ -114,15 +114,15 @@ body {
     color: var(--blue);
 }
 
-.scrollable {
+.vertically-spaced {
     padding: 7em 0;
 }
 
-.prayer {
+.column {
     max-width: 33em;
 }
 
-.prayer.wide {
+.column.wide {
     max-width: 60em;
 }
 
@@ -136,6 +136,7 @@ p {
     background-image: url(./images/precious-blood-litany.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
 }
 
 .half-grid {

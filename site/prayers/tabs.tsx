@@ -13,13 +13,13 @@ for (const a of tabs) {
     };
 }
 
-// i = 0;
-// const today = new Date().getDay();
-// for (const day of document.querySelectorAll<HTMLElement>('.show-today')) {
-//     if (today !== i++) {
-//         day.closest('.panel')?.remove();
-//     }
-// }
+i = 0;
+const today = new Date().getDay();
+for (const day of document.querySelectorAll<HTMLElement>('.show-today')) {
+    if (today !== i++) {
+        day.closest('.panel')?.remove();
+    }
+}
 
 for (const slideshow of document.querySelectorAll<HTMLDivElement>('.slideshow')) {
     for (let i = 1; i < slideshow.children.length; i++) {

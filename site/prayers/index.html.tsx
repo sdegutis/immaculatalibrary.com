@@ -48,8 +48,8 @@ export default <>
 
 function Intro() {
   return <Panel>
-    <div class='centered'>
-      <div class='prayer'>
+    <div class='centered vertically-spaced'>
+      <div class='column'>
         <p class='title'>Auxilium Christianorum</p>
         <p>Our help is in the name of the Lord.<br />
           <Red>Who made heaven and earth.</Red></p>
@@ -71,8 +71,8 @@ function Intro() {
 
 function Conclusion() {
   return <Panel>
-    <div class='centered'>
-      <div class='prayer'>
+    <div class='centered vertically-spaced'>
+      <div class='column'>
         <p class='title'>Conclusion</p>
         <p>August Queen of the Heavens, heavenly Sovereign of the Angels, Thou who from
           the beginning hast received from God the power and the mission to crush the head
@@ -99,8 +99,8 @@ function Conclusion() {
 
 function Sunday() {
   return <Panel>
-    <div class='focus'>
-      <div class='prayer scrollable'>
+    <div class='centered vertically-spaced'>
+      <div class='column'>
         <p class='title show-today'>Sunday</p>
         <p>
           O Glorious Queen of Heaven and Earth, Virgin Most Powerful, thou who hast the
@@ -135,8 +135,8 @@ function Sunday() {
 
 function Monday() {
   return <Panel>
-    <div class='centered'>
-      <div class='prayer scrollable'>
+    <div class='centered vertically-spaced'>
+      <div class='column'>
         <p class='title show-today'>Monday</p>
         <p>
           In Thy name, Lord Jesus Christ, we pray that Thou cover us, our families, and all
@@ -150,8 +150,8 @@ function Monday() {
 
 function Tuesday() {
   return <Panel>
-    <div class='centered'>
-      <div class='prayer'>
+    <div class='centered vertically-spaced'>
+      <div class='column'>
         <p class='title show-today'>Tuesday</p>
         <p>
           Lord Jesus Christ, we beg Thee for the grace to remain guarded beneath the
@@ -166,8 +166,8 @@ function Tuesday() {
 
 function Wednesday() {
   return <Panel>
-    <div class='centered'>
-      <div class='prayer'>
+    <div class='centered vertically-spaced'>
+      <div class='column'>
         <p class='title show-today'>Wednesday</p>
         <p>
           In the Name of Jesus Christ, Our Lord and God, we ask Thee to render all spirits
@@ -193,8 +193,8 @@ function FloatRed(attrs: any, children: any) {
 
 function Thursday() {
   return <Panel>
-    <div class='centered'>
-      <div class='prayer'>
+    <div class='centered vertically-spaced'>
+      <div class='column'>
         <p class='title show-today'>Thursday</p>
         <p>
           My Lord, Thou art all powerful, Thou art God, Thou art our Father. We beg Thee
@@ -203,7 +203,7 @@ function Thursday() {
           one. All Saints of Heaven, come to our aid.
         </p>
       </div>
-      <div class='prayer wide'>
+      <div class='column wide'>
         <p>
           From anxiety, sadness and obsessions, <FloatRed>We implore Thee, deliver us, O Lord.</FloatRed><br />
           From hatred, fornication, and envy, <FloatRed>We implore Thee, deliver us, O Lord.</FloatRed><br />
@@ -214,7 +214,7 @@ function Thursday() {
           From every sort of spell, malefice, witchcraft, and every form of the occult, <FloatRed>We implore Thee, deliver us, O Lord.</FloatRed><br />
         </p>
       </div>
-      <div class='prayer'>
+      <div class='column'>
         <p>
           Thou who said, "Peace I leave with you, my peace I give unto you." Grant that,
           through the intercession of the Virgin Mary, we may be liberated from every
@@ -228,8 +228,8 @@ function Thursday() {
 
 function Friday() {
   return <Panel>
-    <div class='centered'>
-      <div class='prayer'>
+    <div class='centered vertically-spaced'>
+      <div class='column'>
         <p class='title show-today'>Friday</p>
         <p class='title'>Litany of Humility</p>
         <p>O Jesus meek and humble, <FloatRed>hear me.</FloatRed></p>
@@ -254,7 +254,7 @@ function Friday() {
           From the fear of being suspected, <FloatRed>deliver me Jesus.</FloatRed><br />
         </p>
       </div>
-      <div class='prayer wide'>
+      <div class='column wide'>
         <p>
           That others may be loved more than I, <FloatRed>Jesus, grant me the grace to desire it.</FloatRed><br />
           That others may be esteemed more than I, <FloatRed>Jesus, grant me the grace to desire it.</FloatRed><br />
@@ -271,8 +271,8 @@ function Friday() {
 
 function Saturday() {
   return <Panel>
-    <div class='centered'>
-      <div class='prayer'>
+    <div class='centered vertically-spaced'>
+      <div class='column'>
         <p class='title show-today'>Saturday</p>
         <p>
           O God and Father of our Lord Jesus Christ, we call upon Thy holy Name and
@@ -289,8 +289,8 @@ function Saturday() {
 
 function Litany() {
   return <Panel>
-    <div id='litany' class='centered'>
-      <div class='litany-body'>
+    <div class='centered vertically-spaced' id='litany'>
+      <div class='column'>
         <p>
           Lord have mercy, <FloatRed>Lord have mercy.</FloatRed><br />
           Christ have mercy, <FloatRed>Christ have mercy.</FloatRed><br />
@@ -333,11 +333,17 @@ function Litany() {
           Blood of Christ, pledge of eternal life, <FloatRed>save us.</FloatRed><br />
           Blood of Christ, freeing souls from purgatory, <FloatRed>save us.</FloatRed><br />
           Blood of Christ, most worthy of all glory and honor, <FloatRed>save us.</FloatRed><br />
+        </p>
+      </div>
+      <div class='column wide'>
+        <p>
           <br />
           Lamb of God, Who takest away the sins of the world, <FloatRed>spare us, O Lord.</FloatRed><br />
           Lamb of God, Who takest away the sins of the world, <FloatRed>graciously hear us, O Lord.</FloatRed><br />
           Lamb of God, Who takest away the sins of the world, <FloatRed>have mercy on us.</FloatRed><br />
         </p>
+      </div>
+      <div class='column'>
         <p>
           Thou hast redeemed us with Thy Blood, O Lord.<br />
           <Red>And made of us a kingdom for our God.</Red>
