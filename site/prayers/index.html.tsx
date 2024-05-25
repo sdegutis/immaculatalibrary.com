@@ -483,7 +483,7 @@ function makePrayer(img: string, text: string) {
           <img src={img} alt="" />
         </div>
         <div class='centered'>
-          {text}
+          {text.slice(1)}
         </div>
       </div>
     </Panel>
