@@ -1,3 +1,5 @@
+/* General */
+
 html,
 body {
     width: 100vw;
@@ -6,6 +8,7 @@ body {
     color-scheme: dark;
     overflow: hidden;
     font-size: 125%;
+    white-space: pre-wrap;
 
     --blue: #5bf;
 }
@@ -15,6 +18,8 @@ body {
     margin: 0;
     box-sizing: border-box;
 }
+
+/* Tabs */
 
 #tabs-names {
     position: fixed;
@@ -35,16 +40,43 @@ body {
     padding: 0.5em 1em;
     display: inline-block;
     text-decoration: none;
-    color: inherit;
+    color: #aaa;
     background: #222;
 }
 
+#tabs-names a:hover {
+    color: #fff;
+}
+
 #tabs-names a.active {
+    color: #fff;
     border-bottom: 2px solid var(--blue);
+}
+
+/* Slideshows */
+
+.slideshow {
+    display: grid;
+    grid-auto-flow: column;
 }
 
 .panel {
     position: relative;
+}
+
+.panel {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.panel-body {
+    overflow: auto;
+    height: 100%;
+}
+
+.panel-body::-webkit-scrollbar {
+    display: none;
 }
 
 .page-changer {
@@ -67,26 +99,14 @@ body {
     background-color: #0007;
 }
 
+/* Layout */
+
 .centered {
     display: grid;
     justify-content: center;
-    align-content: center;
     justify-items: center;
-}
-
-.panel {
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-}
-
-.panel-body {
-    overflow: auto;
-    height: 100%;
-}
-
-.panel-body::-webkit-scrollbar {
-    display: none;
+    align-content: center;
+    align-items: center;
 }
 
 .title {
@@ -94,28 +114,28 @@ body {
     color: var(--blue);
 }
 
-.prayer {
-    white-space: pre-wrap;
-    max-width: 33em;
+.scrollable {
     padding: 7em 0;
+}
+
+.prayer {
+    max-width: 33em;
 }
 
 .prayer.wide {
     max-width: 60em;
 }
 
-#litany {
-    background-image: url(./images/precious-blood-litany.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 p {
     margin: 2em 0;
 }
 
-.red {
-    color: yellow;
+/* Specifics */
+
+#litany {
+    background-image: url(./images/precious-blood-litany.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .half-grid {
@@ -124,20 +144,11 @@ p {
     grid-template-columns: 50% 50%;
 }
 
-.img-half {
-    width: 100%;
-    height: 100%;
-    display: grid;
-    justify-content: center;
-    align-content: center;
-}
-
-.img-half img {
+img {
     max-width: 50vw;
     max-height: 100vh;
 }
 
-.slideshow {
-    display: grid;
-    grid-auto-flow: column;
+.red {
+    color: yellow;
 }
