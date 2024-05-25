@@ -7,6 +7,14 @@ for (const a of document.querySelectorAll<HTMLAnchorElement>('#tabs-names a')) {
     };
 }
 
+i = 0;
+const today = new Date().getDay();
+for (const day of document.querySelectorAll<HTMLElement>('.show-today')) {
+    if (today !== i++) {
+        day.remove();
+    }
+}
+
 for (const slideshow of document.querySelectorAll<HTMLDivElement>('.slideshow')) {
     for (let i = 1; i < slideshow.children.length; i++) {
         const a = slideshow.children[i - 1] as HTMLElement;

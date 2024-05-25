@@ -99,7 +99,7 @@ function Conclusion() {
 }
 
 function Sunday() {
-  return <div class='panel centered'>
+  return <div class='panel centered show-today'>
     <div class='prayer'>
       <p class='title'>Sunday</p>
       <p>
@@ -133,7 +133,7 @@ function Sunday() {
 }
 
 function Monday() {
-  return <div class='panel centered'>
+  return <div class='panel centered show-today'>
     <div class='prayer'>
       <p class='title'>Monday</p>
       <p>
@@ -146,7 +146,7 @@ function Monday() {
 }
 
 function Tuesday() {
-  return <div class='panel centered'>
+  return <div class='panel centered show-today'>
     <div class='prayer'>
       <p class='title'>Tuesday</p>
       <p>
@@ -160,7 +160,7 @@ function Tuesday() {
 }
 
 function Wednesday() {
-  return <div class='panel centered'>
+  return <div class='panel centered show-today'>
     <div class='prayer'>
       <p class='title'>Wednesday</p>
       <p>
@@ -181,7 +181,7 @@ function Wednesday() {
 }
 
 function Thursday() {
-  return <div class='panel centered'>
+  return <div class='panel centered show-today'>
     <div class='prayer'>
       <p class='title'>Thursday</p>
       <p>
@@ -210,7 +210,7 @@ function Thursday() {
 }
 
 function Friday() {
-  return <div class='panel centered'>
+  return <div class='panel centered show-today'>
     <div class='prayer'>
       <p class='title'>Friday</p>
       <p>
@@ -221,7 +221,7 @@ function Friday() {
 }
 
 function Saturday() {
-  return <div class='panel centered'>
+  return <div class='panel centered show-today'>
     <div class='prayer'>
       <p class='title'>Saturday</p>
       <p>
