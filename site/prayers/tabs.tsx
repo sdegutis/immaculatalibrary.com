@@ -44,4 +44,4 @@ function PageChanger(attrs: { to: HTMLElement, side: 'left' | 'right' }, childre
     return button;
 }
 
-document.querySelector<HTMLElement>('#tabs-names a')?.click();
+document.querySelector<HTMLElement>('.focus')?.scrollIntoView();

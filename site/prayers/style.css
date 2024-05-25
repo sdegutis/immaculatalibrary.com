@@ -4,7 +4,10 @@ body {
     height: 100vh;
     background-color: #222 !important;
     color-scheme: dark;
-    /* overflow: hidden; */
+    overflow: hidden;
+    font-size: 125%;
+
+    --blue: #5bf;
 }
 
 * {
@@ -37,7 +40,7 @@ body {
 }
 
 #tabs-names a.active {
-    border-bottom: 1px solid lightblue;
+    border-bottom: 2px solid var(--blue);
 }
 
 .panel {
@@ -54,7 +57,7 @@ body {
     padding: .25em .5em;
     color: #fff;
     background-color: #0001;
-    font-size: 300%;
+    font-size: 200%;
     cursor: pointer;
 
     transition: background-color ease-in-out .2s;
@@ -80,28 +83,43 @@ body {
 
 .title {
     text-align: center;
-    color: lightblue;
+    color: var(--blue);
 }
 
 .prayer {
     white-space: pre-wrap;
     max-width: 33em;
-    font-size: 125%;
 
     max-height: 100vh;
     overflow: auto;
+}
+
+#litany {
+    background-image: url(./images/precious-blood-litany.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#litany .litany-body {
+    padding: 7em 0;
+    overflow: auto;
+}
+
+#litany p {
+    max-width: 42em;
+
 }
 
 .prayer.wide {
     max-width: 60em;
 }
 
-.prayer p {
+p {
     margin: 2em 0;
 }
 
 .red {
-    color: crimson;
+    color: yellow;
 }
 
 .half-grid {

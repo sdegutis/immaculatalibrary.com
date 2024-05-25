@@ -222,9 +222,7 @@ function Friday() {
     <div class='prayer'>
       <p class='title'>Friday</p>
       <p class='title'>Litany of Humility</p>
-
       <p>O Jesus meek and humble, <FloatRed>hear me.</FloatRed></p>
-
       <p>
         From the desire of being esteemed, <FloatRed>deliver me Jesus.</FloatRed><br />
         From the desire of being loved, <FloatRed>deliver me Jesus.</FloatRed><br />
@@ -235,7 +233,6 @@ function Friday() {
         From the desire of being consulted, <FloatRed>deliver me Jesus.</FloatRed><br />
         From the desire of being approved, <FloatRed>deliver me Jesus.</FloatRed><br />
       </p>
-
       <p>
         From the fear of being humiliated, <FloatRed>deliver me Jesus.</FloatRed><br />
         From the fear of being despised, <FloatRed>deliver me Jesus.</FloatRed><br />
@@ -246,10 +243,8 @@ function Friday() {
         From the fear of being wronged, <FloatRed>deliver me Jesus.</FloatRed><br />
         From the fear of being suspected, <FloatRed>deliver me Jesus.</FloatRed><br />
       </p>
-
     </div>
     <div class='prayer wide'>
-
       <p>
         That others may be loved more than I, <FloatRed>Jesus, grant me the grace to desire it.</FloatRed><br />
         That others may be esteemed more than I, <FloatRed>Jesus, grant me the grace to desire it.</FloatRed><br />
@@ -258,9 +253,7 @@ function Friday() {
         That others may be praised and I go unnoticed, <FloatRed>Jesus, grant me the grace to desire it.</FloatRed><br />
         That others may be preferred to me in everything, <FloatRed>Jesus, grant me the grace to desire it.</FloatRed><br />
         That others may become holier than I, provided that I become as holy as I should, <FloatRed>Jesus, grant me the grace to desire it.</FloatRed><br />
-
       </p>
-
     </div>
   </div>;
 }
@@ -282,61 +275,60 @@ function Saturday() {
 }
 
 function Litany() {
-  return <HalfGrid>
-    <Img src='./images/precious-blood-litany.jpg' />
+  return <div class='panel focus' id='litany'>
+    {/* <Img src='' /> */}
 
-    <div class='prayer'>
+    <div class='litany-body centered'>
       <p>
-        Lord have mercy.<br />
-        Christ have mercy.<br />
-        Lord have mercy.<br />
-        Christ hear us.<br />
-        Christ graciously hear us.<br />
+        Lord have mercy, <FloatRed>Lord have mercy.</FloatRed><br />
+        Christ have mercy, <FloatRed>Christ have mercy.</FloatRed><br />
+        Lord have mercy, <FloatRed>Lord have mercy.</FloatRed><br />
+        Christ hear us, <FloatRed>Christ graciously hear us.</FloatRed><br />
         <br />
-        God the Father of Heaven, <Red>have mercy on us.</Red><br />
-        God the Son, Redeemer of the world, <Red>have mercy on us.</Red><br />
-        God the Holy Spirit, <Red>have mercy on us.</Red><br />
-        Holy Trinity, One God, <Red>have mercy on us.</Red><br />
+        God the Father of Heaven, <FloatRed>have mercy on us.</FloatRed><br />
+        God the Son, Redeemer of the world, <FloatRed>have mercy on us.</FloatRed><br />
+        God the Holy Spirit, <FloatRed>have mercy on us.</FloatRed><br />
+        Holy Trinity, One God, <FloatRed>have mercy on us.</FloatRed><br />
         <br />
-        Blood of Christ, only-begotten Son of the Eternal Father, <Red>save us.</Red><br />
-        Blood of Christ, Incarnate Word of God, <Red>save us.</Red><br />
-        Blood of Christ, of the New and Eternal Testament, <Red>save us.</Red><br />
+        Blood of Christ, only-begotten Son of the Eternal Father, <FloatRed>save us.</FloatRed><br />
+        Blood of Christ, Incarnate Word of God, <FloatRed>save us.</FloatRed><br />
+        Blood of Christ, of the New and Eternal Testament, <FloatRed>save us.</FloatRed><br />
         <br />
-        Blood of Christ, falling upon the earth in the Agony, <Red>save us.</Red><br />
-        Blood of Christ, shed profusely in the Scourging, <Red>save us.</Red><br />
-        Blood of Christ, flowing forth in the Crowning with Thorns, <Red>save us.</Red><br />
+        Blood of Christ, falling upon the earth in the Agony, <FloatRed>save us.</FloatRed><br />
+        Blood of Christ, shed profusely in the Scourging, <FloatRed>save us.</FloatRed><br />
+        Blood of Christ, flowing forth in the Crowning with Thorns, <FloatRed>save us.</FloatRed><br />
         <br />
-        Blood of Christ, poured out on the Cross, <Red>save us.</Red><br />
-        Blood of Christ, price of our salvation, <Red>save us.</Red><br />
-        Blood of Christ, without which there is no forgiveness, <Red>save us.</Red><br />
+        Blood of Christ, poured out on the Cross, <FloatRed>save us.</FloatRed><br />
+        Blood of Christ, price of our salvation, <FloatRed>save us.</FloatRed><br />
+        Blood of Christ, without which there is no forgiveness, <FloatRed>save us.</FloatRed><br />
         <br />
-        Blood of Christ, Eucharistic drink and refreshment of souls, <Red>save us.</Red><br />
-        Blood of Christ, stream of mercy, <Red>save us.</Red><br />
-        Blood of Christ, victor over demons, <Red>save us.</Red><br />
+        Blood of Christ, Eucharistic drink and refreshment of souls, <FloatRed>save us.</FloatRed><br />
+        Blood of Christ, stream of mercy, <FloatRed>save us.</FloatRed><br />
+        Blood of Christ, victor over demons, <FloatRed>save us.</FloatRed><br />
         <br />
-        Blood of Christ, courage of Martyrs, <Red>save us.</Red><br />
-        Blood of Christ, strength of Confessors, <Red>save us.</Red><br />
-        Blood of Christ, bringing forth Virgins, <Red>save us.</Red><br />
+        Blood of Christ, courage of Martyrs, <FloatRed>save us.</FloatRed><br />
+        Blood of Christ, strength of Confessors, <FloatRed>save us.</FloatRed><br />
+        Blood of Christ, bringing forth Virgins, <FloatRed>save us.</FloatRed><br />
         <br />
-        Blood of Christ, help of those in peril, <Red>save us.</Red><br />
-        Blood of Christ, relief of the burdened, <Red>save us.</Red><br />
-        Blood of Christ, solace in sorrow, <Red>save us.</Red><br />
+        Blood of Christ, help of those in peril, <FloatRed>save us.</FloatRed><br />
+        Blood of Christ, relief of the burdened, <FloatRed>save us.</FloatRed><br />
+        Blood of Christ, solace in sorrow, <FloatRed>save us.</FloatRed><br />
         <br />
-        Blood of Christ, hope of the penitent, <Red>save us.</Red><br />
-        Blood of Christ, consolation of the dying, <Red>save us.</Red><br />
-        Blood of Christ, peace and tenderness of hearts, <Red>save us.</Red><br />
+        Blood of Christ, hope of the penitent, <FloatRed>save us.</FloatRed><br />
+        Blood of Christ, consolation of the dying, <FloatRed>save us.</FloatRed><br />
+        Blood of Christ, peace and tenderness of hearts, <FloatRed>save us.</FloatRed><br />
         <br />
-        Blood of Christ, pledge of eternal life, <Red>save us.</Red><br />
-        Blood of Christ, freeing souls from purgatory, <Red>save us.</Red><br />
-        Blood of Christ, most worthy of all glory and honor, <Red>save us.</Red><br />
+        Blood of Christ, pledge of eternal life, <FloatRed>save us.</FloatRed><br />
+        Blood of Christ, freeing souls from purgatory, <FloatRed>save us.</FloatRed><br />
+        Blood of Christ, most worthy of all glory and honor, <FloatRed>save us.</FloatRed><br />
         <br />
-        Lamb of God, Who takest away the sins of the world, <Red>spare us, O Lord.</Red><br />
-        Lamb of God, Who takest away the sins of the world, <Red>graciously hear us, O Lord.</Red><br />
-        Lamb of God, Who takest away the sins of the world, <Red>have mercy on us.</Red><br />
+        Lamb of God, Who takest away the sins of the world, <FloatRed>spare us, O Lord.</FloatRed><br />
+        Lamb of God, Who takest away the sins of the world, <FloatRed>graciously hear us, O Lord.</FloatRed><br />
+        Lamb of God, Who takest away the sins of the world, <FloatRed>have mercy on us.</FloatRed><br />
       </p>
       <p>
-        <Red>V.</Red> Thou hast redeemed us with Thy Blood, O Lord.<br />
-        <Red>R.</Red> And made of us a kingdom for our God.
+        Thou hast redeemed us with Thy Blood, O Lord.<br />
+        <Red>And made of us a kingdom for our God.</Red>
       </p>
       <p style='text-align:center; font-style:italic'>Let us pray.</p>
       <p>
@@ -348,7 +340,7 @@ function Litany() {
         Through the same Christ our Lord. <Red>Amen.</Red>
       </p>
     </div>
-  </HalfGrid>;
+  </div>;
 }
 
 function AngelMorning() {
@@ -506,7 +498,7 @@ function Tabs(attrs: { tabs: Record<string, JSX.Element> }) {
       <ul id='tabs-names'>
         {Object.keys(attrs.tabs).map((tabName, i) => (
           <li>
-            <a href="#">
+            <a href="#" class={i === 0 ? 'active' : ''}>
               {tabName}
             </a>
           </li>
