@@ -65,9 +65,15 @@ body {
     outline: 0;
     padding: .25em .5em;
     color: #fff;
-    background: #0005;
+    background-color: #0001;
     font-size: 300%;
     cursor: pointer;
+
+    transition: background-color ease-in-out .2s;
+}
+
+.page-changer:hover {
+    background-color: #0007;
 }
 
 .page-changer.left {
