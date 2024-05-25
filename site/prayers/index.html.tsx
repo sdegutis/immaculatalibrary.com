@@ -1,3 +1,6 @@
+import { Font } from '../components/fonts.js';
+import martel from '../fonts/martel/';
+
 export default <>
   <Html>
     <Tabs tabs={{
@@ -479,7 +482,9 @@ function Html(attrs: any, children: any) {
         <link href='./style.css' rel='stylesheet' />
       </head>
       <body>
-        {children}
+        <Font use={martel} fallback="serif">
+          {children}
+        </Font>
       </body>
     </html>
   </>;

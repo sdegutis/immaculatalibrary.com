@@ -103,7 +103,7 @@ body {
 .prayer {
     white-space: pre-wrap;
     max-width: 30em;
-    font-size: 150%;
+    font-size: 125%;
 
     max-height: 100vh;
     overflow: auto;
