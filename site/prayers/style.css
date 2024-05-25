@@ -29,12 +29,15 @@ body {
 }
 
 #tabs-names a {
-    padding: 1em;
+    padding: 0.5em 1em;
     display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    background: #222;
 }
 
 #tabs-names a.active {
-    border-bottom: 1px solid red;
+    border-bottom: 1px solid lightblue;
 }
 
 .panel {
@@ -72,7 +75,7 @@ body {
     height: 100vh;
     box-sizing: border-box;
     overflow: auto;
-    border: 1px dashed red;
+    /* border: 1px dashed red; */
 }
 
 .title {

@@ -459,10 +459,9 @@ function Tabs(attrs: { tabs: Record<string, JSX.Element> }) {
     <div id='tab-container'>
       <script src='./tabs.js' type='module' />
       <ul id='tabs-names'>
-        {Object.keys(attrs.tabs).map((tabName, i) => {
-          const a = i === 0 ? { class: "active" } : {};
-          return <li {...a}><a href="#">{tabName}</a></li>;
-        })}
+        {Object.keys(attrs.tabs).map((tabName, i) => (
+          <li><a href="#">{tabName}</a></li>)
+        )}
       </ul>
       <div id='tabs-bodies'>
         {Object.values(attrs.tabs)}

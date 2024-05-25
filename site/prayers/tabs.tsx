@@ -1,9 +1,15 @@
 let i = 0;
-for (const a of document.querySelectorAll<HTMLAnchorElement>('#tabs-names a')) {
+const tabs = document.querySelectorAll<HTMLAnchorElement>('#tabs-names a');
+for (const a of tabs) {
     const child = document.getElementById('tabs-bodies')?.children[i++];
     a.onclick = (e) => {
         e.preventDefault();
         child?.scrollIntoView({ behavior: 'smooth' });
+
+        for (const a of tabs) {
+            a.classList.remove('active');
+        }
+        a.classList.add('active');
     };
 }
 
@@ -37,3 +43,7 @@ function PageChanger(attrs: { to: HTMLElement, side: 'left' | 'right' }, childre
     };
     return button;
 }
+
+setTimeout(() => {
+    document.querySelector<HTMLElement>('#tabs-names a')?.click();
+}, 0);
