@@ -483,9 +483,7 @@ function makePrayer(img: string, text: string) {
           <img src={img} alt="" />
         </div>
         <div class='centered'>
-          <div class='prayer'>
-            {text}
-          </div>
+          {text}
         </div>
       </div>
     </Panel>
