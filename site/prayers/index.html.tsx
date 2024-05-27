@@ -363,119 +363,119 @@ function Litany() {
 }
 
 function AngelMorning() {
-  return <Prayer img="./images/angel-morning.jpg">{`
-  Angel of God, my Guardian dear
-    To Whom God's love commits me here
-  Ever this day be at my side
-    To light and guard, to rule and guide
-  Amen
-  `}</Prayer>;
+  return <Prayer img="./images/angel-morning.jpg" lines={[
+    `Angel of God, my Guardian dear`,
+    `  To Whom God's love commits me here`,
+    `Ever this day be at my side`,
+    `  To light and guard, to rule and guide`,
+    `Amen`,
+  ]} />;
 }
 
 function AngelNight() {
-  return <Prayer img="./images/angel-night.jpg">{`
-  Angel of God, my Guardian dear
-    To Whom God's love commits me here
-  Ever this night be at my side
-    To light and guard, to rule and guide
-  Amen
-  `}</Prayer>;
+  return <Prayer img="./images/angel-night.jpg" lines={[
+    `Angel of God, my Guardian dear`,
+    `  To Whom God's love commits me here`,
+    `Ever this night be at my side`,
+    `  To light and guard, to rule and guide`,
+    `Amen`,
+  ]} />;
 }
 
 function OurFather() {
-  return <Prayer img="./images/jesus-sacred-heart.jpg">{`
-  Our Father
-    Who art in Heaven
-      Hallowed be Thy Name
-      Thy Kingdome come
-      Thy Will be done
-        On Earth as it is in Heaven
-    Give us this day our daily bread
-      And forgive us our trespasses
-        As we forgive those who trespass against us
-      And lead us not into temptation
-      But deliver us from evil
-  Amen
-  `}</Prayer>;
+  return <Prayer img="./images/jesus-sacred-heart.jpg" lines={[
+    `Our Father`,
+    `  Who art in Heaven`,
+    `    Hallowed be Thy Name`,
+    `    Thy Kingdome come`,
+    `    Thy Will be done`,
+    `      On Earth as it is in Heaven`,
+    `  Give us this day our daily bread`,
+    `    And forgive us our trespasses`,
+    `      As we forgive those who trespass against us`,
+    `    And lead us not into temptation`,
+    `    But deliver us from evil`,
+    `Amen`,
+  ]} />;
 }
 
 function HailMary() {
-  return <Prayer img="./images/mary-angels.jpg">{`
-  Hail Mary
-    Full of Grace
-      The Lord is with thee
-    Blessed art thou among women
-      And blessed is the fruit of thy womb, Jesus
-    Holy Mary, Mother of God
-      Pray for us sinners now
-        And at the hour of our death
-  Amen
-  `}</Prayer>;
+  return <Prayer img="./images/mary-angels.jpg" lines={[
+    `Hail Mary`,
+    `  Full of Grace`,
+    `    The Lord is with thee`,
+    `  Blessed art thou among women`,
+    `    And blessed is the fruit of thy womb, Jesus`,
+    `  Holy Mary, Mother of God`,
+    `    Pray for us sinners now`,
+    `      And at the hour of our death`,
+    `Amen`,
+  ]} />;
 }
 
 function GloryBe() {
-  return <Prayer img="./images/holy-trinity.jpg">{`
-  Glory be
-    To the Father
-    And to the Son
-    And to the Holy Spirit
-  As it was
-    In the beginning
-    Is now
-    And ever shall be
-      World without end
-  Amen
-  `}</Prayer>;
+  return <Prayer img="./images/holy-trinity.jpg" lines={[
+    `Glory be`,
+    `  To the Father`,
+    `  And to the Son`,
+    `  And to the Holy Spirit`,
+    `As it was`,
+    `  In the beginning`,
+    `  Is now`,
+    `  And ever shall be`,
+    `    World without end`,
+    `Amen`,
+  ]} />;
 }
 
 function PreciousBlood() {
-  return <Prayer img="./images/precious-blood.jpg">{`
-  Eternal Father
-    I offer Thee
-      The Most Precious Blood
-      Of Thy Divine Son, Jesus
-    In union with
-      The Masses said
-      Throughout the world today
-    For
-      All the Holy Souls in Purgatory
-      For sinners everywhere
-      For sinners in the universal Church
-      Those in my own home
-      And within my family
-  Amen
-  `}</Prayer>;
+  return <Prayer img="./images/precious-blood.jpg" lines={[
+    `Eternal Father`,
+    `  I offer Thee`,
+    `    The Most Precious Blood`,
+    `    Of Thy Divine Son, Jesus`,
+    `  In union with`,
+    `    The Masses said`,
+    `    Throughout the world today`,
+    `  For`,
+    `    All the Holy Souls in Purgatory`,
+    `    For sinners everywhere`,
+    `    For sinners in the universal Church`,
+    `    Those in my own home`,
+    `    And within my family`,
+    `Amen`,
+  ]} />;
 }
 
 function SaintMichael() {
-  return <Prayer img="./images/michael.jpg">{`
-  St. Michael the Archangel
-    Defend us in battle
-      Be our protection against
-      The wickedness and snares
-      Of the devil
-        May God rebuke him
-        We humbly pray
-    And do thou
-      O Prince of the Heavenly Hosts
-      By the power of God
-      Cast into Hell
-        Satan, and all the evil spirits
-        Who prowl about the world
-        Seeking the ruin of souls
-  Amen
-  `}</Prayer>;
+  return <Prayer img="./images/michael.jpg" lines={[
+    `St. Michael the Archangel`,
+    `  Defend us in battle`,
+    `    Be our protection against`,
+    `    The wickedness and snares`,
+    `    Of the devil`,
+    `      May God rebuke him`,
+    `      We humbly pray`,
+    `  And do thou`,
+    `    O Prince of the Heavenly Hosts`,
+    `    By the power of God`,
+    `    Cast into Hell`,
+    `      Satan, and all the evil spirits`,
+    `      Who prowl about the world`,
+    `      Seeking the ruin of souls`,
+    `Amen`,
+  ]} />;
 }
 
 function Memorare() {
-  return <Prayer img='../sidebar/pic.jpg'>{`
-  Holy Family
-    Save our family
-      Amen
-  `}</Prayer>
+  return <Prayer img='../sidebar/pic.jpg' lines={[
+    `Holy Family`,
+    `  Save our family`,
+    `    Amen`,
+  ]} />
 }
 
-function Prayer(attrs: { img: string }, children: [string]) {
+function Prayer(attrs: { img: string, lines: string[] }) {
   return (
     <Panel>
       <div class='half-grid'>
@@ -483,7 +483,7 @@ function Prayer(attrs: { img: string }, children: [string]) {
           <img src={attrs.img} alt="" />
         </div>
         <div class='centered'>
-          {children[0].slice(1)}
+          {attrs.lines.join('\n')}
         </div>
       </div>
     </Panel>
