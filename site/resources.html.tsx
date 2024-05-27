@@ -20,7 +20,7 @@ export default <>
           <p><a href='https://www.youtube.com/watch?v=rz5gektkF0o'>Online Adoration</a></p>
 
           <h3>Prayers</h3>
-          <p><a href='/prayers.html'>Daily Prayers</a></p>
+          <p><a href='/prayers/'>Daily Prayers</a></p>
           <p><a href='https://www.catholiccompany.com/magazine/prayer-holy-souls-purgatory-st-gertrude-5921'>St. Gertrude Prayer</a></p>
           <p><a href='http://auxiliumchristianorum.org/'>Auxilium Christianorum</a></p>
           <p><a href='https://www.catholicexorcism.org/'>CatholicExorcism.org</a></p>
