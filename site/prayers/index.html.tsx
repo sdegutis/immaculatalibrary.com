@@ -363,27 +363,27 @@ function Litany() {
 }
 
 function AngelMorning() {
-  return makePrayer("./images/angel-morning.jpg", `
+  return <Prayer img="./images/angel-morning.jpg">{`
   Angel of God, my Guardian dear
     To Whom God's love commits me here
   Ever this day be at my side
     To light and guard, to rule and guide
   Amen
-`);
+  `}</Prayer>;
 }
 
 function AngelNight() {
-  return makePrayer("./images/angel-night.jpg", `
+  return <Prayer img="./images/angel-night.jpg">{`
   Angel of God, my Guardian dear
     To Whom God's love commits me here
   Ever this night be at my side
     To light and guard, to rule and guide
   Amen
-`);
+  `}</Prayer>;
 }
 
 function OurFather() {
-  return makePrayer("./images/jesus-sacred-heart.jpg", `
+  return <Prayer img="./images/jesus-sacred-heart.jpg">{`
   Our Father
     Who art in Heaven
       Hallowed be Thy Name
@@ -396,11 +396,11 @@ function OurFather() {
       And lead us not into temptation
       But deliver us from evil
   Amen
-`);
+  `}</Prayer>;
 }
 
 function HailMary() {
-  return makePrayer("./images/mary-angels.jpg", `
+  return <Prayer img="./images/mary-angels.jpg">{`
   Hail Mary
     Full of Grace
       The Lord is with thee
@@ -410,11 +410,11 @@ function HailMary() {
       Pray for us sinners now
         And at the hour of our death
   Amen
-`);
+  `}</Prayer>;
 }
 
 function GloryBe() {
-  return makePrayer("./images/holy-trinity.jpg", `
+  return <Prayer img="./images/holy-trinity.jpg">{`
   Glory be
     To the Father
     And to the Son
@@ -425,11 +425,11 @@ function GloryBe() {
     And ever shall be
       World without end
   Amen
-`);
+  `}</Prayer>;
 }
 
 function PreciousBlood() {
-  return makePrayer("./images/precious-blood.jpg", `
+  return <Prayer img="./images/precious-blood.jpg">{`
   Eternal Father
     I offer Thee
       The Most Precious Blood
@@ -444,11 +444,11 @@ function PreciousBlood() {
       Those in my own home
       And within my family
   Amen
-`);
+  `}</Prayer>;
 }
 
 function SaintMichael() {
-  return makePrayer("./images/michael.jpg", `
+  return <Prayer img="./images/michael.jpg">{`
   St. Michael the Archangel
     Defend us in battle
       Be our protection against
@@ -464,26 +464,26 @@ function SaintMichael() {
         Who prowl about the world
         Seeking the ruin of souls
   Amen
-`);
+  `}</Prayer>;
 }
 
 function Memorare() {
-  return makePrayer("../sidebar/pic.jpg", `
+  return <Prayer img='../sidebar/pic.jpg'>{`
   Holy Family
     Save our family
       Amen
-`);
+  `}</Prayer>
 }
 
-function makePrayer(img: string, text: string) {
+function Prayer(attrs: { img: string }, children: [string]) {
   return (
     <Panel>
       <div class='half-grid'>
         <div class='centered'>
-          <img src={img} alt="" />
+          <img src={attrs.img} alt="" />
         </div>
         <div class='centered'>
-          {text.slice(1)}
+          {children[0].slice(1)}
         </div>
       </div>
     </Panel>
