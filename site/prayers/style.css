@@ -128,10 +128,6 @@ body {
     color: var(--blue);
 }
 
-.vertically-spaced {
-    padding: 7em 0;
-}
-
 .column {
     max-width: 33em;
 }
@@ -140,8 +136,30 @@ body {
     max-width: 60em;
 }
 
-p {
-    margin: 2em 0;
+.spaced-mini {
+    margin: 0.5em 0;
+}
+
+.spaced-small {
+    margin: 1em 0;
+}
+
+.spaced-medium {
+    margin: 3em 0;
+}
+
+.spaced-big {
+    padding: 7em 0;
+}
+
+.two-cols {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 0 .5em;
+}
+
+.two-cols>*:nth-child(2n) {
+    text-align: right;
 }
 
 /* Specifics */
