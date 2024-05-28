@@ -5,8 +5,20 @@ for (const [i, day] of Object.entries(document.querySelectorAll<HTMLElement>('.s
     }
 }
 
-interface Tab {
-    firstPanel: Panel;
+class Tab {
+    static currentTab?: Tab;
+    constructor(public firstPanel: Panel, private button: HTMLAnchorElement) {
+        this.button.onclick = (e) => {
+            e.preventDefault();
+            this.focus();
+        };
+    }
+    focus() {
+        Tab.currentTab?.button.classList.remove('active');
+        Tab.currentTab = this;
+        this.button.classList.add('active');
+        this.firstPanel.focus();
+    };
 }
 
 class Panel {
@@ -24,6 +36,7 @@ class Panel {
 
 const tabs: Tab[] = [];
 
+const tabButtons = [...document.querySelectorAll<HTMLAnchorElement>('#tabs-names a')];
 for (const slideshow of document.querySelectorAll<HTMLDivElement>('.slideshow')) {
     let lastPanel: Panel | undefined;
 
@@ -57,25 +70,8 @@ for (const slideshow of document.querySelectorAll<HTMLDivElement>('.slideshow'))
         if (panel.next) panel.panelDiv.append(<PageChanger to={panel.next} side='right'>&rsaquo;</PageChanger>);
     }
 
-    const tab: Tab = { firstPanel };
+    const tab: Tab = new Tab(firstPanel, tabButtons.shift()!);
     tabs.push(tab);
-}
-
-
-
-const tabButtons = document.querySelectorAll<HTMLAnchorElement>('#tabs-names a');
-for (const [i, a] of Object.entries(tabButtons)) {
-    a.onclick = (e) => {
-        e.preventDefault();
-        const tab = tabs[+i]!;
-        console.log(tab)
-        tab.firstPanel.focus();
-
-        for (const a of tabButtons) {
-            a.classList.remove('active');
-        }
-        a.classList.add('active');
-    };
 }
 
 function PageChanger(attrs: { to: Panel, side: 'left ' | 'right' }, children: any) {
@@ -91,4 +87,4 @@ function PageChanger(attrs: { to: Panel, side: 'left ' | 'right' }, children: an
     return button;
 }
 
-tabs[0]?.firstPanel.focus();
+tabs[0]!.focus();
