@@ -9,7 +9,7 @@ export default <>
       <title>Sidebar</title>
       <link rel="stylesheet" href="./style.css" />
       <script src="https://unpkg.com/romcal@1.3.0/dist/romcal.bundle.min.js"></script>
-      <link rel="icon" type="image/png" sizes="32x32" href='./app.ico' />
+      <link rel="icon" type="image/png" sizes="32x32" href='./favicon.ico' />
     </head>
 
     <body>
