@@ -51,9 +51,12 @@ function Intro() {
     <div class='centered spaced-big'>
       <div class='column'>
         <p class='title'>Auxilium Christianorum</p>
-        <p class='spaced-small'>Our help is in the name of the Lord.<br />
-          <Red>Who made heaven and earth.</Red></p>
-        <p>Most gracious Virgin Mary, thou who wouldst crush the head of the
+        <p class='spaced-small'>
+          Our help is in the name of the Lord.<br />
+          <Red>Who made heaven and earth.</Red>
+        </p>
+        <p>
+          Most gracious Virgin Mary, thou who wouldst crush the head of the
           serpent, protect us from the vengeance of the evil one. We offer our prayers,
           supplications, sufferings and good works to thee so that thou may purify them,
           sanctify them and present them to thy Son as a perfect offering. May this offering
