@@ -46,26 +46,60 @@ export default <>
   </Html>
 </>;
 
+function Pre(attrs: { lines: string[] }) {
+  return attrs.lines.join('\n');
+}
+
+function pre(lines: string[]) {
+  return lines.join('\n');
+}
+
 function Intro() {
   return <Panel>
     <div class='centered spaced-big'>
-      <div class='column'>
-        <p class='title'>Auxilium Christianorum</p>
+      <p class='title'>Auxilium Christianorum</p>
+      <p class='spaced-small'>
+        Our help is in the name of the Lord.<br />
+        <Red>Who made heaven and earth.</Red>
+      </p>
+      <div class='column wider'>
         <p class='spaced-small'>
-          Our help is in the name of the Lord.<br />
-          <Red>Who made heaven and earth.</Red>
+          {pre([
+            `Most gracious Virgin Mary,`,
+            `  thou who wouldst crush the head of the serpent,`,
+            `    protect us from the vengeance of the evil one.`,
+          ])}
         </p>
-        <p>
-          Most gracious Virgin Mary, thou who wouldst crush the head of the
-          serpent, protect us from the vengeance of the evil one. We offer our prayers,
-          supplications, sufferings and good works to thee so that thou may purify them,
-          sanctify them and present them to thy Son as a perfect offering. May this offering
-          be given so that the demons that influence or seek to influence the members of the
-          Auxilium Christianorum do not know the source of their expulsion and blindness.
-          Blind them so that they know not our good works. Blind them so that they know
-          not on whom to take vengeance. Blind them so that they may receive the just
-          sentence for their works. Cover us with the Precious Blood of thy Son so that we
-          may enjoy the protection which flows from His Passion and Death. Amen.
+        <p class='spaced-small'>
+          {pre([
+            `We offer our prayers, supplications, sufferings and good works to thee`,
+            `  so that thou may purify them, sanctify them and present them`,
+            `    to thy Son as a perfect offering.`,
+          ])}
+        </p>
+        <p class='spaced-small'>
+          {pre([
+            `May this offering be given so that`,
+            `  the demons that influence or seek to influence the members of the Auxilium Christianorum`,
+            `    do not know the source of their expulsion and blindness.`,
+          ])}
+        </p>
+        <p class='spaced-small'>
+          {pre([
+            `Blind them so that they know not our good works.`,
+            `  Blind them so that they know not on whom to take vengeance.`,
+            `    Blind them so that they may receive the just sentence for their works.`,
+          ])}
+        </p>
+        <p class='spaced-small'>
+          {pre([
+            `Cover us with the Precious Blood of thy Son`,
+            `  so that we may enjoy the protection`,
+            `    which flows from His Passion and Death.`,
+          ])}
+        </p>
+        <p class='spaced-small'>
+          Amen
         </p>
       </div>
     </div>

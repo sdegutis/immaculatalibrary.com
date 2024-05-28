@@ -136,6 +136,10 @@ body {
     max-width: 60em;
 }
 
+.column.wider {
+    max-width: 70em;
+}
+
 .spaced-mini {
     margin: 0.5em 0;
 }
