@@ -552,6 +552,7 @@ function Html(attrs: any, children: any) {
         <title>Prayers</title>
         <link href='./style.css' rel='stylesheet' />
         <script src='./client.js' type='module' />
+        <link rel="icon" type="image/png" sizes="32x32" href='./favicon.ico' />
       </head>
       <body>
         <Font use={martel} fallback="serif">
