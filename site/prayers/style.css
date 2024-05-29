@@ -21,6 +21,15 @@ body {
 /* Tabs */
 
 #tabs-names {
+    opacity: 0.1;
+    transition: opacity 200ms ease-in-out;
+}
+
+#tabs-names:hover {
+    opacity: 1;
+}
+
+#tabs-names {
     position: fixed;
     top: 0;
     left: 50%;
