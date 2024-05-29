@@ -168,6 +168,10 @@ body {
 
 /* Specifics */
 
+.highlightable-line {
+    justify-self: normal;
+}
+
 #litany {
     background-image: url(./images/precious-blood-litany.jpg);
     background-repeat: no-repeat;
