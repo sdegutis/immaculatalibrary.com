@@ -55,8 +55,8 @@ function Intro() {
     <div class='centered spaced-big'>
       <p class='title'>Auxilium Christianorum</p>
       <p class='spaced-small'>
-        Our help is in the name of the Lord.<br />
-        <Red>Who made heaven and earth.</Red>
+        <Line>Our help is in the name of the Lord.</Line>
+        <Line><Red>Who made heaven and earth.</Red></Line>
       </p>
       <div class='column wider'>
         <p class='spaced-small'>

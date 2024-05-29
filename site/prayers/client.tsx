@@ -25,6 +25,7 @@ class Panel {
     public prev?: Panel | undefined;
     public next?: Panel | undefined;
     private lines: HTMLElement[];
+    currentLine = 0;
     constructor(
         public panelDiv: HTMLDivElement,
         public panelBodyDiv: HTMLDivElement,
@@ -35,7 +36,18 @@ class Panel {
         this.panelDiv.scrollIntoView({ behavior: 'smooth' });
         this.panelBodyDiv.focus({ preventScroll: true });
 
-        console.log(this.lines)
+        this.currentLine = 0;
+
+        for (const line of this.lines) {
+            line.style.opacity = '.2';
+        }
+
+        this.lines[this.currentLine]!.style.opacity = '1';
+    }
+    nextLine() {
+        this.lines[this.currentLine]!.style.opacity = '.2';
+        this.currentLine++;
+        this.lines[this.currentLine]!.style.opacity = '1'; 0
     }
 }
 
@@ -63,6 +75,10 @@ for (const slideshow of document.querySelectorAll<HTMLDivElement>('.slideshow'))
             else if (e.key === 'ArrowRight') {
                 e.preventDefault();
                 panel.next?.focus();
+            }
+            else if (e.key === ' ') {
+                e.preventDefault();
+                panel.nextLine();
             }
         };
     }
