@@ -53,8 +53,12 @@ class Panel {
     }
     nextLine(line?: number) {
         this.lines[this.currentLine]!.style.opacity = '.2';
-        this.currentLine = line ?? (this.currentLine + 1);
+        this.currentLine = Math.min(this.lines.length - 1, line ?? (this.currentLine + 1));
         this.lines[this.currentLine]!.style.opacity = '1';
+        this.lines[this.currentLine]!.scrollIntoView({
+            behavior: 'smooth',
+            block: 'nearest',
+        });
     }
 }
 
