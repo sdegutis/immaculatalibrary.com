@@ -47,7 +47,7 @@ export default <>
 </>;
 
 function Line(attrs: any, children: any) {
-  return <span class='highlightable-line'>{children}{'\n'}</span>;
+  return <span class='highlightable-line left-align'>{children}{'\n'}</span>;
 }
 
 function Intro() {
@@ -61,28 +61,28 @@ function Intro() {
       <div class='column wider'>
         <p class='spaced-small'>
           <Line>Most gracious Virgin Mary,</Line>
-          <Line>  thou who wouldst crush the head of the serpent,</Line>
-          <Line>    protect us from the vengeance of the evil one.</Line>
+          <Line>    thou who wouldst crush the head of the serpent,</Line>
+          <Line>        protect us from the vengeance of the evil one.</Line>
         </p>
         <p class='spaced-small'>
           <Line>We offer our prayers, supplications, sufferings and good works to thee</Line>
-          <Line>  so that thou may purify them, sanctify them and present them</Line>
-          <Line>    to thy Son as a perfect offering.</Line>
+          <Line>    so that thou may purify them, sanctify them and present them</Line>
+          <Line>        to thy Son as a perfect offering.</Line>
         </p>
         <p class='spaced-small'>
           <Line>May this offering be given so that</Line>
-          <Line>  the demons that influence or seek to influence the members of the Auxilium Christianorum</Line>
-          <Line>    do not know the source of their expulsion and blindness.</Line>
+          <Line>    the demons that influence or seek to influence the members of the Auxilium Christianorum</Line>
+          <Line>        do not know the source of their expulsion and blindness.</Line>
         </p>
         <p class='spaced-small'>
           <Line>Blind them so that they know not our good works.</Line>
-          <Line>  Blind them so that they know not on whom to take vengeance.</Line>
-          <Line>    Blind them so that they may receive the just sentence for their works.</Line>
+          <Line>    Blind them so that they know not on whom to take vengeance.</Line>
+          <Line>        Blind them so that they may receive the just sentence for their works.</Line>
         </p>
         <p class='spaced-small'>
           <Line>Cover us with the Precious Blood of thy Son</Line>
-          <Line>  so that we may enjoy the protection</Line>
-          <Line>    which flows from His Passion and Death.</Line>
+          <Line>    so that we may enjoy the protection</Line>
+          <Line>        which flows from His Passion and Death.</Line>
         </p>
         <p class='spaced-small'>
           <Line><Red>Amen</Red></Line>
@@ -185,18 +185,49 @@ function Wednesday() {
   return <Panel>
     <div class='centered spaced-big show-today'>
       <h1>Wednesday</h1>
-      <p class='column spaced-small'>
-        In the Name of Jesus Christ, Our Lord and God, we ask Thee to render all spirits
-        impotent, paralyzed and ineffective in attempting to take revenge against anyone
-        of the members of the Auxilium Christianorum, our families, friends, communities,
-        those who pray for us and their family members, or anyone associated with us and
-        for whom the priests of the Auxilium Christianorum pray. We ask Thee to bind all
-        evil spirits, all powers in the air, the water, the ground, the fire, under ground, or
-        wherever they exercise their powers, any satanic forces in nature and any and all
-        emissaries of the satanic headquarters. We ask Thee to bind by Thy Precious Blood
-        all of the attributes, aspects and characteristics, interactions, communications and
-        deceitful games of the evil spirits. We ask Thee to break any and all bonds, ties and
-        attachments <Red>in the Name of the Father, and of the Son and of the Holy Spirit. Amen.</Red>
+      <p class='column spaced-small left-align'>
+        <Line>In the Name of Jesus Christ, Our Lord and God,</Line>
+        <Line>    we ask Thee to render all spirits</Line>
+        <Line>        impotent, paralyzed and ineffective</Line>
+      </p>
+      <p class='column spaced-small left-align'>
+        <Line>in attempting to take revenge against</Line>
+        <Line>    anyone of the members of the Auxilium Christianorum,</Line>
+        <Line>    our families, friends, communities,</Line>
+        <Line>    those who pray for us and their family members,</Line>
+        <Line>    or anyone associated with us</Line>
+        <Line>    and for whom the priests of the Auxilium Christianorum pray.</Line>
+      </p>
+      <p class='column spaced-small left-align'>
+        <Line>We ask Thee to bind</Line>
+        <Line>    all evil spirits,</Line>
+        <Line>    all powers in the air,</Line>
+        <Line>    the water,</Line>
+        <Line>    the ground,</Line>
+        <Line>    the fire,</Line>
+        <Line>    under ground,</Line>
+        <Line>        or wherever they exercise their powers,</Line>
+        <Line>    any satanic forces in nature</Line>
+        <Line>        and any and all emissaries of the satanic headquarters.</Line>
+      </p>
+      <p class='column spaced-small left-align'>
+        <Line>We ask Thee to bind by Thy Precious Blood</Line>
+        <Line>    all of the attributes,</Line>
+        <Line>    aspects</Line>
+        <Line>    and characteristics,</Line>
+        <Line>    interactions,</Line>
+        <Line>    communications and deceitful games</Line>
+        <Line>        of the evil spirits.</Line>
+      </p>
+      <p class='column spaced-small left-align'>
+        <Line>We ask Thee to break any and all</Line>
+        <Line>    bonds, ties and attachments</Line>
+        <Line><Red>in the Name of the Father,</Red></Line>
+        <Line><Red>    and of the Son</Red></Line>
+        <Line><Red>        and of the Holy Spirit.</Red></Line>
+      </p>
+      <p class='column spaced-small left-align'>
+        <Line><Red>Amen.</Red></Line>
       </p>
     </div>
   </Panel>;
@@ -369,20 +400,28 @@ function Litany() {
 
 function AngelMorning() {
   return <Prayer img="./images/angel-morning.jpg">
-    <Line>Angel of God, my Guardian dear</Line>
-    <Line>  To Whom God's love commits me here</Line>
-    <Line>Ever this day be at my side</Line>
-    <Line>  To light and guard, to rule and guide</Line>
+    <Line>Angel of God,</Line>
+    <Line>    my Guardian dear</Line>
+    <Line>        To Whom God's love</Line>
+    <Line>            commits me here</Line>
+    <Line>Ever this day</Line>
+    <Line>    be at my side</Line>
+    <Line>        To light and guard,</Line>
+    <Line>            to rule and guide</Line>
     <Line>Amen</Line>
   </Prayer>;
 }
 
 function AngelNight() {
   return <Prayer img="./images/angel-night.jpg">
-    <Line>Angel of God, my Guardian dear</Line>
-    <Line>  To Whom God's love commits me here</Line>
-    <Line>Ever this night be at my side</Line>
-    <Line>  To light and guard, to rule and guide</Line>
+    <Line>Angel of God,</Line>
+    <Line>    my Guardian dear</Line>
+    <Line>        To Whom God's love</Line>
+    <Line>            commits me here</Line>
+    <Line>Ever this night</Line>
+    <Line>    be at my side</Line>
+    <Line>        To light and guard,</Line>
+    <Line>            to rule and guide</Line>
     <Line>Amen</Line>
   </Prayer>;
 }
@@ -390,16 +429,16 @@ function AngelNight() {
 function OurFather() {
   return <Prayer img="./images/jesus-sacred-heart.jpg">
     <Line>Our Father</Line>
-    <Line>  Who art in Heaven</Line>
-    <Line>    Hallowed be Thy Name</Line>
+    <Line>    Who art in Heaven</Line>
+    <Line>        Hallowed be Thy Name</Line>
     <Line>    Thy Kingdome come</Line>
-    <Line>    Thy Will be done</Line>
-    <Line>      On Earth as it is in Heaven</Line>
-    <Line>  Give us this day our daily bread</Line>
-    <Line>    And forgive us our trespasses</Line>
-    <Line>      As we forgive those who trespass against us</Line>
+    <Line>        Thy Will be done</Line>
+    <Line>            On Earth as it is in Heaven</Line>
+    <Line>    Give us this day our daily bread</Line>
+    <Line>        And forgive us our trespasses</Line>
+    <Line>            As we forgive those who trespass against us</Line>
     <Line>    And lead us not into temptation</Line>
-    <Line>    But deliver us from evil</Line>
+    <Line>        But deliver us from evil</Line>
     <Line>Amen</Line>
   </Prayer>;
 }
@@ -407,13 +446,13 @@ function OurFather() {
 function HailMary() {
   return <Prayer img="./images/mary-angels.jpg">
     <Line>Hail Mary</Line>
-    <Line>  Full of Grace</Line>
-    <Line>    The Lord is with thee</Line>
-    <Line>  Blessed art thou among women</Line>
-    <Line>    And blessed is the fruit of thy womb, Jesus</Line>
-    <Line>  Holy Mary, Mother of God</Line>
-    <Line>    Pray for us sinners now</Line>
-    <Line>      And at the hour of our death</Line>
+    <Line>    Full of Grace</Line>
+    <Line>        The Lord is with thee</Line>
+    <Line>    Blessed art thou among women</Line>
+    <Line>        And blessed is the fruit of thy womb, Jesus</Line>
+    <Line>    Holy Mary, Mother of God</Line>
+    <Line>        Pray for us sinners now</Line>
+    <Line>            And at the hour of our death</Line>
     <Line>Amen</Line>
   </Prayer>;
 }
@@ -421,14 +460,14 @@ function HailMary() {
 function GloryBe() {
   return <Prayer img="./images/holy-trinity.jpg">
     <Line>Glory be</Line>
-    <Line>  To the Father</Line>
-    <Line>  And to the Son</Line>
-    <Line>  And to the Holy Spirit</Line>
+    <Line>    To the Father</Line>
+    <Line>    And to the Son</Line>
+    <Line>    And to the Holy Spirit</Line>
     <Line>As it was</Line>
-    <Line>  In the beginning</Line>
-    <Line>  Is now</Line>
-    <Line>  And ever shall be</Line>
-    <Line>    World without end</Line>
+    <Line>    In the beginning</Line>
+    <Line>    Is now</Line>
+    <Line>    And ever shall be</Line>
+    <Line>        World without end</Line>
     <Line>Amen</Line>
   </Prayer>;
 }
@@ -436,18 +475,18 @@ function GloryBe() {
 function PreciousBlood() {
   return <Prayer img="./images/precious-blood.jpg">
     <Line>Eternal Father</Line>
-    <Line>  I offer Thee</Line>
-    <Line>    The Most Precious Blood</Line>
-    <Line>    Of Thy Divine Son, Jesus</Line>
-    <Line>  In union with</Line>
-    <Line>    The Masses said</Line>
-    <Line>    Throughout the world today</Line>
-    <Line>  For</Line>
-    <Line>    All the Holy Souls in Purgatory</Line>
-    <Line>    For sinners everywhere</Line>
-    <Line>    For sinners in the universal Church</Line>
-    <Line>    Those in my own home</Line>
-    <Line>    And within my family</Line>
+    <Line>    I offer Thee</Line>
+    <Line>        The Most Precious Blood</Line>
+    <Line>        Of Thy Divine Son, Jesus</Line>
+    <Line>    In union with</Line>
+    <Line>        The Masses said</Line>
+    <Line>        Throughout the world today</Line>
+    <Line>    For</Line>
+    <Line>        All the Holy Souls in Purgatory</Line>
+    <Line>        For sinners everywhere</Line>
+    <Line>        For sinners in the universal Church</Line>
+    <Line>        Those in my own home</Line>
+    <Line>        And within my family</Line>
     <Line>Amen</Line>
   </Prayer>;
 }
@@ -455,19 +494,19 @@ function PreciousBlood() {
 function SaintMichael() {
   return <Prayer img="./images/michael.jpg">
     <Line>St. Michael the Archangel</Line>
-    <Line>  Defend us in battle</Line>
-    <Line>    Be our protection against</Line>
-    <Line>    The wickedness and snares</Line>
-    <Line>    Of the devil</Line>
-    <Line>      May God rebuke him</Line>
-    <Line>      We humbly pray</Line>
-    <Line>  And do thou</Line>
-    <Line>    O Prince of the Heavenly Hosts</Line>
-    <Line>    By the power of God</Line>
-    <Line>    Cast into Hell</Line>
-    <Line>      Satan, and all the evil spirits</Line>
-    <Line>      Who prowl about the world</Line>
-    <Line>      Seeking the ruin of souls</Line>
+    <Line>    Defend us in battle</Line>
+    <Line>        Be our protection against</Line>
+    <Line>        The wickedness and snares</Line>
+    <Line>        Of the devil</Line>
+    <Line>            May God rebuke him</Line>
+    <Line>            We humbly pray</Line>
+    <Line>    And do thou</Line>
+    <Line>        O Prince of the Heavenly Hosts</Line>
+    <Line>        By the power of God</Line>
+    <Line>        Cast into Hell</Line>
+    <Line>            Satan, and all the evil spirits</Line>
+    <Line>            Who prowl about the world</Line>
+    <Line>            Seeking the ruin of souls</Line>
     <Line>Amen</Line>
   </Prayer>;
 }
@@ -475,8 +514,8 @@ function SaintMichael() {
 function Memorare() {
   return <Prayer img='../sidebar/pic.jpg'>
     <Line>Holy Family</Line>
-    <Line>  Save our family</Line>
-    <Line>    Amen</Line>
+    <Line>    Save our family</Line>
+    <Line>        Amen</Line>
   </Prayer>;
 }
 
