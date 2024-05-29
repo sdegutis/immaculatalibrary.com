@@ -54,6 +54,10 @@ function pre(lines: string[]) {
   return lines.join('\n');
 }
 
+function Line(attrs: any, children: any) {
+  return <span class='highlightable-line'>{children}{'\n'}</span>;
+}
+
 function Intro() {
   return <Panel>
     <div class='centered spaced-big'>
@@ -64,42 +68,32 @@ function Intro() {
       </p>
       <div class='column wider'>
         <p class='spaced-small'>
-          {pre([
-            `Most gracious Virgin Mary,`,
-            `  thou who wouldst crush the head of the serpent,`,
-            `    protect us from the vengeance of the evil one.`,
-          ])}
+          <Line>Most gracious Virgin Mary,</Line>
+          <Line>  thou who wouldst crush the head of the serpent,</Line>
+          <Line>    protect us from the vengeance of the evil one.</Line>
         </p>
         <p class='spaced-small'>
-          {pre([
-            `We offer our prayers, supplications, sufferings and good works to thee`,
-            `  so that thou may purify them, sanctify them and present them`,
-            `    to thy Son as a perfect offering.`,
-          ])}
+          <Line>We offer our prayers, supplications, sufferings and good works to thee</Line>
+          <Line>  so that thou may purify them, sanctify them and present them</Line>
+          <Line>    to thy Son as a perfect offering.</Line>
         </p>
         <p class='spaced-small'>
-          {pre([
-            `May this offering be given so that`,
-            `  the demons that influence or seek to influence the members of the Auxilium Christianorum`,
-            `    do not know the source of their expulsion and blindness.`,
-          ])}
+          <Line>May this offering be given so that</Line>
+          <Line>  the demons that influence or seek to influence the members of the Auxilium Christianorum</Line>
+          <Line>    do not know the source of their expulsion and blindness.</Line>
         </p>
         <p class='spaced-small'>
-          {pre([
-            `Blind them so that they know not our good works.`,
-            `  Blind them so that they know not on whom to take vengeance.`,
-            `    Blind them so that they may receive the just sentence for their works.`,
-          ])}
+          <Line>Blind them so that they know not our good works.</Line>
+          <Line>  Blind them so that they know not on whom to take vengeance.</Line>
+          <Line>    Blind them so that they may receive the just sentence for their works.</Line>
         </p>
         <p class='spaced-small'>
-          {pre([
-            `Cover us with the Precious Blood of thy Son`,
-            `  so that we may enjoy the protection`,
-            `    which flows from His Passion and Death.`,
-          ])}
+          <Line>Cover us with the Precious Blood of thy Son</Line>
+          <Line>  so that we may enjoy the protection</Line>
+          <Line>    which flows from His Passion and Death.</Line>
         </p>
         <p class='spaced-small'>
-          Amen
+          <Line>Amen</Line>
         </p>
       </div>
     </div>

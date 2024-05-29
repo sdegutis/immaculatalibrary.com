@@ -24,13 +24,18 @@ class Tab {
 class Panel {
     public prev?: Panel | undefined;
     public next?: Panel | undefined;
+    private lines: HTMLElement[];
     constructor(
         public panelDiv: HTMLDivElement,
         public panelBodyDiv: HTMLDivElement,
-    ) { }
+    ) {
+        this.lines = [...this.panelBodyDiv.querySelectorAll<HTMLElement>('.highlightable-line')];
+    }
     focus() {
         this.panelDiv.scrollIntoView({ behavior: 'smooth' });
         this.panelBodyDiv.focus({ preventScroll: true });
+
+        console.log(this.lines)
     }
 }
 
