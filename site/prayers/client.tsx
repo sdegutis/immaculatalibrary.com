@@ -35,10 +35,11 @@ class Panel {
         for (const [i, line] of Object.entries(this.lines)) {
             line.onclick = (e) => {
                 e.preventDefault();
-                this.nextLine(+i);
+                this.goToLine(+i);
             };
         }
     }
+    hasLines() { return this.lines.length > 0; }
     focus() {
         this.panelDiv.scrollIntoView({ behavior: 'smooth' });
         this.panelBodyDiv.focus({ preventScroll: true });
@@ -51,14 +52,20 @@ class Panel {
 
         this.lines[this.currentLine]!.style.opacity = '1';
     }
-    nextLine(line?: number) {
+    goToLine(line: number) {
         this.lines[this.currentLine]!.style.opacity = '.2';
-        this.currentLine = Math.min(this.lines.length - 1, line ?? (this.currentLine + 1));
+        this.currentLine = line;
         this.lines[this.currentLine]!.style.opacity = '1';
         this.lines[this.currentLine]!.scrollIntoView({
             behavior: 'smooth',
             block: 'nearest',
         });
+    }
+    nextLine() {
+        this.goToLine(Math.min(this.currentLine + 1, this.lines.length - 1));
+    }
+    prevLine() {
+        this.goToLine(Math.max(this.currentLine - 1, 0));
     }
 }
 
@@ -90,6 +97,18 @@ for (const slideshow of document.querySelectorAll<HTMLDivElement>('.slideshow'))
             else if (e.key === ' ') {
                 e.preventDefault();
                 panel.nextLine();
+            }
+            else if (e.key === 'ArrowUp') {
+                if (panel.hasLines()) {
+                    e.preventDefault();
+                    panel.prevLine();
+                }
+            }
+            else if (e.key === 'ArrowDown') {
+                if (panel.hasLines()) {
+                    e.preventDefault();
+                    panel.nextLine();
+                }
             }
         };
     }
