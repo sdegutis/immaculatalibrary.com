@@ -31,6 +31,13 @@ class Panel {
         public panelBodyDiv: HTMLDivElement,
     ) {
         this.lines = [...this.panelBodyDiv.querySelectorAll<HTMLElement>('.highlightable-line')];
+
+        for (const [i, line] of Object.entries(this.lines)) {
+            line.onclick = (e) => {
+                e.preventDefault();
+                this.nextLine(+i);
+            };
+        }
     }
     focus() {
         this.panelDiv.scrollIntoView({ behavior: 'smooth' });
@@ -44,9 +51,9 @@ class Panel {
 
         this.lines[this.currentLine]!.style.opacity = '1';
     }
-    nextLine() {
+    nextLine(line?: number) {
         this.lines[this.currentLine]!.style.opacity = '.2';
-        this.currentLine++;
+        this.currentLine = line ?? (this.currentLine + 1);
         this.lines[this.currentLine]!.style.opacity = '1'; 0
     }
 }
