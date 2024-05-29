@@ -123,9 +123,10 @@ body {
     align-items: center;
 }
 
-.title {
-    text-align: center;
+h1,
+h2 {
     color: var(--blue);
+    margin: 1em 0;
 }
 
 .column {

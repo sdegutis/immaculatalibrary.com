@@ -53,7 +53,7 @@ function Line(attrs: any, children: any) {
 function Intro() {
   return <Panel>
     <div class='centered spaced-big'>
-      <p class='title'>Auxilium Christianorum</p>
+      <h1>Auxilium Christianorum</h1>
       <p class='spaced-small'>
         <Line>Our help is in the name of the Lord.</Line>
         <Line><Red>Who made heaven and earth.</Red></Line>
@@ -85,7 +85,7 @@ function Intro() {
           <Line>    which flows from His Passion and Death.</Line>
         </p>
         <p class='spaced-small'>
-          <Line>Amen</Line>
+          <Line><Red>Amen</Red></Line>
         </p>
       </div>
     </div>
@@ -95,7 +95,7 @@ function Intro() {
 function Conclusion() {
   return <Panel>
     <div class='centered spaced-big'>
-      <p class='title'>Conclusion</p>
+      <h1>Conclusion</h1>
       <p class='column spaced-small'>August Queen of the Heavens, heavenly Sovereign of the Angels, Thou who from
         the beginning hast received from God the power and the mission to crush the head
         of Satan, we humbly beseech Thee to send thy holy legions, so that under Thy
@@ -122,8 +122,8 @@ function Conclusion() {
 
 function Sunday() {
   return <Panel>
-    <div class='centered spaced-big'>
-      <p class='title show-today'>Sunday</p>
+    <div class='centered spaced-big show-today'>
+      <h1>Sunday</h1>
       <p class='column spaced-small'>
         O Glorious Queen of Heaven and Earth, Virgin Most Powerful, thou who hast the
         power to crush the head of the ancient serpent with thy heel, come and exercise this
@@ -156,8 +156,8 @@ function Sunday() {
 
 function Monday() {
   return <Panel>
-    <div class='centered spaced-big'>
-      <p class='title show-today'>Monday</p>
+    <div class='centered spaced-big show-today'>
+      <h1>Monday</h1>
       <p class='column spaced-small'>
         In Thy name, Lord Jesus Christ, we pray that Thou cover us, our families, and all
         of our possessions with Thy love and Thy Most Precious Blood and surround us
@@ -169,8 +169,8 @@ function Monday() {
 
 function Tuesday() {
   return <Panel>
-    <div class='centered spaced-big'>
-      <p class='title show-today'>Tuesday</p>
+    <div class='centered spaced-big show-today'>
+      <h1>Tuesday</h1>
       <p class='column spaced-small'>
         Lord Jesus Christ, we beg Thee for the grace to remain guarded beneath the
         protective mantle of Mary, surrounded by the holy briar from which was taken the
@@ -183,8 +183,8 @@ function Tuesday() {
 
 function Wednesday() {
   return <Panel>
-    <div class='centered spaced-big'>
-      <p class='title show-today'>Wednesday</p>
+    <div class='centered spaced-big show-today'>
+      <h1>Wednesday</h1>
       <p class='column spaced-small'>
         In the Name of Jesus Christ, Our Lord and God, we ask Thee to render all spirits
         impotent, paralyzed and ineffective in attempting to take revenge against anyone
@@ -204,8 +204,8 @@ function Wednesday() {
 
 function Thursday() {
   return <Panel>
-    <div class='centered spaced-big'>
-      <p class='title show-today'>Thursday</p>
+    <div class='centered spaced-big show-today'>
+      <h1>Thursday</h1>
       <p class='column spaced-small'>
         My Lord, Thou art all powerful, Thou art God, Thou art our Father. We beg Thee
         through the intercession and help of the Archangels Sts. Michael, Raphael, and
@@ -233,9 +233,9 @@ function Thursday() {
 
 function Friday() {
   return <Panel>
-    <div class='centered spaced-big'>
-      <p class='title show-today'>Friday</p>
-      <p class='title spaced-small'>Litany of Humility</p>
+    <div class='centered spaced-big show-today'>
+      <h1>Friday</h1>
+      <h2>Litany of Humility</h2>
       <p class='two-cols spaced-small'>
         <span>O Jesus meek and humble,</span><Red>hear me.</Red>
       </p>
@@ -274,8 +274,8 @@ function Friday() {
 
 function Saturday() {
   return <Panel>
-    <div class='centered spaced-big'>
-      <p class='title show-today'>Saturday</p>
+    <div class='centered spaced-big show-today'>
+      <h1>Saturday</h1>
       <p class='column spaced-small'>
         O God and Father of our Lord Jesus Christ, we call upon Thy holy Name and
         humbly beseech Thy clemency, that, through the intercession of the ever
@@ -292,7 +292,7 @@ function Litany() {
   return <Panel>
     <div class='centered spaced-big' id='litany'>
 
-      <p class='title'>Litany of the Precious Blood</p>
+      <h1>Litany of the Precious Blood</h1>
 
       <div class='two-cols spaced-small'>
         <span>Lord have mercy,</span><Red>Lord have mercy.</Red>
