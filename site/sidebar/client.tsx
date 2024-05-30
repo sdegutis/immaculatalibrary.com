@@ -1,27 +1,29 @@
-const adorationLinks = [
-  "https://www.youtube.com/embed/live_stream?channel=UCTv8s3mfmdIIXNcw_5Pdv_w&autoplay=1",
-  "https://www.youtube.com/embed/live_stream?channel=UChmNZQg06jCB5xXHSAQQNpA&autoplay=1",
+const adorationLinks: HTMLIFrameElement[] = [
+  <iframe src="https://www.youtube.com/embed/live_stream?channel=UCTv8s3mfmdIIXNcw_5Pdv_w&autoplay=1" /> as HTMLIFrameElement,
+  <iframe src="https://www.youtube.com/embed/live_stream?channel=UChmNZQg06jCB5xXHSAQQNpA&autoplay=1" /> as HTMLIFrameElement,
 ];
+
+const blessedSacramentImage = <img src="./blessedsacrament.png" />;
 
 document.getElementById('root')!.append(<>
   <div id="top">
-    <img src="./blessedsacrament.png" />
+    {blessedSacramentImage}
   </div>
 
   <div id="bottom">
 
     <div id="navlinks" class="box">
 
-      {adorationLinks.map((href, i) => (
+      {adorationLinks.map((iframe, i) => (
         <a onclick={(e: Event) => {
           e.preventDefault();
-          document.getElementById('top')!.replaceChildren(<iframe src={href} />);
-        }} href={href}>Adoration {i + 1}</a>
+          document.getElementById('top')!.replaceChildren(iframe);
+        }} href={iframe.src}>Adoration {i + 1}</a>
       ))}
 
       <a href="#" onclick={(e: Event) => {
         e.preventDefault();
-        document.getElementById('top')!.replaceChildren(<img src="blessedsacrament.png" />);
+        document.getElementById('top')!.replaceChildren(blessedSacramentImage);
       }}>Static image</a>
 
       <a hidden href="#" onclick={(e: Event) => {
