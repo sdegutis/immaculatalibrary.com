@@ -104,3 +104,7 @@ function makestatic(/** @type {Event} */ e) {
 
   e.preventDefault();
 }
+
+function changelocation(/** @type {Event} */ e) {
+  e.preventDefault();
+}

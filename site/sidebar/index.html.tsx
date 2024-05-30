@@ -29,7 +29,8 @@ export default <>
             <a onclick="makelive(event)"
               href="https://www.youtube.com/embed/live_stream?channel=UChmNZQg06jCB5xXHSAQQNpA&autoplay=1"
               target="ifr">Adoration 2</a>
-            <a href="#" onclick="makestatic(event)">Static</a>
+            <a href="#" onclick="makestatic(event)">Static image</a>
+            <a hidden href="#" onclick="changelocation(event)">Set location</a>
           </div>
           <div id="info">
             <div id="timeinfo">
