@@ -1,3 +1,8 @@
+const adorationLinks = [
+  "https://www.youtube.com/embed/live_stream?channel=UCTv8s3mfmdIIXNcw_5Pdv_w&autoplay=1",
+  "https://www.youtube.com/embed/live_stream?channel=UChmNZQg06jCB5xXHSAQQNpA&autoplay=1",
+];
+
 document.getElementById('root')!.append(<>
   <div id="top">
     <img src="./blessedsacrament.png" />
@@ -6,10 +11,24 @@ document.getElementById('root')!.append(<>
   <div id="bottom">
 
     <div id="navlinks" class="box">
-      <a onclick={(e: Event) => { makelive(e); }} href="https://www.youtube.com/embed/live_stream?channel=UCTv8s3mfmdIIXNcw_5Pdv_w&autoplay=1">Adoration 1</a>
-      <a onclick={(e: Event) => { makelive(e); }} href="https://www.youtube.com/embed/live_stream?channel=UChmNZQg06jCB5xXHSAQQNpA&autoplay=1">Adoration 2</a>
-      <a href="#" onclick={(e: Event) => { makestatic(e); }}>Static image</a>
-      <a hidden href="#" onclick={(e: Event) => changelocation(e)}>Set location</a>
+
+      {adorationLinks.map((href, i) => (
+        <a onclick={(e: Event) => {
+          e.preventDefault();
+          document.getElementById('top')!.replaceChildren(<iframe src={href} />);
+        }} href={href}>Adoration {i + 1}</a>
+      ))}
+
+      <a href="#" onclick={(e: Event) => {
+        e.preventDefault();
+        document.getElementById('top')!.replaceChildren(<img src="blessedsacrament.png" />);
+      }}>Static image</a>
+
+      <a hidden href="#" onclick={(e: Event) => {
+        e.preventDefault();
+        changelocation();
+      }}>Set location</a>
+
     </div>
 
     <div id="info">
@@ -127,20 +146,5 @@ function makeDescription(list: any[]) {
   return overall.slice(1).join(', ');
 }
 
-function makelive(e: Event) {
-  e.preventDefault();
-  document.getElementById('top')!.replaceChildren(
-    <iframe src={(e.target as HTMLAnchorElement).href} />
-  );
-}
-
-function makestatic(e: Event) {
-  e.preventDefault();
-  document.getElementById('top')!.replaceChildren(
-    <img src="blessedsacrament.png" />
-  );
-}
-
-function changelocation(e: Event) {
-  e.preventDefault();
+function changelocation() {
 }
