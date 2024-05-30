@@ -51,7 +51,7 @@ document.getElementById('root')!.append(<>
         </div>
         <div id="weather-full">It's gonna rain or somethin.</div>
       </div>
-      <div id="feastday">Saint of the Day</div>
+      <FeastDay />
     </div>
 
   </div>
@@ -74,18 +74,21 @@ function updateTime() {
 updateTime();
 setInterval(updateTime, 30_000);
 
-var Romcal;
+function FeastDay() {
+  const feastDayEl = <div id="feastday">Saint of the Day</div> as HTMLDivElement;
 
-// Feast day
-const feastDayEl = document.getElementById('feastday')!;
-const calendar = window.Romcal!.Calendar.calendarFor({ country: 'unitedStates' });
-function updateFeastDay() {
-  const today = new Date().toISOString().split('T')[0];
-  const feastDay = calendar.find((day: any) => day.moment.split('T')[0] === today);
-  feastDayEl.innerText = feastDay.name;
+  // Feast day
+  const calendar = (window as any).Romcal.Calendar.calendarFor({ country: 'unitedStates' });
+  function updateFeastDay() {
+    const today = new Date().toISOString().split('T')[0];
+    const feastDay = calendar.find((day: any) => day.moment.split('T')[0] === today);
+    feastDayEl.innerText = feastDay.name;
+  }
+  updateFeastDay();
+  setInterval(updateFeastDay, 1000 * 60 * 60 * 5);
+
+  return feastDayEl;
 }
-updateFeastDay();
-setInterval(updateFeastDay, 1000 * 60 * 60 * 5);
 
 // Weather
 const params = new URLSearchParams(location.search);
