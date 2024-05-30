@@ -1,4 +1,5 @@
 import { BlessedSacrament } from "./blessedsacrament.js";
+import { TimeArea } from "./time.js";
 
 document.getElementById('root')!.append(<>
   <div id="top">
@@ -8,11 +9,7 @@ document.getElementById('root')!.append(<>
   <div id="bottom">
 
     <div id="info">
-      <div id="timeinfo">
-        <div id="time">12:54 PM</div>
-        <div id="date">09/19/2021</div>
-        <div id="day">Saturday, September 19</div>
-      </div>
+      <TimeArea />
       <div>
         <div id="temprow">
           <div id="temperature">87 Fº</div>
@@ -32,21 +29,6 @@ document.getElementById('root')!.append(<>
 </>);
 
 
-// Time
-const timeEl = document.getElementById('time')!;
-const dateEl = document.getElementById('date')!;
-const dayEl = document.getElementById('day')!;
-const timeFormatter = new Intl.DateTimeFormat('en-US', { timeStyle: 'short' });
-const dateFormatter = new Intl.DateTimeFormat('en-US', { month: '2-digit', day: '2-digit', year: 'numeric' });
-const dayFormatter = new Intl.DateTimeFormat('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
-function updateTime() {
-  const now = new Date();
-  timeEl.innerText = timeFormatter.format(now);
-  dateEl.innerText = dateFormatter.format(now);
-  dayEl.innerText = dayFormatter.format(now);
-}
-updateTime();
-setInterval(updateTime, 30_000);
 
 function FeastDay() {
   const feastDayEl = <div id="feastday">Saint of the Day</div> as HTMLDivElement;

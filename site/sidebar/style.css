@@ -61,34 +61,15 @@ body {
   margin: 0 2em;
 }
 
-#timeinfo {
-  display: grid;
-  gap: 0.25em;
-}
-
-#feastday,
-#day {
+#feastday {
   font-size: 120%;
   font-weight: normal;
-}
-
-#temprow {
-  display: grid;
-  grid-auto-flow: column;
-  align-items: center;
-  justify-content: start;
-  margin-bottom: 0.25em;
 }
 
 #weather-icon {
   height: 7vh;
 }
 
-#time,
 #temperature {
   font-size: 300%;
-}
-
-#date {
-  font-size: 200%;
 }
