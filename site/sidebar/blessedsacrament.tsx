@@ -11,6 +11,7 @@ export function BlessedSacrament() {
   </div> as HTMLDivElement;
 
   return <>
+    <link rel='stylesheet' href='./blessedsacrament.css' />
     {target}
     <div id="navlinks" class="box">
       {adorationLinks.map((iframe, i) => (
