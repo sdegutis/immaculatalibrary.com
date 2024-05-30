@@ -7,23 +7,23 @@ const blessedSacramentImage = <img src="./blessedsacrament.png" />;
 
 document.getElementById('root')!.append(<>
   <div id="top">
-    {blessedSacramentImage}
-  </div>
 
-  <div id="bottom">
+    <div id='top2'>
+      {blessedSacramentImage}
+    </div>
 
     <div id="navlinks" class="box">
 
       {adorationLinks.map((iframe, i) => (
         <a onclick={(e: Event) => {
           e.preventDefault();
-          document.getElementById('top')!.replaceChildren(iframe);
+          document.getElementById('top2')!.replaceChildren(iframe);
         }} href={iframe.src}>Adoration {i + 1}</a>
       ))}
 
       <a href="#" onclick={(e: Event) => {
         e.preventDefault();
-        document.getElementById('top')!.replaceChildren(blessedSacramentImage);
+        document.getElementById('top2')!.replaceChildren(blessedSacramentImage);
       }}>Static image</a>
 
       <a hidden href="#" onclick={(e: Event) => {
@@ -32,6 +32,10 @@ document.getElementById('root')!.append(<>
       }}>Set location</a>
 
     </div>
+
+  </div>
+
+  <div id="bottom">
 
     <div id="info">
       <div id="timeinfo">
