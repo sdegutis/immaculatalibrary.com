@@ -1,7 +1,7 @@
 // Time
-const timeEl = document.getElementById('time');
-const dateEl = document.getElementById('date');
-const dayEl = document.getElementById('day');
+const timeEl = document.getElementById('time')!;
+const dateEl = document.getElementById('date')!;
+const dayEl = document.getElementById('day')!;
 const timeFormatter = new Intl.DateTimeFormat('en-US', { timeStyle: 'short' });
 const dateFormatter = new Intl.DateTimeFormat('en-US', { month: '2-digit', day: '2-digit', year: 'numeric' });
 const dayFormatter = new Intl.DateTimeFormat('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
@@ -14,12 +14,14 @@ function updateTime() {
 updateTime();
 setInterval(updateTime, 30_000);
 
+var Romcal: any;
+
 // Feast day
-const feastDayEl = document.getElementById('feastday');
+const feastDayEl = document.getElementById('feastday')!;
 const calendar = Romcal.Calendar.calendarFor({ country: 'unitedStates' });
 function updateFeastDay() {
   const today = new Date().toISOString().split('T')[0];
-  const feastDay = calendar.find(day => day.moment.split('T')[0] === today);
+  const feastDay = calendar.find((day: any) => day.moment.split('T')[0] === today);
   feastDayEl.innerText = feastDay.name;
 }
 updateFeastDay();
@@ -30,17 +32,17 @@ const params = new URLSearchParams(location.search);
 const apiKey = '0adc97ca15785c49faffe4b60d623350';
 const weatherQuery = 'lon=-88.4487&lat=42.3147';
 const url = `https://api.openweathermap.org/data/2.5/onecall?appid=${apiKey}&${weatherQuery}&exclude=minutely&units=imperial`;
-const weatherIconEl = document.getElementById('weather-icon');
-const temperatureEl = document.getElementById('temperature');
-const weatherGlimpseDescEl = document.getElementById('weather-glimpse-desc');
-const weatherGlimpseMinEl = document.getElementById('weather-glimpse-min');
-const weatherGlimpseMaxEl = document.getElementById('weather-glimpse-max');
-const weatherFullEl = document.getElementById('weather-full');
+const weatherIconEl = document.getElementById('weather-icon') as HTMLImageElement;
+const temperatureEl = document.getElementById('temperature')!;
+const weatherGlimpseDescEl = document.getElementById('weather-glimpse-desc')!;
+const weatherGlimpseMinEl = document.getElementById('weather-glimpse-min')!;
+const weatherGlimpseMaxEl = document.getElementById('weather-glimpse-max')!;
+const weatherFullEl = document.getElementById('weather-full')!;
 const hourFormatter = new Intl.DateTimeFormat('en', { hour12: true, hour: 'numeric' });
 function updateWeather() {
   fetch(url).then(res => res.json()).then(json => {
     weatherIconEl.src = `http://openweathermap.org/img/wn/${json.current.weather[0].icon}@2x.png`;
-    const temps = Object.values(json.daily[1].feels_like);
+    const temps = Object.values<any>(json.daily[1].feels_like);
     temperatureEl.innerText = `${Math.round(json.current.feels_like)} Fº`;
     weatherGlimpseDescEl.innerText = json.current.weather[0].main;
     weatherGlimpseMaxEl.innerText = `High: ${Math.round(Math.max(...temps))}`;
@@ -54,7 +56,7 @@ function updateWeather() {
 }
 updateWeather();
 setInterval(updateWeather, 1000 * 60 * 3 /* 3 minutes */);
-function makeDescription(list) {
+function makeDescription(list: any[]) {
   list = list.slice(0, 12).map(item => item.weather[0].description);
   list.push(null);
   let hour = 0;
@@ -86,9 +88,9 @@ function makeDescription(list) {
   return overall.slice(1).join(', ');
 }
 
-function makelive(/** @type {Event} */ e) {
-  const link = /** @type {HTMLAnchorElement} */(e.target);
-  document.getElementById('top').innerHTML = `
+function makelive(e: Event) {
+  const link = e.target as HTMLAnchorElement;
+  document.getElementById('top')!.innerHTML = `
     <iframe name="ifr"
       src="${link.href}"
       frameborder="0"></iframe>
@@ -97,14 +99,14 @@ function makelive(/** @type {Event} */ e) {
   e.preventDefault();
 }
 
-function makestatic(/** @type {Event} */ e) {
-  document.getElementById('top').innerHTML = `
+function makestatic(e: Event) {
+  document.getElementById('top')!.innerHTML = `
     <img src="blessedsacrament.png">
   `;
 
   e.preventDefault();
 }
 
-function changelocation(/** @type {Event} */ e) {
+function changelocation(e: Event) {
   e.preventDefault();
 }
