@@ -1,38 +1,8 @@
-const adorationLinks = [
-  "https://www.youtube.com/embed/live_stream?channel=UCTv8s3mfmdIIXNcw_5Pdv_w&autoplay=1",
-  "https://www.youtube.com/embed/live_stream?channel=UChmNZQg06jCB5xXHSAQQNpA&autoplay=1",
-].map(href => <iframe src={href} /> as HTMLIFrameElement);
-
-const blessedSacramentImage = <img src="./blessedsacrament.png" />;
+import { BlessedSacrament } from "./blessedsacrament.js";
 
 document.getElementById('root')!.append(<>
   <div id="top">
-
-    <div id='top2'>
-      {blessedSacramentImage}
-    </div>
-
-    <div id="navlinks" class="box">
-
-      {adorationLinks.map((iframe, i) => (
-        <a onclick={(e: Event) => {
-          e.preventDefault();
-          document.getElementById('top2')!.replaceChildren(iframe);
-        }} href={iframe.src}>Adoration {i + 1}</a>
-      ))}
-
-      <a href="#" onclick={(e: Event) => {
-        e.preventDefault();
-        document.getElementById('top2')!.replaceChildren(blessedSacramentImage);
-      }}>Static image</a>
-
-      <a hidden href="#" onclick={(e: Event) => {
-        e.preventDefault();
-        changelocation();
-      }}>Set location</a>
-
-    </div>
-
+    <BlessedSacrament />
   </div>
 
   <div id="bottom">
@@ -153,7 +123,4 @@ function makeDescription(list: any[]) {
     count++;
   }
   return overall.slice(1).join(', ');
-}
-
-function changelocation() {
 }
