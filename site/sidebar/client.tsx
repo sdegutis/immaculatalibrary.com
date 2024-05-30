@@ -1,3 +1,42 @@
+document.getElementById('root')!.append(<>
+  <div id="top">
+    <img src="./blessedsacrament.png" />
+  </div>
+
+  <div id="bottom">
+
+    <div id="navlinks" class="box">
+      <a onclick={(e: Event) => { makelive(e); }} href="https://www.youtube.com/embed/live_stream?channel=UCTv8s3mfmdIIXNcw_5Pdv_w&autoplay=1">Adoration 1</a>
+      <a onclick={(e: Event) => { makelive(e); }} href="https://www.youtube.com/embed/live_stream?channel=UChmNZQg06jCB5xXHSAQQNpA&autoplay=1">Adoration 2</a>
+      <a href="#" onclick={(e: Event) => { makestatic(e); }}>Static image</a>
+      <a hidden href="#" onclick={(e: Event) => changelocation(e)}>Set location</a>
+    </div>
+
+    <div id="info">
+      <div id="timeinfo">
+        <div id="time">12:54 PM</div>
+        <div id="date">09/19/2021</div>
+        <div id="day">Saturday, September 19</div>
+      </div>
+      <div>
+        <div id="temprow">
+          <div id="temperature">87 Fº</div>
+          <img id="weather-icon" />
+          <div id="weather-glimpse">
+            <div id="weather-glimpse-desc"></div>
+            <div id="weather-glimpse-max"></div>
+            <div id="weather-glimpse-min"></div>
+          </div>
+        </div>
+        <div id="weather-full">It's gonna rain or somethin.</div>
+      </div>
+      <div id="feastday">Saint of the Day</div>
+    </div>
+
+  </div>
+</>);
+
+
 // Time
 const timeEl = document.getElementById('time')!;
 const dateEl = document.getElementById('date')!;
@@ -14,11 +53,11 @@ function updateTime() {
 updateTime();
 setInterval(updateTime, 30_000);
 
-var Romcal: any;
+var Romcal;
 
 // Feast day
 const feastDayEl = document.getElementById('feastday')!;
-const calendar = Romcal.Calendar.calendarFor({ country: 'unitedStates' });
+const calendar = window.Romcal!.Calendar.calendarFor({ country: 'unitedStates' });
 function updateFeastDay() {
   const today = new Date().toISOString().split('T')[0];
   const feastDay = calendar.find((day: any) => day.moment.split('T')[0] === today);
@@ -89,22 +128,17 @@ function makeDescription(list: any[]) {
 }
 
 function makelive(e: Event) {
-  const link = e.target as HTMLAnchorElement;
-  document.getElementById('top')!.innerHTML = `
-    <iframe name="ifr"
-      src="${link.href}"
-      frameborder="0"></iframe>
-  `;
-
   e.preventDefault();
+  document.getElementById('top')!.replaceChildren(
+    <iframe src={(e.target as HTMLAnchorElement).href} />
+  );
 }
 
 function makestatic(e: Event) {
-  document.getElementById('top')!.innerHTML = `
-    <img src="blessedsacrament.png">
-  `;
-
   e.preventDefault();
+  document.getElementById('top')!.replaceChildren(
+    <img src="blessedsacrament.png" />
+  );
 }
 
 function changelocation(e: Event) {

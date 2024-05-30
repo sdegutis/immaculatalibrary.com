@@ -32,6 +32,10 @@ body {
   height: 100%;
 }
 
+#top>iframe {
+  border: 0;
+}
+
 #top img {
   max-width: 100%;
   max-height: 100%;
