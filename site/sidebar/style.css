@@ -32,6 +32,12 @@ body {
   height: 100%;
 }
 
+#top img {
+  max-width: 100%;
+  max-height: 100%;
+  aspect-ratio: 496 / 279;
+}
+
 #bottom {
   position: relative;
   background-image: url(./pic.jpg);

@@ -99,7 +99,7 @@ function makelive(/** @type {Event} */ e) {
 
 function makestatic(/** @type {Event} */ e) {
   document.getElementById('top').innerHTML = `
-    <img src="blessedsacrament.png" style="max-width: 100%; max-height: 100%; aspect-ratio: 496 / 279;">
+    <img src="blessedsacrament.png">
   `;
 
   e.preventDefault();
