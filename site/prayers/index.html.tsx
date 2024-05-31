@@ -7,12 +7,14 @@ export default <>
       "Morning":
         <Slideshow>
           <AngelMorning />
+          <MorningPrayers />
           <OurFather />
           <HailMary />
           <GloryBe />
           <PreciousBlood />
           <SaintMichael />
           <Memorare />
+          <HolyFamilyPrayer />
         </Slideshow>,
       "Noon":
         <Slideshow>
@@ -41,6 +43,7 @@ export default <>
           <PreciousBlood />
           <SaintMichael />
           <Memorare />
+          <HolyFamilyPrayer />
         </Slideshow>
     }} />
   </Html>
@@ -115,6 +118,89 @@ function Conclusion() {
       </p>
       <p class='spaced-small'>
         <Red>In the name of the Father, the Son and the Holy Spirit. Amen.</Red>
+      </p>
+    </div>
+  </Panel>;
+}
+
+function MorningPrayers() {
+  return <Panel>
+    <div class='centered spaced-big'>
+      <h1>Morning Prayers</h1>
+      <p class='column spaced-small'>
+        <Line>Dear Lord, thank you for today.</Line>
+        <Line>    Bless our family,</Line>
+        <Line>        [name all the members].</Line>
+        <br />
+        <Line>Have mercy on us</Line>
+        <Line>    forgive us our sins</Line>
+        <Line>        and bring us to eternal life.</Line>
+        <br />
+        <Line>Unblind us from all spiritual blindness</Line>
+        <Line>    soften our hardened hearts</Line>
+        <Line>        and free us from all slavery to sin.</Line>
+        <br />
+        <Line>Protect us from</Line>
+        <Line>    the world, the devil, and the flesh</Line>
+        <Line>        and the seven deadly sins.</Line>
+        <br />
+        <Line>Fill us with faith,</Line>
+        <Line>    hope,</Line>
+        <Line>        and love.</Line>
+        <br />
+        <Line>Help us to love you,</Line>
+        <Line>    know you,</Line>
+        <Line>        and serve you.</Line>
+        <br />
+        <Line>Help us to love you</Line>
+        <Line>    with our whole heart, mind, soul, and strength</Line>
+        <Line>        because you are all good and deserve all our love.</Line>
+        <br />
+        <Line>Help us to do our prayers</Line>
+        <Line>    holy reading</Line>
+        <Line>        and devotions.</Line>
+        <br />
+        <Line><Red>Amen</Red></Line>
+      </p>
+      <p class='spaced-small two-cols'>
+        <span><Line>St. Jane Frances de Chantal</Line></span><Line><Red>Pray for us.</Red></Line>
+        <span /><span class='spaced-small' />
+        <span><Line>St. Therese of Lisieux</Line></span><Line><Red>Pray for us.</Red></Line>
+        <span><Line> St. John Bosco</Line></span><Line><Red>Pray for us.</Red></Line>
+        <span><Line>  St. Joan of Arc</Line></span><Line><Red>Pray for us.</Red></Line>
+        <span /><span class='spaced-small' />
+        <span><Line>St. Teresa of Avila</Line></span><Line><Red>Pray for us.</Red></Line>
+        <span><Line> St. Catherine of Siena</Line></span><Line><Red>Pray for us.</Red></Line>
+        <span><Line>  St. Rose of Lima</Line></span><Line><Red>Pray for us.</Red></Line>
+        <span /><span class='spaced-small' />
+        <span><Line>St. John Paul II</Line></span><Line><Red>Pray for us.</Red></Line>
+        <span /><span class='spaced-small' />
+        <span><Line>St. Cecilia</Line></span><Line><Red>Pray for us.</Red></Line>
+        <span><Line> St. Philomena</Line></span><Line><Red>Pray for us.</Red></Line>
+        <span><Line>  St. Jude</Line></span><Line><Red>Pray for us.</Red></Line>
+        <span /><span class='spaced-small' />
+        <span><Line>St. Augustine</Line></span><Line><Red>Pray for us.</Red></Line>
+        <span><Line> St. Benedict</Line></span><Line><Red>Pray for us.</Red></Line>
+        <span><Line>  St. Francis of Assisi</Line></span><Line><Red>Pray for us.</Red></Line>
+        <span /><span class='spaced-small' />
+        <span><Line>St. Monica</Line></span><Line><Red>Pray for us.</Red></Line>
+        <span><Line> St. Rita</Line></span><Line><Red>Pray for us.</Red></Line>
+        <span><Line>  St. Dymphna</Line></span><Line><Red>Pray for us.</Red></Line>
+        <span /><span class='spaced-small' />
+        <span><Line>St. Francis de Sales</Line></span><Line><Red>Pray for us.</Red></Line>
+        <span><Line> St. Vincent de Paul</Line></span><Line><Red>Pray for us.</Red></Line>
+        <span><Line>  St. Thomas More</Line></span><Line><Red>Pray for us.</Red></Line>
+        <span /><span class='spaced-small' />
+        <span><Line>Patron Saints</Line></span><Line><Red>Pray for us.</Red></Line>
+        <span><Line> Guardian Angels</Line></span><Line><Red>Pray for us.</Red></Line>
+        <span><Line>  Holy Souls in Purgatory</Line></span><Line><Red>Pray for us.</Red></Line>
+      </p>
+      <p class='spaced-small two-cols'>
+        <span><Line>Most Chaste Heart of Blessed St. Joseph</Line></span><Line><Red>Pray for us.</Red></Line>
+        <span><Line> Most Immaculate Heart of the Blessed Virgin Mary</Line></span><Line><Red>Pray for us.</Red></Line>
+        <span><Line>  Most Sacred Heart of Jesus</Line></span><Line><Red>Have mercy on us.</Red></Line>
+        <span><Line>  Most Sacred Heart of Jesus</Line></span><Line><Red>Have mercy on us.</Red></Line>
+        <span><Line>  Most Sacred Heart of Jesus</Line></span><Line><Red>Have mercy on us.</Red></Line>
       </p>
     </div>
   </Panel>;
@@ -400,6 +486,7 @@ function Litany() {
 
 function AngelMorning() {
   return <Prayer img="./images/angel-morning.jpg">
+    <h1>Guardian Angel Prayer</h1>
     <Line>Angel of God,</Line>
     <Line>    my Guardian dear</Line>
     <Line>        To Whom God's love</Line>
@@ -414,6 +501,7 @@ function AngelMorning() {
 
 function AngelNight() {
   return <Prayer img="./images/angel-night.jpg">
+    <h1>Guardian Angel Prayer</h1>
     <Line>Angel of God,</Line>
     <Line>    my Guardian dear</Line>
     <Line>        To Whom God's love</Line>
@@ -428,6 +516,7 @@ function AngelNight() {
 
 function OurFather() {
   return <Prayer img="./images/jesus-sacred-heart.jpg">
+    <h1>Our Father</h1>
     <Line>Our Father</Line>
     <Line>    Who art in Heaven</Line>
     <Line>        Hallowed be Thy Name</Line>
@@ -445,6 +534,7 @@ function OurFather() {
 
 function HailMary() {
   return <Prayer img="./images/mary-angels.jpg">
+    <h1>Hail Mary</h1>
     <Line>Hail Mary</Line>
     <Line>    Full of Grace</Line>
     <Line>        The Lord is with thee</Line>
@@ -459,6 +549,7 @@ function HailMary() {
 
 function GloryBe() {
   return <Prayer img="./images/holy-trinity.jpg">
+    <h1>Glory be</h1>
     <Line>Glory be</Line>
     <Line>    To the Father</Line>
     <Line>    And to the Son</Line>
@@ -474,6 +565,7 @@ function GloryBe() {
 
 function PreciousBlood() {
   return <Prayer img="./images/precious-blood.jpg">
+    <h1>St. Gertrude Prayer</h1>
     <Line>Eternal Father</Line>
     <Line>    I offer Thee</Line>
     <Line>        The Most Precious Blood</Line>
@@ -493,6 +585,7 @@ function PreciousBlood() {
 
 function SaintMichael() {
   return <Prayer img="./images/michael.jpg">
+    <h1>St. Michael Prayer</h1>
     <Line>St. Michael the Archangel</Line>
     <Line>    Defend us in battle</Line>
     <Line>        Be our protection against</Line>
@@ -512,6 +605,31 @@ function SaintMichael() {
 }
 
 function Memorare() {
+  return <Prayer img='./images/memorare-mary.jpg'>
+    <h1>Memorare</h1>
+    <Line>Remember O Most Gracious Virgin Mary</Line>
+    <Line>    That never was it known</Line>
+    <Line>    That anyone</Line>
+    <Line>    Who fled to thy protection</Line>
+    <Line>    Implored thy help</Line>
+    <Line>    Or sought thine intercession</Line>
+    <Line>        Was left unaided</Line>
+    <Line>Inspired by this confidence</Line>
+    <Line>    I fly unto thee</Line>
+    <Line>    O Virgin of Virgins</Line>
+    <Line>        My Mother</Line>
+    <Line>To thee do I come</Line>
+    <Line>    Before thee I stand</Line>
+    <Line>    Sinful and sorrowful</Line>
+    <Line>O Mother of the Word Incarnate</Line>
+    <Line>    Despise not my petition</Line>
+    <Line>    But in thy mercy</Line>
+    <Line>        Hear and answer me</Line>
+    <Line>Amen</Line>
+  </Prayer>;
+}
+
+function HolyFamilyPrayer() {
   return <Prayer img='../sidebar/pic.jpg'>
     <Line>Holy Family</Line>
     <Line>    Save our family</Line>
