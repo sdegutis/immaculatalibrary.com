@@ -37,3 +37,7 @@
 #navlinks a {
   color: inherit;
 }
+
+#navlinks a:hover {
+  color: #7bf;
+}
