@@ -4,6 +4,15 @@
   height: 100%;
 }
 
+#navlinks {
+  transition: opacity 250ms ease-in-out;
+  opacity: 0.2;
+}
+
+#navlinks:hover {
+  opacity: 1;
+}
+
 #top iframe {
   border: 0;
   width: 100%;
