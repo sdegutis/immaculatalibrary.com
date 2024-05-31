@@ -7,7 +7,7 @@ const blessedSacramentImage = <img src="./blessedsacrament.png" />;
 
 export function BlessedSacrament() {
   const target = <div id='top2'>
-    {blessedSacramentImage}
+    {adorationLinks[0]}
   </div> as HTMLDivElement;
 
   return <>
