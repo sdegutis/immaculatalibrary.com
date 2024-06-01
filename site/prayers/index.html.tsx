@@ -488,7 +488,7 @@ function Litany() {
 
       <p class='spaced-medium' style='text-align:center; font-style:italic'><Line>Let us pray.</Line></p>
 
-      <p class='column spaced-small'>
+      <p class='column wide spaced-small'>
         <Line>Almighty, and everlasting God,</Line>
         <Line>  Who hast appointed Thine only-begotten Son</Line>
         <Line>    to be the Redeemer of the world,</Line>
