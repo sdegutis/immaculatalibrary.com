@@ -412,73 +412,79 @@ function Litany() {
       <h1>Litany of the Precious Blood</h1>
 
       <div class='two-cols spaced-small'>
-        <span>Lord have mercy,</span><Red>Lord have mercy.</Red>
-        <span>Christ have mercy,</span><Red>Christ have mercy.</Red>
-        <span>Lord have mercy,</span><Red>Lord have mercy.</Red>
-        <span>Christ hear us,</span><Red>Christ graciously hear us.</Red>
+        <span><Line>Lord have mercy,</Line></span><Line><Red>Lord have mercy.</Red></Line>
+        <span><Line>Christ have mercy,</Line></span><Line><Red>Christ have mercy.</Red></Line>
+        <span><Line>Lord have mercy,</Line></span><Line><Red>Lord have mercy.</Red></Line>
+        <span><Line>Christ hear us,</Line></span><Line><Red>Christ graciously hear us.</Red></Line>
       </div>
 
       <div class='two-cols spaced-small'>
-        <span>God the Father of Heaven,</span><Red>have mercy on us.</Red>
-        <span>God the Son, Redeemer of the world,</span><Red>have mercy on us.</Red>
-        <span>God the Holy Spirit,</span><Red>have mercy on us.</Red>
-        <span>Holy Trinity, One God,</span><Red>have mercy on us.</Red>
+        <span><Line>God the Father of Heaven,</Line></span><Line><Red>have mercy on us.</Red></Line>
+        <span><Line>God the Son, Redeemer of the world,</Line></span><Line><Red>have mercy on us.</Red></Line>
+        <span><Line>God the Holy Spirit,</Line></span><Line><Red>have mercy on us.</Red></Line>
+        <span><Line>Holy Trinity, One God,</Line></span><Line><Red>have mercy on us.</Red></Line>
       </div>
 
       <div class='two-cols spaced-small'>
-        <span>Blood of Christ, only-begotten Son of the Eternal Father,</span><Red>save us.</Red>
-        <span>Blood of Christ, Incarnate Word of God,</span><Red>save us.</Red>
-        <span>Blood of Christ, of the New and Eternal Testament,</span><Red>save us.</Red>
+        <span><Line>Blood of Christ, only-begotten Son of the Eternal Father,</Line></span><Line><Red>save us.</Red></Line>
+        <span><Line>Blood of Christ, Incarnate Word of God,</Line></span><Line><Red>save us.</Red></Line>
+        <span><Line>Blood of Christ, of the New and Eternal Testament,</Line></span><Line><Red>save us.</Red></Line>
         <span class='spaced-mini' /><span />
-        <span>Blood of Christ, falling upon the earth in the Agony,</span><Red>save us.</Red>
-        <span>Blood of Christ, shed profusely in the Scourging,</span><Red>save us.</Red>
-        <span>Blood of Christ, flowing forth in the Crowning with Thorns,</span><Red>save us.</Red>
+        <span><Line>Blood of Christ, falling upon the earth in the Agony,</Line></span><Line><Red>save us.</Red></Line>
+        <span><Line>Blood of Christ, shed profusely in the Scourging,</Line></span><Line><Red>save us.</Red></Line>
+        <span><Line>Blood of Christ, flowing forth in the Crowning with Thorns,</Line></span><Line><Red>save us.</Red></Line>
         <span class='spaced-mini' /><span />
-        <span>Blood of Christ, poured out on the Cross,</span><Red>save us.</Red>
-        <span>Blood of Christ, price of our salvation,</span><Red>save us.</Red>
-        <span>Blood of Christ, without which there is no forgiveness,</span><Red>save us.</Red>
+        <span><Line>Blood of Christ, poured out on the Cross,</Line></span><Line><Red>save us.</Red></Line>
+        <span><Line>Blood of Christ, price of our salvation,</Line></span><Line><Red>save us.</Red></Line>
+        <span><Line>Blood of Christ, without which there is no forgiveness,</Line></span><Line><Red>save us.</Red></Line>
         <span class='spaced-mini' /><span />
-        <span>Blood of Christ, Eucharistic drink and refreshment of souls,</span><Red>save us.</Red>
-        <span>Blood of Christ, stream of mercy,</span><Red>save us.</Red>
-        <span>Blood of Christ, victor over demons,</span><Red>save us.</Red>
+        <span><Line>Blood of Christ, Eucharistic drink and refreshment of souls,</Line></span><Line><Red>save us.</Red></Line>
+        <span><Line>Blood of Christ, stream of mercy,</Line></span><Line><Red>save us.</Red></Line>
+        <span><Line>Blood of Christ, victor over demons,</Line></span><Line><Red>save us.</Red></Line>
         <span class='spaced-mini' /><span />
-        <span>Blood of Christ, courage of Martyrs,</span><Red>save us.</Red>
-        <span>Blood of Christ, strength of Confessors,</span><Red>save us.</Red>
-        <span>Blood of Christ, bringing forth Virgins,</span><Red>save us.</Red>
+        <span><Line>Blood of Christ, courage of Martyrs,</Line></span><Line><Red>save us.</Red></Line>
+        <span><Line>Blood of Christ, strength of Confessors,</Line></span><Line><Red>save us.</Red></Line>
+        <span><Line>Blood of Christ, bringing forth Virgins,</Line></span><Line><Red>save us.</Red></Line>
         <span class='spaced-mini' /><span />
-        <span>Blood of Christ, help of those in peril,</span><Red>save us.</Red>
-        <span>Blood of Christ, relief of the burdened,</span><Red>save us.</Red>
-        <span>Blood of Christ, solace in sorrow,</span><Red>save us.</Red>
+        <span><Line>Blood of Christ, help of those in peril,</Line></span><Line><Red>save us.</Red></Line>
+        <span><Line>Blood of Christ, relief of the burdened,</Line></span><Line><Red>save us.</Red></Line>
+        <span><Line>Blood of Christ, solace in sorrow,</Line></span><Line><Red>save us.</Red></Line>
         <span class='spaced-mini' /><span />
-        <span>Blood of Christ, hope of the penitent,</span><Red>save us.</Red>
-        <span>Blood of Christ, consolation of the dying,</span><Red>save us.</Red>
-        <span>Blood of Christ, peace and tenderness of hearts,</span><Red>save us.</Red>
+        <span><Line>Blood of Christ, hope of the penitent,</Line></span><Line><Red>save us.</Red></Line>
+        <span><Line>Blood of Christ, consolation of the dying,</Line></span><Line><Red>save us.</Red></Line>
+        <span><Line>Blood of Christ, peace and tenderness of hearts,</Line></span><Line><Red>save us.</Red></Line>
         <span class='spaced-mini' /><span />
-        <span>Blood of Christ, pledge of eternal life,</span><Red>save us.</Red>
-        <span>Blood of Christ, freeing souls from purgatory,</span><Red>save us.</Red>
-        <span>Blood of Christ, most worthy of all glory and honor,</span><Red>save us.</Red>
+        <span><Line>Blood of Christ, pledge of eternal life,</Line></span><Line><Red>save us.</Red></Line>
+        <span><Line>Blood of Christ, freeing souls from purgatory,</Line></span><Line><Red>save us.</Red></Line>
+        <span><Line>Blood of Christ, most worthy of all glory and honor,</Line></span><Line><Red>save us.</Red></Line>
       </div>
 
       <div class='two-cols spaced-small'>
-        <span>Lamb of God, Who takest away the sins of the world,</span><Red>spare us, O Lord.</Red>
-        <span>Lamb of God, Who takest away the sins of the world,</span><Red>graciously hear us, O Lord.</Red>
-        <span>Lamb of God, Who takest away the sins of the world,</span><Red>have mercy on us.</Red>
+        <span><Line>Lamb of God, Who takest away the sins of the world,</Line></span><Line><Red>spare us, O Lord.</Red></Line>
+        <span><Line>Lamb of God, Who takest away the sins of the world,</Line></span><Line><Red>graciously hear us, O Lord.</Red></Line>
+        <span><Line>Lamb of God, Who takest away the sins of the world,</Line></span><Line><Red>have mercy on us.</Red></Line>
       </div>
 
       <p class='spaced-small'>
-        Thou hast redeemed us with Thy Blood, O Lord.<br />
-        <Red>And made of us a kingdom for our God.</Red>
+        <Line>Thou hast redeemed us with Thy Blood, O Lord.</Line>
+        <Line><Red>And made of us a kingdom for our God.</Red></Line>
       </p>
 
-      <p class='spaced-medium' style='text-align:center; font-style:italic'>Let us pray.</p>
+      <p class='spaced-medium' style='text-align:center; font-style:italic'><Line>Let us pray.</Line></p>
 
       <p class='column spaced-small'>
-        Almighty, and everlasting God, Who hast appointed Thine only-begotten Son to be
-        the Redeemer of the world, and hast been pleased to be reconciled unto us by His
-        Blood, grant us, we beseech Thee, so to venerate with solemn worship the price of
-        our salvation, that the power thereof may here on earth keep us from all things
-        hurtful, and the fruit of the same may gladden us for ever hereafter in heaven.
-        Through the same Christ our Lord. <Red>Amen.</Red>
+        <Line>Almighty, and everlasting God,</Line>
+        <Line>  Who hast appointed Thine only-begotten Son</Line>
+        <Line>    to be the Redeemer of the world,</Line>
+        <Line>      and hast been pleased to be reconciled unto us by His Blood,</Line>
+        <Line>  grant us, we beseech Thee,</Line>
+        <Line>    so to venerate with solemn worship</Line>
+        <Line>      the price of our salvation,</Line>
+        <Line>  that the power thereof</Line>
+        <Line>    may here on earth keep us from all things hurtful,</Line>
+        <Line>      and the fruit of the same may gladden us for ever hereafter in heaven.</Line>
+        <Line>Through the same Christ our Lord.</Line>
+        <Line>  <Red>Amen.</Red></Line>
       </p>
     </div>
   </Panel>;
