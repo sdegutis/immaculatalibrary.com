@@ -18,10 +18,10 @@ export function BlessedSacrament() {
     {target}
     <div id="navlinks" class="box">
       {adorationLinks.map((iframe, i) => (
-        <a onclick={(e: Event) => {
+        <a href='#' onclick={(e: Event) => {
           e.preventDefault();
           target.replaceChildren(iframe);
-        }} href={iframe.src}>Adoration {i + 1}</a>
+        }}>Adoration {i + 1}</a>
       ))}
       <a href="#" onclick={(e: Event) => {
         e.preventDefault();
