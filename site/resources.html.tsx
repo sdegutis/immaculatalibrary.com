@@ -14,6 +14,7 @@ export default <>
           <h3>Bibles</h3>
           <p><a href="https://www.amazon.com/dp/0898708338">Hardcover (RSV-CE2)</a></p>
           <p><a href="https://www.truthandlifeapp.com/">Audiobook (RSV-CE New Testament)</a></p>
+          <p><a href="https://catenabible.com/">Catena Bible</a></p>
 
           <h3>Live streams</h3>
           <p><a href='https://mass-online.org/daily-holy-mass-live-online/'>Online Masses</a></p>
@@ -22,7 +23,6 @@ export default <>
 
           <h3>Prayers</h3>
           <p><a href='/prayers/'>Daily Prayers</a></p>
-          <p><a href='https://www.catholiccompany.com/magazine/prayer-holy-souls-purgatory-st-gertrude-5921'>St. Gertrude Prayer</a></p>
           <p><a href='http://auxiliumchristianorum.org/'>Auxilium Christianorum</a></p>
           <p><a href='https://www.catholicexorcism.org/'>CatholicExorcism.org</a></p>
 
