@@ -66,7 +66,7 @@ export default <>
 
               <h2>Latest Articles</h2>
               <ul>
-                {allArticles.slice(0, 5).map(article => <>
+                {allArticles.slice(0, 7).map(article => <>
                   <li>
                     <a class="title" href={article.route}>{article.data.title}</a><br />
                     <small>{article.mins} min &bull; {formatDate(article.date)}</small>
