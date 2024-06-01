@@ -24,13 +24,13 @@ body {
   overflow: hidden;
 
   display: grid;
-  grid-template-rows: 28% 1fr;
+  grid-template-rows: auto 1fr;
 }
 
 #bottom {
   position: relative;
   background-image: url(./pic.jpg);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
 }

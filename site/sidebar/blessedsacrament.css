@@ -2,6 +2,7 @@
 #top2 {
   position: relative;
   height: 100%;
+  aspect-ratio: 16/9;
 }
 
 #navlinks {
