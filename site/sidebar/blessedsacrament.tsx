@@ -1,7 +1,10 @@
 const adorationLinks = [
-  "https://www.youtube.com/embed/live_stream?channel=UCTv8s3mfmdIIXNcw_5Pdv_w&autoplay=1&mute=1",
-  "https://www.youtube.com/embed/live_stream?channel=UChmNZQg06jCB5xXHSAQQNpA&autoplay=1&mute=1",
-].map(href => <iframe src={href} /> as HTMLIFrameElement);
+  "UCTv8s3mfmdIIXNcw_5Pdv_w",
+  "UChmNZQg06jCB5xXHSAQQNpA",
+].map(id => {
+  const href = `https://www.youtube.com/embed/live_stream?channel=${id}&autoplay=1&mute=1`;
+  return <iframe src={href} /> as HTMLIFrameElement;
+});
 
 const blessedSacramentImage = <img src="./blessedsacrament.png" />;
 
