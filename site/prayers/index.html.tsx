@@ -99,25 +99,35 @@ function Conclusion() {
   return <Panel>
     <div class='centered spaced-big'>
       <h1>Conclusion</h1>
-      <p class='column spaced-small'>August Queen of the Heavens, heavenly Sovereign of the Angels, Thou who from
-        the beginning hast received from God the power and the mission to crush the head
-        of Satan, we humbly beseech Thee to send thy holy legions, so that under Thy
-        command and through Thy power, they may pursue the demons and combat them
-        everywhere, suppress their boldness, and drive them back into the abyss. O good
-        and tender Mother, Thou wilt always be our love and hope! O Divine Mother, send
-        Thy Holy Angels to defend us and to drive far away from us the cruel enemy. Holy
-        Angels and Archangels, defend us, guard us. Amen.
+      <p class='column spaced-small'>
+        <Line>August Queen of the Heavens,</Line>
+        <Line>  heavenly Sovereign of the Angels,</Line>
+        <Line>    Thou who from the beginning</Line>
+        <Line>      hast received from God the power and the mission</Line>
+        <Line>        to crush the head of Satan,</Line>
+        <Line>we humbly beseech Thee to send thy holy legions,</Line>
+        <Line>  so that under Thy command and through Thy power,</Line>
+        <Line>    they may pursue the demons</Line>
+        <Line>      and combat them everywhere,</Line>
+        <Line>        suppress their boldness,</Line>
+        <Line>          and drive them back into the abyss.</Line>
+        <Line>O good and tender Mother,</Line>
+        <Line>  Thou wilt always be our love and hope!</Line>
+        <Line>    O Divine Mother, send Thy Holy Angels to defend us</Line>
+        <Line>      and to drive far away from us the cruel enemy.</Line>
+        <Line>        Holy Angels and Archangels, defend us, guard us.</Line>
+        <Line>Amen.</Line>
       </p>
       <p class='spaced-small two-cols'>
-        <span>Most Sacred Heart of Jesus,</span><Red>have mercy on us.</Red>
-        <span>Mary, Help of Christians,</span><Red>pray for us.</Red>
-        <span>Virgin Most Powerful,</span><Red>pray for us.</Red>
-        <span>St. Joseph,</span><Red>pray for us.</Red>
-        <span>St. Michael the Archangel,</span><Red>pray for us.</Red>
-        <span>All You Holy Angels,</span><Red>pray for us.</Red>
+        <span><Line>Most Sacred Heart of Jesus,</Line></span><Line><Red>have mercy on us.</Red></Line>
+        <span><Line>Mary, Help of Christians,</Line></span><Line><Red>pray for us.</Red></Line>
+        <span><Line>Virgin Most Powerful,</Line></span><Line><Red>pray for us.</Red></Line>
+        <span><Line>St. Joseph,</Line></span><Line><Red>pray for us.</Red></Line>
+        <span><Line>St. Michael the Archangel,</Line></span><Line><Red>pray for us.</Red></Line>
+        <span><Line>All You Holy Angels,</Line></span><Line><Red>pray for us.</Red></Line>
       </p>
       <p class='spaced-small'>
-        <Red>In the name of the Father, the Son and the Holy Spirit. Amen.</Red>
+        <Line><Red>In the name of the Father, the Son and the Holy Spirit. Amen.</Red></Line>
       </p>
     </div>
   </Panel>;
