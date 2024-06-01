@@ -62,7 +62,7 @@ export default <>
               <script type='module' src='/scripts/home.js' />
             </div>
 
-            <div class='hidden-on-mobile'>
+            <div>
 
               <h2>Latest Articles</h2>
               <ul>

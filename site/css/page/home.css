@@ -1,15 +1,3 @@
-.hidden-on-mobile {
-  display: none;
-}
-
-@media (min-width: 600px) {
-  .hidden-on-mobile {
-    display: block;
-  }
-}
-
-
-
 #letters-from-heaven {
   position: relative;
   overflow: hidden;
