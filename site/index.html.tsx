@@ -45,25 +45,25 @@ export default <>
         </Spaced>
       </div>
 
-      <FadeIn>
-        <Spaced>
-          <SplitColumn>
+      <Spaced>
+        <SplitColumn>
+
+          <FadeIn>
 
             <div>
-
-              <div>
-                <h2>Snippet of the Hour</h2>
-                <Typography>
-                  <div id="random-book-snippet">
-                    <HomeLoading />
-                  </div>
-                </Typography>
-              </div>
-              <script type='module' src='/scripts/home.js' />
+              <h2>Snippet of the Hour</h2>
+              <Typography>
+                <div id="random-book-snippet">
+                  <HomeLoading />
+                </div>
+              </Typography>
             </div>
+            <script type='module' src='/scripts/home.js' />
+          </FadeIn>
 
-            <div>
+          <div>
 
+            <FadeIn>
               <h2>Latest Articles</h2>
               <ul>
                 {allArticles.slice(0, 7).map(article => <>
@@ -73,7 +73,9 @@ export default <>
                   </li>
                 </>)}
               </ul>
+            </FadeIn>
 
+            <FadeIn>
               <h2>Featured books</h2>
               <ul id='home-featured-books'>
                 {featuredBooks.map(book => <>
@@ -84,9 +86,10 @@ export default <>
                   </li>
                 </>)}
               </ul>
+            </FadeIn>
 
+            <FadeIn>
               <h2>About Immaculata Library</h2>
-
               <p>The website Immaculata Library began as a quick place
                 to store digital copies of invaluable and timeless
                 Catholic books that have become copyright free,
@@ -101,12 +104,12 @@ export default <>
                 are selected for this website. This means, only books that
                 have received official approbations from Bishops, <em>and</em> have
                 helped to produce Saints, or are written by Saints, are offered.</p>
+            </FadeIn>
 
-            </div>
+          </div>
 
-          </SplitColumn>
-        </Spaced>
-      </FadeIn>
+        </SplitColumn>
+      </Spaced>
 
     </main>
 
