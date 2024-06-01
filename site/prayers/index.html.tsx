@@ -393,13 +393,19 @@ function Saturday() {
   return <Panel>
     <div class='centered spaced-big show-today'>
       <h1>Saturday</h1>
-      <p class='column spaced-small'>
-        O God and Father of our Lord Jesus Christ, we call upon Thy holy Name and
-        humbly beseech Thy clemency, that, through the intercession of the ever
-        immaculate Virgin, our Mother Mary, and of the glorious Archangel Saint Michael,
-        thou wouldst vouchsafe to help us against Satan and all the other unclean spirits that
-        are prowling about the world to the great peril of the human race and the loss of
-        souls. Amen.
+      <p class='column wide spaced-small'>
+        <Line>O God and Father of our Lord Jesus Christ,</Line>
+        <Line>  we call upon Thy holy Name</Line>
+        <Line>    and humbly beseech Thy clemency,</Line>
+        <Line>that, through the intercession</Line>
+        <Line>  of the ever immaculate Virgin, our Mother Mary,</Line>
+        <Line>    and of the glorious Archangel Saint Michael,</Line>
+        <Line>thou wouldst vouchsafe to help us against Satan</Line>
+        <Line>  and all the other unclean spirits</Line>
+        <Line>    that are prowling about the world</Line>
+        <Line>      to the great peril of the human race</Line>
+        <Line>        and the loss of souls.</Line>
+        <Line><Red>Amen.</Red></Line>
       </p>
     </div>
   </Panel>;
