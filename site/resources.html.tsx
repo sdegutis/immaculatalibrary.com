@@ -18,6 +18,7 @@ export default <>
           <h3>Live streams</h3>
           <p><a href='https://mass-online.org/daily-holy-mass-live-online/'>Online Masses</a></p>
           <p><a href='https://www.youtube.com/watch?v=rz5gektkF0o'>Online Adoration</a></p>
+          <p><a href='/sidebar/'>Sidebar</a> (install as an app)</p>
 
           <h3>Prayers</h3>
           <p><a href='/prayers/'>Daily Prayers</a></p>

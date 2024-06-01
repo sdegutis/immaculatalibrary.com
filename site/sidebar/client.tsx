@@ -43,7 +43,7 @@ function Weather() {
   </div> as HTMLElement;
 
   updateWeather();
-  setInterval(updateWeather, 1000 * 60 * 60);
+  setInterval(updateWeather, 1000 * 60 * 5);
 
   function updateWeather() {
     navigator.geolocation.getCurrentPosition(async pos => {
