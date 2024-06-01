@@ -67,9 +67,17 @@ body {
 }
 
 #weather-icon {
-  height: 7vh;
+  height: 4vh;
 }
 
 #temperature {
   font-size: 300%;
+}
+
+#temprow {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.25em;
 }
