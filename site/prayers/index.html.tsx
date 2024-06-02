@@ -44,7 +44,15 @@ export default <>
           <SaintMichael />
           <Memorare />
           <HolyFamilyPrayer />
-        </Slideshow>
+        </Slideshow>,
+      "Rosary":
+        <Slideshow>
+          <Panel>
+            <div class='centered spaced-big'>
+              Coming soon.
+            </div>
+          </Panel>
+        </Slideshow>,
     }} />
   </Html>
 </>;
