@@ -698,7 +698,7 @@ function Tabs(attrs: { tabs: Record<string, JSX.Element> }) {
     <div id='tab-container'>
       <div id='tabs-names'>
         {Object.keys(attrs.tabs).map((tabName, i) => (
-          <a href="#">{tabName}</a>
+          <button>{tabName}</button>
         ))}
       </div>
       <div id='tabs-bodies'>

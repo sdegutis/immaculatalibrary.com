@@ -48,21 +48,25 @@ a {
     padding: 0;
 }
 
-#tabs-names a {
+#tabs-names button {
     padding: 0.5em 1em;
     display: inline-block;
-    text-decoration: none;
     color: #aaa;
     background: #222;
+
+    font: inherit;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
 }
 
-#tabs-names a:hover {
+#tabs-names button:hover {
     color: #fff;
 }
 
-#tabs-names a.active {
+#tabs-names button.active {
     color: #fff;
-    border-bottom: 2px solid var(--blue);
+    border-bottom-color: var(--blue);
 }
 
 /* Slideshows */

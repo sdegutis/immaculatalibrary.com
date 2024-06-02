@@ -71,7 +71,7 @@ class Panel {
 
 const tabs: Tab[] = [];
 
-const tabButtons = [...document.querySelectorAll<HTMLAnchorElement>('#tabs-names a')];
+const tabButtons = [...document.querySelectorAll<HTMLAnchorElement>('#tabs-names button')];
 for (const slideshow of document.querySelectorAll<HTMLDivElement>('.slideshow')) {
     let lastPanel: Panel | undefined;
 
