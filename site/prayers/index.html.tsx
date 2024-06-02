@@ -1,5 +1,9 @@
 import { Font } from '../components/fonts.js';
 import martel from '../fonts/martel/';
+import sorrowfulList from './rosary/sorrowful/';
+import gloriousList from './rosary/glorious/';
+import joyfulList from './rosary/joyful/';
+import luminousList from './rosary/luminous/';
 
 export default <>
   <Html>
@@ -46,17 +50,25 @@ export default <>
         </Slideshow>,
       "Rosary":
         <Slideshow>
-          <Panel>
-            <div class='centered spaced-big'>
-              Coming soon.
-            </div>
-          </Panel>
           <ApostlesCreed />
+          <Mystery name='Joyful' list={joyfulList} />
+          <Mystery name='Luminous' list={luminousList} />
+          <Mystery name='Sorrowful' list={sorrowfulList} />
+          <Mystery name='Glorious' list={gloriousList} />
           <HailHolyQueen />
         </Slideshow>,
     }} />
   </Html>
 </>;
+
+function Mystery(attrs: { name: string, list: FsFile[] }) {
+  return <Panel>
+    <div class='centered spaced-big'>
+      <h1>{attrs.name} Mysteries</h1>
+      {attrs.list.map(file => <img src={file.path} />)}
+    </div>
+  </Panel>;
+}
 
 function Line(attrs: any, children: any) {
   return <span class='highlightable-line left-align'>{children}{'\n'}</span>;
