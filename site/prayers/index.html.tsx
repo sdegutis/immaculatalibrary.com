@@ -13,7 +13,6 @@ export default <>
           <GloryBe />
           <PreciousBlood />
           <SaintMichael />
-          <Memorare />
           <HolyFamilyPrayer />
         </Slideshow>,
       "Noon":
