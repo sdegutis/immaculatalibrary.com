@@ -49,12 +49,14 @@ function Weather() {
     navigator.geolocation.getCurrentPosition(async pos => {
       const { latitude, longitude } = pos.coords;
       const points = await fetch(`https://api.weather.gov/points/${latitude},${longitude}`).then(res => res.json());
-      const forecast = await fetch(points.properties.forecast).then(res => res.json());
-      const now = forecast.properties.periods[0];
+      const forecastNow = await fetch(points.properties.forecastHourly).then(res => res.json());
+      const forecastLater = await fetch(points.properties.forecast).then(res => res.json());
+      const now = forecastNow.properties.periods[0];
+      const later = forecastLater.properties.periods[0];
 
-      node.querySelector<HTMLImageElement>('#weather-icon')!.src = now.icon;
       node.querySelector<HTMLElement>('#temperature')!.innerText = `${now.temperature} ${now.temperatureUnit}°`;
-      node.querySelector<HTMLElement>('#weather-full')!.innerText = now.detailedForecast;
+      node.querySelector<HTMLImageElement>('#weather-icon')!.src = later.icon;
+      node.querySelector<HTMLElement>('#weather-full')!.innerText = later.detailedForecast;
     });
   }
 
