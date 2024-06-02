@@ -52,6 +52,7 @@ export default <>
               Coming soon.
             </div>
           </Panel>
+          <ApostlesCreed />
         </Slideshow>,
     }} />
   </Html>
@@ -632,6 +633,33 @@ function SaintMichael() {
     <Line>            Who prowl about the world</Line>
     <Line>            Seeking the ruin of souls</Line>
     <Line>Amen</Line>
+  </Prayer>;
+}
+
+function ApostlesCreed() {
+  return <Prayer img="./images/apostles-creed.jpg">
+    <h1>Apostle's Creed</h1>
+    <Line>I believe in God</Line>
+    <Line>  The Father Almighty</Line>
+    <Line>    Creator of Heaven and Earth</Line>
+    <Line>And in Jesus Christ</Line>
+    <Line>  His only Son, Our Lord,</Line>
+    <Line>    Who was conceived by the Holy Spirit</Line>
+    <Line>      Born of the Virgin Mary</Line>
+    <Line>  Suffered under Pontius Pilate</Line>
+    <Line>    Was crucified, died, and was buried</Line>
+    <Line>      He descended into Hell</Line>
+    <Line>  On the third day he rose again from the dead</Line>
+    <Line>    He ascended into Heaven</Line>
+    <Line>      And is seated at the right hand of God the Father Almighty</Line>
+    <Line>        From thence he shall come to judge the living and the dead</Line>
+    <Line>I believe in the Holy Spirit</Line>
+    <Line>  The Holy Catholic Church</Line>
+    <Line>    The communion of Saints</Line>
+    <Line>  The forgiveness of sins</Line>
+    <Line>    The resurrection of the body</Line>
+    <Line>      And the life of the world to come</Line>
+    <Line>Amen.</Line>
   </Prayer>;
 }
 
