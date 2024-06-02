@@ -53,6 +53,7 @@ export default <>
             </div>
           </Panel>
           <ApostlesCreed />
+          <HailHolyQueen />
         </Slideshow>,
     }} />
   </Html>
@@ -659,6 +660,26 @@ function ApostlesCreed() {
     <Line>  The forgiveness of sins</Line>
     <Line>    The resurrection of the body</Line>
     <Line>      And the life of the world to come</Line>
+    <Line>Amen.</Line>
+  </Prayer>;
+}
+
+function HailHolyQueen() {
+  return <Prayer img="./images/hail-holy-queen.jpg">
+    <h1>Hail Holy Queen</h1>
+    <Line>Hail Holy Queen</Line>
+    <Line>  Mother of mercy</Line>
+    <Line>    Our life, our sweetness, and our hope</Line>
+    <Line>To thee to we cry, poor bashished children of Eve</Line>
+    <Line>  To the do we send up our sighs, mournings, and weepings</Line>
+    <Line>    In this valley of tears</Line>
+    <Line>Turn then most gracious advocate</Line>
+    <Line>  Thine eyes of mercy towards us</Line>
+    <Line>    And after this our exile</Line>
+    <Line>      Show unto us the Blessed Fruit of Thy Womb Jesus</Line>
+    <Line>Oh clement, oh loving, oh sweet Virgin Mary</Line>
+    <Line>  Pray for us, O Holy Mother of God</Line>
+    <Line>    That we may be worthy of the promises of Christ</Line>
     <Line>Amen.</Line>
   </Prayer>;
 }
