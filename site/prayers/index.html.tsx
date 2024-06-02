@@ -57,6 +57,7 @@ function Intro() {
   return <Panel>
     <div class='centered spaced-big'>
       <h1>Auxilium Christianorum</h1>
+      <a href='http://auxiliumchristianorum.org/'>Official website</a>
       <p class='spaced-small'>
         <Line>Our help is in the name of the Lord.</Line>
         <Line><Red>Who made heaven and earth.</Red></Line>

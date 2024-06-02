@@ -18,6 +18,10 @@ body {
     box-sizing: border-box;
 }
 
+a {
+    color: var(--blue);
+}
+
 /* Tabs */
 
 #tabs-names {
