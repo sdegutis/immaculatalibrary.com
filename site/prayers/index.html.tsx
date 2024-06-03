@@ -51,17 +51,17 @@ export default <>
       "Rosary":
         <Slideshow>
           <ApostlesCreed />
-          <Mystery name='Joyful' list={joyfulList} />
-          <Mystery name='Luminous' list={luminousList} />
-          <Mystery name='Sorrowful' list={sorrowfulList} />
-          <Mystery name='Glorious' list={gloriousList} />
+          <Mystery name='Joyful' list={joyfulList} mysteries={['The Annunciation', 'Visitation to Elizabeth', 'Nativity / Christmas', 'Presentation at the Temple', 'Finding at the Temple']} />
+          <Mystery name='Luminous' list={luminousList} mysteries={['Baptism in the Jordan', 'Wedding Feast at Cana', 'Proclamation of the Kingdom', 'Transfiguration', 'Institution of the Eucharist']} />
+          <Mystery name='Sorrowful' list={sorrowfulList} mysteries={['Agony in the Garden', 'Scourging at the Pillar', 'Crowning with Thorns', 'Carrying of the Cross', 'Crucifixion']} />
+          <Mystery name='Glorious' list={gloriousList} mysteries={['Resurrection', 'Ascension', 'Descent of the Holy Spirit', 'Assumption of Mary', 'Crowning of Mary as Queen of Heaven and Earth']} />
           <HailHolyQueen />
         </Slideshow>,
     }} />
   </Html>
 </>;
 
-function Mystery(attrs: { name: string, list: FsFile[] }) {
+function Mystery(attrs: { name: string, list: FsFile[], mysteries: string[] }) {
   const labels = ['First', 'Second', 'Third', 'Fourth', 'Fifth'];
   const mysteries = Object.values(Object.groupBy(attrs.list, f => f.path.match(/\/\d/)?.[0]!));
   return <>{mysteries.map((mystery, i) =>
@@ -69,6 +69,7 @@ function Mystery(attrs: { name: string, list: FsFile[] }) {
       {mystery!.map(file => <>
         <div class='centered mystery highlightable-line'>
           <h1>{labels[i]} {attrs.name} Mystery</h1>
+          <h2>{attrs.mysteries[i]}</h2>
           <img src={file.path} />
         </div>
       </>)}
