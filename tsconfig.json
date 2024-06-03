@@ -1,12 +1,12 @@
 {
   "compilerOptions": {
     "lib": [
-      "ES2020",
+      "ESNext",
       "DOM",
-      "DOM.Iterable"
+      "DOM.Iterable",
     ],
     "jsx": "react-native",
-    "target": "ES2022",
+    "target": "ESNext",
     "noEmit": true,
     "allowSyntheticDefaultImports": false,
     "moduleResolution": "Node",

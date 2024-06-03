@@ -23,7 +23,7 @@
   "devDependencies": {
     "@types/js-yaml": "^4.0.8",
     "@types/markdown-it": "^13.0.4",
-    "@types/node": "^20.8.7"
+    "@types/node": "^20.14.0"
   },
   "dependencies": {
     "@imlib/core": "^2.0.0",
