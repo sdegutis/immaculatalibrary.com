@@ -67,7 +67,7 @@ function Mystery(attrs: { name: string, list: FsFile[] }) {
   return <>{mysteries.map((mystery, i) =>
     <Panel>
       {mystery!.map(file => <>
-        <div class='centered spaced-big'>
+        <div class='centered mystery'>
           <h1>{labels[i]} {attrs.name} Mystery</h1>
           <img src={file.path} />
         </div>
