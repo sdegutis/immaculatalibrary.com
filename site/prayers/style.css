@@ -130,6 +130,15 @@ a {
     background-color: #0007;
 }
 
+.highlightable-line {
+    opacity: .2;
+    transition: opacity ease-in-out 250ms;
+}
+
+.highlightable-line.active {
+    opacity: 1;
+}
+
 /* Layout */
 
 .centered {

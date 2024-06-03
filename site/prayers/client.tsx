@@ -47,15 +47,15 @@ class Panel {
         this.currentLine = 0;
 
         for (const line of this.lines) {
-            line.style.opacity = '.2';
+            line.classList.remove('active');
         }
 
-        this.lines[this.currentLine]!.style.opacity = '1';
+        this.lines[this.currentLine]!.classList.add('active');
     }
     goToLine(line: number) {
-        this.lines[this.currentLine]!.style.opacity = '.2';
+        this.lines[this.currentLine]!.classList.remove('active');
         this.currentLine = line;
-        this.lines[this.currentLine]!.style.opacity = '1';
+        this.lines[this.currentLine]!.classList.add('active');
         this.lines[this.currentLine]!.scrollIntoView({
             behavior: 'smooth',
             block: 'nearest',
