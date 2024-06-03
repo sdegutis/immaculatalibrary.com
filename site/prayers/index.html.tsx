@@ -64,12 +64,16 @@ export default <>
 function Mystery(attrs: { name: string, list: FsFile[] }) {
   const labels = ['First', 'Second', 'Third', 'Fourth', 'Fifth'];
   const mysteries = Object.values(Object.groupBy(attrs.list, f => f.path.match(/\/\d/)?.[0]!));
-  return mysteries.map((mystery, i) => <Panel>
-    <div class='centered spaced-big'>
-      <h1>{labels[i]} {attrs.name} Mystery</h1>
-      {mystery!.map(file => <img src={file.path} />)}
-    </div>
-  </Panel>);
+  return <>{mysteries.map((mystery, i) =>
+    <Panel>
+      {mystery!.map(file => <>
+        <div class='centered spaced-big'>
+          <h1>{labels[i]} {attrs.name} Mystery</h1>
+          <img src={file.path} />
+        </div>
+      </>)}
+    </Panel>
+  )}</>;
 }
 
 function Line(attrs: any, children: any) {
