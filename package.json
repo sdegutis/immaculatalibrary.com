@@ -4,7 +4,7 @@
   "description": "My website.",
   "module": "out/main.js",
   "scripts": {
-    "generate": "node --experimental-vm-modules generate.js",
+    "generate": "node --experimental-vm-modules out/generate.js",
     "build": "tsc --build",
     "watch": "tsc --build --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -23,11 +23,13 @@
   "devDependencies": {
     "@types/js-yaml": "^4.0.8",
     "@types/markdown-it": "^13.0.4",
-    "@types/node": "^20.14.0"
+    "@types/node": "^20.14.0",
+    "typescript": "^5.4.5"
   },
   "dependencies": {
-    "@imlib/core": "^2.0.0",
+    "chokidar": "^3.6.0",
     "js-yaml": "^4.1.0",
-    "markdown-it": "^13.0.2"
+    "markdown-it": "^13.0.2",
+    "sucrase": "^3.35.0"
   }
 }
