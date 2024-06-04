@@ -44,8 +44,6 @@ class Panel {
         this.panelDiv.scrollIntoView({ behavior: 'smooth' });
         this.panelBodyDiv.focus({ preventScroll: true });
 
-        this.currentLine = 0;
-
         for (const line of this.lines) {
             line.classList.remove('active');
         }
