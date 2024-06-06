@@ -6,7 +6,7 @@ body {
     height: 100vh;
     color-scheme: dark;
     overflow: hidden;
-    font-size: 125%;
+    font-size: 2vh;
     white-space: pre-wrap;
 
     --blue: #5bf;
