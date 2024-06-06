@@ -253,31 +253,50 @@ function Sunday() {
   return <Panel>
     <div class='centered spaced-big show-today'>
       <h1>Sunday</h1>
-      <p class='column spaced-small'>
-        O Glorious Queen of Heaven and Earth, Virgin Most Powerful, thou who hast the
-        power to crush the head of the ancient serpent with thy heel, come and exercise this
-        power flowing from the grace of thine Immaculate Conception. Shield us under the
-        mantle of thy purity and love, draw us into the sweet abode of thy heart and
-        annihilate and render impotent the forces bent on destroying us. Come Most
-        Sovereign Mistress of the Holy Angels and Mistress of the Most Holy Rosary, thou
-        who from the very beginning hast received from God the power and the mission to
-        crush the head of Satan. Send forth thy holy legions, we humbly beseech thee, that
-        under thy command and by thy power they may pursue the evil spirits, counter them
-        on every side, resist their bold attacks and drive them far from us, harming no one
-        on the way, binding them to the foot of the Cross to be judged and sentenced by
-        Jesus Christ Thy Son and to be disposed of by Him as He wills.
-      </p>
-      <p class='column spaced-small'>
-        St. Joseph, Patron of the Universal Church, come to our aid in this grave
-        battle against the forces of darkness, repel the attacks of the devil and free the
-        members of the Auxilium Christianorum, and those for whom the priests of the
-        Auxilium Christianorum pray, from the strongholds of the enemy.
-      </p>
-      <p class='column spaced-small'>
-        St. Michael, summon the entire heavenly court to engage their forces in this
-        fierce battle against the powers of hell. Come O Prince of Heaven with thy mighty
-        sword and thrust into hell Satan and all the other evil spirits. O Guardian Angels,
-        guide and protect us. Amen.
+      <p class='column wide spaced-small'>
+        <Line>O Glorious Queen of Heaven and Earth,</Line>
+        <Line>    Virgin Most Powerful,</Line>
+        <Line>    thou who hast the power</Line>
+        <Line>    to crush the head of the ancient serpent with thy heel,</Line>
+        <Line>        come and exercise this power</Line>
+        <Line>        flowing from the grace of thine Immaculate Conception.</Line>
+        <Line>Shield us under the mantle of thy purity and love,</Line>
+        <Line>    draw us into the sweet abode of thy heart</Line>
+        <Line>    and annihilate and render impotent</Line>
+        <Line>        the forces bent on destroying us.</Line>
+        <Line>Come Most Sovereign Mistress of the Holy Angels</Line>
+        <Line>    and Mistress of the Most Holy Rosary, </Line>
+        <Line>    thou who from the very beginning hast received from God</Line>
+        <Line>        the power and the mission to crush the head of Satan.</Line>
+        <Line>Send forth thy holy legions, we humbly beseech thee,</Line>
+        <Line>    that under thy command and by thy power</Line>
+        <Line>    they may pursue the evil spirits,</Line>
+        <Line>    counter them on every side,</Line>
+        <Line>    resist their bold attacks</Line>
+        <Line>    and drive them far from us,</Line>
+        <Line>        harming no one on the way,</Line>
+        <Line>        binding them to the foot of the Cross</Line>
+        <Line>            to be judged and sentenced by Jesus Christ Thy Son</Line>
+        <Line>            and to be disposed of by Him as He wills.</Line>
+        <br />
+        <Line>St. Joseph, Patron of the Universal Church,</Line>
+        <Line>    come to our aid in this grave battle</Line>
+        <Line>    against the forces of darkness,</Line>
+        <Line>repel the attacks of the devil</Line>
+        <Line>    and free the members of the Auxilium Christianorum,</Line>
+        <Line>    and those for whom the priests of the Auxilium Christianorum pray,</Line>
+        <Line>        from the strongholds of the enemy.</Line>
+        <br />
+        <Line>St. Michael, summon the entire heavenly court</Line>
+        <Line>    to engage their forces in this fierce battle</Line>
+        <Line>        against the powers of hell.</Line>
+        <Line>Come O Prince of Heaven</Line>
+        <Line>    with thy mighty sword</Line>
+        <Line>    and thrust into hell</Line>
+        <Line>        Satan and all the other evil spirits.</Line>
+        <Line>O Guardian Angels,</Line>
+        <Line>    guide and protect us.</Line>
+        <Line>Amen.</Line>
       </p>
     </div>
   </Panel>;
