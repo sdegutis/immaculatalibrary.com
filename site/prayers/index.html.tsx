@@ -405,36 +405,36 @@ function Friday() {
       <h1>Friday</h1>
       <h2>Litany of Humility</h2>
       <p class='two-cols spaced-small'>
-        <span>O Jesus meek and humble,</span><Red>hear me.</Red>
+        <span><Line>O Jesus meek and humble,</Line></span><Red><Line>hear me.</Line></Red>
       </p>
       <p class='two-cols spaced-small'>
-        <span>From the desire of being esteemed,</span><Red>deliver me Jesus.</Red>
-        <span>From the desire of being loved,</span><Red>deliver me Jesus.</Red>
-        <span>From the desire of being extolled,</span><Red>deliver me Jesus.</Red>
-        <span>From the desire of being honored,</span><Red>deliver me Jesus.</Red>
-        <span>From the desire of being praised,</span><Red>deliver me Jesus.</Red>
-        <span>From the desire of being preferred to others,</span><Red>deliver me Jesus.</Red>
-        <span>From the desire of being consulted,</span><Red>deliver me Jesus.</Red>
-        <span>From the desire of being approved,</span><Red>deliver me Jesus.</Red>
+        <span><Line>From the desire of being esteemed,</Line></span><Red><Line>deliver me Jesus.</Line></Red>
+        <span><Line>From the desire of being loved,</Line></span><Red><Line>deliver me Jesus.</Line></Red>
+        <span><Line>From the desire of being extolled,</Line></span><Red><Line>deliver me Jesus.</Line></Red>
+        <span><Line>From the desire of being honored,</Line></span><Red><Line>deliver me Jesus.</Line></Red>
+        <span><Line>From the desire of being praised,</Line></span><Red><Line>deliver me Jesus.</Line></Red>
+        <span><Line>From the desire of being preferred to others,</Line></span><Red><Line>deliver me Jesus.</Line></Red>
+        <span><Line>From the desire of being consulted,</Line></span><Red><Line>deliver me Jesus.</Line></Red>
+        <span><Line>From the desire of being approved,</Line></span><Red><Line>deliver me Jesus.</Line></Red>
       </p>
       <p class='two-cols spaced-small'>
-        <span>From the fear of being humiliated,</span><Red>deliver me Jesus.</Red>
-        <span>From the fear of being despised,</span><Red>deliver me Jesus.</Red>
-        <span>From the fear of suffering rebukes,</span><Red>deliver me Jesus.</Red>
-        <span>From the fear of being calumniated,</span><Red>deliver me Jesus.</Red>
-        <span>From the fear of being forgotten,</span><Red>deliver me Jesus.</Red>
-        <span>From the fear of being ridiculed,</span><Red>deliver me Jesus.</Red>
-        <span>From the fear of being wronged,</span><Red>deliver me Jesus.</Red>
-        <span>From the fear of being suspected,</span><Red>deliver me Jesus.</Red>
+        <span><Line>From the fear of being humiliated,</Line></span><Red><Line>deliver me Jesus.</Line></Red>
+        <span><Line>From the fear of being despised,</Line></span><Red><Line>deliver me Jesus.</Line></Red>
+        <span><Line>From the fear of suffering rebukes,</Line></span><Red><Line>deliver me Jesus.</Line></Red>
+        <span><Line>From the fear of being calumniated,</Line></span><Red><Line>deliver me Jesus.</Line></Red>
+        <span><Line>From the fear of being forgotten,</Line></span><Red><Line>deliver me Jesus.</Line></Red>
+        <span><Line>From the fear of being ridiculed,</Line></span><Red><Line>deliver me Jesus.</Line></Red>
+        <span><Line>From the fear of being wronged,</Line></span><Red><Line>deliver me Jesus.</Line></Red>
+        <span><Line>From the fear of being suspected,</Line></span><Red><Line>deliver me Jesus.</Line></Red>
       </p>
       <p class='two-cols spaced-small'>
-        <span>That others may be loved more than I,</span><Red>Jesus, grant me the grace to desire it.</Red>
-        <span>That others may be esteemed more than I,</span><Red>Jesus, grant me the grace to desire it.</Red>
-        <span>That in the opinion of the world, others may increase and I may decrease,</span><Red>Jesus, grant me the grace to desire it.</Red>
-        <span>That others may be chosen and I set aside,</span><Red>Jesus, grant me the grace to desire it.</Red>
-        <span>That others may be praised and I go unnoticed,</span><Red>Jesus, grant me the grace to desire it.</Red>
-        <span>That others may be preferred to me in everything,</span><Red>Jesus, grant me the grace to desire it.</Red>
-        <span>That others may become holier than I, provided that I become as holy as I should,</span><Red>Jesus, grant me the grace to desire it.</Red>
+        <span><Line>That others may be loved more than I,</Line></span><Red><Line>Jesus, grant me the grace to desire it.</Line></Red>
+        <span><Line>That others may be esteemed more than I,</Line></span><Red><Line>Jesus, grant me the grace to desire it.</Line></Red>
+        <span><Line>That in the opinion of the world, others may increase and I may decrease,</Line></span><Red><Line>Jesus, grant me the grace to desire it.</Line></Red>
+        <span><Line>That others may be chosen and I set aside,</Line></span><Red><Line>Jesus, grant me the grace to desire it.</Line></Red>
+        <span><Line>That others may be praised and I go unnoticed,</Line></span><Red><Line>Jesus, grant me the grace to desire it.</Line></Red>
+        <span><Line>That others may be preferred to me in everything,</Line></span><Red><Line>Jesus, grant me the grace to desire it.</Line></Red>
+        <span><Line>That others may become holier than I, provided that I become as holy as I should,</Line></span><Red><Line>Jesus, grant me the grace to desire it.</Line></Red>
       </p>
     </div>
   </Panel>;
