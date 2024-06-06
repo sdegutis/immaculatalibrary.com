@@ -288,9 +288,14 @@ function Monday() {
     <div class='centered spaced-big show-today'>
       <h1>Monday</h1>
       <p class='column spaced-small'>
-        In Thy name, Lord Jesus Christ, we pray that Thou cover us, our families, and all
-        of our possessions with Thy love and Thy Most Precious Blood and surround us
-        with Thy Heavenly Angels, Saints and the mantle of Our Blessed Mother. Amen.
+        <Line>In Thy name, Lord Jesus Christ,</Line>
+        <Line>  we pray that Thou cover</Line>
+        <Line>    us, our families, and all of our possessions</Line>
+        <Line>      with Thy love and Thy Most Precious Blood</Line>
+        <Line>        and surround us with</Line>
+        <Line>          Thy Heavenly Angels, Saints</Line>
+        <Line>            and the mantle of Our Blessed Mother.</Line>
+        <Line>              Amen.</Line>
       </p>
     </div>
   </Panel>;
@@ -300,11 +305,15 @@ function Tuesday() {
   return <Panel>
     <div class='centered spaced-big show-today'>
       <h1>Tuesday</h1>
-      <p class='column spaced-small'>
-        Lord Jesus Christ, we beg Thee for the grace to remain guarded beneath the
-        protective mantle of Mary, surrounded by the holy briar from which was taken the
-        Holy Crown of Thorns, and saturated with Thy Precious Blood in the power of the
-        Holy Spirit, with our Guardian Angels, for the greater glory of the Father. Amen.
+      <p class='column wide spaced-small'>
+        <Line>Lord Jesus Christ, we beg Thee for the grace</Line>
+        <Line>  to remain guarded beneath the protective mantle of Mary,</Line>
+        <Line>    surrounded by the holy briar from which was taken the Holy Crown of Thorns,</Line>
+        <Line>      and saturated with Thy Precious Blood</Line>
+        <Line>        in the power of the Holy Spirit,</Line>
+        <Line>          with our Guardian Angels,</Line>
+        <Line>            for the greater glory of the Father.</Line>
+        <Line>              Amen.</Line>
       </p>
     </div>
   </Panel>;
