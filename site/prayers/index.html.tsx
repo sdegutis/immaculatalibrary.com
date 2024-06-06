@@ -367,25 +367,33 @@ function Thursday() {
     <div class='centered spaced-big show-today'>
       <h1>Thursday</h1>
       <p class='column spaced-small'>
-        My Lord, Thou art all powerful, Thou art God, Thou art our Father. We beg Thee
-        through the intercession and help of the Archangels Sts. Michael, Raphael, and
-        Gabriel for the deliverance of our brothers and sisters who are enslaved by the evil
-        one. All Saints of Heaven, come to our aid.
+        <Line>My Lord,</Line>
+        <Line>  Thou art all powerful,</Line>
+        <Line>    Thou art God,</Line>
+        <Line>      Thou art our Father.</Line>
+        <Line>We beg Thee through the intercession and help</Line>
+        <Line>  of the Archangels Sts. Michael, Raphael, and Gabriel</Line>
+        <Line>    for the deliverance of our brothers and sisters</Line>
+        <Line>      who are enslaved by the evil one.</Line>
+        <Line>All Saints of Heaven,</Line>
+        <Line>  come to our aid.</Line>
       </p>
       <p class='two-cols spaced-small'>
-        <span>From anxiety, sadness and obsessions,</span><Red>We implore Thee, deliver us, O Lord.</Red>
-        <span>From hatred, fornication, and envy,</span><Red>We implore Thee, deliver us, O Lord.</Red>
-        <span>From thoughts of jealousy, rage, and death,</span><Red>We implore Thee, deliver us, O Lord.</Red>
-        <span>From every thought of suicide and abortion,</span><Red>We implore Thee, deliver us, O Lord.</Red>
-        <span>From every form of sinful sexuality,</span><Red>We implore Thee, deliver us, O Lord.</Red>
-        <span>From every division in our family, and every harmful friendship,</span><Red>We implore Thee, deliver us, O Lord.</Red>
-        <span>From every sort of spell, malefice, witchcraft, and every form of the occult,</span><Red>We implore Thee, deliver us, O Lord.</Red>
+        <span><Line>From anxiety, sadness and obsessions,</Line></span><Red><Line>We implore Thee, deliver us, O Lord.</Line></Red>
+        <span><Line>From hatred, fornication, and envy,</Line></span><Red><Line>We implore Thee, deliver us, O Lord.</Line></Red>
+        <span><Line>From thoughts of jealousy, rage, and death,</Line></span><Red><Line>We implore Thee, deliver us, O Lord.</Line></Red>
+        <span><Line>From every thought of suicide and abortion,</Line></span><Red><Line>We implore Thee, deliver us, O Lord.</Line></Red>
+        <span><Line>From every form of sinful sexuality,</Line></span><Red><Line>We implore Thee, deliver us, O Lord.</Line></Red>
+        <span><Line>From every division in our family, and every harmful friendship,</Line></span><Red><Line>We implore Thee, deliver us, O Lord.</Line></Red>
+        <span><Line>From every sort of spell, malefice, witchcraft, and every form of the occult,</Line></span><Red><Line>We implore Thee, deliver us, O Lord.</Line></Red>
       </p>
       <p class='column spaced-small'>
-        Thou who said, "Peace I leave with you, my peace I give unto you." Grant that,
-        through the intercession of the Virgin Mary, we may be liberated from every
-        demonic influence and enjoy Thy peace always. In the Name of Christ, our Lord.
-        Amen.
+        <Line>Thou who said, "Peace I leave with you, my peace I give unto you."</Line>
+        <Line>  Grant that, through the intercession of the Virgin Mary,</Line>
+        <Line>    we may be liberated from every demonic influence</Line>
+        <Line>      and enjoy Thy peace always.</Line>
+        <Line>        In the Name of Christ, our Lord.</Line>
+        <Line><Red>Amen.</Red></Line>
       </p>
     </div>
   </Panel>;
