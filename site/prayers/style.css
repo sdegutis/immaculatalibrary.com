@@ -139,6 +139,10 @@ a {
     opacity: 1;
 }
 
+span.highlightable-line.active {
+    text-shadow: 0 0 12px #ff0;
+}
+
 /* Layout */
 
 .centered {
