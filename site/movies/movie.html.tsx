@@ -1,4 +1,4 @@
-import { Spaced, ThreeColumn } from "../components/column.js";
+import { Spaced, SplitColumn } from "../components/column.js";
 import { MoviesList, VideosList } from "../components/movies-sidebar.js";
 import { TypicalPage } from "../components/page.js";
 import { Typography } from "../components/typography.js";
@@ -10,7 +10,7 @@ export default allMovies.map(movie => {
     <TypicalPage title="Movies" image={`/img/movies/${movie.slug}-big.jpg`} page="Movies">
 
       <Spaced>
-        <ThreeColumn>
+        <SplitColumn>
 
           <Typography>
             <h2>{movie.data.title} ({movie.data.year})</h2>
@@ -18,11 +18,12 @@ export default allMovies.map(movie => {
             {markdown.render(movie.content)}
           </Typography>
 
-          <MoviesList />
+          <div>
+            <MoviesList />
+            <VideosList />
+          </div>
 
-          <VideosList />
-
-        </ThreeColumn>
+        </SplitColumn>
       </Spaced>
 
     </TypicalPage>

@@ -1,4 +1,4 @@
-import { Spaced, ThreeColumn } from "../components/column.js";
+import { Spaced, SplitColumn } from "../components/column.js";
 import { MoviesList, VideosList } from "../components/movies-sidebar.js";
 import { TypicalPage } from "../components/page.js";
 import { Typography } from "../components/typography.js";
@@ -10,7 +10,7 @@ export default allVideos.map(video => {
     <TypicalPage page="Movies" title="Fulton Sheen Videos" image={`/img/categories/blessed-sacrament-big.jpg`}>
 
       <Spaced>
-        <ThreeColumn>
+        <SplitColumn>
 
           <Typography>
             <h2>{video.data.title}</h2>
@@ -35,11 +35,12 @@ export default allVideos.map(video => {
 
           </Typography>
 
-          <MoviesList />
+          <div>
+            <VideosList />
+            <MoviesList />
+          </div>
 
-          <VideosList />
-
-        </ThreeColumn>
+        </SplitColumn>
       </Spaced>
 
     </TypicalPage>
