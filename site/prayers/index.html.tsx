@@ -5,6 +5,9 @@ import gloriousList from './rosary/glorious/';
 import joyfulList from './rosary/joyful/';
 import luminousList from './rosary/luminous/';
 
+type DAY = 'SUN' | 'MON' | 'TUE' | 'WED' | 'THUR' | 'FRI' | 'SAT';
+const DAYS = ['SUN', 'MON', 'TUE', 'WED', 'THUR', 'FRI', 'SAT'];
+
 export default <>
   <Html>
     <Tabs tabs={{
@@ -51,25 +54,25 @@ export default <>
       "Rosary":
         <Slideshow>
           <ApostlesCreed />
-          <Mystery name='Joyful' list={joyfulList} mysteries={[
+          <Mystery name='Joyful' list={joyfulList} days={['SAT', 'MON']} mysteries={[
             'The Annunciation',
             'Visitation to Elizabeth',
             'Nativity / Christmas',
             'Presentation at the Temple',
             'Finding at the Temple']} />
-          <Mystery name='Luminous' list={luminousList} mysteries={[
+          <Mystery name='Luminous' list={luminousList} days={['THUR']} mysteries={[
             'Baptism in the Jordan',
             'Wedding Feast at Cana',
             'Proclamation of the Kingdom',
             'Transfiguration',
             'Institution of the Eucharist']} />
-          <Mystery name='Sorrowful' list={sorrowfulList} mysteries={[
+          <Mystery name='Sorrowful' list={sorrowfulList} days={['TUE', 'FRI']} mysteries={[
             'Agony in the Garden',
             'Scourging at the Pillar',
             'Crowning with Thorns',
             'Carrying of the Cross',
             'Crucifixion']} />
-          <Mystery name='Glorious' list={gloriousList} mysteries={[
+          <Mystery name='Glorious' list={gloriousList} days={['WED', 'SUN']} mysteries={[
             'Resurrection',
             'Ascension',
             'Descent of the Holy Spirit',
@@ -81,13 +84,14 @@ export default <>
   </Html>
 </>;
 
-function Mystery(attrs: { name: string, list: FsFile[], mysteries: string[] }) {
+function Mystery(attrs: { name: string, list: FsFile[], mysteries: string[], days: DAY[] }) {
+  const dayClasses = attrs.days.map(day => `day-${DAYS.indexOf(day)}`).join(' ');
   const labels = ['First', 'Second', 'Third', 'Fourth', 'Fifth'];
   const mysteries = Object.values(Object.groupBy(attrs.list, f => f.path.match(/\/\d/)?.[0]!));
   return <>{mysteries.map((mystery, i) =>
     <Panel>
       {mystery!.map(file => <>
-        <div class='half-grid highlightable-line'>
+        <div class={`half-grid highlightable-line mystery ${dayClasses}`}>
           <div class='centered'>
             <img src={file.path} />
           </div>

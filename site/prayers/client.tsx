@@ -1,6 +1,13 @@
 const today = new Date().getDay();
+
 for (const [i, day] of Object.entries(document.querySelectorAll<HTMLElement>('.show-today'))) {
     if (today !== +i) {
+        day.closest('.panel')?.remove();
+    }
+}
+
+for (const [, day] of Object.entries(document.querySelectorAll<HTMLElement>('.mystery'))) {
+    if (!day.classList.contains(`day-${today}`)) {
         day.closest('.panel')?.remove();
     }
 }
