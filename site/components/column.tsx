@@ -20,8 +20,17 @@ export const SplitColumn: JSX.Component = (attrs, children) => <>
   </Column>
 </>;
 
-export const Column: JSX.Component = (attrs, children) => <>
-  <div style='width:90%; max-width: 800px; margin: 0 auto'>
+export const ThreeColumn: JSX.Component = (attrs, children) => <>
+  <link rel="stylesheet" href='/css/components/three-column.css' />
+  <Column wide>
+    <section class='three-split'>
+      {children}
+    </section>
+  </Column>
+</>;
+
+export const Column: JSX.Component<{ wide?: boolean }> = (attrs, children) => <>
+  <div style={`width:90%; max-width: ${attrs.wide ? '1200px' : '800px'}; margin: 0 auto`}>
     {children}
   </div>
 </>;
