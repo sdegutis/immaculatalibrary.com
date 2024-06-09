@@ -4,6 +4,7 @@ title: The Church Fathers on John 7:44-50
 archiveSlug: catenaaureacomme04thom
 archivePage: '415'
 bookSlug: catena-aurea
+tags: []
 ---
 
 > 44\. Jesus cried and said. He that believeth on me, believeth not on me, but on him that sent me.
@@ -53,7 +54,6 @@ water from a stream, taketh the water not of the stream, but of the fountain. Th
 >
 > *And I know that His commandment is life everlasting.* **Aug.** If life everlasting is the Son Himself, and the commandment is life everlasting, what is this but saying, I am the commandment of the Father? And in the same way in the following; *Whatsoever I speak therefore, even as the Father said unto Me, so I speak*, we must not understand, *said unto Me*, as if words were spoken to the Only Word. The Father spoke to the Son, as He gave life to the Son; not that the Son knew not, or had not, but that He was the Son. What is meant by, *as He said unto Me, so I speak*, but that I am the Word who speaks. The Father is true, the Son is truth: the True, begat the Truth. What then could He say to the Truth, if the Truth was perfect from the beginning, and no new truth could be added to Him? That He spake to the Truth then, means that He begat the Truth.
 >
-> <small><sup>1</sup> Augustine literally: That is, He has spoken from His Father. So the sentence will run thus. I shall not judge, but the Word of the Father shall judge. But the Word of the Father is the Son of God Himself: so the sentence will run, I shall not judge, but I shall judge. How can both of these be true? In this way. I shall not
-judge by virtue of any human praise, in that I am the Son of man, but I shall judge by virtue of the power of the Word, in that I am the Son of God.</small>
+> <small><sup>1</sup> Augustine literally: That is, He has spoken from His Father. So the sentence will run thus. I shall not judge, but the Word of the Father shall judge. But the Word of the Father is the Son of God Himself: so the sentence will run, I shall not judge, but I shall judge. How can both of these be true? In this way. I shall not judge by virtue of any human praise, in that I am the Son of man, but I shall judge by virtue of the power of the Word, in that I am the Son of God.</small>
 >
 > <small><sup>2</sup> i. e. My having said so often that I have not, &c.</small>
