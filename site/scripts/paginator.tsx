@@ -1,8 +1,8 @@
 import { Reactive, reactTo } from "./reactive.js";
 
 const arrowStyle = 'stroke:currentColor; stroke-linecap:round; stroke-linejoin:round; stroke-width:2px';
-const leftArrow = <svg viewBox="0 0 16 16" height='10' style={arrowStyle}><path d="M11 2 L5 8 11 14"></path></svg>;
-const rightArrow = <svg viewBox="0 0 16 16" height='10' style={arrowStyle}><path d="M5 2 L11 8 5 14"></path></svg>;
+const leftArrow = () => <svg viewBox="0 0 16 16" height='10' style={arrowStyle}><path d="M11 2 L5 8 11 14"></path></svg>;
+const rightArrow = () => <svg viewBox="0 0 16 16" height='10' style={arrowStyle}><path d="M5 2 L11 8 5 14"></path></svg>;
 
 export function makePaginator<T>(
   items: Reactive<T[]>,
@@ -22,7 +22,7 @@ export function makePaginator<T>(
       e.preventDefault();
       page.set(Math.max(0, page.val - 1));
     }}
-  >{leftArrow}</button> as HTMLButtonElement;
+  >{leftArrow()}</button> as HTMLButtonElement;
 
   const nextButton = <button
     style='width:2em'
@@ -30,7 +30,7 @@ export function makePaginator<T>(
       e.preventDefault();
       page.set(Math.min(highestPage.val, page.val + 1));
     }}
-  >{rightArrow}</button> as HTMLButtonElement;
+  >{rightArrow()}</button> as HTMLButtonElement;
 
   reactTo({ page, highestPage }, deps => {
     nextButton.toggleAttribute('disabled', deps.page.val === deps.highestPage.val);
