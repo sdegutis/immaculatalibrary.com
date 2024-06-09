@@ -5,8 +5,8 @@ import gloriousList from './rosary/glorious/';
 import joyfulList from './rosary/joyful/';
 import luminousList from './rosary/luminous/';
 
-type DAY = 'SUN' | 'MON' | 'TUE' | 'WED' | 'THUR' | 'FRI' | 'SAT';
-const DAYS = ['SUN', 'MON', 'TUE', 'WED', 'THUR', 'FRI', 'SAT'];
+const DAYS = ['SUN', 'MON', 'TUE', 'WED', 'THUR', 'FRI', 'SAT'] as const;
+type DAY = typeof DAYS[number];
 
 export default <>
   <Html>
