@@ -23,6 +23,7 @@ export const Navlinks = () => {
       <div id={cssId}>
         <a href='/'>Immaculata Library</a> { }
         <a href='/books.html'>Books</a> { }
+        <a href='/fathers.html'>Fathers</a> { }
         <a href='/movies.html'>Movies</a> { }
         <a href='/articles.html'>Articles</a> { }
         <a href='/music.html'>Music</a> { }
