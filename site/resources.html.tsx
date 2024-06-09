@@ -3,7 +3,7 @@ import { TypicalPage } from './components/page.js';
 import { Typography } from './components/typography.js';
 
 export default <>
-  <TypicalPage title="Bible" image='/img/categories/classics-big.jpg'>
+  <TypicalPage title="Bible" image='/img/categories/classics-big.jpg' page='Resources'>
 
     <Spaced>
       <CenteredColumn>

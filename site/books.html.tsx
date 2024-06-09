@@ -4,7 +4,7 @@ import { PaginatorLoading } from './components/paginator.js';
 import { LoadingLine, LoadingParagraph } from './shared/loading.js';
 
 export default <>
-  <TypicalPage title='Books' image='/img/categories/reference-big.jpg'>
+  <TypicalPage title='Books' image='/img/categories/reference-big.jpg' page='Books'>
 
     <script src='/scripts/tabs.js' type='module'></script>
     <link rel="stylesheet" href='/css/components/tabs.css' />

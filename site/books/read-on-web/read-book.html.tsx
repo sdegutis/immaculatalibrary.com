@@ -17,7 +17,7 @@ export default allBooks.filter(book => book.data.complete).map(book => {
 
       <main>
 
-        <Navlinks />
+        <Navlinks page="Books" />
 
         <section>
 

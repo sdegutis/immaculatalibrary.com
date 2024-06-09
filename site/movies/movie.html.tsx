@@ -7,7 +7,7 @@ import { allMovies } from "../model/movies.js";
 
 export default allMovies.map(movie => {
   return [`${movie.slug}.html`, <>
-    <TypicalPage title="Movies" image={`/img/movies/${movie.slug}-big.jpg`}>
+    <TypicalPage title="Movies" image={`/img/movies/${movie.slug}-big.jpg`} page="Movies">
 
       <Spaced>
         <SplitColumn>

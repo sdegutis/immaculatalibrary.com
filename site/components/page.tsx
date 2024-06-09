@@ -1,6 +1,7 @@
 import martel from '../fonts/martel/';
 import { Font } from './fonts.js';
 import { Meta } from './meta.js';
+import { NavPage } from './navlinks.js';
 import { QuickLinks } from './quicklinks.js';
 import { SiteFooter } from './site-footer.js';
 import { SiteHeader } from './site-header.js';
@@ -33,10 +34,10 @@ export const EmptyPage: JSX.Component = (attrs, children) => <>
   </html>
 </>;
 
-export const TypicalPage: JSX.Component<{ title: string, image: string }> = (attrs, children) => <>
+export const TypicalPage: JSX.Component<{ title: string, image: string, page: NavPage }> = (attrs, children) => <>
   <EmptyPage>
 
-    <SiteHeader image={attrs.image} title={attrs.title} />
+    <SiteHeader page={attrs.page} image={attrs.image} title={attrs.title} />
 
     <main>
       {children}

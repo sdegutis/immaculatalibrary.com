@@ -19,7 +19,7 @@ export default <>
 
       <div id="letters-from-heaven">
         <Spaced>
-          <Navlinks />
+          <Navlinks page="Home" />
           <CenteredColumn>
             <Typography>
               <FadeIn>

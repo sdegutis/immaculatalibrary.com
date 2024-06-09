@@ -4,7 +4,7 @@ import { TypicalPage } from "./components/page.js";
 import { Typography } from "./components/typography.js";
 
 export default <>
-  <TypicalPage title="Articles" image='/img/page/articles.jpg'>
+  <TypicalPage title="Articles" image='/img/page/articles.jpg' page="Articles">
 
     <Spaced>
       <SplitColumn>

@@ -10,25 +10,43 @@ const css = /*css*/`
     gap: 1em;
     margin: 2em 0;
   }
+
+  #ID a {
+    text-decoration: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+  }
+
+  #ID a.active {
+    border-color: var(--blue-bg);
+  }
 `;
 
 const hash = crypto.createHash('md5').update(css).digest('hex');
 const cssId = `gen-${hash}`;
 const cssPath = generated(`navlinks-${hash}.css`, () => css.replace(/ID/g, cssId));
 
-export const Navlinks = () => {
+const links = {
+  Home: { href: '/', title: 'Immaculata Library' },
+  Books: { href: '/books.html', title: 'Books' },
+  Fathers: { href: '/fathers.html', title: 'Fathers' },
+  Movies: { href: '/movies.html', title: 'Movies' },
+  Music: { href: '/music.html', title: 'Music' },
+  Prayers: { href: '/prayers/', title: 'Prayers' },
+  Articles: { href: '/articles.html', title: 'Articles' },
+  Resources: { href: '/resources.html', title: 'Resources' },
+};
+
+export type NavPage = keyof typeof links;
+
+export const Navlinks = (attrs: { page: NavPage }) => {
   return <>
     <Column>
       <link rel="stylesheet" href={cssPath} />
       <div id={cssId}>
-        <a href='/'>Immaculata Library</a> { }
-        <a href='/books.html'>Books</a> { }
-        <a href='/fathers.html'>Fathers</a> { }
-        <a href='/movies.html'>Movies</a> { }
-        <a href='/music.html'>Music</a> { }
-        <a href='/prayers/'>Prayers</a> { }
-        <a href='/articles.html'>Articles</a> { }
-        <a href='/resources.html'>Resources</a> { }
+        {Object.entries(links).map(([name, link]) => (
+          <a href={link.href} class={attrs.page === name ? 'active' : ''}>{link.title}</a>
+        )).join(' ')}
       </div>
     </Column>
   </>;

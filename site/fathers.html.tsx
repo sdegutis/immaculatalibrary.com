@@ -2,7 +2,7 @@ import { Spaced, SplitColumn } from "./components/column.js";
 import { TypicalPage } from "./components/page.js";
 
 export default <>
-  <TypicalPage title="Fathers of the Church" image='/img/page/articles.jpg'>
+  <TypicalPage title="Fathers of the Church" image='/img/page/articles.jpg' page="Fathers">
 
     <Spaced>
       <SplitColumn>

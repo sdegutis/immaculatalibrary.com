@@ -6,7 +6,7 @@ import { Typography } from "./components/typography.js";
 const playlist = 'https://open.spotify.com/playlist/2VpGGkgru7iXryNu1PMid0?si=ab81cea245694a6e';
 
 export default <>
-  <TypicalPage title="Music" image='/img/page/music.jpg'>
+  <TypicalPage title="Music" image='/img/page/music.jpg' page="Music">
 
     <Spaced>
       <SplitColumn>

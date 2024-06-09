@@ -8,7 +8,7 @@ import { allCategories } from "../../model/categories.js";
 import { LoadingParagraph } from "../../shared/loading.js";
 
 export default allCategories.map(cat => [`${cat.slug}.html`, <>
-  <TypicalPage title="Book Categories" image={`/img/categories/${cat.slug}-big.jpg`}>
+  <TypicalPage title="Book Categories" image={`/img/categories/${cat.slug}-big.jpg`} page="Books">
 
     <Spaced>
       <CenteredColumn>

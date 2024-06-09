@@ -7,7 +7,7 @@ import { allArticles } from "../model/articles.js";
 import { formatDate } from '../shared/format-date.js';
 
 export default allArticles.map(article => [`${article.slug}.html`, <>
-  <TypicalPage title="Articles" image={article.data.imageFilename ?? '/img/page/articles.jpg'}>
+  <TypicalPage title="Articles" image={article.data.imageFilename ?? '/img/page/articles.jpg'} page="Articles">
 
     <Spaced>
       <SplitColumn>

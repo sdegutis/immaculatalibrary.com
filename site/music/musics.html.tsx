@@ -8,7 +8,7 @@ import { allMusics } from "../model/musics.js";
 export default allMusics.map(song => {
   const embedUrl = song.data.youtube.replace('watch?v=', 'embed/').replace(/&t=(\d+)s/, '?start=$1');
   return [`${song.slug}.html`, <>
-    <TypicalPage title="Music" image='/img/page/music.jpg'>
+    <TypicalPage title="Music" image='/img/page/music.jpg' page="Music">
 
       <link rel="stylesheet" href='/css/page/song.css' />
 
