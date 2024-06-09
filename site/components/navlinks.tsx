@@ -25,9 +25,9 @@ export const Navlinks = () => {
         <a href='/books.html'>Books</a> { }
         <a href='/fathers.html'>Fathers</a> { }
         <a href='/movies.html'>Movies</a> { }
-        <a href='/articles.html'>Articles</a> { }
         <a href='/music.html'>Music</a> { }
         <a href='/prayers/'>Prayers</a> { }
+        <a href='/articles.html'>Articles</a> { }
         <a href='/resources.html'>Resources</a> { }
       </div>
     </Column>
