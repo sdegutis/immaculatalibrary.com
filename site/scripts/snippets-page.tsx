@@ -68,10 +68,10 @@ const { results, matchingItems } = createSearch({
   },
 });
 
-document.getElementById('search-results')!.replaceChildren(results);
+document.querySelector('.search-results')!.replaceChildren(results);
 
 matchingItems.onChange(() => {
-  document.getElementById('search-count')!.textContent = matchingItems.val.length.toFixed();
+  document.querySelector('.search-count')!.textContent = matchingItems.val.length.toFixed();
 });
 
 const randomSnippetLink = <a href='#' onclick={function (this: HTMLAnchorElement, e: Event) {
@@ -87,11 +87,11 @@ matchingItems.onChange(() => {
   randomSnippetLink.toggleAttribute('disabled', matchingItems.val.length === 0);
 });
 
-document.getElementById('filters-container')!.replaceChildren(<>
+document.querySelector('.filters-container')!.replaceChildren(<>
   <p><input style='width: 100%' placeholder='Search' autofocus type="text" oninput={function (this: HTMLInputElement) {
     searchTerm.set(this.value.trim().toLowerCase());
   }} /></p>
-  <div id='snippets-filters'>
+  <div class='snippets-filters'>
 
     <span class='label'>tag</span>
     <select onchange={function (this: HTMLSelectElement) { currentTag.set(this.value) }}>

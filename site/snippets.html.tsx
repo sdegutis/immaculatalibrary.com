@@ -15,9 +15,9 @@ export default <>
           <link rel="stylesheet" href='/css/page/snippets.css' />
 
           <h2>Find Book Snippets</h2>
-          <div id='filters-container'>
+          <div class='filters-container'>
             <LoadingLine width="100%" height="2em" />
-            <div id='snippets-filters' style='align-items:center'>
+            <div class='snippets-filters' style='align-items:center'>
               <LoadingLine width="2em" />
               <LoadingLine width="100%" height="2em" />
               <LoadingLine width="4em" />
@@ -32,8 +32,8 @@ export default <>
 
         <div>
 
-          <h2>Showing <span id='search-count' /> book snippets</h2>
-          <div id='search-results'>
+          <h2>Showing <span class='search-count' /> book snippets</h2>
+          <div class='search-results'>
             <PaginatorLoading />
             <ul>
               <li><LoadingParagraph lines={3} /></li>

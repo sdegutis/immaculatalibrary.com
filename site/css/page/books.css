@@ -1,4 +1,4 @@
-#books-filters {
+.books-filters {
   font-family: system-ui;
   display: grid;
   align-items: center;
@@ -8,22 +8,22 @@
   padding: 0 0.5em;
 }
 
-#books-filters .label {
+.books-filters .label {
   opacity: 0.5;
   font-variant: small-caps;
   cursor: default;
   user-select: none;
 }
 
-#books-filters .rating-star {
+.books-filters .rating-star {
   color: var(--blue-bg);
 }
 
-#books-filters .rating-star:not(.lit) {
+.books-filters .rating-star:not(.lit) {
   opacity: 1;
   color: inherit;
 }
 
-#search-results {
+.search-results {
   min-height: 40em;
 }

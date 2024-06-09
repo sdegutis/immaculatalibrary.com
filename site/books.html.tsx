@@ -15,7 +15,7 @@ export default <>
           <link rel="stylesheet" href='/css/page/books.css' />
 
           <h2>Find Books</h2>
-          <div id='filters-container'>
+          <div class='filters-container'>
             <LoadingLine width="100%" height='2.4em' />
             <div id='books-filters'>
               <LoadingLine width="4em" />
@@ -34,8 +34,8 @@ export default <>
 
         <div>
 
-          <h2>Showing <span id='search-count' /> books</h2>
-          <div id='search-results'>
+          <h2>Showing <span class='search-count' /> books</h2>
+          <div class='search-results'>
             <PaginatorLoading />
             <ul>
               <li><LoadingParagraph lines={2} /></li>

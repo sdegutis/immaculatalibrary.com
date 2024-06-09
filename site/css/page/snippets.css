@@ -1,4 +1,4 @@
-#snippets-filters {
+.snippets-filters {
   font-family: system-ui;
   display: grid;
   align-items: center;
@@ -8,13 +8,13 @@
   padding: 0 0.5em;
 }
 
-#snippets-filters .label {
+.snippets-filters .label {
   opacity: 0.5;
   font-variant: small-caps;
   cursor: default;
   user-select: none;
 }
 
-#search-results {
+.search-results {
   min-height: 50em;
 }
