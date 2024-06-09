@@ -5,10 +5,8 @@ import { EmptyPage } from "./components/page.js";
 import { QuickLinks } from "./components/quicklinks.js";
 import { SiteFooter } from "./components/site-footer.js";
 import { Typography } from "./components/typography.js";
-import { allArticles } from "./model/articles.js";
 import { featuredBooks } from "./model/featured.js";
-import { formatDate } from "./shared/format-date.js";
-import { HomeLoading } from "./shared/loading.js";
+import { HomeLoading, LoadingLine, LoadingParagraph } from "./shared/loading.js";
 
 export default <>
   <EmptyPage>
@@ -64,15 +62,20 @@ export default <>
           <div>
 
             <FadeIn>
-              <h2>Latest Articles</h2>
-              <ul>
-                {allArticles.slice(0, 7).map(article => <>
-                  <li>
-                    <a class="title" href={article.route}>{article.data.title}</a><br />
-                    <small>{article.mins} min &bull; {formatDate(article.date)}</small>
-                  </li>
-                </>)}
-              </ul>
+              <h2>Latest book snippets</h2>
+              <div id='latest-book-snippets-area'>
+                <LoadingLine width="4em" />
+                <ul>
+                  <li><LoadingParagraph lines={3} /></li>
+                  <li><LoadingParagraph lines={3} /></li>
+                  <li><LoadingParagraph lines={3} /></li>
+                  <li><LoadingParagraph lines={3} /></li>
+                  <li><LoadingParagraph lines={3} /></li>
+                  <li><LoadingParagraph lines={3} /></li>
+                  <li><LoadingParagraph lines={3} /></li>
+                </ul>
+              </div>
+              <script type='module' src='/scripts/latest-book-snippets.js' />
             </FadeIn>
 
             <FadeIn>
