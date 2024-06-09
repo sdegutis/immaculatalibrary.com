@@ -54,6 +54,11 @@ export default <>
       "Rosary":
         <Slideshow>
           <ApostlesCreed />
+          <OurFather />
+          <HailMary />
+          <HailMary />
+          <HailMary />
+          <GloryBe />
           <Mystery name='Joyful' list={joyfulList} days={['SAT', 'MON']} mysteries={[
             'The Annunciation',
             'Visitation to Elizabeth',
@@ -79,6 +84,11 @@ export default <>
             'Assumption of Mary',
             'Crowning of Mary as Queen of Heaven and Earth']} />
           <HailHolyQueen />
+          <RosaryPrayer />
+          <SaintMichael />
+          <OurFather />
+          <HailMary />
+          <GloryBe />
         </Slideshow>,
     }} />
   </Html>
@@ -763,6 +773,23 @@ function HailHolyQueen() {
     <Line>  Pray for us, O Holy Mother of God</Line>
     <Line>    That we may be worthy of the promises of Christ</Line>
     <Line>Amen.</Line>
+  </Prayer>;
+}
+
+function RosaryPrayer() {
+  return <Prayer img="./images/hail-holy-queen.jpg">
+    <h1>Rosary End Prayer</h1>
+    <Line>Oh God, Whose Only Begotten Son</Line>
+    <Line>  By his Life, Death, and Resurrection</Line>
+    <Line>    Has purchased for us the rewards of Eternal Life</Line>
+    <Line>Grant us, we beseech thee</Line>
+    <Line>  That by meditating upon these mysteries</Line>
+    <Line>    Of the most holy rosary</Line>
+    <Line>      Of the Blessed Virgin Mary</Line>
+    <Line>        We may imitate what they contain</Line>
+    <Line>          And obtain what they promise</Line>
+    <Line>            Through the same Christ, Our Lord</Line>
+    <Line>Amen</Line>
   </Prayer>;
 }
 
