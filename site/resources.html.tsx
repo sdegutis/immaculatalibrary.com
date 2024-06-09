@@ -21,6 +21,13 @@ export default <>
           <h3>Other</h3>
           <li><a href='https://www.catholicexorcism.org/'>CatholicExorcism.org</a></li>
 
+          <h3>Bibles</h3>
+          <ul>
+            <li><a href="https://www.amazon.com/dp/0898708338">Hardcover (RSV-CE2)</a></li>
+            <li><a href="https://www.truthandlifeapp.com/">Audiobook (RSV-CE New Testament)</a></li>
+            <li><a href="https://catenabible.com/">Catena Bible</a></li>
+          </ul>
+
         </Typography>
       </CenteredColumn>
     </Spaced>
