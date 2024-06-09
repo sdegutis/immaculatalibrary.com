@@ -5,6 +5,8 @@ import { Reactive } from "./reactive.js";
 import { createSearch, findWithinMarkdown, highlight } from "./searchlist.js";
 import { randomElement, sleep } from "./util.js";
 
+const dynamicArea = document.getElementById('books-area') as HTMLDivElement;
+
 const booksFetch = fetch('/scripts/data/books.json').then<BookJson[]>(res => res.json());
 await sleep(.1);
 const books = await booksFetch;
@@ -70,10 +72,10 @@ const { results, matchingItems } = createSearch({
   },
 });
 
-document.querySelector('.search-results')!.replaceChildren(results);
+dynamicArea.querySelector('.search-results')!.replaceChildren(results);
 
 matchingItems.onChange(() => {
-  document.querySelector('.search-count')!.textContent = matchingItems.val.length.toFixed();
+  dynamicArea.querySelector('.search-count')!.textContent = matchingItems.val.length.toFixed();
 });
 
 const randomBookLink = <a href='#' onclick={function (this: HTMLAnchorElement, e: Event) {
@@ -89,7 +91,7 @@ matchingItems.onChange(() => {
   randomBookLink.toggleAttribute('disabled', matchingItems.val.length === 0);
 });
 
-document.querySelector('.filters-container')!.replaceChildren(<>
+dynamicArea.querySelector('.filters-container')!.replaceChildren(<>
   <p>
     <input autofocus style='width: 100%' placeholder='Search' type="text" oninput={function (this: HTMLInputElement) {
       searchTerm.set(this.value.trim().toLowerCase());
