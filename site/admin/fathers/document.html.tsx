@@ -8,26 +8,10 @@ export default <>
     <script src='./document-client.js' type='module'></script>
 
     <main>
-      <div id='left-panel'>
-        <form method='POST' action='/create-snippet'>
-          <span>Page</span>  <input autocomplete='off' name='archivePage' autofocus />
-          <span>Link</span>  <input autocomplete='off' name='archiveSlug' />
-          <span>Book</span>  <input autocomplete='off' name='bookSlug' />
-          <span>Title</span> <input autocomplete='off' name='title' />
-          <span>Slug</span>  <input autocomplete='off' name='slug' />
-          <span>Text</span>  <textarea name='markdownContent' />
-          <span>Tags</span>  <ul id='tags'><li><button id='addtag'>Add</button></li></ul>
-
-          <span id='readingmins' />
-          <span style='display:grid; gap:0.25em; grid-template-columns: 1fr 1fr'>
-            <button>Create</button>
-            <button id='fixup-button'>Fixup</button>
-          </span>
-        </form>
-        <Typography>
-          <div id='old-body'></div>
-        </Typography>
-      </div>
+      <form id='left-panel' method='POST' action='/create-snippet'>
+        <textarea name='markdownContent' />
+        <button>Create</button>
+      </form>
       <div id='editorarea'></div>
       <div style='padding-right:1em'>
         <Typography>
