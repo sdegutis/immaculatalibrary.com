@@ -16,9 +16,12 @@ export default <>
         </div>
 
         <div>
-          <p>
-            Coming soon.
-          </p>
+          <p>Coming soon.</p>
+          <p>For now, some books of the Fathers:</p>
+          <ul>
+            <a href='/books/morals-on-the-book-of-job.html'>Morals on the Book of Job, by St. Gregory the Great</a>
+            <a href='/books/confessions.html'>Confessions, by St. Augustine</a>
+          </ul>
         </div>
 
       </SplitColumn>
