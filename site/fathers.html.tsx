@@ -15,6 +15,15 @@ export default <>
             commentary on every verse in the Gospels by the Fathers of the Church.
           </p>
 
+          <h3>Notable Works by Church Fathers</h3>
+          <ul>
+            <li><a href='/books/catena-aurea.html'>Catena Aurea</a>, Gospel Commentary by the Fathers</li>
+            <li><a href='/books/morals-on-the-book-of-job.html'>Morals on the Book of Job</a>, by St. Gregory the Great</li>
+            <li><a href='/books/confessions.html'>Confessions</a>, by St. Augustine</li>
+            <li><a href='/books/augustine-on-the-psalms.html'>Exposition on the Psalms</a>, by St. Augustine</li>
+            <li><a href='/books/venerable-bedes-ecclesiastical-history-of-england.html'>Ecclesiastical History of England</a>, by St. Bede</li>
+          </ul>
+
           <h3>Why not use CatenaBible.com?</h3>
           <p>
             They're missing a huge number of quotes from the Church Fathers
@@ -35,15 +44,6 @@ export default <>
 
           <h3>Digital Search</h3>
           <p>(Coming soon.)</p>
-
-          <h3>Notable Works by Church Fathers</h3>
-          <ul>
-            <li><a href='/books/catena-aurea.html'>Catena Aurea</a>, Gospel Commentary by the Fathers</li>
-            <li><a href='/books/morals-on-the-book-of-job.html'>Morals on the Book of Job</a>, by St. Gregory the Great</li>
-            <li><a href='/books/confessions.html'>Confessions</a>, by St. Augustine</li>
-            <li><a href='/books/augustine-on-the-psalms.html'>Exposition on the Psalms</a>, by St. Augustine</li>
-            <li><a href='/books/venerable-bedes-ecclesiastical-history-of-england.html'>Ecclesiastical History of England</a>, by St. Bede</li>
-          </ul>
 
         </div>
 
