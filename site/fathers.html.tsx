@@ -19,9 +19,9 @@ export default <>
           <p>Coming soon.</p>
           <p>For now, some books of the Fathers:</p>
           <ul>
-            <a href='/books/morals-on-the-book-of-job.html'>Morals on the Book of Job, by St. Gregory the Great</a>
-            <a href='/books/confessions.html'>Confessions, by St. Augustine</a>
-            <a href='/books/augustine-on-the-psalms.html'>Exposition on the Psalms, by St. Augustine</a>
+            <li><a href='/books/morals-on-the-book-of-job.html'>Morals on the Book of Job</a>, by St. Gregory the Great</li>
+            <li><a href='/books/confessions.html'>Confessions</a>, by St. Augustine</li>
+            <li><a href='/books/augustine-on-the-psalms.html'>Exposition on the Psalms</a>, by St. Augustine</li>
           </ul>
         </div>
 
