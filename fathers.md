@@ -94,25 +94,10 @@ MDCCCXLV
 
 ### Morals of Job
 
-vol21libraryoffa00unse
-Morals on Job by S. Gregory the Great
-Vol. II. Parts III. and IV.
-1845
-
-vol3pt2libraryof00unse
-Morals on Job by S. Gregory the Great
-Vol. II. Part II. Book XXX-XXXV.
-1850
-
-vol18libraryoffa00unse
-Morals on Job by S. Gregory the Great
-Vol I. Parts I. and II.
-1844
-
-vol23libraryoffa00unse
-Morals on Job by S. Gregory the Great
-Vol. III. Part I. (Part V. and Books XXVII, XXIX)
-MDCCCXLVII
+moralsonbookofj01greg Vol I
+moralsonbookofj02greg Vol II
+moralsonbookofj03greg Vol III-I
+moralsonbookofj04greg Vol III-II
 
 
 
