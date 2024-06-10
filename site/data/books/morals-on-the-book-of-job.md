@@ -14,7 +14,7 @@ files:
   - archiveId: moralsonbookofj03greg
     pdfFile: 'Morals on the Book of Job, Vol III, Part I.pdf'
   - archiveId: moralsonbookofj04greg
-    pdfFile: 'Morals on the Book of Job, Vol II.pd'
+    pdfFile: 'Morals on the Book of Job, Vol II.pdf'
 storeLinks: []
 ---
 
