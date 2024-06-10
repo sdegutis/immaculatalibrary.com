@@ -8,6 +8,7 @@ books:
   - meditations-for-layfolk
   - summa-theologica
   - the-book-of-saints
+  - venerable-bedes-ecclesiastical-history-of-england
 sortOrder: 4
 ---
 

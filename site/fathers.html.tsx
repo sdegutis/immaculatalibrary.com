@@ -22,6 +22,7 @@ export default <>
             <li><a href='/books/morals-on-the-book-of-job.html'>Morals on the Book of Job</a>, by St. Gregory the Great</li>
             <li><a href='/books/confessions.html'>Confessions</a>, by St. Augustine</li>
             <li><a href='/books/augustine-on-the-psalms.html'>Exposition on the Psalms</a>, by St. Augustine</li>
+            <li><a href='/books/venerable-bedes-ecclesiastical-history-of-england.html'>Ecclesiastical History of England</a>, by Venerable Bede</li>
           </ul>
         </div>
 
