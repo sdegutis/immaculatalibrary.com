@@ -28,11 +28,6 @@ Homilies of S. John Chrysostom on Matthew
 Part II. Hom. XXVI.-LVIII.
 MDCCCXLIV
 
-vol3libraryoffat00unse
-Expositions on the Psalms by S. Augustine
-Vol II. Psalm LIII.-LXXV.
-1849
-
 vol3libraryoffat00unse_0
 Treatises of S. Caecilius Cyprian
 MDCCCXLVI
@@ -99,16 +94,6 @@ vol22libraryoffa00unse
 Seventeen Short Treatises of S. Augustine
 MDCCCXLVII
 
-vol24libraryoffa00unse
-Expositions on Psalms by S. Augustine
-Vol. I. Psalm I.-XXXVI.
-1847
-
-vol25libraryoffa00unse
-Expositions on Psalms by S. Augustine
-Vol. II. Psalm XXXVII.-LII.
-1848
-
 vol26libraryoffa00unse
 Homilies on John and 1 John by Augustine
 Vol. I. (Hom. L-XLIII, 1. John. I-VIII)
@@ -127,11 +112,6 @@ vol29libraryoffa00unse
 Homilies on John and 1 John by S. Augustine
 Vol. II.
 1849
-
-vol32libraryoffa00unse
-Expositions on Psalms by S. Augustine
-Vol IV. Psalm LXXVI.-CI.
-1850
 
 vol33libraryoffa00unse
 Homilies of Chrysostom on Acts
@@ -153,19 +133,9 @@ Homilies of Chrysostom on Acts
 Part II. Hom. XLII-LXXXVIII
 MDCCCLII
 
-vol37libraryoffa00unse
-Expositions on Psalms by S. Augustine
-Vol. V. Psalm CII.-CXXV.
-1853
-
 vol38libraryoffa00unse
 The First Epistles of S. Athanasius
 MDCCCLIV
-
-vol39libraryoffa00unse
-Expositions on Psalms by S. Augustine
-Vol. VI. Psalm CXXVI-CL
-1857
 
 vol41libraryoffa00unse
 Select Works of S. Ephrem the Syrian
@@ -203,3 +173,39 @@ vol23libraryoffa00unse
 Morals on Job by S. Gregory the Great
 Vol. III. Part I. (Part V. and Books XXVII, XXIX)
 MDCCCXLVII
+
+
+
+
+
+### Augustine on the Psalms
+
+vol24libraryoffa00unse
+Expositions on Psalms by S. Augustine
+Vol. I. Psalm I.-XXXVI.
+1847
+
+vol25libraryoffa00unse
+Expositions on Psalms by S. Augustine
+Vol. II. Psalm XXXVII.-LII.
+1848
+
+vol3libraryoffat00unse
+Expositions on the Psalms by S. Augustine
+Vol III. Psalm LIII.-LXXV.
+1849
+
+vol32libraryoffa00unse
+Expositions on Psalms by S. Augustine
+Vol IV. Psalm LXXVI.-CI.
+1850
+
+vol37libraryoffa00unse
+Expositions on Psalms by S. Augustine
+Vol. V. Psalm CII.-CXXV.
+1853
+
+vol39libraryoffa00unse
+Expositions on Psalms by S. Augustine
+Vol. VI. Psalm CXXVI-CL
+1857
