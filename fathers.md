@@ -37,11 +37,6 @@ vol3libraryoffat00unse_0
 Treatises of S. Caecilius Cyprian
 MDCCCXLVI
 
-vol3pt2libraryof00unse
-Morals on Job by S. Gregory the Great
-Vol. II. Part II. Book XXX-XXXV.
-1850
-
 vol6libraryoffat00unse
 Library of the Fathers, Vol. VII
 Commentary on Galatians and Homilies on Ephesians of S. John Chrysostom
@@ -91,11 +86,6 @@ Epistles of S. Cyprian with the Council of Carthage on the Baptism of Heretics
 To which are added the extant works of S. Pacian, Bishop of Barcelona
 MDCCCXLIV
 
-vol18libraryoffa00unse
-Morals on Job by S. Gregory the Great
-Vol I. Parts I. and II.
-1844
-
 vol19libraryoffa00unse
 Select Treatises of S. Athanasius in Controversy with the Arians
 MDCCCXLIV
@@ -105,18 +95,8 @@ Sermons on Selected Lessons of the New Testament by S. Augustine
 Vol II. John, Acts, Romans, 1 Corinthians, Galatians, Ephesians, Philippians, 1 Thessalonians, 1 Timothy, Titus, James, 1 John
 MDCCCXLV
 
-vol21libraryoffa00unse
-Morals on Job by S. Gregory the Great
-Vol. II. Parts III. and IV.
-1845
-
 vol22libraryoffa00unse
 Seventeen Short Treatises of S. Augustine
-MDCCCXLVII
-
-vol23libraryoffa00unse
-Morals on Job by S. Gregory the Great
-Vol. III. Part I. (Part V. and Books XXVII, XXIX)
 MDCCCXLVII
 
 vol24libraryoffa00unse
@@ -195,3 +175,31 @@ vol45libraryoffa00unse
 Homilies of Chrysostom on First Corinthians
 MDCCCXLV
 
+
+
+
+
+
+
+
+### Morals of Job
+
+vol21libraryoffa00unse
+Morals on Job by S. Gregory the Great
+Vol. II. Parts III. and IV.
+1845
+
+vol3pt2libraryof00unse
+Morals on Job by S. Gregory the Great
+Vol. II. Part II. Book XXX-XXXV.
+1850
+
+vol18libraryoffa00unse
+Morals on Job by S. Gregory the Great
+Vol I. Parts I. and II.
+1844
+
+vol23libraryoffa00unse
+Morals on Job by S. Gregory the Great
+Vol. III. Part I. (Part V. and Books XXVII, XXIX)
+MDCCCXLVII
