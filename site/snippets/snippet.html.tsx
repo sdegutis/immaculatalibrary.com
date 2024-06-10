@@ -47,9 +47,7 @@ export default allSnippets.map(snippet => {
             {isDev && <>
               <div style="border: 1px solid var(--admin-border-color); background-color: var(--admin-bg-color); padding: 1em;">
                 <ul>
-                  <li><a href={`/admin/create-snippet.html?${new URLSearchParams({
-                    'snippet': snippet.slug,
-                  })}`}>Make next snippet</a></li>
+                  <li><a href={`/admin/create-snippet.html?snippet=${snippet.slug}`}>Make next snippet</a></li>
                 </ul>
                 <details>
                   <summary>Add tags</summary>
