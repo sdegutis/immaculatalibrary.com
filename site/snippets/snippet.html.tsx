@@ -48,6 +48,7 @@ export default allSnippets.map(snippet => {
               <div style="border: 1px solid var(--admin-border-color); background-color: var(--admin-bg-color); padding: 1em;">
                 <ul>
                   <li><a href={`/admin/create-snippet.html?snippet=${snippet.slug}`}>Make next snippet</a></li>
+                  <li><a href={`/admin/fathers/document.html?snippet=${snippet.slug}`}>Add Fathers quotes</a></li>
                 </ul>
                 <details>
                   <summary>Add tags</summary>
