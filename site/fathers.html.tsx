@@ -9,49 +9,24 @@ export default <>
 
         <div>
 
-          <h3>Catena Aurea</h3>
+          <h3>The Fathers Gospel Commentary</h3>
           <p>
             The <a href='/books/catena-aurea.html'>Catena Aurea</a> contains
             commentary on every verse in the Gospels by the Fathers of the Church.
           </p>
 
-          <h3>Why not use Catena Bible?</h3>
+          <h3>Why not use CatenaBible.com?</h3>
           <p>
-            The website CatenaBible.com is missing a huge number of quotes
-            from the Church Fathers on the gospels, which are found in the
-            Catena Aurea on this site. It's also updated by some Orthodoxes,
-            and may possibly be omitting some quotes out of a bias.
-          </p>
-          <p>
-            It's probably still fine to use the Catena Bible, just as long as
-            the quotes are verified, and it's not used as an exhaustive source.
+            They're missing a huge number of quotes from the Church Fathers
+            on the gospels, which are found in the Catena Aurea. It's also
+            run by some Orthodoxes, who may be biased toward Greek fathers.
           </p>
 
           <h3>Why not use New Advent?</h3>
           <p>
-            The project of translating the Fathers of the Church into English
-            was started by Dr. Edward B. Pusey and other Anglican scholars
-            in the 1800s, who were of the high-church party that wanted to
-            rediscover the Church of England's historical roots, and recover
-            the lost treasures of tradition and doctrine that were lost
-            when King Henry VIII had separated from Rome so violently.
-          </p>
-          <p>
-            Many such high-church Anglicans soon converted to Catholicism,
-            and so the project had lost vital members. A few years later,
-            several low-church Anglicans decided that this first translation
-            was "too Catholic" and began a project to retranslate the Fathers
-            according to their more Protestant principles. This new translation
-            was published in two volumes as the Ante-Nicene Fathers, and the
-            Nicene and Post-Nicene Fathers.
-          </p>
-          <p>
-            New Advent used the Ante-Nicene Fathers, and Nicene and Post-Nicene
-            Fathers as the basis for their digital edition. Immaculata Library
-            uses the original Fathers translation by the high-church Anglicans,
-            which was heavily edited by St. John Henry Newman shortly before
-            his conversion. In the future, when the new translation of the 1940s
-            and 1950s becomes public domain, ideally that will be used.
+            The edition of the Church Fathers they digitized was translated
+            by anti-Catholics. This site uses the previous English translation
+            of the Church Fathers that was deemed "too Catholic" for them.
           </p>
 
         </div>
