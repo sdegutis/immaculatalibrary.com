@@ -22,14 +22,61 @@ const editor = monaco.editor.create(document.getElementById('editorarea'), {
   tabSize: 2,
 });
 
+processInput(snippet.content);
 editor.getModel().onDidChangeContent(() => {
-  processInput();
+  processInput(editor.getModel().getValue());
 });
 
-processInput();
-
-function processInput() {
-  const content = editor.getModel().getValue();
-  contentInput.value = content;
-  previewArea.innerHTML = md.render(content);
+function processInput(content: string) {
+  const quotes = getQuotes(content);
+  contentInput.value = JSON.stringify(quotes);
+  previewArea.innerHTML = md.render(quotes.map(q => [
+    `# ${q.book} ${q.chapter}:${q.verse}`,
+    `### ${q.gospelQuote}`,
+    `${q.commentaryQuotes}`,
+  ].join('\n')).join('\n---\n---\n---\n'));
 }
+
+interface Quote {
+  book: string;
+  chapter: number;
+  verse: number;
+  gospelQuote: string;
+  commentaryQuotes: string;
+}
+
+function getQuotes(content: string): Quote[] {
+  const parts = content.split('\n---\n');
+
+  const book = parts.shift()!;
+  const match = book.match(/^(\w+) (\d+):(\d+)$/);
+  if (!match) return [];
+
+  return parts.map((part, i) => {
+    const lines = part.split(/\n/);
+    const gospelQuote = lines.shift();
+    if (!match[1] || !match[2] || !match[3]) return null;
+    return {
+      book: match[1],
+      chapter: +match[2],
+      verse: +match[3] + i,
+      gospelQuote,
+      commentaryQuotes: lines.join('\n'),
+    } as Quote | null;
+  }).filter(p => p) as Quote[];
+}
+
+let wordWrap = true;
+editor.addAction({
+  id: 'toggle-word-wrap',
+  label: 'Toggle word wrap',
+  keybindings: [monaco.KeyMod.Alt | monaco.KeyCode.KeyZ],
+  precondition: null,
+  keybindingContext: null,
+  run: () => {
+    wordWrap = !wordWrap;
+    editor.updateOptions({
+      wordWrap: wordWrap ? 'on' : 'off',
+    });
+  }
+});

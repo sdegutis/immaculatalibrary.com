@@ -8,7 +8,7 @@ export default <>
     <script src='./document-client.js' type='module'></script>
 
     <main>
-      <form id='left-panel' method='POST' action='/create-snippet'>
+      <form id='left-panel' method='POST' action='/document-father-quote'>
         <textarea name='markdownContent' />
         <button>Create</button>
       </form>
