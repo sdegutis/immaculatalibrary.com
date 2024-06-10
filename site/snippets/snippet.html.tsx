@@ -48,20 +48,7 @@ export default allSnippets.map(snippet => {
               <div style="border: 1px solid var(--admin-border-color); background-color: var(--admin-bg-color); padding: 1em;">
                 <ul>
                   <li><a href={`/admin/create-snippet.html?${new URLSearchParams({
-                    'archivePage': snippet.data.archivePage,
-                    'archiveSlug': snippet.data.archiveSlug,
-                    'bookSlug': snippet.data.bookSlug,
-                    'renderedBody': [
-                      snippet.data.archivePage,
-                      snippet.renderedBody,
-                      <hr />,
-                      <hr />,
-                      <hr />,
-                      snippet.nextSnippet?.data.archivePage,
-                      snippet.nextSnippet?.renderedBody,
-                    ].filter(s => s).join('<p>'),
-                    'archiveLink': snippet.archiveLink,
-                    'tags': JSON.stringify(allTags),
+                    'snippet': snippet.slug,
                   })}`}>Make next snippet</a></li>
                 </ul>
                 <details>

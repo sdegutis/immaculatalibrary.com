@@ -1,4 +1,5 @@
 import MarkdownIt from 'https://cdn.jsdelivr.net/npm/markdown-it@13.0.2/+esm';
+import { SnippetJson } from '../scripts/data/snippets/snippet.json.js';
 import { calculateReadingMins } from '../shared/helpers.js';
 import { mdOptions } from '../shared/markdown.js';
 
@@ -9,16 +10,31 @@ window.addEventListener('beforeunload', (e) => {
 const md = MarkdownIt(mdOptions);
 
 const params = new URLSearchParams(window.location.search);
-document.querySelector<HTMLInputElement>('input[name=archivePage]')!.value = params.get('archivePage')!;
-document.querySelector<HTMLInputElement>('input[name=archiveSlug]')!.value = params.get('archiveSlug')!;
-document.querySelector<HTMLInputElement>('input[name=bookSlug]')!.value = params.get('bookSlug')!;
-document.querySelector('iframe')!.src = params.get('archiveLink')!;
-document.getElementById('old-body')!.innerHTML = params.get('renderedBody')!;
+const slug = params.get('snippet')!;
+const snippet = await fetch(`/scripts/data/snippets/${slug}.json`).then<SnippetJson>(res => res.json());
+const snippet2 = snippet.nextSnippet ? await fetch(`/scripts/data/snippets/${snippet.nextSnippet}.json`).then<SnippetJson>(res => res.json()) : null;
+
+document.querySelector<HTMLInputElement>('input[name=archivePage]')!.value = snippet.archivePage;
+document.querySelector<HTMLInputElement>('input[name=archiveSlug]')!.value = snippet.archiveSlug;
+document.querySelector<HTMLInputElement>('input[name=bookSlug]')!.value = snippet.bookSlug;
+document.querySelector('iframe')!.src = snippet.archiveLink;
+document.getElementById('old-body')!.replaceChildren(
+  <>
+    {snippet.archivePage}
+    <div innerHTML={md.render(snippet.content)} />
+    <hr />
+    <hr />
+    <hr />
+    {snippet2 && <>
+      {snippet2.archivePage}
+      <div innerHTML={md.render(snippet2.content)} />
+    </>}
+  </>
+);
 
 const addTagButton = document.getElementById('addtag')!;
 
-const tags = JSON.parse(params.get('tags')!);
-
+const tags = await fetch('./tags.json').then(res => res.json());
 for (const tag of tags) {
   addTagButton.parentElement!.insertAdjacentElement('beforebegin',
     <li>
