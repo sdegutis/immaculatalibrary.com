@@ -93,48 +93,7 @@ MDCCCXLV
 
 
 ### Morals of Job
-
-moralsonbookofj01greg Vol I
-moralsonbookofj02greg Vol II
-moralsonbookofj03greg Vol III-I
-moralsonbookofj04greg Vol III-II
-
-
-
-
-
 ### Augustine on the Psalms
-
-vol24libraryoffa00unse
-Expositions on Psalms by S. Augustine
-Vol. I. Psalm I.-XXXVI.
-1847
-
-vol25libraryoffa00unse
-Expositions on Psalms by S. Augustine
-Vol. II. Psalm XXXVII.-LII.
-1848
-
-vol3libraryoffat00unse
-Expositions on the Psalms by S. Augustine
-Vol III. Psalm LIII.-LXXV.
-1849
-
-vol32libraryoffa00unse
-Expositions on Psalms by S. Augustine
-Vol IV. Psalm LXXVI.-CI.
-1850
-
-vol37libraryoffa00unse
-Expositions on Psalms by S. Augustine
-Vol. V. Psalm CII.-CXXV.
-1853
-
-vol39libraryoffa00unse
-Expositions on Psalms by S. Augustine
-Vol. VI. Psalm CXXVI-CL
-1857
-
 
 
 ### Various Fathers
