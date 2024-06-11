@@ -13,27 +13,36 @@ window.addEventListener('beforeunload', (e) => {
 const md = MarkdownIt(mdOptions);
 
 const params = new URLSearchParams(window.location.search);
-const slug = params.get('snippet')!;
-const snippet = await fetch(`/scripts/data/snippets/${slug}.json`).then<SnippetJson>(res => res.json());
-const snippet2 = snippet.nextSnippet ? await fetch(`/scripts/data/snippets/${snippet.nextSnippet}.json`).then<SnippetJson>(res => res.json()) : null;
+const slug = params.get('snippet');
 
-document.querySelector<HTMLInputElement>('input[name=archivePage]')!.value = snippet.archivePage;
-document.querySelector<HTMLInputElement>('input[name=archiveSlug]')!.value = snippet.archiveSlug;
-document.querySelector<HTMLInputElement>('input[name=bookSlug]')!.value = snippet.bookSlug;
-document.querySelector('iframe')!.src = snippet.archiveLink;
-document.getElementById('old-body')!.replaceChildren(
-  <>
-    {snippet.archivePage}
-    <div innerHTML={md.render(snippet.content)} />
-    <hr />
-    <hr />
-    <hr />
-    {snippet2 && <>
-      {snippet2.archivePage}
-      <div innerHTML={md.render(snippet2.content)} />
-    </>}
-  </>
-);
+if (slug) {
+  const snippet = await fetch(`/scripts/data/snippets/${slug}.json`).then<SnippetJson>(res => res.json());
+  const snippet2 = snippet.nextSnippet ? await fetch(`/scripts/data/snippets/${snippet.nextSnippet}.json`).then<SnippetJson>(res => res.json()) : null;
+
+  document.querySelector<HTMLInputElement>('input[name=archivePage]')!.value = snippet.archivePage;
+  document.querySelector<HTMLInputElement>('input[name=archiveSlug]')!.value = snippet.archiveSlug;
+  document.querySelector<HTMLInputElement>('input[name=bookSlug]')!.value = snippet.bookSlug;
+  document.querySelector('iframe')!.src = snippet.archiveLink;
+  document.getElementById('old-body')!.replaceChildren(
+    <>
+      {snippet.archivePage}
+      <div innerHTML={md.render(snippet.content)} />
+      <hr />
+      <hr />
+      <hr />
+      {snippet2 && <>
+        {snippet2.archivePage}
+        <div innerHTML={md.render(snippet2.content)} />
+      </>}
+    </>
+  );
+}
+else {
+  document.querySelector<HTMLInputElement>('input[name=bookSlug]')!.value = params.get('book')!;
+  document.querySelector<HTMLInputElement>('input[name=archiveSlug]')!.value = params.get('scan')!;
+  document.querySelector('iframe')!.src = `https://archive.org/details/${params.get('scan')}?view=theater`;
+}
+
 
 const addTagButton = document.getElementById('addtag')!;
 

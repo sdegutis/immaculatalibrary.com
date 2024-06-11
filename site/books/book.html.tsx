@@ -3,7 +3,7 @@ import { TypicalPage } from "../components/page.js";
 import { PaginatorLoading } from "../components/paginator.js";
 import { Rating } from "../components/rating.js";
 import { Typography } from "../components/typography.js";
-import { markdown } from "../core/helpers.js";
+import { isDev, markdown } from "../core/helpers.js";
 import { allBooks } from "../model/books.js";
 import { formatDate } from "../shared/format-date.js";
 import { LoadingLine, LoadingParagraph } from "../shared/loading.js";
@@ -45,6 +45,14 @@ export default allBooks.map(book => [`${book.slug}.html`, <>
                   { } &bull; { }
                   <a href={`https://archive.org/details/${file.archiveId}?view=theater`} target="_blank">Read Scans</a>
                 </>}
+
+                {isDev && <>
+                  { } &bull; { }
+                  <span style="border: 1px solid var(--admin-border-color); background-color: var(--admin-bg-color); padding: 0.25em">
+                    <a href={`/admin/snippets/create.html?book=${book.slug}&scan=${file.archiveId}`}>Make snippet</a>
+                  </span>
+                </>}
+
               </p>
             </>)}
           </blockquote>
