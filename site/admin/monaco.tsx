@@ -3,8 +3,9 @@ export type Monaco = typeof import('monaco-editor');
 export function loadMonaco(): Promise<Monaco> {
   return new Promise<Monaco>(resolve => {
     function resolveMonacoEventually() {
-      if (window.monaco) {
-        resolve(window.monaco);
+      const monaco = (window as any).monaco;
+      if (monaco) {
+        resolve(monaco);
       }
       else {
         setTimeout(resolveMonacoEventually, 100);

@@ -1,7 +1,7 @@
 import MarkdownIt from 'https://cdn.jsdelivr.net/npm/markdown-it@13.0.2/+esm';
 import { SnippetJson } from '../../scripts/data/snippets/snippet.json.js';
-import { loadMonaco } from '../../scripts/monaco.js';
 import { mdOptions } from '../../shared/markdown.js';
+import { loadMonaco } from '../monaco.js';
 
 const monaco = await loadMonaco();
 
