@@ -5,6 +5,7 @@ import { Rating } from "../components/rating.js";
 import { Typography } from "../components/typography.js";
 import { markdown } from "../core/helpers.js";
 import { allBooks } from "../model/books.js";
+import { formatDate } from "../shared/format-date.js";
 import { LoadingLine, LoadingParagraph } from "../shared/loading.js";
 
 export default allBooks.map(book => [`${book.slug}.html`, <>
@@ -20,6 +21,7 @@ export default allBooks.map(book => [`${book.slug}.html`, <>
             <p>{book.data.subtitle}</p>
             <p>By <span>{book.data.author}</span></p>
             <p><Rating n={book.data.rating} /></p>
+            <p>(Added {formatDate(book.data.dateAdded)})</p>
             <blockquote>
               {markdown.render(book.content)}
             </blockquote>
