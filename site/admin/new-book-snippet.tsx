@@ -4,7 +4,7 @@ import { loadMonaco } from '../scripts/monaco.js';
 import { calculateReadingMins } from '../shared/helpers.js';
 import { mdOptions } from '../shared/markdown.js';
 
-await loadMonaco();
+const monaco = await loadMonaco();
 
 window.addEventListener('beforeunload', (e) => {
   e.returnValue = 'Abandon all changes!?';
@@ -106,8 +106,6 @@ titleInput.addEventListener('input', (e) => {
 });
 
 let wordWrap = true;
-
-var monaco = (window as any).monaco;
 
 const editor = monaco.editor.create(document.getElementById('editorarea'), {
   value: '',

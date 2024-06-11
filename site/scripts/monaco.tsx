@@ -1,10 +1,21 @@
-export async function loadMonaco() {
-  await new Promise<void>(resolve => {
+type Monaco = any;
+
+export function loadMonaco(): Promise<Monaco> {
+  return new Promise<Monaco>(resolve => {
+    function resolveMonacoEventually() {
+      if (window.monaco) {
+        resolve(window.monaco);
+      }
+      else {
+        setTimeout(resolveMonacoEventually, 100);
+      }
+    }
+
     let count = 3;
     function loaded() {
       count--;
       if (count === 0) {
-        resolve();
+        resolveMonacoEventually();
       }
     }
 

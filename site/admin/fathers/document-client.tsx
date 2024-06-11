@@ -1,9 +1,9 @@
 import MarkdownIt from 'https://cdn.jsdelivr.net/npm/markdown-it@13.0.2/+esm';
 import { SnippetJson } from '../../scripts/data/snippets/snippet.json.js';
-import { mdOptions } from '../../shared/markdown.js';
 import { loadMonaco } from '../../scripts/monaco.js';
+import { mdOptions } from '../../shared/markdown.js';
 
-await loadMonaco();
+const monaco = await loadMonaco();
 
 const md = MarkdownIt(mdOptions);
 
@@ -16,7 +16,6 @@ document.querySelector('iframe')!.src = snippet.archiveLink;
 const contentInput = document.querySelector<HTMLTextAreaElement>('textarea[name=markdownContent]')!;
 const previewArea = document.getElementById('previewarea') as HTMLDivElement;
 
-var monaco = (window as any).monaco;
 const editor = monaco.editor.create(document.getElementById('editorarea'), {
   value: snippet.content,
   theme: 'vs-dark',
