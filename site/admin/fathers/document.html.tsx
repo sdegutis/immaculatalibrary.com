@@ -15,7 +15,7 @@ handlers.set(__filename, body => {
     file.save();
   }
 
-  return '/';
+  return '/fathers.html';
 });
 
 export default <>
