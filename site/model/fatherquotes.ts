@@ -1,5 +1,5 @@
 import { DataFile } from '../core/data-files.js';
-import allFatherQuoteFiles from "../data/fathers/";
+import allFatherQuoteFiles from "../data/fatherquotes/";
 
 interface FatherQuoteFile {
   gospelQuote: string;
