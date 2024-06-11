@@ -7,13 +7,13 @@ translator: ''
 score: 0
 rating: 0
 files:
-  - archiveId: moralsonbookofj02greg
+  - archiveId: moralsonbookofj01greg
     pdfFile: 'Morals on the Book of Job, Vol I.pdf'
-  - archiveId: moralsonbookofj04greg
+  - archiveId: moralsonbookofj02greg
     pdfFile: 'Morals on the Book of Job, Vol II.pdf'
   - archiveId: moralsonbookofj03greg
     pdfFile: 'Morals on the Book of Job, Vol III, Part I.pdf'
-  - archiveId: moralsonbookofj01greg
+  - archiveId: moralsonbookofj04greg
     pdfFile: 'Morals on the Book of Job, Vol III, Part II.pdf'
 storeLinks: []
 ---
