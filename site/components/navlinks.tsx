@@ -15,10 +15,15 @@ const css = /*css*/`
     text-decoration: none;
     border: none;
     border-bottom: 2px solid transparent;
+    color: inherit;
   }
 
   #ID a.active {
     border-color: var(--blue-bg);
+  }
+
+  #ID a:hover:not(.active) {
+    border-color: currentColor;
   }
 `;
 

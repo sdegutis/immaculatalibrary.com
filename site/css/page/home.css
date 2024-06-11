@@ -31,7 +31,7 @@
   background-color: var(--bgalt);
 }
 
-#letters-from-heaven a {
+#letters-from-heaven .typography a {
   color: inherit;
 }
 
