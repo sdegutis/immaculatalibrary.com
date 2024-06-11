@@ -1,4 +1,5 @@
 import { Spaced, SplitColumn } from "./components/column.js";
+import { FathersSearchbar } from "./components/fathers-search.js";
 import { TypicalPage } from "./components/page.js";
 
 export default <>
@@ -41,10 +42,7 @@ export default <>
         </div>
 
         <div>
-
-          <h3>Digital Search</h3>
-          <p>(Coming soon.)</p>
-
+          <FathersSearchbar />
         </div>
 
       </SplitColumn>

@@ -9,6 +9,8 @@ export class FatherQuote extends DataFile<FatherQuoteFile> {
 
   static override modelDir = 'fatherquotes';
 
+  route: string;
+
   book: string;
   chapter: number;
   verse: number;
@@ -19,6 +21,7 @@ export class FatherQuote extends DataFile<FatherQuoteFile> {
     this.book = book!;
     this.chapter = +chapter!;
     this.verse = +verse!;
+    this.route = `/fathers/${this.slug}.html`;
   }
 
 }

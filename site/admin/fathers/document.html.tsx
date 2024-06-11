@@ -8,14 +8,15 @@ handlers.set(__filename, body => {
   const params = new URLSearchParams(body);
   const quotes = JSON.parse(params.get('markdownContent')!) as Quote[];
 
-  for (const quote of quotes) {
+  const files = quotes.map(quote => {
     const file = new FatherQuote(`${quote.book}-${quote.chapter}-${quote.verse}`, quote.commentaryQuotes, {
       gospelQuote: quote.gospelQuote,
     });
     file.save();
-  }
+    return file;
+  });
 
-  return '/fathers.html';
+  return files[0]!.route;
 });
 
 export default <>
