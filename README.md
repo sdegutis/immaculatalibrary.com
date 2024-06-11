@@ -9,11 +9,11 @@
 
 ### File structure
 
-* [src/](): Custom runtime for hot-reloading, custom JSX, and importing data dirs.
-* [site/](): The site itself
-* [site/core/main.ts](): The entry point to the site, to build it yourself
-* [site/core/jsx-transform-browser.ts](): Browser-side JSX implementation
-* [site/core/jsx-transform-node.ts](): SSG-side JSX implementation
+* [src/](src/): Custom runtime for hot-reloading, custom JSX, and importing data dirs.
+* [site/](site/): The site itself
+* [site/core/main.ts](site/core/main.ts): The entry point to the site, to build it yourself
+* [site/core/jsx-transform-browser.ts](site/core/jsx-transform-browser.ts): Browser-side JSX implementation
+* [site/core/jsx-transform-node.ts](site/core/jsx-transform-node.ts): SSG-side JSX implementation
 
 ### Features
 
