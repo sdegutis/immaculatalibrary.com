@@ -1,28 +1,19 @@
 import { EmptyPage } from "../../components/page.js";
 import { Typography } from "../../components/typography.js";
 import { handlers } from "../../core/handlers.js";
+import { FatherQuote } from "../../model/fatherquotes.js";
+import { Quote } from "./document-client.js";
 
 handlers.set(__filename, body => {
   const params = new URLSearchParams(body);
-  const json = JSON.parse(params.get('markdownContent')!);
+  const quotes = JSON.parse(params.get('markdownContent')!) as Quote[];
 
-  console.log(json);
-
-  // const date = new Date().toLocaleDateString('sv');
-  // const slug = `${date}-${params.get('slug')!}`;
-
-  // const snippet = new Snippet(slug, params.get('markdownContent')!, {
-  //   published: true,
-  //   title: params.get('title')!,
-  //   archivePage: params.get('archivePage')!,
-  //   archiveSlug: params.get('archiveSlug')!,
-  //   bookSlug: params.get('bookSlug')!,
-  //   tags: params.getAll('tags').filter(t => t),
-  // });
-
-  // snippet.save();
-
-  // return snippet.route;
+  for (const quote of quotes) {
+    const file = new FatherQuote(`${quote.book}-${quote.chapter}-${quote.verse}`, quote.commentaryQuotes, {
+      gospelQuote: quote.gospelQuote,
+    });
+    file.save();
+  }
 
   return '/';
 });

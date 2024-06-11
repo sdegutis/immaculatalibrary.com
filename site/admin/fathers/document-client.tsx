@@ -39,7 +39,7 @@ function processInput(content: string) {
   ].join('\n')).join('\n---\n---\n---\n'));
 }
 
-interface Quote {
+export interface Quote {
   book: string;
   chapter: number;
   verse: number;
