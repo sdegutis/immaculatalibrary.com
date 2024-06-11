@@ -2,6 +2,7 @@
 title: Learning the Devout Life
 shortTitle: Instruction
 books:
+  - the-means-of-grace
   - morals-on-the-book-of-job
   - augustine-on-the-psalms
   - a-treatise-on-bringing-children-to-jesus-christ
