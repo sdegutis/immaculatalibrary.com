@@ -70,15 +70,15 @@ const fixupButton = document.getElementById('fixup-button')!;
 fixupButton.onclick = (e) => {
   e.preventDefault();
 
-  editor.getModel().pushStackElement();
+  editor.getModel()!.pushStackElement();
 
-  let sels = editor.getSelections();
+  let sels = editor.getSelections()!;
   if (sels.every((sel: any) => sel.isEmpty())) {
-    sels = [editor.getModel().getFullModelRange()];
+    sels = [editor.getModel()!.getFullModelRange() as any];
   }
 
   editor.executeEdits('admin', sels.map((sel: any) => {
-    const content = editor.getModel().getValueInRange(sel);
+    const content = editor.getModel()!.getValueInRange(sel);
     const fixedContent = (content
       .trimEnd()
       .replace(/ {2,}/g, ' ')
@@ -107,7 +107,7 @@ titleInput.addEventListener('input', (e) => {
 
 let wordWrap = true;
 
-const editor = monaco.editor.create(document.getElementById('editorarea'), {
+const editor = monaco.editor.create(document.getElementById('editorarea')!, {
   value: '',
   theme: 'vs-dark',
   language: 'markdown',
@@ -119,8 +119,6 @@ editor.addAction({
   id: 'toggle-word-wrap',
   label: 'Toggle word wrap',
   keybindings: [monaco.KeyMod.Alt | monaco.KeyCode.KeyZ],
-  precondition: null,
-  keybindingContext: null,
   run: () => {
     wordWrap = !wordWrap;
     editor.updateOptions({
@@ -129,8 +127,8 @@ editor.addAction({
   }
 });
 
-editor.getModel().onDidChangeContent(() => {
-  const content = editor.getModel().getValue();
+editor.getModel()!.onDidChangeContent(() => {
+  const content = editor.getModel()!.getValue();
   contentInput.value = content;
   previewArea.innerHTML = md.render(content);
   readingMinsEl.innerHTML = calculateReadingMins(content) + ' min';

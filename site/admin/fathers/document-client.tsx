@@ -16,7 +16,7 @@ document.querySelector('iframe')!.src = snippet.archiveLink;
 const contentInput = document.querySelector<HTMLTextAreaElement>('textarea[name=markdownContent]')!;
 const previewArea = document.getElementById('previewarea') as HTMLDivElement;
 
-const editor = monaco.editor.create(document.getElementById('editorarea'), {
+const editor = monaco.editor.create(document.getElementById('editorarea')!, {
   value: snippet.content,
   theme: 'vs-dark',
   language: 'markdown',
@@ -25,8 +25,8 @@ const editor = monaco.editor.create(document.getElementById('editorarea'), {
 });
 
 processInput(snippet.content);
-editor.getModel().onDidChangeContent(() => {
-  processInput(editor.getModel().getValue());
+editor.getModel()!.onDidChangeContent(() => {
+  processInput(editor.getModel()!.getValue());
 });
 
 function processInput(content: string) {
@@ -73,8 +73,6 @@ editor.addAction({
   id: 'toggle-word-wrap',
   label: 'Toggle word wrap',
   keybindings: [monaco.KeyMod.Alt | monaco.KeyCode.KeyZ],
-  precondition: null,
-  keybindingContext: null,
   run: () => {
     wordWrap = !wordWrap;
     editor.updateOptions({

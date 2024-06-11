@@ -1,4 +1,4 @@
-type Monaco = any;
+export type Monaco = typeof import('monaco-editor');
 
 export function loadMonaco(): Promise<Monaco> {
   return new Promise<Monaco>(resolve => {
