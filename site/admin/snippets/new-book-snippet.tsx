@@ -1,8 +1,8 @@
 import MarkdownIt from 'https://cdn.jsdelivr.net/npm/markdown-it@13.0.2/+esm';
-import { SnippetJson } from '../scripts/data/snippets/snippet.json.js';
-import { loadMonaco } from '../scripts/monaco.js';
-import { calculateReadingMins } from '../shared/helpers.js';
-import { mdOptions } from '../shared/markdown.js';
+import { SnippetJson } from '../../scripts/data/snippets/snippet.json.js';
+import { loadMonaco } from '../../scripts/monaco.js';
+import { calculateReadingMins } from '../../shared/helpers.js';
+import { mdOptions } from '../../shared/markdown.js';
 
 const monaco = await loadMonaco();
 
@@ -37,7 +37,7 @@ document.getElementById('old-body')!.replaceChildren(
 
 const addTagButton = document.getElementById('addtag')!;
 
-const tags = await fetch('./tags.json').then(res => res.json());
+const tags = await fetch('../tags.json').then(res => res.json());
 for (const tag of tags) {
   addTagButton.parentElement!.insertAdjacentElement('beforebegin',
     <li>

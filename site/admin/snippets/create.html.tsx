@@ -1,7 +1,7 @@
-import { EmptyPage } from "../components/page.js";
-import { Typography } from "../components/typography.js";
-import { handlers } from '../core/handlers.js';
-import { Snippet } from '../model/snippets.js';
+import { EmptyPage } from "../../components/page.js";
+import { Typography } from "../../components/typography.js";
+import { handlers } from '../../core/handlers.js';
+import { Snippet } from '../../model/snippets.js';
 
 handlers.set('/create-snippet', body => {
   const params = new URLSearchParams(body);
@@ -25,8 +25,8 @@ handlers.set('/create-snippet', body => {
 
 export default <>
   <EmptyPage>
-    <link rel='stylesheet' href='/admin/new-book-snippet.css' />
-    <script src='/admin/new-book-snippet.js' type='module'></script>
+    <link rel='stylesheet' href='./new-book-snippet.css' />
+    <script src='./new-book-snippet.js' type='module'></script>
 
     <main>
       <div id='left-panel'>
