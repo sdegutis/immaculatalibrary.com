@@ -111,11 +111,11 @@ dynamicArea.querySelector('.filters-container')!.replaceChildren(<>
 
     <span class='label'>minutes</span>
     <span>
-      <label><input type='radio' name='has-snippets' onclick={() => lengthFilter.set('')} checked />Any</label>
-      <label><input type='radio' name='has-snippets' onclick={() => lengthFilter.set('short')} />1-2</label>
-      <label><input type='radio' name='has-snippets' onclick={() => lengthFilter.set('medium')} />3-5</label>
-      <label><input type='radio' name='has-snippets' onclick={() => lengthFilter.set('long')} />6-8</label>
-      <label><input type='radio' name='has-snippets' onclick={() => lengthFilter.set('very-long')} />9+</label>
+      <label><input type='radio' name='snippet-length' onclick={() => lengthFilter.set('')} checked />Any</label>
+      <label><input type='radio' name='snippet-length' onclick={() => lengthFilter.set('short')} />1-2</label>
+      <label><input type='radio' name='snippet-length' onclick={() => lengthFilter.set('medium')} />3-5</label>
+      <label><input type='radio' name='snippet-length' onclick={() => lengthFilter.set('long')} />6-8</label>
+      <label><input type='radio' name='snippet-length' onclick={() => lengthFilter.set('very-long')} />9+</label>
     </span>
 
   </div>
