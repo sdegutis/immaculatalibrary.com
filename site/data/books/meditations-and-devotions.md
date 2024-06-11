@@ -1,5 +1,5 @@
 ---
-title: 'Meditations and Devotions, by St. John Henry Newman'
+title: 'Meditations and Devotions'
 subtitle: ''
 dateAdded: '2020-06-04'
 author: 'St. John Henry Newman'
