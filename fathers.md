@@ -12,11 +12,17 @@ Homilies of S. John Chrysostom on First Corinthians
 Part I. Hom. I.-XXIV.
 MDCCCXXXIX
 
+libraryoffathers0033unse
+Homilies of S. John Chrysostom on Acts
+Part I. Hom. I.-XXVIII.
+MDCCCLI
+
 libraryoffathers0035unse
 Homilies of S. John Chrysostom on Acts
 Part II. Hom. XXIX.-LV.
 MDCCCLII
 
+libraryoffathers0000unse
 vol2pt1libraryof00unse
 Homilies of S. John Chrysostom on Romans
 MDCCCXLI
@@ -92,9 +98,6 @@ MDCCCXLV
 
 
 
-### Morals of Job
-### Augustine on the Psalms
-
 
 ### Various Fathers
 
@@ -123,6 +126,7 @@ Library of the Fathers, Vol. VIII
 Select Treatises of S. Athanasius in Controversy with the Arians
 MDCCCXLII
 
+epistlesofscypr00cypr
 vol17libraryoffa00unse
 Epistles of S. Cyprian with the Council of Carthage on the Baptism of Heretics
 To which are added the extant works of S. Pacian, Bishop of Barcelona
@@ -165,3 +169,19 @@ vol29libraryoffa00unse
 Homilies on John and 1 John by S. Augustine
 Vol. II.
 1849
+
+
+
+
+### WIP
+
+per_commentary-gospel-according-to-st-john_1885_ia40330204-38
+Commentary on John by St. Cyril of Alexandria
+
+
+libraryoffathers0002unse
+a6784913p02cyriuoft
+catecheticallect00cyririch
+Catechetical Lectures of St. Cyril of Jerusalem
+
+
