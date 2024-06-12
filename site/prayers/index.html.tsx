@@ -106,7 +106,7 @@ function Mystery(attrs: { name: string, list: FsFile[], mysteries: string[], day
       {mystery!.map(file => <>
         <div class={`half-grid highlightable-line mystery ${dayClasses}`}>
           <div class='centered'>
-            <img src={file.path} />
+            <img src={file.path} loading='lazy' />
           </div>
           <div class='centered'>
             <h1>{labels[i]} {attrs.name} Mystery</h1>
@@ -836,7 +836,7 @@ function Prayer(attrs: { img: string }, children: any) {
     <Panel>
       <div class='half-grid'>
         <div class='centered'>
-          <img src={attrs.img} alt="" />
+          <img src={attrs.img} alt="" loading='lazy' />
         </div>
         <div class='centered'>
           {children}
