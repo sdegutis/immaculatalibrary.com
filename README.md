@@ -4,7 +4,7 @@
 
 ### Goals
 
-1. Have lightning quick development
+1. Use efficient file hot-reloading
 2. Use TypeScript for everything
 3. Use full power of VS Code
 4. Use JSX for all views/templating
