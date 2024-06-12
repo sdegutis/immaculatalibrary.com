@@ -9,6 +9,9 @@
 
 #prayers-header {
   position: relative;
+
+  box-shadow: 0px 0px 7px 7px #0003;
+  z-index: 1;
 }
 
 #prayers-header::before {
