@@ -1,194 +1,194 @@
 #tab-container {
-    width: 100vw;
-    height: 100vh;
+  width: 100vw;
+  height: 100vh;
 
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 #prayers-header {
-    position: relative;
+  position: relative;
 }
 
 #prayers-header::before {
-    position: absolute;
-    z-index: -1;
-    content: '';
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+  position: absolute;
+  z-index: -1;
+  content: '';
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 
-    background-color: var(--bgalt);
-    background-image: url(/img/page/home.jpg);
-    background-size: cover;
-    background-position: -7em, center;
-    opacity: 0.42;
+  background-color: var(--bgalt);
+  background-image: url(/img/page/home.jpg);
+  background-size: cover;
+  background-position: -7em, center;
+  opacity: 0.42;
 }
 
 #tabs-names {
-    display: flex;
-    justify-content: center;
-    gap: 1em;
-    margin-bottom: 1em;
-    font-size: 150%;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-bottom: 1em;
+  font-size: 150%;
 }
 
 #tabs-names button {
-    padding: 0;
-    outline: none;
-    border: none;
-    background: inherit;
-    font: inherit;
-    border-bottom: 2px solid transparent;
+  padding: 0;
+  outline: none;
+  border: none;
+  background: inherit;
+  font: inherit;
+  border-bottom: 2px solid transparent;
 }
 
 #tabs-names button.active {
-    border-color: var(--blue-bg);
+  border-color: var(--blue-bg);
 }
 
 #tabs-names button:hover:not(.active) {
-    border-color: #fff;
+  border-color: #fff;
 }
 
 #tabs-bodies {
-    font-size: 2vh;
-    flex: 0 1 auto;
-    overflow: hidden;
+  font-size: 2vh;
+  flex: 0 1 auto;
+  overflow: hidden;
 }
 
 .slideshow {
-    display: flex;
-    height: 100%;
+  display: flex;
+  height: 100%;
 }
 
 .panel {
-    flex: 1 0 100%;
-    height: 100%;
-    position: relative;
+  flex: 1 0 100%;
+  height: 100%;
+  position: relative;
 }
 
 .panel-body {
-    overflow: auto;
-    height: 100%;
-    background-color: #000;
-    transition: background-color ease-in-out .5s;
+  overflow: auto;
+  height: 100%;
+  background-color: #000;
+  transition: background-color ease-in-out .5s;
 }
 
 .panel-body:focus {
-    outline: none;
-    background-color: #222;
+  outline: none;
+  background-color: #222;
 }
 
 .panel-body::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .page-changer {
-    opacity: 0;
+  opacity: 0;
 
-    position: absolute;
-    top: 50%;
+  position: absolute;
+  top: 50%;
 
-    transform: translateY(-50%);
-    border: 0;
-    outline: 0;
-    padding: .25em .5em;
-    color: #fff;
-    background-color: #0001;
-    /* font-size: 200%; */
-    cursor: pointer;
+  transform: translateY(-50%);
+  border: 0;
+  outline: 0;
+  padding: .25em .5em;
+  color: #fff;
+  background-color: #0001;
+  /* font-size: 200%; */
+  cursor: pointer;
 
-    transition:
-        background-color ease-in-out .2s,
-        opacity ease-in-out 2s;
+  transition:
+    background-color ease-in-out .2s,
+    opacity ease-in-out 2s;
 }
 
 .panel-body:focus~.page-changer {
-    opacity: 1;
+  opacity: 1;
 }
 
 .page-changer:hover {
-    background-color: #0007;
+  background-color: #0007;
 }
 
 .half-grid {
-    height: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    gap: 2em;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2em;
 }
 
 .centered {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .two-cols {
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 0 .5em;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 0 .5em;
 }
 
 .two-cols>*:nth-child(2n) {
-    text-align: right;
+  text-align: right;
 }
 
 .spaced-mini {
-    margin: 0.5em 0;
+  margin: 0.5em 0;
 }
 
 .spaced-small {
-    margin: 1em 0;
+  margin: 1em 0;
 }
 
 .spaced-medium {
-    margin: 3em 0;
+  margin: 3em 0;
 }
 
 .spaced-big {
-    padding: 7em 0;
+  padding: 7em 0;
 }
 
 .highlightable-line {
-    opacity: .2;
-    white-space: pre-wrap;
-    align-self: normal;
+  opacity: .2;
+  white-space: pre-wrap;
+  align-self: normal;
 }
 
 .highlightable-line.active {
-    opacity: 1;
+  opacity: 1;
 }
 
 .half-grid.highlightable-line {
-    transition: opacity ease-in-out 250ms;
+  transition: opacity ease-in-out 250ms;
 }
 
 span.highlightable-line.active {
-    text-shadow: 0 0 12px #ff0;
+  text-shadow: 0 0 12px #ff0;
 }
 
 img {
-    max-width: 100%;
-    max-height: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 h1,
 h2 {
-    color: var(--blue-bg);
-    margin: 1em 0;
+  color: var(--blue-bg);
+  margin: 1em 0;
 }
 
 .red {
-    color: #f77;
+  color: #f77;
 }
 
 #litany {
-    background-image: url(./images/precious-blood-litany.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
+  background-image: url(./images/precious-blood-litany.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
