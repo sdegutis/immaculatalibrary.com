@@ -41,7 +41,7 @@ function animateTo(container: HTMLElement, duration: number, to: { x: number, y:
       const percentDone = (time - startedAt) / duration;
       if (percentDone >= 1) return;
 
-      const percentToAnimate = easeInOut(percentDone);
+      const percentToAnimate = ease(percentDone);
 
       const x = (to.x - startPos.x) * percentToAnimate + startPos.x;
       const y = (to.y - startPos.y) * percentToAnimate + startPos.y;
@@ -55,8 +55,19 @@ function animateTo(container: HTMLElement, duration: number, to: { x: number, y:
   step();
 }
 
+let ease = easeInOut;
+
 function easeInOut(x: number): number {
-  return x < 0.5 ? 8 * x * x * x * x : 1 - Math.pow(-2 * x + 2, 4) / 2;
+  return 1 - Math.pow(1 - x, 4);
+}
+
+function sillyEase(x: number): number {
+  const c4 = (2 * Math.PI) / 3;
+  return x === 0
+    ? 0
+    : x === 1
+      ? 1
+      : Math.pow(2, -10 * x) * Math.sin((x * 10 - 0.75) * c4) + 1;
 }
 
 class Panel {
@@ -141,7 +152,10 @@ for (const slideshow of document.querySelectorAll<HTMLDivElement>('.slideshow'))
       }
       else if (e.key === ' ') {
         e.preventDefault();
-        panel.nextLine();
+        if (e.ctrlKey)
+          ease = sillyEase;
+        else
+          panel.nextLine();
       }
       else if (e.key === 'ArrowUp') {
         if (panel.hasLines()) {
