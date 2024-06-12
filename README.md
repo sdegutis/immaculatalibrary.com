@@ -4,13 +4,9 @@
 
 ### Goals
 
-1. Use efficient file hot-reloading
-2. Use TypeScript for everything
-3. Use full power of VS Code
-4. Use JSX for all views/templating
-5. Use JSX directly without framework
-6. Use no magic except custom JSX
-7. Use `import` to read data files
+Be the simplest and fastest SSG that I could make.
+Be fun to use, not difficult or frustrating.
+Be able to innovate right when ideas come up.
 
 ### Run locally
 
@@ -21,7 +17,14 @@
 
 ### Features
 
-* Simple
+1. Use efficient file hot-reloading
+2. Use TypeScript for everything
+3. Use full power of VS Code
+4. Use JSX for all views/templating
+5. Use JSX directly without framework
+6. Use no magic except custom JSX
+7. Use `import` to read data files
+
 * TypeScript
   * SSG-side and browser-side have same types
   * SSG-side and browser-side can share modules
