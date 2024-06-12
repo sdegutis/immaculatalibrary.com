@@ -1,4 +1,13 @@
 # Immaculata Library
+*Custom TypeScript SSG*
+---
+
+### Goals
+
+1. Use TypeScript for both SSG and browser
+2. Be as efficient and fast as humanly possible
+3. Use JSX for view but without any framework
+4. There was another that I forgot...
 
 ### Run locally
 

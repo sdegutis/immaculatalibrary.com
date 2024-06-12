@@ -30,7 +30,12 @@ class Tab {
 
 const container = document.getElementById('tabs-bodies')!;
 
-function smoothScrollTo(panel: HTMLElement) {
+function smoothScrollToLine(line: HTMLElement, panel: HTMLElement) {
+  panel.scrollLeft = panel.scrollLeft;
+  panel.scrollTop = line.offsetTop - panel.offsetHeight / 2 + line.offsetHeight / 2;
+}
+
+function smoothScrollToPanel(panel: HTMLElement) {
   const startPos = {
     x: container.scrollTop,
     y: container.scrollLeft,
@@ -87,8 +92,7 @@ class Panel {
   }
   hasLines() { return this.lines.length > 0; }
   focus() {
-    smoothScrollTo(this.panelDiv);
-
+    smoothScrollToPanel(this.panelDiv);
     this.panelBodyDiv.focus({ preventScroll: true });
 
     for (const line of this.lines) {
@@ -101,10 +105,8 @@ class Panel {
     this.lines[this.currentLine]!.classList.remove('active');
     this.currentLine = line;
     this.lines[this.currentLine]!.classList.add('active');
-    this.lines[this.currentLine]!.scrollIntoView({
-      behavior: 'smooth',
-      block: 'nearest',
-    });
+
+    smoothScrollToLine(this.lines[this.currentLine]!, this.panelBodyDiv);
   }
   nextLine() {
     this.goToLine(Math.min(this.currentLine + 1, this.lines.length - 1));
