@@ -164,7 +164,7 @@
   opacity: 1;
 }
 
-.half-grid.highlightable-line {
+.highlightable-line {
   transition: opacity ease-in-out 250ms;
 }
 
