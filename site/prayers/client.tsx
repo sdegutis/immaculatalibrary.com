@@ -39,7 +39,11 @@ function animateTo(container: HTMLElement, duration: number, to: { x: number, y:
   const step = () => {
     requestAnimationFrame(time => {
       const percentDone = (time - startedAt) / duration;
-      if (percentDone >= 1) return;
+      if (percentDone >= 1) {
+        container.scrollLeft = to.x;
+        container.scrollTop = to.y;
+        return;
+      }
 
       const percentToAnimate = ease(percentDone);
 
