@@ -1,5 +1,8 @@
 # Immaculata Library
+
 *Custom TypeScript SSG*
+
+(The code that creates https://www.immaculatalibrary.com/)
 ---
 
 ### Goals
