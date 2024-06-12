@@ -4,10 +4,13 @@
 
 ### Goals
 
-1. Use TypeScript for both SSG and browser
-2. Be as efficient and fast as humanly possible
-3. Use JSX for view but without any framework
-4. There was another that I forgot...
+1. Have lightning quick development
+2. Use TypeScript for everything
+3. Use full power of VS Code
+4. Use JSX for all views/templating
+5. Use JSX directly without framework
+6. Use no magic except custom JSX
+7. Use `import` to read data files
 
 ### Run locally
 
