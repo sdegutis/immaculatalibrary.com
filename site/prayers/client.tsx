@@ -29,7 +29,7 @@ class Tab {
 }
 
 function smoothScrollToLine(line: HTMLElement, panel: HTMLElement) {
-  animateTo(panel, 300, {
+  animateTo(panel, 700, {
     x: panel.scrollLeft,
     y: line.offsetTop - panel.offsetHeight / 2 + line.offsetHeight / 2,
   });
