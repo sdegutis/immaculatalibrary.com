@@ -28,6 +28,45 @@ class Tab {
     };
 }
 
+const container = document.getElementById('tabs-bodies')!;
+
+function smoothScrollTo(panel: HTMLElement) {
+    const startPos = {
+        x: container.scrollTop,
+        y: container.scrollLeft,
+    };
+
+    const endPos = {
+        x: panel.offsetTop - container.offsetTop,
+        y: panel.offsetLeft - container.offsetLeft,
+    };
+
+    const duration = 700;
+    const startedAt = +document.timeline.currentTime!;
+
+    const step = () => {
+        requestAnimationFrame(time => {
+            const percentDone = (time - startedAt) / duration;
+            if (percentDone >= 1) return;
+
+            const percentToAnimate = easeInOut(percentDone);
+
+            const x = (endPos.x - startPos.x) * percentToAnimate + startPos.x;
+            const y = (endPos.y - startPos.y) * percentToAnimate + startPos.y;
+
+            container.scrollTop = x;
+            container.scrollLeft = y;
+
+            step();
+        });
+    };
+    step();
+}
+
+function easeInOut(x: number): number {
+    return x < 0.5 ? 8 * x * x * x * x : 1 - Math.pow(-2 * x + 2, 4) / 2;
+}
+
 class Panel {
     public prev?: Panel | undefined;
     public next?: Panel | undefined;
@@ -48,7 +87,8 @@ class Panel {
     }
     hasLines() { return this.lines.length > 0; }
     focus() {
-        this.panelDiv.scrollIntoView({ behavior: 'smooth' });
+        smoothScrollTo(this.panelDiv);
+
         this.panelBodyDiv.focus({ preventScroll: true });
 
         for (const line of this.lines) {
