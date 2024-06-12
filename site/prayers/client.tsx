@@ -28,25 +28,26 @@ class Tab {
   };
 }
 
-const container = document.getElementById('tabs-bodies')!;
-
 function smoothScrollToLine(line: HTMLElement, panel: HTMLElement) {
-  panel.scrollLeft = panel.scrollLeft;
-  panel.scrollTop = line.offsetTop - panel.offsetHeight / 2 + line.offsetHeight / 2;
+  animateTo(panel, 300, {
+    x: panel.scrollLeft,
+    y: line.offsetTop - panel.offsetHeight / 2 + line.offsetHeight / 2,
+  });
 }
 
-function smoothScrollToPanel(panel: HTMLElement) {
+function smoothScrollToPanel(panel: HTMLElement, container: HTMLElement) {
+  animateTo(container, 700, {
+    x: panel.offsetLeft - container.offsetLeft,
+    y: panel.offsetTop - container.offsetTop,
+  });
+}
+
+function animateTo(container: HTMLElement, duration: number, to: { x: number, y: number }) {
   const startPos = {
-    x: container.scrollTop,
-    y: container.scrollLeft,
+    x: container.scrollLeft,
+    y: container.scrollTop,
   };
 
-  const endPos = {
-    x: panel.offsetTop - container.offsetTop,
-    y: panel.offsetLeft - container.offsetLeft,
-  };
-
-  const duration = 700;
   const startedAt = +document.timeline.currentTime!;
 
   const step = () => {
@@ -56,11 +57,11 @@ function smoothScrollToPanel(panel: HTMLElement) {
 
       const percentToAnimate = easeInOut(percentDone);
 
-      const x = (endPos.x - startPos.x) * percentToAnimate + startPos.x;
-      const y = (endPos.y - startPos.y) * percentToAnimate + startPos.y;
+      const x = (to.x - startPos.x) * percentToAnimate + startPos.x;
+      const y = (to.y - startPos.y) * percentToAnimate + startPos.y;
 
-      container.scrollTop = x;
-      container.scrollLeft = y;
+      container.scrollLeft = x;
+      container.scrollTop = y;
 
       step();
     });
@@ -92,7 +93,7 @@ class Panel {
   }
   hasLines() { return this.lines.length > 0; }
   focus() {
-    smoothScrollToPanel(this.panelDiv);
+    smoothScrollToPanel(this.panelDiv, document.getElementById('tabs-bodies')!);
     this.panelBodyDiv.focus({ preventScroll: true });
 
     for (const line of this.lines) {
