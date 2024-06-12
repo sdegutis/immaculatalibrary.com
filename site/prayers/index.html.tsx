@@ -1,15 +1,18 @@
-import { Font } from '../components/fonts.js';
-import martel from '../fonts/martel/';
-import sorrowfulList from './rosary/sorrowful/';
+import { Navlinks } from '../components/navlinks.js';
+import { EmptyPage } from '../components/page.js';
 import gloriousList from './rosary/glorious/';
 import joyfulList from './rosary/joyful/';
 import luminousList from './rosary/luminous/';
+import sorrowfulList from './rosary/sorrowful/';
 
 const DAYS = ['SUN', 'MON', 'TUE', 'WED', 'THUR', 'FRI', 'SAT'] as const;
 type DAY = typeof DAYS[number];
 
 export default <>
-  <Html>
+  <EmptyPage>
+    <link rel='stylesheet' href='./style.css' />
+    <script src='./client.js' type='module' />
+    <link rel="icon" type="image/png" sizes="32x32" href='./favicon.ico' />
     <Tabs tabs={{
       "Morning":
         <Slideshow>
@@ -91,7 +94,7 @@ export default <>
           <GloryBe />
         </Slideshow>,
     }} />
-  </Html>
+  </EmptyPage>
 </>;
 
 function Mystery(attrs: { name: string, list: FsFile[], mysteries: string[], days: DAY[] }) {
@@ -116,7 +119,7 @@ function Mystery(attrs: { name: string, list: FsFile[], mysteries: string[], day
 }
 
 function Line(attrs: any, children: any) {
-  return <span class='highlightable-line left-align'>{children}{'\n'}</span>;
+  return <span class='highlightable-line'>{children}{'\n'}</span>;
 }
 
 function Intro() {
@@ -128,7 +131,7 @@ function Intro() {
         <Line>Our help is in the name of the Lord.</Line>
         <Line><Red>Who made heaven and earth.</Red></Line>
       </p>
-      <div class='column wider'>
+      <div>
         <p class='spaced-small'>
           <Line>Most gracious Virgin Mary,</Line>
           <Line>    thou who wouldst crush the head of the serpent,</Line>
@@ -166,7 +169,7 @@ function Conclusion() {
   return <Panel>
     <div class='centered spaced-big'>
       <h1>Conclusion</h1>
-      <p class='column spaced-small'>
+      <p class='spaced-small'>
         <Line>August Queen of the Heavens,</Line>
         <Line>  heavenly Sovereign of the Angels,</Line>
         <Line>    Thou who from the beginning</Line>
@@ -204,7 +207,7 @@ function MorningPrayers() {
   return <Panel>
     <div class='centered spaced-big'>
       <h1>Morning Prayers</h1>
-      <p class='column spaced-small'>
+      <p class='spaced-small'>
         <Line>Dear Lord, thank you for today.</Line>
         <Line>    Bless our family,</Line>
         <Line>        [name all the members].</Line>
@@ -287,7 +290,7 @@ function Sunday() {
   return <Panel>
     <div class='centered spaced-big show-today'>
       <h1>Sunday</h1>
-      <p class='column wide spaced-small'>
+      <p class='spaced-small'>
         <Line>O Glorious Queen of Heaven and Earth,</Line>
         <Line>    Virgin Most Powerful,</Line>
         <Line>    thou who hast the power</Line>
@@ -340,7 +343,7 @@ function Monday() {
   return <Panel>
     <div class='centered spaced-big show-today'>
       <h1>Monday</h1>
-      <p class='column spaced-small'>
+      <p class='spaced-small'>
         <Line>In Thy name, Lord Jesus Christ,</Line>
         <Line>  we pray that Thou cover</Line>
         <Line>    us, our families, and all of our possessions</Line>
@@ -358,7 +361,7 @@ function Tuesday() {
   return <Panel>
     <div class='centered spaced-big show-today'>
       <h1>Tuesday</h1>
-      <p class='column wide spaced-small'>
+      <p class='spaced-small'>
         <Line>Lord Jesus Christ, we beg Thee for the grace</Line>
         <Line>  to remain guarded beneath the protective mantle of Mary,</Line>
         <Line>    surrounded by the holy briar from which was taken the Holy Crown of Thorns,</Line>
@@ -376,50 +379,52 @@ function Wednesday() {
   return <Panel>
     <div class='centered spaced-big show-today'>
       <h1>Wednesday</h1>
-      <p class='column spaced-small left-align'>
-        <Line>In the Name of Jesus Christ, Our Lord and God,</Line>
-        <Line>    we ask Thee to render all spirits</Line>
-        <Line>        impotent, paralyzed and ineffective</Line>
-      </p>
-      <p class='column spaced-small left-align'>
-        <Line>in attempting to take revenge against</Line>
-        <Line>    anyone of the members of the Auxilium Christianorum,</Line>
-        <Line>    our families, friends, communities,</Line>
-        <Line>    those who pray for us and their family members,</Line>
-        <Line>    or anyone associated with us</Line>
-        <Line>    and for whom the priests of the Auxilium Christianorum pray.</Line>
-      </p>
-      <p class='column spaced-small left-align'>
-        <Line>We ask Thee to bind</Line>
-        <Line>    all evil spirits,</Line>
-        <Line>    all powers in the air,</Line>
-        <Line>    the water,</Line>
-        <Line>    the ground,</Line>
-        <Line>    the fire,</Line>
-        <Line>    under ground,</Line>
-        <Line>        or wherever they exercise their powers,</Line>
-        <Line>    any satanic forces in nature</Line>
-        <Line>        and any and all emissaries of the satanic headquarters.</Line>
-      </p>
-      <p class='column spaced-small left-align'>
-        <Line>We ask Thee to bind by Thy Precious Blood</Line>
-        <Line>    all of the attributes,</Line>
-        <Line>    aspects</Line>
-        <Line>    and characteristics,</Line>
-        <Line>    interactions,</Line>
-        <Line>    communications and deceitful games</Line>
-        <Line>        of the evil spirits.</Line>
-      </p>
-      <p class='column spaced-small left-align'>
-        <Line>We ask Thee to break any and all</Line>
-        <Line>    bonds, ties and attachments</Line>
-        <Line><Red>in the Name of the Father,</Red></Line>
-        <Line><Red>    and of the Son</Red></Line>
-        <Line><Red>        and of the Holy Spirit.</Red></Line>
-      </p>
-      <p class='column spaced-small left-align'>
-        <Line><Red>Amen.</Red></Line>
-      </p>
+      <div>
+        <p class='spaced-small'>
+          <Line>In the Name of Jesus Christ, Our Lord and God,</Line>
+          <Line>    we ask Thee to render all spirits</Line>
+          <Line>        impotent, paralyzed and ineffective</Line>
+        </p>
+        <p class='spaced-small'>
+          <Line>in attempting to take revenge against</Line>
+          <Line>    anyone of the members of the Auxilium Christianorum,</Line>
+          <Line>    our families, friends, communities,</Line>
+          <Line>    those who pray for us and their family members,</Line>
+          <Line>    or anyone associated with us</Line>
+          <Line>    and for whom the priests of the Auxilium Christianorum pray.</Line>
+        </p>
+        <p class='spaced-small'>
+          <Line>We ask Thee to bind</Line>
+          <Line>    all evil spirits,</Line>
+          <Line>    all powers in the air,</Line>
+          <Line>    the water,</Line>
+          <Line>    the ground,</Line>
+          <Line>    the fire,</Line>
+          <Line>    under ground,</Line>
+          <Line>        or wherever they exercise their powers,</Line>
+          <Line>    any satanic forces in nature</Line>
+          <Line>        and any and all emissaries of the satanic headquarters.</Line>
+        </p>
+        <p class='spaced-small'>
+          <Line>We ask Thee to bind by Thy Precious Blood</Line>
+          <Line>    all of the attributes,</Line>
+          <Line>    aspects</Line>
+          <Line>    and characteristics,</Line>
+          <Line>    interactions,</Line>
+          <Line>    communications and deceitful games</Line>
+          <Line>        of the evil spirits.</Line>
+        </p>
+        <p class='spaced-small'>
+          <Line>We ask Thee to break any and all</Line>
+          <Line>    bonds, ties and attachments</Line>
+          <Line><Red>in the Name of the Father,</Red></Line>
+          <Line><Red>    and of the Son</Red></Line>
+          <Line><Red>        and of the Holy Spirit.</Red></Line>
+        </p>
+        <p class='spaced-small'>
+          <Line><Red>Amen.</Red></Line>
+        </p>
+      </div>
     </div>
   </Panel>;
 }
@@ -428,7 +433,7 @@ function Thursday() {
   return <Panel>
     <div class='centered spaced-big show-today'>
       <h1>Thursday</h1>
-      <p class='column spaced-small'>
+      <p class='spaced-small'>
         <Line>My Lord,</Line>
         <Line>  Thou art all powerful,</Line>
         <Line>    Thou art God,</Line>
@@ -449,7 +454,7 @@ function Thursday() {
         <span><Line>From every division in our family, and every harmful friendship,</Line></span><Red><Line>We implore Thee, deliver us, O Lord.</Line></Red>
         <span><Line>From every sort of spell, malefice, witchcraft, and every form of the occult,</Line></span><Red><Line>We implore Thee, deliver us, O Lord.</Line></Red>
       </p>
-      <p class='column spaced-small'>
+      <p class='spaced-small'>
         <Line>Thou who said, "Peace I leave with you, my peace I give unto you."</Line>
         <Line>  Grant that, through the intercession of the Virgin Mary,</Line>
         <Line>    we may be liberated from every demonic influence</Line>
@@ -506,7 +511,7 @@ function Saturday() {
   return <Panel>
     <div class='centered spaced-big show-today'>
       <h1>Saturday</h1>
-      <p class='column wide spaced-small'>
+      <p class='spaced-small'>
         <Line>O God and Father of our Lord Jesus Christ,</Line>
         <Line>  we call upon Thy holy Name</Line>
         <Line>    and humbly beseech Thy clemency,</Line>
@@ -591,7 +596,7 @@ function Litany() {
 
       <p class='spaced-medium' style='text-align:center; font-style:italic'><Line>Let us pray.</Line></p>
 
-      <p class='column wide spaced-small'>
+      <p class='spaced-small'>
         <Line>Almighty, and everlasting God,</Line>
         <Line>  Who hast appointed Thine only-begotten Son</Line>
         <Line>    to be the Redeemer of the world,</Line>
@@ -862,6 +867,7 @@ function Slideshow(attrs: any, children: any) {
 function Tabs(attrs: { tabs: Record<string, JSX.Element> }) {
   return <>
     <div id='tab-container'>
+      <Navlinks page='Prayers' />
       <div id='tabs-names'>
         {Object.keys(attrs.tabs).map((tabName, i) => (
           <button>{tabName}</button>
@@ -871,26 +877,5 @@ function Tabs(attrs: { tabs: Record<string, JSX.Element> }) {
         {Object.values(attrs.tabs)}
       </div>
     </div>
-  </>;
-}
-
-function Html(attrs: any, children: any) {
-  return <>
-    {'<!DOCTYPE html>'}
-    <html lang="en">
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Prayers</title>
-        <link href='./style.css' rel='stylesheet' />
-        <script src='./client.js' type='module' />
-        <link rel="icon" type="image/png" sizes="32x32" href='./favicon.ico' />
-      </head>
-      <body>
-        <Font use={martel} fallback="serif">
-          {children}
-        </Font>
-      </body>
-    </html>
   </>;
 }
