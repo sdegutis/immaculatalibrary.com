@@ -9,10 +9,10 @@ const DAYS = ['SUN', 'MON', 'TUE', 'WED', 'THUR', 'FRI', 'SAT'] as const;
 type DAY = typeof DAYS[number];
 
 export default <>
-  <EmptyPage>
+  <EmptyPage favicons={<link rel="icon" type="image/png" sizes="32x32" href='./favicon.ico' />}>
     <link rel='stylesheet' href='./style.css' />
     <script src='./client.js' type='module' />
-    <link rel="icon" type="image/png" sizes="32x32" href='./favicon.ico' />
+
     <Tabs tabs={{
       "Morning":
         <Slideshow>

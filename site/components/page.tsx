@@ -6,7 +6,7 @@ import { QuickLinks } from './quicklinks.js';
 import { SiteFooter } from './site-footer.js';
 import { SiteHeader } from './site-header.js';
 
-export const EmptyPage: JSX.Component = (attrs, children) => <>
+export const EmptyPage: JSX.Component<{ favicons?: JSX.Element }> = (attrs, children) => <>
   {'<!DOCTYPE html>'}
   <html lang="en">
 
@@ -22,7 +22,7 @@ export const EmptyPage: JSX.Component = (attrs, children) => <>
 
       <link rel="stylesheet" href='/css/base.css' />
 
-      <Meta />
+      <Meta {...attrs} />
     </head>
 
     <body>
