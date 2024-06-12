@@ -28,20 +28,6 @@ class Tab {
   };
 }
 
-function smoothScrollToLine(line: HTMLElement, panel: HTMLElement) {
-  animateTo(panel, 700, {
-    x: panel.scrollLeft,
-    y: line.offsetTop - panel.offsetHeight / 2 + line.offsetHeight / 2,
-  });
-}
-
-function smoothScrollToPanel(panel: HTMLElement, container: HTMLElement) {
-  animateTo(container, 700, {
-    x: panel.offsetLeft - container.offsetLeft,
-    y: panel.offsetTop - container.offsetTop,
-  });
-}
-
 function animateTo(container: HTMLElement, duration: number, to: { x: number, y: number }) {
   const startPos = {
     x: container.scrollLeft,
@@ -93,27 +79,38 @@ class Panel {
   }
   hasLines() { return this.lines.length > 0; }
   focus() {
-    smoothScrollToPanel(this.panelDiv, document.getElementById('tabs-bodies')!);
+    const container = document.getElementById('tabs-bodies')!;
+    animateTo(container, 700, {
+      x: this.panelDiv.offsetLeft - container.offsetLeft,
+      y: this.panelDiv.offsetTop - container.offsetTop,
+    });
     this.panelBodyDiv.focus({ preventScroll: true });
 
     for (const line of this.lines) {
       line.classList.remove('active');
     }
 
-    this.lines[this.currentLine]!.classList.add('active');
+    this.currentLineEl.classList.add('active');
   }
   goToLine(line: number) {
-    this.lines[this.currentLine]!.classList.remove('active');
+    this.currentLineEl.classList.remove('active');
     this.currentLine = line;
-    this.lines[this.currentLine]!.classList.add('active');
+    this.currentLineEl.classList.add('active');
 
-    smoothScrollToLine(this.lines[this.currentLine]!, this.panelBodyDiv);
+    const currentLine = this.currentLineEl;
+    animateTo(this.panelBodyDiv, 300, {
+      x: this.panelBodyDiv.scrollLeft,
+      y: currentLine.offsetTop - this.panelBodyDiv.offsetHeight / 2 + currentLine.offsetHeight / 2,
+    });
   }
   nextLine() {
     this.goToLine(Math.min(this.currentLine + 1, this.lines.length - 1));
   }
   prevLine() {
     this.goToLine(Math.max(this.currentLine - 1, 0));
+  }
+  get currentLineEl() {
+    return this.lines[this.currentLine]!;
   }
 }
 
