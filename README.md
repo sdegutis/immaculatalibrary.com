@@ -4,9 +4,9 @@
 
 ### Goals
 
-Be the simplest and fastest SSG that I could make.
-Be fun to use, not difficult or frustrating.
-Be able to innovate right when ideas come up.
+* Be the simplest and fastest SSG that I could make.
+* Be fun to use, not difficult or frustrating.
+* Be able to innovate right when ideas come up.
 
 ### Run locally
 
