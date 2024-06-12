@@ -867,11 +867,13 @@ function Slideshow(attrs: any, children: any) {
 function Tabs(attrs: { tabs: Record<string, JSX.Element> }) {
   return <>
     <div id='tab-container'>
-      <Navlinks page='Prayers' />
-      <div id='tabs-names'>
-        {Object.keys(attrs.tabs).map((tabName, i) => (
-          <button>{tabName}</button>
-        ))}
+      <div id='prayers-header'>
+        <Navlinks page='Prayers' />
+        <div id='tabs-names'>
+          {Object.keys(attrs.tabs).map((tabName, i) => (
+            <button>{tabName}</button>
+          ))}
+        </div>
       </div>
       <div id='tabs-bodies'>
         {Object.values(attrs.tabs)}

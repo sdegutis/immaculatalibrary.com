@@ -7,6 +7,26 @@
     flex-direction: column;
 }
 
+#prayers-header {
+    position: relative;
+}
+
+#prayers-header::before {
+    position: absolute;
+    z-index: -1;
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background-color: var(--bgalt);
+    background-image: url(/img/page/home.jpg);
+    background-size: cover;
+    background-position: -7em, center;
+    opacity: 0.42;
+}
+
 #tabs-names {
     display: flex;
     justify-content: center;
