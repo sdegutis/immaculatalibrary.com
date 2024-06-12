@@ -756,7 +756,7 @@ function ApostlesCreed() {
     <Line>    The communion of Saints</Line>
     <Line>  The forgiveness of sins</Line>
     <Line>    The resurrection of the body</Line>
-    <Line>      And the life of the world to come</Line>
+    <Line>      And life everlasting</Line>
     <Line>Amen.</Line>
   </Prayer>;
 }
@@ -768,7 +768,7 @@ function HailHolyQueen() {
     <Line>  Mother of mercy</Line>
     <Line>    Our life, our sweetness, and our hope</Line>
     <Line>To thee to we cry, poor bashished children of Eve</Line>
-    <Line>  To the do we send up our sighs, mournings, and weepings</Line>
+    <Line>  To the do we send up our sighs, mourning, and weeping</Line>
     <Line>    In this valley of tears</Line>
     <Line>Turn then most gracious advocate</Line>
     <Line>  Thine eyes of mercy towards us</Line>
