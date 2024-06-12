@@ -1,12 +1,11 @@
-import { Spaced, SplitColumn } from "./components/column.js";
-import { FathersSearchbar } from "./components/fathers-search.js";
+import { CenteredColumn, Spaced } from "./components/column.js";
 import { TypicalPage } from "./components/page.js";
 
 export default <>
   <TypicalPage title="Fathers of the Church" image='/img/page/articles.jpg' page="Fathers">
 
     <Spaced>
-      <SplitColumn>
+      <CenteredColumn>
 
         <div>
 
@@ -42,11 +41,7 @@ export default <>
 
         </div>
 
-        <div>
-          <FathersSearchbar />
-        </div>
-
-      </SplitColumn>
+      </CenteredColumn>
     </Spaced>
 
   </TypicalPage>
