@@ -13,8 +13,8 @@ export default <>
       <Spaced>
         <Column>
           <div id='tabs-buttons'>
-            <button>Books</button>
-            <button>Snippets</button>
+            <button>Search Books</button>
+            <button>Search Snippets</button>
           </div>
         </Column>
       </Spaced>
