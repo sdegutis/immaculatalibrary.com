@@ -9,8 +9,14 @@ for (const tab of tabs) {
   tab.button.onclick = (e) => {
     e.preventDefault();
     for (const someTab of tabs) {
-      someTab.body.hidden = someTab.button !== tab.button;
-      someTab.button.classList.toggle('active', someTab.button === tab.button);
+      const showing = someTab.button === tab.button;
+
+      someTab.body.hidden = !showing;
+      someTab.button.classList.toggle('active', showing);
+
+      if (showing) {
+        someTab.body.querySelector<HTMLElement>('[autofocus]')?.focus();
+      }
     }
   };
 }
