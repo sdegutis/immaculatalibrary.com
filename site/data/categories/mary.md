@@ -2,6 +2,7 @@
 title: The Blessed Virgin Mary
 shortTitle: Mary
 books:
+  - holy-mary-of-guadalupe
   - devotion-to-the-blessed-virgin
   - lourdes-by-rev-msgr-benson
   - month-of-our-lady-of-the-blessed-sacrament-by-st-peter-julian-eymard
