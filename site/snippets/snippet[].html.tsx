@@ -1,4 +1,5 @@
 import { Spaced, SplitColumn } from "../components/column.js";
+import { LatestSnippetsArea } from "../components/latest-snippets.js";
 import { TypicalPage } from "../components/page.js";
 import { Typography } from "../components/typography.js";
 import { handlers } from "../core/handlers.js";
@@ -6,7 +7,6 @@ import { isDev } from "../core/helpers.js";
 import { Snippet, allSnippets } from "../model/snippets.js";
 import { allTags } from "../model/tag.js";
 import { formatDate } from '../shared/format-date.js';
-import { LoadingLine, LoadingParagraph } from "../shared/loading.js";
 
 handlers.set('/add-tags-to-snippet', body => {
   const params = new URLSearchParams(body);
@@ -96,19 +96,7 @@ export default allSnippets.map(snippet => {
           </Typography>
           <div>
             <h3>Latest book snippets</h3>
-            <div id='latest-book-snippets-area'>
-              <LoadingLine width="4em" />
-              <ul>
-                <li><LoadingParagraph lines={3} /></li>
-                <li><LoadingParagraph lines={3} /></li>
-                <li><LoadingParagraph lines={3} /></li>
-                <li><LoadingParagraph lines={3} /></li>
-                <li><LoadingParagraph lines={3} /></li>
-                <li><LoadingParagraph lines={3} /></li>
-                <li><LoadingParagraph lines={3} /></li>
-              </ul>
-            </div>
-            <script type='module' src='/scripts/latest-book-snippets.js' />
+            <LatestSnippetsArea />
           </div>
 
         </SplitColumn>

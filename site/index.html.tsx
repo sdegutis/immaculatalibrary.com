@@ -1,5 +1,6 @@
 import { CenteredColumn, Spaced, SplitColumn } from "./components/column.js";
 import { FadeIn } from "./components/fadein.js";
+import { LatestSnippetsArea } from "./components/latest-snippets.js";
 import { Navlinks } from "./components/navlinks.js";
 import { EmptyPage } from "./components/page.js";
 import { QuickLinks } from "./components/quicklinks.js";
@@ -7,7 +8,7 @@ import { SiteFooter } from "./components/site-footer.js";
 import { Typography } from "./components/typography.js";
 import { allBooks } from "./model/books.js";
 import { featuredBooks } from "./model/featured.js";
-import { HomeLoading, LoadingLine, LoadingParagraph } from "./shared/loading.js";
+import { HomeLoading } from "./shared/loading.js";
 
 export default <>
   <EmptyPage>
@@ -64,19 +65,8 @@ export default <>
 
             <FadeIn>
               <h2>Latest book snippets</h2>
-              <div id='latest-book-snippets-area'>
-                <LoadingLine width="4em" />
-                <ul>
-                  <li><LoadingParagraph lines={3} /></li>
-                  <li><LoadingParagraph lines={3} /></li>
-                  <li><LoadingParagraph lines={3} /></li>
-                  <li><LoadingParagraph lines={3} /></li>
-                  <li><LoadingParagraph lines={3} /></li>
-                  <li><LoadingParagraph lines={3} /></li>
-                  <li><LoadingParagraph lines={3} /></li>
-                </ul>
-              </div>
-              <script type='module' src='/scripts/latest-book-snippets.js' />
+              <LatestSnippetsArea />
+
             </FadeIn>
 
             <FadeIn>
