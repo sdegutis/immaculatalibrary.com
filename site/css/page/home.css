@@ -33,6 +33,7 @@
 
 #letters-from-heaven .typography a {
   color: inherit;
+  text-decoration: underline;
 }
 
 #letters-from-heaven .typography blockquote {
