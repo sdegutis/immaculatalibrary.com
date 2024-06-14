@@ -14,10 +14,9 @@ for (const { path: filepath, content } of files) {
   if (!isDev && filepath.startsWith('/admin/')) continue;
 
   if (filepath.includes('.html') || filepath.includes('.xml') || filepath.includes('.json')) {
-    const dir = path.dirname(filepath);
     const exported = require(filepath).default;
-
-    if (Array.isArray(exported)) {
+    if (filepath.includes('[]')) {
+      const dir = path.dirname(filepath);
       for (const [name, jsx] of exported) {
         outfiles.set(path.join(dir, name), hoist(jsx));
       }
