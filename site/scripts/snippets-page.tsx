@@ -2,7 +2,12 @@ import { Typography } from "../components/typography.js";
 import { SnippetJson } from "./data/snippets.json.js";
 import { Reactive } from "./reactive.js";
 import { createSearch, findWithinMarkdown, highlight } from "./searchlist.js";
+import { tabs } from "./tabs.js";
 import { randomElement, sleep } from "./util.js";
+
+if (window.location.search.includes('tab=snippets')) {
+  tabs[1]?.button.click();
+}
 
 const dynamicArea = document.getElementById('snippets-area') as HTMLDivElement;
 

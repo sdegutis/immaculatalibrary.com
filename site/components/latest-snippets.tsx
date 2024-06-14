@@ -3,7 +3,12 @@ import { LoadingLine, LoadingParagraph } from "../shared/loading.js";
 export function LatestSnippetsArea() {
   return <>
     <div id='latest-book-snippets-area'>
-      <LoadingLine width="14em" />
+      <p>
+        <LoadingLine width="14em" />
+      </p>
+      <p>
+        <LoadingLine width="18em" />
+      </p>
       <ul>
         <li><LoadingParagraph lines={2} /></li>
         <li><LoadingParagraph lines={2} /></li>

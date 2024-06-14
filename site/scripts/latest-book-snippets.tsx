@@ -12,6 +12,7 @@ document.getElementById('latest-book-snippets-area')!.replaceChildren(<>
       this.href = randomElement(allSnippets).route;
     }}>random book snippet</a>.
   </p>
+  <p>Read the <a href='/books.html?tab=snippets'>latest digitized snippets.</a></p>
   <ul>
     {latestSnippets.map(snippet =>
       <li>

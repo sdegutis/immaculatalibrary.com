@@ -1,8 +1,6 @@
-export default 0;
-
 const buttons = [...document.querySelectorAll<HTMLButtonElement>('#tabs-buttons button')];
 const bodies = [...document.querySelectorAll<HTMLElement>('#tabs-bodies>*')];
-const tabs = buttons.map((b, i) => ({ button: b, body: bodies[i]! }));
+export const tabs = buttons.map((b, i) => ({ button: b, body: bodies[i]! }));
 
 for (const tab of tabs) {
   tab.body.hidden = true;
