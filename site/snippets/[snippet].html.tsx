@@ -32,7 +32,7 @@ export default allSnippets.map(snippet => {
     .replace('.pdf', ''));
 
 
-  return [`${snippet.slug}.html`, <>
+  return [snippet.slug, <>
     <TypicalPage title="Book Snippets" image={snippet.book.imageBig} page="Books">
 
       <link rel="stylesheet" href='/css/page/snippet.css' />

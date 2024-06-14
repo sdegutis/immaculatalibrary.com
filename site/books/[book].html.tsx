@@ -8,7 +8,7 @@ import { allBooks } from "../model/books.js";
 import { formatDate } from "../shared/format-date.js";
 import { LoadingLine, LoadingParagraph } from "../shared/loading.js";
 
-export default allBooks.map(book => [`${book.slug}.html`, <>
+export default allBooks.map(book => [book.slug, <>
   <TypicalPage title="Books" image={book.imageBig} page="Books">
 
     <Spaced>

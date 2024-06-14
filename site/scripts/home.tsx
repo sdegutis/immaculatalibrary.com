@@ -2,7 +2,7 @@ import MarkdownIt from 'https://cdn.jsdelivr.net/npm/markdown-it@13.0.2/+esm';
 import { formatDate } from "../shared/format-date.js";
 import { HomeLoading } from '../shared/loading.js';
 import { mdOptions } from '../shared/markdown.js';
-import { SnippetJson } from './data/snippets/snippet[].json.js';
+import { SnippetJson } from './data/snippets/[snippet].json.js';
 import { randomElement, sleep } from './util.js';
 
 const snippetIds = fetch('/scripts/data/snippet-ids.json').then<string[]>(res => res.json());

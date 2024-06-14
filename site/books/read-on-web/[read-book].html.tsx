@@ -10,7 +10,7 @@ export default allBooks.filter(book => book.data.complete).map(book => {
   const orderedSnippets = [...book.snippets];
   const file = book.data.files[0]!;
 
-  return [`${book.slug}.html`, <>
+  return [book.slug, <>
     <EmptyPage>
 
       <link rel="stylesheet" href='/css/page/read-book.css' />

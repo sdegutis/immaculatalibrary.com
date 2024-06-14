@@ -4,7 +4,7 @@ import { TypicalPage } from "../components/page.js";
 import { markdown } from "../core/helpers.js";
 import { allFatherQuotes } from "../model/fatherquotes.js";
 
-export default allFatherQuotes.map(q => [`${q.slug}.html`, <>
+export default allFatherQuotes.map(q => [q.slug, <>
 
   <TypicalPage title="Fathers of the Church" image='/img/page/articles.jpg' page="Fathers">
 

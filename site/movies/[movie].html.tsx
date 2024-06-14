@@ -6,7 +6,7 @@ import { markdown } from "../core/helpers.js";
 import { allMovies } from "../model/movies.js";
 
 export default allMovies.map(movie => {
-  return [`${movie.slug}.html`, <>
+  return [movie.slug, <>
     <TypicalPage title="Movies" image={`/img/movies/${movie.slug}-big.jpg`} page="Movies">
 
       <Spaced>

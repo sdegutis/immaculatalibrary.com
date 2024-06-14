@@ -6,7 +6,7 @@ import { markdown } from "../core/helpers.js";
 import { allArticles } from "../model/articles.js";
 import { formatDate } from '../shared/format-date.js';
 
-export default allArticles.map(article => [`${article.slug}.html`, <>
+export default allArticles.map(article => [article.slug, <>
   <TypicalPage title="Articles" image={article.data.imageFilename ?? '/img/page/articles.jpg'} page="Articles">
 
     <Spaced>

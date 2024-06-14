@@ -6,7 +6,7 @@ import { markdown } from "../core/helpers.js";
 import { allVideos } from "../model/videos.js";
 
 export default allVideos.map(video => {
-  return [`${video.slug}.html`, <>
+  return [video.slug, <>
     <TypicalPage page="Movies" title="Fulton Sheen Videos" image={`/img/categories/blessed-sacrament-big.jpg`}>
 
       <Spaced>

@@ -7,7 +7,7 @@ import { markdown } from "../../core/helpers.js";
 import { allCategories } from "../../model/categories.js";
 import { LoadingParagraph } from "../../shared/loading.js";
 
-export default allCategories.map(cat => [`${cat.slug}.html`, <>
+export default allCategories.map(cat => [cat.slug, <>
   <TypicalPage title="Book Categories" image={`/img/categories/${cat.slug}-big.jpg`} page="Books">
 
     <Spaced>

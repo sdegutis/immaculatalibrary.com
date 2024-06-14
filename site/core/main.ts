@@ -15,10 +15,11 @@ for (const { path: filepath, content } of files) {
 
   if (filepath.includes('.html') || filepath.includes('.xml') || filepath.includes('.json')) {
     const exported = require(filepath).default;
-    if (filepath.includes('[]')) {
+    if (filepath.match(/\[.+\]/)) {
       const dir = path.dirname(filepath);
-      for (const [name, jsx] of exported) {
-        outfiles.set(path.join(dir, name), hoist(jsx));
+      for (const [slug, jsx] of exported) {
+        const filename = filepath.slice(0, -3).replace(/\[.+\]/, slug);
+        outfiles.set(filename, hoist(jsx));
       }
     }
     else {
