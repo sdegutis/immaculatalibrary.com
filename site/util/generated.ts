@@ -1,4 +1,4 @@
-import { outfiles } from '../core/outfiles.js';
+import { outfiles } from "../core/exports.js";
 
 export function generated(name: string, generateContent: () => string) {
   const fullpath = `/generated/${name}`;

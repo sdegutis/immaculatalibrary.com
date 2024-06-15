@@ -1,6 +1,6 @@
 import { Typography } from "../../components/$typography.js";
 import { EmptyPage } from "../../components/page.js";
-import { handlers } from '../../core/handlers.js';
+import { handlers } from '../../core/exports.js';
 import { Snippet } from '../../model/snippets.js';
 
 handlers.set(__filename, body => {

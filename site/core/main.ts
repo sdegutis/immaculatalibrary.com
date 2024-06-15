@@ -1,6 +1,5 @@
 import { isDev } from '../util/helpers.js';
-import { handlers } from './handlers.js';
-import { outfiles } from './outfiles.js';
+import { handlers, outfiles } from './exports.js';
 import files from '/';
 export { handlers, outfiles };
 
