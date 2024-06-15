@@ -50,5 +50,5 @@ function hoist(jsx: string) {
       hoisted.add(s);
       return '';
     })
-    .replace(/<\/head>/, ['<head>', ...hoisted].join('')));
+    .replace(/<\/head>/, [...hoisted, '</head>'].join('')));
 }
