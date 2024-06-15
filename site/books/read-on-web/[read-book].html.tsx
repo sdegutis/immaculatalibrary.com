@@ -3,8 +3,8 @@ import { EmptyPage } from "../../components/page.js";
 import { Rating } from "../../components/rating.js";
 import { SiteFooter } from "../../components/site-footer.js";
 import { Typography } from "../../components/typography.js";
-import { markdown } from "../../core/helpers.js";
 import { allBooks } from "../../model/books.js";
+import { markdown } from "../../util/helpers.js";
 
 export default allBooks.filter(book => book.data.complete).map(book => {
   const orderedSnippets = [...book.snippets];

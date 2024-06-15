@@ -3,10 +3,10 @@ import { TypicalPage } from "../components/page.js";
 import { PaginatorLoading } from "../components/paginator.js";
 import { Rating } from "../components/rating.js";
 import { Typography } from "../components/typography.js";
-import { isDev, markdown } from "../core/helpers.js";
 import { allBooks } from "../model/books.js";
 import { formatDate } from "../shared/$format-date.js";
 import { LoadingLine, LoadingParagraph } from "../shared/$loading.js";
+import { isDev, markdown } from "../util/helpers.js";
 
 export default allBooks.map(book => [book.slug, <>
   <TypicalPage title="Books" image={book.imageBig} page="Books">

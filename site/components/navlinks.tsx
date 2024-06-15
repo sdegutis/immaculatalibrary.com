@@ -1,5 +1,5 @@
 import * as crypto from 'crypto';
-import { generated } from "../core/generated.js";
+import { generated } from "../util/generated.js";
 import { Column } from "./column.js";
 
 const css = /*css*/`

@@ -1,6 +1,6 @@
-import { DataFile } from "../core/data-files.js";
-import { sortBy } from "../core/helpers.js";
 import allBookFiles from "../data/books/";
+import { DataFile } from "../util/data-files.js";
+import { sortBy } from "../util/helpers.js";
 import { Category } from "./categories.js";
 import * as relations from "./relations.js";
 import { Snippet } from "./snippets.js";

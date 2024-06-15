@@ -2,9 +2,9 @@ import { ArticlesList } from "../components/articles-list.js";
 import { Spaced, SplitColumn } from "../components/column.js";
 import { TypicalPage } from "../components/page.js";
 import { Typography } from "../components/typography.js";
-import { markdown } from "../core/helpers.js";
 import { allArticles } from "../model/articles.js";
 import { formatDate } from '../shared/$format-date.js';
+import { markdown } from "../util/helpers.js";
 
 export default allArticles.map(article => [article.slug, <>
   <TypicalPage title="Articles" image={article.data.imageFilename ?? '/img/page/articles.jpg'} page="Articles">

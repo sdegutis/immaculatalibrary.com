@@ -1,6 +1,6 @@
-import { DataFile } from '../core/data-files.js';
-import { sortBy } from '../core/helpers.js';
 import allVideoFiles from "../data/videos/";
+import { DataFile } from '../util/data-files.js';
+import { sortBy } from '../util/helpers.js';
 
 interface VideoFile {
   title: string;

@@ -2,8 +2,8 @@ import { Spaced, SplitColumn } from "../components/column.js";
 import { MusicSidebar } from "../components/music-sidebar.js";
 import { TypicalPage } from "../components/page.js";
 import { Typography } from "../components/typography.js";
-import { markdown } from "../core/helpers.js";
 import { allMusics } from "../model/musics.js";
+import { markdown } from "../util/helpers.js";
 
 export default allMusics.map(song => {
   const embedUrl = song.data.youtube.replace('watch?v=', 'embed/').replace(/&t=(\d+)s/, '?start=$1');

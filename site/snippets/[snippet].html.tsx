@@ -3,7 +3,7 @@ import { LatestSnippetsArea } from "../components/latest-snippets.js";
 import { TypicalPage } from "../components/page.js";
 import { Typography } from "../components/typography.js";
 import { handlers } from "../core/handlers.js";
-import { isDev } from "../core/helpers.js";
+import { isDev } from "../util/helpers.js";
 import { Snippet, allSnippets } from "../model/snippets.js";
 import { allTags } from "../model/tag.js";
 import { formatDate } from '../shared/$format-date.js';

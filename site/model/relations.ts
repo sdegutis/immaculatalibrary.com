@@ -1,4 +1,4 @@
-import { sortBy } from "../core/helpers.js";
+import { sortBy } from "../util/helpers.js";
 import { Book, allBooks, booksBySlug } from "./books.js";
 import { Category, allCategories } from "./categories.js";
 import { Snippet, allSnippets } from "./snippets.js";

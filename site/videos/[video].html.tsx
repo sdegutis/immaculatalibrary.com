@@ -2,8 +2,8 @@ import { Spaced, SplitColumn } from "../components/column.js";
 import { MoviesList, VideosList } from "../components/movies-sidebar.js";
 import { TypicalPage } from "../components/page.js";
 import { Typography } from "../components/typography.js";
-import { markdown } from "../core/helpers.js";
 import { allVideos } from "../model/videos.js";
+import { markdown } from "../util/helpers.js";
 
 export default allVideos.map(video => {
   return [video.slug, <>

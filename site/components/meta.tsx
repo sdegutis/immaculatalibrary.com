@@ -1,4 +1,4 @@
-import { generated } from '../core/generated.js';
+import { generated } from '../util/generated.js';
 
 function makeManifest() {
   return JSON.stringify({
