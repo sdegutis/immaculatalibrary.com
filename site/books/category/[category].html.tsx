@@ -1,10 +1,10 @@
+import { LoadingParagraph } from "../../components/$loading.js";
+import { Typography } from "../../components/$typography.js";
 import { CenteredColumn, Spaced, SplitColumn } from "../../components/column.js";
 import { TypicalPage } from "../../components/page.js";
 import { PaginatorLoading } from "../../components/paginator.js";
 import { Rating } from "../../components/rating.js";
-import { Typography } from "../../components/typography.js";
 import { allCategories } from "../../model/categories.js";
-import { LoadingParagraph } from "../../shared/$loading.js";
 import { markdown } from "../../util/helpers.js";
 
 export default allCategories.map(cat => [cat.slug, <>

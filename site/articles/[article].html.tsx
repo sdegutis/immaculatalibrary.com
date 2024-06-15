@@ -1,9 +1,9 @@
+import { Typography } from "../components/$typography.js";
 import { ArticlesList } from "../components/articles-list.js";
 import { Spaced, SplitColumn } from "../components/column.js";
 import { TypicalPage } from "../components/page.js";
-import { Typography } from "../components/typography.js";
 import { allArticles } from "../model/articles.js";
-import { formatDate } from '../shared/$format-date.js';
+import { formatDate } from '../util/$format-date.js';
 import { markdown } from "../util/helpers.js";
 
 export default allArticles.map(article => [article.slug, <>

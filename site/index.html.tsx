@@ -1,3 +1,5 @@
+import { HomeLoading } from "./components/$loading.js";
+import { Typography } from "./components/$typography.js";
 import { CenteredColumn, Spaced, SplitColumn } from "./components/column.js";
 import { FadeIn } from "./components/fadein.js";
 import { LatestSnippetsArea } from "./components/latest-snippets.js";
@@ -5,11 +7,9 @@ import { Navlinks } from "./components/navlinks.js";
 import { EmptyPage } from "./components/page.js";
 import { QuickLinks } from "./components/quicklinks.js";
 import { SiteFooter } from "./components/site-footer.js";
-import { Typography } from "./components/typography.js";
 import { allArticles } from "./model/articles.js";
 import { allBooks } from "./model/books.js";
 import { featuredBooks } from "./model/featured.js";
-import { HomeLoading } from "./shared/$loading.js";
 
 export default <>
   <EmptyPage>

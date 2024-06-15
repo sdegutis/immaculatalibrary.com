@@ -1,5 +1,5 @@
 import allArticleFiles from '../data/articles/';
-import { calculateReadingMins } from '../shared/$helpers.js';
+import { calculateReadingMins } from '../util/$helpers.js';
 import { DataFileWithDate } from '../util/data-files.js';
 import { sortBy } from '../util/helpers.js';
 

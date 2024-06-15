@@ -1,7 +1,7 @@
+import { Typography } from "./components/$typography.js";
 import { Spaced, SplitColumn } from "./components/column.js";
 import { MusicSidebar } from "./components/music-sidebar.js";
 import { TypicalPage } from "./components/page.js";
-import { Typography } from "./components/typography.js";
 
 const playlist = 'https://open.spotify.com/playlist/2VpGGkgru7iXryNu1PMid0?si=ab81cea245694a6e';
 

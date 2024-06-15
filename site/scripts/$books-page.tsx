@@ -1,9 +1,9 @@
-import { Typography } from "../components/typography.js";
-import { RatingStar } from "../shared/$rating.js";
-import { BookJson } from "./data/books.json.js";
+import { RatingStar } from "../components/$rating.js";
+import { Typography } from "../components/$typography.js";
 import { Reactive } from "./$reactive.js";
 import { createSearch, findWithinMarkdown, highlight } from "./$searchlist.js";
 import { randomElement, sleep } from "./$util.js";
+import { BookJson } from "./data/books.json.js";
 
 const dynamicArea = document.getElementById('books-area') as HTMLDivElement;
 

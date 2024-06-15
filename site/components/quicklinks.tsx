@@ -1,9 +1,9 @@
 import { allCategories, categoriesBySlug } from '../model/categories.js';
 import { featuredBooks } from '../model/featured.js';
 import { allMovies } from '../model/movies.js';
+import { Typography } from './$typography.js';
 import { Column } from './column.js';
 import { FadeIn } from './fadein.js';
-import { Typography } from './typography.js';
 
 export const QuickLinks: JSX.Component = (attrs, children) => {
   return <>

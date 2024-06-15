@@ -1,4 +1,4 @@
-import { LoadingLine, LoadingParagraph } from "../shared/$loading.js";
+import { LoadingLine, LoadingParagraph } from "./$loading.js";
 
 export function LatestSnippetsArea() {
   return <>

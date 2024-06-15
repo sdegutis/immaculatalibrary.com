@@ -1,5 +1,5 @@
+import { Typography } from "../../components/$typography.js";
 import { EmptyPage } from "../../components/page.js";
-import { Typography } from "../../components/typography.js";
 import { handlers } from "../../core/handlers.js";
 import { FatherQuote } from "../../model/fatherquotes.js";
 import { Quote } from "./$document-client.js";

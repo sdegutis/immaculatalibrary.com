@@ -1,11 +1,11 @@
+import { LoadingLine, LoadingParagraph } from "../components/$loading.js";
+import { Typography } from "../components/$typography.js";
 import { Spaced, SplitColumn } from "../components/column.js";
 import { TypicalPage } from "../components/page.js";
 import { PaginatorLoading } from "../components/paginator.js";
 import { Rating } from "../components/rating.js";
-import { Typography } from "../components/typography.js";
 import { allBooks } from "../model/books.js";
-import { formatDate } from "../shared/$format-date.js";
-import { LoadingLine, LoadingParagraph } from "../shared/$loading.js";
+import { formatDate } from "../util/$format-date.js";
 import { isDev, markdown } from "../util/helpers.js";
 
 export default allBooks.map(book => [book.slug, <>

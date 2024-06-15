@@ -1,7 +1,7 @@
+import { LoadingLine, LoadingParagraph } from './components/$loading.js';
 import { Column, Spaced, SplitColumn } from './components/column.js';
 import { TypicalPage } from './components/page.js';
 import { PaginatorLoading } from './components/paginator.js';
-import { LoadingLine, LoadingParagraph } from './shared/$loading.js';
 
 export default <>
   <TypicalPage title='Books' image='/img/categories/reference-big.jpg' page='Books'>

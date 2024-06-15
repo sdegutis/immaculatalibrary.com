@@ -1,5 +1,5 @@
 import allSnippetFiles from "../data/snippets/";
-import { calculateReadingMins } from '../shared/$helpers.js';
+import { calculateReadingMins } from '../util/$helpers.js';
 import { DataFileWithDate } from "../util/data-files.js";
 import { markdown, sortBy } from "../util/helpers.js";
 import { Book } from './books.js';

@@ -1,6 +1,6 @@
+import { Typography } from './components/$typography.js';
 import { CenteredColumn, Spaced } from './components/column.js';
 import { TypicalPage } from './components/page.js';
-import { Typography } from './components/typography.js';
 
 export default <>
   <TypicalPage title="Bible" image='/img/categories/classics-big.jpg' page='Resources'>

@@ -1,5 +1,5 @@
 import MarkdownIt from 'markdown-it';
-import { mdOptions } from '../shared/$markdown.js';
+import { mdOptions } from '../components/$markdown.js';
 
 export const isDev = !!process.env['DEV'];
 
