@@ -9,23 +9,23 @@ const sitemap = files[sitemapIdx]!;
 files.splice(sitemapIdx, 1);
 files.push(sitemap);
 
-for (const { path: filepath, content } of files) {
-  if (!isDev && filepath.startsWith('/admin/')) continue;
+for (const { path, content } of files) {
+  if (!isDev && path.startsWith('/admin/')) continue;
 
-  if (filepath.includes('.html') || filepath.includes('.xml') || filepath.includes('.json')) {
-    const exported = require(filepath).default;
-    if (filepath.match(/\[.+\]/)) {
+  if (path.includes('.html') || path.includes('.xml') || path.includes('.json')) {
+    const exported = require(path).default;
+    if (path.match(/\[.+\]/)) {
       for (const [slug, jsx] of exported) {
-        const filename = filepath.slice(0, -3).replace(/\[.+\]/, slug);
+        const filename = path.slice(0, -3).replace(/\[.+\]/, slug);
         outfiles.set(filename, hoist(jsx));
       }
     }
     else {
-      outfiles.set(filepath.slice(0, -3), hoist(exported));
+      outfiles.set(path.slice(0, -3), hoist(exported));
     }
   }
-  else if (!filepath.endsWith('.md')) {
-    outfiles.set(filepath, content);
+  else if (!path.endsWith('.md')) {
+    outfiles.set(path, content);
   }
 }
 
