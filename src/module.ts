@@ -41,13 +41,13 @@ export class Module {
         filename: pathToFileURL(realFilePath).href,
       });
 
-      const require = (toPath: string) => this.#require(toPath, this.filepath);
+      const require = (path: string) => this.#require(path);
       this.#fn = () => fn(require, this.#exports, this.filepath);
     }
     this.#fn();
   }
 
-  #require(toPath: string, fromPath: string) {
+  #require(toPath: string) {
     if (!toPath.match(/^[./]/)) {
       const requirePaths = [
         path.join(process.cwd(), 'node_modules'),
@@ -58,17 +58,17 @@ export class Module {
       return require(reqPath);
     }
 
-    const absPath = path.resolve(path.dirname(fromPath), toPath);
+    const absPath = path.resolve(path.dirname(this.filepath), toPath);
 
     const module = this.runtime.files.get(absPath)?.module;
     if (module) {
-      this.runtime.addDeps(fromPath, module.filepath);
+      this.runtime.addDeps(this.filepath, module.filepath);
       return module.require();
     }
 
     if (toPath.endsWith('/')) {
       const dirPath = absPath.endsWith('/') ? absPath : absPath + '/';
-      this.runtime.addDeps(fromPath, dirPath);
+      this.runtime.addDeps(this.filepath, dirPath);
       const files = [...this.runtime.files.values()]
         .filter(file => file.path.startsWith((dirPath)));
       return files;
