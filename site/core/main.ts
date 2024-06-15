@@ -14,18 +14,23 @@ const ARRAY_FILE_REGEX = /\[.+\]/;
 for (const { path, content } of files) {
   if (!isDev && path.startsWith('/admin/')) continue;
 
-  if (path.includes('.html') || path.includes('.xml') || path.includes('.json')) {
+  let match;
+  if (match = path.match(/\.(.+)\.js$/)) {
+    const ext = match[1]!;
+
     const filepath = path.slice(0, -3);
     const exported = require(path).default;
+
+    const process = ext === 'html' ? hoist : null;
 
     if (path.match(ARRAY_FILE_REGEX)) {
       for (const [slug, jsx] of exported) {
         const filename = filepath.replace(ARRAY_FILE_REGEX, slug);
-        outfiles.set(filename, hoist(jsx));
+        outfiles.set(filename, process ? process(jsx) : jsx);
       }
     }
     else {
-      outfiles.set(filepath, hoist(exported));
+      outfiles.set(filepath, process ? process(exported) : exported);
     }
   }
   else if (!path.endsWith('.md')) {
