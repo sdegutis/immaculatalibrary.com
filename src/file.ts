@@ -40,7 +40,7 @@ export function compileTSX(code: string, realFilePath?: string) {
     result.code = result.code.replace(/"\/core\/jsx-runtime"/g, `"/core/jsx-transform-node.js"`);
   }
   else {
-    result.code = result.code.replace(/"\/core\/jsx-runtime"/g, `"/core/jsx-transform-browser.js"`);
+    result.code = result.code.replace(/"\/core\/jsx-runtime"/g, `"/core/$jsx-transform-browser.js"`);
   }
   return result;
 }
