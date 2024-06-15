@@ -4,10 +4,7 @@ export function LatestSnippetsArea() {
   return <>
     <div id='latest-book-snippets-area'>
       <p>
-        <LoadingLine width="14em" />
-      </p>
-      <p>
-        <LoadingLine width="18em" />
+        <LoadingLine width="24em" />
       </p>
       <ul>
         <li><LoadingParagraph lines={2} /></li>
