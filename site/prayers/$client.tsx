@@ -1,3 +1,5 @@
+import { LeftArrow, RightArrow } from "../scripts/$arrows.js";
+
 const today = new Date().getDay();
 
 for (const [i, day] of Object.entries(document.querySelectorAll<HTMLElement>('.show-today'))) {
@@ -180,15 +182,15 @@ for (const slideshow of document.querySelectorAll<HTMLDivElement>('.slideshow'))
   while (firstPanel.prev) firstPanel = firstPanel.prev;
 
   for (let panel: Panel = firstPanel; panel; panel = panel.next!) {
-    if (panel.prev) panel.panelDiv.append(<PageChanger to={panel.prev} side='left '>&lsaquo;</PageChanger>);
-    if (panel.next) panel.panelDiv.append(<PageChanger to={panel.next} side='right'>&rsaquo;</PageChanger>);
+    if (panel.prev) panel.panelDiv.append(<PageChanger to={panel.prev} side='left' ><LeftArrow /></PageChanger>);
+    if (panel.next) panel.panelDiv.append(<PageChanger to={panel.next} side='right'><RightArrow /></PageChanger>);
   }
 
   const tab: Tab = new Tab(firstPanel, tabButtons.shift()!);
   tabs.push(tab);
 }
 
-function PageChanger(attrs: { to: Panel, side: 'left ' | 'right' }, children: any) {
+function PageChanger(attrs: { to: Panel, side: 'left' | 'right' }, children: any) {
   const button = (
     <button class='page-changer' style={`${attrs.side}: 0`}>
       {children}
