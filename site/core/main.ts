@@ -11,26 +11,31 @@ files.push(sitemap);
 
 const ARRAY_FILE_REGEX = /\[.+\]/;
 
+const extFns = {
+  html: hoist,
+  json: JSON.stringify,
+  xml: (s: string) => s,
+};
+
 for (const { path, content } of files) {
   if (!isDev && path.startsWith('/admin/')) continue;
 
   let match;
   if (match = path.match(/\.(.+)\.js$/)) {
-    const ext = match[1]!;
+    const ext = match[1] as keyof typeof extFns;
+    const process = extFns[ext];
 
     const filepath = path.slice(0, -3);
     const exported = require(path).default;
 
-    const process = ext === 'html' ? hoist : null;
-
     if (path.match(ARRAY_FILE_REGEX)) {
       for (const [slug, jsx] of exported) {
         const filename = filepath.replace(ARRAY_FILE_REGEX, slug);
-        outfiles.set(filename, process ? process(jsx) : jsx);
+        outfiles.set(filename, process(jsx));
       }
     }
     else {
-      outfiles.set(filepath, process ? process(exported) : exported);
+      outfiles.set(filepath, process(exported));
     }
   }
   else if (!path.endsWith('.md')) {

@@ -17,6 +17,4 @@ function snippetToJson(snippet: Snippet) {
   };
 }
 
-export default <>
-  {JSON.stringify(allSnippets.map(snippetToJson))}
-</>;
+export default allSnippets.map(snippetToJson);

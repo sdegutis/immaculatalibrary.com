@@ -20,6 +20,4 @@ function snippetToJson(snippet: Snippet) {
 
 export type SnippetJson = ReturnType<typeof snippetToJson>;
 
-export default allSnippets.map(snippet => [snippet.slug, <>
-  {JSON.stringify(snippetToJson(snippet))}
-</>]);
+export default allSnippets.map(snippet => [snippet.slug, snippetToJson(snippet)]);
