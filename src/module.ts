@@ -37,7 +37,7 @@ export class Module {
 
       this.content = sourceCode + sourceMap;
 
-      const fn = vm.compileFunction(sourceCode, ['require', 'exports', '__filename'], {
+      const fn = vm.compileFunction(this.content, ['require', 'exports', '__filename'], {
         filename: pathToFileURL(realFilePath).href,
       });
 
