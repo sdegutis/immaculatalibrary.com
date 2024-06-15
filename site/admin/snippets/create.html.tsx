@@ -26,7 +26,7 @@ handlers.set(__filename, body => {
 export default <>
   <EmptyPage>
     <link rel='stylesheet' href='./new-book-snippet.css' />
-    <script src='./new-book-snippet.js' type='module'></script>
+    <script src='./$new-book-snippet.js' type='module'></script>
 
     <main>
       <div id='left-panel'>

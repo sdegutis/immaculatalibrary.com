@@ -38,8 +38,16 @@ for (const { path, content } of files) {
       outfiles.set(filepath, process(exported));
     }
   }
-  else if (!path.endsWith('.md')) {
-    outfiles.set(path, content);
+  else {
+    if (path.endsWith('.md')) {
+      // skip
+    }
+    else if (path.endsWith('.js') && !path.includes('$')) {
+      // skip
+    }
+    else {
+      outfiles.set(path, content);
+    }
   }
 }
 

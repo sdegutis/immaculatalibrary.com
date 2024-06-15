@@ -44,7 +44,7 @@ function Html(attrs: any, children: any) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>imlib</title>
         <link href='./style.css' rel='stylesheet' />
-        <script src='./client.js' type='module' />
+        <script src='./$client.js' type='module' />
       </head>
       <body>
         <Font use={martel} fallback="serif">

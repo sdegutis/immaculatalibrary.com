@@ -1,12 +1,12 @@
 import { Column, Spaced, SplitColumn } from './components/column.js';
 import { TypicalPage } from './components/page.js';
 import { PaginatorLoading } from './components/paginator.js';
-import { LoadingLine, LoadingParagraph } from './shared/loading.js';
+import { LoadingLine, LoadingParagraph } from './shared/$loading.js';
 
 export default <>
   <TypicalPage title='Books' image='/img/categories/reference-big.jpg' page='Books'>
 
-    <script src='/scripts/tabs.js' type='module'></script>
+    <script src='/scripts/$tabs.js' type='module'></script>
     <link rel="stylesheet" href='/css/components/tabs.css' />
 
     <div id='tabs-container'>
@@ -27,7 +27,7 @@ export default <>
 
               <div>
 
-                <script src='/scripts/books-page.js' type='module'></script>
+                <script src='/scripts/$books-page.js' type='module'></script>
                 <link rel="stylesheet" href='/css/page/books.css' />
 
                 <h2>Find Books</h2>
@@ -77,7 +77,7 @@ export default <>
 
               <div>
 
-                <script type='module' src='/scripts/snippets-page.js' />
+                <script type='module' src='/scripts/$snippets-page.js' />
                 <link rel="stylesheet" href='/css/page/snippets.css' />
 
                 <h2>Find Book Snippets</h2>

@@ -6,7 +6,7 @@ import { handlers } from "../core/handlers.js";
 import { isDev } from "../core/helpers.js";
 import { Snippet, allSnippets } from "../model/snippets.js";
 import { allTags } from "../model/tag.js";
-import { formatDate } from '../shared/format-date.js';
+import { formatDate } from '../shared/$format-date.js';
 
 handlers.set('/add-tags-to-snippet', body => {
   const params = new URLSearchParams(body);

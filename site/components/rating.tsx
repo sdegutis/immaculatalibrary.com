@@ -1,4 +1,4 @@
-import { RatingStar } from "../shared/rating.js";
+import { RatingStar } from "../shared/$rating.js";
 
 export const Rating: JSX.Component<{ n: number }> = ({ n }) => (n > 0) ? <>
   <RatingStar lit={n >= 1} /> { }

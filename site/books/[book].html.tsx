@@ -5,8 +5,8 @@ import { Rating } from "../components/rating.js";
 import { Typography } from "../components/typography.js";
 import { isDev, markdown } from "../core/helpers.js";
 import { allBooks } from "../model/books.js";
-import { formatDate } from "../shared/format-date.js";
-import { LoadingLine, LoadingParagraph } from "../shared/loading.js";
+import { formatDate } from "../shared/$format-date.js";
+import { LoadingLine, LoadingParagraph } from "../shared/$loading.js";
 
 export default allBooks.map(book => [book.slug, <>
   <TypicalPage title="Books" image={book.imageBig} page="Books">
@@ -93,7 +93,7 @@ export default allBooks.map(book => [book.slug, <>
         </div>
 
         <div>
-          <script type='module' src='/scripts/book-page.js' />
+          <script type='module' src='/scripts/$book-page.js' />
           <h3>Snippets from this book</h3>
           <div id='snippets-in-book' data-book={book.slug}>
             <p><LoadingLine width="7em" /></p>

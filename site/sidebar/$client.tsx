@@ -1,5 +1,5 @@
-import { BlessedSacrament } from "./blessedsacrament.js";
-import { TimeArea } from "./time.js";
+import { BlessedSacrament } from "./$blessedsacrament.js";
+import { TimeArea } from "./$time.js";
 
 document.getElementById('root')!.append(<>
   <div id="top">

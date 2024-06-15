@@ -1,10 +1,10 @@
 import { allArticles } from "../model/articles.js";
-import { formatDate } from "../shared/format-date.js";
-import { LoadingParagraph } from "../shared/loading.js";
+import { formatDate } from "../shared/$format-date.js";
+import { LoadingParagraph } from "../shared/$loading.js";
 import { PaginatorLoading } from "./paginator.js";
 
 export const ArticlesList = () => <>
-  <script type='module' src='/scripts/paginate.js' />
+  <script type='module' src='/scripts/$paginate.js' />
   <div>
     <h2>All Articles</h2>
     <div data-paginate='7'>

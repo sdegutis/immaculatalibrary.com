@@ -1,6 +1,6 @@
 import MarkdownIt from "https://cdn.jsdelivr.net/npm/markdown-it@13.0.2/+esm";
-import { makePaginator } from "./paginator.js";
-import { Reactive, reactTo } from "./reactive.js";
+import { makePaginator } from "./$paginator.js";
+import { Reactive, reactTo } from "./$reactive.js";
 
 export interface SearchFilter<T> {
   source: Reactive<any>;

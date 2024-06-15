@@ -1,4 +1,4 @@
-import { LoadingLine, LoadingParagraph } from "../shared/loading.js";
+import { LoadingLine, LoadingParagraph } from "../shared/$loading.js";
 
 export function LatestSnippetsArea() {
   return <>
@@ -19,6 +19,6 @@ export function LatestSnippetsArea() {
         <li><LoadingParagraph lines={2} /></li>
       </ul>
     </div>
-    <script type='module' src='/scripts/latest-book-snippets.js' />
+    <script type='module' src='/scripts/$latest-book-snippets.js' />
   </>;
 }

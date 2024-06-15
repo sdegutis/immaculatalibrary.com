@@ -1,8 +1,8 @@
 import { Typography } from "../components/typography.js";
 import { SnippetJson } from "./data/snippets.json.js";
-import { Reactive } from "./reactive.js";
-import { createSearch, findWithinMarkdown, highlight } from "./searchlist.js";
-import { randomElement, sleep } from "./util.js";
+import { Reactive } from "./$reactive.js";
+import { createSearch, findWithinMarkdown, highlight } from "./$searchlist.js";
+import { randomElement, sleep } from "./$util.js";
 
 const snippetsFetch = fetch('/scripts/data/snippets.json').then<SnippetJson[]>(res => res.json());
 await sleep(0.3);

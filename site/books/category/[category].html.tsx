@@ -5,7 +5,7 @@ import { Rating } from "../../components/rating.js";
 import { Typography } from "../../components/typography.js";
 import { markdown } from "../../core/helpers.js";
 import { allCategories } from "../../model/categories.js";
-import { LoadingParagraph } from "../../shared/loading.js";
+import { LoadingParagraph } from "../../shared/$loading.js";
 
 export default allCategories.map(cat => [cat.slug, <>
   <TypicalPage title="Book Categories" image={`/img/categories/${cat.slug}-big.jpg`} page="Books">
@@ -24,7 +24,7 @@ export default allCategories.map(cat => [cat.slug, <>
     <Spaced>
       <SplitColumn>
 
-        <script type='module' src='/scripts/paginate.js' />
+        <script type='module' src='/scripts/$paginate.js' />
 
         <section>
           <h2>Books</h2>

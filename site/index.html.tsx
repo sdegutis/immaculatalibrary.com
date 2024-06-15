@@ -9,7 +9,7 @@ import { Typography } from "./components/typography.js";
 import { allArticles } from "./model/articles.js";
 import { allBooks } from "./model/books.js";
 import { featuredBooks } from "./model/featured.js";
-import { HomeLoading } from "./shared/loading.js";
+import { HomeLoading } from "./shared/$loading.js";
 
 export default <>
   <EmptyPage>
@@ -59,7 +59,7 @@ export default <>
                 </div>
               </Typography>
             </div>
-            <script type='module' src='/scripts/home.js' />
+            <script type='module' src='/scripts/$home.js' />
           </FadeIn>
 
           <div>
