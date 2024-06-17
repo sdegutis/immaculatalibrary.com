@@ -17,7 +17,7 @@ export function createSearch<T>({ data, searchTerm, viewForItem, filters, sorter
   searchTerm: Reactive<string>,
   viewForItem: (item: T, search?: string) => JSX.Element;
   filters: SearchFilter<T>[];
-  sorter: SearchSorter<T>;
+  sorter?: SearchSorter<T>;
   perPage?: number,
 }) {
   const matchingItems = new Reactive<T[]>([]);
@@ -49,7 +49,8 @@ export function createSearch<T>({ data, searchTerm, viewForItem, filters, sorter
 
   const updateMatchingItems = () => {
     const newData = data.filter(item => filters.every(filter => filter.matches(item)));
-    matchingItems.set(newData.toSorted(sorter.sortBy));
+    if (sorter) newData.sort(sorter.sortBy);
+    matchingItems.set(newData);
   };
 
   paginator.page.onChange(updateMatchingItems);
@@ -61,7 +62,7 @@ export function createSearch<T>({ data, searchTerm, viewForItem, filters, sorter
     });
   }
 
-  sorter.source.onChange(() => {
+  sorter?.source.onChange(() => {
     paginator.page.set(0);
     updateMatchingItems();
   });
