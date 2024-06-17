@@ -13,6 +13,7 @@ const books = await booksFetch;
 
 const allCategories = [...new Set(books.flatMap(book => book.categories))].sort();
 
+const sortBooksSource = new Reactive<'last' | 'first'>('last');
 const snippetsFilterSource = new Reactive('both');
 const starsFilterSource = new Reactive('any');
 const searchTerm = new Reactive('');
@@ -22,6 +23,16 @@ const currentCategory = new Reactive('_any');
 const { results, matchingItems } = createSearch({
   data: books,
   searchTerm,
+  sorter: {
+    source: sortBooksSource,
+    sortBy: (a, b) => {
+      const dir = sortBooksSource.val === 'first' ? 1 : -1;
+
+      if (a.dateAdded < b.dateAdded) return -dir;
+      if (a.dateAdded > b.dateAdded) return dir;
+      return 0;
+    },
+  },
   filters: [
     {
       source: currentCategory,
@@ -58,9 +69,9 @@ const { results, matchingItems } = createSearch({
     const matchedBody = findWithinMarkdown(book.description, search);
     return (
       <li>
-        <p>
+        <p title={`Added ${book.dateAdded}`}>
           <a href={book.route}>{highlight(book.title, search)}</a><br />
-          {highlight(book.author, search)}
+          {highlight(book.author, search)}<br />
         </p>
         {matchedBody &&
           <Typography style='font-size:smaller' deindent>
@@ -98,6 +109,7 @@ dynamicArea.querySelector('.filters-container')!.replaceChildren(<>
     }} />
   </p>
   <div class='books-filters'>
+
     <span class='label'>snippets</span>
     <span>
       <label><input type='radio' name='has-snippets' onclick={() => snippetsFilterSource.set('both')} checked />Any</label>
@@ -133,6 +145,12 @@ dynamicArea.querySelector('.filters-container')!.replaceChildren(<>
         <option value={cat} selected={currentCategory.val === cat}>{cat}</option>
       )}
     </select>
+
+    <span class='label'>sort by</span>
+    <span>
+      <label><input type='radio' name='sort-books' onclick={() => sortBooksSource.set('last')} checked />Added latest</label>
+      <label><input type='radio' name='sort-books' onclick={() => sortBooksSource.set('first')} />Added earliest</label>
+    </span>
 
   </div>
   <hr />

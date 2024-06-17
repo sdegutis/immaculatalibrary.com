@@ -8,6 +8,7 @@ function bookToJson(book: Book) {
     title: book.data.title,
     author: book.data.author,
     description: book.content,
+    dateAdded: book.data.dateAdded,
     categories: book.categories.map(cat => cat.data.title),
   };
 }

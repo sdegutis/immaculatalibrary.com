@@ -33,11 +33,13 @@ export default <>
                 <h2>Find Books</h2>
                 <div class='filters-container'>
                   <LoadingLine width="100%" height='2.4em' />
-                  <div id='books-filters'>
+                  <div class='books-filters'>
                     <LoadingLine width="4em" />
                     <LoadingLine width="9em" />
                     <LoadingLine width="2em" />
                     <LoadingLine width="14em" />
+                    <LoadingLine width="4em" />
+                    <LoadingLine width="100%" height='2em' />
                     <LoadingLine width="4em" />
                     <LoadingLine width="100%" height='2em' />
                   </div>

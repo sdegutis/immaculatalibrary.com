@@ -7,11 +7,17 @@ export interface SearchFilter<T> {
   matches: (data: T) => boolean,
 }
 
-export function createSearch<T>({ data, searchTerm, viewForItem, filters, perPage = 7 }: {
+export interface SearchSorter<T> {
+  source: Reactive<any>;
+  sortBy: (a: T, b: T) => number,
+}
+
+export function createSearch<T>({ data, searchTerm, viewForItem, filters, sorter, perPage = 7 }: {
   data: T[];
   searchTerm: Reactive<string>,
   viewForItem: (item: T, search?: string) => JSX.Element;
   filters: SearchFilter<T>[];
+  sorter: SearchSorter<T>;
   perPage?: number,
 }) {
   const matchingItems = new Reactive<T[]>([]);
@@ -42,7 +48,8 @@ export function createSearch<T>({ data, searchTerm, viewForItem, filters, perPag
   });
 
   const updateMatchingItems = () => {
-    matchingItems.set(data.filter(item => filters.every(filter => filter.matches(item))));
+    const newData = data.filter(item => filters.every(filter => filter.matches(item)));
+    matchingItems.set(newData.toSorted(sorter.sortBy));
   };
 
   paginator.page.onChange(updateMatchingItems);
@@ -53,6 +60,11 @@ export function createSearch<T>({ data, searchTerm, viewForItem, filters, perPag
       updateMatchingItems();
     });
   }
+
+  sorter.source.onChange(() => {
+    paginator.page.set(0);
+    updateMatchingItems();
+  });
 
   const results = <>
     <link rel='stylesheet' href='/css/components/searchlist.css' />
