@@ -34,8 +34,8 @@ export default <>
                     <li>
                       <p style='padding-left:2em'>&mdash; St. Francis de Sales</p>
                       <p>
-                        <a href="/books/introduction-to-the-devout-life.html">Introduction to the Devout Life</a>, { }
-                        <a rel="noopener" href="/snippets/2021-06-26-how-we-should-do-holy-reading.html">page 77</a>
+                        From <a href="/books/introduction-to-the-devout-life.html">Introduction to the Devout Life</a>, { }
+                        on <a rel="noopener" href="/snippets/2021-06-26-how-we-should-do-holy-reading.html">page 77</a>
                       </p>
                     </li>
                   </ul>

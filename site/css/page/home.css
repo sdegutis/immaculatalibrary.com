@@ -31,11 +31,6 @@
   background-color: var(--bgalt);
 }
 
-#letters-from-heaven .typography a {
-  color: inherit;
-  text-decoration: underline;
-}
-
 #letters-from-heaven .typography blockquote {
   border: none;
   padding: 0;
