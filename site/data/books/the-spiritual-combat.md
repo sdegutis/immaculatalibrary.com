@@ -8,7 +8,7 @@ score: 110
 rating: 5
 frontpage:
   image: apologetics
-  why: Practical guide to the temptations we will face by trying to live a devout life and how to overcome them, with practical theology about the nature of sin, temptation, grace, and virtue.
+  why: Guide through daily spiritual warfare
 files:
   - archiveId: 'the-spiritual-combat-dornin-edition'
     pdfFile: 'The Spiritual Combat (Dornin edition).pdf'

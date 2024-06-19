@@ -8,7 +8,7 @@ score: 100
 rating: 0
 frontpage:
   image: classics
-  why: Commentary of the Church Fathers on the four Gospels, compiled and weaved together seamlessly by St. Thomas Aquinas and translated into English by St. John Henry Newman.
+  why: Church Fathers on every verse of the Gospels
 files:
   - archiveId: 'catenaaureacomme04thom'
     pdfFile: 'Catena Aurea - John.pdf'

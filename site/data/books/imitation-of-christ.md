@@ -8,7 +8,7 @@ score: 120
 rating: 5
 frontpage:
   image: devotion
-  why: One of the most popular and widely acclaimed books in all of Christian history, the Imitation of Christ is densely packed with devotional material for reflection and prayer.
+  why: Devotional in the style of a continuous prayer
 files:
   - archiveId: 'followingofchris00thom'
     pdfFile: 'Imitation of Christ.pdf'

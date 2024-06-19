@@ -14,25 +14,25 @@ export const QuickLinks: JSX.Component = (attrs, children) => {
       <FadeIn>
         <Column>
           <h2>Featured Books</h2>
-        </Column>
-        <div id='featured-books-area'>
-          <div id='featured-books-container'>
+          <div id='featured-books-area'>
+            <div id='featured-books-container'>
 
-            <ul id='featured-books'>
-              {featuredBooks.map(book => {
-                const imageUrl = categoriesBySlug[book.data.frontpage!.image]!.imageBig;
-                return <>
-                  <li class='featured-book'>
-                    <div class='thumb' style={`background-image: url(${imageUrl})`} />
-                    <h3><a href={book.route}>{book.data.title}</a></h3>
-                    <Typography><p>{book.data.frontpage!.why}</p></Typography>
-                  </li>
-                </>;
-              })}
-            </ul>
+              <ul id='featured-books'>
+                {featuredBooks.map(book => {
+                  const imageUrl = categoriesBySlug[book.data.frontpage!.image]!.imageBig;
+                  return <>
+                    <li class='featured-book'>
+                      <div class='thumb' style={`background-image: url(${imageUrl})`} />
+                      <h3><a href={book.route}>{book.data.title}</a></h3>
+                      <Typography><p>{book.data.frontpage!.why}</p></Typography>
+                    </li>
+                  </>;
+                })}
+              </ul>
 
+            </div>
           </div>
-        </div>
+        </Column>
       </FadeIn>
 
     </div>
