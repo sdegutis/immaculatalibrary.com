@@ -149,13 +149,13 @@ input:not(:read-write) {
 .tab-links a {
   border-bottom: 2px solid transparent;
   color: inherit;
+  text-decoration: none;
 }
 
 .tab-links a.active {
   border-bottom-color: var(--blue-bg);
 }
 
-.tab-links a:hover {
-  border-bottom-color: var(--blue-bg);
-  text-decoration: none;
+.tab-links a:not(.active):hover {
+  border-bottom-color: currentColor;
 }

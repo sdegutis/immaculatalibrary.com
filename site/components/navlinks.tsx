@@ -4,26 +4,8 @@ import { Column } from "./column.js";
 
 const css = /*css*/`
   #ID {
-    display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 1em;
     margin: 2em 0;
-  }
-
-  #ID a {
-    text-decoration: none;
-    border: none;
-    border-bottom: 2px solid transparent;
-    color: inherit;
-  }
-
-  #ID a.active {
-    border-color: var(--blue-bg);
-  }
-
-  #ID a:hover:not(.active) {
-    border-color: currentColor;
   }
 `;
 
@@ -48,7 +30,7 @@ export const Navlinks = (attrs: { page: NavPage }) => {
   return <>
     <Column>
       <link rel="stylesheet" href={cssPath} />
-      <div id={cssId}>
+      <div id={cssId} class='tab-links'>
         {Object.entries(links).map(([name, link]) => (
           <a href={link.href} class={attrs.page === name ? 'active' : ''}>{link.title}</a>
         )).join(' ')}
