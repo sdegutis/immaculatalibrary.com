@@ -1,4 +1,4 @@
-import { allCategories, categoriesBySlug } from '../model/categories.js';
+import { allCategories } from '../model/categories.js';
 import { featuredBooks } from '../model/featured.js';
 import { allMovies } from '../model/movies.js';
 import { Typography } from './$typography.js';
@@ -9,29 +9,21 @@ export const QuickLinks: JSX.Component = (attrs, children) => {
   return <>
     <link rel="stylesheet" href='/css/components/quicklinks.css' />
 
-    <div class="recents alt">
+    <div id='featured-books-area'>
 
       <FadeIn>
         <Column>
           <h2>Featured Books</h2>
-          <div id='featured-books-area'>
-            <div id='featured-books-container'>
 
-              <ul id='featured-books'>
-                {featuredBooks.map(book => {
-                  const imageUrl = categoriesBySlug[book.data.frontpage!.image]!.imageBig;
-                  return <>
-                    <li class='featured-book'>
-                      <div class='thumb' style={`background-image: url(${imageUrl})`} />
-                      <h3><a href={book.route}>{book.data.title}</a></h3>
-                      <Typography><p>{book.data.frontpage!.why}</p></Typography>
-                    </li>
-                  </>;
-                })}
-              </ul>
+          <ul>
+            {featuredBooks.map(book => <>
+              <li>
+                <h3><a href={book.route}>{book.data.title}</a></h3>
+                {book.data.frontpage!.why}
+              </li>
+            </>)}
+          </ul>
 
-            </div>
-          </div>
         </Column>
       </FadeIn>
 
