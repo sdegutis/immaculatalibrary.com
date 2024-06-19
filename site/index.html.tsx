@@ -3,10 +3,10 @@ import { Typography } from "./components/$typography.js";
 import { CenteredColumn, Spaced, SplitColumn } from "./components/column.js";
 import { FadeIn } from "./components/fadein.js";
 import { LatestSnippetsArea } from "./components/latest-snippets.js";
-import { Navlinks } from "./components/navlinks.js";
 import { EmptyPage } from "./components/page.js";
 import { QuickLinks } from "./components/quicklinks.js";
 import { SiteFooter } from "./components/site-footer.js";
+import { SiteHeader } from "./components/site-header.js";
 import { allArticles } from "./model/articles.js";
 import { allBooks } from "./model/books.js";
 import { featuredBooks } from "./model/featured.js";
@@ -14,37 +14,30 @@ import { featuredBooks } from "./model/featured.js";
 export default <>
   <EmptyPage>
 
-    <link rel="stylesheet" href="/css/page/home.css" />
-
     <main>
 
-      <div id="letters-from-heaven">
+      <SiteHeader page="Home" image="/img/page/home.jpg" title={
         <Spaced>
-          <Navlinks page="Home" />
           <CenteredColumn>
             <Typography>
               <FadeIn>
-                <h1>Immaculata Library</h1>
-                <blockquote>
+                <h1 style='text-align:left'>Immaculata Library</h1>
+                <blockquote style='border:none; padding:0'>
                   <p>
                     “Have always at hand some approved book of devotion, and read a little of them every day with as much devotion as if you
                     were reading a letter which those saints had sent you from heaven to show you the way to it, and encourage you to come.”
                   </p>
-                  <ul>
-                    <li>
-                      <p style='padding-left:2em'>&mdash; St. Francis de Sales</p>
-                      <p>
-                        From <a href="/books/introduction-to-the-devout-life.html">Introduction to the Devout Life</a>, { }
-                        on <a rel="noopener" href="/snippets/2021-06-26-how-we-should-do-holy-reading.html">page 77</a>
-                      </p>
-                    </li>
-                  </ul>
+                  <p style='margin-left:4em'>&mdash; St. Francis de Sales</p>
+                  <p style='margin-left:2em'>
+                    From <a href="/books/introduction-to-the-devout-life.html">Introduction to the Devout Life</a>
+                    , on <a rel="noopener" href="/snippets/2021-06-26-how-we-should-do-holy-reading.html">page 77</a>
+                  </p>
                 </blockquote>
               </FadeIn>
             </Typography>
           </CenteredColumn>
-        </Spaced>
-      </div>
+        </Spaced> as string
+      } />
 
       <Spaced>
         <SplitColumn>
