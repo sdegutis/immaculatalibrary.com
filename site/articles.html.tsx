@@ -10,13 +10,8 @@ export default <>
       <SplitColumn>
 
         <Typography>
-          <h2>About the Articles</h2>
-          <p>
-            Most of these articles were written to my children
-            during a time in which they were unlawfully kept from me,
-            and this site was the only means which I had of
-            communicating to them any of my thoughts or heart.
-          </p>
+          <h2>Articles of Immaculata Library</h2>
+          <p>This is where I have rambled a lot.</p>
         </Typography>
 
         <ArticlesList />
