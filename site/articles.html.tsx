@@ -14,7 +14,7 @@ export default <>
           <h2>Articles of Immaculata Library</h2>
           <p>This is where I have rambled a lot.</p>
           {isDev && <>
-            <p><a href='/admin/articles/new.html'>New article</a></p>
+            <p><a href='/admin/articles/new-article.html'>New article</a></p>
           </>}
         </Typography>
 
