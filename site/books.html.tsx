@@ -3,17 +3,16 @@ import { Spaced, SplitColumn } from './components/column.js';
 import { TypicalPage } from './components/page.js';
 import { PaginatorLoading } from './components/paginator.js';
 
-export const Tabs: JSX.Component<{ index: number }> = (attrs) => <>
-  <h1>Books & Book Snippets</h1>
-  <div class='tab-links'>
+export const Tabs: JSX.Component<{ index: number }> = (attrs) => (
+  <h1 class='tab-links'>
     {[
       { href: '/books.html', title: 'Books' },
-      { href: '/snippets.html', title: 'Snippets' },
+      { href: '/snippets.html', title: 'Book Snippets' },
     ].map((link, i) =>
-      <a href={link.href} class={i === attrs.index ? 'active' : ''}>Search {link.title}</a>
+      <a href={link.href} class={i === attrs.index ? 'active' : ''}>{link.title}</a>
     )}
-  </div>
-</>;
+  </h1>
+);
 
 export default <>
   <TypicalPage title={<Tabs index={0} /> as string} image='/img/categories/reference-big.jpg' page='Books'>
