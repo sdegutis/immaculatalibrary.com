@@ -1,4 +1,5 @@
 import { Typography } from "../components/$typography.js";
+import { Admin } from "../components/admin.js";
 import { Spaced, SplitColumn } from "../components/column.js";
 import { LatestSnippetsArea } from "../components/latest-snippets.js";
 import { TypicalPage } from "../components/page.js";
@@ -6,7 +7,6 @@ import { handlers } from "../core/exports.js";
 import { Snippet, allSnippets } from "../model/snippets.js";
 import { allTags } from "../model/tag.js";
 import { formatDate } from '../util/$format-date.js';
-import { isDev } from "../util/helpers.js";
 
 handlers.set('/add-tags-to-snippet', body => {
   const params = new URLSearchParams(body);
@@ -44,8 +44,8 @@ export default allSnippets.map(snippet => {
             <h2>{snippet.renderedTitle}</h2>
             <p>{snippet.mins} min &bull; Digitized on {formatDate(snippet.date)}</p>
 
-            {isDev && <>
-              <div style="border: 1px solid var(--admin-border-color); background-color: var(--admin-bg-color); padding: 1em;">
+            <Admin>
+              <div>
                 <ul>
                   <li><a href={`/admin/snippets/create.html?snippet=${snippet.slug}`}>Make next snippet</a></li>
                   <li><a href={`/admin/fathers/document.html?snippet=${snippet.slug}`}>Add Fathers quotes</a></li>
@@ -73,7 +73,7 @@ export default allSnippets.map(snippet => {
                   </form>
                 </details>
               </div>
-            </>}
+            </Admin>
 
             <p>
               {snippet.tags.map(tag => <>

@@ -138,6 +138,14 @@ input:not(:read-write) {
   }
 }
 
+/* Admin */
+
+.admin {
+  border: 1px solid var(--admin-border-color);
+  background-color: var(--admin-bg-color);
+  padding: 0 1em;
+}
+
 /* Tabs */
 
 .tab-links {

@@ -1,12 +1,13 @@
 import { LoadingLine, LoadingParagraph } from "../components/$loading.js";
 import { Typography } from "../components/$typography.js";
+import { Admin } from "../components/admin.js";
 import { Spaced, SplitColumn } from "../components/column.js";
 import { TypicalPage } from "../components/page.js";
 import { PaginatorLoading } from "../components/paginator.js";
 import { Rating } from "../components/rating.js";
 import { allBooks } from "../model/books.js";
 import { formatDate } from "../util/$format-date.js";
-import { isDev, markdown } from "../util/helpers.js";
+import { markdown } from "../util/helpers.js";
 
 export default allBooks.map(book => [book.slug, <>
   <TypicalPage title="Books" image={book.imageBig} page="Books">
@@ -45,14 +46,9 @@ export default allBooks.map(book => [book.slug, <>
                   { } &bull; { }
                   <a href={`https://archive.org/details/${file.archiveId}?view=theater`} target="_blank">Read Scans</a>
                 </>}
-
-                {isDev && <>
-                  { } &bull; { }
-                  <span style="border: 1px solid var(--admin-border-color); background-color: var(--admin-bg-color); padding: 0.25em">
-                    <a href={`/admin/snippets/create.html?book=${book.slug}&scan=${file.archiveId}`}>Make snippet</a>
-                  </span>
-                </>}
-
+                <Admin tag="span">
+                  <a href={`/admin/snippets/create.html?book=${book.slug}&scan=${file.archiveId}`}>Make snippet</a>
+                </Admin>
               </p>
             </>)}
           </blockquote>
