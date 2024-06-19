@@ -159,7 +159,7 @@ for (const slideshow of document.querySelectorAll<HTMLDivElement>('.slideshow'))
       else if (e.key === ' ') {
         e.preventDefault();
         if (e.ctrlKey)
-          ease = sillyEase;
+          ease = ease === easeInOut ? sillyEase : easeInOut;
         else
           panel.nextLine();
       }
