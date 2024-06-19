@@ -33,7 +33,7 @@ export const QuickLinks: JSX.Component = (attrs, children) => {
       <Column>
 
         <FadeIn>
-          <h2>Books</h2>
+          <h2>Book Categories</h2>
           <ul class="quicklinks">
             {allCategories.map(cat => <li>
               <a class="link" href={cat.route} style={`background-image: url(${cat.imageSmall});`}>
