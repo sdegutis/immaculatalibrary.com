@@ -1,5 +1,5 @@
-import { Navlinks } from '../components/navlinks.js';
 import { EmptyPage } from '../components/page.js';
+import { SiteHeader } from '../components/site-header.js';
 import gloriousList from './rosary/glorious/';
 import joyfulList from './rosary/joyful/';
 import luminousList from './rosary/luminous/';
@@ -867,17 +867,19 @@ function Slideshow(attrs: any, children: any) {
 function Tabs(attrs: { tabs: Record<string, JSX.Element> }) {
   return <>
     <div id='tab-container'>
-      <div id='prayers-header'>
-        <Navlinks page='Prayers' />
-        <div id='tabs-names'>
-          {Object.keys(attrs.tabs).map((tabName, i) => (
-            <button>{tabName}</button>
+
+      <SiteHeader image='/img/page/home.jpg' page='Prayers' title={
+        <h1 id='tabs-names' class='tab-links'>
+          {Object.keys(attrs.tabs).map(title => (
+            <a href='#'>{title}</a>
           ))}
-        </div>
-      </div>
+        </h1> as string
+      } />
+
       <div id='tabs-bodies'>
         {Object.values(attrs.tabs)}
       </div>
+
     </div>
   </>;
 }

@@ -7,53 +7,7 @@
   flex-direction: column;
 }
 
-#prayers-header {
-  position: relative;
-
-  box-shadow: 0px 0px 7px 7px #0003;
-  z-index: 1;
-}
-
-#prayers-header::before {
-  position: absolute;
-  z-index: -1;
-  content: '';
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-
-  background-color: var(--bgalt);
-  background-image: url(/img/page/home.jpg);
-  background-size: cover;
-  background-position: -7em, center;
-  opacity: 0.42;
-}
-
-#tabs-names {
-  display: flex;
-  justify-content: center;
-  gap: 1em;
-  margin-bottom: 1em;
-  font-size: 150%;
-}
-
-#tabs-names button {
-  padding: 0;
-  outline: none;
-  border: none;
-  background: inherit;
-  font: inherit;
-  border-bottom: 2px solid transparent;
-}
-
-#tabs-names button.active {
-  border-color: var(--blue-bg);
-}
-
-#tabs-names button:hover:not(.active) {
-  border-color: #fff;
-}
+/* box-shadow: 0px 0px 7px 7px #0003; */
 
 #tabs-bodies {
   font-size: 2vh;
@@ -180,8 +134,7 @@ img {
   max-height: 100%;
 }
 
-h1,
-h2 {
+#tab-bodies :is(h1, h2) {
   color: var(--blue-bg);
   margin: 1em 0;
 }
