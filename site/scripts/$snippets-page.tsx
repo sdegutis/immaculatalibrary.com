@@ -1,15 +1,8 @@
 import { Typography } from "../components/$typography.js";
 import { Reactive } from "./$reactive.js";
 import { createSearch, findWithinMarkdown, highlight } from "./$searchlist.js";
-import { tabs } from "./$tabs.js";
 import { randomElement, sleep } from "./$util.js";
 import { SnippetJson } from "./data/snippets.json.js";
-
-if (window.location.search.includes('tab=snippets')) {
-  tabs[1]?.button.click();
-}
-
-const dynamicArea = document.getElementById('snippets-area') as HTMLDivElement;
 
 const snippetsFetch = fetch('/scripts/data/snippets.json').then<SnippetJson[]>(res => res.json());
 await sleep(.1);
@@ -75,10 +68,10 @@ const { results, matchingItems } = createSearch({
   },
 });
 
-dynamicArea.querySelector('.search-results')!.replaceChildren(results);
+document.querySelector('.search-results')!.replaceChildren(results);
 
 matchingItems.onChange(() => {
-  dynamicArea.querySelector('.search-count')!.textContent = matchingItems.val.length.toFixed();
+  document.querySelector('.search-count')!.textContent = matchingItems.val.length.toFixed();
 });
 
 const randomSnippetLink = <a href='#' onclick={function (this: HTMLAnchorElement, e: Event) {
@@ -94,7 +87,7 @@ matchingItems.onChange(() => {
   randomSnippetLink.toggleAttribute('disabled', matchingItems.val.length === 0);
 });
 
-dynamicArea.querySelector('.filters-container')!.replaceChildren(<>
+document.querySelector('.filters-container')!.replaceChildren(<>
   <p><input style='width: 100%' placeholder='Search' autofocus type="text" oninput={function (this: HTMLInputElement) {
     searchTerm.set(this.value.trim().toLowerCase());
   }} /></p>

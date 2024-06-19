@@ -10,7 +10,10 @@ export const SiteHeader: JSX.Component<{ title: string, image: string, page: Nav
     </div>
     <div style='text-align:center'>
       <section>
-        <h1>{attrs.title}</h1>
+        {attrs.title.includes('<h1')
+          ? attrs.title
+          : <h1>{attrs.title}</h1>
+        }
       </section>
     </div>
   </header>

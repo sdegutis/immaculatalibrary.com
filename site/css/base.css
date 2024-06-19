@@ -137,3 +137,25 @@ input:not(:read-write) {
     font-size: 16px;
   }
 }
+
+/* Tabs */
+
+.tab-links {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.tab-links a {
+  border-bottom: 2px solid transparent;
+  color: inherit;
+}
+
+.tab-links a.active {
+  border-bottom-color: var(--blue-bg);
+}
+
+.tab-links a:hover {
+  border-bottom-color: var(--blue-bg);
+  text-decoration: none;
+}

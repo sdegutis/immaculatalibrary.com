@@ -9,7 +9,7 @@ const latestSnippets = allSnippets.slice(0, 7);
 document.getElementById('latest-book-snippets-area')!.replaceChildren(<>
   <p>Read a <a href='#' onclick={function (this: HTMLAnchorElement) {
     this.href = randomElement(allSnippets).route;
-  }}>random snippet</a> or <a href='/books.html?tab=snippets'>recent digitized snippets</a>.</p>
+  }}>random snippet</a> or <a href='/snippets.html'>see all digitized snippets</a>.</p>
   <ul>
     {latestSnippets.map(snippet =>
       <li>
