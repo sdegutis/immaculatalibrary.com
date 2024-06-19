@@ -1,13 +1,14 @@
 import { Typography } from "../components/$typography.js";
 import { Spaced, SplitColumn } from "../components/column.js";
-import { MoviesList, VideosList } from "../components/movies-sidebar.js";
+import { VideosList } from "../components/movies-sidebar.js";
 import { TypicalPage } from "../components/page.js";
 import { allVideos } from "../model/videos.js";
+import { MovieTabs } from "../movies.html.js";
 import { markdown } from "../util/helpers.js";
 
 export default allVideos.map(video => {
   return [video.slug, <>
-    <TypicalPage page="Movies" title="Fulton Sheen Videos" image={`/img/categories/blessed-sacrament-big.jpg`}>
+    <TypicalPage page="Movies" title={<MovieTabs index={1} /> as string} image={`/img/categories/blessed-sacrament-big.jpg`}>
 
       <Spaced>
         <SplitColumn>
@@ -35,10 +36,7 @@ export default allVideos.map(video => {
 
           </Typography>
 
-          <div>
-            <VideosList />
-            <MoviesList />
-          </div>
+          <VideosList />
 
         </SplitColumn>
       </Spaced>

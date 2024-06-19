@@ -1,10 +1,11 @@
 import { Typography } from "./components/$typography.js";
 import { Spaced, SplitColumn } from "./components/column.js";
-import { MoviesList, VideosList } from "./components/movies-sidebar.js";
+import { VideosList } from "./components/movies-sidebar.js";
 import { TypicalPage } from "./components/page.js";
+import { MovieTabs } from "./movies.html.js";
 
 export default <>
-  <TypicalPage page="Movies" title="Movies" image='/img/movies/passion-of-the-christ-big.jpg'>
+  <TypicalPage page="Movies" title={<MovieTabs index={1} /> as string} image='/img/movies/passion-of-the-christ-big.jpg'>
 
     <Spaced>
       <SplitColumn>
@@ -19,10 +20,7 @@ export default <>
           </p>
         </Typography>
 
-        <div>
-          <VideosList />
-          <MoviesList />
-        </div>
+        <VideosList />
 
       </SplitColumn>
     </Spaced>

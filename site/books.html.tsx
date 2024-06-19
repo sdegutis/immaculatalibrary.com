@@ -2,20 +2,15 @@ import { LoadingLine, LoadingParagraph } from './components/$loading.js';
 import { Spaced, SplitColumn } from './components/column.js';
 import { TypicalPage } from './components/page.js';
 import { PaginatorLoading } from './components/paginator.js';
+import { makeTabs } from './components/tabs.js';
 
-export const Tabs: JSX.Component<{ index: number }> = (attrs) => (
-  <h1 class='tab-links'>
-    {[
-      { href: '/books.html', title: 'Books' },
-      { href: '/snippets.html', title: 'Book Snippets' },
-    ].map((link, i) =>
-      <a href={link.href} class={i === attrs.index ? 'active' : ''}>{link.title}</a>
-    )}
-  </h1>
-);
+export const BookTabs = makeTabs([
+  { href: '/books.html', title: 'Books' },
+  { href: '/snippets.html', title: 'Book Snippets' },
+]);
 
 export default <>
-  <TypicalPage title={<Tabs index={0} /> as string} image='/img/categories/reference-big.jpg' page='Books'>
+  <TypicalPage title={<BookTabs index={0} /> as string} image='/img/categories/reference-big.jpg' page='Books'>
 
     <Spaced>
       <SplitColumn>

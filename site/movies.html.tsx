@@ -1,10 +1,16 @@
 import { Typography } from "./components/$typography.js";
 import { Spaced, SplitColumn } from "./components/column.js";
-import { MoviesList, VideosList } from "./components/movies-sidebar.js";
+import { MoviesList } from "./components/movies-sidebar.js";
 import { TypicalPage } from "./components/page.js";
+import { makeTabs } from "./components/tabs.js";
+
+export const MovieTabs = makeTabs([
+  { href: '/movies.html', title: 'Catholic Movies' },
+  { href: '/videos.html', title: 'Fulton Sheen Videos' },
+]);
 
 export default <>
-  <TypicalPage title="Movies" image='/img/movies/passion-of-the-christ-big.jpg' page="Movies">
+  <TypicalPage title={<MovieTabs index={0} /> as string} image='/img/movies/passion-of-the-christ-big.jpg' page="Movies">
 
     <Spaced>
       <SplitColumn>
@@ -20,10 +26,7 @@ export default <>
           </p>
         </Typography>
 
-        <div>
-          <MoviesList />
-          <VideosList />
-        </div>
+        <MoviesList />
 
       </SplitColumn>
     </Spaced>

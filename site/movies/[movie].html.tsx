@@ -1,13 +1,14 @@
 import { Typography } from "../components/$typography.js";
 import { Spaced, SplitColumn } from "../components/column.js";
-import { MoviesList, VideosList } from "../components/movies-sidebar.js";
+import { MoviesList } from "../components/movies-sidebar.js";
 import { TypicalPage } from "../components/page.js";
 import { allMovies } from "../model/movies.js";
+import { MovieTabs } from "../movies.html.js";
 import { markdown } from "../util/helpers.js";
 
 export default allMovies.map(movie => {
   return [movie.slug, <>
-    <TypicalPage title="Movies" image={`/img/movies/${movie.slug}-big.jpg`} page="Movies">
+    <TypicalPage title={<MovieTabs index={0} /> as string} image={`/img/movies/${movie.slug}-big.jpg`} page="Movies">
 
       <Spaced>
         <SplitColumn>
@@ -18,10 +19,7 @@ export default allMovies.map(movie => {
             {markdown.render(movie.content)}
           </Typography>
 
-          <div>
-            <MoviesList />
-            <VideosList />
-          </div>
+          <MoviesList />
 
         </SplitColumn>
       </Spaced>
