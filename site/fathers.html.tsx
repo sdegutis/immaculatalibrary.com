@@ -1,11 +1,11 @@
-import { CenteredColumn, Spaced } from "./components/column.js";
+import { Spaced, SplitColumn } from "./components/column.js";
 import { TypicalPage } from "./components/page.js";
 
 export default <>
   <TypicalPage title="Fathers of the Church" image='/img/page/articles.jpg' page="Fathers">
 
     <Spaced>
-      <CenteredColumn>
+      <SplitColumn>
 
         <div>
 
@@ -41,7 +41,14 @@ export default <>
 
         </div>
 
-      </CenteredColumn>
+        <div>
+          <h3>What the Apostles Taught about Mary</h3>
+          <p>Proves through the Bible and Church Fathers that Mary was conceived sinlessly.</p>
+          <p><a href="https://a.co/d/17K0yf7" target='_blank'>Buy it on Amazon.</a></p>
+          <p><a href="https://a.co/d/17K0yf7" target='_blank'><img src='https://m.media-amazon.com/images/I/611Njn+smlL._SY466_.jpg' /></a></p>
+        </div>
+
+      </SplitColumn>
     </Spaced>
 
   </TypicalPage>
