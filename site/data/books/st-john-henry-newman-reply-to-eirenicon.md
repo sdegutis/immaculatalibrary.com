@@ -12,7 +12,9 @@ frontpage:
 files:
   - archiveId: 'st-john-henry-newmans-reply-to-dr-puseys-eirenicon'
     pdfFile: 'St. John Henry Newman’s Letter to Dr. Pusey in reply to his Eirenicon.pdf'
-storeLinks: []
+storeLinks:
+  - link: 'https://a.co/d/17K0yf7'
+    title: 'Novo Cantico'
 complete: true
 ---
 
