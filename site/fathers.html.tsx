@@ -1,5 +1,11 @@
 import { Spaced, SplitColumn } from "./components/column.js";
 import { TypicalPage } from "./components/page.js";
+import { markdown } from "./util/helpers.js";
+
+export function Markdown(attrs: any, children: any) {
+  children = String(children);
+  return markdown.render(children);
+}
 
 export default <>
   <TypicalPage title="Fathers of the Church" image='/img/page/articles.jpg' page="Fathers">
@@ -33,11 +39,11 @@ export default <>
           </p>
 
           <h3>Why not use New Advent?</h3>
-          <p>
+          <Markdown>
             The edition of the Church Fathers they digitized was translated
             by anti-Catholics. This site uses the previous English translation
             of the Church Fathers that was deemed "too Catholic" for them.
-          </p>
+          </Markdown>
 
         </div>
 
