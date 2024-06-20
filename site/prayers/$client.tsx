@@ -192,7 +192,7 @@ for (const slideshow of document.querySelectorAll<HTMLDivElement>('.slideshow'))
 
 function PageChanger(attrs: { to: Panel, side: 'left' | 'right' }, children: any) {
   const button = (
-    <button class='page-changer' style={`${attrs.side}: 0`}>
+    <button class='page-changer' style={`${attrs.side}: 1px`}>
       {children}
     </button>
   ) as HTMLButtonElement;
