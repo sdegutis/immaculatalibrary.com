@@ -6,7 +6,7 @@ import { makeTabs } from "./components/tabs.js";
 
 export const MovieTabs = makeTabs([
   { href: '/movies.html', title: 'Catholic Movies' },
-  { href: '/videos.html', title: 'Fulton Sheen Videos' },
+  { href: '/videos.html', title: 'Fulton Sheen' },
 ]);
 
 export default <>
