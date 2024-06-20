@@ -1,4 +1,5 @@
 import { LoadingLine, LoadingParagraph } from './components/$loading.js';
+import { Admin } from './components/admin.js';
 import { Spaced, SplitColumn } from './components/column.js';
 import { TypicalPage } from './components/page.js';
 import { PaginatorLoading } from './components/paginator.js';
@@ -37,6 +38,10 @@ export default <>
             <br /><LoadingLine width="12em" />
             <br /><LoadingLine width="12em" />
           </div>
+
+          <Admin>
+            <a href='/admin/books/new-book.html'>New book</a>
+          </Admin>
 
         </div>
 
