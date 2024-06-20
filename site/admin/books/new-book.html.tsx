@@ -2,10 +2,7 @@ import { EmptyPage } from "../../components/page.js";
 import { handlers } from '../../core/exports.js';
 import { Book } from "../../model/books.js";
 import { allCategories, categoriesBySlug } from "../../model/categories.js";
-
-function slugify(str: string) {
-  return str.toLowerCase().replace(/ /g, '-').replace(/[^a-z0-9-]/g, '');
-}
+import { slugify } from "../util/$helpers.js";
 
 handlers.set(__filename, body => {
   const params = new URLSearchParams(body);

@@ -1,6 +1,7 @@
 import MarkdownIt from 'https://cdn.jsdelivr.net/npm/markdown-it@13.0.2/+esm';
 import { mdOptions } from '../../components/$markdown.js';
 import { calculateReadingMins } from '../../util/$helpers.js';
+import { slugify } from '../util/$helpers.js';
 import { loadMonaco } from '../util/$monaco.js';
 
 const monaco = await loadMonaco();
@@ -16,8 +17,6 @@ const slugInput = document.querySelector<HTMLInputElement>('input[name=slug]')!;
 const contentInput = document.querySelector<HTMLTextAreaElement>('textarea[name=markdownContent]')!;
 const previewArea = document.getElementById('previewarea') as HTMLDivElement;
 const readingMinsEl = document.getElementById('readingmins') as HTMLSpanElement;
-
-const slugify = (str: string) => str.toLowerCase().replace(/ /g, '-').replace(/[^a-z0-9-]/g, '');
 
 titleInput.addEventListener('input', (e) => {
   slugInput.value = slugify(titleInput.value);
