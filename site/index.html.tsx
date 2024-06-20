@@ -9,7 +9,6 @@ import { SiteFooter } from "./components/site-footer.js";
 import { SiteHeader } from "./components/site-header.js";
 import { allArticles } from "./model/articles.js";
 import { allBooks } from "./model/books.js";
-import { featuredBooks } from "./model/featured.js";
 
 export default <>
   <EmptyPage>
@@ -65,22 +64,9 @@ export default <>
             <FadeIn>
               <h2>Latest articles</h2>
               <ul>
-                {allArticles.slice(0, 7).map(article => <>
+                {allArticles.slice(0, 12).map(article => <>
                   <li>
                     {article.mins} min &bull; <a href={article.route}>{article.data.title}</a>
-                  </li>
-                </>)}
-              </ul>
-            </FadeIn>
-
-            <FadeIn>
-              <h2>Featured books</h2>
-              <ul>
-                {featuredBooks.map(book => <>
-                  <li>
-                    <a href={book.route}>
-                      {book.data.title}
-                    </a>
                   </li>
                 </>)}
               </ul>
