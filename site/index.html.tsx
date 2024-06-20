@@ -28,8 +28,7 @@ export default <>
                   </p>
                   <p style='margin-left:4em'>&mdash; St. Francis de Sales</p>
                   <p style='margin-left:2em'>
-                    From <a href="/books/introduction-to-the-devout-life.html">Introduction to the Devout Life</a>
-                    , on <a rel="noopener" href="/snippets/2021-06-26-how-we-should-do-holy-reading.html">page 77</a>
+                    Introduction to the Devout Life, <a rel="noopener" href="/snippets/2021-06-26-how-we-should-do-holy-reading.html">page 77</a>
                   </p>
                 </blockquote>
               </FadeIn>
