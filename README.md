@@ -40,7 +40,7 @@
 
 ### File structure
 
-* [src/](src/): Custom runtime for hot-reloading, custom JSX, and importing data dirs.
+* [runtime/](runtime/): Custom runtime for hot-reloading, custom JSX, and importing data dirs.
 * [site/](site/): The site itself
 * [site/core/main.ts](site/core/main.ts): The entry point to the site, to build it yourself
 * [site/core/$jsx.ts](site/core/$jsx.ts): Browser-side JSX implementation

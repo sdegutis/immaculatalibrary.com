@@ -34,7 +34,7 @@
   ],
   "references": [
     {
-      "path": "./src"
+      "path": "./runtime"
     }
   ]
 }
