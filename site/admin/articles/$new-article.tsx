@@ -1,7 +1,7 @@
 import MarkdownIt from 'https://cdn.jsdelivr.net/npm/markdown-it@13.0.2/+esm';
-import { loadMonaco } from '../$monaco.js';
 import { mdOptions } from '../../components/$markdown.js';
 import { calculateReadingMins } from '../../util/$helpers.js';
+import { loadMonaco } from '../util/$monaco.js';
 
 const monaco = await loadMonaco();
 
