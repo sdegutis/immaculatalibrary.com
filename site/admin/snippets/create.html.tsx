@@ -3,7 +3,7 @@ import { EmptyPage } from "../../components/page.js";
 import { handlers } from '../../core/exports.js';
 import { Snippet } from '../../model/snippets.js';
 
-handlers.set(__filename, body => {
+handlers.set('/create-snippet', body => {
   const params = new URLSearchParams(body);
 
   const date = new Date().toLocaleDateString('sv');
@@ -30,7 +30,7 @@ export default <>
 
     <main>
       <div id='left-panel'>
-        <form method='POST' action={__filename}>
+        <form method='POST' action='/create-snippet'>
           <span>Page</span>  <input autocomplete='off' name='archivePage' autofocus />
           <span>Link</span>  <input autocomplete='off' name='archiveSlug' />
           <span>Book</span>  <input autocomplete='off' name='bookSlug' />

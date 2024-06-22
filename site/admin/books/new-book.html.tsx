@@ -4,7 +4,7 @@ import { Book } from "../../model/books.js";
 import { allCategories, categoriesBySlug } from "../../model/categories.js";
 import { slugify } from "../util/$helpers.js";
 
-handlers.set(__filename, body => {
+handlers.set('/create-book', body => {
   const params = new URLSearchParams(body);
 
   const title = params.get('title')!;
@@ -37,7 +37,7 @@ handlers.set(__filename, body => {
 
 export default <>
   <EmptyPage>
-    <form method='POST' action={__filename} style='display:grid; grid-template-columns: auto 1fr; width:30em; margin:1em; gap:1em; align-items:baseline'>
+    <form method='POST' action='/create-book' style='display:grid; grid-template-columns: auto 1fr; width:30em; margin:1em; gap:1em; align-items:baseline'>
       <span>Title</span>        <input autocomplete='off' name='title' autofocus />
       <span>Subtitle</span>     <input autocomplete='off' name='subtitle' />
       <span>Author</span>       <input autocomplete='off' name='author' />

@@ -3,7 +3,7 @@ import { EmptyPage } from "../../components/page.js";
 import { handlers } from '../../core/exports.js';
 import { Article } from "../../model/articles.js";
 
-handlers.set(__filename, body => {
+handlers.set('/create-article', body => {
   const params = new URLSearchParams(body);
 
   const date = new Date().toLocaleDateString('sv');
@@ -25,7 +25,7 @@ export default <>
 
     <main>
       <div id='left-panel'>
-        <form method='POST' action={__filename}>
+        <form method='POST' action='/create-article'>
           <span>Title</span>        <input autocomplete='off' name='title' />
           <span>Slug</span>         <input autocomplete='off' name='slug' />
           <span>Text</span>         <textarea name='markdownContent' />

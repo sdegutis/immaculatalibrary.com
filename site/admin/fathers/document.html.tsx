@@ -4,7 +4,7 @@ import { handlers } from "../../core/exports.js";
 import { FatherQuote } from "../../model/fatherquotes.js";
 import { Quote } from "./$document-client.js";
 
-handlers.set(__filename, body => {
+handlers.set('/create-father-quotes', body => {
   const params = new URLSearchParams(body);
   const quotes = JSON.parse(params.get('markdownContent')!) as Quote[];
 
@@ -25,7 +25,7 @@ export default <>
     <script src='./$document-client.js' type='module'></script>
 
     <main>
-      <form id='left-panel' method='POST' action={__filename}>
+      <form id='left-panel' method='POST' action='/create-father-quotes'>
         <textarea name='markdownContent' />
         <button>Create</button>
       </form>
