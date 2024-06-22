@@ -56,7 +56,7 @@ function getQuotes(content: string): Quote[] {
 
   return parts.map((part, i) => {
     const lines = part.split(/\n/);
-    const gospelQuote = lines.shift();
+    const gospelQuote = lines.shift()!;
     if (!match[1] || !match[2] || !match[3]) return null;
     return {
       book: match[1],
@@ -64,8 +64,8 @@ function getQuotes(content: string): Quote[] {
       verse: +match[3] + i,
       gospelQuote,
       commentaryQuotes: lines.join('\n'),
-    } as Quote | null;
-  }).filter(p => p) as Quote[];
+    };
+  }).filter(p => p !== null);
 }
 
 let wordWrap = true;
