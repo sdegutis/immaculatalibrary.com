@@ -25,7 +25,7 @@
     "@types/markdown-it": "^14.1.1",
     "@types/node": "^20.14.2",
     "monaco-editor": "^0.43.0",
-    "typescript": "^5.4.5"
+    "typescript": "^5.5.2"
   },
   "dependencies": {
     "chokidar": "^3.6.0",
