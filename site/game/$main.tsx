@@ -1,11 +1,9 @@
 export default 0;
 
 const dir = await getPico8Dir();
-const fileHandle = await dir.getFileHandle('explore.p8');
-const file = await fileHandle.getFile();
-const text = await file.text();
 
 
+const text = await getFileText(dir, 'sarah/untitled.p8');
 
 parsePico8File(text);
 
@@ -130,4 +128,18 @@ async function getPico8Dir() {
   }
   await dir.requestPermission();
   return dir;
+}
+
+async function getFileText(dir: FileSystemDirectoryHandle, path: string) {
+  const parts = path.split('/');
+
+  let node = dir;
+  while (parts.length > 1) {
+    const subdir = parts.shift()!;
+    node = await dir.getDirectoryHandle(subdir);
+  }
+
+  const fileHandle = await node.getFileHandle(parts[0]!);
+  const text = await fileHandle.getFile().then(f => f.text());
+  return text;
 }
