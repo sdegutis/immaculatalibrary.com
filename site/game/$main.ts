@@ -108,7 +108,8 @@ async function getDb() {
 
 async function getLocalDir() {
   return new Promise<FileSystemDirectoryHandle>(resolve => {
-    const button = <button>Load file</button> as HTMLButtonElement;
+    const button = document.createElement('button');
+    button.textContent = 'Load file';
     button.onclick = async e => {
       e.preventDefault();
       const dir = await window.showDirectoryPicker();
