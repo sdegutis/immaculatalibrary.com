@@ -5,6 +5,7 @@ import { NavPage } from './navlinks.js';
 import { QuickLinks } from './quicklinks.js';
 import { SiteFooter } from './site-footer.js';
 import { SiteHeader } from './site-header.js';
+import { VerifyHuman } from './verifyhuman.js';
 
 export const EmptyPage: JSX.Component<{ favicons?: JSX.Element }> = (attrs, children) => <>
   {'<!DOCTYPE html>'}
@@ -27,6 +28,7 @@ export const EmptyPage: JSX.Component<{ favicons?: JSX.Element }> = (attrs, chil
 
     <body>
       <Font use={martel} fallback="serif">
+        <VerifyHuman />
         {children}
       </Font>
     </body>
