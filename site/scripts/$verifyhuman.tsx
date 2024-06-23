@@ -1,3 +1,5 @@
+import { randomElement } from "./$util.js";
+
 export default 0;
 
 class VerifyHuman {
@@ -87,16 +89,36 @@ class VerifyHuman {
 
 }
 
-async function checkIfHuman() {
+async function checkIfHuman(phrase: string[]) {
   const v = new VerifyHuman();
-  await v.run([
-    `Hello.\r\r\r\nAre you human?\r\r\r\r`,
-    `It's nothing personal you know\r\r\r, we just have to check...\r\r\r\r\r`,
-    `No offense or anything...\r\r\r not like you seem like a robot.\r.\r.\r.\r.\r.\r.\r.\r.\r.\r.\r.\r.\r.\r.\r.\r.\r.\r.\r`,
-    `Yeah that got awkward real quick.\r\r\r I mean it wouldn't have if you were a robot, but the fact that you're a human kind of changes everything, doesn't it?\r\r\r\r`,
-  ]);
+  await v.run(phrase);
 }
 
-if (Math.random() < 0.1) {
-  checkIfHuman();
+if (Math.random() < 0.2) {
+  const phrases = [
+    [
+      `Hi.\r Are you a robot?\r\r\r`,
+      `If you're not a robot,\r then why do you look like one?\r\r`,
+      `Haha\r just kidding\r, that was a test.\r\r\r You passed.\r Good job.\r\r\r\r\r`,
+    ],
+    [
+      `Hi\r, are you a human?\r\r\r`,
+      `Wait,\r how do you know if you're a human?\r\r`,
+      `I mean\r, aren't there scifi tropes\r where someone isn't a human\r, but thinks they are?\r\r\r`,
+      `This is too confusing.\r Let's just say you are human.\r Don't tell my boss.\r\r\r`,
+    ],
+    [
+      `Hi\r, just need to check if you're a robot.\r\r\r`,
+      `No offense or anything\r, not saying you look like a robot.\r.\r.\r.\r.\r.\r.\r.\r.\r.\r.\r.\r.\r.\r.\r.\r.\r.\r.\r`,
+      `Yeah\r that got awkward quick.\r You're free to go\r, sorry for the inconvenience.\r\r\r`,
+    ],
+    [
+      `Checking if you're a robot...\r\r\r`,
+      `Hey I'm going to the store, do you need anything?\r\r Maybe, some wires or circuit boards or anything?\r\r.\r.\r.\r.\r.\r`,
+      `So what's your favorite magazine, maybe wired?\r 👁️👄👁️\r\r\r\r\r\r.\r.\r.\r.\r.\r.\r.\r.\r`,
+      `Okay fine\r, you're free to go\r\r, for now.......\r\r\r`,
+    ],
+  ];
+
+  checkIfHuman(randomElement(phrases));
 }
