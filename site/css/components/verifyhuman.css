@@ -3,10 +3,12 @@
   top: 50%;
   left: 50%;
   width: 20em;
+  max-width: 95vw;
+  box-sizing: border-box;
   /* background-color: #000a; */
   transform: translate(-50%, -50%);
   z-index: 100;
-  padding: 3em;
+  padding: 3vh;
   border-radius: 7px;
   border: 1px solid var(--blue-bg);
   box-shadow:
