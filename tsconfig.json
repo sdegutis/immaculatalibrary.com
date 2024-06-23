@@ -5,9 +5,6 @@
       "DOM",
       "DOM.Iterable",
     ],
-    "types": [
-      "@types/wicg-file-system-access"
-    ],
     "jsx": "react-native",
     "target": "ESNext",
     "noEmit": true,
