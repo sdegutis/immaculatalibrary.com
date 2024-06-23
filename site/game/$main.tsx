@@ -1,5 +1,25 @@
 export default 0;
 
+async function getLocalFile() {
+  return new Promise(resolve => {
+    const button = <input type='file'>Load file</input> as HTMLInputElement;
+    button.oninput = async e => {
+      const text = await button.files![0]!.text();
+      button.remove();
+      resolve(text);
+    };
+    document.body.append(button);
+  });
+}
+
+const localFile = await getLocalFile();
+
+console.log(localFile);
+
+const canvas = <canvas width='1400' height='900' /> as HTMLCanvasElement;
+document.body.append(canvas);
+
+
 console.log('hey')
 
 window.addEventListener('gamepadconnected', (e) => {
