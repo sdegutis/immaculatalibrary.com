@@ -3,23 +3,25 @@ export default 0;
 const dir = await getPico8Dir();
 
 
-const text = await getFileText(dir, 'sarah/untitled.p8');
+const text = await getFileText(dir, 'explore.p8');
 
 parsePico8File(text);
 
 function parsePico8File(text: string) {
-  const groups = new Map<string, string[]>();
+  const groups: Record<string, string[]> = Object.create(null);
   let group = '';
 
   for (const line of text.trim().split('\n')) {
     if (line.startsWith('__')) {
       group = line;
-      groups.set(group, []);
+      groups[group] = [];
     }
     else {
-      groups.get(group)?.push(line);
+      groups[group]?.push(line);
     }
   }
+
+  // const sprites:Sprite[] = [];
 
   console.log(groups);
 }
