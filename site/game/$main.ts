@@ -19,6 +19,39 @@ const ctx = createDrawingContext();
 ctx.strokeStyle = '#f00';
 ctx.rect(10, 20, 30, 40);
 
+
+
+
+
+
+
+
+
+
+
+function parseGroups(text: string) {
+  const groups: Record<string, string[]> = Object.create(null);
+  let group = '';
+
+  for (const line of text.trim().split('\n')) {
+    if (line.startsWith('__')) {
+      group = line;
+      groups[group] = [];
+    }
+    else {
+      groups[group]?.push(line);
+    }
+  }
+
+  return groups;
+}
+
+
+
+
+
+
+
 // console.log('hey')
 
 // window.addEventListener('gamepadconnected', (e) => {
@@ -57,23 +90,6 @@ ctx.rect(10, 20, 30, 40);
 // Helpers
 
 
-
-function parseGroups(text: string) {
-  const groups: Record<string, string[]> = Object.create(null);
-  let group = '';
-
-  for (const line of text.trim().split('\n')) {
-    if (line.startsWith('__')) {
-      group = line;
-      groups[group] = [];
-    }
-    else {
-      groups[group]?.push(line);
-    }
-  }
-
-  return groups;
-}
 
 function createDrawingContext() {
   const canvas = document.createElement('canvas');
