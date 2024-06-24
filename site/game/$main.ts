@@ -9,42 +9,52 @@ const dir = await getPico8Dir();
 const text = await getFileText(dir, 'explore.p8');
 const groups = parseGroups(text);
 
-console.log(groups)
+groups.gff.fill('hi', groups.gff.length, 5)
+// groups.gff.length = 5;
+
+for (const line of groups.gff) {
+  console.log([line])
+}
+
+console.log(groups.gff)
 
 
-const ctx = createCanvas(1400, 900, 10);
-// ctx.strokeStyle = '#f00';
-// ctx.lineWidth = 3;
-// console.log(ctx.strokeStyle)
-// ctx.fillRect(10, 20, 30, 40);
 
-const img = ctx.createImageData(2, 2);
 
-let i = 0;
-img.data[i + 0] = 0xff;
-img.data[i + 1] = 0x00;
-img.data[i + 2] = 0x00;
-img.data[i + 3] = 0xff;
-i += 4;
-img.data[i + 0] = 0x00;
-img.data[i + 1] = 0xff;
-img.data[i + 2] = 0x00;
-img.data[i + 3] = 0xff;
-i += 4;
-img.data[i + 0] = 0x00;
-img.data[i + 1] = 0x00;
-img.data[i + 2] = 0xff;
-img.data[i + 3] = 0xff;
-i += 4;
-img.data[i + 0] = 0xff;
-img.data[i + 1] = 0x00;
-img.data[i + 2] = 0xff;
-img.data[i + 3] = 0xff;
-console.log(i);
-console.log(img.data.length);
 
-ctx.putImageData(img, 10, 20);
-// ctx.drawImage(img2, 1, 1);
+// const ctx = createCanvas(1400, 900, 10);
+// // ctx.strokeStyle = '#f00';
+// // ctx.lineWidth = 3;
+// // console.log(ctx.strokeStyle)
+// // ctx.fillRect(10, 20, 30, 40);
+
+// const img = ctx.createImageData(2, 2);
+
+// let i = 0;
+// img.data[i + 0] = 0xff;
+// img.data[i + 1] = 0x00;
+// img.data[i + 2] = 0x00;
+// img.data[i + 3] = 0xff;
+// i += 4;
+// img.data[i + 0] = 0x00;
+// img.data[i + 1] = 0xff;
+// img.data[i + 2] = 0x00;
+// img.data[i + 3] = 0xff;
+// i += 4;
+// img.data[i + 0] = 0x00;
+// img.data[i + 1] = 0x00;
+// img.data[i + 2] = 0xff;
+// img.data[i + 3] = 0xff;
+// i += 4;
+// img.data[i + 0] = 0xff;
+// img.data[i + 1] = 0x00;
+// img.data[i + 2] = 0xff;
+// img.data[i + 3] = 0xff;
+// console.log(i);
+// console.log(img.data.length);
+
+// ctx.putImageData(img, 10, 20);
+// // ctx.drawImage(img2, 1, 1);
 
 
 
@@ -61,9 +71,10 @@ function parseGroups(text: string) {
   const groups: Record<string, string[]> = Object.create(null);
   let group = '';
 
-  for (const line of text.trim().split('\n')) {
+  for (const line of text.trim().split(/\r?\n/)) {
+    // console.log([line])
     if (line.startsWith('__')) {
-      group = line;
+      group = line.match(/[^_]+/)![0]!;
       groups[group] = [];
     }
     else {
@@ -71,7 +82,11 @@ function parseGroups(text: string) {
     }
   }
 
-  return groups;
+  return groups as {
+    gff: string[],
+    gfx: string[],
+    map: string[],
+  };
 }
 
 
