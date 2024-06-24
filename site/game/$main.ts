@@ -7,11 +7,10 @@ import { loadP8 } from "./$pico8.js";
 
 const game1 = await loadP8('explore.p8');
 
-const ctx = createCanvas(1400, 900, 3);
-// ctx.clearRect(0, 0, 1400, 900);
+const ctx = createCanvas(1400, 900, 4);
 
-for (let y = 0; y < 128; y++) {
-  for (let x = 0; x < 64; x++) {
+for (let y = 0; y < 64; y++) {
+  for (let x = 0; x < 128; x++) {
     const spr = game1.map[y]![x]!;
     if (spr > 0) {
       const img = game1.sprites[spr]!;
