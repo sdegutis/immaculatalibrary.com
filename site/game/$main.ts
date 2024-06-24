@@ -5,11 +5,10 @@ import { loadP8 } from "./$pico8.js";
 //   jane can pick up keys that open doors
 //   and sarah can push buttons that open bars
 
-const ctx = createCanvas(1400, 900, 3);
-
 const game1 = await loadP8('explore.p8');
 
-ctx.clearRect(0, 0, 1400, 900);
+const ctx = createCanvas(1400, 900, 3);
+// ctx.clearRect(0, 0, 1400, 900);
 
 for (let y = 0; y < 128; y++) {
   for (let x = 0; x < 64; x++) {
@@ -24,23 +23,6 @@ for (let y = 0; y < 128; y++) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// console.log('hey')
-
 // window.addEventListener('gamepadconnected', (e) => {
 //   console.log('conn', e.gamepad.index);
 // });
@@ -53,14 +35,6 @@ for (let y = 0; y < 128; y++) {
 // //   const c = navigator.getGamepads()[0];
 // //   console.log(navigator.getGamepads());
 
-// //   if (!c) return;
-
-// //   c.
-
-// //   // // console.log((c as any).hapticActuators)
-
-// //   // // (c as any).hapticActuators[0].pulse(1.0, 200);
-
 // //   // c.vibrationActuator.playEffect("dual-rumble", {
 // //   //   startDelay: 0,
 // //   //   duration: 200,
@@ -70,11 +44,6 @@ for (let y = 0; y < 128; y++) {
 
 // //   console.log(c.axes[0])
 // // }, 500)
-
-
-
-
-// Helpers
 
 
 
