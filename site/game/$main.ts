@@ -6,18 +6,46 @@ import { getFileText, getPico8Dir } from "./$files.js";
 //   and sarah can push buttons that open bars
 
 const dir = await getPico8Dir();
-
-
 const text = await getFileText(dir, 'explore.p8');
-
 const groups = parseGroups(text);
 
 console.log(groups)
 
 
-const ctx = createDrawingContext();
-ctx.strokeStyle = '#f00';
-ctx.rect(10, 20, 30, 40);
+const ctx = createCanvas(1400, 900, 10);
+// ctx.strokeStyle = '#f00';
+// ctx.lineWidth = 3;
+// console.log(ctx.strokeStyle)
+// ctx.fillRect(10, 20, 30, 40);
+
+const img = ctx.createImageData(2, 2);
+
+let i = 0;
+img.data[i + 0] = 0xff;
+img.data[i + 1] = 0x00;
+img.data[i + 2] = 0x00;
+img.data[i + 3] = 0xff;
+i += 4;
+img.data[i + 0] = 0x00;
+img.data[i + 1] = 0xff;
+img.data[i + 2] = 0x00;
+img.data[i + 3] = 0xff;
+i += 4;
+img.data[i + 0] = 0x00;
+img.data[i + 1] = 0x00;
+img.data[i + 2] = 0xff;
+img.data[i + 3] = 0xff;
+i += 4;
+img.data[i + 0] = 0xff;
+img.data[i + 1] = 0x00;
+img.data[i + 2] = 0xff;
+img.data[i + 3] = 0xff;
+console.log(i);
+console.log(img.data.length);
+
+ctx.putImageData(img, 10, 20);
+// ctx.drawImage(img2, 1, 1);
+
 
 
 
@@ -91,10 +119,12 @@ function parseGroups(text: string) {
 
 
 
-function createDrawingContext() {
+function createCanvas(width: number, height: number, scale: number) {
   const canvas = document.createElement('canvas');
-  canvas.width = 1400;
-  canvas.height = 900;
+  canvas.style.width = width + 'px';
+  canvas.style.height = height + 'px';
+  canvas.width = width / scale;
+  canvas.height = height / scale;
   document.body.append(canvas);
   return canvas.getContext('2d')!;
 }

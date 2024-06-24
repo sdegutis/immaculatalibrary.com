@@ -15,4 +15,5 @@ body {
 
 canvas {
   box-shadow: 0 0 3px 3px #fff7;
+  image-rendering: pixelated;
 }
