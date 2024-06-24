@@ -53,7 +53,7 @@ export function parseFlags(lines: string[]) {
   return flags;
 }
 
-export function parseSprites(lines: string[], ctx: CanvasRenderingContext2D) {
+export function parseSprites(lines: string[]) {
   const COLORS = [
     [0x00, 0x00, 0x00, 0x00],
     [0x1D, 0x2B, 0x53, 0xff],
@@ -81,8 +81,7 @@ export function parseSprites(lines: string[], ctx: CanvasRenderingContext2D) {
 
   for (let y = 0; y < 16; y++) {
     for (let x = 0; x < 16; x++) {
-
-      const img = ctx.createImageData(8, 8);
+      const img = new ImageData(8, 8);
 
       for (let yy = 0; yy < 8; yy++) {
         for (let xx = 0; xx < 8; xx++) {

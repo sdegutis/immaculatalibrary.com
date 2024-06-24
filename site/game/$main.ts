@@ -8,11 +8,13 @@ import { parseFlags, parseGroups, parseMap, parseSprites } from "./$pico8.js";
 
 const ctx = createCanvas(1400, 900, 3);
 
+// function loadP8()
+
 const dir = await getPico8Dir();
 const text = await getFileText(dir, 'explore.p8');
 const groups = parseGroups(text);
 const flags = parseFlags(groups.gff);
-const sprites = parseSprites(groups.gfx, ctx);
+const sprites = parseSprites(groups.gfx);
 const map = parseMap(groups.map);
 
 ctx.clearRect(0, 0, 1400, 900);

@@ -49,7 +49,10 @@ async function getLocalDir() {
   });
 }
 
+let cachedDir: FileSystemDirectoryHandle;
 export async function getPico8Dir() {
+  if (cachedDir) return cachedDir;
+
   const db = await getDb();
   let dir = await db.get();
   if (!dir) {
@@ -57,7 +60,7 @@ export async function getPico8Dir() {
     db.set(dir);
   }
   await dir.requestPermission();
-  return dir;
+  return cachedDir = dir;
 }
 
 export async function getFileText(dir: FileSystemDirectoryHandle, path: string) {
