@@ -1,3 +1,22 @@
+export function parseMap(lines: string[]) {
+  for (let i = lines.length; i < 64; i++) {
+    lines.push(''.padEnd(256, '0'));
+  }
+
+  const map = [];
+  for (let y = 0; y < 64; y++) {
+    const row = [];
+    for (let x = 0; x < 128; x++) {
+      const i = x * 2;
+      const c = lines[y]!.slice(i, i + 2);
+      const n = parseInt(c, 16);
+      row.push(n);
+    }
+    map.push(row);
+  }
+  return map;
+}
+
 export function parseFlags(lines: string[]) {
   const chars = lines.join('').padEnd(512, '0');
 

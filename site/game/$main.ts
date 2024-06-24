@@ -1,23 +1,31 @@
 import { getFileText, getPico8Dir } from "./$files.js";
-import { parseFlags, parseGroups } from "./$pico8.js";
+import { parseFlags, parseGroups, parseMap, parseSprites } from "./$pico8.js";
 
 // sarahs idea:
 //   i can place bombs that blow up certain bricks
 //   jane can pick up keys that open doors
 //   and sarah can push buttons that open bars
 
-const ctx = createCanvas(1400, 900, 10);
+const ctx = createCanvas(1400, 900, 3);
 
 const dir = await getPico8Dir();
 const text = await getFileText(dir, 'explore.p8');
 const groups = parseGroups(text);
-
 const flags = parseFlags(groups.gff);
+const sprites = parseSprites(groups.gfx, ctx);
+const map = parseMap(groups.map);
 
-// const sprites = parseSprites(groups.gfx, ctx);
-// const img = sprites[21]!;
-// ctx.putImageData(img, 20, 20);
+ctx.clearRect(0, 0, 1400, 900);
 
+for (let y = 0; y < 128; y++) {
+  for (let x = 0; x < 64; x++) {
+    const spr = map[y]![x]!;
+    if (spr > 0) {
+      const img = sprites[spr]!;
+      ctx.putImageData(img, x * 8, y * 8);
+    }
+  }
+}
 
 
 
