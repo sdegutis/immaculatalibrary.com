@@ -1,5 +1,5 @@
 import { getFileText, getPico8Dir } from "./$files.js";
-import { parseGroups, parseSprites } from "./$pico8.js";
+import { parseFlags, parseGroups } from "./$pico8.js";
 
 // sarahs idea:
 //   i can place bombs that blow up certain bricks
@@ -12,16 +12,11 @@ const dir = await getPico8Dir();
 const text = await getFileText(dir, 'explore.p8');
 const groups = parseGroups(text);
 
+const flags = parseFlags(groups.gff);
+
 // const sprites = parseSprites(groups.gfx, ctx);
 // const img = sprites[21]!;
 // ctx.putImageData(img, 20, 20);
-
-const flags = parseFlags(groups.gff);
-
-function parseFlags(lines: string[]) {
-
-}
-
 
 
 

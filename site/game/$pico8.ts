@@ -1,3 +1,39 @@
+export function parseFlags(lines: string[]) {
+  const chars = lines.join('').padEnd(512, '0');
+
+  const COLORS = [
+    'RED',
+    'ORANGE',
+    'YELLOW',
+    'GREEN',
+    'BLUE',
+    'PURPLE',
+    'PINK',
+    'PEACH',
+  ] as const;
+
+  type Flag = { [key in typeof COLORS[number]]?: true };
+
+  const flags: Flag[] = [];
+
+  for (let i = 0; i < 256; i++) {
+    const ii = i * 2;
+    const hex = chars.slice(ii, ii + 2);
+    const n = parseInt(hex, 16);
+
+    const flag: Flag = Object.create(null);
+
+    for (let b = 0; b < 8; b++) {
+      const bb = 1 << b;
+      if (n & bb) flag[COLORS[b]!] = true;
+    }
+
+    flags.push(flag);
+  }
+
+  return flags;
+}
+
 export function parseSprites(lines: string[], ctx: CanvasRenderingContext2D) {
   const COLORS = [
     [0x00, 0x00, 0x00, 0x00],
