@@ -1,4 +1,17 @@
-export function parseMap(lines: string[]) {
+import { getFileText, getPico8Dir } from "./$files.js";
+
+export async function loadP8(filename: string) {
+  const dir = await getPico8Dir();
+  const text = await getFileText(dir, filename);
+  const groups = parseGroups(text);
+  return {
+    flags: parseFlags(groups.gff),
+    sprites: parseSprites(groups.gfx),
+    map: parseMap(groups.map),
+  };
+}
+
+function parseMap(lines: string[]) {
   for (let i = lines.length; i < 64; i++) {
     lines.push(''.padEnd(256, '0'));
   }
@@ -17,7 +30,7 @@ export function parseMap(lines: string[]) {
   return map;
 }
 
-export function parseFlags(lines: string[]) {
+function parseFlags(lines: string[]) {
   const chars = lines.join('').padEnd(512, '0');
 
   const COLORS = [
@@ -53,7 +66,7 @@ export function parseFlags(lines: string[]) {
   return flags;
 }
 
-export function parseSprites(lines: string[]) {
+function parseSprites(lines: string[]) {
   const COLORS = [
     [0x00, 0x00, 0x00, 0x00],
     [0x1D, 0x2B, 0x53, 0xff],
@@ -108,7 +121,7 @@ export function parseSprites(lines: string[]) {
   return sprites;
 }
 
-export function parseGroups(text: string) {
+function parseGroups(text: string) {
   const groups: Record<string, string[]> = Object.create(null);
   let group = '';
 

@@ -1,5 +1,4 @@
-import { getFileText, getPico8Dir } from "./$files.js";
-import { parseFlags, parseGroups, parseMap, parseSprites } from "./$pico8.js";
+import { loadP8 } from "./$pico8.js";
 
 // sarahs idea:
 //   i can place bombs that blow up certain bricks
@@ -8,22 +7,15 @@ import { parseFlags, parseGroups, parseMap, parseSprites } from "./$pico8.js";
 
 const ctx = createCanvas(1400, 900, 3);
 
-// function loadP8()
-
-const dir = await getPico8Dir();
-const text = await getFileText(dir, 'explore.p8');
-const groups = parseGroups(text);
-const flags = parseFlags(groups.gff);
-const sprites = parseSprites(groups.gfx);
-const map = parseMap(groups.map);
+const game1 = await loadP8('explore.p8');
 
 ctx.clearRect(0, 0, 1400, 900);
 
 for (let y = 0; y < 128; y++) {
   for (let x = 0; x < 64; x++) {
-    const spr = map[y]![x]!;
+    const spr = game1.map[y]![x]!;
     if (spr > 0) {
-      const img = sprites[spr]!;
+      const img = game1.sprites[spr]!;
       ctx.putImageData(img, x * 8, y * 8);
     }
   }
