@@ -27,12 +27,33 @@ function runGameLoop(update: () => void) {
 let mx = 0;
 let my = 0;
 
+const BUTTONS = [
+  'A', 'B', 'X', 'Y',
+  'L', 'R', 'ZL', 'ZR',
+  '-', '+',
+  'LTRIGGER', 'RTRIGGER',
+  'UP', 'DOWN', 'LEFT', 'RIGHT',
+] as const;
+
+type Buttons = { [key in typeof BUTTONS[number]]: GamepadButton };
+
 runGameLoop(() => {
 
   const c = navigator.getGamepads()[0];
   if (!c) return;
 
-  console.log(c.axes)
+  const buttons: Buttons = Object.fromEntries(c.buttons.map((b, i) => [BUTTONS[i], b]));
+
+  c.vibrationActuator.reset();
+  if (buttons.ZR.value || buttons.ZL.value) {
+    c.vibrationActuator.playEffect("dual-rumble", {
+      startDelay: 0,
+      duration: 500,
+      weakMagnitude: buttons.ZL.value,
+      strongMagnitude: buttons.ZR.value,
+    });
+  }
+
 
   const [x1, y1, x2, y2] = c.axes as [number, number, number, number];
 
@@ -61,21 +82,6 @@ function draw() {
 }
 
 
-// function runGameLoop(update: () => void) {
-
-//   const start = +document.timeline.currentTime!;
-
-//   requestAnimationFrame(t => {
-
-
-
-//     // console.log(t - start);
-//     runGameLoop(update);
-//   });
-
-// }
-
-
 
 // window.addEventListener('gamepadconnected', (e) => {
 //   console.log('conn', e.gamepad.index);
@@ -85,19 +91,6 @@ function draw() {
 //   console.log('disc', e.gamepad.index);
 // });
 
-// // setInterval(() => {
-// //   const c = navigator.getGamepads()[0];
-// //   console.log(navigator.getGamepads());
-
-// //   // c.vibrationActuator.playEffect("dual-rumble", {
-// //   //   startDelay: 0,
-// //   //   duration: 200,
-// //   //   weakMagnitude: 1.0,
-// //   //   strongMagnitude: 1.0,
-// //   // });
-
-// //   console.log(c.axes[0])
-// // }, 500)
 
 
 
