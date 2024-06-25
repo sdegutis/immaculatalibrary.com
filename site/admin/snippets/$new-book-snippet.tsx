@@ -93,6 +93,7 @@ fixupButton.onclick = (e) => {
       .trimEnd()
       .replace(/ {2,}/g, ' ')
       .replace(/ ;/g, ';')
+      .replace(/ ?— ?/g, '—')
       .replace(/ :/g, ';')
       .replace(/- /g, '')
       .replace(/ !/g, '!')
