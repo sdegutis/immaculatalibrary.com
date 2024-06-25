@@ -83,16 +83,6 @@
   align-items: center;
 }
 
-.two-cols {
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 0 .5em;
-}
-
-.two-cols>*:nth-child(2n) {
-  text-align: right;
-}
-
 .spaced-mini {
   margin: 0.5em 0;
 }
@@ -120,7 +110,13 @@
 }
 
 .highlightable-line {
+  clear: both;
   transition: opacity ease-in-out 250ms;
+}
+
+.two-cols .red {
+  float: right;
+  margin-left: 0.5em;
 }
 
 span.highlightable-line.active {

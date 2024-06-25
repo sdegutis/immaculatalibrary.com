@@ -189,12 +189,12 @@ function Conclusion() {
         <Line>Amen.</Line>
       </p>
       <p class='spaced-small two-cols'>
-        <span><Line>Most Sacred Heart of Jesus,</Line></span><Line><Red>have mercy on us.</Red></Line>
-        <span><Line>Mary, Help of Christians,</Line></span><Line><Red>pray for us.</Red></Line>
-        <span><Line>Virgin Most Powerful,</Line></span><Line><Red>pray for us.</Red></Line>
-        <span><Line>St. Joseph,</Line></span><Line><Red>pray for us.</Red></Line>
-        <span><Line>St. Michael the Archangel,</Line></span><Line><Red>pray for us.</Red></Line>
-        <span><Line>All You Holy Angels,</Line></span><Line><Red>pray for us.</Red></Line>
+        <Line>Most Sacred Heart of Jesus, <Red>have mercy on us.</Red></Line>
+        <Line>Mary, Help of Christians, <Red>pray for us.</Red></Line>
+        <Line>Virgin Most Powerful, <Red>pray for us.</Red></Line>
+        <Line>St. Joseph, <Red>pray for us.</Red></Line>
+        <Line>St. Michael the Archangel, <Red>pray for us.</Red></Line>
+        <Line>All You Holy Angels, <Red>pray for us.</Red></Line>
       </p>
       <p class='spaced-small'>
         <Line><Red>In the name of the Father, the Son and the Holy Spirit. Amen.</Red></Line>
@@ -242,45 +242,45 @@ function MorningPrayers() {
         <br />
         <Line><Red>Amen</Red></Line>
       </p>
+      <div class='spaced-small two-cols'>
+        <Line>St. Jane Frances de Chantal <Red>Pray for us.</Red></Line>
+        <div class='spaced-small' />
+        <Line>St. Therese of Lisieux <Red>Pray for us.</Red></Line>
+        <Line> St. John Bosco <Red>Pray for us.</Red></Line>
+        <Line>  St. Joan of Arc <Red>Pray for us.</Red></Line>
+        <div class='spaced-small' />
+        <Line>St. Teresa of Avila <Red>Pray for us.</Red></Line>
+        <Line> St. Catherine of Siena <Red>Pray for us.</Red></Line>
+        <Line>  St. Rose of Lima <Red>Pray for us.</Red></Line>
+        <div class='spaced-small' />
+        <Line>St. John Paul II <Red>Pray for us.</Red></Line>
+        <div class='spaced-small' />
+        <Line>St. Cecilia <Red>Pray for us.</Red></Line>
+        <Line> St. Philomena <Red>Pray for us.</Red></Line>
+        <Line>  St. Jude <Red>Pray for us.</Red></Line>
+        <div class='spaced-small' />
+        <Line>St. Augustine <Red>Pray for us.</Red></Line>
+        <Line> St. Benedict <Red>Pray for us.</Red></Line>
+        <Line>  St. Francis of Assisi <Red>Pray for us.</Red></Line>
+        <div class='spaced-small' />
+        <Line>St. Monica <Red>Pray for us.</Red></Line>
+        <Line> St. Rita <Red>Pray for us.</Red></Line>
+        <Line>  St. Dymphna <Red>Pray for us.</Red></Line>
+        <div class='spaced-small' />
+        <Line>St. Francis de Sales <Red>Pray for us.</Red></Line>
+        <Line> St. Vincent de Paul <Red>Pray for us.</Red></Line>
+        <Line>  St. Thomas More <Red>Pray for us.</Red></Line>
+        <div class='spaced-small' />
+        <Line>Patron Saints <Red>Pray for us.</Red></Line>
+        <Line> Guardian Angels <Red>Pray for us.</Red></Line>
+        <Line>  Holy Souls in Purgatory <Red>Pray for us.</Red></Line>
+      </div>
       <p class='spaced-small two-cols'>
-        <span><Line>St. Jane Frances de Chantal</Line></span><Line><Red>Pray for us.</Red></Line>
-        <span /><span class='spaced-small' />
-        <span><Line>St. Therese of Lisieux</Line></span><Line><Red>Pray for us.</Red></Line>
-        <span><Line> St. John Bosco</Line></span><Line><Red>Pray for us.</Red></Line>
-        <span><Line>  St. Joan of Arc</Line></span><Line><Red>Pray for us.</Red></Line>
-        <span /><span class='spaced-small' />
-        <span><Line>St. Teresa of Avila</Line></span><Line><Red>Pray for us.</Red></Line>
-        <span><Line> St. Catherine of Siena</Line></span><Line><Red>Pray for us.</Red></Line>
-        <span><Line>  St. Rose of Lima</Line></span><Line><Red>Pray for us.</Red></Line>
-        <span /><span class='spaced-small' />
-        <span><Line>St. John Paul II</Line></span><Line><Red>Pray for us.</Red></Line>
-        <span /><span class='spaced-small' />
-        <span><Line>St. Cecilia</Line></span><Line><Red>Pray for us.</Red></Line>
-        <span><Line> St. Philomena</Line></span><Line><Red>Pray for us.</Red></Line>
-        <span><Line>  St. Jude</Line></span><Line><Red>Pray for us.</Red></Line>
-        <span /><span class='spaced-small' />
-        <span><Line>St. Augustine</Line></span><Line><Red>Pray for us.</Red></Line>
-        <span><Line> St. Benedict</Line></span><Line><Red>Pray for us.</Red></Line>
-        <span><Line>  St. Francis of Assisi</Line></span><Line><Red>Pray for us.</Red></Line>
-        <span /><span class='spaced-small' />
-        <span><Line>St. Monica</Line></span><Line><Red>Pray for us.</Red></Line>
-        <span><Line> St. Rita</Line></span><Line><Red>Pray for us.</Red></Line>
-        <span><Line>  St. Dymphna</Line></span><Line><Red>Pray for us.</Red></Line>
-        <span /><span class='spaced-small' />
-        <span><Line>St. Francis de Sales</Line></span><Line><Red>Pray for us.</Red></Line>
-        <span><Line> St. Vincent de Paul</Line></span><Line><Red>Pray for us.</Red></Line>
-        <span><Line>  St. Thomas More</Line></span><Line><Red>Pray for us.</Red></Line>
-        <span /><span class='spaced-small' />
-        <span><Line>Patron Saints</Line></span><Line><Red>Pray for us.</Red></Line>
-        <span><Line> Guardian Angels</Line></span><Line><Red>Pray for us.</Red></Line>
-        <span><Line>  Holy Souls in Purgatory</Line></span><Line><Red>Pray for us.</Red></Line>
-      </p>
-      <p class='spaced-small two-cols'>
-        <span><Line>Most Chaste Heart of Blessed St. Joseph</Line></span><Line><Red>Pray for us.</Red></Line>
-        <span><Line> Most Immaculate Heart of the Blessed Virgin Mary</Line></span><Line><Red>Pray for us.</Red></Line>
-        <span><Line>  Most Sacred Heart of Jesus</Line></span><Line><Red>Have mercy on us.</Red></Line>
-        <span><Line>  Most Sacred Heart of Jesus</Line></span><Line><Red>Have mercy on us.</Red></Line>
-        <span><Line>  Most Sacred Heart of Jesus</Line></span><Line><Red>Have mercy on us.</Red></Line>
+        <Line>Most Chaste Heart of Blessed St. Joseph <Red>Pray for us.</Red></Line>
+        <Line> Most Immaculate Heart of the Blessed Virgin Mary <Red>Pray for us.</Red></Line>
+        <Line>  Most Sacred Heart of Jesus <Red>Have mercy on us.</Red></Line>
+        <Line>  Most Sacred Heart of Jesus <Red>Have mercy on us.</Red></Line>
+        <Line>  Most Sacred Heart of Jesus <Red>Have mercy on us.</Red></Line>
       </p>
     </div>
   </Panel>;
@@ -446,13 +446,13 @@ function Thursday() {
         <Line>  come to our aid.</Line>
       </p>
       <p class='two-cols spaced-small'>
-        <span><Line>From anxiety, sadness and obsessions,</Line></span><Red><Line>We implore Thee, deliver us, O Lord.</Line></Red>
-        <span><Line>From hatred, fornication, and envy,</Line></span><Red><Line>We implore Thee, deliver us, O Lord.</Line></Red>
-        <span><Line>From thoughts of jealousy, rage, and death,</Line></span><Red><Line>We implore Thee, deliver us, O Lord.</Line></Red>
-        <span><Line>From every thought of suicide and abortion,</Line></span><Red><Line>We implore Thee, deliver us, O Lord.</Line></Red>
-        <span><Line>From every form of sinful sexuality,</Line></span><Red><Line>We implore Thee, deliver us, O Lord.</Line></Red>
-        <span><Line>From every division in our family, and every harmful friendship,</Line></span><Red><Line>We implore Thee, deliver us, O Lord.</Line></Red>
-        <span><Line>From every sort of spell, malefice, witchcraft, and every form of the occult,</Line></span><Red><Line>We implore Thee, deliver us, O Lord.</Line></Red>
+        <Line>From anxiety, sadness and obsessions, <Red>We implore Thee, deliver us, O Lord.</Red></Line>
+        <Line>From hatred, fornication, and envy, <Red>We implore Thee, deliver us, O Lord.</Red></Line>
+        <Line>From thoughts of jealousy, rage, and death, <Red>We implore Thee, deliver us, O Lord.</Red></Line>
+        <Line>From every thought of suicide and abortion, <Red>We implore Thee, deliver us, O Lord.</Red></Line>
+        <Line>From every form of sinful sexuality, <Red>We implore Thee, deliver us, O Lord.</Red></Line>
+        <Line>From every division in our family, and every harmful friendship, <Red>We implore Thee, deliver us, O Lord.</Red></Line>
+        <Line>From every sort of spell, malefice, witchcraft, and every form of the occult, <Red>We implore Thee, deliver us, O Lord.</Red></Line>
       </p>
       <p class='spaced-small'>
         <Line>Thou who said, "Peace I leave with you, my peace I give unto you."</Line>
@@ -472,36 +472,36 @@ function Friday() {
       <h1>Friday</h1>
       <h2>Litany of Humility</h2>
       <p class='two-cols spaced-small'>
-        <span><Line>O Jesus meek and humble,</Line></span><Red><Line>hear me.</Line></Red>
+        <Line>O Jesus meek and humble, <Red>hear me.</Red></Line>
       </p>
       <p class='two-cols spaced-small'>
-        <span><Line>From the desire of being esteemed,</Line></span><Red><Line>deliver me Jesus.</Line></Red>
-        <span><Line>From the desire of being loved,</Line></span><Red><Line>deliver me Jesus.</Line></Red>
-        <span><Line>From the desire of being extolled,</Line></span><Red><Line>deliver me Jesus.</Line></Red>
-        <span><Line>From the desire of being honored,</Line></span><Red><Line>deliver me Jesus.</Line></Red>
-        <span><Line>From the desire of being praised,</Line></span><Red><Line>deliver me Jesus.</Line></Red>
-        <span><Line>From the desire of being preferred to others,</Line></span><Red><Line>deliver me Jesus.</Line></Red>
-        <span><Line>From the desire of being consulted,</Line></span><Red><Line>deliver me Jesus.</Line></Red>
-        <span><Line>From the desire of being approved,</Line></span><Red><Line>deliver me Jesus.</Line></Red>
+        <Line>From the desire of being esteemed, <Red>deliver me Jesus.</Red></Line>
+        <Line>From the desire of being loved, <Red>deliver me Jesus.</Red></Line>
+        <Line>From the desire of being extolled, <Red>deliver me Jesus.</Red></Line>
+        <Line>From the desire of being honored, <Red>deliver me Jesus.</Red></Line>
+        <Line>From the desire of being praised, <Red>deliver me Jesus.</Red></Line>
+        <Line>From the desire of being preferred to others, <Red>deliver me Jesus.</Red></Line>
+        <Line>From the desire of being consulted, <Red>deliver me Jesus.</Red></Line>
+        <Line>From the desire of being approved, <Red>deliver me Jesus.</Red></Line>
       </p>
       <p class='two-cols spaced-small'>
-        <span><Line>From the fear of being humiliated,</Line></span><Red><Line>deliver me Jesus.</Line></Red>
-        <span><Line>From the fear of being despised,</Line></span><Red><Line>deliver me Jesus.</Line></Red>
-        <span><Line>From the fear of suffering rebukes,</Line></span><Red><Line>deliver me Jesus.</Line></Red>
-        <span><Line>From the fear of being calumniated,</Line></span><Red><Line>deliver me Jesus.</Line></Red>
-        <span><Line>From the fear of being forgotten,</Line></span><Red><Line>deliver me Jesus.</Line></Red>
-        <span><Line>From the fear of being ridiculed,</Line></span><Red><Line>deliver me Jesus.</Line></Red>
-        <span><Line>From the fear of being wronged,</Line></span><Red><Line>deliver me Jesus.</Line></Red>
-        <span><Line>From the fear of being suspected,</Line></span><Red><Line>deliver me Jesus.</Line></Red>
+        <Line>From the fear of being humiliated, <Red>deliver me Jesus.</Red></Line>
+        <Line>From the fear of being despised, <Red>deliver me Jesus.</Red></Line>
+        <Line>From the fear of suffering rebukes, <Red>deliver me Jesus.</Red></Line>
+        <Line>From the fear of being calumniated, <Red>deliver me Jesus.</Red></Line>
+        <Line>From the fear of being forgotten, <Red>deliver me Jesus.</Red></Line>
+        <Line>From the fear of being ridiculed, <Red>deliver me Jesus.</Red></Line>
+        <Line>From the fear of being wronged, <Red>deliver me Jesus.</Red></Line>
+        <Line>From the fear of being suspected, <Red>deliver me Jesus.</Red></Line>
       </p>
       <p class='two-cols spaced-small'>
-        <span><Line>That others may be loved more than I,</Line></span><Red><Line>Jesus, grant me the grace to desire it.</Line></Red>
-        <span><Line>That others may be esteemed more than I,</Line></span><Red><Line>Jesus, grant me the grace to desire it.</Line></Red>
-        <span><Line>That in the opinion of the world, others may increase and I may decrease,</Line></span><Red><Line>Jesus, grant me the grace to desire it.</Line></Red>
-        <span><Line>That others may be chosen and I set aside,</Line></span><Red><Line>Jesus, grant me the grace to desire it.</Line></Red>
-        <span><Line>That others may be praised and I go unnoticed,</Line></span><Red><Line>Jesus, grant me the grace to desire it.</Line></Red>
-        <span><Line>That others may be preferred to me in everything,</Line></span><Red><Line>Jesus, grant me the grace to desire it.</Line></Red>
-        <span><Line>That others may become holier than I, provided that I become as holy as I should,</Line></span><Red><Line>Jesus, grant me the grace to desire it.</Line></Red>
+        <Line>That others may be loved more than I, <Red>Jesus, grant me the grace to desire it.</Red></Line>
+        <Line>That others may be esteemed more than I, <Red>Jesus, grant me the grace to desire it.</Red></Line>
+        <Line>That in the opinion of the world, others may increase and I may decrease, <Red>Jesus, grant me the grace to desire it.</Red></Line>
+        <Line>That others may be chosen and I set aside, <Red>Jesus, grant me the grace to desire it.</Red></Line>
+        <Line>That others may be praised and I go unnoticed, <Red>Jesus, grant me the grace to desire it.</Red></Line>
+        <Line>That others may be preferred to me in everything, <Red>Jesus, grant me the grace to desire it.</Red></Line>
+        <Line>That others may become holier than I, provided that I become as holy as I should, <Red>Jesus, grant me the grace to desire it.</Red></Line>
       </p>
     </div>
   </Panel>;
@@ -536,57 +536,59 @@ function Litany() {
       <h1>Litany of the Precious Blood</h1>
 
       <div class='two-cols spaced-small'>
-        <span><Line>Lord have mercy,</Line></span><Line><Red>Lord have mercy.</Red></Line>
-        <span><Line>Christ have mercy,</Line></span><Line><Red>Christ have mercy.</Red></Line>
-        <span><Line>Lord have mercy,</Line></span><Line><Red>Lord have mercy.</Red></Line>
-        <span><Line>Christ hear us,</Line></span><Line><Red>Christ graciously hear us.</Red></Line>
+        <Line>Lord have mercy, <Red>Lord have mercy.</Red></Line>
+        <Line>Christ have mercy, <Red>Christ have mercy.</Red></Line>
+        <Line>Lord have mercy, <Red>Lord have mercy.</Red></Line>
+        <div class='spaced-mini' />
+        <Line>Christ hear us, <Red>Christ graciously hear us.</Red></Line>
       </div>
 
       <div class='two-cols spaced-small'>
-        <span><Line>God the Father of Heaven,</Line></span><Line><Red>have mercy on us.</Red></Line>
-        <span><Line>God the Son, Redeemer of the world,</Line></span><Line><Red>have mercy on us.</Red></Line>
-        <span><Line>God the Holy Spirit,</Line></span><Line><Red>have mercy on us.</Red></Line>
-        <span><Line>Holy Trinity, One God,</Line></span><Line><Red>have mercy on us.</Red></Line>
+        <Line>God the Father of Heaven, <Red>have mercy on us.</Red></Line>
+        <Line>God the Son, Redeemer of the world, <Red>have mercy on us.</Red></Line>
+        <Line>God the Holy Spirit, <Red>have mercy on us.</Red></Line>
+        <div class='spaced-mini' />
+        <Line>Holy Trinity, One God, <Red>have mercy on us.</Red></Line>
       </div>
 
       <div class='two-cols spaced-small'>
-        <span><Line>Blood of Christ, only-begotten Son of the Eternal Father,</Line></span><Line><Red>save us.</Red></Line>
-        <span><Line>Blood of Christ, Incarnate Word of God,</Line></span><Line><Red>save us.</Red></Line>
-        <span><Line>Blood of Christ, of the New and Eternal Testament,</Line></span><Line><Red>save us.</Red></Line>
-        <span class='spaced-mini' /><span />
-        <span><Line>Blood of Christ, falling upon the earth in the Agony,</Line></span><Line><Red>save us.</Red></Line>
-        <span><Line>Blood of Christ, shed profusely in the Scourging,</Line></span><Line><Red>save us.</Red></Line>
-        <span><Line>Blood of Christ, flowing forth in the Crowning with Thorns,</Line></span><Line><Red>save us.</Red></Line>
-        <span class='spaced-mini' /><span />
-        <span><Line>Blood of Christ, poured out on the Cross,</Line></span><Line><Red>save us.</Red></Line>
-        <span><Line>Blood of Christ, price of our salvation,</Line></span><Line><Red>save us.</Red></Line>
-        <span><Line>Blood of Christ, without which there is no forgiveness,</Line></span><Line><Red>save us.</Red></Line>
-        <span class='spaced-mini' /><span />
-        <span><Line>Blood of Christ, Eucharistic drink and refreshment of souls,</Line></span><Line><Red>save us.</Red></Line>
-        <span><Line>Blood of Christ, stream of mercy,</Line></span><Line><Red>save us.</Red></Line>
-        <span><Line>Blood of Christ, victor over demons,</Line></span><Line><Red>save us.</Red></Line>
-        <span class='spaced-mini' /><span />
-        <span><Line>Blood of Christ, courage of Martyrs,</Line></span><Line><Red>save us.</Red></Line>
-        <span><Line>Blood of Christ, strength of Confessors,</Line></span><Line><Red>save us.</Red></Line>
-        <span><Line>Blood of Christ, bringing forth Virgins,</Line></span><Line><Red>save us.</Red></Line>
-        <span class='spaced-mini' /><span />
-        <span><Line>Blood of Christ, help of those in peril,</Line></span><Line><Red>save us.</Red></Line>
-        <span><Line>Blood of Christ, relief of the burdened,</Line></span><Line><Red>save us.</Red></Line>
-        <span><Line>Blood of Christ, solace in sorrow,</Line></span><Line><Red>save us.</Red></Line>
-        <span class='spaced-mini' /><span />
-        <span><Line>Blood of Christ, hope of the penitent,</Line></span><Line><Red>save us.</Red></Line>
-        <span><Line>Blood of Christ, consolation of the dying,</Line></span><Line><Red>save us.</Red></Line>
-        <span><Line>Blood of Christ, peace and tenderness of hearts,</Line></span><Line><Red>save us.</Red></Line>
-        <span class='spaced-mini' /><span />
-        <span><Line>Blood of Christ, pledge of eternal life,</Line></span><Line><Red>save us.</Red></Line>
-        <span><Line>Blood of Christ, freeing souls from purgatory,</Line></span><Line><Red>save us.</Red></Line>
-        <span><Line>Blood of Christ, most worthy of all glory and honor,</Line></span><Line><Red>save us.</Red></Line>
+        <Line>Blood of Christ, only-begotten Son of the Eternal Father, <Red>save us.</Red></Line>
+        <Line>Blood of Christ, Incarnate Word of God, <Red>save us.</Red></Line>
+        <Line>Blood of Christ, of the New and Eternal Testament, <Red>save us.</Red></Line>
+        <div class='spaced-mini' />
+        <Line>Blood of Christ, falling upon the earth in the Agony, <Red>save us.</Red></Line>
+        <Line>Blood of Christ, shed profusely in the Scourging, <Red>save us.</Red></Line>
+        <Line>Blood of Christ, flowing forth in the Crowning with Thorns, <Red>save us.</Red></Line>
+        <div class='spaced-mini' />
+        <Line>Blood of Christ, poured out on the Cross, <Red>save us.</Red></Line>
+        <Line>Blood of Christ, price of our salvation, <Red>save us.</Red></Line>
+        <Line>Blood of Christ, without which there is no forgiveness, <Red>save us.</Red></Line>
+        <div class='spaced-mini' />
+        <Line>Blood of Christ, Eucharistic drink and refreshment of souls, <Red>save us.</Red></Line>
+        <Line>Blood of Christ, stream of mercy, <Red>save us.</Red></Line>
+        <Line>Blood of Christ, victor over demons, <Red>save us.</Red></Line>
+        <div class='spaced-mini' />
+        <Line>Blood of Christ, courage of Martyrs, <Red>save us.</Red></Line>
+        <Line>Blood of Christ, strength of Confessors, <Red>save us.</Red></Line>
+        <Line>Blood of Christ, bringing forth Virgins, <Red>save us.</Red></Line>
+        <div class='spaced-mini' />
+        <Line>Blood of Christ, help of those in peril, <Red>save us.</Red></Line>
+        <Line>Blood of Christ, relief of the burdened, <Red>save us.</Red></Line>
+        <Line>Blood of Christ, solace in sorrow, <Red>save us.</Red></Line>
+        <div class='spaced-mini' />
+        <Line>Blood of Christ, hope of the penitent, <Red>save us.</Red></Line>
+        <Line>Blood of Christ, consolation of the dying, <Red>save us.</Red></Line>
+        <Line>Blood of Christ, peace and tenderness of hearts, <Red>save us.</Red></Line>
+        <div class='spaced-mini' />
+        <Line>Blood of Christ, pledge of eternal life, <Red>save us.</Red></Line>
+        <Line>Blood of Christ, freeing souls from purgatory, <Red>save us.</Red></Line>
+        <Line>Blood of Christ, most worthy of all glory and honor, <Red>save us.</Red></Line>
       </div>
 
       <div class='two-cols spaced-small'>
-        <span><Line>Lamb of God, Who takest away the sins of the world,</Line></span><Line><Red>spare us, O Lord.</Red></Line>
-        <span><Line>Lamb of God, Who takest away the sins of the world,</Line></span><Line><Red>graciously hear us, O Lord.</Red></Line>
-        <span><Line>Lamb of God, Who takest away the sins of the world,</Line></span><Line><Red>have mercy on us.</Red></Line>
+        <Line>Lamb of God, Who takest away the sins of the world, <Red>spare us, O Lord.</Red></Line>
+        <Line>Lamb of God, Who takest away the sins of the world, <Red>graciously hear us, O Lord.</Red></Line>
+        <Line>Lamb of God, Who takest away the sins of the world, <Red>have mercy on us.</Red></Line>
       </div>
 
       <p class='spaced-small'>
