@@ -47,7 +47,7 @@ else {
 
 const addTagButton = document.getElementById('addtag')!;
 
-const tags = await fetch('../tags.json').then(res => res.json());
+const tags = await fetch('../util/tags.json').then(res => res.json());
 for (const tag of tags) {
   addTagButton.parentElement!.insertAdjacentElement('beforebegin',
     <li>
