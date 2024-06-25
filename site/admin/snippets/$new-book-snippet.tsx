@@ -126,13 +126,51 @@ const editor = monaco.editor.create(document.getElementById('editorarea')!, {
 
 editor.addAction({
   id: 'toggle-word-wrap',
-  label: 'Toggle word wrap',
+  label: 'Toggle Word Wrap',
   keybindings: [monaco.KeyMod.Alt | monaco.KeyCode.KeyZ],
   run: () => {
     wordWrap = !wordWrap;
     editor.updateOptions({
       wordWrap: wordWrap ? 'on' : 'off',
     });
+  }
+});
+
+editor.addAction({
+  id: 'make-italic',
+  label: 'Make Italic',
+  keybindings: [monaco.KeyMod.CtrlCmd | monaco.KeyCode.KeyI],
+  run: () => {
+    editor.getModel()!.pushStackElement();
+
+    let sels = editor.getSelections()!;
+    if (sels.every((sel: any) => sel.isEmpty())) {
+      sels = [editor.getModel()!.getFullModelRange() as any];
+    }
+
+    editor.executeEdits('admin', sels.map((sel: any) => ({
+      range: sel,
+      text: `*${editor.getModel()!.getValueInRange(sel)}*`,
+    })));
+  }
+});
+
+editor.addAction({
+  id: 'make-bold',
+  label: 'Make Bold',
+  keybindings: [monaco.KeyMod.CtrlCmd | monaco.KeyCode.KeyB],
+  run: () => {
+    editor.getModel()!.pushStackElement();
+
+    let sels = editor.getSelections()!;
+    if (sels.every((sel: any) => sel.isEmpty())) {
+      sels = [editor.getModel()!.getFullModelRange() as any];
+    }
+
+    editor.executeEdits('admin', sels.map((sel: any) => ({
+      range: sel,
+      text: `**${editor.getModel()!.getValueInRange(sel)}**`,
+    })));
   }
 });
 
