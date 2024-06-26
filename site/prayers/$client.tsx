@@ -148,6 +148,14 @@ for (const slideshow of document.querySelectorAll<HTMLDivElement>('.slideshow'))
     if (lastPanel) lastPanel.next = panel;
     lastPanel = panel;
 
+    panelBodyDiv.onwheel = (e) => {
+      e.preventDefault();
+      if (e.deltaY > 0)
+        panel.nextLine();
+      else if (e.deltaY < 0)
+        panel.prevLine();
+    };
+
     panelBodyDiv.setAttribute('tabindex', '0');
     panelBodyDiv.onkeydown = (e) => {
       if (e.key === 'ArrowLeft') {
