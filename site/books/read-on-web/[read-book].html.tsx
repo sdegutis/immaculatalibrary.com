@@ -16,7 +16,6 @@ handlers.set('/reorder-snippets-in-book', (body) => {
     s.data.sortOrder = i;
     s.save();
   }
-  console.log('done')
   return '/';
 });
 
