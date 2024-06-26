@@ -133,6 +133,8 @@ class Panel {
 
 const tabs: Tab[] = [];
 
+let buttonEasterEgg = false;
+
 const tabButtons = [...document.querySelectorAll<HTMLAnchorElement>('#tabs-names a')];
 for (const slideshow of document.querySelectorAll<HTMLDivElement>('.slideshow')) {
   let lastPanel: Panel | undefined;
@@ -156,12 +158,27 @@ for (const slideshow of document.querySelectorAll<HTMLDivElement>('.slideshow'))
         e.preventDefault();
         panel.next?.focus();
       }
+      else if (e.key === 'Enter' && e.ctrlKey) {
+        e.preventDefault();
+        buttonEasterEgg = !buttonEasterEgg;
+
+        for (const button of document.querySelectorAll<HTMLButtonElement>('.page-changer')) {
+          const side = button.classList.contains('side-left') ? 'left' : 'right';
+          if (buttonEasterEgg) {
+            button.textContent = `Go to the page on the ${side} by clicking here.`;
+          }
+          else {
+            button.replaceChildren(side === 'left' ? <LeftArrow /> : <RightArrow />);
+          }
+        }
+      }
+      else if (e.key === ' ' && e.ctrlKey) {
+        e.preventDefault();
+        ease = ease === easeInOut ? sillyEase : easeInOut;
+      }
       else if (e.key === ' ') {
         e.preventDefault();
-        if (e.ctrlKey)
-          ease = ease === easeInOut ? sillyEase : easeInOut;
-        else
-          panel.nextLine();
+        panel.nextLine();
       }
       else if (e.key === 'ArrowUp') {
         if (panel.hasLines()) {
@@ -192,7 +209,7 @@ for (const slideshow of document.querySelectorAll<HTMLDivElement>('.slideshow'))
 
 function PageChanger(attrs: { to: Panel, side: 'left' | 'right' }, children: any) {
   const button = (
-    <button class='page-changer' style={`${attrs.side}: 1px`}>
+    <button class={`page-changer side-${attrs.side}`} style={`${attrs.side}: 1px;`}>
       {children}
     </button>
   ) as HTMLButtonElement;
