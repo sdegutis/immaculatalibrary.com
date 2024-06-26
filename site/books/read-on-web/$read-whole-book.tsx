@@ -50,5 +50,7 @@ function moveSnippet(div: HTMLDivElement, by: number) {
   chapters.splice(i, 1);
   chapters.splice(i + by, 0, c);
 
+  for (let i = 0; i < chapters.length; i++) chapters[i]!.i = i;
+
   saveOrder();
 }
