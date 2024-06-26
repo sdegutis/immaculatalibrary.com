@@ -94,7 +94,7 @@ async function checkIfHuman(phrase: string[]) {
   await v.run(phrase);
 }
 
-if (Math.random() < 0.2) {
+if (Math.random() < 0.05) {
   const phrases = [
     [
       `Hi.\r Are you a robot?\r\r\r`,
