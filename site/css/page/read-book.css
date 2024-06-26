@@ -5,6 +5,10 @@
   align-items: baseline;
 }
 
+.chapter-link {
+  display: contents;
+}
+
 main {
   padding: 0 1em;
   width: 100vw;

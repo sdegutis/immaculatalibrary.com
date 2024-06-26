@@ -5,6 +5,7 @@ dateAdded: '2020-04-07'
 author: 'Venerable Louis of Granada'
 translator: ''
 score: 120
+complete: true
 rating: 5
 frontpage:
   image: holy-spirit

@@ -1,10 +1,18 @@
 import { Typography } from "../../components/$typography.js";
+import { Admin } from "../../components/admin.js";
 import { Navlinks } from "../../components/navlinks.js";
 import { EmptyPage } from "../../components/page.js";
 import { Rating } from "../../components/rating.js";
 import { SiteFooter } from "../../components/site-footer.js";
+import { handlers } from "../../core/exports.js";
 import { allBooks } from "../../model/books.js";
 import { markdown } from "../../util/helpers.js";
+
+handlers.set('/reorder-snippets-in-book', (body) => {
+  const json = JSON.parse(body) as { slug: string, i: number }[];
+
+  return '/';
+});
 
 export default allBooks.filter(book => book.data.complete).map(book => {
   const orderedSnippets = [...book.snippets];
@@ -14,6 +22,7 @@ export default allBooks.filter(book => book.data.complete).map(book => {
     <EmptyPage>
 
       <link rel="stylesheet" href='/css/page/read-book.css' />
+      <Admin><script type='module' src='./$read-whole-book.js' /></Admin>
 
       <main>
 
@@ -35,12 +44,12 @@ export default allBooks.filter(book => book.data.complete).map(book => {
 
             <h3>Chapter Index</h3>
             <div class="readonline-chapters">
-              {orderedSnippets.map((bookSnippet, i) => <>
+              {orderedSnippets.map((bookSnippet, i) => <span class='chapter-link'>
                 <span>Ch.{i + 1}</span>
                 <a href={`#snippet-${bookSnippet.slug}`}>
                   {bookSnippet.renderedTitle}
                 </a>
-              </>)}
+              </span>)}
             </div>
 
           </div>
