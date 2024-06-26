@@ -7,7 +7,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '31'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 17
+sortOrder: 16
 ---
 
 > It is not only a motive of justice which obliges us to serve God, but our necessities force us to have recourse to Him if we would attain the perfection and happiness for which we were created.

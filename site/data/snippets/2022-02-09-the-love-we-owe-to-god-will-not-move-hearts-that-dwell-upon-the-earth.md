@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '16'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 5
+sortOrder: 4
 ---
 
 > Though of all motives this is the most powerful, yet it has least influence on the imperfect. The reason of this is because, on the one hand, they are more moved by self-interest, self-love having deep root in their hearts; and on the other, being still ignorant, and novices in the ways of God, they are unable to appreciate His grandeur and beauty.

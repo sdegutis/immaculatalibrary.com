@@ -7,7 +7,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '21'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 9
+sortOrder: 8
 ---
 
 > If you would have farther proof of the infinite power and greatness of God, contemplate the order and beauty of the world.

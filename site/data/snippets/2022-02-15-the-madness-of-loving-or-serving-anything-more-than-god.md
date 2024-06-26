@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '23'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 11
+sortOrder: 10
 ---
 
 > Thus we begin to understand, in some manner, what are the perfections of God, since they cannot but be in proportion to His being. For, as we read in Ecclesiasticus: "According to His greatness, so also is His mercy with Him." [Ecclus. ii. 23.] Nor are any of His other attributes less.

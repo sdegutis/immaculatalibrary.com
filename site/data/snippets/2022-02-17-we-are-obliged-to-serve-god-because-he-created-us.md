@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '26'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 14
+sortOrder: 12
 ---
 
 > *CHAPTER II.*

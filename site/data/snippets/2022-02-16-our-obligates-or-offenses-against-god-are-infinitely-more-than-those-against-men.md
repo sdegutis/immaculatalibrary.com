@@ -10,7 +10,7 @@ tags:
   - Bible Commentary
   - Doctrine
   - Morals
-sortOrder: 12
+sortOrder: 11
 ---
 
 > Here, then, is the first motive which obliges us to love and serve God. This is an obligation so great that compared to it all obligations to creatures, whatever their excellence or perfections, are only obligations in name.

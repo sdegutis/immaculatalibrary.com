@@ -8,7 +8,7 @@ tags:
   - Exhortation
   - Morals
   - Poverty
-sortOrder: 19
+sortOrder: 18
 ---
 
 > If, then, thou art blind, poor, and in need, why dost thou not seek the Father who created thee, the Artist who designed thee, that He may satisfy thy wants and supply all that is lacking to thy perfection? Penetrated with this truth, David cried out: "Thy hands have made me and formed me: give me understanding, and I will learn Thy commandments." [Px. cxviii. 73.]

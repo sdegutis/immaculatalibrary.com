@@ -7,7 +7,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '35'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 21
+sortOrder: 20
 ---
 
 > The goodness of this sovereign Being is so great, says St. Denis, that while creatures are offending Him and madly rebelling against His will He continues to give them the power and strength which they use to resist Him.

@@ -52,5 +52,8 @@ function moveSnippet(div: HTMLDivElement, by: number) {
 
   for (let i = 0; i < chapters.length; i++) chapters[i]!.i = i;
 
+  window.location.hash = '#';
+  window.location.hash = '#' + div.id;
+
   saveOrder();
 }

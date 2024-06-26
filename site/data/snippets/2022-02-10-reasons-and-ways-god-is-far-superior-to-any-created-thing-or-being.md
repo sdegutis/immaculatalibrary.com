@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '17'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 6
+sortOrder: 5
 ---
 
 > We shall better understand this truth if we consider with more attention the vast difference between this uncreated Being and all other beings, between the Creator and His creatures.

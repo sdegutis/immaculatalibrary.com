@@ -7,7 +7,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '36'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 22
+sortOrder: 21
 ---
 
 > Consider in addition to this benefit the rich and delightful banquet of nature prepared for you by your Creator.

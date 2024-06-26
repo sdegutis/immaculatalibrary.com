@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '3'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 1
+sortOrder: 0
 ---
 
 > *INTRODUCTION.*

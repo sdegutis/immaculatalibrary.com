@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '13'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 2
+sortOrder: 1
 ---
 
 > ### THE SINNER'S GUIDE.

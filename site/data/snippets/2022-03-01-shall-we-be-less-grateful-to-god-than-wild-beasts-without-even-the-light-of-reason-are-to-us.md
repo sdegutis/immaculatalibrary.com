@@ -7,7 +7,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '39'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 24
+sortOrder: 23
 ---
 
 > Since, then, every creature is a benefit from God, how can we live surrounded by these proofs of His love, and yet never think of Him?
