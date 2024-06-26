@@ -4,6 +4,8 @@ title: God consoles us in the hour of affliction
 archiveSlug: sinnersguide00luis
 archivePage: '210'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 134
 ---
 
 > CHAPTER XXI.

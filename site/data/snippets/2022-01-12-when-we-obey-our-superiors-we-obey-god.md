@@ -9,6 +9,7 @@ tags:
   - Obedience
   - Doctrine
   - Authority
+sortOrder: 291
 ---
 
 > *CHAPTER XLIII.*

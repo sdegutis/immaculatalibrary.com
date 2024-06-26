@@ -4,6 +4,8 @@ title: The Joyful Consolations of the Holy Spirit toward the Just
 archiveSlug: sinnersguide00luis
 archivePage: '156'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 97
 ---
 
 > *CHAPTER XV.*

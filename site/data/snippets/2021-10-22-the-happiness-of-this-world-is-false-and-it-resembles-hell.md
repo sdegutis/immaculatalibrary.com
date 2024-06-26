@@ -4,6 +4,8 @@ title: The happiness of this world is false, and it resembles Hell
 archiveSlug: sinnersguide00luis
 archivePage: '305'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 188
 ---
 
 > You have here, dear Christian, a true picture of the world, however contrary it is to what the world appears to be. Judge, therefore, of its happiness, so brief, so uncertain, so dangerous, and so delusive.

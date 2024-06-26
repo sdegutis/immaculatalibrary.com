@@ -4,6 +4,8 @@ title: General considerations to cure pride and obtain humility
 archiveSlug: sinnersguide00luis
 archivePage: '332'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 211
 ---
 
 > If you find yourself inclined to take pride in a good action, carefully watch the feelings of your heart, bearing in mind that this satisfaction and vain-glory will destroy all the merit of your labor.

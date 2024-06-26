@@ -7,6 +7,7 @@ bookSlug: the-sinners-guide
 tags:
   - Exhortation
   - Morals
+sortOrder: 31
 ---
 
 > Tell me, O ye creatures! whether a greater benefit, a more generous favor, a more binding obligation can be conceived. Tell me, O ye celestial choirs! whether God has done for you what He has done for us? Who, then, will refuse to give himself without reserve to the service of such a Master?

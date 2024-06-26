@@ -6,16 +6,24 @@ import { Rating } from "../../components/rating.js";
 import { SiteFooter } from "../../components/site-footer.js";
 import { handlers } from "../../core/exports.js";
 import { allBooks } from "../../model/books.js";
-import { markdown } from "../../util/helpers.js";
+import { allSnippets } from "../../model/snippets.js";
+import { markdown, sortBy } from "../../util/helpers.js";
 
 handlers.set('/reorder-snippets-in-book', (body) => {
   const json = JSON.parse(body) as { slug: string, i: number }[];
-
+  for (const { i, slug } of json) {
+    const s = allSnippets.find(s => slug === s.slug)!;
+    s.data.sortOrder = i;
+    s.save();
+  }
+  console.log('done')
   return '/';
 });
 
 export default allBooks.filter(book => book.data.complete).map(book => {
   const orderedSnippets = [...book.snippets];
+  orderedSnippets.sort(sortBy(s => s.data.sortOrder ?? 0));
+
   const file = book.data.files[0]!;
 
   return [book.slug, <>

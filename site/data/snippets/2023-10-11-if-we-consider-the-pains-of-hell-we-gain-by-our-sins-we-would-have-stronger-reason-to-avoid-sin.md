@@ -7,6 +7,7 @@ archivePage: '107'
 archiveSlug: sinnersguide00luis
 bookSlug: the-sinners-guide
 tags: []
+sortOrder: 68
 ---
 
 > CHAPTER X.

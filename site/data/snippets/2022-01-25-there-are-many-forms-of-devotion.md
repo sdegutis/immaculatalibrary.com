@@ -4,6 +4,8 @@ title: There are many forms of devotion
 archiveSlug: sinnersguide00luis
 archivePage: '470'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 305
 ---
 
 > *CHAPTER XLVI.*

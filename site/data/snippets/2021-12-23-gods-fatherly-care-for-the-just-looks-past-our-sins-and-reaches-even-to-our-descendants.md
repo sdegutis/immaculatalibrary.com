@@ -1,9 +1,13 @@
 ---
 published: true
-title: God’s Fatherly care for the Just looks past our sins, and reaches even to our descendants
+title: >-
+  God’s Fatherly care for the Just looks past our sins, and reaches even to our
+  descendants
 archiveSlug: sinnersguide00luis
 archivePage: '133'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 83
 ---
 
 > This protection not only delivers the just from evil and leads them to good, but turns to their profit the sins into which they are sometimes permitted to fall.

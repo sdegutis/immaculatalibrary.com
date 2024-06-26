@@ -4,6 +4,8 @@ title: God's perfections are infinitely above our understanding
 archiveSlug: sinnersguide00luis
 archivePage: '18'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 7
 ---
 
 > The Divine Being thus comprises in its unity apparently opposite qualities and perfections which we can never sufficiently admire; for, as St. Augustine observes,\*

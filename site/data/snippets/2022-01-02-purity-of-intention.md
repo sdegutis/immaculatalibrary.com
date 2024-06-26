@@ -4,6 +4,8 @@ title: Purity of Intention
 archiveSlug: sinnersguide00luis
 archivePage: '434'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 280
 ---
 
 > *Section VI.*

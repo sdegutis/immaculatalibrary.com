@@ -4,6 +4,8 @@ title: Our sinful nature should not discourage us, since God has promised to hel
 archiveSlug: sinnersguide00luis
 archivePage: '275'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 169
 ---
 
 > But, to study the subject more in detail, what is the cause of the difficulty you find in practising virtue? You say it is the evil inclinations of your heart, as well as the perpetual conflict between the spirit and the flesh, which has been conceived in sin.

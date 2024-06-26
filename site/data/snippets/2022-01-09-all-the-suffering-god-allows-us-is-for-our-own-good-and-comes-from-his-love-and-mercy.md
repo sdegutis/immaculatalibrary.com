@@ -1,9 +1,13 @@
 ---
 published: true
-title: All the suffering God allows us, is for our own good, and comes from his Love and Mercy
+title: >-
+  All the suffering God allows us, is for our own good, and comes from his Love
+  and Mercy
 archiveSlug: sinnersguide00luis
 archivePage: '445'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 287
 ---
 
 > Consider also the different effects of prosperity and adversity. The former inflates us with pride; the latter humbles and purifies us.

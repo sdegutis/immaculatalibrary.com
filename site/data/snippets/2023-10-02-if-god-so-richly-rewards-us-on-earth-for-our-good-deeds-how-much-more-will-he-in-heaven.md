@@ -1,9 +1,13 @@
 ---
 published: true
-title: "If God so richly rewards us on earth for our good deeds, how much more will he in heaven?"
-archiveSlug: "sinnersguide00luis"
-archivePage: "100"
-bookSlug: "the-sinners-guide"
+title: >-
+  If God so richly rewards us on earth for our good deeds, how much more will he
+  in heaven?
+archiveSlug: sinnersguide00luis
+archivePage: '100'
+bookSlug: the-sinners-guide
+tags: []
+sortOrder: 63
 ---
 
 > The Holy Scriptures teach us also with what liberality God rewards the services we render Him.

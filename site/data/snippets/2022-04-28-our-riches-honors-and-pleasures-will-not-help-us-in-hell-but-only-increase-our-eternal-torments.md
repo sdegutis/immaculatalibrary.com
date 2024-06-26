@@ -1,6 +1,8 @@
 ---
 published: true
-title: Our riches, honors, and pleasures will not help us in Hell but only increase our eternal torments
+title: >-
+  Our riches, honors, and pleasures will not help us in Hell but only increase
+  our eternal torments
 archiveSlug: sinnersguide00luis
 archivePage: '91'
 bookSlug: the-sinners-guide
@@ -14,6 +16,7 @@ tags:
   - Justice
   - Morals
   - What the Saints Say
+sortOrder: 57
 ---
 
 > Unhappy tongues which henceforth utter only blasphemies! Unhappy ears to be forever filled with sighs and lamentations! Unhappy eyes which will never gaze upon anything but misery! Unhappy flesh consumed in eternal flames!

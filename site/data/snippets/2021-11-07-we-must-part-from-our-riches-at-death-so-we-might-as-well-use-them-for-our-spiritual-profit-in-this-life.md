@@ -1,9 +1,13 @@
 ---
 published: true
-title: We must part from our riches at death, so we might as well use them for our spiritual profit in this life
+title: >-
+  We must part from our riches at death, so we might as well use them for our
+  spiritual profit in this life
 archiveSlug: sinnersguide00luis
 archivePage: '338'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 215
 ---
 
 > Life is short; every moment brings us nearer to death. Why, then, lay up so much provision for so short a journey? Why burden yourself with so many possessions which must necessarily impede your progress?

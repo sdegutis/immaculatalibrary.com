@@ -4,6 +4,8 @@ title: We are inclined against Virtue because of the Fall of Man
 archiveSlug: sinnersguide00luis
 archivePage: '272'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 167
 ---
 
 > CHAPTER XXVII.

@@ -4,6 +4,8 @@ title: God also deserves our service because he continually sustains our existen
 archiveSlug: sinnersguide00luis
 archivePage: '34'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 20
 ---
 
 > *CHAPTER III.*

@@ -4,6 +4,8 @@ title: The danger of vainglory, and considerations to remedy it
 archiveSlug: sinnersguide00luis
 archivePage: '327'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 205
 ---
 
 > Consider also the danger of vainglory, the daughter of pride, which as St. Bernard says, enters lightly but wounds deeply.

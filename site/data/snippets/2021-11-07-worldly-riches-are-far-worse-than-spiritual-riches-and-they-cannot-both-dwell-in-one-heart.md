@@ -1,9 +1,13 @@
 ---
 published: true
-title: Worldly riches are far worse than spiritual riches, and they cannot both dwell in one heart
+title: >-
+  Worldly riches are far worse than spiritual riches, and they cannot both dwell
+  in one heart
 archiveSlug: sinnersguide00luis
 archivePage: '336'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 213
 ---
 
 > Consider also these words of our Saviour: "No man can serve two masters, God and mammon." [St. Matt. vi. 24.] Man cannot freely rise to God and the contemplation of His beauty while he is breathless in the pursuit of riches.

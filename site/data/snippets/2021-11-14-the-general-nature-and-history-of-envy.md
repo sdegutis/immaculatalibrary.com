@@ -4,6 +4,8 @@ title: The general nature and history of Envy
 archiveSlug: sinnersguide00luis
 archivePage: '353'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 230
 ---
 
 > CHAPTER XXXIII.

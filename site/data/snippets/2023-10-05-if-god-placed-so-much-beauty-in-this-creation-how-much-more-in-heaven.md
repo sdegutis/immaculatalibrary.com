@@ -1,9 +1,11 @@
 ---
 published: true
-title: "If God placed so much beauty in this creation, how much more in Heaven?"
-archiveSlug: "sinnersguide00luis"
-archivePage: "102"
-bookSlug: "the-sinners-guide"
+title: If God placed so much beauty in this creation, how much more in Heaven?
+archiveSlug: sinnersguide00luis
+archivePage: '102'
+bookSlug: the-sinners-guide
+tags: []
+sortOrder: 64
 ---
 
 > It may further help us to conceive a faint image of this eternal glory to consider the nobility and grandeur of the empyreal Heaven, our future country.

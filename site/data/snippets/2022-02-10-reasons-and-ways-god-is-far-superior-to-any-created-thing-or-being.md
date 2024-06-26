@@ -4,6 +4,8 @@ title: Reasons and ways God is far superior to any created thing or being
 archiveSlug: sinnersguide00luis
 archivePage: '17'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 6
 ---
 
 > We shall better understand this truth if we consider with more attention the vast difference between this uncreated Being and all other beings, between the Creator and His creatures.

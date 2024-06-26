@@ -4,6 +4,8 @@ title: The danger of ambition, and considerations to remedy it
 archiveSlug: sinnersguide00luis
 archivePage: '328'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 206
 ---
 
 > Be mindful also, O ambitious man! of the dangers to which you expose yourself by seeking to command others.

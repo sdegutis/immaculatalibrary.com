@@ -4,6 +4,8 @@ title: The sufferings of Christ and the Saints should encourage and inspire us
 archiveSlug: sinnersguide00luis
 archivePage: '485'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 314
 ---
 
 > If these examples do not move you, lift your eyes to the Cross and contemplate Him Who hangs there in torments for love of you.

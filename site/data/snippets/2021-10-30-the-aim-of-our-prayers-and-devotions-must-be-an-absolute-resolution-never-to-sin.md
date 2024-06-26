@@ -1,9 +1,13 @@
 ---
 published: true
-title: The aim of our prayers and devotions must be an absolute resolution never to sin
+title: >-
+  The aim of our prayers and devotions must be an absolute resolution never to
+  sin
 archiveSlug: sinnersguide00luis
 archivePage: '320'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 200
 ---
 
 > He who desires to walk resolutely in the same path must strive to imitate them by fixing this resolution deep in his soul. Appreciating things at their true value, he must prefer the friendship of God to all the treasures of earth; he must unhesitatingly sacrifice perishable joys for delights that will be eternal.

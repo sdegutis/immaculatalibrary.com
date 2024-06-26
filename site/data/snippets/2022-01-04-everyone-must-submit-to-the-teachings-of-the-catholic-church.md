@@ -4,6 +4,8 @@ title: Everyone must submit to the teachings of the Catholic Church
 archiveSlug: sinnersguide00luis
 archivePage: '154'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 96
 ---
 
 > Before concluding this chapter we would make the following suggestion:

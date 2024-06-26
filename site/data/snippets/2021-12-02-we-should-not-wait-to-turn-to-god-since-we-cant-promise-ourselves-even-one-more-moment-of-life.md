@@ -1,9 +1,13 @@
 ---
 published: true
-title: We should not wait to turn to God, since we can’t promise ourselves even one more moment of life
+title: >-
+  We should not wait to turn to God, since we can’t promise ourselves even one
+  more moment of life
 archiveSlug: sinnersguide00luis
 archivePage: '238'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 147
 ---
 
 > Before we speak of the facility of conversion, tell me who has assured you that you will live to the time you have appointed for your amendment. Do you not know how many have been deceived by this hope?

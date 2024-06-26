@@ -4,6 +4,8 @@ title: Some of the many evil effects of Lust
 archiveSlug: sinnersguide00luis
 archivePage: '346'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 222
 ---
 
 > Learn, too, how many sins spring from this one vice; for during this long captivity of the soul how often is God offended by thoughts, words, and desires, if not by actions?

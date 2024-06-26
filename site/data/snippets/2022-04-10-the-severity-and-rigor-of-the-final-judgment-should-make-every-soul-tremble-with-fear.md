@@ -1,6 +1,8 @@
 ---
 published: true
-title: The severity and rigor of the Final Judgment should make every soul tremble with fear
+title: >-
+  The severity and rigor of the Final Judgment should make every soul tremble
+  with fear
 archiveSlug: sinnersguide00luis
 archivePage: '87'
 bookSlug: the-sinners-guide
@@ -10,6 +12,7 @@ tags:
   - Exhortation
   - Four Last Things
   - Meditations
+sortOrder: 55
 ---
 
 > THE EIGHTH MOTIVE FOR PRACTISING VIRTUE: THE THOUGHT OF THE LAST JUDGMENT, THE SECOND OF THE FOUR LAST THINGS.

@@ -4,6 +4,8 @@ title: Envy makes us resemble demons, and actually profits us nothing
 archiveSlug: sinnersguide00luis
 archivePage: '355'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 231
 ---
 
 > To strengthen your aversion to this vice make use of the following reflections: Consider, first, what a resemblance the envious man bears to the devils, who look with rage upon our good works and the heavenly reward we are to receive for them.

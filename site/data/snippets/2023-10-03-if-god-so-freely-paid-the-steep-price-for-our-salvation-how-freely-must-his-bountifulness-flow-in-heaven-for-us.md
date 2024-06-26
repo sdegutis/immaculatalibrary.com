@@ -1,9 +1,13 @@
 ---
 published: true
-title: "If God so freely paid the steep price for our salvation, how freely must his bountifulness flow in heaven for us?"
-archiveSlug: "sinnersguide00luis"
-archivePage: "100"
-bookSlug: "the-sinners-guide"
+title: >-
+  If God so freely paid the steep price for our salvation, how freely must his
+  bountifulness flow in heaven for us?
+archiveSlug: sinnersguide00luis
+archivePage: '100'
+bookSlug: the-sinners-guide
+tags: []
+sortOrder: 62
 ---
 
 > Another consideration which will help us to form some idea of the eternal beatitude promised us is the price which God, Who is so liberal, required for it.

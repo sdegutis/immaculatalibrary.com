@@ -1,9 +1,13 @@
 ---
 published: true
-title: The happiness of this life is full of snares and miseries caused by the darkness and blindness of the world
+title: >-
+  The happiness of this life is full of snares and miseries caused by the
+  darkness and blindness of the world
 archiveSlug: sinnersguide00luis
 archivePage: '298'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 183
 ---
 
 > The blindness and darkness which prevail in the world render these snares still more dangerous.

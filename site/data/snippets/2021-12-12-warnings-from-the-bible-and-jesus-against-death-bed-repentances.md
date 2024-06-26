@@ -4,6 +4,8 @@ title: Warnings from the Bible and Jesus against death-bed repentances
 archiveSlug: sinnersguide00luis
 archivePage: '257'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 158
 ---
 
 > As the final decision of this question depends on the word of God, I pray you to hear what He teaches us through Holy Scripture.

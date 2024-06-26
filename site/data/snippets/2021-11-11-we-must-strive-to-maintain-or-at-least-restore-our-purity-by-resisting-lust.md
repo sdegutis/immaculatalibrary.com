@@ -4,6 +4,8 @@ title: We must strive to maintain or at least restore our purity by resisting Lu
 archiveSlug: sinnersguide00luis
 archivePage: '348'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 225
 ---
 
 > Virginity not only renders man like unto Christ, but makes him the temple of the Holy Spirit. For this Divine Lover of purity abhors whatever is defiled, and delights to dwell in chaste souls.

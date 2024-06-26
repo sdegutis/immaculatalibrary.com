@@ -4,6 +4,8 @@ title: We must prefer the virtues more pleasing to God than to men
 archiveSlug: sinnersguide00luis
 archivePage: '460'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 297
 ---
 
 > *Section II.*

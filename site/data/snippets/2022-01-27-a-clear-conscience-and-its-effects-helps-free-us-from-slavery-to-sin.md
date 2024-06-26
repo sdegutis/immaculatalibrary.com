@@ -4,6 +4,8 @@ title: A clear conscience and its effects helps free us from slavery to sin
 archiveSlug: sinnersguide00luis
 archivePage: '193'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 122
 ---
 
 > A second source of this liberty is the joy of a good conscience and the spiritual consolations experienced by the just.

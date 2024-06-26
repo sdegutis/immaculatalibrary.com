@@ -4,6 +4,8 @@ title: God’s Fatherly Care for the Just is the greatest Privilege of Virtue
 archiveSlug: sinnersguide00luis
 archivePage: '130'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 81
 ---
 
 > *CHAPTER XII.*

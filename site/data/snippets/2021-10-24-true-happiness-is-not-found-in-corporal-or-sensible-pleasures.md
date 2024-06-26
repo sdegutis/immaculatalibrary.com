@@ -4,6 +4,8 @@ title: True happiness is not found in corporal or sensible pleasures
 archiveSlug: sinnersguide00luis
 archivePage: '308'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 190
 ---
 
 > To understand this more fully remember that true happiness does not consist in sensible or corporal pleasures, as the disciples of Epicurus and Mahomet [Muhammad of Islam] assume.

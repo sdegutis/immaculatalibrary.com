@@ -4,6 +4,8 @@ title: The Just enjoy the sweetest, loveliest joys especially during Prayer
 archiveSlug: sinnersguide00luis
 archivePage: '160'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 99
 ---
 
 > That it is particularly in prayer that just souls enjoy these divine consolations is a truth we now wish to prove.

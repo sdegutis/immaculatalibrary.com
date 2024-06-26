@@ -4,6 +4,8 @@ title: General advice against Temperance
 archiveSlug: sinnersguide00luis
 archivePage: '399'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 260
 ---
 
 > Section III.

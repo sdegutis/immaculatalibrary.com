@@ -4,6 +4,8 @@ title: The foolishness of continuing in sin, trusting in God’s mercy
 archiveSlug: sinnersguide00luis
 archivePage: '264'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 161
 ---
 
 > CHAPTER XXVI.

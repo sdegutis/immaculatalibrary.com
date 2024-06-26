@@ -4,6 +4,8 @@ title: The True Liberty of the Just
 archiveSlug: sinnersguide00luis
 archivePage: '179'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 112
 ---
 
 > CHAPTER XVIII.

@@ -1,9 +1,13 @@
 ---
 published: true
-title: People continue to sin because they think there’s no punishment, and they avoid virtue thinking there’s no benefit
+title: >-
+  People continue to sin because they think there’s no punishment, and they
+  avoid virtue thinking there’s no benefit
 archiveSlug: sinnersguide00luis
 archivePage: '121'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 76
 ---
 
 > CHAPTER XI.

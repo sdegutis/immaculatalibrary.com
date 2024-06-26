@@ -4,6 +4,8 @@ title: God is the Good Shepherd of the Just
 archiveSlug: sinnersguide00luis
 archivePage: '136'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 85
 ---
 
 > It is in illustration of this same providence that God assumes the title of Shepherd.

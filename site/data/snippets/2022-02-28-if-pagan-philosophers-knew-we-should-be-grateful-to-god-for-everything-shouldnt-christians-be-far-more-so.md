@@ -1,9 +1,13 @@
 ---
 published: true
-title: If pagan philosophers knew we should be grateful to God for everything, shouldn't Christians be far more so?
+title: >-
+  If pagan philosophers knew we should be grateful to God for everything,
+  shouldn't Christians be far more so?
 archiveSlug: sinnersguide00luis
 archivePage: '38'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 23
 ---
 
 > Epictetus, a pagan philosopher, fully appreciated this truth. He teaches us to behold the Creator in all His creatures, and to refer to Him all the blessings we receive from them.

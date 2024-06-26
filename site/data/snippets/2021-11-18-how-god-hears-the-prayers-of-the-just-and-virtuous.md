@@ -4,6 +4,8 @@ title: How God hears the prayers of the Just and Virtuous
 archiveSlug: sinnersguide00luis
 archivePage: '208'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 133
 ---
 
 > If you would learn how such promises are fulfilled, study the lives of the Saints and see what marvels they effected by prayer.

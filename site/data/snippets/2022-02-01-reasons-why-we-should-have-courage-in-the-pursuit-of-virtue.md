@@ -4,6 +4,8 @@ title: Reasons why we should have courage in the pursuit of virtue
 archiveSlug: sinnersguide00luis
 archivePage: '482'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 312
 ---
 
 > *Section II.*

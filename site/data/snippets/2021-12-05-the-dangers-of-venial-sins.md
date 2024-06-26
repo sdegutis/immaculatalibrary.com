@@ -4,6 +4,8 @@ title: The dangers of Venial Sins
 archiveSlug: sinnersguide00luis
 archivePage: '384'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 251
 ---
 
 > CHAPTER XXXVIII.

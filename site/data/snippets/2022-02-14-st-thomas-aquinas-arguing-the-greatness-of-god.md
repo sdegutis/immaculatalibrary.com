@@ -4,6 +4,8 @@ title: St. Thomas Aquinas arguing the greatness of God
 archiveSlug: sinnersguide00luis
 archivePage: '22'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 10
 ---
 
 > St. Thomas, in his "Sum of Theology," endeavors by the following argument to give us some idea of the immensity of God:

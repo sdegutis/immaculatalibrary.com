@@ -4,6 +4,8 @@ title: We are obliged to serve God because He created us
 archiveSlug: sinnersguide00luis
 archivePage: '26'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 14
 ---
 
 > *CHAPTER II.*

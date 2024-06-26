@@ -4,6 +4,8 @@ title: Sunday Mass and Holy Days of Obligation
 archiveSlug: sinnersguide00luis
 archivePage: '382'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 250
 ---
 
 > If we are at the head of a house we must be careful to see that all under our charge hear Mass, not only on Sundays, but also on holydays.

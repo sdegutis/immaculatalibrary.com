@@ -4,6 +4,8 @@ title: Have Courage on the Battle Field of Virtue vs Temptation
 archiveSlug: sinnersguide00luis
 archivePage: '371'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 243
 ---
 
 > Let not the duration or difficulty of the labors alarm you. God, Who calls you to combat, will give you victory.

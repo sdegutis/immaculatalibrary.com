@@ -4,6 +4,8 @@ title: Virtues that are Less must sometimes yield to those that are Greater
 archiveSlug: sinnersguide00luis
 archivePage: '461'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 298
 ---
 
 > *Section III.*

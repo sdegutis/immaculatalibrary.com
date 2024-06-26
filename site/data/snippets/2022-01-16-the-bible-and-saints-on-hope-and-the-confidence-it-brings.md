@@ -4,6 +4,8 @@ title: The Bible and Saints on Hope and the Confidence it brings
 archiveSlug: sinnersguide00luis
 archivePage: '173'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 109
 ---
 
 > "Hope," says St. Gregory, "fixes our hearts so steadfastly upon the joys of Heaven that we are insensible to the miseries of this life."

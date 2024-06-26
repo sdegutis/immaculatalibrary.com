@@ -1,9 +1,13 @@
 ---
 published: true
-title: The prodigal son as an illustration of the tormenting anxieties of those without virtue
+title: >-
+  The prodigal son as an illustration of the tormenting anxieties of those
+  without virtue
 archiveSlug: sinnersguide00luis
 archivePage: '197'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 126
 ---
 
 > The prodigal is a forcible illustration of the unhappy lot of the wicked. Like him, they separate themselves from God and plunge into every vice. They abuse and squander all that God has given them.

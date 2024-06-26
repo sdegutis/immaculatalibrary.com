@@ -4,6 +4,8 @@ title: Virtue strengthens and encourages us under all tribulations
 archiveSlug: sinnersguide00luis
 archivePage: '213'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 136
 ---
 
 > To the direct action of grace we must add that of the virtues, each of which, in its own way, strengthens the afflicted soul.

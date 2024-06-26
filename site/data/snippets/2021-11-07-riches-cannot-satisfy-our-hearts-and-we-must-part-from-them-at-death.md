@@ -4,6 +4,8 @@ title: Riches cannot satisfy our hearts, and God will never fail our needs
 archiveSlug: sinnersguide00luis
 archivePage: '337'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 214
 ---
 
 > Moreover, all the riches of the world, did you possess them, would never satisfy the desires of your heart. They would only excite and increase them. However great the possessions you accumulate, there will be a continual void within you; you will never cease to long for more.

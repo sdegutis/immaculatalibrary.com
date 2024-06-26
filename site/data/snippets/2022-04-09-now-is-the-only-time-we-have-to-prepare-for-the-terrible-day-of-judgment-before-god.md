@@ -1,6 +1,8 @@
 ---
 published: true
-title: Now is the only time we have to prepare for the terrible Day of Judgment before God
+title: >-
+  Now is the only time we have to prepare for the terrible Day of Judgment
+  before God
 archiveSlug: sinnersguide00luis
 archivePage: '85'
 bookSlug: the-sinners-guide
@@ -11,6 +13,7 @@ tags:
   - Four Last Things
   - Justice
   - Meditations
+sortOrder: 54
 ---
 
 > Reflect, then, on the sentiments that will be yours when you will stand before the tribunal of God, with no defenders but your good works, with no companion but your own conscience.

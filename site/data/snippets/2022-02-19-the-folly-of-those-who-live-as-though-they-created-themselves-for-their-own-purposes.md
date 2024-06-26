@@ -1,9 +1,13 @@
 ---
 published: true
-title: The folly of those who live as though they created themselves for their own purposes
+title: >-
+  The folly of those who live as though they created themselves for their own
+  purposes
 archiveSlug: sinnersguide00luis
 archivePage: '26'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 13
 ---
 
 > And if, as Seneca remarks, those who receive benefits are obliged to imitate good soil and return with interest what they have received, what return can we make to God, when we have nothing to offer Him but what we have received from His infinite goodness?

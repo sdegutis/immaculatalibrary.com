@@ -1,12 +1,15 @@
 ---
 published: true
-title: The various circumstances of our being Chosen should move us to deep gratitude and joy
+title: >-
+  The various circumstances of our being Chosen should move us to deep gratitude
+  and joy
 archiveSlug: sinnersguide00luis
 archivePage: '73'
 bookSlug: the-sinners-guide
 tags:
   - Doctrine
   - Exhortation
+sortOrder: 47
 ---
 
 > Weigh all the circumstances of this election, and you will find that each of them is an extraordinary favor, a new motive to love and serve God.

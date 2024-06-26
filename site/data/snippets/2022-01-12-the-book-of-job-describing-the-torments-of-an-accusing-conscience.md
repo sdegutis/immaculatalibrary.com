@@ -4,6 +4,8 @@ title: The Book of Job describing the torments of an accusing conscience
 archiveSlug: sinnersguide00luis
 archivePage: '166'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 104
 ---
 
 > Of these torments one of the friends of Job spoke when he said, "The wicked man is proud all his days, and the number of the years of his tyranny is uncertain. The sound of dread is always in his ears"---the dread sound of an accusing conscience.

@@ -4,6 +4,8 @@ title: Why we should especially guard our eyes and ears
 archiveSlug: sinnersguide00luis
 archivePage: '405'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 264
 ---
 
 > Section IV.

@@ -4,6 +4,8 @@ title: Our good works are no cause for pride, since they are rarely perfect and 
 archiveSlug: sinnersguide00luis
 archivePage: '329'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 208
 ---
 
 > Another consideration which will help you acquire humility is the thought of the little you have done purely for God.

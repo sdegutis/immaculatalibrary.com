@@ -4,6 +4,8 @@ title: Our duty to God, and how to generally fulfill it
 archiveSlug: sinnersguide00luis
 archivePage: '429'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 276
 ---
 
 > *CHAPTER XLII.*

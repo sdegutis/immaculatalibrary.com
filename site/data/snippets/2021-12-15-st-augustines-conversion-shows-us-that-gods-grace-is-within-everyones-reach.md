@@ -1,9 +1,13 @@
 ---
 published: true
-title: St. Augustine’s conversion shows us that God’s grace is within everyone’s reach
+title: >-
+  St. Augustine’s conversion shows us that God’s grace is within everyone’s
+  reach
 archiveSlug: sinnersguide00luis
 archivePage: '288'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 177
 ---
 
 > Another no less remarkable example is that of St. Augustine, who, in his "Confessions," tells us that when he began to think seriously of leaving the world a thousand difficulties presented themselves to his mind.

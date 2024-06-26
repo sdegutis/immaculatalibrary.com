@@ -4,6 +4,8 @@ title: As Jesus and the Saints were so diligent, we should also avoid Sloth
 archiveSlug: sinnersguide00luis
 archivePage: '368'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 240
 ---
 
 > CHAPTER XXXVI.

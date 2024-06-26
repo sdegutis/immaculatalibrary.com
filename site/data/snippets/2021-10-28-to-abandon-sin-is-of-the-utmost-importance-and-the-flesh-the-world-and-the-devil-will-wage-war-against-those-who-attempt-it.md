@@ -1,9 +1,13 @@
 ---
 published: true
-title: To abandon sin is of the utmost importance, and the flesh, the world and the devil will wage war against those who attempt it
+title: >-
+  To abandon sin is of the utmost importance, and the flesh, the world and the
+  devil will wage war against those who attempt it
 archiveSlug: sinnersguide00luis
 archivePage: '315'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 196
 ---
 
 > CHAPTER XXIX.

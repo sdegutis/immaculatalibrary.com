@@ -1,6 +1,8 @@
 ---
 published: true
-title: Our obligates or offenses against God are infinitely more than those against men
+title: >-
+  Our obligates or offenses against God are infinitely more than those against
+  men
 archiveSlug: sinnersguide00luis
 archivePage: '24'
 bookSlug: the-sinners-guide
@@ -8,6 +10,7 @@ tags:
   - Bible Commentary
   - Doctrine
   - Morals
+sortOrder: 12
 ---
 
 > Here, then, is the first motive which obliges us to love and serve God. This is an obligation so great that compared to it all obligations to creatures, whatever their excellence or perfections, are only obligations in name.

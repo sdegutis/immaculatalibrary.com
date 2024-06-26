@@ -4,6 +4,8 @@ title: How to govern the Tongue
 archiveSlug: sinnersguide00luis
 archivePage: '407'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 265
 ---
 
 > *Section V.*

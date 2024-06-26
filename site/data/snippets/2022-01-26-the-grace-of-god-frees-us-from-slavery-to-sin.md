@@ -4,6 +4,8 @@ title: The grace of God frees us from slavery to sin
 archiveSlug: sinnersguide00luis
 archivePage: '192'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 120
 ---
 
 > You will ask, perhaps, what is the source of this liberty and the glorious victory which it enables us to gain. After God its source is grace, which, by means of the virtues it nourishes in us, subdues our passions and compels them to submit to the empire of reason.

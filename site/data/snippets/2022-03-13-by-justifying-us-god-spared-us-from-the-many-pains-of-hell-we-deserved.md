@@ -8,6 +8,7 @@ tags:
   - Exhortation
   - Doctrine
   - Hell
+sortOrder: 36
 ---
 
 > Another blessing flowing from justification is our deliverance from the eternal pains of hell.

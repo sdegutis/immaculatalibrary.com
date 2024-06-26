@@ -1,9 +1,13 @@
 ---
 published: true
-title: Examples of Diligence from Nature to encourage us to avoid Sloth and labor for Heaven
+title: >-
+  Examples of Diligence from Nature to encourage us to avoid Sloth and labor for
+  Heaven
 archiveSlug: sinnersguide00luis
 archivePage: '369'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 241
 ---
 
 > Turn your eyes towards nature, and you will find nothing idle.

@@ -4,6 +4,8 @@ title: Considerations to cure a pride that considers ourselves better than other
 archiveSlug: sinnersguide00luis
 archivePage: '331'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 210
 ---
 
 > But there are some who, though humbled at the sight of their failings, are nevertheless excited to pride when they examine the lives of others whom they consider less virtuous than themselves.

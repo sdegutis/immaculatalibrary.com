@@ -4,6 +4,8 @@ title: Summary of the 7 Deadly Sins and their sources
 archiveSlug: sinnersguide00luis
 archivePage: '323'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 202
 ---
 
 > ### CHAPTER XXX.

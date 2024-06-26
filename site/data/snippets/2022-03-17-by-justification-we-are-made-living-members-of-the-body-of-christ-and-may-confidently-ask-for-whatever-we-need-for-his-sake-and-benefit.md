@@ -1,6 +1,8 @@
 ---
 published: true
-title: By justification, we are made living members of the Body of Christ, and may confidently ask for whatever we need for His sake and benefit
+title: >-
+  By justification, we are made living members of the Body of Christ, and may
+  confidently ask for whatever we need for His sake and benefit
 archiveSlug: sinnersguide00luis
 archivePage: '62'
 bookSlug: the-sinners-guide
@@ -8,6 +10,7 @@ tags:
   - Doctrine
   - Exhortation
   - Body of Christ
+sortOrder: 39
 ---
 
 > Still another more marvellous benefit of justification is that it transforms the soul into a living member of Christ.

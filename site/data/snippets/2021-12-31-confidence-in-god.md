@@ -4,6 +4,8 @@ title: Confidence in God
 archiveSlug: sinnersguide00luis
 archivePage: '432'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 278
 ---
 
 > *Section IV.*

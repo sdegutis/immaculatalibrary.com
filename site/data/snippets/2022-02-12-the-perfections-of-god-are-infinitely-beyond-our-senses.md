@@ -4,6 +4,8 @@ title: The perfections of God are infinitely beyond our senses
 archiveSlug: sinnersguide00luis
 archivePage: '19'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 8
 ---
 
 > This is what David teaches when he tells us that God "made darkness His covert"; [Ps. xvii. 12.] or, as the Apostle more clearly expresses it, He "inhabiteth light inaccessible." [1 Tim. vi. 16.] The prophet calls this light darkness because it dazzles and blinds our human vision.

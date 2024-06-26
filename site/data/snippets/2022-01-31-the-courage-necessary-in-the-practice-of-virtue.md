@@ -4,6 +4,8 @@ title: The courage necessary in the practice of virtue
 archiveSlug: sinnersguide00luis
 archivePage: '479'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 311
 ---
 
 > *CHAPTER XLVIII.*

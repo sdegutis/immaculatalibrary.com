@@ -1,9 +1,13 @@
 ---
 published: true
-title: Shall we be less grateful to God than wild beasts without even the light of reason are to us?
+title: >-
+  Shall we be less grateful to God than wild beasts without even the light of
+  reason are to us?
 archiveSlug: sinnersguide00luis
 archivePage: '39'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 24
 ---
 
 > Since, then, every creature is a benefit from God, how can we live surrounded by these proofs of His love, and yet never think of Him?

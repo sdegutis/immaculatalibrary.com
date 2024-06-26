@@ -4,6 +4,8 @@ title: The many wonderful Effects of Grace in the Soul
 archiveSlug: sinnersguide00luis
 archivePage: '145'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 91
 ---
 
 > From what has been said we can judge of the effects of grace in a soul.

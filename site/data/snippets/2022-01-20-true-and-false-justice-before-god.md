@@ -4,6 +4,8 @@ title: True and False Justice before God
 archiveSlug: sinnersguide00luis
 archivePage: '462'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 299
 ---
 
 > *Section IV.*

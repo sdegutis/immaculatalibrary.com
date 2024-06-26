@@ -4,6 +4,8 @@ title: Conscience
 archiveSlug: sinnersguide00luis
 archivePage: '164'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 102
 ---
 
 > *CHAPTER XVI.*

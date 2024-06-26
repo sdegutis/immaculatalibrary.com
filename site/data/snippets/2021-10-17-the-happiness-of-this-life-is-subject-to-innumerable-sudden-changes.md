@@ -4,6 +4,8 @@ title: The happiness of this life is subject to innumerable sudden changes
 archiveSlug: sinnersguide00luis
 archivePage: '293'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 180
 ---
 
 > Consider also the innumerable changes to which human happiness is exposed in this valley of tears, this land of exile, this tempestuous sea which we call the world.

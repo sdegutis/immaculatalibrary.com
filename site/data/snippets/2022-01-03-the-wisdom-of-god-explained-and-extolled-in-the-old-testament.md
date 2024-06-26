@@ -4,6 +4,8 @@ title: The Wisdom of God explained and extolled in the Old Testament
 archiveSlug: sinnersguide00luis
 archivePage: '151'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 94
 ---
 
 > Numerous are the passages in the Old Testament which promise this wisdom to the just.

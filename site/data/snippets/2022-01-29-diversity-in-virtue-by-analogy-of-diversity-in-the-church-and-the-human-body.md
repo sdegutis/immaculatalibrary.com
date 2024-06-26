@@ -4,6 +4,8 @@ title: Diversity in Virtue by analogy of diversity in the Church and the Human B
 archiveSlug: sinnersguide00luis
 archivePage: '475'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 309
 ---
 
 > God has willed that the order and beauty which we admire in nature should exist in the works of grace.

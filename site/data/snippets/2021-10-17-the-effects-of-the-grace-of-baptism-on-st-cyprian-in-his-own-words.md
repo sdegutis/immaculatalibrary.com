@@ -4,6 +4,8 @@ title: The effects of the grace of Baptism on St. Cyprian, in his own words
 archiveSlug: sinnersguide00luis
 archivePage: '286'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 176
 ---
 
 > St. Cyprian, already mentioned, who was for a time a prey to the illusions of the world, gives, while writing to his friend Donatus [c. 250 AD], some beautiful and forcible thoughts on this subject:

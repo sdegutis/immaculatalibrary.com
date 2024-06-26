@@ -4,6 +4,8 @@ title: Reasons why Justice demands we Love and Serve God
 archiveSlug: sinnersguide00luis
 archivePage: '14'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 3
 ---
 
 > It is a truth so universally acknowledged that even the Epicureans, who endeavored to destroy all philosophy by denying a Divine Providence and the immortality of the soul, maintained, nevertheless, religion, or the worship due to God.

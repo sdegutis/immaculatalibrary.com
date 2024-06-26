@@ -8,6 +8,7 @@ tags:
   - Doctrine
   - Four Last Things
   - Death
+sortOrder: 49
 ---
 
 > The first of these is death. Let us, then, consider it, for it is a truth which of all others makes most impression upon us, from the fact that it is so undisputed and so frequently brought before our minds.

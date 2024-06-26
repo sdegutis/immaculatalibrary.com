@@ -4,6 +4,8 @@ title: Some distinctions between types of virtues
 archiveSlug: sinnersguide00luis
 archivePage: '454'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 293
 ---
 
 > *CHAPTER XLIV.*

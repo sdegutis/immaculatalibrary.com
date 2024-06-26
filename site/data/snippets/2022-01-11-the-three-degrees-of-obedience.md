@@ -4,6 +4,8 @@ title: The three degrees of Obedience
 archiveSlug: sinnersguide00luis
 archivePage: '449'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 290
 ---
 
 > Let us observe, in conclusion, that theologians distinguish three degrees in this virtue.

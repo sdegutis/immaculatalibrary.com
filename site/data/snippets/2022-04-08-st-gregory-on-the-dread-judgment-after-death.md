@@ -11,6 +11,7 @@ tags:
   - Justice
   - Meditations
   - What the Saints Say
+sortOrder: 53
 ---
 
 > If you ask me the cause of this terror with which the Saints are filled, I will let St. Gregory answer for me:

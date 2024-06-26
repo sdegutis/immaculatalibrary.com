@@ -1,12 +1,15 @@
 ---
 published: true
-title: By justifying a soul, God not only imparts immeasurable beauty, strength and other gifts to it, but even dwells Himself within it
+title: >-
+  By justifying a soul, God not only imparts immeasurable beauty, strength and
+  other gifts to it, but even dwells Himself within it
 archiveSlug: sinnersguide00luis
 archivePage: '61'
 bookSlug: the-sinners-guide
 tags:
   - Doctrine
   - Holy Spirit
+sortOrder: 38
 ---
 
 > This renewal of the inner man is so powerful, so true, that in baptism it is called regeneration, in penance resurrection; not only because it restores the soul from death of sin to the life of grace, but because it is an anticipation of the last glorious resurrection.

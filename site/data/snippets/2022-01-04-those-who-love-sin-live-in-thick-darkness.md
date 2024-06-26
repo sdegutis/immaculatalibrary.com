@@ -4,6 +4,8 @@ title: Those who love sin, live in thick darkness
 archiveSlug: sinnersguide00luis
 archivePage: '154'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 95
 ---
 
 > This great gift is the portion of the just only, for the wicked are plunged in an ignorance so intense that it was well symbolized by the darkness which covered the land of Egypt.

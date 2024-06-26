@@ -4,6 +4,8 @@ title: Short remedies against pride, vain-glory, and hypocrisy
 archiveSlug: sinnersguide00luis
 archivePage: '387'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 253
 ---
 
 > In a work which some attribute to St. Augustine and others to St. Leo we find similar remedies which are equally efficacious. The author shows us on one side the allurements with which each vice solicits us, and on the other the arguments with which we must resist it.

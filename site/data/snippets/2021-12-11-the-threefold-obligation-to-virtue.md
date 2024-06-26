@@ -4,6 +4,8 @@ title: The threefold obligation to virtue
 archiveSlug: sinnersguide00luis
 archivePage: '394'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 257
 ---
 
 > CHAPTER XL.

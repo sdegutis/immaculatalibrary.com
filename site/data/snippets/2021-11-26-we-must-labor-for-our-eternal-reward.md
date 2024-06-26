@@ -4,6 +4,8 @@ title: We must labor for our eternal reward
 archiveSlug: sinnersguide00luis
 archivePage: '370'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 242
 ---
 
 > The number and enormity of your sins demand a proportionate penance and fervor to satisfy for them.

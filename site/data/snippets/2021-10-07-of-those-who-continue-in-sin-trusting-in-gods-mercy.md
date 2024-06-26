@@ -4,6 +4,8 @@ title: Of Those who Continue in Sin trusting in God’s Mercy
 archiveSlug: sinnersguide00luis
 archivePage: '264'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 162
 ---
 
 > CHAPTER XXVI.

@@ -4,6 +4,8 @@ title: Short remedies against the 7 deadly sins during temptation
 archiveSlug: sinnersguide00luis
 archivePage: '385'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 252
 ---
 
 > CHAPTER XXXIX.

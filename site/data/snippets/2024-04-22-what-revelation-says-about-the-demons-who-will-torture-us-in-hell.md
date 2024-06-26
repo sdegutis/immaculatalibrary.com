@@ -6,6 +6,7 @@ archiveSlug: sinnersguide00luis
 bookSlug: the-sinners-guide
 tags:
   - Hell
+sortOrder: 73
 ---
 
 > If the thought of the Judge impress us so deeply, what ought to be our feelings when we consider who it is that will be the executioner! The executioner will be the devil. What, then, may we not expect from the malice of such an enemy?

@@ -4,6 +4,8 @@ title: People who make excuses to continue in sin do so because they just want t
 archiveSlug: sinnersguide00luis
 archivePage: '237'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 146
 ---
 
 > CHAPTER XXIV.

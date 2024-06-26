@@ -1,9 +1,13 @@
 ---
 published: true
-title: Those who Love Sin should be moved at least by Fear of God’s Providence being Armed Against Them
+title: >-
+  Those who Love Sin should be moved at least by Fear of God’s Providence being
+  Armed Against Them
 archiveSlug: sinnersguide00luis
 archivePage: '141'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 89
 ---
 
 > But the punishment of the wicked does not end here. God not only abandons them to their weakness, but scourges them with His justice, so that the eyes which hitherto watched for their happiness now look unmoved upon their ruin.

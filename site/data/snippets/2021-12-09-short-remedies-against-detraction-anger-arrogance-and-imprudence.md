@@ -4,6 +4,8 @@ title: Short remedies against detraction, anger, arrogance, and imprudence
 archiveSlug: sinnersguide00luis
 archivePage: '390'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 255
 ---
 
 > Detraction exclaims: It is impossible to be silent any longer about the faults of such a one. Is not concealment condoning them and rendering ourselves partakers of them?

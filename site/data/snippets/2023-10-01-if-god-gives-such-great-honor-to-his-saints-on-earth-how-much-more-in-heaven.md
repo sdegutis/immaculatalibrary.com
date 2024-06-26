@@ -1,9 +1,11 @@
 ---
 published: true
-title: "If God gives such great honor to his saints on earth, how much more in heaven?"
-archiveSlug: "sinnersguide00luis"
-archivePage: "98"
-bookSlug: "the-sinners-guide"
+title: If God gives such great honor to his saints on earth, how much more in heaven?
+archiveSlug: sinnersguide00luis
+archivePage: '98'
+bookSlug: the-sinners-guide
+tags: []
+sortOrder: 61
 ---
 
 > Another consideration no less striking is that God has prepared this magnificence not only for His glory, but for the glory of His elect. “Whosoever shall glorify Me, him will I glorify.”

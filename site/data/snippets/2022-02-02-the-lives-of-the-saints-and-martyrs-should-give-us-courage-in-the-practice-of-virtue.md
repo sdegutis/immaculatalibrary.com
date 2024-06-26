@@ -1,9 +1,13 @@
 ---
 published: true
-title: The lives of the Saints and Martyrs should give us courage in the practice of virtue
+title: >-
+  The lives of the Saints and Martyrs should give us courage in the practice of
+  virtue
 archiveSlug: sinnersguide00luis
 archivePage: '483'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 313
 ---
 
 *Note from the editor of Immaculata Library:* This book snippet is graphic and should not be read by children.

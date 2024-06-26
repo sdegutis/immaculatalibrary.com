@@ -4,6 +4,8 @@ title: Theft also consists in unjustly keeping someone else’s things from them
 archiveSlug: sinnersguide00luis
 archivePage: '341'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 218
 ---
 
 > ### Section II.

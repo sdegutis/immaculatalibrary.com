@@ -1,9 +1,13 @@
 ---
 published: true
-title: Devotions and virtues are only greater than each other within a subject, not objectively
+title: >-
+  Devotions and virtues are only greater than each other within a subject, not
+  objectively
 archiveSlug: sinnersguide00luis
 archivePage: '471'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 306
 ---
 
 > In this matter beware of a grave error into which pious persons sometimes fall. Deriving much profit from certain means, many imagine that there are no others which lead to God. Consequently they would enforce the same methods upon every one, and think all in error who follow a different path.

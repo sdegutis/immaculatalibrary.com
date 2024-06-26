@@ -4,6 +4,8 @@ title: God cares for the temporal needs of the Just
 archiveSlug: sinnersguide00luis
 archivePage: '218'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 138
 ---
 
 > CHAPTER XXII.

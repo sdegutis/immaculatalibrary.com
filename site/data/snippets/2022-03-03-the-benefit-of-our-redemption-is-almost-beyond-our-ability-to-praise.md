@@ -4,6 +4,8 @@ title: The benefit of our Redemption is almost beyond our ability to praise
 archiveSlug: sinnersguide00luis
 archivePage: '44'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 26
 ---
 
 > *CHAPTER IV.*

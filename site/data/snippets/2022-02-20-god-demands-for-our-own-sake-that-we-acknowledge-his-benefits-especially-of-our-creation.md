@@ -1,9 +1,13 @@
 ---
 published: true
-title: God demands for our own sake that we acknowledge his benefits, especially of our creation
+title: >-
+  God demands for our own sake that we acknowledge his benefits, especially of
+  our creation
 archiveSlug: sinnersguide00luis
 archivePage: '28'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 15
 ---
 
 > This, then, the first of God's benefits, is the foundation of all the others, for all other benefits presuppose existence, which is given us at our creation.

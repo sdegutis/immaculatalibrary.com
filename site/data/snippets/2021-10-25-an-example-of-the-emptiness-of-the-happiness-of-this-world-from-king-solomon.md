@@ -4,6 +4,8 @@ title: An example of the emptiness of the happiness of this world from King Solo
 archiveSlug: sinnersguide00luis
 archivePage: '309'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 191
 ---
 
 > Observe further how much more accessible man is to misery than to happiness in this life; for but one ungratified desire suffices to make him miserable, and so many things are required to make him happy.

@@ -4,6 +4,8 @@ title: Some Hows and Whys of Prudence
 archiveSlug: sinnersguide00luis
 archivePage: '416'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 269
 ---
 
 > *Section IX.*

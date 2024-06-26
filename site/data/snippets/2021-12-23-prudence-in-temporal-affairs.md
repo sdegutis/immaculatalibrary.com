@@ -4,6 +4,8 @@ title: Prudence in Temporal Affairs
 archiveSlug: sinnersguide00luis
 archivePage: '419'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 270
 ---
 
 > *Section X.*

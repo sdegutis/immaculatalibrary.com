@@ -4,6 +4,8 @@ title: Basics of Prayer and Gratitude
 archiveSlug: sinnersguide00luis
 archivePage: '436'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 281
 ---
 
 > *Section VII.*

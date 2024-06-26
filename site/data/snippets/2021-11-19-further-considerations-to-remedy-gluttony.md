@@ -4,6 +4,8 @@ title: Further considerations to remedy Gluttony
 archiveSlug: sinnersguide00luis
 archivePage: '360'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 235
 ---
 
 > To excite in your heart a salutary fear of this vice, recall to mind what is related in the Gospel of Lazarus, of his poverty, of his hunger which craved the crumbs which fell from the rich man's table, and how he was carried by Angels to Abraham's bosom; while the rich man, who fed upon delicacies and was clothed in purple and fine linen, was buried in the depths of hell.

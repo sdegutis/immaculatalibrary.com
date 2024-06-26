@@ -1,9 +1,13 @@
 ---
 published: true
-title: How Mothers and Fathers should discharge their duties to God and to their family
+title: >-
+  How Mothers and Fathers should discharge their duties to God and to their
+  family
 archiveSlug: sinnersguide00luis
 archivePage: '451'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 292
 ---
 
 > Let married women faithfully acquit themselves of the duties of their household, discharging all their obligations to their husband and children, that they may thus be free to attend to practices of piety without neglecting what they owe their family. That would be a worthless devotion which would occupy the time which should be given to domestic atfairs.

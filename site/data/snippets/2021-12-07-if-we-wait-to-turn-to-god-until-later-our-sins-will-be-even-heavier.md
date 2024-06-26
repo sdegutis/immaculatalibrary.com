@@ -4,6 +4,8 @@ title: If we wait to turn to God until later, our sins will be even heavier
 archiveSlug: sinnersguide00luis
 archivePage: '241'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 149
 ---
 
 > Can you, then, doubt that you only increase the difficulties of your conversion by deferring it?

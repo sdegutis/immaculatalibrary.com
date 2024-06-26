@@ -5,6 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '190'
 bookSlug: the-sinners-guide
 tags: []
+sortOrder: 119
 ---
 
 > From this miserable slavery the Son of God has delivered us. By the superabundant grace of God we have been redeemed; by the sacrifice of the cross we have been purchased.

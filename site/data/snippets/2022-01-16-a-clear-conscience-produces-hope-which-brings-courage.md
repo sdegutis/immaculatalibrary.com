@@ -4,6 +4,8 @@ title: A clear conscience produces hope, which brings courage
 archiveSlug: sinnersguide00luis
 archivePage: '172'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 108
 ---
 
 > CHAPTER XVII.

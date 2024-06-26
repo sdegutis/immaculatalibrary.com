@@ -1,9 +1,13 @@
 ---
 published: true
-title: The pure madness of offending the All-Powerful Giver of Life, Breath, and Everything
+title: >-
+  The pure madness of offending the All-Powerful Giver of Life, Breath, and
+  Everything
 archiveSlug: sinnersguide00luis
 archivePage: '35'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 21
 ---
 
 > The goodness of this sovereign Being is so great, says St. Denis, that while creatures are offending Him and madly rebelling against His will He continues to give them the power and strength which they use to resist Him.

@@ -4,6 +4,8 @@ title: Victory begins by maintaining a firm resolution never to commit mortal si
 archiveSlug: sinnersguide00luis
 archivePage: '318'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 198
 ---
 
 > Resting on these two principles, your first determination must be a deep and unshaken resolution never to commit mortal sin, for it only can rob us of the grace and friendship of God.

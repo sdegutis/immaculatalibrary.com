@@ -5,6 +5,7 @@ archivePage: '119'
 archiveSlug: sinnersguide00luis
 bookSlug: the-sinners-guide
 tags: []
+sortOrder: 75
 ---
 
 > If you were penetrated with these reflections, what obstacle could turn you from the practice of virtue? Difficult as it may appear, is there any sacrifice you would refuse to escape these eternal torments?

@@ -4,6 +4,8 @@ title: Who can love a world that has the devil as its governor?
 archiveSlug: sinnersguide00luis
 archivePage: n306
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 0
 ---
 
 > Moreover, if you would know the world still better, consider him who governs it.

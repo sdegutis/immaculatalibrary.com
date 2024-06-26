@@ -4,6 +4,8 @@ title: More reasons eternal life is greater than this life
 archiveSlug: sinnersguide00luis
 archivePage: '103'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 66
 ---
 
 > Compare the inhabitants of the two countries, if you would have a still stronger proof of the superiority and infinite grandeur of the heavenly country.

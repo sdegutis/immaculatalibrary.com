@@ -4,6 +4,8 @@ title: Justice and Profit most help move the Will to good
 archiveSlug: sinnersguide00luis
 archivePage: '13'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 2
 ---
 
 > ### THE SINNER'S GUIDE.

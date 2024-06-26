@@ -4,6 +4,8 @@ title: We need both the interior and exterior virtues
 archiveSlug: sinnersguide00luis
 archivePage: '459'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 296
 ---
 
 > *CHAPTER XLV.*

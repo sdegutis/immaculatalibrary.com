@@ -4,6 +4,8 @@ title: A short story about spiritual riches vs worldly pleasures
 archiveSlug: sinnersguide00luis
 archivePage: '128'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 80
 ---
 
 > The annals of the Cistercian Order mention an incident which, in connection with our subject, is worth recording:

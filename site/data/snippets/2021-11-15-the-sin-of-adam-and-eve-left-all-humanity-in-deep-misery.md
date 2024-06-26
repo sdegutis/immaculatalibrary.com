@@ -4,6 +4,8 @@ title: The sin of Adam and Eve left all humanity in deep misery
 archiveSlug: sinnersguide00luis
 archivePage: '204'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 130
 ---
 
 > CHAPTER XX.

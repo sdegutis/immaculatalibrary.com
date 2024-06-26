@@ -13,6 +13,7 @@ interface SnippetFile {
   archivePage: string;
   bookSlug: string;
   tags: string[];
+  sortOrder?: number;
 }
 
 export class Snippet extends DataFileWithDate<SnippetFile> {

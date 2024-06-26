@@ -1,6 +1,8 @@
 ---
 published: true
-title: We owe the Holy Spirit both for maintaining our virtues and being prevented from sins
+title: >-
+  We owe the Holy Spirit both for maintaining our virtues and being prevented
+  from sins
 archiveSlug: sinnersguide00luis
 archivePage: '66'
 bookSlug: the-sinners-guide
@@ -10,6 +12,7 @@ tags:
   - Doctrine
   - Holy Spirit
   - Morals
+sortOrder: 43
 ---
 
 > It is to the Holy Ghost that we are indebted for all our progress in wirtue. It is He who preserves us from evil and maintains us in good. It is He who is the principle of our perseverance, and who finally crowns us in Heaven.

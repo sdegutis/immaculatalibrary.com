@@ -4,6 +4,8 @@ title: God’s Curses on Sinful Nations, and Examples from the Bible and History
 archiveSlug: sinnersguide00luis
 archivePage: '222'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 140
 ---
 
 > If you desire to know the poverty, miseries, and afflictions which are reserved for the wicked, read the twenty-eighth chapter of the Book of Deuteronomy. Therein Moses, in the name of God, utters most terrible threats and maledictions against the impious.

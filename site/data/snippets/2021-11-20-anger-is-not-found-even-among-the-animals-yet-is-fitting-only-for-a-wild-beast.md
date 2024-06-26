@@ -1,9 +1,13 @@
 ---
 published: true
-title: Anger is not found even among the animals, yet is fitting only for a wild beast
+title: >-
+  Anger is not found even among the animals, yet is fitting only for a wild
+  beast
 archiveSlug: sinnersguide00luis
 archivePage: '362'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 236
 ---
 
 > CHAPTER XXXV.

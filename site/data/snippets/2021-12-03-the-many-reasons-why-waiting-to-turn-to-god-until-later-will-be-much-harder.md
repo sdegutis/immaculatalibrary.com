@@ -4,6 +4,8 @@ title: The many reasons why waiting to turn to God until later will be much hard
 archiveSlug: sinnersguide00luis
 archivePage: '239'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 148
 ---
 
 > But, even granting that you will live as long as you imagine, will it be easier to begin your conversion now or some years hence?

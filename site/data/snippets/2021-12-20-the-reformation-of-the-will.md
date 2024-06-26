@@ -4,6 +4,8 @@ title: The Reformation of the Will
 archiveSlug: sinnersguide00luis
 archivePage: '412'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 267
 ---
 
 > *Section VII.*

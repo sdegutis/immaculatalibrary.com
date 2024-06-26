@@ -4,6 +4,8 @@ title: Further reasons worldly happiness should not be trusted
 archiveSlug: sinnersguide00luis
 archivePage: '302'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 186
 ---
 
 > These miseries inseparable from worldly happiness should suffice to show you that it contains more gall than honey, more bitterness than sweetness.

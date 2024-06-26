@@ -4,6 +4,8 @@ title: The state of those in Slavery to Sin
 archiveSlug: sinnersguide00luis
 archivePage: '188'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 118
 ---
 
 > Can there be a more terrible slavery? We call a man a captive who is placed in prison and bound with chains, but his bondage does not equal that of a man whose soul is the slave of an inordinate affection.

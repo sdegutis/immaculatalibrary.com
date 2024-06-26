@@ -1,9 +1,13 @@
 ---
 published: true
-title: God is generous even to those beginning in virtue, so why should we wait to begin?
+title: >-
+  God is generous even to those beginning in virtue, so why should we wait to
+  begin?
 archiveSlug: sinnersguide00luis
 archivePage: '162'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 101
 ---
 
 > We find still another figure of this truth in the Old Testament where God commanded the first and the last days of the week to be observed with particular solemnity, thus teaching us that He rejoices with His children in the beginning as well as in the consummation of their perfection.

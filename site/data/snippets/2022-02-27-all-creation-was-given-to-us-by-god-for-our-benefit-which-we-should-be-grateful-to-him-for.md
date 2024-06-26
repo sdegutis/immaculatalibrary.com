@@ -1,9 +1,13 @@
 ---
 published: true
-title: All creation was given to us by God for our benefit, which we should be grateful to Him for
+title: >-
+  All creation was given to us by God for our benefit, which we should be
+  grateful to Him for
 archiveSlug: sinnersguide00luis
 archivePage: '36'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 22
 ---
 
 > Consider in addition to this benefit the rich and delightful banquet of nature prepared for you by your Creator.

@@ -1,6 +1,8 @@
 ---
 published: true
-title: If God has given us everything and even Himself, how can we outrage him by using his benefits to crucify him by sin?
+title: >-
+  If God has given us everything and even Himself, how can we outrage him by
+  using his benefits to crucify him by sin?
 archiveSlug: sinnersguide00luis
 archivePage: '53'
 bookSlug: the-sinners-guide
@@ -8,6 +10,7 @@ tags:
   - Passion
   - Exhortation
   - Morals
+sortOrder: 33
 ---
 
 > If, therefore, the son of Jacob felt such gratitude for perishable benefits, what should be ours for the immortal blessings God has bestowed upon us? Joseph's master entrusted him with all his possessions. God has given us not only His possessions but Himself.

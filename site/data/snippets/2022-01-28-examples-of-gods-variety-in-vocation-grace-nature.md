@@ -7,6 +7,7 @@ bookSlug: the-sinners-guide
 tags:
   - Example
   - Doctrine
+sortOrder: 308
 ---
 
 > This diversity is due partly to nature and partly to grace.

@@ -1,9 +1,13 @@
 ---
 published: true
-title: The Virtuous are always restful and have all their needs met to a healthy degree
+title: >-
+  The Virtuous are always restful and have all their needs met to a healthy
+  degree
 archiveSlug: sinnersguide00luis
 archivePage: '221'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 139
 ---
 
 > Moreover, they are bestowed with two extraordinary advantages unknown to the wicked.

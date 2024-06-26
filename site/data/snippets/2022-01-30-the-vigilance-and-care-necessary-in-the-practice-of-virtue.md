@@ -4,6 +4,8 @@ title: The vigilance and care necessary in the practice of virtue
 archiveSlug: sinnersguide00luis
 archivePage: '477'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 310
 ---
 
 > *CHAPTER XLVII.*

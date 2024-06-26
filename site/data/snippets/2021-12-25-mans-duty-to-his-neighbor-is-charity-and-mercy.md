@@ -4,6 +4,8 @@ title: Man’s Duty to his Neighbor is Charity and Mercy
 archiveSlug: sinnersguide00luis
 archivePage: '423'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 272
 ---
 
 > *CHAPTER XLI.*

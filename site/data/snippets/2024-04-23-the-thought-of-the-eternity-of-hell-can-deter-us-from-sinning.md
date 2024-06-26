@@ -5,6 +5,7 @@ archivePage: '117'
 archiveSlug: sinnersguide00luis
 bookSlug: the-sinners-guide
 tags: []
+sortOrder: 74
 ---
 
 > The considerations already given are certainly sufficient to inspire us with a horror for sin; but to strengthen this salutary fear let us reflect upon the duration of these terrible torments.

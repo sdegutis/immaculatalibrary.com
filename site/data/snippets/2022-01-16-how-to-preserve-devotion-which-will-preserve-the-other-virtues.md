@@ -4,6 +4,8 @@ title: How to preserve Devotion, which will preserve the other Virtues
 archiveSlug: sinnersguide00luis
 archivePage: '457'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 295
 ---
 
 > To acquire and preserve this precious virtue of devotion, which of itself disposes us for the practice of all other virtues, we must watch over ourselves with special vigilance.

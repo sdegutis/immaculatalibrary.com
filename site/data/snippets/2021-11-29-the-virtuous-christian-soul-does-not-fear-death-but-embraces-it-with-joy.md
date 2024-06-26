@@ -4,6 +4,8 @@ title: The virtuous Christian soul does not fear death, but embraces it with joy
 archiveSlug: sinnersguide00luis
 archivePage: '232'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 144
 ---
 
 > Far, then, from fearing death, the just hail it as the hour of their deliverance and the beginning of their reward.

@@ -4,6 +4,8 @@ title: The grace of God makes the yoke of virtue easy, light, and pleasant
 archiveSlug: sinnersguide00luis
 archivePage: '284'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 174
 ---
 
 > Reflect on these truths, and you will soon understand the Scriptures where they seem to speak in contradictory terms of the ease or difficulty of practising virtue.

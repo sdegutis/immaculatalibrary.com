@@ -1,12 +1,15 @@
 ---
 published: true
-title: God's immense love for us, especially on the Cross, should draw us away from sin
+title: >-
+  God's immense love for us, especially on the Cross, should draw us away from
+  sin
 archiveSlug: sinnersguide00luis
 archivePage: '52'
 bookSlug: the-sinners-guide
 tags:
   - Exhortation
   - Morals
+sortOrder: 32
 ---
 
 > Since Thy mercy and Thy love have been so powerfully manifested for us, O Lord! how is it that there are men who do not love Thee, who forget Thy benefits or use them to offend Thee? To whom will they give their love, if they refuse it to Thee? What can touch them, if they are insensible to Thy benefits? Ah! how can I refuse to serve a God Who has so lovingly sought me and redeemed me?

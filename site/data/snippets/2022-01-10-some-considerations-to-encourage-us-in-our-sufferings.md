@@ -4,6 +4,8 @@ title: Some considerations to encourage us in our sufferings
 archiveSlug: sinnersguide00luis
 archivePage: '447'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 289
 ---
 
 > Consider also the sufferings which our Saviour endured from creatures.

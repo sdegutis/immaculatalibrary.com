@@ -4,6 +4,8 @@ title: The Mortification of the Passions
 archiveSlug: sinnersguide00luis
 archivePage: '409'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 266
 ---
 
 > *Section VI.*

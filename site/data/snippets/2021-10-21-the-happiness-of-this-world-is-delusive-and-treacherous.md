@@ -4,6 +4,8 @@ title: The happiness of this world is delusive and treacherous
 archiveSlug: sinnersguide00luis
 archivePage: '302'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 185
 ---
 
 > But there is one of its evil characteristics of which I must speak---that is, its delusive appearance.

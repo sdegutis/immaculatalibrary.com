@@ -4,6 +4,8 @@ title: Whoever says they received life from nature is only giving God another na
 archiveSlug: sinnersguide00luis
 archivePage: '31'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 18
 ---
 
 > But perhaps you will urge that these benefits common to all seem the work of nature rather than graces emanating from God; and why, you ask, should I be grateful for the general order which reigns in the world, and because things follow their natural course?

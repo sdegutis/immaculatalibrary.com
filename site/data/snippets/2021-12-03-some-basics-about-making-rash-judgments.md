@@ -4,6 +4,8 @@ title: Some basics about making Rash Judgments
 archiveSlug: sinnersguide00luis
 archivePage: '381'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 249
 ---
 
 > Section III.

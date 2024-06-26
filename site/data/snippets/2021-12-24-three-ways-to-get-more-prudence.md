@@ -4,6 +4,8 @@ title: Three Ways to Get More Prudence
 archiveSlug: sinnersguide00luis
 archivePage: '421'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 271
 ---
 
 > *Section XI.*

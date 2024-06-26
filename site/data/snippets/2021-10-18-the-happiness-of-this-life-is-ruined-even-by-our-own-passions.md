@@ -4,6 +4,8 @@ title: The happiness of this life is ruined even by our own passions
 archiveSlug: sinnersguide00luis
 archivePage: '296'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 182
 ---
 
 > Man's irregular appetites and passions are another and inexhaustible source of afflictions.

@@ -4,6 +4,8 @@ title: Conforming ourselves to God’s will in all things, good or bad
 archiveSlug: sinnersguide00luis
 archivePage: '441'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 284
 ---
 
 > These three degrees which constitute the perfection of obedience seem to be indicated in these words of the Apostle: "Be not conformed to this world, but be reformed in the newness of your mind, that you may prove what is the good, and the acceptable, and the perfect will of God." [Rom. xii. 2.]

@@ -9,6 +9,7 @@ const chapters: {
   slug: string,
   i: number,
 }[] = [];
+
 for (let i = 0; i < chapterDivs.length; i++) {
   const div = chapterDivs[i]!;
   const link = chapterLinks[i]!;
@@ -18,10 +19,10 @@ for (let i = 0; i < chapterDivs.length; i++) {
   const moveUp = <button>Move up</button> as HTMLButtonElement;
   const moveDown = <button>Move down</button> as HTMLButtonElement;
 
-  moveUp.onclick = (e) => moveSnippet(i, -1);
-  moveDown.onclick = (e) => moveSnippet(i, 1);
+  moveUp.onclick = (e) => moveSnippet(div, -1);
+  moveDown.onclick = (e) => moveSnippet(div, 1);
 
-  const buttons = <div>{moveUp} {moveDown}</div> as HTMLDivElement;
+  const buttons = <div style='margin-left:1px'>{moveUp} {moveDown}</div> as HTMLDivElement;
   div.querySelector('h3')!.insertAdjacentElement('afterend', buttons);
 }
 
@@ -33,8 +34,10 @@ function saveOrder() {
   });
 }
 
-function moveSnippet(i: number, by: number) {
+function moveSnippet(div: HTMLDivElement, by: number) {
+  const i = [...div.parentElement!.children].indexOf(div);
   const c = chapters[i]!;
+
   if (by === -1) {
     c.div.previousElementSibling!.insertAdjacentElement('beforebegin', c.div);
     c.link.previousElementSibling!.insertAdjacentElement('beforebegin', c.link);
@@ -44,7 +47,8 @@ function moveSnippet(i: number, by: number) {
     c.link.nextElementSibling!.insertAdjacentElement('afterend', c.link);
   }
 
-  // chapters.
+  chapters.splice(i, 1);
+  chapters.splice(i + by, 0, c);
 
   saveOrder();
 }

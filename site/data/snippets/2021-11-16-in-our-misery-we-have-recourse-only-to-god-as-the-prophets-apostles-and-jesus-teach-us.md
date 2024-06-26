@@ -1,9 +1,13 @@
 ---
 published: true
-title: In our misery, we have recourse only to God, as the Prophets, Apostles, and Jesus teach us
+title: >-
+  In our misery, we have recourse only to God, as the Prophets, Apostles, and
+  Jesus teach us
 archiveSlug: sinnersguide00luis
 archivePage: '205'
 bookSlug: the-sinners-guide
+tags: []
+sortOrder: 131
 ---
 
 > Reduced to this miserable condition, and deprived of our possessions by the first deluge, what resource, what remedy, has been left us by the Master who has punished us so severely?
