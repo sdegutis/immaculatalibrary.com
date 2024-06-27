@@ -1,4 +1,4 @@
-import { changeEase } from "./$animate.js";
+import { nextEase, prevEase } from "./$animate.js";
 import { changeNavButtons } from "./$easteregg1.js";
 import { tabNav } from "./$tab.js";
 
@@ -17,7 +17,9 @@ const gamepadActions = new Map<number, () => void>([
   [Button.L, () => { tabNav.current.prev?.focus(); }],
   [Button.R, () => { tabNav.current.next?.focus(); }],
 
-  [Button.A, () => { changeEase(); }],
+  [Button.ZL, () => { prevEase(); }],
+  [Button.ZR, () => { nextEase(); }],
+
   [Button.B, () => { changeNavButtons(); }],
 
   [Button.RIGHT, () => { tabNav.current.panelNav.current.next?.focus(); }],

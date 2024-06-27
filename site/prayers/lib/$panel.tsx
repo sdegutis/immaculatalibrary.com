@@ -1,4 +1,4 @@
-import { animateTo, changeEase } from "./$animate.js";
+import { animateTo, nextEase } from "./$animate.js";
 import { changeNavButtons } from "./$easteregg1.js";
 import { Nav, Navable } from "./$nav.js";
 import { Tab, tabBodies } from "./$tab.js";
@@ -73,7 +73,7 @@ export class Panel implements Navable<Panel> {
       }
       else if (e.key === ' ' && e.ctrlKey) {
         e.preventDefault();
-        changeEase();
+        nextEase();
       }
       else if (e.key === ' ') {
         e.preventDefault();

@@ -42,8 +42,14 @@ const easesList = [
 let easeIndex = 0;
 let ease = easesList[easeIndex]!;
 
-export function changeEase() {
+export function nextEase() {
   easeIndex++;
   if (easeIndex >= easesList.length) easeIndex = 0;
+  ease = easesList[easeIndex]!;
+}
+
+export function prevEase() {
+  easeIndex--;
+  if (easeIndex < 0) easeIndex = easesList.length - 1;
   ease = easesList[easeIndex]!;
 }
