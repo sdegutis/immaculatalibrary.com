@@ -269,17 +269,18 @@ function MorningPrayers() {
         <Line>St. Francis de Sales <Red>Pray for us.</Red></Line>
         <Line> St. Vincent de Paul <Red>Pray for us.</Red></Line>
         <Line>  St. Thomas More <Red>Pray for us.</Red></Line>
-        <div class='spaced-small' />
-        <Line>Patron Saints <Red>Pray for us.</Red></Line>
-        <Line> Guardian Angels <Red>Pray for us.</Red></Line>
-        <Line>  Holy Souls in Purgatory <Red>Pray for us.</Red></Line>
+      </div>
+      <div class='spaced-small two-cols'>
+        <Line>All our Patron Saints <Red>Pray for us.</Red></Line>
+        <Line> All our Guardian Angels <Red>Pray for us.</Red></Line>
+        <Line>  All the Holy Souls in Purgatory <Red>Pray for us.</Red></Line>
       </div>
       <p class='spaced-small two-cols'>
         <Line>Most Chaste Heart of Blessed St. Joseph <Red>Pray for us.</Red></Line>
         <Line> Most Immaculate Heart of the Blessed Virgin Mary <Red>Pray for us.</Red></Line>
         <Line>  Most Sacred Heart of Jesus <Red>Have mercy on us.</Red></Line>
-        <Line>  Most Sacred Heart of Jesus <Red>Have mercy on us.</Red></Line>
-        <Line>  Most Sacred Heart of Jesus <Red>Have mercy on us.</Red></Line>
+        <Line>   Most Sacred Heart of Jesus <Red>Have mercy on us.</Red></Line>
+        <Line>    Most Sacred Heart of Jesus <Red>Have mercy on us.</Red></Line>
       </p>
     </div>
   </Panel>;
