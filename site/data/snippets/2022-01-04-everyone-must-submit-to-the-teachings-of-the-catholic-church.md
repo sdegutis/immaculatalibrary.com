@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '154'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 96
+sortOrder: 95
 ---
 
 > Before concluding this chapter we would make the following suggestion:

@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '173'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 109
+sortOrder: 108
 ---
 
 > "Hope," says St. Gregory, "fixes our hearts so steadfastly upon the joys of Heaven that we are insensible to the miseries of this life."

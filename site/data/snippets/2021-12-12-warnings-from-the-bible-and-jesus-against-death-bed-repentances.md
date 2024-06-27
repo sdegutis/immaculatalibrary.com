@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '257'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 158
+sortOrder: 157
 ---
 
 > As the final decision of this question depends on the word of God, I pray you to hear what He teaches us through Holy Scripture.

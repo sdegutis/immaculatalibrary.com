@@ -10,7 +10,7 @@ tags:
   - Four Last Things
   - Hell
   - Justice
-sortOrder: 56
+sortOrder: 55
 ---
 
 > Consider also the terror of the sinner when this terrible sentence resounds in his ear: “Depart from me, ye cursed, into everlasting fire which was prepared for the devil and his angels.” \*

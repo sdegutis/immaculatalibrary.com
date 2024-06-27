@@ -7,7 +7,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '133'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 83
+sortOrder: 82
 ---
 
 > This protection not only delivers the just from evil and leads them to good, but turns to their profit the sins into which they are sometimes permitted to fall.

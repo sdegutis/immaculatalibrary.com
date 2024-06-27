@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '98'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 61
+sortOrder: 60
 ---
 
 > Another consideration no less striking is that God has prepared this magnificence not only for His glory, but for the glory of His elect. “Whosoever shall glorify Me, him will I glorify.”

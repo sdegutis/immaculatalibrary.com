@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '285'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 175
+sortOrder: 174
 ---
 
 > If, like the Apostle St. Thomas, you are still incredulous and ask for farther proof, I will not deny it. Take, for example, a man who has led a wicked life, but who has finally turned to God by the power of grace.

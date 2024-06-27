@@ -7,7 +7,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '278'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 170
+sortOrder: 169
 ---
 
 > But, perhaps, you will still object that your sins are so numerous that God must refuse you His grace.

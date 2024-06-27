@@ -5,7 +5,7 @@ archivePage: '111'
 archiveSlug: sinnersguide00luis
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 70
+sortOrder: 69
 ---
 
 > Another consideration which may help us to appreciate the rigor of these sufferings is the greatness of the mercy which the sinner has despised.

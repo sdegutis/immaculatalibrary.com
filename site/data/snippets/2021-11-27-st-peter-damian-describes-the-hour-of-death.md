@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '229'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 142
+sortOrder: 141
 ---
 
 > Still more terrible is the picture of the death of the sinner given by St. Peter Damian.

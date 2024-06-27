@@ -7,7 +7,7 @@ bookSlug: the-sinners-guide
 tags:
   - Doctrine
   - Mercy
-sortOrder: 40
+sortOrder: 39
 ---
 
 > The final benefit of justification is the right which it gives to eternal life.

@@ -6,7 +6,7 @@ archiveSlug: sinnersguide00luis
 bookSlug: the-sinners-guide
 tags:
   - Hell
-sortOrder: 69
+sortOrder: 68
 ---
 
 > Let us first reflect on the almighty power of God, Whose justice will chastise the sinner. God’s greatness is apparent in all His works. He is God, not only in Heaven, earth, and sea, but in hell and in every other place. He is God in His wrath and in the justice with which He avenges the outrages offered to His divine majesty.

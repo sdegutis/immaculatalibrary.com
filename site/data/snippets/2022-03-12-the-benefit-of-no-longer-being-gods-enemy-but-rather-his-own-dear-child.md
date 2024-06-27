@@ -7,7 +7,7 @@ bookSlug: the-sinners-guide
 tags:
   - Exhortation
   - Doctrine
-sortOrder: 34
+sortOrder: 33
 ---
 
 > The first of these graces is our vocation.

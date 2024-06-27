@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '208'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 133
+sortOrder: 132
 ---
 
 > If you would learn how such promises are fulfilled, study the lives of the Saints and see what marvels they effected by prayer.

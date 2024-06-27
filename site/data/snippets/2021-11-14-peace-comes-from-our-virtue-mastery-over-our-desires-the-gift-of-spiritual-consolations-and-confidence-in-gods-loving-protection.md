@@ -7,7 +7,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '202'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 129
+sortOrder: 128
 ---
 
 > He who enjoys this favor cannot but turn to the Author of so many marvels and cry out with the prophet: "Come and behold ye the works of the Lord, what wonders He hath done upon earth, making wars to cease even to the ends of the earth. He shall destroy the bow, and break the weapons; and the shields He shall burn in the fire." [Ps. xlv. 9, 10.]

@@ -8,7 +8,7 @@ tags:
   - Doctrine
   - Exhortation
   - Holy Communion
-sortOrder: 44
+sortOrder: 43
 ---
 
 > It would be fitting to speak here of the sacraments, the instruments of justification, particularly of Baptism, and the divine light and principle of faith which it imprints on our souls. But as this subject has been more fully treated in another work, we will confine ourselves, for the present, to the Eucharist, that Sacrament of sacraments, which gives to us as our daily food and sovereign remedy God Himself.

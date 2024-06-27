@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '144'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 90
+sortOrder: 89
 ---
 
 > *CHAPTER XIII.*

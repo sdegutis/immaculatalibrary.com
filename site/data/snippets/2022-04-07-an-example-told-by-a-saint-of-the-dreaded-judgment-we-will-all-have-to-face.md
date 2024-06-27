@@ -10,7 +10,7 @@ tags:
   - Four Last Things
   - Justice
   - What the Saints Say
-sortOrder: 52
+sortOrder: 51
 ---
 
 > St. John Climachus gives a no less striking example of a holy monk, which is so remarkable that I shall give it as nearly as possible in the Saint’s own words:

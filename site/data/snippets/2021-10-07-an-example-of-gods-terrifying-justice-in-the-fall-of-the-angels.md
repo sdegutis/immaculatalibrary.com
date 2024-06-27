@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '266'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 163
+sortOrder: 162
 ---
 
 > The first work of God's justice was the reprobation of the Angels.

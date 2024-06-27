@@ -7,7 +7,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '205'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 131
+sortOrder: 130
 ---
 
 > Reduced to this miserable condition, and deprived of our possessions by the first deluge, what resource, what remedy, has been left us by the Master who has punished us so severely?

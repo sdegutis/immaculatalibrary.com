@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '179'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 112
+sortOrder: 111
 ---
 
 > CHAPTER XVIII.

@@ -9,7 +9,7 @@ bookSlug: the-sinners-guide
 tags:
   - Doctrine
   - Exhortation
-sortOrder: 47
+sortOrder: 46
 ---
 
 > Weigh all the circumstances of this election, and you will find that each of them is an extraordinary favor, a new motive to love and serve God.

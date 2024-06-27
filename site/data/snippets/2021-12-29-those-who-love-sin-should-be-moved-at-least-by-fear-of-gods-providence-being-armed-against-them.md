@@ -7,7 +7,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '141'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 89
+sortOrder: 88
 ---
 
 > But the punishment of the wicked does not end here. God not only abandons them to their weakness, but scourges them with His justice, so that the eyes which hitherto watched for their happiness now look unmoved upon their ruin.

@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '102'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 64
+sortOrder: 63
 ---
 
 > It may further help us to conceive a faint image of this eternal glory to consider the nobility and grandeur of the empyreal Heaven, our future country.

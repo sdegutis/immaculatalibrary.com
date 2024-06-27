@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '273'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 168
+sortOrder: 167
 ---
 
 > The principal cause of this illusion is that we only regard the obstacles to virtue, and do not consider the grace which God gives us to overcome these obstacles.

@@ -7,7 +7,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '96'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 60
+sortOrder: 59
 ---
 
 > CHAPTER IX.

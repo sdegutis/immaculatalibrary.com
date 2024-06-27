@@ -8,7 +8,7 @@ archivePage: '48'
 bookSlug: the-sinners-guide
 tags:
   - Passion
-sortOrder: 29
+sortOrder: 28
 ---
 
 > But what, O Lord! is the remedy Thou didst choose for my deep misery? Innumerable were the ways in which Thou couldst have redeemed me without toil or suffering; but in Thy magnificence, and to testify Thy great love for me, Thou didst will to endure such pain and sufferings that the very thought of them bathed Thee in a sweat of blood, and at the sight of them the rocks were rent asunder. May the heavens praise Thee, O Lord! and may the angels proclaim Thy mercies!

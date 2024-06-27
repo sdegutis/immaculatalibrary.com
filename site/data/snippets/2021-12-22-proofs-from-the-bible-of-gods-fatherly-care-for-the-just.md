@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '132'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 82
+sortOrder: 81
 ---
 
 > As the greatest reward of the Christian in this life is God's fatherly care, and as our joy and confidence must increase in proportion to our faith in this providence, we shall add here a few passages from Scripture in proof of this doctrine.

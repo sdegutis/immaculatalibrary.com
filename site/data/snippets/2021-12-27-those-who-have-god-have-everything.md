@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '139'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 87
+sortOrder: 86
 ---
 
 > What are all the promises of the world compared to the assurance and hopes contained in these blessed titles?

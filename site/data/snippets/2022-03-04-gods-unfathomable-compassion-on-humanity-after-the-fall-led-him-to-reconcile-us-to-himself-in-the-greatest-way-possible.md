@@ -7,7 +7,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '46'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 27
+sortOrder: 26
 ---
 
 > After God had created man and placed him in the delights of the terrestrial paradise, by the very favors which should have bound him to the service of his Creator he was emboldened to rebel against Him. For this he was driven into exile and condemned to the eternal pains of hell. He had imitated the rebellion of Satan; therefore, it was just that he should share his punishment.

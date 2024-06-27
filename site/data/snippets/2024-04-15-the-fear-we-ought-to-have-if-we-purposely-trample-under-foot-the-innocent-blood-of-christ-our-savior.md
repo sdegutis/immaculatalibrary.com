@@ -7,7 +7,7 @@ archivePage: '114'
 archiveSlug: sinnersguide00luis
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 72
+sortOrder: 71
 ---
 
 > If to the considerations already given we add a brief reflection on the gratitude of men, it will help us realize, in some measure, the severity of the punishment inflicted upon the sinner.

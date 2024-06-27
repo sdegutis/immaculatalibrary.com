@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '140'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 88
+sortOrder: 87
 ---
 
 > If unmoved by the loving providence of God towards the just, at least be not insensible to the rigor with which He punishes the wicked, to whom His justice is meted out according to their own measure.

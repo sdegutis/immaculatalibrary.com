@@ -9,7 +9,7 @@ bookSlug: the-sinners-guide
 tags:
   - Doctrine
   - Exhortation
-sortOrder: 45
+sortOrder: 44
 ---
 
 > CHAPTER VI.

@@ -8,7 +8,7 @@ archivePage: '64'
 bookSlug: the-sinners-guide
 tags:
   - Doctrine
-sortOrder: 41
+sortOrder: 40
 ---
 
 > These are the graces comprehended in the inestimable benefit of justification, which St. Augustine justly ranks above that of creation. For God created the world by a single act of His will, but to redeem it He shed the last drop of His Blood and expired under the most grievous torments. St. Thomas gives a like opinion in his “Sum of Theology.”

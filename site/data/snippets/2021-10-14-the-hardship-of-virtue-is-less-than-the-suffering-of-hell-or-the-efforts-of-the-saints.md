@@ -7,7 +7,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '281'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 172
+sortOrder: 171
 ---
 
 > But let us suppose that the path of virtue is sown with difficulties and hardships. Will this prove that you ought not to walk in it? Oh! no.

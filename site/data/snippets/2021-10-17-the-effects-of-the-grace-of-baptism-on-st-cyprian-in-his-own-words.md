@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '286'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 176
+sortOrder: 175
 ---
 
 > St. Cyprian, already mentioned, who was for a time a prey to the illusions of the world, gives, while writing to his friend Donatus [c. 250 AD], some beautiful and forcible thoughts on this subject:

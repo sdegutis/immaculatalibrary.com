@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '165'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 103
+sortOrder: 102
 ---
 
 > But conscience, which is such a kind master to the just, becomes a scourge to the wicked. It tortures them with the remembrance of their crimes and embitters all their pleasures.

@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '243'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 151
+sortOrder: 150
 ---
 
 > But let us suppose that you will not be disappointed, that you will live to do penance.

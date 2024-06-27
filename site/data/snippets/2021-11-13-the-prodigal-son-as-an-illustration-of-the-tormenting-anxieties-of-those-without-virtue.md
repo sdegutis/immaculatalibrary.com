@@ -7,7 +7,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '197'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 126
+sortOrder: 125
 ---
 
 > The prodigal is a forcible illustration of the unhappy lot of the wicked. Like him, they separate themselves from God and plunge into every vice. They abuse and squander all that God has given them.

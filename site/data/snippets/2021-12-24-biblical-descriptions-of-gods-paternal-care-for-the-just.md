@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '134'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 84
+sortOrder: 83
 ---
 
 > Numerous are the titles which the Holy Scriptures use to express God's providence.

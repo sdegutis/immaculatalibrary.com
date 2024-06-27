@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '186'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 116
+sortOrder: 115
 ---
 
 > Not unfrequently the gratification of man's inordinate desires, so far from satisfying him, only creates other more violent passions, as we learn from the example of Amnon, the wicked son of David, who could neither eat nor rest because of his love for Thamar; but he no sooner obtained possession of her than he hated her even more intensely than he had loved her. [2 Kings xiii.]

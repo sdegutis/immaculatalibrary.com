@@ -7,7 +7,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '47'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 28
+sortOrder: 27
 ---
 
 > When man stood naked and trembling before his Creator, who could have made him believe that one day his unhappy nature would be united to God in one and the same person? This union was so close that even the supreme moment of the Cross could not sever it. Death dissolved the union between soul and body, but could not separate the divinity from the humanity, for what Christ had once taken upon Himself for love of us He never abandoned.

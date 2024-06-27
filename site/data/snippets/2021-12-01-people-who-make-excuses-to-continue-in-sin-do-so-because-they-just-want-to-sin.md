@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '237'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 146
+sortOrder: 145
 ---
 
 > CHAPTER XXIV.

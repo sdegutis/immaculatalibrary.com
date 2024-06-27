@@ -7,7 +7,7 @@ archivePage: '105'
 archiveSlug: sinnersguide00luis
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 67
+sortOrder: 66
 ---
 
 > God in the Old Law ordained that children should be circumcised on the eighth day after birth, teaching us thereby that, on the day of the general resurrection which will follow the short space of this life, He will cut off the miseries and sufferings of those who for love of Him have circumcised their hearts by cutting off all the sinful affections and pleasures of this world. Now, who can conceive a happier existence than this, which is exempt from every sorrow and every infirmity?

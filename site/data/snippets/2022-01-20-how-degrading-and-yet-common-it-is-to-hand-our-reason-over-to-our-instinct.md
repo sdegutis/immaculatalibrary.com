@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '182'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 114
+sortOrder: 113
 ---
 
 > Our souls may be considered as consisting of two parts, which theologians call the superior and the inferior part.

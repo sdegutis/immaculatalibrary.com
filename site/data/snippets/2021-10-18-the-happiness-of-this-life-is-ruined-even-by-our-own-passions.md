@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '296'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 182
+sortOrder: 181
 ---
 
 > Man's irregular appetites and passions are another and inexhaustible source of afflictions.

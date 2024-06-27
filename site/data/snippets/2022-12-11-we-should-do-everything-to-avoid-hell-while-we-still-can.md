@@ -9,7 +9,7 @@ tags:
   - Exhortation
   - Hell
   - Penance
-sortOrder: 59
+sortOrder: 58
 ---
 
 > Why, then, will we not help one another while we can? Why will we not render glory to God before the sun of His justice has set for us?

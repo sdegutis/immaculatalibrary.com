@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '193'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 122
+sortOrder: 121
 ---
 
 > A second source of this liberty is the joy of a good conscience and the spiritual consolations experienced by the just.

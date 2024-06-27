@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '194'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 123
+sortOrder: 122
 ---
 
 > These are the principal sources of that marvellous liberty enjoyed by the just.

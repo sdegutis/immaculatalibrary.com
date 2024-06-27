@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '167'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 105
+sortOrder: 104
 ---
 
 > A philosopher has wisely said that by an eternal law of God it is ordained that fear should be the inseparable companion of evil; and this is confirmed by Solomon, who tells us: "The wicked man fleeth when no man pursueth, but the just, bold as a lion, shall be without dread." [Prov. xxviii. 1.]

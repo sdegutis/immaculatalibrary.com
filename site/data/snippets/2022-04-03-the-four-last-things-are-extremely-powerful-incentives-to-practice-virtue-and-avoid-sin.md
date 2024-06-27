@@ -9,7 +9,7 @@ bookSlug: the-sinners-guide
 tags:
   - Doctrine
   - Four Last Things
-sortOrder: 48
+sortOrder: 47
 ---
 
 > CHAPTER VII.

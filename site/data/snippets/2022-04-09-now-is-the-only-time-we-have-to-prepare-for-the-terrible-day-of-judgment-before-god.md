@@ -13,7 +13,7 @@ tags:
   - Four Last Things
   - Justice
   - Meditations
-sortOrder: 54
+sortOrder: 53
 ---
 
 > Reflect, then, on the sentiments that will be yours when you will stand before the tribunal of God, with no defenders but your good works, with no companion but your own conscience.

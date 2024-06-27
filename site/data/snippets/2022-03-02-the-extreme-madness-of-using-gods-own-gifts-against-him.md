@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '42'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 25
+sortOrder: 24
 ---
 
 > If it be so great a crime to forget this Lord, what must it be to insult Him, and to convert His benefits into the instruments of our offences against Him?

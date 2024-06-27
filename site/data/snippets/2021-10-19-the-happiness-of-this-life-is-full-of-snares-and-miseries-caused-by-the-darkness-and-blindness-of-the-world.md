@@ -7,7 +7,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '298'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 183
+sortOrder: 182
 ---
 
 > The blindness and darkness which prevail in the world render these snares still more dangerous.

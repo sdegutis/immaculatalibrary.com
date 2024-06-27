@@ -12,7 +12,7 @@ tags:
   - Doctrine
   - Holy Spirit
   - Morals
-sortOrder: 43
+sortOrder: 42
 ---
 
 > It is to the Holy Ghost that we are indebted for all our progress in wirtue. It is He who preserves us from evil and maintains us in good. It is He who is the principle of our perseverance, and who finally crowns us in Heaven.

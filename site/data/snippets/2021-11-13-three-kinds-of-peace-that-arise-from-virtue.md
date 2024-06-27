@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '195'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 124
+sortOrder: 123
 ---
 
 > CHAPTER XIX.

@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '103'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 66
+sortOrder: 65
 ---
 
 > Compare the inhabitants of the two countries, if you would have a still stronger proof of the superiority and infinite grandeur of the heavenly country.

@@ -10,7 +10,7 @@ tags:
   - Doctrine
   - Exhortation
   - Body of Christ
-sortOrder: 39
+sortOrder: 38
 ---
 
 > Still another more marvellous benefit of justification is that it transforms the soul into a living member of Christ.

@@ -6,7 +6,7 @@ archivePage: '56'
 bookSlug: the-sinners-guide
 tags:
   - Doctrine
-sortOrder: 35
+sortOrder: 34
 ---
 
 > CHAPTER V.

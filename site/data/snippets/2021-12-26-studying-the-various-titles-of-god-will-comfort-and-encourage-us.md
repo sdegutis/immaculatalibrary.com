@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '137'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 86
+sortOrder: 85
 ---
 
 > God is our Shepherd, because He guides us; He is also our King, because He protects us; our Master, because He instructs us; our Physician, because He heals us; and our Guardian, because He watches over us.

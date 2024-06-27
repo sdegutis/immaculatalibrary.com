@@ -7,7 +7,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '247'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 154
+sortOrder: 153
 ---
 
 > I shall conclude this chapter with a passage from Ecclesiastes in which man is exhorted to give himself to the service of his Creator in his youth, and not to defer it till old age, the infirmities of which are described under curious and admirable figures:

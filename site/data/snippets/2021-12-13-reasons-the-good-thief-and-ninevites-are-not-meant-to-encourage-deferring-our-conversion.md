@@ -7,7 +7,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '260'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 159
+sortOrder: 158
 ---
 
 > You will perhaps urge in opposition to all this that the good thief was saved at the last hour.

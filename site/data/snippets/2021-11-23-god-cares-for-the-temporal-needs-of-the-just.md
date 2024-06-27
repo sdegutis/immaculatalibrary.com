@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '218'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 138
+sortOrder: 137
 ---
 
 > CHAPTER XXII.

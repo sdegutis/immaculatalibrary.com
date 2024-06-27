@@ -8,7 +8,7 @@ tags:
   - Doctrine
   - Mercy
   - Sin
-sortOrder: 37
+sortOrder: 36
 ---
 
 > Another benefit of justification, more spiritual and therefore less apparent, is the regeneration of the interior man deformed by sin. For sin deprives the soul not only of God but of all her supernatural power, of the graces and gifts of the Holy Ghost, in which her beauty and strength consist.

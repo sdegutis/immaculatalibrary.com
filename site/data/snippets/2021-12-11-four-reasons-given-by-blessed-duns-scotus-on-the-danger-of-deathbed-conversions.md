@@ -7,7 +7,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '254'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 157
+sortOrder: 156
 ---
 
 > You now know the sentiments of these great Doctors of the Church on death-bed repentance. See, then, what folly it would be in you to contemplate without fear a passage of which the most skilful pilots speak with terror.

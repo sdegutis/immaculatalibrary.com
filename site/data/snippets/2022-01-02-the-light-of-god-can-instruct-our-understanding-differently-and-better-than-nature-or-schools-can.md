@@ -7,7 +7,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '150'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 93
+sortOrder: 92
 ---
 
 > Grace, as you have already learned, causes God to dwell in our souls; and as God, in the words of St. John, is "the true Light, which enlighteneth every man that cometh into this world," [St. John i. 9.] the purer a soul is the brighter will this Light shine in her, just as glass, according as it is clearer, reflects more strongly the rays of the sun.

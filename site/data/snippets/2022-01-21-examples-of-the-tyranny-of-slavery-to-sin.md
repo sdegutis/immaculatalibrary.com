@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '184'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 115
+sortOrder: 114
 ---
 
 > If you would know the power of this tyranny you have only to consider the evils it has wrought since the beginning of the world.

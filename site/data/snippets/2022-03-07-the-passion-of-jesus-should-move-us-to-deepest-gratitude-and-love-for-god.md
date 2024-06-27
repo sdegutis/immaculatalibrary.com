@@ -6,7 +6,7 @@ archivePage: '50'
 bookSlug: the-sinners-guide
 tags:
   - Passion
-sortOrder: 30
+sortOrder: 29
 ---
 
 > Can we, without the deepest grief, behold this spectacle---God hanging as a malefactor upon an infamous gibbet?

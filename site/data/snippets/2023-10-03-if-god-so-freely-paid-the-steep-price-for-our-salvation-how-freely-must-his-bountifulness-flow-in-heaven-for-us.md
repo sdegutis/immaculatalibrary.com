@@ -7,7 +7,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '100'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 62
+sortOrder: 61
 ---
 
 > Another consideration which will help us to form some idea of the eternal beatitude promised us is the price which God, Who is so liberal, required for it.

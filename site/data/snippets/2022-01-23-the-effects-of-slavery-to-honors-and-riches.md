@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '187'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 117
+sortOrder: 116
 ---
 
 > But this is not the only vice which reduces man to slavery. Study one who is a victim to pride or ambition, and see how eagerly he grasps at honors, how he makes them the end of all his actions.

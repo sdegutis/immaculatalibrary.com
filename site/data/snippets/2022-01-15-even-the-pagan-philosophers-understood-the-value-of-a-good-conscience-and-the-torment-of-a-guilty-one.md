@@ -7,7 +7,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '170'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 107
+sortOrder: 106
 ---
 
 > The ancient philosophers, as we have seen, though deprived of the light of faith, knew the torments of a guilty conscience.

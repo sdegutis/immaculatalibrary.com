@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '212'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 135
+sortOrder: 134
 ---
 
 > Hence the calmness and fortitude of the just under suffering. They are strong in the protection of a powerful Friend who constantly watches over them.

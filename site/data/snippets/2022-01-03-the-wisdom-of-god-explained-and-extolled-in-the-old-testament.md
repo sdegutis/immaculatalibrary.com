@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '151'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 94
+sortOrder: 93
 ---
 
 > Numerous are the passages in the Old Testament which promise this wisdom to the just.

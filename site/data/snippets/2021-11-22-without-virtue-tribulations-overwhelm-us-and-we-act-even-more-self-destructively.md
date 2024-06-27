@@ -7,7 +7,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '215'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 137
+sortOrder: 136
 ---
 
 > But we feel that we have said sufficient to prove that God consoles the just in their sufferings, and therefore we shall next consider the unfortunate condition of the wicked when laboring under affliction.

@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '127'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 79
+sortOrder: 78
 ---
 
 > As a farther proof of what has been said I will add the remarkable words uttered by our Saviour when St. Peter asked what reward they would have for leaving all things for love of Him: "Amen I say unto you, there is no man who hath left house, or brethren, or sisters, or father, or mother, or children, or lands for my sake and for the Gospel, who shall not receive a hundred times as much now in this time, and in the world to come life everlasting" [St. Mark x. 29, 30.]

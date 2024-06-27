@@ -7,7 +7,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '161'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 100
+sortOrder: 99
 ---
 
 > You will probably tell me that these consolations are reserved for those who are already advanced in virtue.

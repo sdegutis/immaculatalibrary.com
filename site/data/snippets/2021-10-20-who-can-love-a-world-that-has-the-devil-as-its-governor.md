@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: n306
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 24
+sortOrder: 184
 ---
 
 > Moreover, if you would know the world still better, consider him who governs it.

@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '175'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 110
+sortOrder: 109
 ---
 
 > In studying the inestimable treasures of hope you have some idea of one of the blessings of which the wicked are deprived. Whatever hope remains to them is dead; destroyed by sin, it can produce none of the glorious fruits we have been considering.

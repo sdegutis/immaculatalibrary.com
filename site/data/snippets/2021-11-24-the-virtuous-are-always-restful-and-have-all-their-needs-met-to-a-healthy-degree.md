@@ -7,7 +7,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '221'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 139
+sortOrder: 138
 ---
 
 > Moreover, they are bestowed with two extraordinary advantages unknown to the wicked.

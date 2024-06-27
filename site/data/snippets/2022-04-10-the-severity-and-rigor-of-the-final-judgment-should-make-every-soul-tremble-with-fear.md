@@ -12,7 +12,7 @@ tags:
   - Exhortation
   - Four Last Things
   - Meditations
-sortOrder: 55
+sortOrder: 54
 ---
 
 > THE EIGHTH MOTIVE FOR PRACTISING VIRTUE: THE THOUGHT OF THE LAST JUDGMENT, THE SECOND OF THE FOUR LAST THINGS.

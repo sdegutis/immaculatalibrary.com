@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '264'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 161
+sortOrder: 160
 ---
 
 > CHAPTER XXVI.

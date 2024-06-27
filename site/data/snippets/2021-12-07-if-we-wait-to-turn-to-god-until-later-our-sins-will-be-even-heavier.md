@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '241'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 149
+sortOrder: 148
 ---
 
 > Can you, then, doubt that you only increase the difficulties of your conversion by deferring it?

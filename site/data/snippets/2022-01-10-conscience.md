@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '164'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 102
+sortOrder: 101
 ---
 
 > *CHAPTER XVI.*

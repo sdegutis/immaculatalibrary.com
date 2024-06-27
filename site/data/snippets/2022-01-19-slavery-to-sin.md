@@ -8,7 +8,7 @@ tags:
   - Exhortation
   - Doctrine
   - Sin
-sortOrder: 113
+sortOrder: 112
 ---
 
 > Now, the sinner is in bondage under sin, the most cruel of tyrants. The torments of hell are but the effects of sin; consider, then, how horrible sin itself must be. It is to this cruel tyrant that the wicked are enslaved, for our Saviour tells us: "Whosoever committeth sin is the servant of sin." [St. John viii. 34.]

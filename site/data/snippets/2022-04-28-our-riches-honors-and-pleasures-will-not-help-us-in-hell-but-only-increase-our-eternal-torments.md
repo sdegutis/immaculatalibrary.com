@@ -16,7 +16,7 @@ tags:
   - Justice
   - Morals
   - What the Saints Say
-sortOrder: 57
+sortOrder: 56
 ---
 
 > Unhappy tongues which henceforth utter only blasphemies! Unhappy ears to be forever filled with sighs and lamentations! Unhappy eyes which will never gaze upon anything but misery! Unhappy flesh consumed in eternal flames!

@@ -10,7 +10,7 @@ tags:
   - Exhortation
   - Hell
   - Justice
-sortOrder: 58
+sortOrder: 57
 ---
 
 > Another thought which should here impress us is that God has given us two eyes, two ears, two hands, and two feet, so that if we lose one of these members we still have one left. But He has given us only one soul, and if we lose that we have no other with which to enjoy eternal happiness.

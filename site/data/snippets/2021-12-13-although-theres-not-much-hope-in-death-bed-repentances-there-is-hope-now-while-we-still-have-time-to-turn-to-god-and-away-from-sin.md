@@ -7,7 +7,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '262'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 160
+sortOrder: 159
 ---
 
 > 

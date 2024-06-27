@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '234'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 145
+sortOrder: 144
 ---
 
 > Behold, then, dear Christian, the twelve fruits of virtue in this life. They are like the twelve fruits of the tree of life seen by St. John in his prophetic vision. [Apoc. xxii. 2.]

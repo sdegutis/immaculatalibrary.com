@@ -7,7 +7,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '231'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 143
+sortOrder: 142
 ---
 
 > If at this critical hour riches could help him as they do at many other periods of life, the evil would be less.

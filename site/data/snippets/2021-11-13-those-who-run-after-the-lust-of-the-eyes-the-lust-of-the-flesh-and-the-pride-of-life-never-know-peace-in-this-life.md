@@ -7,7 +7,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '196'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 125
+sortOrder: 124
 ---
 
 > We will first consider the agitation and anxiety of the sinner, in order more keenly to appreciate the blessing of holy peace.
