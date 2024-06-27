@@ -1,6 +1,9 @@
 import { LeftArrow, RightArrow } from "../scripts/$arrows.js";
-import { animateTo, changeEase } from "./lib/$animate.js";
-import { Nav } from "./lib/$nav.js";
+import { changeEase } from "./lib/$animate.js";
+import { changeNavButtons } from "./lib/$easteregg1.js";
+import { setupGamepads } from "./lib/$gamepad.js";
+import { Panel } from "./lib/$panel.js";
+import { Tab, tabButtons } from "./lib/$tab.js";
 
 const today = new Date().getDay();
 
@@ -16,143 +19,16 @@ for (const [, day] of Object.entries(document.querySelectorAll<HTMLElement>('.my
   }
 }
 
-const tabNav = new Nav<Tab>();
-
-class Tab {
-
-  prev: Tab | undefined;
-  next: Tab | undefined;
-
-  panelNav = new Nav<Panel>();
-
-  static tabs: Tab[] = [];
-
-  static currentTabIndex = 0;
-  static get currentTab() { return Tab.tabs[this.currentTabIndex]!; }
-
-  currentPanel!: Panel;
-
-  constructor(public firstPanel: Panel, private button: HTMLAnchorElement) {
-    this.button.onclick = (e) => {
-      e.preventDefault();
-      this.focus();
-    };
-  }
-
-  focus() {
-    for (const tab of Tab.tabs) tab.button.classList.remove('active');
-    Tab.currentTabIndex = Tab.tabs.indexOf(this);
-    this.button.classList.add('active');
-    this.firstPanel.focus();
-  };
-
-}
-
-const tabBodies = document.getElementById('tabs-bodies') as HTMLDivElement;
-const tabButtons = [...document.querySelectorAll<HTMLAnchorElement>('#tabs-names a')];
+setupGamepads();
 
 // for (const tabBody of tabBodies.children) {
 //   const button = tabButtons.shift()!;
 //   const tab = new Tab(button);
 //   tabNav.add(tab);
-
 //   for (const panelDiv of tabBody.querySelectorAll<HTMLDivElement>('.panel')) {
-
 //     tab.panelNav
-
-
 //   }
-
-
 // }
-
-
-
-
-
-
-class Panel {
-
-  public tab!: Tab;
-
-  public prev: Panel | undefined;
-  public next: Panel | undefined;
-
-  private lines: HTMLElement[];
-  currentLine = 0;
-
-  constructor(
-    public panelDiv: HTMLDivElement,
-    public panelBodyDiv: HTMLDivElement,
-  ) {
-    this.lines = [...this.panelBodyDiv.querySelectorAll<HTMLElement>('.highlightable-line')];
-
-    for (const [i, line] of Object.entries(this.lines)) {
-      line.onclick = (e) => {
-        e.preventDefault();
-        this.goToLine(+i);
-      };
-    }
-  }
-
-  hasLines() { return this.lines.length > 0; }
-
-  focus() {
-    animateTo(tabBodies, 700, {
-      x: this.panelDiv.offsetLeft - tabBodies.offsetLeft,
-      y: this.panelDiv.offsetTop - tabBodies.offsetTop,
-    });
-    this.panelBodyDiv.focus({ preventScroll: true });
-
-    for (const line of this.lines) {
-      line.classList.remove('active');
-    }
-
-    this.currentLineEl.classList.add('active');
-    this.tab.currentPanel = this;
-  }
-
-  goToLine(line: number) {
-    this.currentLineEl.classList.remove('active');
-    this.currentLine = line;
-    this.currentLineEl.classList.add('active');
-
-    const currentLine = this.currentLineEl;
-    animateTo(this.panelBodyDiv, 300, {
-      x: this.panelBodyDiv.scrollLeft,
-      y: currentLine.offsetTop - this.panelBodyDiv.offsetHeight / 2 + currentLine.offsetHeight / 2,
-    });
-  }
-
-  nextLine() {
-    this.goToLine(Math.min(this.currentLine + 1, this.lines.length - 1));
-  }
-
-  prevLine() {
-    this.goToLine(Math.max(this.currentLine - 1, 0));
-  }
-
-  get currentLineEl() {
-    return this.lines[this.currentLine]!;
-  }
-
-}
-
-let buttonEasterEgg = false;
-
-function changeNavButtons() {
-  buttonEasterEgg = !buttonEasterEgg;
-
-  for (const button of document.querySelectorAll<HTMLButtonElement>('.page-changer')) {
-    const side = button.classList.contains('side-left') ? 'left' : 'right';
-    if (buttonEasterEgg) {
-      button.textContent = `Hey, why don't you go to the page on the ${side} by clicking here?`;
-    }
-    else {
-      button.replaceChildren(side === 'left' ? <LeftArrow /> : <RightArrow />);
-    }
-  }
-}
 
 for (const slideshow of document.querySelectorAll<HTMLDivElement>('.slideshow')) {
   let lastPanel: Panel | undefined;
@@ -241,73 +117,3 @@ function PageChanger(attrs: { to: Panel, side: 'left' | 'right' }, children: any
 }
 
 Tab.tabs[0]!.focus();
-
-
-const enum Button {
-  A, B, X, Y,
-  L, R, ZL, ZR,
-  MINUS, PLUS,
-  LTRIGGER, RTRIGGER,
-  UP, DOWN, LEFT, RIGHT,
-  HOME,
-}
-
-const gamepad = () => navigator.getGamepads().find(c => c)!;
-
-const gamepadActions = new Map<number, () => void>([
-  [Button.L, () => {
-    const i = Math.max(Tab.currentTabIndex - 1, 0);
-    Tab.tabs[i]?.focus();
-  }],
-  [Button.R, () => {
-    const i = Math.min(Tab.currentTabIndex + 1, Tab.tabs.length - 1);
-    Tab.tabs[i]?.focus();
-  }],
-
-  [Button.A, () => { changeEase(); }],
-  [Button.B, () => { changeNavButtons(); }],
-
-  [Button.RIGHT, () => { Tab.currentTab.currentPanel.next?.focus(); }],
-  [Button.LEFT, () => { Tab.currentTab.currentPanel.prev?.focus(); }],
-
-  [Button.DOWN, () => { Tab.currentTab.currentPanel.nextLine(); }],
-  [Button.UP, () => { Tab.currentTab.currentPanel.prevLine(); }],
-]);
-
-function handleController() {
-  for (const [button, fn] of gamepadActions.entries()) {
-    if (pressed(button)) {
-      fn();
-      return;
-    }
-  }
-}
-
-const pressMap = new Map<number, number>();
-
-function pressed(button: number) {
-  if (!gamepad().buttons[button]!.pressed) return false;
-
-  const lastPressed = pressMap.get(button) ?? 0;
-  const now = Date.now();
-
-  if (now > lastPressed + 300) {
-    pressMap.set(button, now);
-    return true;
-  }
-
-  return false;
-}
-
-let interval: NodeJS.Timeout | undefined;
-
-window.addEventListener('gamepadconnected', (e) => {
-  interval ??= setInterval(handleController, 33);
-});
-
-window.addEventListener('gamepaddisconnected', (e) => {
-  if (navigator.getGamepads().every(gp => gp === null)) {
-    clearInterval(interval);
-    interval = undefined;
-  }
-});
