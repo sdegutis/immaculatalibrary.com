@@ -1,4 +1,5 @@
 import easesLib from 'https://cdn.jsdelivr.net/npm/eases@1.0.8/+esm';
+import { notify } from './$notify.js';
 
 class Animation {
 
@@ -106,10 +107,12 @@ export function nextEase() {
   easeIndex++;
   if (easeIndex >= eases.length) easeIndex = 0;
   ease = eases[easeIndex]!;
+  notify(ease.name);
 }
 
 export function prevEase() {
   easeIndex--;
   if (easeIndex < 0) easeIndex = eases.length - 1;
   ease = eases[easeIndex]!;
+  notify(ease.name);
 }
