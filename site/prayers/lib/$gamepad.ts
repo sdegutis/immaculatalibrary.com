@@ -1,6 +1,6 @@
 import { changeEase } from "./$animate.js";
 import { changeNavButtons } from "./$easteregg1.js";
-import { Tab } from "./$tab.js";
+import { tabNav } from "./$tab.js";
 
 const enum Button {
   A, B, X, Y,
@@ -14,23 +14,17 @@ const enum Button {
 const gamepad = () => navigator.getGamepads().find(c => c)!;
 
 const gamepadActions = new Map<number, () => void>([
-  [Button.L, () => {
-    const i = Math.max(Tab.currentTabIndex - 1, 0);
-    Tab.tabs[i]?.focus();
-  }],
-  [Button.R, () => {
-    const i = Math.min(Tab.currentTabIndex + 1, Tab.tabs.length - 1);
-    Tab.tabs[i]?.focus();
-  }],
+  [Button.L, () => { tabNav.current.prev?.focus(); }],
+  [Button.R, () => { tabNav.current.next?.focus(); }],
 
   [Button.A, () => { changeEase(); }],
   [Button.B, () => { changeNavButtons(); }],
 
-  [Button.RIGHT, () => { Tab.currentTab.currentPanel.next?.focus(); }],
-  [Button.LEFT, () => { Tab.currentTab.currentPanel.prev?.focus(); }],
+  [Button.RIGHT, () => { tabNav.current.panelNav.current.next?.focus(); }],
+  [Button.LEFT, () => { tabNav.current.panelNav.current.prev?.focus(); }],
 
-  [Button.DOWN, () => { Tab.currentTab.currentPanel.nextLine(); }],
-  [Button.UP, () => { Tab.currentTab.currentPanel.prevLine(); }],
+  [Button.DOWN, () => { tabNav.current.panelNav.current.nextLine(); }],
+  [Button.UP, () => { tabNav.current.panelNav.current.prevLine(); }],
 ]);
 
 function handleController() {

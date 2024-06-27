@@ -1,7 +1,9 @@
-import { animateTo } from "./$animate.js";
+import { animateTo, changeEase } from "./$animate.js";
+import { changeNavButtons } from "./$easteregg1.js";
+import { Nav, Navable } from "./$nav.js";
 import { Tab, tabBodies } from "./$tab.js";
 
-export class Panel {
+export class Panel implements Navable<Panel> {
 
   public tab!: Tab;
 
@@ -14,6 +16,7 @@ export class Panel {
   constructor(
     public panelDiv: HTMLDivElement,
     public panelBodyDiv: HTMLDivElement,
+    private panelNav: Nav<Panel>,
   ) {
     this.lines = [...this.panelBodyDiv.querySelectorAll<HTMLElement>('.highlightable-line')];
 
@@ -23,6 +26,51 @@ export class Panel {
         this.goToLine(+i);
       };
     }
+
+    this.panelBodyDiv.onwheel = (e) => {
+      e.preventDefault();
+      if (e.deltaY > 0)
+        this.nextLine();
+      else if (e.deltaY < 0)
+        this.prevLine();
+    };
+
+    this.panelBodyDiv.setAttribute('tabindex', '0');
+    this.panelBodyDiv.onkeydown = (e) => {
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        this.prev?.focus();
+      }
+      else if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        this.next?.focus();
+      }
+      else if (e.key === 'Enter' && e.ctrlKey) {
+        e.preventDefault();
+        changeNavButtons();
+      }
+      else if (e.key === ' ' && e.ctrlKey) {
+        e.preventDefault();
+        changeEase();
+      }
+      else if (e.key === ' ') {
+        e.preventDefault();
+        this.nextLine();
+      }
+      else if (e.key === 'ArrowUp') {
+        if (this.hasLines()) {
+          e.preventDefault();
+          this.prevLine();
+        }
+      }
+      else if (e.key === 'ArrowDown') {
+        if (this.hasLines()) {
+          e.preventDefault();
+          this.nextLine();
+        }
+      }
+    };
+
   }
 
   hasLines() { return this.lines.length > 0; }
@@ -39,7 +87,7 @@ export class Panel {
     }
 
     this.currentLineEl.classList.add('active');
-    this.tab.currentPanel = this;
+    this.panelNav.current = this;
   }
 
   goToLine(line: number) {
