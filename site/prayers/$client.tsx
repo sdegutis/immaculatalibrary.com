@@ -14,7 +14,29 @@ for (const [, day] of Object.entries(document.querySelectorAll<HTMLElement>('.my
   }
 }
 
+class Nav<T extends { next?: T, prev?: T }> {
+
+  first!: T;
+  current!: T;
+
+  add(t: T) {
+    if (!this.first) {
+      this.current = this.first = t;
+      return;
+    }
+
+    let last = this.first;
+    while (last.next) last = last.next;
+
+    last.next = t;
+    t.prev = last;
+  }
+
+}
+
 class Tab {
+
+  private panelNav = new Nav<Panel>();
 
   static tabs: Tab[] = [];
 
@@ -320,5 +342,14 @@ function pressed(button: number) {
 }
 
 let interval: NodeJS.Timeout | undefined;
-window.addEventListener('gamepadconnected', (e) => { interval ??= setInterval(handleController, 33); });
-window.addEventListener('gamepaddisconnected', (e) => { clearInterval(interval); interval = undefined; });
+
+window.addEventListener('gamepadconnected', (e) => {
+  interval ??= setInterval(handleController, 33);
+});
+
+window.addEventListener('gamepaddisconnected', (e) => {
+  if (navigator.getGamepads().every(gp => gp === null)) {
+    clearInterval(interval);
+    interval = undefined;
+  }
+});
