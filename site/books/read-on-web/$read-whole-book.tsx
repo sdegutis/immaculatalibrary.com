@@ -83,8 +83,8 @@ function navigateTo(i: number, options: { scrollBody: boolean }) {
   const bodyY = bodyDiv.offsetTop - bodiesDiv.offsetTop;
   bodiesDiv.scrollTo({ top: bodyY, behavior: options.scrollBody ? 'smooth' : 'instant' });
 
-  for (const a of document.querySelectorAll('.chapter-link a')) {
-    a.classList.toggle('current', a === link);
+  for (const span of document.querySelectorAll('.chapter-link')) {
+    span.classList.toggle('current', span === link.parentElement);
   }
 }
 

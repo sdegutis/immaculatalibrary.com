@@ -9,7 +9,7 @@
   display: contents;
 }
 
-.chapter-link a.current {
+.chapter-link.current>* {
   color: #fff;
 }
 
