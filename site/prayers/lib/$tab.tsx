@@ -40,7 +40,7 @@ export function setupTabs() {
     for (const panelDiv of tabBody.querySelectorAll<HTMLDivElement>('.panel')) {
       const panelBodyDiv = panelDiv.querySelector<HTMLDivElement>('.panel-body')!;
 
-      const panel = new Panel(panelDiv, panelBodyDiv, tab.panelNav);
+      const panel = new Panel(panelDiv, panelBodyDiv, tab);
       tab.panelNav.add(panel);
 
       if (panel.prev) {

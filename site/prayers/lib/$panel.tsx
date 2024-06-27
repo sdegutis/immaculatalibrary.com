@@ -1,11 +1,9 @@
 import { animateTo, changeEase } from "./$animate.js";
 import { changeNavButtons } from "./$easteregg1.js";
-import { Nav, Navable } from "./$nav.js";
+import { Navable } from "./$nav.js";
 import { Tab, tabBodies } from "./$tab.js";
 
 export class Panel implements Navable<Panel> {
-
-  public tab!: Tab;
 
   public prev: Panel | undefined;
   public next: Panel | undefined;
@@ -16,7 +14,7 @@ export class Panel implements Navable<Panel> {
   constructor(
     public panelDiv: HTMLDivElement,
     public panelBodyDiv: HTMLDivElement,
-    private panelNav: Nav<Panel>,
+    public tab: Tab,
   ) {
     this.lines = [...this.panelBodyDiv.querySelectorAll<HTMLElement>('.highlightable-line')];
 
@@ -87,7 +85,7 @@ export class Panel implements Navable<Panel> {
     }
 
     this.currentLineEl.classList.add('active');
-    this.panelNav.current = this;
+    this.tab.panelNav.current = this;
   }
 
   goToLine(line: number) {
