@@ -97,7 +97,7 @@ export default <>
 </>;
 
 function Mystery(attrs: { name: string, list: FsFile[], mysteries: string[], days: Day[] }) {
-  const dayClasses = attrs.days.map(day => `day-${day}`).join(' ');
+  const dayClasses = attrs.days.map(day => `show-today day-${day}`).join(' ');
   const labels = ['First', 'Second', 'Third', 'Fourth', 'Fifth'];
   const mysteries = Object.values(Object.groupBy(attrs.list, f => f.path.match(/\/\d/)?.[0]!));
   return <>{mysteries.map((mystery, i) =>
@@ -287,7 +287,7 @@ function MorningPrayers() {
 
 function Sunday() {
   return <Panel>
-    <div class='centered spaced-big show-today'>
+    <div class='centered spaced-big show-today day-0'>
       <h1>Sunday</h1>
       <p class='spaced-small'>
         <Line>O Glorious Queen of Heaven and Earth,</Line>
@@ -340,7 +340,7 @@ function Sunday() {
 
 function Monday() {
   return <Panel>
-    <div class='centered spaced-big show-today'>
+    <div class='centered spaced-big show-today day-1'>
       <h1>Monday</h1>
       <p class='spaced-small'>
         <Line>In Thy name, Lord Jesus Christ,</Line>
@@ -358,7 +358,7 @@ function Monday() {
 
 function Tuesday() {
   return <Panel>
-    <div class='centered spaced-big show-today'>
+    <div class='centered spaced-big show-today day-2'>
       <h1>Tuesday</h1>
       <p class='spaced-small'>
         <Line>Lord Jesus Christ, we beg Thee for the grace</Line>
@@ -376,7 +376,7 @@ function Tuesday() {
 
 function Wednesday() {
   return <Panel>
-    <div class='centered spaced-big show-today'>
+    <div class='centered spaced-big show-today day-3'>
       <h1>Wednesday</h1>
       <div>
         <p class='spaced-small'>
@@ -430,7 +430,7 @@ function Wednesday() {
 
 function Thursday() {
   return <Panel>
-    <div class='centered spaced-big show-today'>
+    <div class='centered spaced-big show-today day-4'>
       <h1>Thursday</h1>
       <p class='spaced-small'>
         <Line>My Lord,</Line>
@@ -467,7 +467,7 @@ function Thursday() {
 
 function Friday() {
   return <Panel>
-    <div class='centered spaced-big show-today'>
+    <div class='centered spaced-big show-today day-5'>
       <h1>Friday</h1>
       <h2>Litany of Humility</h2>
       <p class='two-cols spaced-small'>
@@ -508,7 +508,7 @@ function Friday() {
 
 function Saturday() {
   return <Panel>
-    <div class='centered spaced-big show-today'>
+    <div class='centered spaced-big show-today day-6'>
       <h1>Saturday</h1>
       <p class='spaced-small'>
         <Line>O God and Father of our Lord Jesus Christ,</Line>

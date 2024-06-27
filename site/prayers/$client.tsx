@@ -5,18 +5,8 @@ import { setupGamepads } from "./lib/$gamepad.js";
 import { Panel } from "./lib/$panel.js";
 import { Tab, tabButtons } from "./lib/$tab.js";
 
-const today = new Date().getDay();
-
-for (const [i, day] of Object.entries(document.querySelectorAll<HTMLElement>('.show-today'))) {
-  if (today !== +i) {
-    day.closest('.panel')?.remove();
-  }
-}
-
-for (const [, day] of Object.entries(document.querySelectorAll<HTMLElement>('.mystery'))) {
-  if (!day.classList.contains(`day-${today}`)) {
-    day.closest('.panel')?.remove();
-  }
+for (const el of document.querySelectorAll(`.show-today:not(.day-${new Date().getDay()})`)) {
+  el.closest('.panel')?.remove();
 }
 
 setupGamepads();
