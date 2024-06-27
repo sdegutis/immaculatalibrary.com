@@ -15,7 +15,10 @@ const linksDiv = document.getElementById('readonline-chapters') as HTMLDivElemen
 const bodiesDiv = document.getElementById('chapter-bodies') as HTMLDivElement;
 const iframe = document.querySelector('iframe')!;
 
-const snippetsInBook = snippetSlugsInBook.map(slug => allSnippets.find(s => s.slug === slug)!);
+const snippetsInBook = snippetSlugsInBook.map(slug => {
+  const snippet = allSnippets.find(s => s.slug === slug)!;
+  return { ...snippet, content: markdown.render(snippet.markdown) };
+});
 
 function render() {
   linksDiv.replaceChildren(<>
@@ -24,7 +27,7 @@ function render() {
       <a href={`#snippet-${bookSnippet.slug}`} onclick={(e: Event) => {
         e.preventDefault();
         localStorage.setItem(bookSlug, i.toString());
-        navigateTo(i);
+        navigateTo(i, { scrollBody: true });
       }}>
         {bookSnippet.title}
       </a>
@@ -47,7 +50,7 @@ function render() {
               <button style='margin-left:2px' onclick={() => moveSnippet(i, +1)}>Move down</button>
             </span>
           }
-          <div innerHTML={markdown.render(bookSnippet.markdown)} />
+          <div innerHTML={bookSnippet.content} />
           <hr />
         </div>
       </>)}
@@ -59,10 +62,10 @@ render();
 
 const last = localStorage.getItem(bookSlug);
 if (last !== null) {
-  navigateTo(+last);
+  navigateTo(+last, { scrollBody: false });
 }
 
-function navigateTo(i: number) {
+function navigateTo(i: number, options: { scrollBody: boolean }) {
   iframe.src = snippetsInBook[i]!.archiveLink;
 
   const linksScroller = document.querySelector<HTMLDivElement>('#link-scroll-area')!;
@@ -72,7 +75,7 @@ function navigateTo(i: number) {
 
   const bodyDiv = document.querySelectorAll<HTMLDivElement>('#chapter-bodies .chapter')[i]!;
   const bodyY = bodyDiv.offsetTop - bodiesDiv.offsetTop;
-  bodiesDiv.scrollTo({ top: bodyY, behavior: 'smooth' });
+  bodiesDiv.scrollTo({ top: bodyY, behavior: options.scrollBody ? 'smooth' : 'instant' });
 }
 
 function moveSnippet(i: number, by: number) {
@@ -83,7 +86,9 @@ function moveSnippet(i: number, by: number) {
   snippetsInBook.splice(i, 1);
   snippetsInBook.splice(j, 0, s);
   render();
-  bodiesDiv.children[j]?.scrollIntoView();
+
+  navigateTo(j, { scrollBody: false });
+
   saveOrder();
 }
 
