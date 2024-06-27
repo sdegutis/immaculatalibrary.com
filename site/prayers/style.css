@@ -143,3 +143,29 @@ img {
   background-size: cover;
   background-position: center center;
 }
+
+#notice {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  border: 1px solid var(--admin-border-color);
+  background-color: var(--admin-bg-color);
+  padding: 1em;
+  z-index: 1;
+}
+
+#notice.fading-out {
+  animation: fadeout 2s ease-in-out;
+}
+
+@keyframes fadeout {
+
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+
+}

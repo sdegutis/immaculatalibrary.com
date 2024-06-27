@@ -67,52 +67,52 @@ export function animateTo(container: HTMLElement, duration: number, to: { x: num
 }
 
 const eases = [
-  easesLib.backInOut,
-  easesLib.backIn,
-  easesLib.backOut,
-  easesLib.bounceInOut,
-  easesLib.bounceIn,
-  easesLib.bounceOut,
-  easesLib.circInOut,
-  easesLib.circIn,
-  easesLib.circOut,
-  easesLib.cubicInOut,
-  easesLib.cubicIn,
-  easesLib.cubicOut,
-  easesLib.elasticInOut,
-  easesLib.elasticIn,
-  easesLib.elasticOut,
-  easesLib.expoInOut,
-  easesLib.expoIn,
-  easesLib.expoOut,
-  easesLib.linear,
-  easesLib.quadInOut,
-  easesLib.quadIn,
-  easesLib.quadOut,
-  easesLib.quartInOut,
-  easesLib.quartIn,
-  easesLib.quartOut,
-  easesLib.quintInOut,
-  easesLib.quintIn,
-  easesLib.quintOut,
-  easesLib.sineInOut,
-  easesLib.sineIn,
-  easesLib.sineOut,
+  { name: 'backInOut', fn: easesLib.backInOut },
+  { name: 'backIn', fn: easesLib.backIn },
+  { name: 'backOut', fn: easesLib.backOut },
+  { name: 'bounceInOut', fn: easesLib.bounceInOut },
+  { name: 'bounceIn', fn: easesLib.bounceIn },
+  { name: 'bounceOut', fn: easesLib.bounceOut },
+  { name: 'circInOut', fn: easesLib.circInOut },
+  { name: 'circIn', fn: easesLib.circIn },
+  { name: 'circOut', fn: easesLib.circOut },
+  { name: 'cubicInOut', fn: easesLib.cubicInOut },
+  { name: 'cubicIn', fn: easesLib.cubicIn },
+  { name: 'cubicOut', fn: easesLib.cubicOut },
+  { name: 'elasticInOut', fn: easesLib.elasticInOut },
+  { name: 'elasticIn', fn: easesLib.elasticIn },
+  { name: 'elasticOut', fn: easesLib.elasticOut },
+  { name: 'expoInOut', fn: easesLib.expoInOut },
+  { name: 'expoIn', fn: easesLib.expoIn },
+  { name: 'expoOut', fn: easesLib.expoOut },
+  { name: 'linear', fn: easesLib.linear },
+  { name: 'quadInOut', fn: easesLib.quadInOut },
+  { name: 'quadIn', fn: easesLib.quadIn },
+  { name: 'quadOut', fn: easesLib.quadOut },
+  { name: 'quartInOut', fn: easesLib.quartInOut },
+  { name: 'quartIn', fn: easesLib.quartIn },
+  { name: 'quartOut', fn: easesLib.quartOut },
+  { name: 'quintInOut', fn: easesLib.quintInOut },
+  { name: 'quintIn', fn: easesLib.quintIn },
+  { name: 'quintOut', fn: easesLib.quintOut },
+  { name: 'sineInOut', fn: easesLib.sineInOut },
+  { name: 'sineIn', fn: easesLib.sineIn },
+  { name: 'sineOut', fn: easesLib.sineOut },
 ];
 
 let easeIndex = 0;
-let ease = eases[easeIndex]!;
+let ease = eases[easeIndex]!.fn;
 
 export function nextEase() {
   easeIndex++;
   if (easeIndex >= eases.length) easeIndex = 0;
-  ease = eases[easeIndex]!;
-  notify(ease.name);
+  ease = eases[easeIndex]!.fn;
+  notify(eases[easeIndex]!.name);
 }
 
 export function prevEase() {
   easeIndex--;
   if (easeIndex < 0) easeIndex = eases.length - 1;
-  ease = eases[easeIndex]!;
-  notify(ease.name);
+  ease = eases[easeIndex]!.fn;
+  notify(eases[easeIndex]!.name);
 }
