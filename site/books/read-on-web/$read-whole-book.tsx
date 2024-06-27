@@ -20,7 +20,10 @@ function render() {
   linksDiv.replaceChildren(<>
     {snippetsInBook.map((bookSnippet, i) => <span class='chapter-link'>
       <span>Ch.{i + 1}</span>
-      <a href={`#snippet-${bookSnippet.slug}`} onclick={() => { iframe.src = bookSnippet.archiveLink }}>
+      <a href={`#snippet-${bookSnippet.slug}`} onclick={function (this: HTMLAnchorElement, e: Event) {
+        e.preventDefault();
+        navigateTo(bookSnippet, this)
+      }}>
         {bookSnippet.title}
       </a>
     </span>)}
@@ -49,6 +52,18 @@ function render() {
 }
 
 render();
+
+function navigateTo(snippet: SnippetJson, a: HTMLAnchorElement) {
+  iframe.src = snippet.archiveLink;
+
+  setTimeout(() => {
+    const i = snippetsInBook.indexOf(snippet);
+    const div = bodiesDiv.children[i]!;
+    div.scrollIntoView({ block: 'start' });
+
+    a.scrollIntoView({ block: 'center', behavior: 'smooth' });
+  }, 0);
+}
 
 function moveSnippet(i: number, by: number) {
   const j = i + by;
