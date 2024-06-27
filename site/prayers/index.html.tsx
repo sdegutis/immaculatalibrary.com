@@ -214,7 +214,7 @@ function MorningPrayers() {
         <br />
         <Line>Have mercy on us</Line>
         <Line>    forgive us our sins</Line>
-        <Line>        and bring us to eternal life.</Line>
+        <Line>        and bring us to everlasting life.</Line>
         <br />
         <Line>Unblind us from all spiritual blindness</Line>
         <Line>    soften our hardened hearts</Line>

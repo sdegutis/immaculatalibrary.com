@@ -173,7 +173,7 @@ for (const slideshow of document.querySelectorAll<HTMLDivElement>('.slideshow'))
         for (const button of document.querySelectorAll<HTMLButtonElement>('.page-changer')) {
           const side = button.classList.contains('side-left') ? 'left' : 'right';
           if (buttonEasterEgg) {
-            button.textContent = `Go to the page on the ${side} by clicking here.`;
+            button.textContent = `Hey, why don't you go to the page on the ${side} by clicking here?`;
           }
           else {
             button.replaceChildren(side === 'left' ? <LeftArrow /> : <RightArrow />);
