@@ -68,9 +68,11 @@ const last = localStorage.getItem(bookSlug);
 if (last !== null) {
   const i = +last;
   navigateTo(i, { scrollBody: false });
-  setTimeout(() => {
+
+  iframe.onload = () => {
+    iframe.onload = null;
     iframe.src = snippetsInBook[i]!.archiveLink;
-  }, 0);
+  };
 }
 
 function navigateTo(i: number, options: { scrollBody: boolean }) {
