@@ -76,6 +76,10 @@ function easeInOut(x: number): number {
   return 1 - Math.pow(1 - x, 4);
 }
 
+function changeEase() {
+  ease = ease === easeInOut ? sillyEase : easeInOut;
+}
+
 function sillyEase(x: number): number {
   const c4 = (2 * Math.PI) / 3;
   return x === 0
@@ -155,6 +159,20 @@ class Panel {
 
 let buttonEasterEgg = false;
 
+function changeNavButtons() {
+  buttonEasterEgg = !buttonEasterEgg;
+
+  for (const button of document.querySelectorAll<HTMLButtonElement>('.page-changer')) {
+    const side = button.classList.contains('side-left') ? 'left' : 'right';
+    if (buttonEasterEgg) {
+      button.textContent = `Hey, why don't you go to the page on the ${side} by clicking here?`;
+    }
+    else {
+      button.replaceChildren(side === 'left' ? <LeftArrow /> : <RightArrow />);
+    }
+  }
+}
+
 const tabButtons = [...document.querySelectorAll<HTMLAnchorElement>('#tabs-names a')];
 for (const slideshow of document.querySelectorAll<HTMLDivElement>('.slideshow')) {
   let lastPanel: Panel | undefined;
@@ -188,21 +206,11 @@ for (const slideshow of document.querySelectorAll<HTMLDivElement>('.slideshow'))
       }
       else if (e.key === 'Enter' && e.ctrlKey) {
         e.preventDefault();
-        buttonEasterEgg = !buttonEasterEgg;
-
-        for (const button of document.querySelectorAll<HTMLButtonElement>('.page-changer')) {
-          const side = button.classList.contains('side-left') ? 'left' : 'right';
-          if (buttonEasterEgg) {
-            button.textContent = `Hey, why don't you go to the page on the ${side} by clicking here?`;
-          }
-          else {
-            button.replaceChildren(side === 'left' ? <LeftArrow /> : <RightArrow />);
-          }
-        }
+        changeNavButtons();
       }
       else if (e.key === ' ' && e.ctrlKey) {
         e.preventDefault();
-        ease = ease === easeInOut ? sillyEase : easeInOut;
+        changeEase();
       }
       else if (e.key === ' ') {
         e.preventDefault();
@@ -274,6 +282,14 @@ function handleController() {
   else if (pressed(Button.R, 300)) {
     const i = Math.min(Tab.currentTabIndex + 1, Tab.tabs.length - 1);
     Tab.tabs[i]?.focus();
+  }
+
+  if (pressed(Button.A, 300)) {
+    changeEase();
+  }
+
+  if (pressed(Button.B, 300)) {
+    changeNavButtons();
   }
 
   if (pressed(Button.RIGHT, 300)) {
