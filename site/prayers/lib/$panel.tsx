@@ -71,22 +71,16 @@ export class Panel implements Navable<Panel> {
         this.nextLine();
       }
       else if (e.key === 'ArrowUp') {
-        if (this.hasLines()) {
-          e.preventDefault();
-          this.prevLine();
-        }
+        e.preventDefault();
+        this.prevLine();
       }
       else if (e.key === 'ArrowDown') {
-        if (this.hasLines()) {
-          e.preventDefault();
-          this.nextLine();
-        }
+        e.preventDefault();
+        this.nextLine();
       }
     };
 
   }
-
-  hasLines() { return !!this.lineNav.first; }
 
   focus() {
     animateTo(tabBodies, 700, {
