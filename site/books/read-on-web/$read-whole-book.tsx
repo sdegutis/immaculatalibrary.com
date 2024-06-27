@@ -23,6 +23,7 @@ function render() {
       <span>Ch.{i + 1}</span>
       <a href={`#snippet-${bookSnippet.slug}`} onclick={(e: Event) => {
         e.preventDefault();
+        localStorage.setItem(bookSlug, i.toString());
         navigateTo(i);
       }}>
         {bookSnippet.title}
@@ -55,6 +56,11 @@ function render() {
 }
 
 render();
+
+const last = localStorage.getItem(bookSlug);
+if (last !== null) {
+  navigateTo(+last);
+}
 
 function navigateTo(i: number) {
   iframe.src = snippetsInBook[i]!.archiveLink;
