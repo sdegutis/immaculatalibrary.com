@@ -93,8 +93,8 @@ class Panel {
 
   public tab!: Tab;
 
-  public prev?: Panel | undefined;
-  public next?: Panel | undefined;
+  public prev?: Panel;
+  public next?: Panel;
 
   private lines: HTMLElement[];
   currentLine = 0;
