@@ -37,7 +37,7 @@ export default allBooks.filter(book => book.data.complete).map(book => {
 
         <section>
 
-          <div>
+          <div id='link-scroll-area'>
 
             <Typography>
               <h2><a href={book.route}>{book.data.title}</a></h2>
@@ -61,16 +61,16 @@ export default allBooks.filter(book => book.data.complete).map(book => {
 
           </div>
 
-          <Typography>
-            <div id='chapter-bodies'>
+          <div id='chapter-bodies'>
+            <Typography>
               <LoadingLine width="20em" />
               <blockquote>
                 <LoadingParagraph lines={4} />
                 <LoadingParagraph lines={4} />
                 <LoadingParagraph lines={4} />
               </blockquote>
-            </div>
-          </Typography>
+            </Typography>
+          </div>
 
           <iframe src={`https://archive.org/details/${file.archiveId}?view=theater`} />
 

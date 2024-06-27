@@ -1,5 +1,6 @@
 import MarkdownIt from 'https://cdn.jsdelivr.net/npm/markdown-it@13.0.2/+esm';
 import { mdOptions } from '../../components/$markdown.js';
+import { Typography } from '../../components/$typography.js';
 import { SnippetJson } from "../../scripts/data/snippets.json.js";
 
 const isDev = (window.location.hostname === 'localhost');
@@ -20,9 +21,9 @@ function render() {
   linksDiv.replaceChildren(<>
     {snippetsInBook.map((bookSnippet, i) => <span class='chapter-link'>
       <span>Ch.{i + 1}</span>
-      <a href={`#snippet-${bookSnippet.slug}`} onclick={function (this: HTMLAnchorElement, e: Event) {
+      <a href={`#snippet-${bookSnippet.slug}`} onclick={(e: Event) => {
         e.preventDefault();
-        navigateTo(bookSnippet, this)
+        navigateTo(i);
       }}>
         {bookSnippet.title}
       </a>
@@ -30,39 +31,42 @@ function render() {
   </>);
 
   bodiesDiv.replaceChildren(<>
-    {snippetsInBook.map((bookSnippet, i) => <>
-      <div class='chapter' id={`snippet-${bookSnippet.slug}`}>
-        <h3 class='chapter-header'>
-          Chapter {i + 1} &mdash; { }
-          <a href={bookSnippet.route}>
-            {bookSnippet.title}
-          </a>
-        </h3>
-        {isDev &&
-          <span>
-            <button style='margin-left:2px' onclick={() => moveSnippet(i, -1)}>Move up</button>
-            <button style='margin-left:2px' onclick={() => moveSnippet(i, +1)}>Move down</button>
-          </span>
-        }
-        <div innerHTML={markdown.render(bookSnippet.markdown)} />
-        <hr />
-      </div>
-    </>)}
+    <Typography>
+      {snippetsInBook.map((bookSnippet, i) => <>
+        <div class='chapter' id={`snippet-${bookSnippet.slug}`}>
+          <h3 class='chapter-header'>
+            Chapter {i + 1} &mdash; { }
+            <a href={bookSnippet.route}>
+              {bookSnippet.title}
+            </a>
+          </h3>
+          {isDev &&
+            <span>
+              <button style='margin-left:2px' onclick={() => moveSnippet(i, -1)}>Move up</button>
+              <button style='margin-left:2px' onclick={() => moveSnippet(i, +1)}>Move down</button>
+            </span>
+          }
+          <div innerHTML={markdown.render(bookSnippet.markdown)} />
+          <hr />
+        </div>
+      </>)}
+    </Typography>
   </>);
 }
 
 render();
 
-function navigateTo(snippet: SnippetJson, a: HTMLAnchorElement) {
-  iframe.src = snippet.archiveLink;
+function navigateTo(i: number) {
+  iframe.src = snippetsInBook[i]!.archiveLink;
 
-  setTimeout(() => {
-    const i = snippetsInBook.indexOf(snippet);
-    const div = bodiesDiv.children[i]!;
-    div.scrollIntoView({ block: 'start' });
+  const linksScroller = document.querySelector<HTMLDivElement>('#link-scroll-area')!;
+  const link = document.querySelectorAll<HTMLDivElement>('#readonline-chapters a')[i]!;
+  const linkY = link.offsetTop - linksScroller.offsetTop - (linksScroller.offsetHeight / 2);
+  linksScroller.scrollTo({ top: linkY, behavior: 'smooth' });
 
-    a.scrollIntoView({ block: 'center', behavior: 'smooth' });
-  }, 0);
+  const bodyDiv = document.querySelectorAll<HTMLDivElement>('#chapter-bodies .chapter')[i]!;
+  const bodyY = bodyDiv.offsetTop - bodiesDiv.offsetTop;
+  bodiesDiv.scrollTo({ top: bodyY, behavior: 'smooth' });
 }
 
 function moveSnippet(i: number, by: number) {
