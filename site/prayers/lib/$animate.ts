@@ -1,3 +1,5 @@
+import eases from 'https://cdn.jsdelivr.net/npm/eases@1.0.8/+esm';
+
 export function animateTo(container: HTMLElement, duration: number, to: { x: number, y: number }) {
   const startPos = {
     x: container.scrollLeft,
@@ -29,21 +31,19 @@ export function animateTo(container: HTMLElement, duration: number, to: { x: num
   step();
 }
 
-let ease = easeInOut;
+const easesList = [
+  eases.expoOut,
+  eases.quadInOut,
+  eases.bounceOut,
+  eases.backIn,
+  eases.circOut,
+];
 
-function easeInOut(x: number): number {
-  return 1 - Math.pow(1 - x, 4);
-}
+let easeIndex = 0;
+let ease = easesList[easeIndex]!;
 
 export function changeEase() {
-  ease = ease === easeInOut ? sillyEase : easeInOut;
-}
-
-function sillyEase(x: number): number {
-  const c4 = (2 * Math.PI) / 3;
-  return x === 0
-    ? 0
-    : x === 1
-      ? 1
-      : Math.pow(2, -10 * x) * Math.sin((x * 10 - 0.75) * c4) + 1;
+  easeIndex++;
+  if (easeIndex >= easesList.length) easeIndex = 0;
+  ease = easesList[easeIndex]!;
 }
