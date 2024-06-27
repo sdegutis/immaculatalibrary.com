@@ -78,7 +78,7 @@ if (last !== null) {
 function navigateTo(i: number, options: { scrollBody: boolean }) {
   const linksScroller = document.querySelector<HTMLDivElement>('#link-scroll-area')!;
   const link = document.querySelectorAll<HTMLDivElement>('#readonline-chapters a')[i]!;
-  const linkY = link.offsetTop - linksScroller.offsetTop - (linksScroller.offsetHeight / 2);
+  const linkY = link.offsetTop - linksScroller.offsetTop - (linksScroller.offsetHeight / 2) + (link.offsetHeight / 2);
   linksScroller.scrollTo({ top: linkY, behavior: 'smooth' });
 
   const bodyDiv = document.querySelectorAll<HTMLDivElement>('#chapter-bodies .chapter')[i]!;
