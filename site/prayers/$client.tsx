@@ -66,8 +66,8 @@ class Panel {
 
   public tab!: Tab;
 
-  public prev?: Panel;
-  public next?: Panel;
+  public prev: Panel | undefined;
+  public next: Panel | undefined;
 
   private lines: HTMLElement[];
   currentLine = 0;
