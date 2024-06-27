@@ -16,10 +16,12 @@ for (const [, day] of Object.entries(document.querySelectorAll<HTMLElement>('.my
 
 class Tab {
 
-  static currentTab?: Tab;
+  static tabs: Tab[] = [];
 
-  currentPanel = 0;
-  panels: Panel[] = [];
+  static currentTabIndex = 0;
+  static get currentTab() { return Tab.tabs[this.currentTabIndex]!; }
+
+  currentPanel!: Panel;
 
   constructor(public firstPanel: Panel, private button: HTMLAnchorElement) {
     this.button.onclick = (e) => {
@@ -29,22 +31,11 @@ class Tab {
   }
 
   focus() {
-    Tab.currentTab?.button.classList.remove('active');
-    Tab.currentTab = this;
+    for (const tab of Tab.tabs) tab.button.classList.remove('active');
+    Tab.currentTabIndex = Tab.tabs.indexOf(this);
     this.button.classList.add('active');
     this.firstPanel.focus();
-    this.currentPanel = 0;
   };
-
-  nextPanel() {
-    this.currentPanel = Math.min(this.currentPanel + 1, this.panels.length - 1);
-    this.panels[this.currentPanel]!.focus();
-  }
-
-  prevPanel() {
-    this.currentPanel = Math.max(this.currentPanel - 1, 0);
-    this.panels[this.currentPanel]!.focus();
-  }
 
 }
 
@@ -133,8 +124,7 @@ class Panel {
     }
 
     this.currentLineEl.classList.add('active');
-
-    this.tab.currentPanel = this.tab.panels.indexOf(this);
+    this.tab.currentPanel = this;
   }
 
   goToLine(line: number) {
@@ -162,8 +152,6 @@ class Panel {
   }
 
 }
-
-const tabs: Tab[] = [];
 
 let buttonEasterEgg = false;
 
@@ -244,11 +232,10 @@ for (const slideshow of document.querySelectorAll<HTMLDivElement>('.slideshow'))
   }
 
   const tab: Tab = new Tab(firstPanel, tabButtons.shift()!);
-  tabs.push(tab);
+  Tab.tabs.push(tab);
 
   for (let panel: Panel = firstPanel; panel; panel = panel.next!) {
     panel.tab = tab;
-    tab.panels.push(panel);
   }
 }
 
@@ -265,7 +252,7 @@ function PageChanger(attrs: { to: Panel, side: 'left' | 'right' }, children: any
   return button;
 }
 
-tabs[0]!.focus();
+Tab.tabs[0]!.focus();
 
 
 const enum Button {
@@ -277,32 +264,30 @@ const enum Button {
   HOME,
 }
 
-let currentTab = 0;
-
 const gamepad = () => navigator.getGamepads().find(c => c)!;
 
 function handleController() {
-  if (pressed(Button.L)) {
-    currentTab = Math.max(currentTab - 1, 0);
-    tabs[currentTab]!.focus();
+  if (pressed(Button.L, 300)) {
+    const i = Math.max(Tab.currentTabIndex - 1, 0);
+    Tab.tabs[i]?.focus();
   }
-  else if (pressed(Button.R)) {
-    currentTab = Math.min(currentTab + 1, tabs.length - 1);
-    tabs[currentTab]!.focus();
+  else if (pressed(Button.R, 300)) {
+    const i = Math.min(Tab.currentTabIndex + 1, Tab.tabs.length - 1);
+    Tab.tabs[i]?.focus();
   }
 
-  if (pressed(Button.RIGHT, 200)) {
-    tabs[currentTab]!.nextPanel();
+  if (pressed(Button.RIGHT, 300)) {
+    Tab.currentTab.currentPanel.next?.focus();
   }
-  else if (pressed(Button.LEFT, 200)) {
-    tabs[currentTab]!.prevPanel();
+  else if (pressed(Button.LEFT, 300)) {
+    Tab.currentTab.currentPanel.prev?.focus();
   }
 
   if (pressed(Button.DOWN, 300)) {
-    tabs[currentTab]!.panels[tabs[currentTab]!.currentPanel]!.nextLine();
+    Tab.currentTab.currentPanel.nextLine();
   }
   else if (pressed(Button.UP, 300)) {
-    tabs[currentTab]!.panels[tabs[currentTab]!.currentPanel]!.prevLine();
+    Tab.currentTab.currentPanel.prevLine();
   }
 }
 
