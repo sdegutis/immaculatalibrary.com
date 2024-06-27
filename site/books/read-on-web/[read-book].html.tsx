@@ -1,5 +1,5 @@
+import { LoadingLine, LoadingParagraph } from "../../components/$loading.js";
 import { Typography } from "../../components/$typography.js";
-import { Admin } from "../../components/admin.js";
 import { Navlinks } from "../../components/navlinks.js";
 import { EmptyPage } from "../../components/page.js";
 import { Rating } from "../../components/rating.js";
@@ -29,7 +29,7 @@ export default allBooks.filter(book => book.data.complete).map(book => {
     <EmptyPage>
 
       <link rel="stylesheet" href='/css/page/read-book.css' />
-      <Admin><script type='module' src='./$read-whole-book.js' /></Admin>
+      <script type='module' src='./$read-whole-book.js' data-book={book.slug} />
 
       <main>
 
@@ -50,33 +50,27 @@ export default allBooks.filter(book => book.data.complete).map(book => {
             <hr />
 
             <h3>Chapter Index</h3>
-            <div class="readonline-chapters">
-              {orderedSnippets.map((bookSnippet, i) => <span class='chapter-link'>
-                <span>Ch.{i + 1}</span>
-                <a href={`#snippet-${bookSnippet.slug}`}>
-                  {bookSnippet.renderedTitle}
-                </a>
-              </span>)}
+            <div id="readonline-chapters">
+              <LoadingLine width="3em" />
+              <LoadingLine width="20em" />
+              <LoadingLine width="3em" />
+              <LoadingLine width="20em" />
+              <LoadingLine width="3em" />
+              <LoadingLine width="20em" />
             </div>
 
           </div>
 
-          <div>
-            <Typography>
-              {orderedSnippets.map((bookSnippet, i) => <>
-                <div class='chapter' id={`snippet-${bookSnippet.slug}`}>
-                  <h3 class='chapter-header'>
-                    Chapter {i + 1} &mdash; { }
-                    <a href={bookSnippet.route}>
-                      {bookSnippet.renderedTitle}
-                    </a>
-                  </h3>
-                  {bookSnippet.renderedBody}
-                  <hr />
-                </div>
-              </>)}
-            </Typography>
-          </div>
+          <Typography>
+            <div id='chapter-bodies'>
+              <LoadingLine width="20em" />
+              <blockquote>
+                <LoadingParagraph lines={4} />
+                <LoadingParagraph lines={4} />
+                <LoadingParagraph lines={4} />
+              </blockquote>
+            </div>
+          </Typography>
 
           <iframe src={`https://archive.org/details/${file.archiveId}?view=theater`} />
 

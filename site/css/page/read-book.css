@@ -1,4 +1,4 @@
-.readonline-chapters {
+#readonline-chapters {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 1em 0.1em;
