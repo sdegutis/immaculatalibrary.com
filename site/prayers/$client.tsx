@@ -229,3 +229,14 @@ function PageChanger(attrs: { to: Panel, side: 'left' | 'right' }, children: any
 }
 
 tabs[0]!.focus();
+
+
+function handleController() {
+  const controller = navigator.getGamepads().find(c => c)!;
+
+
+}
+
+let interval: NodeJS.Timeout | undefined;
+window.addEventListener('gamepadconnected', (e) => { interval ??= setInterval(handleController, 100); });
+window.addEventListener('gamepaddisconnected', (e) => { clearInterval(interval); interval = undefined; });
