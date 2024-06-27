@@ -22,10 +22,9 @@ export class Tab implements Navable<Tab> {
   }
 
   focus() {
-    for (let tab: Tab | undefined = tabNav.first; tab; tab = tab.next) {
-      tab.button.classList.toggle('active', tab === this);
-    }
+    tabNav.current.button.classList.remove('active');
     tabNav.current = this;
+    tabNav.current.button.classList.add('active');
     this.panelNav.first.focus();
   };
 
