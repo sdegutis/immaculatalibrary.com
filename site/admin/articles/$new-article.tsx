@@ -33,6 +33,8 @@ const editor = monaco.editor.create(document.getElementById('editorarea')!, {
   },
 });
 
+editor.focus();
+
 editor.getModel()!.onDidChangeContent(() => {
   const content = editor.getModel()!.getValue();
   contentInput.value = content;
