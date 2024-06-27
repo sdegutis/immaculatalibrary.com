@@ -274,36 +274,32 @@ const enum Button {
 
 const gamepad = () => navigator.getGamepads().find(c => c)!;
 
-function handleController() {
-  if (pressed(Button.L)) {
+const gamepadActions = new Map<number, () => void>([
+  [Button.L, () => {
     const i = Math.max(Tab.currentTabIndex - 1, 0);
     Tab.tabs[i]?.focus();
-  }
-  else if (pressed(Button.R)) {
+  }],
+  [Button.R, () => {
     const i = Math.min(Tab.currentTabIndex + 1, Tab.tabs.length - 1);
     Tab.tabs[i]?.focus();
-  }
+  }],
 
-  if (pressed(Button.A)) {
-    changeEase();
-  }
+  [Button.A, () => { changeEase(); }],
+  [Button.B, () => { changeNavButtons(); }],
 
-  if (pressed(Button.B)) {
-    changeNavButtons();
-  }
+  [Button.RIGHT, () => { Tab.currentTab.currentPanel.next?.focus(); }],
+  [Button.LEFT, () => { Tab.currentTab.currentPanel.prev?.focus(); }],
 
-  if (pressed(Button.RIGHT)) {
-    Tab.currentTab.currentPanel.next?.focus();
-  }
-  else if (pressed(Button.LEFT)) {
-    Tab.currentTab.currentPanel.prev?.focus();
-  }
+  [Button.DOWN, () => { Tab.currentTab.currentPanel.nextLine(); }],
+  [Button.UP, () => { Tab.currentTab.currentPanel.prevLine(); }],
+]);
 
-  if (pressed(Button.DOWN)) {
-    Tab.currentTab.currentPanel.nextLine();
-  }
-  else if (pressed(Button.UP)) {
-    Tab.currentTab.currentPanel.prevLine();
+function handleController() {
+  for (const [button, fn] of gamepadActions.entries()) {
+    if (pressed(button)) {
+      fn();
+      return;
+    }
   }
 }
 
