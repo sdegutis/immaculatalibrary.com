@@ -1,4 +1,4 @@
-import eases from 'https://cdn.jsdelivr.net/npm/eases@1.0.8/+esm';
+import easesLib from 'https://cdn.jsdelivr.net/npm/eases@1.0.8/+esm';
 
 export function animateTo(container: HTMLElement, duration: number, to: { x: number, y: number }) {
   const startPos = {
@@ -31,25 +31,25 @@ export function animateTo(container: HTMLElement, duration: number, to: { x: num
   step();
 }
 
-const easesList = [
-  eases.expoOut,
-  eases.quadInOut,
-  eases.bounceOut,
-  eases.backIn,
-  eases.circOut,
+const eases = [
+  easesLib.expoOut,
+  easesLib.quadInOut,
+  easesLib.bounceOut,
+  easesLib.backIn,
+  easesLib.circOut,
 ];
 
 let easeIndex = 0;
-let ease = easesList[easeIndex]!;
+let ease = eases[easeIndex]!;
 
 export function nextEase() {
   easeIndex++;
-  if (easeIndex >= easesList.length) easeIndex = 0;
-  ease = easesList[easeIndex]!;
+  if (easeIndex >= eases.length) easeIndex = 0;
+  ease = eases[easeIndex]!;
 }
 
 export function prevEase() {
   easeIndex--;
-  if (easeIndex < 0) easeIndex = easesList.length - 1;
-  ease = easesList[easeIndex]!;
+  if (easeIndex < 0) easeIndex = eases.length - 1;
+  ease = eases[easeIndex]!;
 }
