@@ -66,7 +66,7 @@ if (last !== null) {
 }
 
 function navigateTo(i: number, options: { scrollBody: boolean }) {
-  iframe.src = snippetsInBook[i]!.archiveLink;
+  // iframe.src = snippetsInBook[i]!.archiveLink;
 
   const linksScroller = document.querySelector<HTMLDivElement>('#link-scroll-area')!;
   const link = document.querySelectorAll<HTMLDivElement>('#readonline-chapters a')[i]!;
