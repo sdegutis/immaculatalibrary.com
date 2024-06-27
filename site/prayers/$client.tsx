@@ -15,19 +15,37 @@ for (const [, day] of Object.entries(document.querySelectorAll<HTMLElement>('.my
 }
 
 class Tab {
+
   static currentTab?: Tab;
+
+  currentPanel = 0;
+  panels: Panel[] = [];
+
   constructor(public firstPanel: Panel, private button: HTMLAnchorElement) {
     this.button.onclick = (e) => {
       e.preventDefault();
       this.focus();
     };
   }
+
   focus() {
     Tab.currentTab?.button.classList.remove('active');
     Tab.currentTab = this;
     this.button.classList.add('active');
     this.firstPanel.focus();
+    this.currentPanel = 0;
   };
+
+  nextPanel() {
+    this.currentPanel = Math.min(this.currentPanel + 1, this.panels.length - 1);
+    this.panels[this.currentPanel]!.focus();
+  }
+
+  prevPanel() {
+    this.currentPanel = Math.max(this.currentPanel - 1, 0);
+    this.panels[this.currentPanel]!.focus();
+  }
+
 }
 
 function animateTo(container: HTMLElement, duration: number, to: { x: number, y: number }) {
@@ -77,10 +95,15 @@ function sillyEase(x: number): number {
 }
 
 class Panel {
+
+  public tab!: Tab;
+
   public prev?: Panel | undefined;
   public next?: Panel | undefined;
+
   private lines: HTMLElement[];
   currentLine = 0;
+
   constructor(
     public panelDiv: HTMLDivElement,
     public panelBodyDiv: HTMLDivElement,
@@ -94,7 +117,9 @@ class Panel {
       };
     }
   }
+
   hasLines() { return this.lines.length > 0; }
+
   focus() {
     const container = document.getElementById('tabs-bodies')!;
     animateTo(container, 700, {
@@ -108,7 +133,10 @@ class Panel {
     }
 
     this.currentLineEl.classList.add('active');
+
+    this.tab.currentPanel = this.tab.panels.indexOf(this);
   }
+
   goToLine(line: number) {
     this.currentLineEl.classList.remove('active');
     this.currentLine = line;
@@ -120,15 +148,19 @@ class Panel {
       y: currentLine.offsetTop - this.panelBodyDiv.offsetHeight / 2 + currentLine.offsetHeight / 2,
     });
   }
+
   nextLine() {
     this.goToLine(Math.min(this.currentLine + 1, this.lines.length - 1));
   }
+
   prevLine() {
     this.goToLine(Math.max(this.currentLine - 1, 0));
   }
+
   get currentLineEl() {
     return this.lines[this.currentLine]!;
   }
+
 }
 
 const tabs: Tab[] = [];
@@ -213,6 +245,11 @@ for (const slideshow of document.querySelectorAll<HTMLDivElement>('.slideshow'))
 
   const tab: Tab = new Tab(firstPanel, tabButtons.shift()!);
   tabs.push(tab);
+
+  for (let panel: Panel = firstPanel; panel; panel = panel.next!) {
+    panel.tab = tab;
+    tab.panels.push(panel);
+  }
 }
 
 function PageChanger(attrs: { to: Panel, side: 'left' | 'right' }, children: any) {
@@ -231,42 +268,53 @@ function PageChanger(attrs: { to: Panel, side: 'left' | 'right' }, children: any
 tabs[0]!.focus();
 
 
-export const A = 0, B = 1, X = 2, Y = 3;
-export const L = 4, R = 5, ZL = 6, ZR = 7;
-export const MINUS = 8, PLUS = 9;
-export const LTRIGGER = 10, RTRIGGER = 11;
-export const UP = 12, DOWN = 13, LEFT = 14, RIGHT = 15;
-export const HOME = 16;
+const enum Button {
+  A, B, X, Y,
+  L, R, ZL, ZR,
+  MINUS, PLUS,
+  LTRIGGER, RTRIGGER,
+  UP, DOWN, LEFT, RIGHT,
+  HOME,
+}
 
 let currentTab = 0;
 
 const gamepad = () => navigator.getGamepads().find(c => c)!;
 
 function handleController() {
-  if (pressed(L)) {
+  if (pressed(Button.L)) {
     currentTab = Math.max(currentTab - 1, 0);
     tabs[currentTab]!.focus();
   }
-  else if (pressed(R)) {
+  else if (pressed(Button.R)) {
     currentTab = Math.min(currentTab + 1, tabs.length - 1);
     tabs[currentTab]!.focus();
   }
 
-  if (pressed(UP)) {
-    // tabs[currentTab]!.currentPanel
+  if (pressed(Button.RIGHT, 200)) {
+    tabs[currentTab]!.nextPanel();
+  }
+  else if (pressed(Button.LEFT, 200)) {
+    tabs[currentTab]!.prevPanel();
+  }
+
+  if (pressed(Button.DOWN, 300)) {
+    tabs[currentTab]!.panels[tabs[currentTab]!.currentPanel]!.nextLine();
+  }
+  else if (pressed(Button.UP, 300)) {
+    tabs[currentTab]!.panels[tabs[currentTab]!.currentPanel]!.prevLine();
   }
 }
 
 const pressMap = new Map<number, number>();
-const pressDelay = 300;
 
-function pressed(button: number) {
+function pressed(button: number, delay: number = 150) {
   if (!gamepad().buttons[button]!.pressed) return false;
 
   const lastPressed = pressMap.get(button) ?? 0;
   const now = Date.now();
 
-  if (now > lastPressed + pressDelay) {
+  if (now > lastPressed + delay) {
     pressMap.set(button, now);
     return true;
   }
@@ -275,5 +323,5 @@ function pressed(button: number) {
 }
 
 let interval: NodeJS.Timeout | undefined;
-window.addEventListener('gamepadconnected', (e) => { interval ??= setInterval(handleController, 100); });
+window.addEventListener('gamepadconnected', (e) => { interval ??= setInterval(handleController, 33); });
 window.addEventListener('gamepaddisconnected', (e) => { clearInterval(interval); interval = undefined; });
