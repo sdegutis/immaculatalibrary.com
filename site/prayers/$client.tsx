@@ -231,10 +231,47 @@ function PageChanger(attrs: { to: Panel, side: 'left' | 'right' }, children: any
 tabs[0]!.focus();
 
 
+export const A = 0, B = 1, X = 2, Y = 3;
+export const L = 4, R = 5, ZL = 6, ZR = 7;
+export const MINUS = 8, PLUS = 9;
+export const LTRIGGER = 10, RTRIGGER = 11;
+export const UP = 12, DOWN = 13, LEFT = 14, RIGHT = 15;
+export const HOME = 16;
+
+let currentTab = 0;
+
+const gamepad = () => navigator.getGamepads().find(c => c)!;
+
 function handleController() {
-  const controller = navigator.getGamepads().find(c => c)!;
+  if (pressed(L)) {
+    currentTab = Math.max(currentTab - 1, 0);
+    tabs[currentTab]!.focus();
+  }
+  else if (pressed(R)) {
+    currentTab = Math.min(currentTab + 1, tabs.length - 1);
+    tabs[currentTab]!.focus();
+  }
 
+  if (pressed(UP)) {
+    // tabs[currentTab]!.currentPanel
+  }
+}
 
+const pressMap = new Map<number, number>();
+const pressDelay = 300;
+
+function pressed(button: number) {
+  if (!gamepad().buttons[button]!.pressed) return false;
+
+  const lastPressed = pressMap.get(button) ?? 0;
+  const now = Date.now();
+
+  if (now > lastPressed + pressDelay) {
+    pressMap.set(button, now);
+    return true;
+  }
+
+  return false;
 }
 
 let interval: NodeJS.Timeout | undefined;
