@@ -1,6 +1,6 @@
 import { LeftArrow, RightArrow } from "../scripts/$arrows.js";
-import { animateTo, changeEase } from "./lib/animate.js";
-import { Nav } from "./lib/nav.js";
+import { animateTo, changeEase } from "./lib/$animate.js";
+import { Nav } from "./lib/$nav.js";
 
 const today = new Date().getDay();
 
