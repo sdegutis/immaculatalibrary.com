@@ -79,6 +79,14 @@ export class Panel implements Navable<Panel> {
         e.preventDefault();
         this.nextLine();
       }
+      else if (e.key === 'Home') {
+        e.preventDefault();
+        this.lineNav.first.focus();
+      }
+      else if (e.key === 'End') {
+        e.preventDefault();
+        this.lineNav.last.focus();
+      }
       else if (e.key === 'ArrowUp') {
         e.preventDefault();
         this.prevLine();
