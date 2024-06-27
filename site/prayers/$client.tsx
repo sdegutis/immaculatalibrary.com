@@ -43,6 +43,9 @@ class Tab {
 
 }
 
+const tabBodies = document.getElementById('tabs-bodies') as HTMLDivElement;
+const tabButtons = [...document.querySelectorAll<HTMLAnchorElement>('#tabs-names a')];
+
 class Panel {
 
   public tab!: Tab;
@@ -70,10 +73,9 @@ class Panel {
   hasLines() { return this.lines.length > 0; }
 
   focus() {
-    const container = document.getElementById('tabs-bodies')!;
-    animateTo(container, 700, {
-      x: this.panelDiv.offsetLeft - container.offsetLeft,
-      y: this.panelDiv.offsetTop - container.offsetTop,
+    animateTo(tabBodies, 700, {
+      x: this.panelDiv.offsetLeft - tabBodies.offsetLeft,
+      y: this.panelDiv.offsetTop - tabBodies.offsetTop,
     });
     this.panelBodyDiv.focus({ preventScroll: true });
 
@@ -127,7 +129,6 @@ function changeNavButtons() {
   }
 }
 
-const tabButtons = [...document.querySelectorAll<HTMLAnchorElement>('#tabs-names a')];
 for (const slideshow of document.querySelectorAll<HTMLDivElement>('.slideshow')) {
   let lastPanel: Panel | undefined;
 
