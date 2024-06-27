@@ -1,5 +1,6 @@
 import { LeftArrow, RightArrow } from "../scripts/$arrows.js";
 import { animateTo, changeEase } from "./lib/animate.js";
+import { Nav } from "./lib/nav.js";
 
 const today = new Date().getDay();
 
@@ -13,26 +14,6 @@ for (const [, day] of Object.entries(document.querySelectorAll<HTMLElement>('.my
   if (!day.classList.contains(`day-${today}`)) {
     day.closest('.panel')?.remove();
   }
-}
-
-class Nav<T extends { next?: T, prev?: T }> {
-
-  first!: T;
-  current!: T;
-
-  add(t: T) {
-    if (!this.first) {
-      this.current = this.first = t;
-      return;
-    }
-
-    let last = this.first;
-    while (last.next) last = last.next;
-
-    last.next = t;
-    t.prev = last;
-  }
-
 }
 
 class Tab {
