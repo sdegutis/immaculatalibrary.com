@@ -19,7 +19,16 @@ class Line implements Navable<Line> {
   }
 
   focus() {
-    this.panel.goToLine(this);
+    this.panel.lineNav.current.element.classList.remove('active');
+    this.panel.lineNav.current = this;
+    this.panel.lineNav.current.element.classList.add('active');
+
+    const currentLine = this.panel.lineNav.current.element;
+    animateTo(this.panel.panelBodyDiv, 300, {
+      x: this.panel.panelBodyDiv.scrollLeft,
+      y: currentLine.offsetTop - this.panel.panelBodyDiv.offsetHeight / 2 + currentLine.offsetHeight / 2,
+    });
+
   }
 
 }
@@ -90,19 +99,7 @@ export class Panel implements Navable<Panel> {
     this.panelBodyDiv.focus({ preventScroll: true });
     this.tab.panelNav.current = this;
 
-    this.goToLine(this.lineNav.current);
-  }
-
-  goToLine(line: Line) {
-    this.lineNav.current.element.classList.remove('active');
-    this.lineNav.current = line;
-    this.lineNav.current.element.classList.add('active');
-
-    const currentLine = this.lineNav.current.element;
-    animateTo(this.panelBodyDiv, 300, {
-      x: this.panelBodyDiv.scrollLeft,
-      y: currentLine.offsetTop - this.panelBodyDiv.offsetHeight / 2 + currentLine.offsetHeight / 2,
-    });
+    this.lineNav.current.focus();
   }
 
   nextLine() {
