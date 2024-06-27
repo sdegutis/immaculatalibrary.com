@@ -76,6 +76,10 @@ function navigateTo(i: number, options: { scrollBody: boolean }) {
   const bodyDiv = document.querySelectorAll<HTMLDivElement>('#chapter-bodies .chapter')[i]!;
   const bodyY = bodyDiv.offsetTop - bodiesDiv.offsetTop;
   bodiesDiv.scrollTo({ top: bodyY, behavior: options.scrollBody ? 'smooth' : 'instant' });
+
+  for (const a of document.querySelectorAll('.chapter-link a')) {
+    a.classList.toggle('current', a === link);
+  }
 }
 
 function moveSnippet(i: number, by: number) {

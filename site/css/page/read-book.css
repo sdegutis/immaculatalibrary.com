@@ -9,6 +9,10 @@
   display: contents;
 }
 
+.chapter-link a.current {
+  color: #fff;
+}
+
 main {
   padding: 0 1em;
   width: 100vw;
