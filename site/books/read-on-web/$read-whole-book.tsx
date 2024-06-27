@@ -75,6 +75,10 @@ if (last !== null) {
   };
 }
 
+iframe.contentWindow?.addEventListener('message', (e) => {
+  alert('Finally got Internet Archive BookReader.js iframe message, after all these years!');
+});
+
 function navigateTo(i: number, options: { scrollBody: boolean }) {
   const linksScroller = document.querySelector<HTMLDivElement>('#link-scroll-area')!;
   const link = document.querySelectorAll<HTMLDivElement>('#readonline-chapters a')[i]!;
