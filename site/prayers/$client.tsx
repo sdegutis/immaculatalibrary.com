@@ -16,9 +16,14 @@ for (const [, day] of Object.entries(document.querySelectorAll<HTMLElement>('.my
   }
 }
 
+const tabNav = new Nav<Tab>();
+
 class Tab {
 
-  private panelNav = new Nav<Panel>();
+  prev: Tab | undefined;
+  next: Tab | undefined;
+
+  panelNav = new Nav<Panel>();
 
   static tabs: Tab[] = [];
 
@@ -45,6 +50,26 @@ class Tab {
 
 const tabBodies = document.getElementById('tabs-bodies') as HTMLDivElement;
 const tabButtons = [...document.querySelectorAll<HTMLAnchorElement>('#tabs-names a')];
+
+// for (const tabBody of tabBodies.children) {
+//   const button = tabButtons.shift()!;
+//   const tab = new Tab(button);
+//   tabNav.add(tab);
+
+//   for (const panelDiv of tabBody.querySelectorAll<HTMLDivElement>('.panel')) {
+
+//     tab.panelNav
+
+
+//   }
+
+
+// }
+
+
+
+
+
 
 class Panel {
 
