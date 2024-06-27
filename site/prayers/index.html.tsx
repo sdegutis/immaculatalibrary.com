@@ -5,8 +5,7 @@ import joyfulList from './rosary/joyful/';
 import luminousList from './rosary/luminous/';
 import sorrowfulList from './rosary/sorrowful/';
 
-const DAYS = ['SUN', 'MON', 'TUE', 'WED', 'THUR', 'FRI', 'SAT'] as const;
-type DAY = typeof DAYS[number];
+const enum Day { SUN, MON, TUE, WED, THUR, FRI, SAT };
 
 export default <>
   <EmptyPage favicons={<link rel="icon" type="image/png" sizes="32x32" href='./favicon.ico' />}>
@@ -62,25 +61,25 @@ export default <>
           <HailMary />
           <HailMary />
           <GloryBe />
-          <Mystery name='Joyful' list={joyfulList} days={['SAT', 'MON']} mysteries={[
+          <Mystery name='Joyful' list={joyfulList} days={[Day.SAT, Day.MON]} mysteries={[
             'The Annunciation',
             'Visitation to Elizabeth',
             'Nativity / Christmas',
             'Presentation at the Temple',
             'Finding at the Temple']} />
-          <Mystery name='Luminous' list={luminousList} days={['THUR']} mysteries={[
+          <Mystery name='Luminous' list={luminousList} days={[Day.THUR]} mysteries={[
             'Baptism in the Jordan',
             'Wedding Feast at Cana',
             'Proclamation of the Kingdom',
             'Transfiguration',
             'Institution of the Eucharist']} />
-          <Mystery name='Sorrowful' list={sorrowfulList} days={['TUE', 'FRI']} mysteries={[
+          <Mystery name='Sorrowful' list={sorrowfulList} days={[Day.TUE, Day.FRI]} mysteries={[
             'Agony in the Garden',
             'Scourging at the Pillar',
             'Crowning with Thorns',
             'Carrying of the Cross',
             'Crucifixion']} />
-          <Mystery name='Glorious' list={gloriousList} days={['WED', 'SUN']} mysteries={[
+          <Mystery name='Glorious' list={gloriousList} days={[Day.WED, Day.SUN]} mysteries={[
             'Resurrection',
             'Ascension',
             'Descent of the Holy Spirit',
@@ -97,8 +96,8 @@ export default <>
   </EmptyPage>
 </>;
 
-function Mystery(attrs: { name: string, list: FsFile[], mysteries: string[], days: DAY[] }) {
-  const dayClasses = attrs.days.map(day => `day-${DAYS.indexOf(day)}`).join(' ');
+function Mystery(attrs: { name: string, list: FsFile[], mysteries: string[], days: Day[] }) {
+  const dayClasses = attrs.days.map(day => `day-${day}`).join(' ');
   const labels = ['First', 'Second', 'Third', 'Fourth', 'Fifth'];
   const mysteries = Object.values(Object.groupBy(attrs.list, f => f.path.match(/\/\d/)?.[0]!));
   return <>{mysteries.map((mystery, i) =>
