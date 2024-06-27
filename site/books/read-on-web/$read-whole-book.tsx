@@ -12,6 +12,7 @@ const snippetSlugsInBook = await fetch(`/scripts/data/snippets/in-book-${bookSlu
 
 const linksDiv = document.getElementById('readonline-chapters') as HTMLDivElement;
 const bodiesDiv = document.getElementById('chapter-bodies') as HTMLDivElement;
+const iframe = document.querySelector('iframe')!;
 
 const snippetsInBook = snippetSlugsInBook.map(slug => allSnippets.find(s => s.slug === slug)!);
 
@@ -19,7 +20,7 @@ function render() {
   linksDiv.replaceChildren(<>
     {snippetsInBook.map((bookSnippet, i) => <span class='chapter-link'>
       <span>Ch.{i + 1}</span>
-      <a href={`#snippet-${bookSnippet.slug}`}>
+      <a href={`#snippet-${bookSnippet.slug}`} onclick={() => { iframe.src = bookSnippet.archiveLink }}>
         {bookSnippet.title}
       </a>
     </span>)}

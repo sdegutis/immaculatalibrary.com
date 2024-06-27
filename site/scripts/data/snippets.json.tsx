@@ -14,6 +14,7 @@ function snippetToJson(snippet: Snippet) {
     markdown: snippet.content,
     book: snippet.data.bookSlug,
     archivePage: snippet.data.archivePage,
+    archiveLink: snippet.archiveLink,
   };
 }
 
