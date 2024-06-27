@@ -31,7 +31,7 @@
   transition: background-color ease-in-out .5s;
 }
 
-.panel-body:focus {
+.panel:focus-within .panel-body {
   outline: none;
   background-color: #222;
 }
@@ -61,7 +61,7 @@
     opacity ease-in-out 2s;
 }
 
-.panel-body:focus~.page-changer {
+.panel:focus-within .page-changer {
   opacity: 1;
 }
 
