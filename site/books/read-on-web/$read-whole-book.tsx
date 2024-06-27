@@ -44,6 +44,10 @@ function render() {
               {bookSnippet.title}
             </a>
           </h3>
+          <p><a href='#' onclick={(e: Event) => {
+            e.preventDefault();
+            iframe.src = bookSnippet.archiveLink;
+          }}>(View in book reader)</a></p>
           {isDev &&
             <span>
               <button style='margin-left:2px' onclick={() => moveSnippet(i, -1)}>Move up</button>
@@ -66,8 +70,6 @@ if (last !== null) {
 }
 
 function navigateTo(i: number, options: { scrollBody: boolean }) {
-  // iframe.src = snippetsInBook[i]!.archiveLink;
-
   const linksScroller = document.querySelector<HTMLDivElement>('#link-scroll-area')!;
   const link = document.querySelectorAll<HTMLDivElement>('#readonline-chapters a')[i]!;
   const linkY = link.offsetTop - linksScroller.offsetTop - (linksScroller.offsetHeight / 2);
