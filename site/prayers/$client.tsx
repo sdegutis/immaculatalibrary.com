@@ -275,47 +275,47 @@ const enum Button {
 const gamepad = () => navigator.getGamepads().find(c => c)!;
 
 function handleController() {
-  if (pressed(Button.L, 300)) {
+  if (pressed(Button.L)) {
     const i = Math.max(Tab.currentTabIndex - 1, 0);
     Tab.tabs[i]?.focus();
   }
-  else if (pressed(Button.R, 300)) {
+  else if (pressed(Button.R)) {
     const i = Math.min(Tab.currentTabIndex + 1, Tab.tabs.length - 1);
     Tab.tabs[i]?.focus();
   }
 
-  if (pressed(Button.A, 300)) {
+  if (pressed(Button.A)) {
     changeEase();
   }
 
-  if (pressed(Button.B, 300)) {
+  if (pressed(Button.B)) {
     changeNavButtons();
   }
 
-  if (pressed(Button.RIGHT, 300)) {
+  if (pressed(Button.RIGHT)) {
     Tab.currentTab.currentPanel.next?.focus();
   }
-  else if (pressed(Button.LEFT, 300)) {
+  else if (pressed(Button.LEFT)) {
     Tab.currentTab.currentPanel.prev?.focus();
   }
 
-  if (pressed(Button.DOWN, 300)) {
+  if (pressed(Button.DOWN)) {
     Tab.currentTab.currentPanel.nextLine();
   }
-  else if (pressed(Button.UP, 300)) {
+  else if (pressed(Button.UP)) {
     Tab.currentTab.currentPanel.prevLine();
   }
 }
 
 const pressMap = new Map<number, number>();
 
-function pressed(button: number, delay: number = 150) {
+function pressed(button: number) {
   if (!gamepad().buttons[button]!.pressed) return false;
 
   const lastPressed = pressMap.get(button) ?? 0;
   const now = Date.now();
 
-  if (now > lastPressed + delay) {
+  if (now > lastPressed + 300) {
     pressMap.set(button, now);
     return true;
   }
