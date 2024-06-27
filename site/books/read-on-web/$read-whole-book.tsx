@@ -66,7 +66,11 @@ render();
 
 const last = localStorage.getItem(bookSlug);
 if (last !== null) {
-  navigateTo(+last, { scrollBody: false });
+  const i = +last;
+  navigateTo(i, { scrollBody: false });
+  setTimeout(() => {
+    iframe.src = snippetsInBook[i]!.archiveLink;
+  }, 0);
 }
 
 function navigateTo(i: number, options: { scrollBody: boolean }) {
