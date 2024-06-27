@@ -1,34 +1,68 @@
 import easesLib from 'https://cdn.jsdelivr.net/npm/eases@1.0.8/+esm';
 
+class Animation {
+
+  running = false;
+
+  constructor(
+    private container: HTMLElement,
+    private duration: number,
+    private to: { x: number, y: number },
+  ) { }
+
+  start() {
+    this.running = true;
+
+    const startPos = {
+      x: this.container.scrollLeft,
+      y: this.container.scrollTop,
+    };
+
+    const startedAt = +document.timeline.currentTime!;
+
+    const step = () => {
+      requestAnimationFrame(time => {
+        if (!this.running) return;
+
+        const percentDone = (time - startedAt) / this.duration;
+        if (percentDone >= 1) {
+          this.container.scrollLeft = this.to.x;
+          this.container.scrollTop = this.to.y;
+          return;
+        }
+
+        const percentToAnimate = ease(percentDone);
+
+        const x = (this.to.x - startPos.x) * percentToAnimate + startPos.x;
+        const y = (this.to.y - startPos.y) * percentToAnimate + startPos.y;
+
+        this.container.scrollLeft = x;
+        this.container.scrollTop = y;
+
+        step();
+      });
+    };
+    step();
+  }
+
+  stop() {
+    this.running = false;
+  }
+
+}
+
+const animations = new Map<HTMLElement, Animation>();
+
 export function animateTo(container: HTMLElement, duration: number, to: { x: number, y: number }) {
-  const startPos = {
-    x: container.scrollLeft,
-    y: container.scrollTop,
-  };
+  const found = animations.get(container);
+  if (found) {
+    found.stop();
+  }
 
-  const startedAt = +document.timeline.currentTime!;
+  const anim = new Animation(container, duration, to);
+  anim.start();
 
-  const step = () => {
-    requestAnimationFrame(time => {
-      const percentDone = (time - startedAt) / duration;
-      if (percentDone >= 1) {
-        container.scrollLeft = to.x;
-        container.scrollTop = to.y;
-        return;
-      }
-
-      const percentToAnimate = ease(percentDone);
-
-      const x = (to.x - startPos.x) * percentToAnimate + startPos.x;
-      const y = (to.y - startPos.y) * percentToAnimate + startPos.y;
-
-      container.scrollLeft = x;
-      container.scrollTop = y;
-
-      step();
-    });
-  };
-  step();
+  animations.set(container, anim);
 }
 
 const eases = [
