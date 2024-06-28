@@ -21,8 +21,8 @@ class Ease implements Navable<Ease> {
   prev: Ease | undefined;
 
   constructor(
-    public name: string,
     public fn: (t: number) => number,
+    public name: string,
   ) { }
 
 }
@@ -92,17 +92,17 @@ export function animateTo(container: HTMLElement, duration: number, to: { x: num
   animations.set(container, anim);
 }
 
-eases.add(new Ease('expo', easesLib.expoOut));
-eases.add(new Ease('cubic', easesLib.cubicOut));
-eases.add(new Ease('elastic', easesLib.elasticOut));
-eases.add(new Ease('back', easesLib.backOut));
-eases.add(new Ease('bounce', easesLib.bounceOut));
-eases.add(new Ease('circ', easesLib.circOut));
-eases.add(new Ease('linear', easesLib.linear));
-eases.add(new Ease('quad', easesLib.quadOut));
-eases.add(new Ease('quart', easesLib.quartOut));
-eases.add(new Ease('quint', easesLib.quintOut));
-eases.add(new Ease('sine', easesLib.sineOut));
+eases.add(new Ease(easesLib.expoOut, 'expo'));
+eases.add(new Ease(easesLib.cubicOut, 'cubic'));
+eases.add(new Ease(easesLib.elasticOut, 'elastic'));
+eases.add(new Ease(easesLib.backOut, 'back'));
+eases.add(new Ease(easesLib.bounceOut, 'bounce'));
+eases.add(new Ease(easesLib.circOut, 'circ'));
+eases.add(new Ease(easesLib.linear, 'linear'));
+eases.add(new Ease(easesLib.quadOut, 'quad'));
+eases.add(new Ease(easesLib.quartOut, 'quart'));
+eases.add(new Ease(easesLib.quintOut, 'quint'));
+eases.add(new Ease(easesLib.sineOut, 'sine'));
 
 export function nextEase() {
   eases.current = eases.current.next!;
