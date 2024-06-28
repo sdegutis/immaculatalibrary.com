@@ -121,6 +121,20 @@
 
 span.highlightable-line.active {
   text-shadow: 0 0 12px #ff0;
+  /* animation: hl 1s ease; */
+}
+
+@keyframes hl {
+
+  0% {
+    transform: scale(2, 2) translate(10%, 0);
+  }
+
+
+  100% {
+    transform: scale(1, 1);
+  }
+
 }
 
 img {
