@@ -1,17 +1,6 @@
 import easesLib from 'https://cdn.jsdelivr.net/npm/eases@1.0.8/+esm';
-import { Nav, Navable } from './$nav.js';
+import { CircularNav, Navable } from './$nav.js';
 import { notify } from './$notify.js';
-
-class CircularNav<T extends Navable<T>> extends Nav<T> {
-
-  override add(t: T): void {
-    super.add(t);
-
-    this.last.next = this.first;
-    this.first.prev = this.last;
-  }
-
-}
 
 interface Ease extends Navable<Ease> {
   fn: (t: number) => number;

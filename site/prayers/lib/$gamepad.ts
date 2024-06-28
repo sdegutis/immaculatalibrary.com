@@ -1,6 +1,5 @@
 import { nextEase, prevEase } from "./$animate.js";
-import { changeNavButtons } from "./$easteregg1.js";
-import { tabNav } from "./$tab.js";
+import { changeNavButtons, tabNav } from "./$tab.js";
 
 const enum Button {
   A, B, X, Y,

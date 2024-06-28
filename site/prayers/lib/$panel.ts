@@ -1,7 +1,6 @@
 import { animateTo, nextEase } from "./$animate.js";
-import { changeNavButtons } from "./$easteregg1.js";
 import { Nav, Navable } from "./$nav.js";
-import { Tab, tabBodies } from "./$tab.js";
+import { changeNavButtons, Tab, tabBodies } from "./$tab.js";
 
 class Line implements Navable<Line> {
 

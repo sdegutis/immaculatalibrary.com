@@ -1,5 +1,5 @@
 import { LeftArrow, RightArrow } from "../../scripts/$arrows.js";
-import { Nav, Navable } from "./$nav.js";
+import { CircularNav, Nav, Navable } from "./$nav.js";
 import { Panel } from "./$panel.js";
 
 export const tabBodies = document.getElementById('tabs-bodies') as HTMLDivElement;
@@ -59,8 +59,8 @@ export function setupTabs() {
       tab.panelNav.add(panel);
 
       if (panel.prev) {
-        panel.panelDiv.append(<PageChanger to={panel.prev} side='left'><LeftArrow /></PageChanger>);
-        panel.prev.panelDiv.append(<PageChanger to={panel} side='right'><RightArrow /></PageChanger>);
+        panel.panelDiv.append(<PageChanger to={panel.prev} side='left' />);
+        panel.prev.panelDiv.append(<PageChanger to={panel} side='right' />);
       }
     }
   }
@@ -72,15 +72,35 @@ export function setupTabs() {
   });
 }
 
-function PageChanger(attrs: { to: Panel, side: 'left' | 'right' }, children: any) {
-  const button = (
-    <button class={`page-changer side-${attrs.side}`} style={`${attrs.side}: 1px;`}>
-      {children}
-    </button>
-  ) as HTMLButtonElement;
+const changeNavButtonCallbacks: (() => void)[] = [];
+
+interface PageChangerContent extends Navable<PageChangerContent> {
+  content: string | Node;
+}
+
+function PageChanger(attrs: { to: Panel, side: 'left' | 'right' }) {
+  const content = new CircularNav<PageChangerContent>((attrs.side === 'left'
+    ? [{ content: <LeftArrow /> }, { content: `Hey, why don't you go to the page on the ${attrs.side} by clicking here?` }]
+    : [{ content: <RightArrow /> }, { content: `Hey, why don't you go to the page on the ${attrs.side} by clicking here?` }])
+  );
+
+  const button = <button class='page-changer' style={`${attrs.side}: 1px;`} /> as HTMLButtonElement;
+
+  function changeButtonContent() {
+    button.replaceChildren(content.current.content);
+    content.current = content.current.next!;
+  }
+
+  changeButtonContent();
+  changeNavButtonCallbacks.push(changeButtonContent);
+
   button.onclick = (e) => {
     e.preventDefault();
     attrs.to.focus();
   };
   return button;
+}
+
+export function changeNavButtons() {
+  for (const fn of changeNavButtonCallbacks) fn();
 }

@@ -27,3 +27,14 @@ export class Nav<T extends Navable<T>> {
   }
 
 }
+
+export class CircularNav<T extends Navable<T>> extends Nav<T> {
+
+  override add(t: T): void {
+    super.add(t);
+
+    this.last.next = this.first;
+    this.first.prev = this.last;
+  }
+
+}
