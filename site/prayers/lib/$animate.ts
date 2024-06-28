@@ -13,30 +13,23 @@ class CircularNav<T extends Navable<T>> extends Nav<T> {
 
 }
 
-class Ease implements Navable<Ease> {
-
-  next?: Ease;
-  prev?: Ease;
-
-  constructor(
-    public fn: (t: number) => number,
-    public name: string,
-  ) { }
-
+interface Ease extends Navable<Ease> {
+  fn: (t: number) => number;
+  name: string;
 }
 
 const eases = new CircularNav<Ease>([
-  new Ease(easesLib.expoOut, 'expo'),
-  new Ease(easesLib.cubicOut, 'cubic'),
-  new Ease(easesLib.elasticOut, 'elastic'),
-  new Ease(easesLib.backOut, 'back'),
-  new Ease(easesLib.bounceOut, 'bounce'),
-  new Ease(easesLib.circOut, 'circ'),
-  new Ease(easesLib.linear, 'linear'),
-  new Ease(easesLib.quadOut, 'quad'),
-  new Ease(easesLib.quartOut, 'quart'),
-  new Ease(easesLib.quintOut, 'quint'),
-  new Ease(easesLib.sineOut, 'sine'),
+  { fn: easesLib.expoOut, name: 'expo' },
+  { fn: easesLib.cubicOut, name: 'cubic' },
+  { fn: easesLib.elasticOut, name: 'elastic' },
+  { fn: easesLib.backOut, name: 'back' },
+  { fn: easesLib.bounceOut, name: 'bounce' },
+  { fn: easesLib.circOut, name: 'circ' },
+  { fn: easesLib.linear, name: 'linear' },
+  { fn: easesLib.quadOut, name: 'quad' },
+  { fn: easesLib.quartOut, name: 'quart' },
+  { fn: easesLib.quintOut, name: 'quint' },
+  { fn: easesLib.sineOut, name: 'sine' },
 ]);
 
 export function nextEase() {
