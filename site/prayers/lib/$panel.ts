@@ -59,42 +59,15 @@ export class Panel implements Navable<Panel> {
 
     this.panelBodyDiv.setAttribute('tabindex', '0');
     this.panelBodyDiv.onkeydown = (e) => {
-      if (e.key === 'ArrowLeft') {
-        e.preventDefault();
-        this.prev?.focus();
-      }
-      else if (e.key === 'ArrowRight') {
-        e.preventDefault();
-        this.next?.focus();
-      }
-      else if (e.key === 'Enter' && e.ctrlKey) {
-        e.preventDefault();
-        changeNavButtons();
-      }
-      else if (e.key === ' ' && e.ctrlKey) {
-        e.preventDefault();
-        nextEase();
-      }
-      else if (e.key === ' ') {
-        e.preventDefault();
-        this.nextLine();
-      }
-      else if (e.key === 'Home') {
-        e.preventDefault();
-        this.lineNav.first.focus();
-      }
-      else if (e.key === 'End') {
-        e.preventDefault();
-        this.lineNav.last.focus();
-      }
-      else if (e.key === 'ArrowUp') {
-        e.preventDefault();
-        this.prevLine();
-      }
-      else if (e.key === 'ArrowDown') {
-        e.preventDefault();
-        this.nextLine();
-      }
+      if (e.key === 'ArrowLeft') { e.preventDefault(); this.prev?.focus(); }
+      if (e.key === 'ArrowRight') { e.preventDefault(); this.next?.focus(); }
+      if (e.key === 'Enter' && e.ctrlKey) { e.preventDefault(); changeNavButtons(); }
+      if (e.key === ' ' && e.ctrlKey) { e.preventDefault(); nextEase(); }
+      if (e.key === ' ') { e.preventDefault(); this.nextLine(); }
+      if (e.key === 'Home') { e.preventDefault(); this.lineNav.first.focus(); }
+      if (e.key === 'End') { e.preventDefault(); this.lineNav.last.focus(); }
+      if (e.key === 'ArrowUp') { e.preventDefault(); this.prevLine(); }
+      if (e.key === 'ArrowDown') { e.preventDefault(); this.nextLine(); }
     };
 
   }
