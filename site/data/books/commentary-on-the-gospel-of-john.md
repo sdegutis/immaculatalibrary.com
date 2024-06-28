@@ -10,7 +10,7 @@ files:
     pdfFile: Commentary on the Gospel of John by St Cyril of Alexandria, Vol I.pdf
   - archiveId: commentaryongosp02cyri
     pdfFile: Commentary on the Gospel of John by St Cyril of Alexandria, Vol II.pdf
-title: Commentary on the Gospel of John
+title: Commentary on John
 subtitle: ''
 ---
 

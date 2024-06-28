@@ -28,6 +28,7 @@ export default <>
             <li><a href='/books/confessions.html'>Confessions</a> by St. Augustine</li>
             <li><a href='/books/augustine-on-the-psalms.html'>Exposition on the Psalms</a> by St. Augustine</li>
             <li><a href='/books/works-of-justin-martyr.html'>The Works of St. Justin Martyr</a> by St. Justin Martyr</li>
+            <li><a href='/books/commentary-on-the-gospel-of-john.html'>Commentary on John</a> by St. Cyril of Alexandria</li>
             <li><a href='/books/venerable-bedes-ecclesiastical-history-of-england.html'>Ecclesiastical History of England</a> by St. Bede</li>
           </ul>
 
