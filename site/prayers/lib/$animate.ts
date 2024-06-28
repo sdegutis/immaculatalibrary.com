@@ -13,8 +13,6 @@ class CircularNav<T extends Navable<T>> extends Nav<T> {
 
 }
 
-const eases = new CircularNav<Ease>();
-
 class Ease implements Navable<Ease> {
 
   next: Ease | undefined;
@@ -25,6 +23,30 @@ class Ease implements Navable<Ease> {
     public name: string,
   ) { }
 
+}
+
+const eases = new CircularNav<Ease>();
+
+eases.add(new Ease(easesLib.expoOut, 'expo'));
+eases.add(new Ease(easesLib.cubicOut, 'cubic'));
+eases.add(new Ease(easesLib.elasticOut, 'elastic'));
+eases.add(new Ease(easesLib.backOut, 'back'));
+eases.add(new Ease(easesLib.bounceOut, 'bounce'));
+eases.add(new Ease(easesLib.circOut, 'circ'));
+eases.add(new Ease(easesLib.linear, 'linear'));
+eases.add(new Ease(easesLib.quadOut, 'quad'));
+eases.add(new Ease(easesLib.quartOut, 'quart'));
+eases.add(new Ease(easesLib.quintOut, 'quint'));
+eases.add(new Ease(easesLib.sineOut, 'sine'));
+
+export function nextEase() {
+  eases.current = eases.current.next!;
+  notify(eases.current.name);
+}
+
+export function prevEase() {
+  eases.current = eases.current.prev!;
+  notify(eases.current.name);
 }
 
 class Animation {
@@ -90,26 +112,4 @@ export function animateTo(container: HTMLElement, duration: number, to: { x: num
   anim.start();
 
   animations.set(container, anim);
-}
-
-eases.add(new Ease(easesLib.expoOut, 'expo'));
-eases.add(new Ease(easesLib.cubicOut, 'cubic'));
-eases.add(new Ease(easesLib.elasticOut, 'elastic'));
-eases.add(new Ease(easesLib.backOut, 'back'));
-eases.add(new Ease(easesLib.bounceOut, 'bounce'));
-eases.add(new Ease(easesLib.circOut, 'circ'));
-eases.add(new Ease(easesLib.linear, 'linear'));
-eases.add(new Ease(easesLib.quadOut, 'quad'));
-eases.add(new Ease(easesLib.quartOut, 'quart'));
-eases.add(new Ease(easesLib.quintOut, 'quint'));
-eases.add(new Ease(easesLib.sineOut, 'sine'));
-
-export function nextEase() {
-  eases.current = eases.current.next!;
-  notify(eases.current.name);
-}
-
-export function prevEase() {
-  eases.current = eases.current.prev!;
-  notify(eases.current.name);
 }
