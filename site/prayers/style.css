@@ -186,7 +186,7 @@ img {
   transform: translateX(-50%);
   transition:
     left 300ms ease-in-out,
-    width 600ms ease-in-out;
+    width 450ms ease-in-out;
 }
 
 #underline.suppress {
