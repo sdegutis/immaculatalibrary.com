@@ -39,16 +39,18 @@ export function setupTabs() {
   underline.style.top = `${tabNamesArea.offsetHeight - 2}px`;
   tabNamesArea.append(underline);
 
+  const moveUnderlineToTab = (tab: Tab) => {
+    underline.style.left = `${tab.button.offsetLeft}px`;
+    underline.style.width = `${tab.button.offsetWidth}px`;
+  };
+
   for (const tabBody of tabBodies.children) {
     const button = tabButtons.shift()!;
 
     const tab = new Tab(button);
     tabNav.add(tab);
 
-    tab.onFocus = () => {
-      underline.style.left = `${button.offsetLeft}px`;
-      underline.style.width = `${button.offsetWidth}px`;
-    };
+    tab.onFocus = () => moveUnderlineToTab(tab);
 
     for (const panelDiv of tabBody.querySelectorAll<HTMLDivElement>('.panel')) {
       const panelBodyDiv = panelDiv.querySelector<HTMLDivElement>('.panel-body')!;
@@ -62,6 +64,12 @@ export function setupTabs() {
       }
     }
   }
+
+  window.addEventListener('resize', () => {
+    underline.classList.add('suppress');
+    moveUnderlineToTab(tabNav.current);
+    underline.classList.remove('suppress');
+  });
 }
 
 function PageChanger(attrs: { to: Panel, side: 'left' | 'right' }, children: any) {
