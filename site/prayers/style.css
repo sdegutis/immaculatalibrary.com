@@ -183,9 +183,10 @@ img {
   background-color: var(--blue-bg);
   position: absolute;
   box-sizing: border-box;
+  transform: translateX(-50%);
   transition:
     left 300ms ease-in-out,
-    width 300ms ease-in-out;
+    width 600ms ease-in-out;
 }
 
 #underline.suppress {

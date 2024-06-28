@@ -13,7 +13,7 @@ underline.style.top = `${tabNamesArea.offsetHeight - 2}px`;
 tabNamesArea.append(underline);
 
 const moveUnderlineToTab = (tab: Tab) => {
-  underline.style.left = `${tab.button.offsetLeft}px`;
+  underline.style.left = `${tab.button.offsetLeft + (tab.button.offsetWidth / 2)}px`;
   underline.style.width = `${tab.button.offsetWidth}px`;
 };
 
