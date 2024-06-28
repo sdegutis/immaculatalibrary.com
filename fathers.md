@@ -175,12 +175,6 @@ Vol. II.
 
 ### WIP
 
-commentaryongosp01cyri
-commentaryongosp02cyri
-CyrilOfAlexandriaCommentaryOnJohnVolume1Tr.P.E.Pusey1874
-per_commentary-gospel-according-to-st-john_1885_ia40330204-38
-Commentary on John by St. Cyril of Alexandria
-
 
 libraryoffathers0002unse
 a6784913p02cyriuoft
