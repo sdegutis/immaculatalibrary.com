@@ -77,7 +77,7 @@ export class Panel implements Navable<Panel> {
       y: this.panelDiv.offsetTop - tabBodies.offsetTop,
     });
     this.panelBodyDiv.focus({ preventScroll: true });
-    this.tab.panelNav.current = this;
+    this.tab.panels.current = this;
 
     this.lineNav.current.focus();
   }

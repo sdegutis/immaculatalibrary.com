@@ -6,14 +6,14 @@ export const tabBodies = document.getElementById('tabs-bodies') as HTMLDivElemen
 const tabNamesArea = document.querySelector<HTMLDivElement>('#tabs-names')!;
 const tabButtons = [...document.querySelectorAll<HTMLAnchorElement>('#tabs-names a')];
 
-export const tabNav = new Nav<Tab>();
+export const tabs = new Nav<Tab>();
 
 export class Tab implements Navable<Tab> {
 
   prev?: Tab;
   next?: Tab;
 
-  panelNav = new Nav<Panel>();
+  panels = new Nav<Panel>();
 
   onFocus = () => { };
 
@@ -25,10 +25,10 @@ export class Tab implements Navable<Tab> {
   }
 
   focus() {
-    tabNav.current.button.classList.remove('active');
-    tabNav.current = this;
-    tabNav.current.button.classList.add('active');
-    this.panelNav.first.focus();
+    tabs.current.button.classList.remove('active');
+    tabs.current = this;
+    tabs.current.button.classList.add('active');
+    this.panels.first.focus();
     this.onFocus();
   };
 
@@ -48,7 +48,7 @@ export function setupTabs() {
     const button = tabButtons.shift()!;
 
     const tab = new Tab(button);
-    tabNav.add(tab);
+    tabs.add(tab);
 
     tab.onFocus = () => moveUnderlineToTab(tab);
 
@@ -56,7 +56,7 @@ export function setupTabs() {
       const panelBodyDiv = panelDiv.querySelector<HTMLDivElement>('.panel-body')!;
 
       const panel = new Panel(panelDiv, panelBodyDiv, tab);
-      tab.panelNav.add(panel);
+      tab.panels.add(panel);
 
       if (panel.prev) {
         panel.panelDiv.append(<PageChanger to={panel.prev} side='left' />);
@@ -67,7 +67,7 @@ export function setupTabs() {
 
   window.addEventListener('resize', () => {
     underline.classList.add('suppress');
-    moveUnderlineToTab(tabNav.current);
+    moveUnderlineToTab(tabs.current);
     underline.classList.remove('suppress');
   });
 }

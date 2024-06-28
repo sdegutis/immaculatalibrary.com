@@ -1,5 +1,5 @@
 import { setupGamepads } from "./lib/$gamepad.js";
-import { setupTabs, tabNav } from "./lib/$tab.js";
+import { setupTabs, tabs } from "./lib/$tab.js";
 
 for (const el of document.querySelectorAll(`.show-today:not(.day-${new Date().getDay()})`)) {
   el.closest('.panel')?.remove();
@@ -7,4 +7,4 @@ for (const el of document.querySelectorAll(`.show-today:not(.day-${new Date().ge
 
 setupTabs();
 setupGamepads();
-tabNav.first.focus();
+tabs.first.focus();

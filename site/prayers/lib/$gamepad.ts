@@ -1,5 +1,5 @@
 import { nextEase, prevEase } from "./$animate.js";
-import { changeNavButtons, tabNav } from "./$tab.js";
+import { changeNavButtons, tabs } from "./$tab.js";
 
 const enum Button {
   A, B, X, Y,
@@ -13,19 +13,19 @@ const enum Button {
 let gamepad: Gamepad;
 
 const gamepadActions = new Map<number, () => void>([
-  [Button.L, () => { tabNav.current.prev?.focus(); }],
-  [Button.R, () => { tabNav.current.next?.focus(); }],
+  [Button.L, () => { tabs.current.prev?.focus(); }],
+  [Button.R, () => { tabs.current.next?.focus(); }],
 
   [Button.ZL, () => { prevEase(); }],
   [Button.ZR, () => { nextEase(); }],
 
   [Button.B, () => { changeNavButtons(); }],
 
-  [Button.RIGHT, () => { tabNav.current.panelNav.current.next?.focus(); }],
-  [Button.LEFT, () => { tabNav.current.panelNav.current.prev?.focus(); }],
+  [Button.RIGHT, () => { tabs.current.panels.current.next?.focus(); }],
+  [Button.LEFT, () => { tabs.current.panels.current.prev?.focus(); }],
 
-  [Button.DOWN, () => { tabNav.current.panelNav.current.nextLine(); }],
-  [Button.UP, () => { tabNav.current.panelNav.current.prevLine(); }],
+  [Button.DOWN, () => { tabs.current.panels.current.nextLine(); }],
+  [Button.UP, () => { tabs.current.panels.current.prevLine(); }],
 ]);
 
 let ticks = 0;
@@ -61,10 +61,10 @@ function handleController() {
       lastMovedFromY = currentMs;
 
       if (y > 0) {
-        tabNav.current.panelNav.current.nextLine();
+        tabs.current.panels.current.nextLine();
       }
       else if (y < 0) {
-        tabNav.current.panelNav.current.prevLine();
+        tabs.current.panels.current.prevLine();
       }
     }
   }
