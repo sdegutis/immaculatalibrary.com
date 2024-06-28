@@ -1,5 +1,5 @@
 ---
-title: Fittingness is known about but misunderstood
+title: Fittingness is known but misunderstood
 ---
 
 Fittingness is something I barely understood until recently. But it's prevalent in the Bible, in life, in mystical reality, and especially in the minds of women, religious or not.
