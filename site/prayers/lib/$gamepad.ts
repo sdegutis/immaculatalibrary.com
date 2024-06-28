@@ -11,7 +11,7 @@ const enum Button {
   HOME,
 }
 
-const gamepad = () => navigator.getGamepads().find(c => c)!;
+let gamepad: Gamepad;
 
 const gamepadActions = new Map<number, () => void>([
   [Button.L, () => { tabNav.current.prev?.focus(); }],
@@ -35,14 +35,21 @@ let lastMovedFromY = 0;
 function handleController() {
   const currentMs = ticks++ * (1000 / 33);
 
+  gamepad = navigator.getGamepads().find(c => c)!;
+
+  const [x, y] = gamepad.axes as [number, number];
+  const buttons = gamepad.buttons.map(b => b.pressed);
+
+  if (x === 1) buttons[Button.RIGHT] = true;
+  if (x === -1) buttons[Button.LEFT] = true;
+
   for (const [button, fn] of gamepadActions.entries()) {
-    if (pressed(button)) {
+    if (pressed(buttons, button)) {
       fn();
       return;
     }
   }
 
-  const y = gamepad().axes[1]!;
   const MAX_LINES_PER_SEC = 10;
 
   const linesToMovePerSec = Math.abs(Math.round(y * MAX_LINES_PER_SEC));
@@ -67,8 +74,8 @@ function handleController() {
 
 const pressMap = new Map<number, number>();
 
-function pressed(button: number) {
-  if (!gamepad().buttons[button]!.pressed) return false;
+function pressed(gamepad: boolean[], button: number) {
+  if (!gamepad[button]) return false;
 
   const lastPressed = pressMap.get(button) ?? 0;
   const now = Date.now();
