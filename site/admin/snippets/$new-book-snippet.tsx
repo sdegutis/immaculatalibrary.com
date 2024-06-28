@@ -122,6 +122,9 @@ const editor = monaco.editor.create(document.getElementById('editorarea')!, {
   language: 'markdown',
   wordWrap: 'on',
   tabSize: 2,
+  suggest: {
+    showWords: false,
+  },
 });
 
 editor.addAction({
