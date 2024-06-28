@@ -8,6 +8,25 @@ const tabButtons = [...document.querySelectorAll<HTMLAnchorElement>('#tabs-names
 
 export const tabs = new Nav<Tab>();
 
+const underline = <div id='underline' /> as HTMLDivElement;
+underline.style.top = `${tabNamesArea.offsetHeight - 2}px`;
+tabNamesArea.append(underline);
+
+const moveUnderlineToTab = (tab: Tab) => {
+  underline.style.left = `${tab.button.offsetLeft}px`;
+  underline.style.width = `${tab.button.offsetWidth}px`;
+};
+
+window.addEventListener('resize', () => {
+  underline.classList.add('suppress');
+  moveUnderlineToTab(tabs.current);
+  underline.classList.remove('suppress');
+});
+
+export function bounceUnderline() {
+  underline.classList.toggle('bounce');
+}
+
 export class Tab implements Navable<Tab> {
 
   prev?: Tab;
@@ -35,15 +54,6 @@ export class Tab implements Navable<Tab> {
 }
 
 export function setupTabs() {
-  const underline = <div id='underline' /> as HTMLDivElement;
-  underline.style.top = `${tabNamesArea.offsetHeight - 2}px`;
-  tabNamesArea.append(underline);
-
-  const moveUnderlineToTab = (tab: Tab) => {
-    underline.style.left = `${tab.button.offsetLeft}px`;
-    underline.style.width = `${tab.button.offsetWidth}px`;
-  };
-
   for (const tabBody of tabBodies.children) {
     const button = tabButtons.shift()!;
 
@@ -64,12 +74,6 @@ export function setupTabs() {
       }
     }
   }
-
-  window.addEventListener('resize', () => {
-    underline.classList.add('suppress');
-    moveUnderlineToTab(tabs.current);
-    underline.classList.remove('suppress');
-  });
 }
 
 const changeNavButtonCallbacks: (() => void)[] = [];

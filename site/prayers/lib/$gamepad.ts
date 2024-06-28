@@ -1,5 +1,5 @@
 import { nextEase, prevEase } from "./$animate.js";
-import { changeNavButtons, tabs } from "./$tab.js";
+import { bounceUnderline, tabs } from "./$tab.js";
 
 const enum Button {
   A, B, X, Y,
@@ -19,7 +19,7 @@ const gamepadActions = new Map<number, () => void>([
   [Button.ZL, () => { prevEase(); }],
   [Button.ZR, () => { nextEase(); }],
 
-  [Button.B, () => { changeNavButtons(); }],
+  [Button.B, () => { bounceUnderline(); }],
 
   [Button.RIGHT, () => { tabs.current.panels.current.next?.focus(); }],
   [Button.LEFT, () => { tabs.current.panels.current.prev?.focus(); }],
