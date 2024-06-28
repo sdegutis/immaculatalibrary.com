@@ -1,5 +1,31 @@
 import easesLib from 'https://cdn.jsdelivr.net/npm/eases@1.0.8/+esm';
+import { Nav, Navable } from './$nav.js';
 import { notify } from './$notify.js';
+
+class CircularNav<T extends Navable<T>> extends Nav<T> {
+
+  override add(t: T): void {
+    super.add(t);
+
+    this.last.next = this.first;
+    this.first.prev = this.last;
+  }
+
+}
+
+const eases = new CircularNav<Ease>();
+
+class Ease implements Navable<Ease> {
+
+  next: Ease | undefined;
+  prev: Ease | undefined;
+
+  constructor(
+    public name: string,
+    public fn: (t: number) => number,
+  ) { }
+
+}
 
 class Animation {
 
@@ -32,7 +58,7 @@ class Animation {
           return;
         }
 
-        const percentToAnimate = ease(percentDone);
+        const percentToAnimate = eases.current.fn(percentDone);
 
         const x = (this.to.x - startPos.x) * percentToAnimate + startPos.x;
         const y = (this.to.y - startPos.y) * percentToAnimate + startPos.y;
@@ -66,33 +92,24 @@ export function animateTo(container: HTMLElement, duration: number, to: { x: num
   animations.set(container, anim);
 }
 
-const eases = [
-  { name: 'expoOut', fn: easesLib.expoOut },
-  { name: 'cubicOut', fn: easesLib.cubicOut },
-  { name: 'elasticOut', fn: easesLib.elasticOut },
-  { name: 'backOut', fn: easesLib.backOut },
-  { name: 'bounceOut', fn: easesLib.bounceOut },
-  { name: 'circOut', fn: easesLib.circOut },
-  { name: 'linear', fn: easesLib.linear },
-  { name: 'quadOut', fn: easesLib.quadOut },
-  { name: 'quartOut', fn: easesLib.quartOut },
-  { name: 'quintOut', fn: easesLib.quintOut },
-  { name: 'sineOut', fn: easesLib.sineOut },
-];
-
-let easeIndex = 0;
-let ease = eases[easeIndex]!.fn;
+eases.add(new Ease('expo', easesLib.expoOut));
+eases.add(new Ease('cubic', easesLib.cubicOut));
+eases.add(new Ease('elastic', easesLib.elasticOut));
+eases.add(new Ease('back', easesLib.backOut));
+eases.add(new Ease('bounce', easesLib.bounceOut));
+eases.add(new Ease('circ', easesLib.circOut));
+eases.add(new Ease('linear', easesLib.linear));
+eases.add(new Ease('quad', easesLib.quadOut));
+eases.add(new Ease('quart', easesLib.quartOut));
+eases.add(new Ease('quint', easesLib.quintOut));
+eases.add(new Ease('sine', easesLib.sineOut));
 
 export function nextEase() {
-  easeIndex++;
-  if (easeIndex >= eases.length) easeIndex = 0;
-  ease = eases[easeIndex]!.fn;
-  notify(eases[easeIndex]!.name);
+  eases.current = eases.current.next!;
+  notify(eases.current.name);
 }
 
 export function prevEase() {
-  easeIndex--;
-  if (easeIndex < 0) easeIndex = eases.length - 1;
-  ease = eases[easeIndex]!.fn;
-  notify(eases[easeIndex]!.name);
+  eases.current = eases.current.prev!;
+  notify(eases.current.name);
 }
