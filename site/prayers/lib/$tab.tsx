@@ -3,6 +3,7 @@ import { Nav, Navable } from "./$nav.js";
 import { Panel } from "./$panel.js";
 
 export const tabBodies = document.getElementById('tabs-bodies') as HTMLDivElement;
+const tabNamesArea = document.querySelector<HTMLDivElement>('#tabs-names')!;
 const tabButtons = [...document.querySelectorAll<HTMLAnchorElement>('#tabs-names a')];
 
 export const tabNav = new Nav<Tab>();
@@ -14,7 +15,9 @@ export class Tab implements Navable<Tab> {
 
   panelNav = new Nav<Panel>();
 
-  constructor(private button: HTMLAnchorElement) {
+  onFocus = () => { };
+
+  constructor(public button: HTMLAnchorElement) {
     this.button.onclick = (e) => {
       e.preventDefault();
       this.focus();
@@ -26,16 +29,26 @@ export class Tab implements Navable<Tab> {
     tabNav.current = this;
     tabNav.current.button.classList.add('active');
     this.panelNav.first.focus();
+    this.onFocus();
   };
 
 }
 
 export function setupTabs() {
+  const underline = <div id='underline' /> as HTMLDivElement;
+  underline.style.top = `${tabNamesArea.offsetHeight - 2}px`;
+  tabNamesArea.append(underline);
+
   for (const tabBody of tabBodies.children) {
     const button = tabButtons.shift()!;
 
     const tab = new Tab(button);
     tabNav.add(tab);
+
+    tab.onFocus = () => {
+      underline.style.left = `${button.offsetLeft}px`;
+      underline.style.width = `${button.offsetWidth}px`;
+    };
 
     for (const panelDiv of tabBody.querySelectorAll<HTMLDivElement>('.panel')) {
       const panelBodyDiv = panelDiv.querySelector<HTMLDivElement>('.panel-body')!;

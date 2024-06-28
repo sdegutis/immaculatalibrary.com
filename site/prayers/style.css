@@ -169,3 +169,19 @@ img {
   }
 
 }
+
+#tabs-names {
+  position: relative;
+}
+
+.tab-links a.active {
+  border-bottom-color: transparent !important;
+}
+
+#underline {
+  height: 3px;
+  background-color: var(--blue-bg);
+  position: absolute;
+  box-sizing: border-box;
+  transition: all 300ms ease-in-out;
+}
