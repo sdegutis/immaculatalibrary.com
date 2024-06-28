@@ -29,13 +29,40 @@ const gamepadActions = new Map<number, () => void>([
   [Button.UP, () => { tabNav.current.panelNav.current.prevLine(); }],
 ]);
 
+let ticks = 0;
+let lastMovedFromY = 0;
+
 function handleController() {
+  const currentMs = ticks++ * (1000 / 33);
+
   for (const [button, fn] of gamepadActions.entries()) {
     if (pressed(button)) {
       fn();
       return;
     }
   }
+
+  const y = gamepad().axes[1]!;
+  const MAX_LINES_PER_SEC = 10;
+
+  const linesToMovePerSec = Math.abs(Math.round(y * MAX_LINES_PER_SEC));
+
+  if (linesToMovePerSec > 0) {
+    const msDelayBetweenMoves = 1000 / linesToMovePerSec;
+    const enoughTimeHasPassed = (currentMs - lastMovedFromY) > msDelayBetweenMoves;
+
+    if (enoughTimeHasPassed) {
+      lastMovedFromY = currentMs;
+
+      if (y > 0) {
+        tabNav.current.panelNav.current.nextLine();
+      }
+      else if (y < 0) {
+        tabNav.current.panelNav.current.prevLine();
+      }
+    }
+  }
+
 }
 
 const pressMap = new Map<number, number>();
