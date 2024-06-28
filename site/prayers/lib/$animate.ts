@@ -15,8 +15,8 @@ class CircularNav<T extends Navable<T>> extends Nav<T> {
 
 class Ease implements Navable<Ease> {
 
-  next: Ease | undefined;
-  prev: Ease | undefined;
+  next?: Ease;
+  prev?: Ease;
 
   constructor(
     public fn: (t: number) => number,

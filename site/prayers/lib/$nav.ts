@@ -1,6 +1,6 @@
 export interface Navable<T> {
-  next: T | undefined;
-  prev: T | undefined;
+  next?: T;
+  prev?: T;
 }
 
 export class Nav<T extends Navable<T>> {

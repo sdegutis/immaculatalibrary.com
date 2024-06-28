@@ -10,8 +10,8 @@ export const tabNav = new Nav<Tab>();
 
 export class Tab implements Navable<Tab> {
 
-  prev: Tab | undefined;
-  next: Tab | undefined;
+  prev?: Tab;
+  next?: Tab;
 
   panelNav = new Nav<Panel>();
 

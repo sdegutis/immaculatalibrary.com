@@ -5,8 +5,8 @@ import { Tab, tabBodies } from "./$tab.js";
 
 class Line implements Navable<Line> {
 
-  prev: Line | undefined;
-  next: Line | undefined;
+  prev?: Line;
+  next?: Line;
 
   constructor(
     public element: HTMLSpanElement,
@@ -35,8 +35,8 @@ class Line implements Navable<Line> {
 
 export class Panel implements Navable<Panel> {
 
-  public prev: Panel | undefined;
-  public next: Panel | undefined;
+  public prev?: Panel;
+  public next?: Panel;
 
   lineNav = new Nav<Line>;
 
