@@ -50,9 +50,9 @@ function handleController() {
     }
   }
 
+  const scaledY = y * y * y;
   const MAX_LINES_PER_SEC = 10;
-
-  const linesToMovePerSec = Math.abs(Math.round(y * MAX_LINES_PER_SEC));
+  const linesToMovePerSec = Math.abs(Math.round(scaledY * MAX_LINES_PER_SEC));
 
   if (linesToMovePerSec > 0) {
     const msDelayBetweenMoves = 1000 / linesToMovePerSec;
