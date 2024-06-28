@@ -20,6 +20,13 @@ class VerifyHuman {
     this.#screen.onclick = (e) => this.#quitting = true;
     this.#wholeArea.append(this.#wordArea, this.#cursorArea);
 
+    const keyListener = (e: KeyboardEvent) => {
+      e.preventDefault();
+      this.#quitting = true;
+    };
+
+    window.addEventListener('keydown', keyListener);
+
     document.body.children[0]!.append(this.#screen, this.#wholeArea);
     setTimeout(() => this.#screen.style.backgroundColor = '#000c', 100);
 
@@ -27,6 +34,8 @@ class VerifyHuman {
     document.documentElement.style.overflow = 'hidden';
 
     return () => {
+      window.removeEventListener('keydown', keyListener);
+
       document.documentElement.style.overflow = documentOverflow;
 
       this.#screen.style.backgroundColor = 'unset';
