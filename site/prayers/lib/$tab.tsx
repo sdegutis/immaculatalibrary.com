@@ -88,7 +88,7 @@ function PageChanger(attrs: { to: Panel, side: 'left' | 'right' }) {
     : [{ content: <RightArrow /> }, { content: `Hey, why don't you go to the page on the ${attrs.side} by clicking here?` }])
   );
 
-  const button = <button class='page-changer' style={`${attrs.side}: 1px;`} /> as HTMLButtonElement;
+  const button = <button class='page-changer' style={`${attrs.side}: 1em;`} /> as HTMLButtonElement;
 
   function changeButtonContent() {
     button.replaceChildren(content.current.content);
