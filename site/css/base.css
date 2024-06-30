@@ -75,6 +75,7 @@ select {
   box-sizing: border-box;
   font-family: system-ui;
   font-size: inherit;
+  border-radius: 3px;
 }
 
 button {
@@ -99,6 +100,7 @@ label:has(input) {
 label:has(input[type=radio]) {
   padding: 3px 7px;
   position: relative;
+  border-radius: 3px;
 }
 
 label:has(input[type=radio]:checked)::before {
@@ -114,8 +116,8 @@ label:has(input[type=radio]:checked)::before {
 }
 
 label:has(input[type=radio]:checked) {
-  color: var(--blue-bg);
-  outline: 1px solid currentColor;
+  outline: 1px solid var(--blue-bg);
+  background-color: var(--bgalt);
 }
 
 label:has(input[type=checkbox]) {
