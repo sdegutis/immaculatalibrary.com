@@ -40,7 +40,7 @@ export default <>
           </div>
 
           <Admin>
-            <a href='/admin/books/new-book.html'>New book</a>
+            <p><a href='/admin/books/new-book.html'>New book</a></p>
           </Admin>
 
         </div>
