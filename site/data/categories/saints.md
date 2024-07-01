@@ -71,6 +71,7 @@ books:
   - the-spiritual-conferences-of-st-francis-de-sales
   - virtues-and-spiritual-doctrine-of-st-vincent-de-paul
   - wisdom-and-wit-of-blessed-thomas-more
+  - bernadette-of-lourdes
 sortOrder: 5
 ---
 
