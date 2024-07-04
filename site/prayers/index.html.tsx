@@ -15,7 +15,6 @@ export default <>
     <Tabs tabs={{
       "Morning":
         <Slideshow>
-          <Wednesday />
           <AngelMorning />
           <MorningPrayers />
           <OurFather />
