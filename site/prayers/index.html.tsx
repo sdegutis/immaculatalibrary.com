@@ -15,6 +15,7 @@ export default <>
     <Tabs tabs={{
       "Morning":
         <Slideshow>
+          <Wednesday />
           <AngelMorning />
           <MorningPrayers />
           <OurFather />
@@ -394,24 +395,16 @@ function Wednesday() {
           <Line>    and for whom the priests of the Auxilium Christianorum pray.</Line>
         </p>
         <p class='spaced-small'>
-          <Line>We ask Thee to bind</Line>
-          <Line>    all evil spirits,</Line>
-          <Line>    all powers in the air,</Line>
-          <Line>    the water,</Line>
-          <Line>    the ground,</Line>
-          <Line>    the fire,</Line>
-          <Line>    under ground,</Line>
+          <Line>We ask Thee to bind all evil spirits,</Line>
+          <Line>    all powers in the air, the water, the ground, the fire, under ground,</Line>
           <Line>        or wherever they exercise their powers,</Line>
           <Line>    any satanic forces in nature</Line>
           <Line>        and any and all emissaries of the satanic headquarters.</Line>
         </p>
         <p class='spaced-small'>
           <Line>We ask Thee to bind by Thy Precious Blood</Line>
-          <Line>    all of the attributes,</Line>
-          <Line>    aspects</Line>
-          <Line>    and characteristics,</Line>
-          <Line>    interactions,</Line>
-          <Line>    communications and deceitful games</Line>
+          <Line>    all of the attributes, aspects and characteristics,</Line>
+          <Line>    interactions, communications and deceitful games</Line>
           <Line>        of the evil spirits.</Line>
         </p>
         <p class='spaced-small'>
