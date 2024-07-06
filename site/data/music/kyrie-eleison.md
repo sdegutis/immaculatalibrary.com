@@ -1,5 +1,5 @@
 ---
-title: Kyrie Eleison
+title: Kyrie Eleison (Greek)
 spotify: 3wQOrvL6pKUrV8vNCKJ3V7
 category: Gregorian Chant
 ---

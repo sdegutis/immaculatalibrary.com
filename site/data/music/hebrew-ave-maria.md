@@ -1,5 +1,5 @@
 ---
-title: Hebrew Ave Maria
+title: Ave Maria (Hebrew)
 youtube: https://www.youtube.com/watch?v=_lMVX2eDIfI
 category: Gregorian Chant
 ---
