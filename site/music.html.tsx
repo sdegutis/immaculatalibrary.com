@@ -20,12 +20,6 @@ export default <>
             (and singing or playing it!) is a powerful way to join these angels in
             praising our Lord and Redeemer, in a way that deeply touches the Father's heart.
           </p>
-          <p>
-            The works on ImmaculataLibrary.com seem to pair very well with the music
-            in <a href={playlist}>this Spotify playlist</a>. Although it contains secular
-            instrumental music, the style and tone of each piece has been selected for
-            having a quality and feeling that is very otherworldy, pensive, and uplifting.
-          </p>
         </Typography>
 
         <MusicSidebar />
