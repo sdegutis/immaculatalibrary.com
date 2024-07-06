@@ -122,7 +122,7 @@ function JoyfulMysteries() {
         'https://upload.wikimedia.org/wikipedia/commons/5/57/Jan_Steen_-_Child_Jesus_in_the_Temple.jpg',
         'https://upload.wikimedia.org/wikipedia/commons/1/18/Disputa_con_los_doctores_%28El_Veron%C3%A9s%29_grande.jpg',
         'https://upload.wikimedia.org/wikipedia/commons/5/51/Cima_da_Conegliano_Christ_among_the_doctors.jpg',
-        'https://en.wikipedia.org/wiki/The_Twelve-Year-Old_Jesus_in_the_Temple#/media/File:Der_zw%C3%B6lfj%C3%A4hrige_Jesus_im_Tempel.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/a/a5/Der_zw%C3%B6lfj%C3%A4hrige_Jesus_im_Tempel.jpg',
       ],
     }} />;
 }
@@ -136,7 +136,7 @@ function LuminousMysteries() {
         'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Peter_Paul_Rubens_-_Doopsel_van_Christus_%28Antwerp%29.jpg/2560px-Peter_Paul_Rubens_-_Doopsel_van_Christus_%28Antwerp%29.jpg',
         'https://upload.wikimedia.org/wikipedia/commons/4/47/Nicolas_Poussin_%28French_-_Saint_John_Baptizing_in_the_River_Jordan_-_Google_Art_Project.jpg',
         'https://upload.wikimedia.org/wikipedia/commons/4/47/Mark%C3%B3%2C_K%C3%A1roly_-_The_Baptism_of_Christ_in_the_River_Jordan_%281840-1%29.jpg',
-        'https://en.wikipedia.org/wiki/The_Baptism_of_Christ_%28Piero_della_Francesca%29#/media/File:Piero_della_Francesca_-_Baptism_of_Christ_-_WGA17595.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/5/5a/Piero_della_Francesca_-_Baptism_of_Christ_-_WGA17595.jpg',
         'https://upload.wikimedia.org/wikipedia/commons/2/26/Joachim_Patinir_-_The_Baptism_of_Christ_-_Google_Art_Project_2.jpg',
         'https://upload.wikimedia.org/wikipedia/commons/8/8e/The_Baptism_of_Christ_%28Verrocchio_%26_Leonardo%29.jpg',
         'https://upload.wikimedia.org/wikipedia/commons/5/57/Almeida_J%C3%BAnior_-_Batismo_de_Jesus%2C_1895.JPG',
@@ -155,7 +155,7 @@ function LuminousMysteries() {
         'https://upload.wikimedia.org/wikipedia/commons/1/11/Sankt_Matthaeus_Kirke_Copenhagen_altarpiece_detail1.jpg',
       ],
       'Transfiguration': [
-        'https://en.wikipedia.org/wiki/Transfiguration_of_Jesus#/media/File:Transfiguration_Raphael.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/5/51/Transfiguration_Raphael.jpg',
         'https://upload.wikimedia.org/wikipedia/commons/a/a5/The-Transfiguration-1480-xx-Giovanni-Bellini.JPG',
         'https://upload.wikimedia.org/wikipedia/commons/8/8a/Pietro_Perugino_cat52c.jpg',
         'https://upload.wikimedia.org/wikipedia/commons/d/d8/Titian_Transfiguration_c1560_SanSalvador.jpg',
