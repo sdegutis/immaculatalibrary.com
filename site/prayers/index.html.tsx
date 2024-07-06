@@ -1,9 +1,5 @@
 import { EmptyPage } from '../components/page.js';
 import { SiteHeader } from '../components/site-header.js';
-import gloriousList from './rosary/glorious/';
-import joyfulList from './rosary/joyful/';
-import luminousList from './rosary/luminous/';
-import sorrowfulList from './rosary/sorrowful/';
 
 const enum Day { SUN, MON, TUE, WED, THUR, FRI, SAT };
 
@@ -61,30 +57,10 @@ export default <>
           <HailMary />
           <HailMary />
           <GloryBe />
-          <Mystery name='Joyful' list={joyfulList} days={[Day.SAT, Day.MON]} mysteries={[
-            'The Annunciation',
-            'Visitation to Elizabeth',
-            'Nativity / Christmas',
-            'Presentation at the Temple',
-            'Finding at the Temple']} />
-          <Mystery name='Luminous' list={luminousList} days={[Day.THUR]} mysteries={[
-            'Baptism in the Jordan',
-            'Wedding Feast at Cana',
-            'Proclamation of the Kingdom',
-            'Transfiguration',
-            'Institution of the Eucharist']} />
-          <Mystery name='Sorrowful' list={sorrowfulList} days={[Day.TUE, Day.FRI]} mysteries={[
-            'Agony in the Garden',
-            'Scourging at the Pillar',
-            'Crowning with Thorns',
-            'Carrying of the Cross',
-            'Crucifixion']} />
-          <Mystery name='Glorious' list={gloriousList} days={[Day.WED, Day.SUN]} mysteries={[
-            'Resurrection',
-            'Ascension',
-            'Descent of the Holy Spirit',
-            'Assumption of Mary',
-            'Crowning of Mary as Queen of Heaven and Earth']} />
+          <JoyfulMysteries />
+          <LuminousMysteries />
+          <SorrowfulMysteries />
+          <GloriousMysteries />
           <HailHolyQueen />
           <RosaryPrayer />
           <SaintMichael />
@@ -96,20 +72,167 @@ export default <>
   </EmptyPage>
 </>;
 
-function Mystery(attrs: { name: string, list: FsFile[], mysteries: string[], days: Day[] }) {
+function JoyfulMysteries() {
+  return <Mystery
+    name='Joyful'
+    days={[Day.SAT, Day.MON]}
+    mysteries={{
+      'The Annunciation': [
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Annunciation_%28Leonardo%29.jpg/2560px-Annunciation_%28Leonardo%29.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/The_Annunciation%2C_Philadelphia_Museum_of_Art%2C_W1899-1-1-pma%2C_by_Henry_Ossawa_Tanner.jpg/2553px-The_Annunciation%2C_Philadelphia_Museum_of_Art%2C_W1899-1-1-pma%2C_by_Henry_Ossawa_Tanner.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/6/66/Peter_Paul_Rubens_-_Annunciation_-_WGA20189.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/5/5c/Titian_-_The_Annunciation_-_WGA22821.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/e/ea/John_William_Waterhouse_-_The_Annunciation.JPG',
+        'https://upload.wikimedia.org/wikipedia/commons/d/d6/Bartolom%C3%A9_Esteban_Perez_Murillo_023.jpg',
+      ],
+      'Visitation to Elizabeth': [
+        'https://upload.wikimedia.org/wikipedia/commons/e/e9/Mariotto_Albertinelli_-_Visitation_-_WGA0129.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/La_Visitation_avec_Marie-Jacobie_et_Marie-Salom%C3%A9_-_Domenico_Ghirlandaio_-_Mus%C3%A9e_du_Louvre_Peintures_INV_297_%3B_MR_240.jpg/1992px-La_Visitation_avec_Marie-Jacobie_et_Marie-Salom%C3%A9_-_Domenico_Ghirlandaio_-_Mus%C3%A9e_du_Louvre_Peintures_INV_297_%3B_MR_240.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/9/9e/Visitaci%C3%B3n_de_Rafael.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/7/74/Jacopo_Tintoretto_-_Visitation_-_WGA22645.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/f/f4/Jer%C3%B3nimo_Ezquerra_Visitation.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/9/94/Rubens%2C_La_Visitation.jpg',
+      ],
+      'Nativity / Christmas': [
+        'https://upload.wikimedia.org/wikipedia/commons/d/d1/Charles_Le_Brun.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/f/f8/Mystic_Nativity%2C_Sandro_Botticelli.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/0/05/Gerard_van_Honthorst_-_Adoration_of_the_Shepherds_%281622%29.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/5/50/The_Nativity_%28John_Singleton_Copley%29.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/a/a0/Federico_Barocci_-_The_Nativity_-_WGA01293.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/3/38/Gerard_van_Honthorst_001.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/6/63/The_Adoration_of_the_Shepherds%2C_El_Greco.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/8/82/Peter_Paul_Rubens_009.jpg',
+      ],
+      'Presentation at the Temple': [
+        'https://upload.wikimedia.org/wikipedia/commons/9/91/Simon_Vouet_-_Presentation_in_the_Temple_-_WGA25366.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Tintoretto_-_Presentation_at_the_Temple.jpg/1920px-Tintoretto_-_Presentation_at_the_Temple.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/e/e6/Presentation_of_Jesus_at_the_Temple_and_the_Baptism_of_Christ_by_Cleyn.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/4/44/Cornelis_de_Vos_-_Mysteries_of_the_Rosary%2C_Presentation_of_Jesus_at_the_temple.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Madonna_dell%27Orto_%28Venice%29_-_Presentation_at_the_temple_of_the_Virgin_%281552-1553%29_by_Tintoretto.jpg/2352px-Madonna_dell%27Orto_%28Venice%29_-_Presentation_at_the_temple_of_the_Virgin_%281552-1553%29_by_Tintoretto.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/4/4a/Rembrandt_Christ_and_the_Woman_Taken_in_Adultery.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/3/35/Willem_de_Poorter_-_Simeon%27s_Song_of_Praise.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/0/0e/Rembrandt_Presentation_in_the_Temple.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/5/59/Romanino%2C_presentazione_di_ges%C3%B9_al_tempio.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/1/19/Paolo_Veronese_-_Presentation_in_the_Temple_-_WGA24793.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/8/84/Presentation_of_Jesus_at_the_Temple_by_Fra_Angelico_%28San_Marco_Cell_10%29.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/0/0a/Fra_Bartolomeo_007.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/8/84/Ambrogio_Lorenzetti_-_The_Presentation_in_the_Temple_-_WGA13480.jpg',
+      ],
+      'Finding at the Temple': [
+        'https://upload.wikimedia.org/wikipedia/commons/5/57/Jan_Steen_-_Child_Jesus_in_the_Temple.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/1/18/Disputa_con_los_doctores_%28El_Veron%C3%A9s%29_grande.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/5/51/Cima_da_Conegliano_Christ_among_the_doctors.jpg',
+        'https://en.wikipedia.org/wiki/The_Twelve-Year-Old_Jesus_in_the_Temple#/media/File:Der_zw%C3%B6lfj%C3%A4hrige_Jesus_im_Tempel.jpg',
+      ],
+    }} />;
+}
+
+function LuminousMysteries() {
+  return <Mystery
+    name='Luminous'
+    days={[Day.THUR]}
+    mysteries={{
+      'Baptism in the Jordan': [
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Peter_Paul_Rubens_-_Doopsel_van_Christus_%28Antwerp%29.jpg/2560px-Peter_Paul_Rubens_-_Doopsel_van_Christus_%28Antwerp%29.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/4/47/Nicolas_Poussin_%28French_-_Saint_John_Baptizing_in_the_River_Jordan_-_Google_Art_Project.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/4/47/Mark%C3%B3%2C_K%C3%A1roly_-_The_Baptism_of_Christ_in_the_River_Jordan_%281840-1%29.jpg',
+        'https://en.wikipedia.org/wiki/The_Baptism_of_Christ_%28Piero_della_Francesca%29#/media/File:Piero_della_Francesca_-_Baptism_of_Christ_-_WGA17595.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/2/26/Joachim_Patinir_-_The_Baptism_of_Christ_-_Google_Art_Project_2.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/8/8e/The_Baptism_of_Christ_%28Verrocchio_%26_Leonardo%29.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/5/57/Almeida_J%C3%BAnior_-_Batismo_de_Jesus%2C_1895.JPG',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/The_Baptism_of_Christ_%28SM_1667%29.png/1854px-The_Baptism_of_Christ_%28SM_1667%29.png',
+      ],
+      'Wedding Feast at Cana': [
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Paolo_Veronese_008.jpg/2560px-Paolo_Veronese_008.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/7/7a/Jacopo_Tintoretto_-_Marriage_at_Cana_-_WGA22470.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/7/7f/Gerard_David_-_The_Marriage_at_Cana.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/0/08/Jan_Cossiers_-_The_wedding_at_Cana%2C_Jesus_blesses_the_water.jpg',
+      ],
+      'Proclamation of the Kingdom': [
+        'https://upload.wikimedia.org/wikipedia/commons/9/96/Bloch-SermonOnTheMount.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/5/5b/Sermon_on_the_Mount_by_I.Makarov.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/3/3e/Cosimo_Rosselli_Sermone_della_Montagna.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/1/11/Sankt_Matthaeus_Kirke_Copenhagen_altarpiece_detail1.jpg',
+      ],
+      'Transfiguration': [
+        'https://en.wikipedia.org/wiki/Transfiguration_of_Jesus#/media/File:Transfiguration_Raphael.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/a/a5/The-Transfiguration-1480-xx-Giovanni-Bellini.JPG',
+        'https://upload.wikimedia.org/wikipedia/commons/8/8a/Pietro_Perugino_cat52c.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/d/d8/Titian_Transfiguration_c1560_SanSalvador.jpg',
+      ],
+      'Institution of the Eucharist': [
+        'https://upload.wikimedia.org/wikipedia/commons/b/bc/%C3%9Altima_Cena_-_Juan_de_Juanes.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Leonardo_da_Vinci_%281452-1519%29_-_The_Last_Supper_%281495-1498%29.jpg/2560px-Leonardo_da_Vinci_%281452-1519%29_-_The_Last_Supper_%281495-1498%29.jpg',
+        'https://upload.wikimedia.org/wikipedia/en/6/60/BouveretLastSupper.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/7/79/Brooklyn_Museum_-_The_Last_Supper_Judas_Dipping_his_Hand_in_the_Dish_%28La_C%C3%A9ne._Judas_met_la_main_dans_le_plat%29_-_James_Tissot.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/4/46/Jacopo_Tintoretto_-_The_Last_Supper_-_WGA22649.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/e/e6/Valentin_de_Boulogne_-_The_Last_Supper.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/d/d2/Ecce_Agnus_Dei.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/8/8a/Adoration_du_Saint_Sacrement_%C3%A0_l%27Eglise_du_Sacr%C3%A9-Coeur_de_Monaco.jpg',
+      ],
+    }} />;
+}
+
+function SorrowfulMysteries() {
+  return <Mystery
+    name='Sorrowful'
+    days={[Day.TUE, Day.FRI]}
+    mysteries={{
+      'Agony in the Garden': [
+        'https://upload.wikimedia.org/wikipedia/commons/6/68/Christ_in_Gethsemane.jpg',
+      ],
+      'Scourging at the Pillar': [
+        'https://upload.wikimedia.org/wikipedia/commons/4/47/Flagellation-of-christ-_Rubens.jpg',
+      ],
+      'Crowning with Thorns': [
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Michelangelo_Merisi%2C_called_Caravaggio_-_The_Crowning_with_Thorns_-_Google_Art_Project.jpg/2560px-Michelangelo_Merisi%2C_called_Caravaggio_-_The_Crowning_with_Thorns_-_Google_Art_Project.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/d/de/Ecce_homo_by_Antonio_Ciseri_%281%29.jpg',
+      ],
+      'Carrying of the Cross': [
+        'https://upload.wikimedia.org/wikipedia/commons/b/bb/Cristo_abrazado_a_la_cruz_El_Greco.jpg',
+      ],
+      'Crucifixion': [
+        'https://upload.wikimedia.org/wikipedia/commons/e/ef/Crucifixion_by_Alonso_Cano_%281636-8%2C_Hermitage%29.jpg',
+      ],
+    }} />;
+}
+
+function GloriousMysteries() {
+  return <Mystery
+    name='Glorious'
+    days={[Day.WED, Day.SUN]}
+    mysteries={{
+      'Resurrection': [
+        'https://upload.wikimedia.org/wikipedia/commons/4/45/Luca_Giordano_-_Resurrection_-_WGA09020.jpg',
+      ],
+      'Ascension': [
+        'https://upload.wikimedia.org/wikipedia/commons/c/cf/Gustave_Dor%C3%A9_-_L%27Ascension.jpg',
+      ],
+      'Descent of the Holy Spirit': [
+        'https://upload.wikimedia.org/wikipedia/commons/3/3f/Jean_II_Restout_-_Pentecost_-_WGA19318.jpg',
+      ],
+      'Assumption of Mary': [
+        'https://upload.wikimedia.org/wikipedia/commons/9/9e/Tizian_041.jpg',
+      ],
+      'Crowning of Mary as Queen of Heaven and Earth': [
+        'https://upload.wikimedia.org/wikipedia/commons/b/b5/Diego_Vel%C3%A1zquez_-_Coronation_of_the_Virgin_-_Prado.jpg',
+      ],
+    }} />;
+}
+
+function Mystery(attrs: { name: string, mysteries: Record<string, string[]>, days: Day[] }) {
   const dayClasses = attrs.days.map(day => `show-today day-${day}`).join(' ');
   const labels = ['First', 'Second', 'Third', 'Fourth', 'Fifth'];
-  const mysteries = Object.values(Object.groupBy(attrs.list, f => f.path.match(/\/\d/)?.[0]!));
-  return <>{mysteries.map((mystery, i) =>
+  return <>{Object.entries(attrs.mysteries).map(([name, hrefs], i) =>
     <Panel>
-      {mystery!.map(file => <>
+      {hrefs.map(href => <>
         <div class={`half-grid highlightable-line mystery ${dayClasses}`}>
           <div class='centered'>
-            <img src={file.path} loading='lazy' />
+            <img src={href} loading='lazy' />
           </div>
           <div class='centered'>
             <h1>{labels[i]} {attrs.name} Mystery</h1>
-            <h2>{attrs.mysteries[i]}</h2>
+            <h2>{name}</h2>
           </div>
         </div>
       </>)}
