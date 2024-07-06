@@ -1,6 +1,6 @@
 ---
 title: The Angel Gabriel from Heaven Came
-youtube: https://www.youtube.com/watch?v=hfA-Mr0aVoo&t=1907s
+youtube: https://www.youtube.com/embed/hfA-Mr0aVoo?start=1907
 category: Christmas
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: We Three Kings
-youtube: https://www.youtube.com/watch?v=P19UtVOBOxo&t=3262s
+youtube: https://www.youtube.com/embed/P19UtVOBOxo?start=3262
 category: Christmas
 ---
 

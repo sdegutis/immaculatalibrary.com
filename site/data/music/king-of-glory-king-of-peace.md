@@ -1,6 +1,6 @@
 ---
 title: King of Glory, King of Peace
-youtube: https://www.youtube.com/watch?v=ze5fxkUcpbc&t=1959s
+youtube: https://www.youtube.com/embed/ze5fxkUcpbc?start=1959
 category: Christmas
 ---
 

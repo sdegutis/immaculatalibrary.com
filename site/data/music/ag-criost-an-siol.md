@@ -1,6 +1,6 @@
 ---
 title: Ag Críost an Síol
-youtube: https://www.youtube.com/watch?v=PbNbJUa2yGM&t=1253s
+youtube: https://www.youtube.com/embed/PbNbJUa2yGM?start=1253
 category: Purgatory
 ---
 

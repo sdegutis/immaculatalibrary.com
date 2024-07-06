@@ -1,6 +1,6 @@
 ---
 title: Silent Night
-youtube: https://www.youtube.com/watch?v=A1k5YTmxIVc&t=1166s
+youtube: https://www.youtube.com/embed/A1k5YTmxIVc?start=1166
 category: Christmas
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: O Holy Night
-youtube: https://www.youtube.com/watch?v=4GsZYlPrkXw&t=7745s
+youtube: https://www.youtube.com/embed/4GsZYlPrkXw?start=7745
 category: Christmas
 ---
 

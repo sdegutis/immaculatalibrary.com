@@ -1,6 +1,6 @@
 ---
 title: Puer natus in Bethlehem
-youtube: https://www.youtube.com/watch?v=A1k5YTmxIVc&t=2573s
+youtube: https://www.youtube.com/embed/A1k5YTmxIVc?start=2573
 category: Christmas
 ---
 

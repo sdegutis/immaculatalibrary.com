@@ -1,6 +1,6 @@
 ---
 title: Noel
-youtube: https://www.youtube.com/watch?v=wuIwAfHyPDw&t=4863s
+youtube: https://www.youtube.com/embed/wuIwAfHyPDw?start=4863
 category: Christmas
 ---
 

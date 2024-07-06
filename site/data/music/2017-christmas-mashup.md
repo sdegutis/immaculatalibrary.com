@@ -1,6 +1,6 @@
 ---
 title: 2017 Christmas Eve mashup
-youtube: https://www.youtube.com/watch?v=ze5fxkUcpbc&t=1462s
+youtube: https://www.youtube.com/embed/ze5fxkUcpbc?start=1462
 category: Christmas
 ---
 

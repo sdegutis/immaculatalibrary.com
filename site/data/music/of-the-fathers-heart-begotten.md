@@ -1,6 +1,6 @@
 ---
 title: Of the Father's Heart Begotten
-youtube: https://www.youtube.com/watch?v=wuIwAfHyPDw&t=5252s
+youtube: https://www.youtube.com/embed/wuIwAfHyPDw?start=5252
 category: Christmas
 ---
 

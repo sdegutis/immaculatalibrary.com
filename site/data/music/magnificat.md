@@ -1,6 +1,6 @@
 ---
 title: Mary's Magnificat
-youtube: https://www.youtube.com/watch?v=ze5fxkUcpbc&t=1100s
+youtube: https://www.youtube.com/embed/ze5fxkUcpbc?start=1100
 category: Christmas
 ---
 
