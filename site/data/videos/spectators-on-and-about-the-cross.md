@@ -1,6 +1,6 @@
 ---
 title: "Spectators On and About The Cross"
-youtube: "https://www.youtube.com/embed/9Th2VrBvI5c"
+youtube: "https://www.youtube.com/embed/4hB4-MsBPCY"
 author: Venerable Fulton Sheen
 desc: Fulton Sheen explains the three ways we respond to Jesus; includes the Catholic solution to the "problem of evil".
 sort: 4
