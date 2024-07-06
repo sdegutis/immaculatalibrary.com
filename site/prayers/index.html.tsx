@@ -84,6 +84,7 @@ function JoyfulMysteries() {
         'https://upload.wikimedia.org/wikipedia/commons/5/5c/Titian_-_The_Annunciation_-_WGA22821.jpg',
         'https://upload.wikimedia.org/wikipedia/commons/e/ea/John_William_Waterhouse_-_The_Annunciation.JPG',
         'https://upload.wikimedia.org/wikipedia/commons/d/d6/Bartolom%C3%A9_Esteban_Perez_Murillo_023.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/3/3a/Philippe_de_Champaigne_-_Annunciation_-_WGA04705.jpg',
       ],
       'Visitation to Elizabeth': [
         'https://upload.wikimedia.org/wikipedia/commons/e/e9/Mariotto_Albertinelli_-_Visitation_-_WGA0129.jpg',
@@ -153,6 +154,7 @@ function LuminousMysteries() {
         'https://upload.wikimedia.org/wikipedia/commons/5/5b/Sermon_on_the_Mount_by_I.Makarov.jpg',
         'https://upload.wikimedia.org/wikipedia/commons/3/3e/Cosimo_Rosselli_Sermone_della_Montagna.jpg',
         'https://upload.wikimedia.org/wikipedia/commons/1/11/Sankt_Matthaeus_Kirke_Copenhagen_altarpiece_detail1.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/3/33/Gebhard_Fugel_Krankenheilung_1885.jpg',
       ],
       'Transfiguration': [
         'https://upload.wikimedia.org/wikipedia/commons/5/51/Transfiguration_Raphael.jpg',
@@ -204,18 +206,45 @@ function GloriousMysteries() {
     mysteries={{
       'Resurrection': [
         'https://upload.wikimedia.org/wikipedia/commons/4/45/Luca_Giordano_-_Resurrection_-_WGA09020.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/9/98/Mantegna%2C_Andrea_-_La_R%C3%A9surrection_-_1457-1459.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/b/bf/No%C3%ABl_Coypel_-_Resurrection_of_Christ_%28large_version%29.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/7/7d/The_resurrection_day.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Correggio_Noli_Me_Tangere.jpg/800px-Correggio_Noli_Me_Tangere.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/9/95/Noli_me_tangere_-_William_Brassey_Hole.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Den_vantro_Thomas.jpg/929px-Den_vantro_Thomas.jpg',
       ],
       'Ascension': [
         'https://upload.wikimedia.org/wikipedia/commons/c/cf/Gustave_Dor%C3%A9_-_L%27Ascension.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/c/c3/Obereschach_Pfarrkirche_Fresko_Fugel_Christi_Himmelfahrt_crop.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/3/3c/Rembrandt_van_Rijn_192.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/0/0f/Dosso_Dossi_022.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/8/85/Jesus_ascending_to_heaven.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/0/0b/De_Grebber-God_Inviting_Christ_to_Sit_on_the_Throne_at_His_Right_Hand.jpg',
       ],
       'Descent of the Holy Spirit': [
         'https://upload.wikimedia.org/wikipedia/commons/3/3f/Jean_II_Restout_-_Pentecost_-_WGA19318.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/6/61/La_Descente_du_Saint-Esprit%2C_par_Jacques_Blanchard.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/5/5a/Titian_-_The_Descent_of_the_Holy_Ghost_-_WGA22768.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/e/e4/Anthony_van_Dyck_-_Pentecost_-_WGA07442.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/d/d6/Mildorfer%2C_Josef_Ignaz_-_Pentecost_-_1750s.jpg',
       ],
       'Assumption of Mary': [
         'https://upload.wikimedia.org/wikipedia/commons/9/9e/Tizian_041.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Rubens%2C_Mari%C3%A4_Himmelfahrt_%28Antwerpen%29.jpg/1382px-Rubens%2C_Mari%C3%A4_Himmelfahrt_%28Antwerpen%29.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/3/37/Lorenzo_Lotto_039.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/7/7f/Andrea_del_Sarto_-_Assumption_of_the_Virgin_-_WGA00400.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Annibale_Carracci_Assumption_of_the_Virgin.jpg/753px-Annibale_Carracci_Assumption_of_the_Virgin.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Asumption_of_the_Virgin-Guido_Reni-MBA_Lyon_A123-IMG_0329.jpg/1327px-Asumption_of_the_Virgin-Guido_Reni-MBA_Lyon_A123-IMG_0329.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Guercino_-_Assumption_of_Mary_-_Hermitage.jpg/2207px-Guercino_-_Assumption_of_Mary_-_Hermitage.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/9/9a/CORRADO_GIAQUINTO_MOLFETTA_1703_-_1766_NAPLES_ASSUMPTION_OF_THE_VIRGIN.jpg',
       ],
       'Crowning of Mary as Queen of Heaven and Earth': [
         'https://upload.wikimedia.org/wikipedia/commons/b/b5/Diego_Vel%C3%A1zquez_-_Coronation_of_the_Virgin_-_Prado.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/d/da/Peter_Paul_Rubens_079.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/c/c8/Fra_Angelico_038.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/8/83/Fra_Angelico_081.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/f/fd/Coronation_of_the_Virgin_-_Sittow.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/1/16/Botticelli%2C_incoronazione_della_vergine.jpg',
       ],
     }} />;
 }
