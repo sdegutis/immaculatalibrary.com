@@ -21,5 +21,14 @@ export const MusicSidebar: JSX.Component = (attrs, children) => <>
       </>)}
     </ul>
 
+    <h4>Accidentally Christian Music</h4>
+    <ul>
+      {allMusics.filter(s => s.data.category === 'Accidentally Christian').map(song => <>
+        <li>
+          <a href={`/music/${song.slug}.html`}>{song.data.title}</a>
+        </li>
+      </>)}
+    </ul>
+
   </div>
 </>;

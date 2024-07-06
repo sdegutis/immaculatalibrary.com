@@ -3,7 +3,8 @@ import { DataFile } from '../util/data-files.js';
 
 interface MusicFile {
   title: string;
-  youtube: string;
+  youtube?: string;
+  spotify?: string;
   category: string;
 }
 
