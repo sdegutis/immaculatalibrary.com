@@ -1,6 +1,7 @@
 import { allMusics } from '../model/musics.js';
 
 const categories = [
+  'Gregorian Chant',
   'Christmas',
   'Accidentally Christian',
   'Wordless Christian',

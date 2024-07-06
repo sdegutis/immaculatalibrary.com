@@ -1,7 +1,7 @@
 ---
 title: Hebrew Ave Maria
 youtube: https://www.tiktok.com/@katiadelcidr/video/7270193613819104554
-category: Christmas
+category: Gregorian Chant
 ---
 
 > Shalom Iach Miriam
