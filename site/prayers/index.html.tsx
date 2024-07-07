@@ -761,7 +761,7 @@ function Litany() {
 }
 
 function AngelMorning() {
-  return <Prayer img="./images/angel-morning.jpg">
+  return <Prayer img="https://upload.wikimedia.org/wikipedia/commons/4/4e/Guardian_Angel_1900.jpg">
     <h1>Guardian Angel Prayer</h1>
     <Line>Angel of God,</Line>
     <Line>    my Guardian dear</Line>
@@ -776,7 +776,7 @@ function AngelMorning() {
 }
 
 function AngelNight() {
-  return <Prayer img="./images/angel-night.jpg">
+  return <Prayer img="https://upload.wikimedia.org/wikipedia/commons/a/aa/Cortona_Guardian_Angel_01.jpg">
     <h1>Guardian Angel Prayer</h1>
     <Line>Angel of God,</Line>
     <Line>    my Guardian dear</Line>
@@ -791,7 +791,7 @@ function AngelNight() {
 }
 
 function OurFather() {
-  return <Prayer img="./images/jesus-sacred-heart.jpg">
+  return <Prayer img="https://upload.wikimedia.org/wikipedia/commons/e/ef/Crucifixion_by_Alonso_Cano_%281636-8%2C_Hermitage%29.jpg">
     <h1>Our Father</h1>
     <Line>Our Father</Line>
     <Line>    Who art in Heaven</Line>
@@ -809,7 +809,7 @@ function OurFather() {
 }
 
 function HailMary() {
-  return <Prayer img="./images/mary-angels.jpg">
+  return <Prayer img="https://upload.wikimedia.org/wikipedia/commons/c/c8/William-Adolphe_Bouguereau_%281825-1905%29_-_The_Madonna_of_the_Roses_%281903%29.jpg">
     <h1>Hail Mary</h1>
     <Line>Hail Mary</Line>
     <Line>    Full of Grace</Line>
@@ -824,7 +824,7 @@ function HailMary() {
 }
 
 function GloryBe() {
-  return <Prayer img="./images/holy-trinity.jpg">
+  return <Prayer img="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bartolom%C3%A9_Esteban_Murillo_-_The_Heavenly_and_Earthly_Trinities_-_1681-82.jpg/1411px-Bartolom%C3%A9_Esteban_Murillo_-_The_Heavenly_and_Earthly_Trinities_-_1681-82.jpg">
     <h1>Glory be</h1>
     <Line>Glory be</Line>
     <Line>    To the Father</Line>
@@ -840,7 +840,7 @@ function GloryBe() {
 }
 
 function PreciousBlood() {
-  return <Prayer img="./images/precious-blood.jpg">
+  return <Prayer img="https://upload.wikimedia.org/wikipedia/commons/b/b5/Divine_Mercy.jpeg">
     <h1>St. Gertrude Prayer</h1>
     <Line>Eternal Father</Line>
     <Line>    I offer Thee</Line>
@@ -860,7 +860,7 @@ function PreciousBlood() {
 }
 
 function SaintMichael() {
-  return <Prayer img="./images/michael.jpg">
+  return <Prayer img="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Guido_Reni_031.jpg/684px-Guido_Reni_031.jpg">
     <h1>St. Michael Prayer</h1>
     <Line>St. Michael the Archangel</Line>
     <Line>    Defend us in battle</Line>
@@ -881,7 +881,7 @@ function SaintMichael() {
 }
 
 function ApostlesCreed() {
-  return <Prayer img="./images/apostles-creed.jpg">
+  return <Prayer img="https://upload.wikimedia.org/wikipedia/commons/6/61/Disputa_del_Sacramento_%28Rafael%29.jpg">
     <h1>Apostle's Creed</h1>
     <Line>I believe in God</Line>
     <Line>  The Father Almighty</Line>
@@ -908,7 +908,7 @@ function ApostlesCreed() {
 }
 
 function HailHolyQueen() {
-  return <Prayer img="./images/hail-holy-queen.jpg">
+  return <Prayer img="https://upload.wikimedia.org/wikipedia/commons/b/b5/Diego_Vel%C3%A1zquez_-_Coronation_of_the_Virgin_-_Prado.jpg">
     <h1>Hail Holy Queen</h1>
     <Line>Hail Holy Queen</Line>
     <Line>  Mother of mercy</Line>
@@ -928,7 +928,7 @@ function HailHolyQueen() {
 }
 
 function RosaryPrayer() {
-  return <Prayer img="./images/hail-holy-queen.jpg">
+  return <Prayer img="https://upload.wikimedia.org/wikipedia/commons/e/e8/2017-03_Brescia_Mattes_Pana_%28111%29.JPG">
     <h1>Rosary End Prayer</h1>
     <Line>Oh God, Whose Only Begotten Son</Line>
     <Line>  By his Life, Death, and Resurrection</Line>
@@ -945,7 +945,7 @@ function RosaryPrayer() {
 }
 
 function Memorare() {
-  return <Prayer img='./images/memorare-mary.jpg'>
+  return <Prayer img='https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Inmaculada_Concepci%C3%B3n_%28Tiepolo%29.jpg/539px-Inmaculada_Concepci%C3%B3n_%28Tiepolo%29.jpg'>
     <h1>Memorare</h1>
     <Line>Remember O Most Gracious Virgin Mary</Line>
     <Line>    That never was it known</Line>
@@ -970,7 +970,7 @@ function Memorare() {
 }
 
 function HolyFamilyPrayer() {
-  return <Prayer img='../sidebar/pic.jpg'>
+  return <Prayer img='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bartolom%C3%A9_Esteban_Murillo_-_The_Heavenly_and_Earthly_Trinities_-_1681-82.jpg/1411px-Bartolom%C3%A9_Esteban_Murillo_-_The_Heavenly_and_Earthly_Trinities_-_1681-82.jpg'>
     <Line>Holy Family</Line>
     <Line>    Save our family</Line>
     <Line>        Amen</Line>
