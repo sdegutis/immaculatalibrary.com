@@ -7,12 +7,15 @@ import { EmptyPage } from "./components/page.js";
 import { QuickLinks } from "./components/quicklinks.js";
 import { SiteFooter } from "./components/site-footer.js";
 import { SiteHeader } from "./components/site-header.js";
+import { VerifyHuman } from "./components/verifyhuman.js";
 import { Markdown } from "./fathers.html.js";
 import { allArticles } from "./model/articles.js";
 import { allBooks } from "./model/books.js";
 
 export default <>
   <EmptyPage>
+
+    <VerifyHuman />
 
     <main>
 
