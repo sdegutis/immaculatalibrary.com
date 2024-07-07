@@ -87,10 +87,23 @@ matchingItems.onChange(() => {
   randomSnippetLink.toggleAttribute('disabled', matchingItems.val.length === 0);
 });
 
+const searchInput = <input style='width: 100%' placeholder='Search' autofocus type="text" oninput={updateFromSearchInput} /> as HTMLInputElement;
+
+if (window.location.hash) {
+  searchInput.value = decodeURIComponent(window.location.hash.slice(1));
+  updateFromSearchInput();
+}
+
+function updateFromSearchInput() {
+  const term = searchInput.value.trim().toLowerCase();
+  searchTerm.set(term);
+  window.location.hash = '#' + encodeURIComponent(term);
+}
+
 document.querySelector('.filters-container')!.replaceChildren(<>
-  <p><input style='width: 100%' placeholder='Search' autofocus type="text" oninput={function (this: HTMLInputElement) {
-    searchTerm.set(this.value.trim().toLowerCase());
-  }} /></p>
+  <p>
+    {searchInput}
+  </p>
   <div class='snippets-filters'>
 
     <span class='label'>tag</span>
