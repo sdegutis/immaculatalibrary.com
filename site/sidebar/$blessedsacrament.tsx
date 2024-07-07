@@ -6,7 +6,7 @@ const adorationLinks = [
   return <iframe src={href} /> as HTMLIFrameElement;
 });
 
-const blessedSacramentImage = <img src="./blessedsacrament.png" />;
+const blessedSacramentImage = <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Adoration_du_Saint_Sacrement_%C3%A0_l%27Eglise_du_Sacr%C3%A9-Coeur_de_Monaco.jpg" />;
 
 export function BlessedSacrament() {
   const target = <div id='top2'>
