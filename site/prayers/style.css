@@ -200,7 +200,7 @@ img {
   position: relative;
 }
 
-.tab-links a.active {
+h1.tab-links a.active {
   border-bottom-color: transparent !important;
 }
 
