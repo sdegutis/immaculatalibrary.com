@@ -4,7 +4,7 @@ const categories = [
   'Gregorian Chant',
   'Christmas',
   'Accidentally Christian',
-  'Wordless Christian',
+  // 'Wordless Christian',
   'Purgatory',
 ];
 
