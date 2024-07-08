@@ -9,7 +9,7 @@ const links = {
   Prayers: { href: '/prayers/', title: 'Prayers' },
   Articles: { href: '/articles.html', title: 'Articles' },
   Resources: { href: '/resources.html', title: 'Resources' },
-};
+} as const;
 
 export type NavPage = keyof typeof links;
 
@@ -17,7 +17,7 @@ export const Navlinks = (attrs: { page: NavPage }) => {
   return <>
     <Column>
       <div style='flex-wrap:wrap; margin:2em 0' class='tab-links'>
-        {Object.entries(links).map(([name, link]) => (
+        {Object.entries(links).filter(([, link]) => link.title !== 'Articles').map(([name, link]) => (
           <a href={link.href} class={attrs.page === name ? 'active' : ''}>{link.title}</a>
         )).join(' ')}
       </div>

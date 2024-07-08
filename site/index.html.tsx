@@ -9,7 +9,6 @@ import { SiteFooter } from "./components/site-footer.js";
 import { SiteHeader } from "./components/site-header.js";
 import { VerifyHuman } from "./components/verifyhuman.js";
 import { Markdown } from "./fathers.html.js";
-import { allArticles } from "./model/articles.js";
 import { allBooks } from "./model/books.js";
 
 export default <>
@@ -62,17 +61,6 @@ export default <>
             <FadeIn>
               <h2>Latest book snippets</h2>
               <LatestSnippetsArea />
-            </FadeIn>
-
-            <FadeIn>
-              <h2>Latest articles</h2>
-              <ul>
-                {allArticles.slice(0, 12).map(article => <>
-                  <li>
-                    {article.mins} min &bull; <a href={article.route}>{article.data.title}</a>
-                  </li>
-                </>)}
-              </ul>
             </FadeIn>
 
             <FadeIn>
