@@ -31,7 +31,7 @@ const pathUpdated = (filePath: string) => {
       server.handlers = artifacts?.handlers;
 
       updatedPaths.clear();
-      server.events.emit('rebuild');
+      server.rebuilt();
     }
     catch (e) {
       console.error(e);

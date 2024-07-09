@@ -1,4 +1,3 @@
-import { EventEmitter } from "events";
 import * as http from "http";
 import * as path from "path/posix";
 
@@ -7,7 +6,7 @@ export class Server {
   files: Map<string, Buffer | string> | undefined;
   handlers?: Map<string, (body: string) => string> | undefined;
 
-  events = new EventEmitter();
+  rebuilt = () => { };
 
   startServer(port: number) {
     const server = http.createServer((req, res) => {
@@ -22,12 +21,13 @@ export class Server {
           });
           req.on('end', () => {
             const body = Buffer.concat(data).toString('utf8');
-            const redirect = handler(body);
-            this.events.once('rebuild', () => {
+            let redirect: string;
+            this.rebuilt = () => {
               res.statusCode = 302;
               res.setHeader('Location', redirect);
               res.end();
-            });
+            };
+            redirect = handler(body);
           });
         }
         return;
