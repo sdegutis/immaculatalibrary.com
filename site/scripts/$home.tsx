@@ -47,7 +47,7 @@ async function reflectUrl(slug: string) {
 
   const renderedBody = markdown.render(snippet.content);
 
-  const PREVIEW_LINES = 30;
+  const PREVIEW_LINES = 15;
   const AVERAGE_LINE_LENGTH = 50;
   let previewMarkdown;
   const previewSplitSpot = snippet.content.indexOf(' ', PREVIEW_LINES * AVERAGE_LINE_LENGTH);

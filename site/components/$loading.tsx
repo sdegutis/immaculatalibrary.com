@@ -28,8 +28,6 @@ export const HomeLoading = () => <>
     <LoadingParagraph lines={7} fullWidth />
     <LoadingParagraph lines={7} fullWidth />
     <LoadingParagraph lines={7} fullWidth />
-    <LoadingParagraph lines={7} fullWidth />
-    <LoadingParagraph lines={7} fullWidth />
   </blockquote>
   <LoadingLine width="7em" />
 </>;
