@@ -20,13 +20,13 @@ export class Server {
             data.push(chunk);
           });
           req.on('end', () => {
-            const body = Buffer.concat(data).toString('utf8');
             let redirect: string;
             this.rebuilt = () => {
               res.statusCode = 302;
               res.setHeader('Location', redirect);
               res.end();
             };
+            const body = Buffer.concat(data).toString('utf8');
             redirect = handler(body);
           });
         }
