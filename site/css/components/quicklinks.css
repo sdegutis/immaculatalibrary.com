@@ -33,11 +33,13 @@
   color: white;
   font-weight: bold;
   text-decoration: none;
-  transition: 75ms ease-in transform;
+  transition: 75ms ease-in transform, 75ms ease-in filter;
+  filter: saturate(0.5) brightness(0.5);
 }
 
 .quicklinks a.link:hover {
   transform: scale(1.15);
+  filter: unset;
 }
 
 .quicklinks a.link:hover {
