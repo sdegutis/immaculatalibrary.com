@@ -19,7 +19,7 @@ sortOrder: 42
 >
 > This it was which led St. Augustine to say that in rewarding our merits God but crowns His own gifts.
 >
-> The holy patriarch Joseph, not content with giving to his brethren the corn which they came to purchase, ordered also that the money which they paid for it should, be secretly returned to them. God treats His elect with still greater liberality. He not only gives them eternal life, but furnishes them the grace and virtue to attain it.
+> The holy patriarch Joseph, not content with giving to his brethren the corn which they came to purchase, ordered also that the money which they paid for it should be secretly returned to them. God treats His elect with still greater liberality. He not only gives them eternal life, but furnishes them the grace and virtue to attain it.
 >
 > “We adore Him,” says Eusebius Emissenus, “that He may be merciful to us, but He has already been merciful to us in giving us grace to adore Him.”
 >
