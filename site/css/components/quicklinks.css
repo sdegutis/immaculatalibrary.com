@@ -35,7 +35,7 @@
   text-decoration: none;
   transition: 75ms ease-in transform, 75ms ease-in filter;
   filter: saturate(0.5) brightness(0.5);
-
+  border-radius: 7px;
   position: relative;
 }
 
