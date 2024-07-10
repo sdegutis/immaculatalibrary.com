@@ -1,6 +1,5 @@
 ---
 title: The 13th Day
-shortTitle: The 13th Day
 year: '2009'
 sortOrder: 8
 ---

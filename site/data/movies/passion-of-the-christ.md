@@ -1,6 +1,5 @@
 ---
 title: Passion of the Christ
-shortTitle: Passion of the Christ
 year: '2004'
 sortOrder: 1
 ---

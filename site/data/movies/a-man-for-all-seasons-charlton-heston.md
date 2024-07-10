@@ -1,6 +1,5 @@
 ---
 title: A Man For All Seasons
-shortTitle: A Man For All Seasons (1988)
 year: '1988'
 sortOrder: 3
 ---

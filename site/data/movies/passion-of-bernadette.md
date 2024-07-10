@@ -1,6 +1,5 @@
 ---
 title: Passion of Bernadette
-shortTitle: Passion of Bernadette
 year: '1990'
 sortOrder: 20
 ---

@@ -4,7 +4,6 @@ import { sortBy } from '../util/helpers.js';
 
 interface MovieFile {
   title: string;
-  shortTitle: string;
   subtitle: string | undefined;
   year: string;
   sortOrder: number;

@@ -1,6 +1,5 @@
 ---
 title: Miracle of Saint Therese
-shortTitle: Miracle of Saint Therese
 year: '1959'
 sortOrder: 16
 ---

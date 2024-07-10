@@ -1,6 +1,5 @@
 ---
 title: The Passion of Joan of Arc
-shortTitle: The Passion of Joan of Arc
 year: '1928'
 sortOrder: 18
 ---

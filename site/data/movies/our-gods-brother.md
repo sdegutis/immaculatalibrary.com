@@ -1,6 +1,5 @@
 ---
 title: Our God’s Brother
-shortTitle: Our God’s Brother
 subtitle: The Story of St. Albert Chmielowski
 year: '1997'
 sortOrder: 6

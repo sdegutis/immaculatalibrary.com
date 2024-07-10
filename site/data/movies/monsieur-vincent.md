@@ -1,6 +1,5 @@
 ---
 title: Monsieur Vincent
-shortTitle: Monsieur Vincent
 year: '1947'
 sortOrder: 15
 ---

@@ -1,6 +1,5 @@
 ---
 title: Bernadette
-shortTitle: Bernadette
 year: '1988'
 sortOrder: 9
 ---

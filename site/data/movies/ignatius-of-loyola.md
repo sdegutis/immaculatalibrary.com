@@ -1,6 +1,5 @@
 ---
 title: Ignatius of Loyola
-shortTitle: Ignatius of Loyola
 year: '2016'
 sortOrder: 5
 ---
