@@ -15,7 +15,7 @@ tags:
 sortOrder: 42
 ---
 
-> It is to the Holy Ghost that we are indebted for all our progress in wirtue. It is He who preserves us from evil and maintains us in good. It is He who is the principle of our perseverance, and who finally crowns us in Heaven.
+> It is to the Holy Ghost that we are indebted for all our progress in virtue. It is He who preserves us from evil and maintains us in good. It is He who is the principle of our perseverance, and who finally crowns us in Heaven.
 >
 > This it was which led St. Augustine to say that in rewarding our merits God but crowns His own gifts.
 >
