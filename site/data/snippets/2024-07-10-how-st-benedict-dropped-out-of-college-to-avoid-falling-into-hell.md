@@ -16,7 +16,7 @@ tags:
 > 
 > --- ✠ ---
 > 
-> There was (in our time) a man most venerable for the holiness of his life, named Benedict, and whom this appellation suited exceedingly weH; for he was *blessed* of God and abundantly endued with His graces.
+> There was (in our time) a man most venerable for the holiness of his life, named Benedict, and whom this appellation suited exceedingly well; for he was *blessed* of God and abundantly endued with His graces.
 >
 > From his earliest youth he possessed the heart and wisdom of old age. For even then, more sedate in his manners than is usual at that period of life, he followed not the allurements of sensuality, gave not way to pleasure, and permitted himself no worldly enjoyment.
 >
