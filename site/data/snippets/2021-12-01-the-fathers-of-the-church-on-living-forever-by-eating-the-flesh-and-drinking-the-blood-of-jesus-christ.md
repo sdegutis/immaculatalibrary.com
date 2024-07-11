@@ -32,7 +32,7 @@ bookSlug: catena-aurea
 > 
 > **Aug.** As for those, as indeed there are many, who either eat that flesh and drink that blood hypocritically, or, who having eaten, become apostates, do they dwell in Christ, and Christ in them? Nay, but there is a certain mode of eating that flesh, and drinking that blood, in the which he that eateth and drinketh, dwelleth in Christ, and Christ in him.
 > 
-> **Aug.** That is to say, such an one eateth the body and drinketh the blood of Christnot in the sacramental sense, but in reality.
+> **Aug.** That is to say, such an one eateth the body and drinketh the blood of Christ not in the sacramental sense, but in reality.
 > 
 > **Chrys.** And because I live, it is manifest that he will live also: *As the living Father hath sent Me, and I live by the Father, even so he that eateth Me, even he shall live by Me.* As if He said, As the Father liveth, so do I live; adding, lest you should think Him unbegotten, *By the Father*, meaning that He has His source in the Father. *He that eateth Me, even he shall live by me*; the life here meant is not life simply, but the justified life: for even unbelievers live, who never eat of that flesh at all. Nor is it of the general resurrection He speaks, (for all will rise again,) but of the resurrection to glory, and reward.
 > 

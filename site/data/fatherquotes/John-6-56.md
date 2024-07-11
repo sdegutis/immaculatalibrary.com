@@ -10,4 +10,4 @@ gospelQuote: He that eateth my flesh, and drinketh my blood, dwelleth in me, and
 > 
 > **Aug.** As for those, as indeed there are many, who either eat that flesh and drink that blood hypocritically, or, who having eaten, become apostates, do they dwell in Christ, and Christ in them? Nay, but there is a certain mode of eating that flesh, and drinking that blood, in the which he that eateth and drinketh, dwelleth in Christ, and Christ in him.
 > 
-> **Aug.** That is to say, such an one eateth the body and drinketh the blood of Christnot in the sacramental sense, but in reality.
+> **Aug.** That is to say, such an one eateth the body and drinketh the blood of Christ not in the sacramental sense, but in reality.
