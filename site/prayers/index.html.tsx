@@ -296,6 +296,7 @@ function GloriousMysteries() {
         'https://upload.wikimedia.org/wikipedia/commons/9/9a/CORRADO_GIAQUINTO_MOLFETTA_1703_-_1766_NAPLES_ASSUMPTION_OF_THE_VIRGIN.jpg',
       ],
       'Crowning of Mary as Queen of Heaven and Earth': [
+        'https://catholicharboroffaithandmorals.com/Queen%20of%20Angels.jpg',
         'https://upload.wikimedia.org/wikipedia/commons/b/b5/Diego_Vel%C3%A1zquez_-_Coronation_of_the_Virgin_-_Prado.jpg',
         'https://upload.wikimedia.org/wikipedia/commons/d/da/Peter_Paul_Rubens_079.jpg',
         'https://upload.wikimedia.org/wikipedia/commons/c/c8/Fra_Angelico_038.jpg',
