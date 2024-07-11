@@ -20,11 +20,13 @@ document.getElementById('root')!.append(<>
 function FeastDay() {
   const feastDayEl = <div id="feastday">Saint of the Day</div> as HTMLDivElement;
 
-  // Feast day
   const calendar = (window as any).Romcal.Calendar.calendarFor({ country: 'unitedStates' });
   function updateFeastDay() {
-    const today = new Date().toISOString().split('T')[0];
-    const feastDay = calendar.find((day: any) => day.moment.split('T')[0] === today);
+    const ostensibleDate = new Date();
+    const tzOffset = ostensibleDate.getTimezoneOffset() * 60_000;
+    const localDate = new Date(ostensibleDate.getTime() - tzOffset);
+    const yyyymmdd = localDate.toISOString().split('T')[0];
+    const feastDay = calendar.find((day: any) => day.moment.split('T')[0] === yyyymmdd);
     feastDayEl.innerText = feastDay.name;
   }
   updateFeastDay();
