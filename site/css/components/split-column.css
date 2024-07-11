@@ -5,7 +5,7 @@
 
 @media (min-width: 600px) {
   .split-page {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 380px 1fr;
     gap: 3em;
   }
 }

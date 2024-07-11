@@ -38,7 +38,7 @@ export default allSnippets.map(snippet => {
       <link rel="stylesheet" href='/css/page/snippet.css' />
 
       <Spaced>
-        <SplitColumn>
+        <SplitColumn wide>
           <Typography>
 
             <h2>{snippet.renderedTitle}</h2>
@@ -93,10 +93,15 @@ export default allSnippets.map(snippet => {
 
             <PrevNextLinks snippet={snippet} open />
 
+            <Spaced>
+              <h3>Latest book snippets</h3>
+              <LatestSnippetsArea />
+            </Spaced>
+
           </Typography>
+
           <div>
-            <h3>Latest book snippets</h3>
-            <LatestSnippetsArea />
+            <iframe loading='lazy' src={snippet.archiveLink} style='width:100%; height: 100%' />
           </div>
 
         </SplitColumn>

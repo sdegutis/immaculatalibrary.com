@@ -11,17 +11,17 @@ export const CenteredColumn: JSX.Component = (attrs, children) => <>
   </Column>
 </>;
 
-export const SplitColumn: JSX.Component = (attrs, children) => <>
+export const SplitColumn: JSX.Component<{ wide?: boolean }> = (attrs, children) => <>
   <link rel="stylesheet" href='/css/components/split-column.css' />
-  <Column>
-    <section class='split-page'>
+  <Column wide={attrs.wide ?? false}>
+    <section class={`split-page ${attrs.wide ? 'wide' : ''}`}>
       {children}
     </section>
   </Column>
 </>;
 
-export const Column: JSX.Component = (attrs, children) => <>
-  <div style='width:90%; max-width: 800px; margin: 0 auto'>
+export const Column: JSX.Component<{ wide?: boolean }> = (attrs, children) => <>
+  <div style={`width:90%; max-width: ${attrs.wide ? '1000px' : '800px'}; margin: 0 auto`}>
     {children}
   </div>
 </>;
