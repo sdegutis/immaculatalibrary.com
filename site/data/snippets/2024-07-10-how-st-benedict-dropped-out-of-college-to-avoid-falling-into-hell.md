@@ -14,7 +14,7 @@ tags:
 > 
 > *From the second book of the Dialogues of St. Gregory the Great, Supreme Pontiff.*
 > 
-> --&malt; ---
+> --- ✠ ---
 > 
 > There was (in our time) a man most venerable for the holiness of his life, named Benedict, and whom this appellation suited exceedingly weH; for he was *blessed* of God and abundantly endued with His graces.
 >
