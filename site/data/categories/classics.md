@@ -26,6 +26,7 @@ books:
   - visits-to-the-most-holy-sacrament
   - way-of-perfection-by-st-teresa-of-avila
   - commentary-on-the-gospel-of-john
+  - the-life-of-saint-benedict
 sortOrder: 1
 ---
 
