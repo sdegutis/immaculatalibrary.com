@@ -46,7 +46,7 @@ bookSlug: catena-aurea
 > 
 > If, however, we understand the words, *I live by the Father*, in the sense of those below, *My Father is greater than I*, then it is as if He said, That I live by the Father, i. e. refer my life to Him, as my superior, my humiliation in my incarnation is the cause; but He who lives by Me, lives by Me by virtue of partaking of My flesh.
 > 
-> **Hilary.** Of the truth then of the body and blood of Christ, no room for doubting remain : for, by the declaration of our Lord Himself, and by the teaching of our own faith, the flesh is really flesh, and the blood really blood.
+> **Hilary.** Of the truth then of the body and blood of Christ, no room for doubting remains: for, by the declaration of our Lord Himself, and by the teaching of our own faith, the flesh is really flesh, and the blood really blood.
 > 
 > This then is our principle of life. While we are in the flesh, Christ dwelleth in us by His flesh. And we shall live by Him, according as He liveth. If then we live naturally by partaking of Him according to the flesh, He also liveth naturally by the indwelling of the Father according to the Spirit. His birth did not give Him an alien or different nature from the Father.
 > 
