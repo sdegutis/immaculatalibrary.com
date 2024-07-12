@@ -335,9 +335,9 @@ function Mystery(attrs: { name: string, mysteries: Record<string, Mystery[]>, da
             <div class='centered'>
               <h1>{labels[i]} {attrs.name} Mystery</h1>
               <h2>{name}</h2>
-              {data.author &&
+              {/* {data.author &&
                 <h3>({data.author}, {data.year})</h3>
-              }
+              } */}
             </div>
           </div>
         </>;
