@@ -19,7 +19,7 @@ tags:
 sortOrder: 56
 ---
 
-> Unhappy tongues which henceforth utter only blasphemies! Unhappy ears to be forever filled with sighs and lamentations! Unhappy eyes which will never gaze upon anything but misery! Unhappy flesh consumed in eternal flames!
+> Unhappy tongues which will henceforth utter only blasphemies! Unhappy ears to be forever filled with sighs and lamentations! Unhappy eyes which will never gaze upon anything but misery! Unhappy flesh consumed in eternal flames!
 >
 > Who can tell the bitter remorse of the sinner who has spent his life in pursuit of new pleasures and new amusements? Oh! how fleeting were the joys that brought such a series of woes!
 >
