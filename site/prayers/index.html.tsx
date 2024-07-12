@@ -181,7 +181,7 @@ function SorrowfulMysteries() {
     days={[Day.TUE, Day.FRI]}
     mysteries={{
       'Agony in the Garden': [
-        'https://upload.wikimedia.org/wikipedia/commons/8/85/%27Christ_in_Gethsemane%27_by_Carl_Heinrich_Bloch%2C_1880.jpg',
+        { image: 'https://upload.wikimedia.org/wikipedia/commons/8/85/%27Christ_in_Gethsemane%27_by_Carl_Heinrich_Bloch%2C_1880.jpg', author: 'Carl Bloch', year: '1880' },
         'https://upload.wikimedia.org/wikipedia/commons/c/c4/Agony_in_the_Garden_by_Frans_Schwartz%2C_1898.jpg',
         'https://upload.wikimedia.org/wikipedia/commons/5/53/Gethsemane_Carl_Bloch.jpg',
         'https://upload.wikimedia.org/wikipedia/commons/6/68/Christ_in_Gethsemane.jpg',
@@ -307,22 +307,41 @@ function GloriousMysteries() {
     }} />;
 }
 
-function Mystery(attrs: { name: string, mysteries: Record<string, string[]>, days: Day[] }) {
+type MysteryData = {
+  image: string;
+  author: string;
+  year: string;
+};
+
+type Mystery = string | MysteryData;
+
+function Mystery(attrs: { name: string, mysteries: Record<string, Mystery[]>, days: Day[] }) {
   const dayClasses = attrs.days.map(day => `show-today day-${day}`).join(' ');
   const labels = ['First', 'Second', 'Third', 'Fourth', 'Fifth'];
   return <>{Object.entries(attrs.mysteries).map(([name, hrefs], i) =>
     <Panel>
-      {hrefs.map(href => <>
-        <div class={`half-grid highlightable-line mystery ${dayClasses}`}>
-          <div class='centered'>
-            <img src={href} loading='lazy' />
+      {hrefs.map(href => {
+        const data: MysteryData = typeof href === 'string' ? {
+          author: '',
+          year: '',
+          image: href,
+        } : href;
+
+        return <>
+          <div class={`half-grid highlightable-line mystery ${dayClasses}`}>
+            <div class='centered'>
+              <img src={data.image} loading='lazy' />
+            </div>
+            <div class='centered'>
+              <h1>{labels[i]} {attrs.name} Mystery</h1>
+              <h2>{name}</h2>
+              {data.author &&
+                <h3>({data.author}, {data.year})</h3>
+              }
+            </div>
           </div>
-          <div class='centered'>
-            <h1>{labels[i]} {attrs.name} Mystery</h1>
-            <h2>{name}</h2>
-          </div>
-        </div>
-      </>)}
+        </>;
+      })}
     </Panel>
   )}</>;
 }
