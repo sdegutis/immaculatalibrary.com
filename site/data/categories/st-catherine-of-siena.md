@@ -1,6 +1,7 @@
 ---
 title: St. Catherine of Siena
 shortTitle: Catherine of Siena
+saint: true
 books:
   - life-of-st-catherine-of-siena
   - the-dialogue-of-st-catherine-of-siena

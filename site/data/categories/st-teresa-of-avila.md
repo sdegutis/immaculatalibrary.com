@@ -1,6 +1,7 @@
 ---
 title: St. Teresa of Avila
 shortTitle: Teresa of Avila
+saint: true
 books:
   - interior-castle
   - life-of-st-teresa-of-avila

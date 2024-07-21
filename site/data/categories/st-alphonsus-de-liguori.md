@@ -1,6 +1,7 @@
 ---
 title: St. Alphonsus de Liguori
 shortTitle: Alphonsus de Liguori
+saint: true
 books:
   - preparation-for-death-by-st-alphonsus-de-liguori
   - >-

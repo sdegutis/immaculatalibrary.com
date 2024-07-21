@@ -1,6 +1,7 @@
 ---
 title: St. Thomas More
 shortTitle: Thomas More
+saint: true
 books:
   - four-last-things-by-st-thomas-more
   - life-and-writings-of-sir-thomas-more

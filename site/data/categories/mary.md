@@ -1,6 +1,7 @@
 ---
 title: The Blessed Virgin Mary
 shortTitle: Mary
+saint: true
 books:
   - holy-mary-of-guadalupe
   - devotion-to-the-blessed-virgin

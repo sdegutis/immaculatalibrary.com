@@ -6,6 +6,7 @@ import * as relations from './relations.js';
 
 interface CategoryFile {
   title: string;
+  saint?: true;
   shortTitle: string;
   books: string[];
   sortOrder: number;

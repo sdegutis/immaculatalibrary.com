@@ -1,6 +1,7 @@
 ---
 title: St. Joseph
 shortTitle: Joseph
+saint: true
 books:
   - saint-joseph-of-jesus-and-mary
   - st-joseph-life-his-virtues-his-privileges-his-power

@@ -1,6 +1,7 @@
 ---
 title: St. Francis de Sales
 shortTitle: Francis de Sales
+saint: true
 books:
   - catholic-controversy
   - introduction-to-the-devout-life

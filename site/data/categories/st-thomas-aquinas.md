@@ -1,6 +1,7 @@
 ---
 title: St. Thomas Aquinas
 shortTitle: Thomas Aquinas
+saint: true
 books:
   - catechism-of-the-summa-theologica
   - catena-aurea

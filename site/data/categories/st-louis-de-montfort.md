@@ -1,6 +1,7 @@
 ---
 title: St. Louis de Montfort
 shortTitle: Louis de Montfort
+saint: true
 books:
   - defense-of-true-devotion-to-mary
   - the-secret-of-mary

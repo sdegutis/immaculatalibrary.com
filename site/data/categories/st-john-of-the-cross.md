@@ -1,6 +1,7 @@
 ---
 title: St. John of the Cross
 shortTitle: John of the Cross
+saint: true
 books:
   - ascent-of-mount-carmel
   - dark-night-of-the-soul

@@ -1,9 +1,11 @@
 import { allCategories } from '../model/categories.js';
 import { featuredBooks } from '../model/featured.js';
 import { allMovies } from '../model/movies.js';
-import { Typography } from './$typography.js';
 import { Column } from './column.js';
 import { FadeIn } from './fadein.js';
+
+const ofSaints = allCategories.filter(c => c.data.saint);
+const nonSaints = allCategories.filter(c => !ofSaints.includes(c));
 
 export const QuickLinks: JSX.Component = (attrs, children) => {
   return <>
@@ -33,9 +35,24 @@ export const QuickLinks: JSX.Component = (attrs, children) => {
       <Column>
 
         <FadeIn>
-          <h2>Book Categories</h2>
+          <h2>Books by Topic</h2>
           <ul class="quicklinks">
-            {allCategories.map(cat => <li>
+            {nonSaints.map(cat => <li>
+              <a class="link" href={cat.route} style={`background-image: url(${cat.imageSmall});`}>
+                <span>{cat.data.shortTitle}</span>
+              </a>
+            </li>
+            )}
+          </ul>
+        </FadeIn>
+
+      </Column>
+      <Column>
+
+        <FadeIn>
+          <h2>Books about Saints</h2>
+          <ul class="quicklinks">
+            {ofSaints.map(cat => <li>
               <a class="link" href={cat.route} style={`background-image: url(${cat.imageSmall});`}>
                 <span>{cat.data.shortTitle}</span>
               </a>

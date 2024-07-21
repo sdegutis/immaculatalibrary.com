@@ -1,6 +1,7 @@
 ---
 title: St. John Henry Newman
 shortTitle: John Henry Newman
+saint: true
 books:
   - meditations-and-devotions
   - parochial-and-plain-sermons-by-st-john-henry-newman
