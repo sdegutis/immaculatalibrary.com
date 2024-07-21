@@ -28,12 +28,9 @@ books:
   - parochial-and-plain-sermons-by-st-john-henry-newman
   - practical-piety-set-forth-by-st-francis-de-sales
   - sin-and-its-consequences
-  - >-
-    the-ascetical-works-vol02-the-way-of-salvation-and-of-perfection-by-st-alphonsus-de-liguori
-  - >-
-    the-ascetical-works-vol03-the-great-means-of-salvation-and-of-perfection-by-st-alphonsus-de-liguori
-  - >-
-    the-ascetical-works-vol16-abridged-sermons-for-all-sundays-of-the-year-by-st-alphonsus-de-liguori
+  - the-ascetical-works-vol02-the-way-of-salvation-and-of-perfection-by-st-alphonsus-de-liguori
+  - the-ascetical-works-vol03-the-great-means-of-salvation-and-of-perfection-by-st-alphonsus-de-liguori
+  - the-ascetical-works-vol16-abridged-sermons-for-all-sundays-of-the-year-by-st-alphonsus-de-liguori
   - the-ascetical-works-vol18-letters-by-st-alphonsus-de-liguori
   - the-ascetical-works-vol19-letters-by-st-alphonsus-de-liguori
   - the-ascetical-works-vol20-letters-by-st-alphonsus-de-liguori

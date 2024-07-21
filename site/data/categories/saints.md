@@ -38,8 +38,7 @@ books:
   - st-rose-of-lima-the-flower-of-the-new-world
   - st-vincent-ferrer-his-life-spiritual-teaching-and-practical-devotion
   - st-vincent-ferrer-op
-  - >-
-    the-ascetical-works-vol09-victories-of-the-martyrs-by-st-alphonsus-de-liguori
+  - the-ascetical-works-vol09-victories-of-the-martyrs-by-st-alphonsus-de-liguori
   - the-autobiography-of-st-ignatius-of-loyola
   - the-book-of-saints
   - the-greek-fathers

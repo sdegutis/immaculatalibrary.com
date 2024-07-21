@@ -32,12 +32,9 @@ books:
   - spiritual-canticle-of-the-soul
   - st-anselms-book-of-meditations-and-prayers
   - st-bonaventures-life-of-jesus-christ
-  - >-
-    the-ascetical-works-vol04-the-incarnation-birth-and-infancy-of-jesus-christ-by-st-alphonsus-de-liguori
-  - >-
-    the-ascetical-works-vol05-the-passion-and-the-death-of-jesus-christ-by-st-alphonsus-de-liguori
-  - >-
-    the-ascetical-works-vol10-the-true-spouse-of-jesus-christ-by-st-alphonsus-de-liguori
+  - the-ascetical-works-vol04-the-incarnation-birth-and-infancy-of-jesus-christ-by-st-alphonsus-de-liguori
+  - the-ascetical-works-vol05-the-passion-and-the-death-of-jesus-christ-by-st-alphonsus-de-liguori
+  - the-ascetical-works-vol10-the-true-spouse-of-jesus-christ-by-st-alphonsus-de-liguori
   - the-bread-of-life-st-thomas-aquinas-on-the-adorable-sacrament-of-the-altar
   - the-creed-explained
   - the-dialogue-of-st-catherine-of-siena
