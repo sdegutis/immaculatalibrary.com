@@ -120,7 +120,7 @@ document.querySelector('.filters-container')!.replaceChildren(<>
   <div class='books-filters'>
 
     <span class='label'>snippets</span>
-    <span>
+    <span class='radios'>
       <label><input type='radio' name='has-snippets' onclick={() => snippetsFilterSource.set('both')} checked />Any</label>
       <label><input type='radio' name='has-snippets' onclick={() => snippetsFilterSource.set('some')} />Some</label>
       <label><input type='radio' name='has-snippets' onclick={() => snippetsFilterSource.set('none')} />None</label>
@@ -156,7 +156,7 @@ document.querySelector('.filters-container')!.replaceChildren(<>
     </select>
 
     <span class='label'>sort by</span>
-    <span>
+    <span class='radios'>
       <label><input type='radio' name='sort-books' onclick={() => sortBooksSource.set('last')} checked />Added latest</label>
       <label><input type='radio' name='sort-books' onclick={() => sortBooksSource.set('first')} />Added earliest</label>
     </span>

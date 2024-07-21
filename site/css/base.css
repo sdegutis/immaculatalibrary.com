@@ -100,9 +100,7 @@ label:has(input) {
 }
 
 label:has(input[type=radio]) {
-  padding: 3px 7px;
   position: relative;
-  border-radius: 3px;
 }
 
 label:has(input[type=radio]:checked)::before {
@@ -113,16 +111,12 @@ label:has(input[type=radio]:checked)::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--blue-bg);
   opacity: 0.12;
 }
 
 label:has(input[type=radio]:checked) {
-  outline: 1px solid var(--blue-bg);
-  box-shadow:
-    0 0 1px 0px var(--blue-bg) inset,
-    0 0 1px 0px var(--blue-bg);
-  background-color: var(--bgalt);
+  padding-bottom: 3px;
+  border-bottom: 2px solid var(--blue-bg);
 }
 
 label:has(input[type=checkbox]) {

@@ -121,7 +121,7 @@ document.querySelector('.filters-container')!.replaceChildren(<>
     </select>
 
     <span class='label'>minutes</span>
-    <span>
+    <span class='radios'>
       <label><input type='radio' name='snippet-length' onclick={() => lengthFilter.set('')} checked />Any</label>
       <label><input type='radio' name='snippet-length' onclick={() => lengthFilter.set('short')} />1-2</label>
       <label><input type='radio' name='snippet-length' onclick={() => lengthFilter.set('medium')} />3-5</label>

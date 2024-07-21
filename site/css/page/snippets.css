@@ -8,6 +8,11 @@
   padding: 0 0.5em;
 }
 
+.snippets-filters .radios {
+  display: flex;
+  gap: 1em;
+}
+
 .snippets-filters .label {
   opacity: 0.5;
   font-variant: small-caps;

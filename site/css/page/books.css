@@ -8,6 +8,11 @@
   padding: 0 0.5em;
 }
 
+.books-filters .radios {
+  display: flex;
+  gap: 1em;
+}
+
 .books-filters .label {
   opacity: 0.5;
   font-variant: small-caps;
