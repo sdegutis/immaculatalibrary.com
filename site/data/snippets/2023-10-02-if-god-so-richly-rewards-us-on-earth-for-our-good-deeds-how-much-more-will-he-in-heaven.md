@@ -7,7 +7,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '100'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 62
+sortOrder: 61
 ---
 
 > The Holy Scriptures teach us also with what liberality God rewards the services we render Him.

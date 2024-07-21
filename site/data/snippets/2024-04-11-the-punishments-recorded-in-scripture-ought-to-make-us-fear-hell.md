@@ -5,7 +5,7 @@ archivePage: '111'
 archiveSlug: sinnersguide00luis
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 70
+sortOrder: 69
 ---
 
 > This truth is still more apparent in the terrible chastisements inflicted by God which are related in Scripture.

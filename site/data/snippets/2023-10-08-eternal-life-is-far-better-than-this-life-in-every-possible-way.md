@@ -5,7 +5,7 @@ archivePage: '103'
 archiveSlug: sinnersguide00luis
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 64
+sortOrder: 65
 ---
 
 > All that we have hitherto said relates only to the accidental glory of the Saints. They possess another glory incomparably superior, which theologians call the essential glory. This is the vision and possession of God Himself. For St. Augustine tells us that the reward of virtue will be God Himself, the Author of all virtue, Whom we will untiringly contemplate, love, and praise for all eternity. What reward could be greater than this? It is not Heaven, or earth, or any created perfection, but God, the Source of all beauty and all perfection.
