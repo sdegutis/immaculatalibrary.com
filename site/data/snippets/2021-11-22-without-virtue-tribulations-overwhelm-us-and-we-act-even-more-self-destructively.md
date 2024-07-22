@@ -48,7 +48,7 @@ sortOrder: 136
 >
 > St. Cyprian expresses the same thought by another illustration: "As the wind in harvest time scatters the chaff but cleanses the wheat, so the winds of adversity scatter the wicked but purify the just."
 >
-> The passage of the children of Israel through the Bed Sea is still another figure of the same truth. Like protecting walls the waters rose on each side of the people, and gave them a safe passage to the dry land; but as soon as the Egyptian army with its king and chariots had entered the watery breach, the same waves closed upon them and buried them in the sea.
+> The passage of the children of Israel through the Red Sea is still another figure of the same truth. Like protecting walls the waters rose on each side of the people, and gave them a safe passage to the dry land; but as soon as the Egyptian army with its king and chariots had entered the watery breach, the same waves closed upon them and buried them in the sea.
 >
 > In like manner the waters of tribulation are a preservation to the just, while to the wicked they are a tempestuous gulf which sweeps them into the abyss of rage, of blasphemy, and of despair.
 >
