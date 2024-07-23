@@ -13,6 +13,7 @@ export default <>
         <Slideshow>
           <AngelMorning />
           <MorningPrayers />
+          <LitanyOfSaints />
           <OurFather />
           <HailMary />
           <GloryBe />
@@ -28,7 +29,7 @@ export default <>
           <OurFather />
           <HailMary />
           <GloryBe />
-          <Litany />
+          <LitanyOfThePreciousBlood />
           <Sunday />
           <Monday />
           <Tuesday />
@@ -470,6 +471,14 @@ function MorningPrayers() {
         <br />
         <Line><Red>Amen</Red></Line>
       </p>
+    </div>
+  </Panel>;
+}
+
+function LitanyOfSaints() {
+  return <Panel>
+    <div class='centered spaced-big'>
+      <h1>Litany of Saints</h1>
       <div class='spaced-small two-cols'>
         <Line>St. Jane Frances de Chantal <Red>Pray for us.</Red></Line>
         <Line> St. Kateri Tekakwitha<Red>Pray for us.</Red></Line>
@@ -751,7 +760,7 @@ function Saturday() {
   </Panel>;
 }
 
-function Litany() {
+function LitanyOfThePreciousBlood() {
   return <Panel>
     <div class='centered spaced-big' id='litany'>
 
