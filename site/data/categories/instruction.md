@@ -60,6 +60,7 @@ books:
   - the-true-story-of-the-vatican-council
   - way-of-perfection-by-st-teresa-of-avila
   - young-mans-guide
+  - the-practice-of-humility
 sortOrder: 3
 ---
 

@@ -17,6 +17,7 @@ books:
   - the-month-of-mary
   - the-secret-of-mary
   - true-devotion-to-mary
+  - mariology
 sortOrder: 6
 ---
 
