@@ -48,6 +48,17 @@
 * [site/core/$jsx.ts](site/core/$jsx.ts): Browser-side JSX implementation
 * [site/core/jsx.ts](site/core/jsx.ts): SSG-side JSX implementation
 
+### Sample run
+
+```
+C:\Program Files\nodejs\node.exe .\out\main.js
+Running on http://localhost:8080
+Time: 649 ms
+Rebuilding site...
+Time: 84 ms
+Done.
+```
+
 ### File breakdown
 
 ```
