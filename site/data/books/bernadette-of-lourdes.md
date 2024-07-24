@@ -3,7 +3,7 @@ rating: 0
 score: 0
 storeLinks: []
 translator: ''
-author: The Sisters of Charity of Nevers
+author: The Sisters of Charity
 dateAdded: '2024-07-01'
 files:
   - archiveId: bernadetteoflour0000bern
