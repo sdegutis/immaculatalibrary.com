@@ -12,7 +12,7 @@ sortOrder: 93
 > 
 > "I am the Lord thy God, that teach thee profitable things, that govern thee in the way that thou walkest." [Isaias xlviii. 17.]
 > 
-> "The month of the just," says David, "shall meditate wisdom, and his tongue shall speak judgment." [Ps. xxxvi. 30.]
+> "The mouth of the just," says David, "shall meditate wisdom, and his tongue shall speak judgment." [Ps. xxxvi. 30.]
 > 
 > Throughout the one hundred and eighteenth Psalm how frequent is his prayer for this divine wisdom! "Blessed art Thou, O Lord: teach me Thy justifications. Open Thou my eyes, and I will consider the wondrous things of Thy law. Give me understanding, and I will search Thy law; and I will keep it with my whole heart."
 > 
