@@ -47,3 +47,28 @@
 * [site/core/main.ts](site/core/main.ts): The entry point to the site, to build it yourself
 * [site/core/$jsx.ts](site/core/$jsx.ts): Browser-side JSX implementation
 * [site/core/jsx.ts](site/core/jsx.ts): SSG-side JSX implementation
+
+### File breakdown
+
+```
+$ scc
+───────────────────────────────────────────────────────────────────────────────
+Language                 Files     Lines   Blanks  Comments     Code Complexity
+───────────────────────────────────────────────────────────────────────────────
+Markdown                  1415     42416     3919         0    38497          0
+TypeScript                 110      6027      881        16     5130        484
+CSS                         24      1188      197         9      982          0
+JSON                         7      1702        0         0     1702          0
+TypeScript Typings           1        33        5         0       28          5
+YAML                         1        63       12         6       45          0
+gitignore                    1         4        0         0        4          0
+───────────────────────────────────────────────────────────────────────────────
+Total                     1559     51433     5014        31    46388        489
+───────────────────────────────────────────────────────────────────────────────
+Estimated Cost to Develop (organic) $1,518,172
+Estimated Schedule Effort (organic) 16.12 months
+Estimated People Required (organic) 8.37
+───────────────────────────────────────────────────────────────────────────────
+Processed 4272950 bytes, 4.273 megabytes (SI)
+───────────────────────────────────────────────────────────────────────────────
+```
