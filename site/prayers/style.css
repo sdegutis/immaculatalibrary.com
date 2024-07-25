@@ -27,14 +27,13 @@
 .panel-body {
   overflow: auto;
   height: 100%;
-  /* background-color: #222; */
-  transition: opacity ease-in-out .5s;
-  opacity: 0.33;
+  background-color: #000;
+  transition: background-color ease-in-out .5s;
 }
 
 .panel:focus-within .panel-body {
   outline: none;
-  opacity: 1;
+  background-color: #111;
 }
 
 .panel-body::-webkit-scrollbar {
