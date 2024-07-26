@@ -15,12 +15,16 @@ export class Runtime {
 
   build() {
     const start = Date.now();
-    const main = this.files.get('/core/main.js')!.module!;
-    const exports = main.require() as {
-      outfiles: Map<string, Buffer | string>;
-    };
+    const exports = this.#build();
     console.log(`Time: ${Date.now() - start} ms`);
     return exports;
+  }
+
+  #build() {
+    const main = this.files.get('/core/main.js')!.module!;
+    return main.require() as {
+      outfiles: Map<string, Buffer | string>;
+    };
   }
 
   pathsUpdated(...paths: string[]) {
