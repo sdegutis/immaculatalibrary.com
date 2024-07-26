@@ -1,6 +1,7 @@
 import * as path from 'path/posix';
-import { isDev } from '../util/helpers.js';
 import files from '/';
+
+const isDev = !!process.env['DEV'];
 
 export const outfiles = new Map<string, Buffer | string>();
 
