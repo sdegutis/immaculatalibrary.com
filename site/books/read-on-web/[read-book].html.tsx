@@ -1,10 +1,10 @@
+import handlers from "handlers!";
 import { LoadingLine, LoadingParagraph } from "../../components/$loading.js";
 import { Typography } from "../../components/$typography.js";
 import { Navlinks } from "../../components/navlinks.js";
 import { EmptyPage } from "../../components/page.js";
 import { Rating } from "../../components/rating.js";
 import { SiteFooter } from "../../components/site-footer.js";
-import { handlers } from "../../core/exports.js";
 import { allBooks } from "../../model/books.js";
 import { allSnippets } from "../../model/snippets.js";
 import { markdown, sortBy } from "../../util/helpers.js";

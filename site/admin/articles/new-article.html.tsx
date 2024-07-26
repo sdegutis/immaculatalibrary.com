@@ -1,6 +1,6 @@
+import handlers from 'handlers!';
 import { Typography } from "../../components/$typography.js";
 import { EmptyPage } from "../../components/page.js";
-import { handlers } from '../../core/exports.js';
 import { Article } from "../../model/articles.js";
 
 handlers.set('/create-article', body => {

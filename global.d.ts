@@ -17,6 +17,11 @@ declare module '*/' {
   export default dir;
 }
 
+declare module 'handlers!' {
+  export const handlers = new Map<string, (body: string) => string>();
+  export default handlers;
+}
+
 declare module 'https://cdn.jsdelivr.net/npm/markdown-it@13.0.2/+esm' {
   import MarkdownIt = require('markdown-it/lib');
   export default MarkdownIt;

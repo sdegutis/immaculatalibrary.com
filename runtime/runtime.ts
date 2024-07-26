@@ -7,6 +7,8 @@ export class Runtime {
   files = new Map<string, File>();
   #deps = new Map<string, Set<string>>();
 
+  handlers = new Map<string, (body: string) => string>();
+
   constructor(private realBase: string) {
     this.#loadDir('/');
   }
@@ -16,7 +18,6 @@ export class Runtime {
     const main = this.files.get('/core/main.js')!.module!;
     const exports = main.require() as {
       outfiles: Map<string, Buffer | string>;
-      handlers: Map<string, (body: string) => string>;
     };
     console.log(`Time: ${Date.now() - start} ms`);
     return exports;

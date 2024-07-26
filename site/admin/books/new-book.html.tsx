@@ -1,5 +1,5 @@
+import handlers from 'handlers!';
 import { EmptyPage } from "../../components/page.js";
-import { handlers } from '../../core/exports.js';
 import { Book } from "../../model/books.js";
 import { allCategories, categoriesBySlug } from "../../model/categories.js";
 import { slugify } from "../util/$helpers.js";

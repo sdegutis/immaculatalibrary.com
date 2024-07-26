@@ -12,7 +12,7 @@ const runtime = new Runtime("site");
 
 const artifacts = runtime.build();
 server.files = artifacts?.outfiles;
-server.handlers = artifacts?.handlers;
+server.handlers = runtime.handlers;
 
 const updatedPaths = new Set<string>();
 let reloadFsTimer: NodeJS.Timeout;
@@ -28,7 +28,7 @@ const pathUpdated = (filePath: string) => {
 
       const artifacts = runtime.build();
       server.files = artifacts?.outfiles;
-      server.handlers = artifacts?.handlers;
+      server.handlers = runtime.handlers;
 
       updatedPaths.clear();
       server.rebuilt();
