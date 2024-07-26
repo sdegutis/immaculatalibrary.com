@@ -1,7 +1,10 @@
 ---
-title: 'How to pray the Rosary'
-imageFilename: 'https://images.unsplash.com/photo-1506451778068-985b98c0de18?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80'
-imageCaption: 'Photo by <a href="https://unsplash.com/@twinsfisch?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Isabella and Zsa Fischer</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>'
+title: How to pray the Rosary
+imageFilename: https://images.unsplash.com/photo-1506451778068-985b98c0de18?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80
+imageCaption: >-
+  Photo by <a href="https://unsplash.com/@twinsfisch?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Isabella and Zsa Fischer</a> on <a
+  href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+draft: true
 ---
 
 You already know how to pray the Rosary. And those of you who are younger can learn from the older ones. But there are more or less useful ways to pray it. I promised you before I would explain to you some of the useful ways, and I finally can steal a little time to do so.

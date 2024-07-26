@@ -1,7 +1,10 @@
 ---
-title: 'How the Saints were helped in bad times, and what they recommended us to do'
-imageFilename: 'https://images.unsplash.com/photo-1595951472939-77e584cde8f2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80'
-imageCaption: 'Photo by <a href="https://unsplash.com/@vonshnauzer?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Egor Myznik</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>'
+title: How the Saints were helped in bad times, and what they recommended us to do
+imageFilename: https://images.unsplash.com/photo-1595951472939-77e584cde8f2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80
+imageCaption: >-
+  Photo by <a href="https://unsplash.com/@vonshnauzer?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Egor Myznik</a> on <a
+  href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+draft: true
 ---
 
 The Saints universally recommend that we meditate on the Passion of Christ, as the best thing we can do for our salvation. It's also extremely helpful in dealing with bad times.

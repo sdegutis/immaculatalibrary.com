@@ -1,7 +1,8 @@
 ---
-title: 'Consecration to Mary'
-imageFilename: '/img/movies/ignatius-of-loyola.jpg'
-imageCaption: 'Image from clip of film [Ignatius of Loyola (2016)](/movies/ignatius-of-loyola.html).'
+title: Consecration to Mary
+imageFilename: /img/movies/ignatius-of-loyola.jpg
+imageCaption: Image from clip of film [Ignatius of Loyola (2016)](/movies/ignatius-of-loyola.html).
+draft: true
 ---
 
 There are many ways to consecrate one's self to the Blessed Virgin. But only one thing is really important.

@@ -8,14 +8,9 @@ This was one of the last doctrines I examined when I became Catholic, and the id
 
 For example, Hebrews 12:23, saying "the spirits of just men made perfect" is almost definitely an indication of Purgatory, although it doesn't mention the word or teaching itself, but implies it by the word "made", since we are *certainly* not perfect at the time we die, and since the perfection here is clearly meant to be moral perfection, in other words, no more love for sin in our hearts.
 
-So I wondered for a while, where is the proof of this in Scripture? And this morning, I looked up four different articles on it:
+So I wondered for a while, where is the proof of this in Scripture?
 
-* https://www.ncregister.com/blog/is-the-assumption-of-mary-in-the-bible#:~:text=There%20are%20a%20number%20of,Eve%20in%20Genesis%203%3A15.
-* https://udayton.edu/imri/mary/a/assumption-of-mary-scriptural-support.php (php, lol)
-* https://stpaulcenter.com/where-is-marys-assumption-in-the-bible/
-* https://www.catholic.com/magazine/online-edition/the-assumption-of-mary
-
-Granted, I only skimmed them. But one thing I noticed in all of them, is that they're relying on the idea that, by the time of her canonization after her death, where she's canonized in Revelation 12, she is clearly so holy that she's definitely recorded as being perfect and not just sinless, and the *logical implication* is that God would grant her an early resurrection as a just reward.
+Most answers to this question rely on the idea that, by the time of her canonization after her death, where she's canonized in Revelation 12, she is clearly so holy that she's definitely recorded as being perfect and not just sinless, and the *logical implication* is that God would grant her an early resurrection as a just reward.
 
 But that's not enough for me. I'd have to see somewhere in scripture that *she actually rose earlier than the general resurrection* to be satisfied with this.
 

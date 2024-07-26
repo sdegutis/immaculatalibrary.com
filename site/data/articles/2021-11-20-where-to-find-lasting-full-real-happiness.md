@@ -1,7 +1,10 @@
 ---
-title: 'Where to find full, real, lasting happiness'
-imageFilename: 'https://images.unsplash.com/photo-1478515463067-d20f52aace26?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80'
-imageCaption: 'Photo by <a href="https://unsplash.com/@matt_sclarandis?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Matt Sclarandis</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>'
+title: Where to find full, real, lasting happiness
+imageFilename: https://images.unsplash.com/photo-1478515463067-d20f52aace26?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80
+imageCaption: >-
+  Photo by <a href="https://unsplash.com/@matt_sclarandis?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Matt Sclarandis</a> on <a
+  href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+draft: true
 ---
 
 Everyone wants to be happy. It's built into us. But we don't always know where to find happiness. Sometimes we just don't feel happy no matter what we do. But the good news is that happiness is not far from us, in fact almost all we need is a perspective change!

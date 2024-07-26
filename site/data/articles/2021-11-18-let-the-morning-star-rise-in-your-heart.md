@@ -1,7 +1,10 @@
 ---
-title: 'Let the Morning Star rise in your heart'
-imageFilename: 'https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80'
-imageCaption: 'Photo by <a href="https://unsplash.com/@davealmine?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Dawid Zawiła</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>'
+title: Let the Morning Star rise in your heart
+imageFilename: https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80
+imageCaption: >-
+  Photo by <a href="https://unsplash.com/@davealmine?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Dawid Zawiła</a> on <a
+  href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+draft: true
 ---
 
 Are you tempted more than you can imagine? That's good news! It's like a mother about to give birth: the labor pain is always strongest and most often right before she is delivered of her child.

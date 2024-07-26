@@ -1,5 +1,5 @@
 ---
-title: 'Fear fuels demons'
+title: Fear fuels demons
 ---
 
 Misquitos are a good analogy for temptations.

@@ -32,7 +32,7 @@ export class DataFile<D> {
     const modelDir = (this.constructor as typeof DataFile<D>).modelDir;
     const filename = `${this.slug}.md`;
     const filepath = path.resolve(path.join('site/data', modelDir, filename));
-    const content = `---\n${Yaml.dump(this.data)}---\n\n${this.content}`;
+    const content = `---\n${Yaml.dump(this.data, { lineWidth: 200 })}---\n\n${this.content}`;
     fs.writeFileSync(filepath, content);
   }
 

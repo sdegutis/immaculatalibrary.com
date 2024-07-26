@@ -1,7 +1,10 @@
 ---
-title: 'Truth vs Lies'
-imageFilename: 'https://images.unsplash.com/photo-1494870703355-d05125562171?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'
-imageCaption: 'Photo by <a href="https://unsplash.com/@topf52?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Christoph Schmid</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>'
+title: Truth vs Lies
+imageFilename: https://images.unsplash.com/photo-1494870703355-d05125562171?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80
+imageCaption: >-
+  Photo by <a href="https://unsplash.com/@topf52?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Christoph Schmid</a> on <a
+  href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+draft: true
 ---
 
 My hope here is to completely convince you that the truth is completely worth it, always, and lies are absolutely never worth it, under any circumstances.

@@ -1,5 +1,6 @@
 ---
 title: The Diary of Eve
+draft: true
 ---
 
 *The lost diary started by Eve, and added to by future generations.*

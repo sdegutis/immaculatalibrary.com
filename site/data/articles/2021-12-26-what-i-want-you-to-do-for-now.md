@@ -1,7 +1,10 @@
 ---
-title: 'What I want you to do for now'
-imageFilename: 'https://images.unsplash.com/photo-1451471016731-e963a8588be8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80'
-imageCaption: 'Photo by <a href="https://unsplash.com/@anniespratt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Annie Spratt</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>'
+title: What I want you to do for now
+imageFilename: https://images.unsplash.com/photo-1451471016731-e963a8588be8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80
+imageCaption: >-
+  Photo by <a href="https://unsplash.com/@anniespratt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Annie Spratt</a> on <a
+  href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+draft: true
 ---
 
 My little children, have a happy time together this Christmas season. Know that your dear father loves you more than you can know. And that he wants to be with you. And he will be with you one day, if you keep praying. And even now, if you love him and he loves you, you are in each other's hearts. But for now, this is what you should do:

@@ -29,6 +29,4 @@ export const allArticles = (allArticleFiles
   .map(file => Article.fromFile(file))
   .sort(sortBy(article => article.date))
   .filter(s => !s.data.draft)
-  .reverse())
-  .slice(0, 0) // TODO: remove?
-  ;
+  .reverse());

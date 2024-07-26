@@ -1,7 +1,8 @@
 ---
-title: 'Purity (part 3)'
-imageFilename: '/img/articles/immaculateconception.jpg'
-imageCaption: 'The Immaculate Conception'
+title: Purity (part 3)
+imageFilename: /img/articles/immaculateconception.jpg
+imageCaption: The Immaculate Conception
+draft: true
 ---
 
 The first two times I wrote to you about purity, I didn't once mention unchastity, but only talked about trying to live in a deeper, spiritual reality. Why? What does that have to do with purity and chastity?

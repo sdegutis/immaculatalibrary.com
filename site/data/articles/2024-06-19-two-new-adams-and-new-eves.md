@@ -1,5 +1,6 @@
 ---
-title: 'Two new Adams and new Eves'
+title: Two new Adams and new Eves
+draft: true
 ---
 
 Pontius Pilate had the opportunity to be the new Adam, and Caiaphas to be the new Eve.

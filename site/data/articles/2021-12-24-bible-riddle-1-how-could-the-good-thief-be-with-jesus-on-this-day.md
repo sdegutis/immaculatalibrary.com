@@ -1,7 +1,8 @@
 ---
 title: 'Bible Riddle #1: How could the Good Thief be with Jesus "on this day"?'
-imageFilename: 'https://f7hnjran9v-flywheel.netdna-ssl.com/wp-content/uploads/2020/09/Titian_-_Christ_and_the_Good_Thief_-_WGA22832.jpg'
-imageCaption: 'The Good Thief with Jesus'
+imageFilename: https://f7hnjran9v-flywheel.netdna-ssl.com/wp-content/uploads/2020/09/Titian_-_Christ_and_the_Good_Thief_-_WGA22832.jpg
+imageCaption: The Good Thief with Jesus
+draft: true
 ---
 
 Have you ever wondered, how Jesus could say "today you will be with me in Paradise" to the Good Thief (St. Dismas)? Jesus was going to Hell on that day, and will only be Resurrected on Sunday morning. So how could St. Dismas be with Jesus in Paradise on Good Friday? Here's my answer:

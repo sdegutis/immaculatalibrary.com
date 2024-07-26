@@ -1,7 +1,8 @@
 ---
-title: 'Some Beautiful Christmas Music'
-imageFilename: 'https://www.nationalshrine.org/wp-content/uploads/2018/11/liv_img_thumb.jpg'
-imageCaption: 'Choir of the Basilica of the National Shrine of the Immaculate Conception'
+title: Some Beautiful Christmas Music
+imageFilename: https://www.nationalshrine.org/wp-content/uploads/2018/11/liv_img_thumb.jpg
+imageCaption: Choir of the Basilica of the National Shrine of the Immaculate Conception
+draft: true
 ---
 
 I know you like beautiful music. Here is some of the most beautiful I've ever heard. Possibly the closest thing on earth to hearing the angels sing.

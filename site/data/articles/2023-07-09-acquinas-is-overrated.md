@@ -1,5 +1,6 @@
 ---
 title: Aquinas is overrated
+draft: true
 ---
 
 Every Catholic who learns anything about their religion is introduced to St. Thomas Acquinas at some point, usually through his book Summa Theologica, a 5-volume apologetic work covering an unusually large number of topics in great intellectual depth.

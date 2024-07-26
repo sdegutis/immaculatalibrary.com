@@ -1,5 +1,6 @@
 ---
 title: God's will and protection is in our duties
+draft: true
 ---
 
 Pontius Pilate left the court to meet with the religious leaders who wanted to condemn Jesus. He should not have, and when he did, he left the boundaries of God's will.
