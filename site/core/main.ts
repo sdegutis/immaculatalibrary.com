@@ -1,8 +1,7 @@
 import * as path from 'path/posix';
 import { isDev } from '../util/helpers.js';
-import { handlers } from './exports.js';
+export { handlers } from './exports.js';
 import files from '/';
-export { handlers };
 
 export const outfiles = new Map<string, Buffer | string>();
 
