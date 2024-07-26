@@ -17,6 +17,7 @@
       ],
       "program": "${workspaceFolder}\\out\\main.js",
       "env": {
+        "IMLIB_SITEBASE": "https://www.immaculatalibrary.com",
         "NODE_OPTIONS": "--experimental-vm-modules"
       },
       "outFiles": [

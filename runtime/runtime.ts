@@ -2,7 +2,7 @@ import * as fs from "fs";
 import * as path from "path/posix";
 import { File, convertTsExts } from "./file.js";
 
-const siteBase = `https://www.immaculatalibrary.com`;
+const siteBase = process.env["IMLIB_SITEBASE"];
 
 const ARRAY_FILE_REGEX = /\[.+\]/;
 
