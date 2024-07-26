@@ -9,10 +9,10 @@ const server = new Server();
 server.startServer(8080);
 
 const runtime = new Runtime("site");
+server.handlers = runtime.handlers;
 
 const outfiles = runtime.build();
 server.files = outfiles;
-server.handlers = runtime.handlers;
 
 const updatedPaths = new Set<string>();
 let reloadFsTimer: NodeJS.Timeout;
@@ -28,7 +28,6 @@ const pathUpdated = (filePath: string) => {
 
       const outfiles = runtime.build();
       server.files = outfiles;
-      server.handlers = runtime.handlers;
 
       updatedPaths.clear();
       server.rebuilt();
