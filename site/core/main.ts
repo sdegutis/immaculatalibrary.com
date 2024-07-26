@@ -13,7 +13,6 @@ const ARRAY_FILE_REGEX = /\[.+\]/;
 const extFns = {
   html: hoist,
   json: JSON.stringify,
-  xml: (s: string) => s,
 };
 
 for (const { path, content } of files) {
@@ -22,7 +21,7 @@ for (const { path, content } of files) {
   let match;
   if (match = path.match(/\.(.+)\.js$/)) {
     const ext = match[1] as keyof typeof extFns;
-    const process = extFns[ext];
+    const process = extFns[ext] ?? ((s: string) => s);
 
     const filepath = path.slice(0, -3);
     const exported = require(path).default;

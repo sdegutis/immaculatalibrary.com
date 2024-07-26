@@ -1,9 +1,10 @@
-import martel from '../fonts/martel/';
-import { Font } from './fonts.js';
+import { Fonts } from '../fonts/[font].css.js';
 import { NavPage } from './navlinks.js';
 import { QuickLinks } from './quicklinks.js';
 import { SiteFooter } from './site-footer.js';
 import { SiteHeader } from './site-header.js';
+
+const Martel = Fonts['martel']!;
 
 const Meta: JSX.Component<{ favicons?: JSX.Element }> = (attrs) => <>
   {attrs.favicons ?? <>
@@ -34,9 +35,9 @@ export const EmptyPage: JSX.Component<{ favicons?: JSX.Element }> = (attrs, chil
     </head>
 
     <body>
-      <Font use={martel} fallback="serif">
+      <Martel fallback='serif'>
         {children}
-      </Font>
+      </Martel>
     </body>
 
   </html>
