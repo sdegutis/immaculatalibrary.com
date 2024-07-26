@@ -20,6 +20,8 @@ export class Runtime {
 
   constructor(private realBase: string) {
     this.#loadDir('/');
+    this.#shimFile('/core/$jsx.ts');
+    this.#shimFile('/core/jsx.ts');
   }
 
   build() {
@@ -115,6 +117,12 @@ export class Runtime {
   #createFile(filepath: string) {
     const realFilePath = this.realPathFor(filepath);
     let content = fs.readFileSync(realFilePath);
+    const file = new File(filepath, content, this);
+    this.files.set(file.path, file);
+  }
+
+  #shimFile(filepath: string) {
+    let content = fs.readFileSync('runtime' + filepath);
     const file = new File(filepath, content, this);
     this.files.set(file.path, file);
   }
