@@ -6,7 +6,7 @@ So often I see Catholic writers wondering how we can renew the church, and pries
 
 But they're wrong, and they're all missing the obvious answer: it was martyrdoms. Personal holiness and self-sacrifice is the only true way to grow the church. Martyrs have always been the seeds of the church, and this will not change until the end of this age.
 
-It makes sense why they're looking everywhere but the plain truth for the answer: who wants to die a martyr? Life *is* good, but most Catholics love life more than they should, and aren't willing to give it up. So instead, they look for novelties or shortcuts in every nook of Catholic history. But Jesus says there's only one way: carry your cross and deny yourself &*daily*.
+It makes sense why they're looking everywhere but the plain truth for the answer: who wants to die a martyr? Life *is* good, but most Catholics love life more than they should, and aren't willing to give it up. So instead, they look for novelties or shortcuts in every nook of Catholic history. But Jesus says there's only one way: carry your cross and deny yourself *daily*.
 
 Where is St. Padre Pio today, or the Cure of Ars, or St. Francis de Sales?
 
