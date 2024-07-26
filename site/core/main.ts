@@ -1,12 +1,10 @@
+import * as path from 'path/posix';
 import { isDev } from '../util/helpers.js';
-import { handlers, outfiles } from './exports.js';
+import { handlers } from './exports.js';
 import files from '/';
-export { handlers, outfiles };
+export { handlers };
 
-const sitemapIdx = files.findIndex((file) => file.path === '/sitemap.xml.js');
-const sitemap = files[sitemapIdx]!;
-files.splice(sitemapIdx, 1);
-files.push(sitemap);
+export const outfiles = new Map<string, Buffer | string>();
 
 const ARRAY_FILE_REGEX = /\[.+\]/;
 
@@ -48,6 +46,26 @@ for (const { path, content } of files) {
     }
   }
 }
+
+outfiles.set('/sitemap.xml',
+  `<?xml version="1.0" encoding="UTF-8"?>
+  <urlset 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  >
+    ${[...outfiles.keys()].filter(filepath => filepath.endsWith('.html')).map(filepath => {
+    const name = path.basename(filepath);
+    const date = name.match(/^(\d{4}-\d{2}-\d{2})-/)?.[1];
+    return `
+        <url>
+          <loc>https://www.immaculatalibrary.com${filepath}</loc>
+          ${date ? `<lastmod>${date}</lastmod>` : ''}
+        </url>
+      `;
+  }).join('')}
+  </urlset>`
+);
 
 function hoist(jsx: string) {
   const hoisted = new Set<string>();
