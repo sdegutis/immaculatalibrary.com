@@ -1,6 +1,8 @@
 import * as path from 'path/posix';
 import files from '/';
 
+const siteBase = `https://www.immaculatalibrary.com`;
+
 const isDev = !!process.env['DEV'];
 
 export const outfiles = new Map<string, Buffer | string>();
@@ -58,7 +60,7 @@ outfiles.set('/sitemap.xml',
     const date = name.match(/^(\d{4}-\d{2}-\d{2})-/)?.[1];
     return `
         <url>
-          <loc>https://www.immaculatalibrary.com${filepath}</loc>
+          <loc>${siteBase}${filepath}</loc>
           ${date ? `<lastmod>${date}</lastmod>` : ''}
         </url>
       `;
