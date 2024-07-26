@@ -1,10 +1,18 @@
 import martel from '../fonts/martel/';
 import { Font } from './fonts.js';
-import { Meta } from './meta.js';
 import { NavPage } from './navlinks.js';
 import { QuickLinks } from './quicklinks.js';
 import { SiteFooter } from './site-footer.js';
 import { SiteHeader } from './site-header.js';
+
+const Meta: JSX.Component<{ favicons?: JSX.Element }> = (attrs) => <>
+  {attrs.favicons ?? <>
+    <link rel="apple-touch-icon" sizes="180x180" href='/meta/apple-touch-icon.png' />
+    <link rel="icon" type="image/png" sizes="32x32" href='/meta/favicon-32x32.png' />
+    <link rel="icon" type="image/png" sizes="16x16" href='/meta/favicon-16x16.png' />
+  </>}
+  <link rel="manifest" href='/meta/manifest.json' />
+</>;
 
 export const EmptyPage: JSX.Component<{ favicons?: JSX.Element }> = (attrs, children) => <>
   {'<!DOCTYPE html>'}
