@@ -1,13 +1,8 @@
 import * as path from "path";
-import fontFiles from './';
+import dirFiles from './';
 
+const fontFiles = dirFiles.filter(f => f.path.endsWith('.woff'));
 const fontGroups = Object.groupBy(fontFiles, f => f.path.split('/')[2]!);
-
-for (const key of Object.keys(fontGroups)) {
-  if (key.endsWith('.js')) {
-    delete fontGroups[key];
-  }
-}
 
 export const Fonts = Object.fromEntries(Object.entries(fontGroups).map(([name, dir]) => {
   return [name, (attrs: { fallback: string }, children: any) => <>
