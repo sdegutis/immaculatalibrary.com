@@ -849,7 +849,7 @@ function LitanyOfThePreciousBlood() {
 }
 
 function AngelMorning() {
-  return <Prayer img="https://upload.wikimedia.org/wikipedia/commons/4/4e/Guardian_Angel_1900.jpg">
+  return <Prayer img="https://upload.wikimedia.org/wikipedia/commons/1/1e/Bernhard_Plockhorst_-_Schutzengel.jpg">
     <h1>Guardian Angel Prayer</h1>
     <Line>Angel of God,</Line>
     <Line>    my Guardian dear</Line>
@@ -864,7 +864,7 @@ function AngelMorning() {
 }
 
 function AngelNight() {
-  return <Prayer img="https://upload.wikimedia.org/wikipedia/commons/a/aa/Cortona_Guardian_Angel_01.jpg">
+  return <Prayer img="https://upload.wikimedia.org/wikipedia/commons/0/0c/Fridolin_Leiber_-_Schutzengel.jpg">
     <h1>Guardian Angel Prayer</h1>
     <Line>Angel of God,</Line>
     <Line>    my Guardian dear</Line>
