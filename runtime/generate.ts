@@ -4,7 +4,7 @@ import { Runtime } from './runtime.js';
 
 const runtime = new Runtime("site");
 
-const out = runtime.build()!.outfiles;
+const out = runtime.build()!;
 
 const madeDirs = new Set<string>();
 const mkdirIfNeeded = (dir: string) => {

@@ -10,8 +10,8 @@ server.startServer(8080);
 
 const runtime = new Runtime("site");
 
-const artifacts = runtime.build();
-server.files = artifacts?.outfiles;
+const outfiles = runtime.build();
+server.files = outfiles;
 server.handlers = runtime.handlers;
 
 const updatedPaths = new Set<string>();
@@ -26,8 +26,8 @@ const pathUpdated = (filePath: string) => {
     try {
       runtime.pathsUpdated(...updatedPaths);
 
-      const artifacts = runtime.build();
-      server.files = artifacts?.outfiles;
+      const outfiles = runtime.build();
+      server.files = outfiles;
       server.handlers = runtime.handlers;
 
       updatedPaths.clear();

@@ -22,9 +22,9 @@ export class Runtime {
 
   build() {
     const start = Date.now();
-    const exports = this.#build();
+    const outfiles = this.#build();
     console.log(`Time: ${Date.now() - start} ms`);
-    return exports;
+    return outfiles;
   }
 
   #build() {
@@ -88,7 +88,7 @@ export class Runtime {
       </urlset>`
     );
 
-    return { outfiles };
+    return outfiles;
   }
 
   pathsUpdated(...paths: string[]) {
