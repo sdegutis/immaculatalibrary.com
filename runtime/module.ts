@@ -32,10 +32,11 @@ export class Module {
       const realFilePath = this.runtime.realPathFor(this.filepath);
       const transformed = compileTSX(this.content, realFilePath);
       const sourceCode = transformed.code;
-      const sourceMapBase64 = Buffer.from(JSON.stringify(transformed.sourceMap)).toString('base64url');
-      const sourceMap = `\n//# sourceMappingURL=data:application/json;base64,${sourceMapBase64}`;
+      // const sourceMapBase64 = Buffer.from(JSON.stringify(transformed.sourceMap)).toString('base64url');
+      // const sourceMap = `\n//# sourceMappingURL=data:application/json;base64,${sourceMapBase64}`;
 
-      this.content = sourceCode + sourceMap;
+      // this.content = sourceCode + sourceMap;
+      this.content = sourceCode;
 
       const fn = vm.compileFunction(this.content, ['require', 'exports'], {
         filename: pathToFileURL(realFilePath).href,
