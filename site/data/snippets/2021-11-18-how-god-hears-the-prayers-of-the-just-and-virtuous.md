@@ -20,8 +20,7 @@ sortOrder: 132
 >
 > Hence Solomon tells us that "an obedient man shall speak of victory." [Prov. xxi. 28.]
 >
-> How differently are the prayers of the wicked answered! "When you stretch forth your
-hands," the Almighty tells them, "I will turn away my eyes from you; and when you multiply prayer I will not hear." [Isaias i. 15.]
+> How differently are the prayers of the wicked answered! "When you stretch forth your hands," the Almighty tells them, "I will turn away my eyes from you; and when you multiply prayer I will not hear." [Isaias i. 15.]
 >
 > "In the time of their affliction," says the prophet, "they will say: Arise, O Lord! and deliver us. But God will ask: Where are thy gods whom thou hast made thee? Let them arise and deliver thee." [Jer. ii. 27, 28.]
 >
