@@ -2,9 +2,9 @@
   "name": "immaculatalibrary",
   "version": "2.0.0",
   "description": "My website.",
-  "module": "out/main.js",
+  "main": "out/main.js",
   "scripts": {
-    "generate": "env IMLIB_SITEBASE=https://www.immaculatalibrary.com node --experimental-vm-modules out/generate.js",
+    "generate": "env IMLIB_SITEBASE=https://www.immaculatalibrary.com node out/generate.js",
     "build": "tsc --build",
     "watch": "tsc --build --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
