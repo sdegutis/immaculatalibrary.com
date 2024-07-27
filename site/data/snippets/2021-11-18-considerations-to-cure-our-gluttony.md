@@ -20,7 +20,7 @@ sortOrder: 234
 >
 > We may say of gluttony what we have said of impurity, that its pleasures are equally restricted and fleeting.
 >
-> Yet earth, sea, and air seem unable to gratify this passion, for many crimes are perpetrated, the poof are defrauded and oppressed, and little ones compelled to suffer hunger, to satisfy the sensuality of the great.
+> Yet earth, sea, and air seem unable to gratify this passion, for many crimes are perpetrated, the poor are defrauded and oppressed, and little ones compelled to suffer hunger, to satisfy the sensuality of the great.
 >
 > It is deplorable to think that for the gratification of one sense man condemns himself body and soul to eternal suffering. What incomprehensible folly to flatter with such delicate care a body which is destined to be the food of worms!
 >
