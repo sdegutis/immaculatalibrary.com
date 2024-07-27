@@ -51,7 +51,15 @@ export class Module {
   #require(toPath: string) {
     if (toPath === 'handlers!') return this.runtime.handlers;
 
-    if (!toPath.match(/^[./]/)) return require(toPath);
+    if (!toPath.match(/^[./]/)) {
+      const requirePaths = [
+        path.join(process.cwd(), 'node_modules'),
+        ...(require.resolve.paths(toPath) ?? []),
+      ];
+
+      const reqPath = require.resolve(toPath, { paths: requirePaths });
+      return require(reqPath);
+    }
 
     const absPath = path.resolve(path.dirname(this.filepath), toPath);
 
