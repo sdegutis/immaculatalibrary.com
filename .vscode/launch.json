@@ -5,24 +5,14 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "type": "node",
+      "type": "node-terminal",
       "request": "launch",
       "name": "Launch Program",
-      "skipFiles": [
-        "<node_internals>/**"
-      ],
-      "resolveSourceMapLocations": [
-        "${workspaceFolder}/**",
-        "!**/node_modules/**"
-      ],
-      "program": "${workspaceFolder}\\out\\main.js",
+      "command": "npm run dev",
       "env": {
         "IMLIB_SITEBASE": "https://www.immaculatalibrary.com",
         "NODE_OPTIONS": "--experimental-vm-modules"
       },
-      "outFiles": [
-        "${workspaceFolder}/**/*.js"
-      ]
     }
   ]
 }

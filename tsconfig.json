@@ -8,7 +8,12 @@
     "jsx": "react-native",
     "target": "ESNext",
     "noEmit": true,
+    "rootDir": "site",
     "allowSyntheticDefaultImports": false,
+    "types": [
+      "node",
+      "@imlib/core"
+    ],
     "moduleResolution": "Node",
     "module": "ES2022",
     "forceConsistentCasingInFileNames": true, /* Ensure that casing is correct in imports. */
@@ -26,15 +31,4 @@
     "noPropertyAccessFromIndexSignature": true, /* Enforces using indexed accessors for keys declared using an indexed type */
     "skipLibCheck": true /* Skip type checking all .d.ts files. */,
   },
-  "include": [
-    "./site/**/*.ts",
-    "./site/**/*.d.ts",
-    "./site/**/*.tsx",
-    "./global.d.ts"
-  ],
-  "references": [
-    {
-      "path": "./runtime"
-    }
-  ]
 }

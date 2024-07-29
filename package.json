@@ -4,10 +4,9 @@
   "description": "My website.",
   "main": "out/main.js",
   "scripts": {
-    "generate": "env IMLIB_SITEBASE=https://www.immaculatalibrary.com node out/generate.js",
-    "build": "tsc --build",
-    "watch": "tsc --build --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "generate": "env IMLIB_SITEBASE=https://www.immaculatalibrary.com imlib generate",
+    "watch": "tsc --watch",
+    "dev": "imlib dev"
   },
   "repository": {
     "type": "git",
@@ -24,14 +23,13 @@
     "@types/eases": "^1.0.4",
     "@types/js-yaml": "^4.0.9",
     "@types/markdown-it": "^14.1.1",
-    "@types/node": "^20.14.2",
+    "@types/node": "^20.14.13",
     "monaco-editor": "^0.43.0",
     "typescript": "^5.5.2"
   },
   "dependencies": {
-    "chokidar": "^3.6.0",
+    "@imlib/core": "^2.1.1",
     "js-yaml": "^4.1.0",
-    "markdown-it": "^14.1.0",
-    "sucrase": "^3.35.0"
+    "markdown-it": "^14.1.0"
   }
 }
