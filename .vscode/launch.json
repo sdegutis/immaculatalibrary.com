@@ -9,10 +9,6 @@
       "request": "launch",
       "name": "Launch Program",
       "command": "npm run dev",
-      "env": {
-        "IMLIB_SITEBASE": "https://www.immaculatalibrary.com",
-        "NODE_OPTIONS": "--experimental-vm-modules"
-      },
     }
   ]
 }
