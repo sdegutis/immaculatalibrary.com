@@ -28,7 +28,7 @@
     "typescript": "^5.5.2"
   },
   "dependencies": {
-    "@imlib/core": "^2.1.2",
+    "@imlib/core": "^2.2.0",
     "js-yaml": "^4.1.0",
     "markdown-it": "^14.1.0"
   }
