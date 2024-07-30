@@ -71,6 +71,7 @@ books:
   - virtues-and-spiritual-doctrine-of-st-vincent-de-paul
   - wisdom-and-wit-of-blessed-thomas-more
   - bernadette-of-lourdes
+  - story-of-a-soul
 sortOrder: 5
 ---
 
