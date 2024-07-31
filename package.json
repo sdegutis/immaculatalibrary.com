@@ -4,7 +4,7 @@
   "description": "My website.",
   "main": "out/main.js",
   "scripts": {
-    "generate": "env IMLIB_SITEBASE=https://www.immaculatalibrary.com imlib generate",
+    "generate": "imlib generate",
     "watch": "tsc --watch",
     "dev": "imlib dev"
   },
