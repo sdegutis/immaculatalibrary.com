@@ -45,7 +45,9 @@ async function reflectUrl(slug: string) {
 
   const snippet = await fetching;
 
-  const renderedBody = markdown.render(snippet.content);
+  const renderedBody = <>
+    <div innerHTML={markdown.render(snippet.content)} />
+  </> as DocumentFragment;
 
   const PREVIEW_LINES = 15;
   const AVERAGE_LINE_LENGTH = 50;
@@ -72,10 +74,10 @@ async function reflectUrl(slug: string) {
           <div innerHTML={markdown.render(previewMarkdown)} />
           <p><a href='#' onclick={(function (this: HTMLAnchorElement, e: Event) {
             e.preventDefault();
-            this.parentElement!.parentElement!.innerHTML = renderedBody;
+            this.parentElement!.parentElement!.replaceChildren(renderedBody);
           }) as any}><i>Continue reading...</i></a></p>
         </>
-        : <div innerHTML={renderedBody} />}
+        : <div>{renderedBody}</div>}
     </div>
   </>);
 }
