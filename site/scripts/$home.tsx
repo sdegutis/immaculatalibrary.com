@@ -10,17 +10,16 @@ const container = document.getElementById('random-book-snippet') as HTMLDivEleme
 const snippetIds = fetch('/scripts/data/snippet-ids.json').then<string[]>(res => res.json());
 
 const markdown = MarkdownIt(mdOptions);
-let alreadyLoaded = false;
+const DURATIONS = { long: 1, short: .3 };
 
-renderSnippet(getSnippetOfTheHour(await snippetIds));
+renderSnippet(getSnippetOfTheHour(await snippetIds), 'long');
 
-async function renderSnippet(slug: string) {
+async function renderSnippet(slug: string, duration: keyof typeof DURATIONS) {
   container.replaceChildren((<HomeLoading />));
 
   const fetching = fetch(`/scripts/data/snippets/${slug}.json`).then<SnippetJson>(res => res.json());
 
-  await sleep(alreadyLoaded ? .3 : 1);
-  alreadyLoaded = true;
+  await sleep(DURATIONS[duration]);
 
   const snippet = await fetching;
 
@@ -78,14 +77,16 @@ function getSnippetOfTheHour(slugs: string[]) {
 
 async function showRandomBookSnippet(e: Event) {
   e.preventDefault();
-  renderSnippet(randomElement(await snippetIds));
+  renderSnippet(randomElement(await snippetIds), 'short');
 }
 
 function nextInBook(next: string) {
   return (e: Event) => {
-    const top = container.closest('.spaced')!;
-    top.scrollIntoView({ behavior: 'instant', block: 'start' });
     e.preventDefault();
-    renderSnippet(next);
+
+    const top = container.closest('.spaced')!;
+    top.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    renderSnippet(next, 'long');
   };
 }
