@@ -16,22 +16,11 @@ const doRandomBookSnippetReal = (e: Event) => {
 
 let alreadyLoaded = false;
 
-window.addEventListener('popstate', e => {
-  if (e.state) {
-    reflectUrl(e.state);
-  }
-});
-
-if (window.location.hash) {
-  reflectUrl(window.location.hash.slice(1));
-}
-else {
-  const yearStart = new Date(new Date().getFullYear(), 0, 1).getTime();
-  const yearDuration = (1000 * 60 * 60 * 24 * 365);
-  const now = Date.now();
-  const percent = (now - yearStart) / yearDuration;
-  doRandomBookSnippet(slugs => slugs[Math.floor(percent * slugs.length)]!);
-}
+const yearStart = new Date(new Date().getFullYear(), 0, 1).getTime();
+const yearDuration = (1000 * 60 * 60 * 24 * 365);
+const now = Date.now();
+const percent = (now - yearStart) / yearDuration;
+doRandomBookSnippet(slugs => slugs[Math.floor(percent * slugs.length)]!);
 
 async function reflectUrl(slug: string) {
   const container = document.getElementById('random-book-snippet') as HTMLDivElement;
