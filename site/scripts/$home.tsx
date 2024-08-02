@@ -12,7 +12,7 @@ const snippetIds = fetch('/scripts/data/snippet-ids.json').then<string[]>(res =>
 const markdown = MarkdownIt(mdOptions);
 let alreadyLoaded = false;
 
-showBookSnippet(slugs => getSnippetOfTheHour(slugs));
+renderSnippet(getSnippetOfTheHour(await snippetIds));
 
 async function renderSnippet(slug: string) {
   container.replaceChildren((<HomeLoading />));
@@ -68,11 +68,6 @@ async function renderSnippet(slug: string) {
   </>);
 }
 
-async function showBookSnippet(fn: (slugs: string[]) => string) {
-  const slug = fn(await snippetIds);
-  renderSnippet(slug);
-}
-
 function getSnippetOfTheHour(slugs: string[]) {
   const yearStart = new Date(new Date().getFullYear(), 0, 1).getTime();
   const yearDuration = (1000 * 60 * 60 * 24 * 365);
@@ -81,9 +76,9 @@ function getSnippetOfTheHour(slugs: string[]) {
   return slugs[Math.floor(percent * slugs.length)]!;
 }
 
-function showRandomBookSnippet(e: Event) {
+async function showRandomBookSnippet(e: Event) {
   e.preventDefault();
-  showBookSnippet(randomElement);
+  renderSnippet(randomElement(await snippetIds));
 }
 
 function nextInBook(next: string) {
