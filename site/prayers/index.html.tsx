@@ -522,6 +522,9 @@ function LitanyOfSaints() {
         <Line>   Most Sacred Heart of Jesus <Red>Have mercy on us.</Red></Line>
         <Line>    Most Sacred Heart of Jesus <Red>Have mercy on us.</Red></Line>
       </p>
+      <p class='spaced-small'>
+        <Line>Let us pray</Line>
+      </p>
     </div>
   </Panel>;
 }
