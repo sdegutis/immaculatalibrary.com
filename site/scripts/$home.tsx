@@ -5,6 +5,8 @@ import { formatDate } from "../util/$format-date.js";
 import { randomElement, sleep } from './$util.js';
 import { SnippetJson } from './data/snippets/[snippet].json.js';
 
+const container = document.getElementById('random-book-snippet') as HTMLDivElement;
+
 const snippetIds = fetch('/scripts/data/snippet-ids.json').then<string[]>(res => res.json());
 
 const markdown = MarkdownIt(mdOptions);
@@ -12,9 +14,7 @@ let alreadyLoaded = false;
 
 showBookSnippet(slugs => getSnippetOfTheHour(slugs));
 
-async function reflectUrl(slug: string) {
-  const container = document.getElementById('random-book-snippet') as HTMLDivElement;
-
+async function renderSnippet(slug: string) {
   container.replaceChildren((<HomeLoading />));
 
   const fetching = fetch(`/scripts/data/snippets/${slug}.json`).then<SnippetJson>(res => res.json());
@@ -26,6 +26,13 @@ async function reflectUrl(slug: string) {
 
   const renderedBody = <>
     <div innerHTML={markdown.render(snippet.content)} />
+    {snippet.nextSnippet && <p>
+      <a
+        href='#'
+        style='font-style:italic'
+        onclick={nextInBook(snippet.nextSnippet)}
+      >Read next snippet in book.</a>
+    </p>}
   </> as DocumentFragment;
 
   const PREVIEW_LINES = 15;
@@ -63,7 +70,7 @@ async function reflectUrl(slug: string) {
 
 async function showBookSnippet(fn: (slugs: string[]) => string) {
   const slug = fn(await snippetIds);
-  reflectUrl(slug);
+  renderSnippet(slug);
 }
 
 function getSnippetOfTheHour(slugs: string[]) {
@@ -77,4 +84,13 @@ function getSnippetOfTheHour(slugs: string[]) {
 function showRandomBookSnippet(e: Event) {
   e.preventDefault();
   showBookSnippet(randomElement);
+}
+
+function nextInBook(next: string) {
+  return (e: Event) => {
+    const top = container.closest('.spaced')!;
+    top.scrollIntoView({ behavior: 'instant', block: 'start' });
+    e.preventDefault();
+    renderSnippet(next);
+  };
 }

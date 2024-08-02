@@ -1,5 +1,5 @@
 export const Spaced: JSX.Component = (attrs, children) => <>
-  <div style='margin: 3em 0'>{children}</div>
+  <div class='spaced' style='margin: 3em 0'>{children}</div>
 </>;
 
 export const CenteredColumn: JSX.Component = (attrs, children) => <>
