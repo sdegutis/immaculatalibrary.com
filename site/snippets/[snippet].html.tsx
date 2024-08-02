@@ -91,7 +91,7 @@ export default allSnippets.map(snippet => {
 
             {snippet.renderedBody}
 
-            <PrevNextLinks snippet={snippet} open />
+            <PrevNextLinks snippet={snippet} />
 
             <Spaced>
               <h3>Latest book snippets</h3>
@@ -111,9 +111,9 @@ export default allSnippets.map(snippet => {
   </>];
 });
 
-function PrevNextLinks({ snippet, open }: { snippet: Snippet, open?: boolean }) {
+function PrevNextLinks({ snippet }: { snippet: Snippet }) {
   return <>
-    <div class='prevnextlinks' open={open ?? false}>
+    <div class='prevnextlinks'>
       <span class='header'>Other snippets in this book</span>
       <div>
         <RelativeSnippetLink snippet={snippet.prevSnippet}>Previous</RelativeSnippetLink>
