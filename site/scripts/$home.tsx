@@ -8,19 +8,9 @@ import { SnippetJson } from './data/snippets/[snippet].json.js';
 const snippetIds = fetch('/scripts/data/snippet-ids.json').then<string[]>(res => res.json());
 
 const markdown = MarkdownIt(mdOptions);
-
-const doRandomBookSnippetReal = (e: Event) => {
-  e.preventDefault();
-  doRandomBookSnippet(randomElement);
-};
-
 let alreadyLoaded = false;
 
-const yearStart = new Date(new Date().getFullYear(), 0, 1).getTime();
-const yearDuration = (1000 * 60 * 60 * 24 * 365);
-const now = Date.now();
-const percent = (now - yearStart) / yearDuration;
-doRandomBookSnippet(slugs => slugs[Math.floor(percent * slugs.length)]!);
+showBookSnippet(slugs => getSnippetOfTheHour(slugs));
 
 async function reflectUrl(slug: string) {
   const container = document.getElementById('random-book-snippet') as HTMLDivElement;
@@ -47,7 +37,7 @@ async function reflectUrl(slug: string) {
   }
 
   container.replaceChildren(<>
-    <p>(Read <a href='#' onclick={doRandomBookSnippetReal}>another</a>)</p>
+    <p>(Read <a href='#' onclick={showRandomBookSnippet}>another</a>)</p>
 
     <h3><a href={snippet.route}>{snippet.renderedTitle}</a></h3>
     <p><small>{snippet.mins} min &bull; Digitized on {formatDate(snippet.date)}</small></p>
@@ -71,8 +61,20 @@ async function reflectUrl(slug: string) {
   </>);
 }
 
-async function doRandomBookSnippet(fn: (slugs: string[]) => string) {
+async function showBookSnippet(fn: (slugs: string[]) => string) {
   const slug = fn(await snippetIds);
-  history.pushState(slug, '');
   reflectUrl(slug);
+}
+
+function getSnippetOfTheHour(slugs: string[]) {
+  const yearStart = new Date(new Date().getFullYear(), 0, 1).getTime();
+  const yearDuration = (1000 * 60 * 60 * 24 * 365);
+  const now = Date.now();
+  const percent = (now - yearStart) / yearDuration;
+  return slugs[Math.floor(percent * slugs.length)]!;
+}
+
+function showRandomBookSnippet(e: Event) {
+  e.preventDefault();
+  showBookSnippet(randomElement);
 }
