@@ -14,7 +14,7 @@ export default <>
 
     <body>
       <div id="root" />
-      <script src="./$client.js" type='module'></script>
+      <script src="./client.js" type='module'></script>
     </body>
 
   </html>
