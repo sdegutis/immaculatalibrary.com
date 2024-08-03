@@ -29,7 +29,7 @@ export default allBooks.filter(book => book.data.complete).map(book => {
     <EmptyPage>
 
       <link rel="stylesheet" href='/css/page/read-book.css' />
-      <script type='module' src='./$read-whole-book.js' data-book={book.slug} />
+      <script type='module' src='./read-whole-book.js' data-book={book.slug} />
 
       <main>
 

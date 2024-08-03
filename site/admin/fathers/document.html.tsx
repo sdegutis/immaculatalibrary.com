@@ -2,7 +2,7 @@ import handlers from "handlers!";
 import { Typography } from "../../components/$typography.js";
 import { EmptyPage } from "../../components/page.js";
 import { FatherQuote } from "../../model/fatherquotes.js";
-import { Quote } from "./$document-client.js";
+import { Quote } from "./document-client.js";
 
 handlers.set('/create-father-quotes', body => {
   const params = new URLSearchParams(body);
@@ -22,7 +22,7 @@ handlers.set('/create-father-quotes', body => {
 export default <>
   <EmptyPage>
     <link rel='stylesheet' href='./document.css' />
-    <script src='./$document-client.js' type='module'></script>
+    <script src='./document-client.js' type='module'></script>
 
     <main>
       <form id='left-panel' method='POST' action='/create-father-quotes'>

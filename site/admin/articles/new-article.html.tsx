@@ -21,7 +21,7 @@ handlers.set('/create-article', body => {
 export default <>
   <EmptyPage>
     <link rel='stylesheet' href='./new-article.css' />
-    <script src='./$new-article.js' type='module'></script>
+    <script src='./new-article.js' type='module'></script>
 
     <main>
       <div id='left-panel'>

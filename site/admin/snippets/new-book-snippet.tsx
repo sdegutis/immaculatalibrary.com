@@ -2,8 +2,8 @@ import MarkdownIt from 'https://cdn.jsdelivr.net/npm/markdown-it@13.0.2/+esm';
 import { mdOptions } from '../../components/$markdown.js';
 import { SnippetJson } from '../../scripts/data/snippets/[snippet].json.js';
 import { calculateReadingMins } from '../../util/$helpers.js';
-import { slugify } from '../util/$helpers.js';
-import { loadMonaco } from '../util/$monaco.js';
+import { slugify } from '../util/helpers.js';
+import { loadMonaco } from '../util/monaco.js';
 
 const monaco = await loadMonaco();
 

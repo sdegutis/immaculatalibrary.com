@@ -2,7 +2,7 @@ import handlers from 'handlers!';
 import { EmptyPage } from "../../components/page.js";
 import { Book } from "../../model/books.js";
 import { allCategories, categoriesBySlug } from "../../model/categories.js";
-import { slugify } from "../util/$helpers.js";
+import { slugify } from "../util/helpers.js";
 
 handlers.set('/create-book', body => {
   const params = new URLSearchParams(body);
