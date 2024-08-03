@@ -1,4 +1,4 @@
-import { LeftArrow, RightArrow } from "../scripts/$arrows.js";
+import { LeftArrow, RightArrow } from "../scripts/arrows.js";
 import { CircularNav, Nav, Navable } from "./nav.js";
 import { Panel } from "./panel.js";
 

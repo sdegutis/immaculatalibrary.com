@@ -16,6 +16,6 @@ export function LatestSnippetsArea() {
         <li><LoadingParagraph lines={2} /></li>
       </ul>
     </div>
-    <script type='module' src='/scripts/$latest-book-snippets.js' />
+    <script type='module' src='/scripts/latest-book-snippets.js' />
   </>;
 }

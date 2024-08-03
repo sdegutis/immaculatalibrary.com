@@ -4,7 +4,7 @@ import { LoadingParagraph } from "./$loading.js";
 import { PaginatorLoading } from "./paginator.js";
 
 export const ArticlesList = () => <>
-  <script type='module' src='/scripts/$paginate.js' />
+  <script type='module' src='/scripts/paginate.js' />
   <div>
     <h2>All Articles</h2>
     <div data-paginate='7'>

@@ -24,7 +24,7 @@ export default allCategories.map(cat => [cat.slug, <>
     <Spaced>
       <SplitColumn>
 
-        <script type='module' src='/scripts/$paginate.js' />
+        <script type='module' src='/scripts/paginate.js' />
 
         <section>
           <h2>Books</h2>

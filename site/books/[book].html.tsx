@@ -89,7 +89,7 @@ export default allBooks.map(book => [book.slug, <>
         </div>
 
         <div>
-          <script type='module' src='/scripts/$book-page.js' />
+          <script type='module' src='/scripts/book-page.js' />
           <h3>Snippets from this book</h3>
           <div id='snippets-in-book' data-book={book.slug}>
             <p><LoadingLine width="7em" /></p>

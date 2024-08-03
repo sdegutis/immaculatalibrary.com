@@ -2,7 +2,7 @@ import MarkdownIt from 'https://cdn.jsdelivr.net/npm/markdown-it@13.0.2/+esm';
 import { HomeLoading } from '../components/$loading.js';
 import { mdOptions } from '../components/$markdown.js';
 import { formatDate } from "../util/format-date.js";
-import { randomElement, sleep } from './$util.js';
+import { randomElement, sleep } from './util.js';
 import { SnippetJson } from './data/snippets/[snippet].json.js';
 
 const container = document.getElementById('random-book-snippet') as HTMLDivElement;

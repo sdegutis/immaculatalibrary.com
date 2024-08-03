@@ -1,5 +1,5 @@
-import { LeftArrow, RightArrow } from "./$arrows.js";
-import { Reactive, reactTo } from "./$reactive.js";
+import { LeftArrow, RightArrow } from "./arrows.js";
+import { Reactive, reactTo } from "./reactive.js";
 
 export function makePaginator<T>(
   items: Reactive<T[]>,

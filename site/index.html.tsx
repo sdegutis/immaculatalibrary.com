@@ -66,7 +66,7 @@ export default <>
                 </div>
               </Typography>
             </div>
-            <script type='module' src='/scripts/$home.js' />
+            <script type='module' src='/scripts/home.js' />
           </FadeIn>
 
           <div>

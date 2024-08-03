@@ -1,4 +1,4 @@
-import { randomElement } from "./$util.js";
+import { randomElement } from "./util.js";
 
 export default 0;
 

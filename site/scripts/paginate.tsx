@@ -1,5 +1,5 @@
-import { makePaginator } from "./$paginator.js";
-import { Reactive, reactTo } from "./$reactive.js";
+import { makePaginator } from "./paginator.js";
+import { Reactive, reactTo } from "./reactive.js";
 
 for (const div of document.querySelectorAll<HTMLElement>('[data-paginate]')) {
   enablePagination(div, (+div.dataset["paginate"]!));

@@ -12,7 +12,7 @@ export default <>
 
         <div>
 
-          <script type='module' src='/scripts/$snippets-page.js' />
+          <script type='module' src='/scripts/snippets-page.js' />
           <link rel="stylesheet" href='/css/page/snippets.css' />
 
           <h2>Find Book Snippets</h2>

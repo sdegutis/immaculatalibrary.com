@@ -18,7 +18,7 @@ export default <>
 
         <div>
 
-          <script src='/scripts/$books-page.js' type='module'></script>
+          <script src='/scripts/books-page.js' type='module'></script>
           <link rel="stylesheet" href='/css/page/books.css' />
 
           <h2>Find Books</h2>
