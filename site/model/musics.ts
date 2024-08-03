@@ -1,5 +1,5 @@
 import allMusicFiles from "../data/music/";
-import { DataFile } from '../util/data-files.js';
+import { DataFile } from '../util/_datafiles.js';
 
 interface MusicFile {
   title: string;

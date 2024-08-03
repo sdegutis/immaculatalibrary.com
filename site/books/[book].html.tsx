@@ -6,8 +6,8 @@ import { TypicalPage } from "../components/page.js";
 import { PaginatorLoading } from "../components/paginator.js";
 import { Rating } from "../components/rating.js";
 import { allBooks } from "../model/books.js";
-import { formatDate } from "../util/$format-date.js";
-import { markdown } from "../util/helpers.js";
+import { formatDate } from "../util/format-date.js";
+import { markdown } from "../util/_helpers.js";
 
 export default allBooks.map(book => [book.slug, <>
   <TypicalPage title="Books" image={book.imageBig} page="Books">

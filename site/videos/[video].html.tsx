@@ -4,7 +4,7 @@ import { VideosList } from "../components/movies-sidebar.js";
 import { TypicalPage } from "../components/page.js";
 import { allVideos } from "../model/videos.js";
 import { MovieTabs } from "../movies.html.js";
-import { markdown } from "../util/helpers.js";
+import { markdown } from "../util/_helpers.js";
 
 export default allVideos.map(video => {
   return [video.slug, <>

@@ -7,7 +7,7 @@ import { Rating } from "../../components/rating.js";
 import { SiteFooter } from "../../components/site-footer.js";
 import { allBooks } from "../../model/books.js";
 import { allSnippets } from "../../model/snippets.js";
-import { markdown, sortBy } from "../../util/helpers.js";
+import { markdown, sortBy } from "../../util/_helpers.js";
 
 handlers.set('/reorder-snippets-in-book', (body) => {
   const json = JSON.parse(body) as { slug: string, i: number }[];

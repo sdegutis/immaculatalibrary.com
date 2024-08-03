@@ -1,6 +1,6 @@
 import { Spaced, SplitColumn } from "./components/column.js";
 import { TypicalPage } from "./components/page.js";
-import { markdown } from "./util/helpers.js";
+import { markdown } from "./util/_helpers.js";
 
 export function Markdown(attrs: any, children: any) {
   children = String(children);

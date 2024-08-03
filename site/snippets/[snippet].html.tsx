@@ -6,7 +6,7 @@ import { LatestSnippetsArea } from "../components/latest-snippets.js";
 import { TypicalPage } from "../components/page.js";
 import { Snippet, allSnippets } from "../model/snippets.js";
 import { allTags } from "../model/tag.js";
-import { formatDate } from '../util/$format-date.js';
+import { formatDate } from '../util/format-date.js';
 
 handlers.set('/add-tags-to-snippet', body => {
   const params = new URLSearchParams(body);

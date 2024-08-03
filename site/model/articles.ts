@@ -1,7 +1,7 @@
 import allArticleFiles from '../data/articles/';
-import { calculateReadingMins } from '../util/$helpers.js';
-import { DataFileWithDate } from '../util/data-files.js';
-import { sortBy } from '../util/helpers.js';
+import { calculateReadingMins } from '../util/helpers.js';
+import { DataFileWithDate } from '../util/_datafiles.js';
+import { sortBy } from '../util/_helpers.js';
 
 interface ArticleFile {
   title: string;
