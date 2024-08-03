@@ -6,7 +6,7 @@ const enum Day { SUN, MON, TUE, WED, THUR, FRI, SAT };
 export default <>
   <EmptyPage favicons={<link rel="icon" type="image/png" sizes="32x32" href='./favicon.ico' />}>
     <link rel='stylesheet' href='./style.css' />
-    <script src='./$client.js' type='module' />
+    <script src='./client.js' type='module' />
 
     <Tabs tabs={{
       "Morning":

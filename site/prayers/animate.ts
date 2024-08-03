@@ -1,6 +1,6 @@
 import easesLib from 'https://cdn.jsdelivr.net/npm/eases@1.0.8/+esm';
-import { CircularNav, Navable } from './$nav.js';
-import { notify } from './$notify.js';
+import { CircularNav, Navable } from './nav.js';
+import { notify } from './notify.js';
 
 interface Ease extends Navable<Ease> {
   fn: (t: number) => number;

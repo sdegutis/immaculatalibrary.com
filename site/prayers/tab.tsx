@@ -1,6 +1,6 @@
 import { LeftArrow, RightArrow } from "../scripts/$arrows.js";
-import { CircularNav, Nav, Navable } from "./$nav.js";
-import { Panel } from "./$panel.js";
+import { CircularNav, Nav, Navable } from "./nav.js";
+import { Panel } from "./panel.js";
 
 export const tabBodies = document.getElementById('tabs-bodies') as HTMLDivElement;
 const tabNamesArea = document.querySelector<HTMLDivElement>('#tabs-names')!;

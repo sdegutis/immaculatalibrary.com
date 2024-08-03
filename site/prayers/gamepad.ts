@@ -1,5 +1,5 @@
-import { nextEase, prevEase } from "./$animate.js";
-import { bounceUnderline, tabs } from "./$tab.js";
+import { nextEase, prevEase } from "./animate.js";
+import { bounceUnderline, tabs } from "./tab.js";
 
 const enum Button {
   A, B, X, Y,
