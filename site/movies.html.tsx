@@ -2,7 +2,7 @@ import { Typography } from "./components/$typography.js";
 import { Spaced, SplitColumn } from "./components/column.js";
 import { MoviesList } from "./components/movies-sidebar.js";
 import { TypicalPage } from "./components/page.js";
-import { makeTabs } from "./components/tabs.js";
+import { makeTabs } from "./components/_tabs.js";
 
 export const MovieTabs = makeTabs([
   { href: '/movies.html', title: 'Catholic Movies' },

@@ -7,7 +7,7 @@ import { EmptyPage } from "./components/page.js";
 import { QuickLinks } from "./components/quicklinks.js";
 import { SiteFooter } from "./components/site-footer.js";
 import { SiteHeader } from "./components/site-header.js";
-import { VerifyHuman } from "./components/verifyhuman.js";
+import { VerifyHuman } from "./components/_verifyhuman.js";
 import { Markdown } from "./fathers.html.js";
 import { allBooks } from "./model/books.js";
 

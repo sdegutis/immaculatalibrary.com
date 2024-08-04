@@ -3,7 +3,7 @@ import { Admin } from './components/admin.js';
 import { Spaced, SplitColumn } from './components/column.js';
 import { TypicalPage } from './components/page.js';
 import { PaginatorLoading } from './components/paginator.js';
-import { makeTabs } from './components/tabs.js';
+import { makeTabs } from './components/_tabs.js';
 
 export const BookTabs = makeTabs([
   { href: '/books.html', title: 'Books' },
