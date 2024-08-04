@@ -72,6 +72,7 @@ books:
   - wisdom-and-wit-of-blessed-thomas-more
   - bernadette-of-lourdes
   - story-of-a-soul
+  - revelations-of-st-bridget
 sortOrder: 5
 ---
 
