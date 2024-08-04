@@ -41,6 +41,17 @@ export default <>
       } />
 
       <Spaced>
+        <CenteredColumn>
+          <p>
+            <a target='_blank' href='https://www.vatican.va/content/francesco/en/letters/2024/documents/20240717-lettera-ruolo-letteratura-formazione.html'>
+              Letter of Pope Francis on Literature
+            </a><br />
+            August 4, 2024
+          </p>
+        </CenteredColumn>
+      </Spaced>
+
+      <Spaced>
         <SplitColumn>
 
           {/* <img
