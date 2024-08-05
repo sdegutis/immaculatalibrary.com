@@ -1,4 +1,4 @@
-import { Spaced, SplitColumn } from "./components/column.js";
+import { Column, Spaced, SplitColumn } from "./components/column.js";
 import { TypicalPage } from "./components/page.js";
 import { markdown } from "./util/_helpers.js";
 
@@ -6,6 +6,51 @@ export function Markdown(attrs: any, children: any) {
   children = String(children);
   return markdown.render(children);
 }
+
+const others: Record<string, { id: string, title: string }[]> = {
+  'Chrysostom': [
+    { id: 'libraryoffathers0000unse_r8l9', title: 'Homilies of S. John Chrysostom on the Gospel of St. John, Part II. Hom. XLII.-LXXXVIII.' },
+    { id: 'libraryoffathers0004unse_b6j5', title: 'Homilies of S. John Chrysostom on First Corinthians, Part I. Hom. I.-XXIV.' },
+    { id: 'libraryoffathers0033unse', title: 'Homilies of S. John Chrysostom on Acts, Part I. Hom. I.-XXVIII.' },
+    { id: 'libraryoffathers0035unse', title: 'Homilies of S. John Chrysostom on Acts, Part II. Hom. XXIX.-LV.' },
+    { id: 'libraryoffathers0000unse', title: 'Homilies of S. John Chrysostom on Romans' },
+    { id: 'vol2pt2libraryof00unse', title: 'Homilies of S. John Chrysostom on Matthew, Part II. Hom. XXVI.-LVIII.' },
+    { id: 'vol6libraryoffat00unse', title: 'Commentary on Galatians and Homilies on Ephesians of S. John Chrysostom' },
+    { id: 'vol7libraryoffat00unse', title: 'Homilies of S. John Chrysostom on Romans' },
+    { id: 'vol9libraryoffat00unse', title: 'Homilies of S. John Chrysostom on The Statues or To the People of Antioch' },
+    { id: 'vol11libraryoffa00unse', title: 'Homilies of S. John Chrysostom on Matthew, Part I. Hom. I.-XXV.' },
+    { id: 'vol12libraryoffa00unse', title: 'Homilies of S. John Chrysostom on Timothy, Titus, and Philemon' },
+    { id: 'vol14libraryoffa00unse', title: 'Homilies of S. John Chrysostom on Philippians, Colossians, and Thessalonians' },
+    { id: 'vol27libraryoffa00unse', title: 'Homilies of S. John Chrysostom on Second Corinthians' },
+    { id: 'vol28libraryoffa00unse', title: 'Homilies of S. John Chrysostom on John, Part I. Hom. I.-XLI.' },
+    { id: 'vol33libraryoffa00unse', title: 'Homilies of Chrysostom on Acts, Part I. Hom. I-XXVIII.' },
+    { id: 'vol34libraryoffa00unse', title: 'Homilies of Chrysostom on Matthew, Part III. Hom. LIX.-XC.' },
+    { id: 'vol35libraryoffa00unse', title: 'Homilies of Chrysostom on Matthew, Part II. Hom. XXIX-LV' },
+    { id: 'vol36libraryoffa00unse', title: 'Homilies of Chrysostom on Acts, Part II. Hom. XLII-LXXXVIII' },
+    { id: 'vol45libraryoffa00unse', title: 'Homilies of Chrysostom on First Corinthians' },
+  ],
+  'Augustine': [
+    { id: 'vol16libraryoffa00unse', title: 'Sermons on Selected Lessons of The New Testament by S. Augustine, Vol. I. Matthew, Mark, Luke' },
+    { id: 'vol20libraryoffa00unse', title: 'Sermons on Selected Lessons of the New Testament by S. Augustine, Vol II. John, Acts, Romans, 1 Corinthians, Galatians, Ephesians, Philippians, 1 Thessalonians, 1 Timothy, Titus, James, 1 John' },
+    { id: 'vol22libraryoffa00unse', title: 'Seventeen Short Treatises of S. Augustine' },
+    { id: 'vol26libraryoffa00unse', title: 'Homilies on John and 1 John by Augustine, Vol. I. (Hom. L-XLIII, 1. John. I-VIII)' },
+    { id: 'vol29libraryoffa00unse', title: 'Homilies on John and 1 John by S. Augustine, Vol. II.' },
+  ],
+  'Athanasius': [
+    { id: 'vol38libraryoffa00unse', title: 'The First Epistles of S. Athanasius' },
+    { id: 'vol13libraryoffa00unse', title: 'Historical Tracts of S. Athanasius' },
+    { id: 'vol8libraryoffat00unse', title: 'Select Treatises of S. Athanasius in Controversy with the Arians' },
+    { id: 'vol19libraryoffa00unse', title: 'Select Treatises of S. Athanasius in Controversy with the Arians' },
+  ],
+  'Various Fathers': [
+    { id: 'vol3libraryoffat00unse_0', title: 'Treatises of S. Caecilius Cyprian' },
+    { id: 'vol10libraryoffa00unse', title: 'Tertullian, Vol. I. Apologetic and Practical Treatises' },
+    { id: 'vol41libraryoffa00unse', title: 'Select Works of S. Ephrem the Syrian' },
+    { id: 'vol17libraryoffa00unse', title: 'Epistles of S. Cyprian with the Council of Carthage on the Baptism of Heretics, To which are added the extant works of S. Pacian, Bishop of Barcelona' },
+    { id: 'libraryoffathers0002unse', title: 'Catechetical Lectures of St. Cyril of Jerusalem' },
+  ],
+};
+
 
 export default <>
   <TypicalPage title="Fathers of the Church" image='/img/page/articles.jpg' page="Fathers">
@@ -56,6 +101,21 @@ export default <>
         </div>
 
       </SplitColumn>
+    </Spaced>
+
+    <Spaced>
+
+      <Column>
+        {Object.entries(others).map(([groupTitle, group]) => <>
+          <h3>{groupTitle}</h3>
+          <ul>
+            {group.map(({ id, title }) => <>
+              <li><a target='_blank' href={`https://archive.org/details/${id}/mode/2up?view=theater`}>{title}</a></li>
+            </>)}
+          </ul>
+        </>)}
+      </Column>
+
     </Spaced>
 
   </TypicalPage>
