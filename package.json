@@ -28,6 +28,7 @@
     "typescript": "^5.5.2"
   },
   "dependencies": {
+    "@imlib/cli": "^0.0.2",
     "@imlib/core": "^2.2.2",
     "@imlib/runtimetypes": "^0.0.1",
     "js-yaml": "^4.1.0",
