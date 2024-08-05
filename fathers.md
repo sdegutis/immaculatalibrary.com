@@ -136,15 +136,17 @@ vol19libraryoffa00unse
 Select Treatises of S. Athanasius in Controversy with the Arians
 MDCCCXLIV
 
+libraryoffathers0002unse
+a6784913p02cyriuoft
+catecheticallect00cyririch
+Catechetical Lectures of St. Cyril of Jerusalem
+
+
 
 
 
 
 ### Selected Augustine
-
-vol1libraryoffat00unse
-Confessions of Augustine
-MDCCCLIII
 
 vol16libraryoffa00unse
 Sermons on Selected Lessons of The New Testament by S. Augustine
@@ -169,16 +171,3 @@ vol29libraryoffa00unse
 Homilies on John and 1 John by S. Augustine
 Vol. II.
 1849
-
-
-
-
-### WIP
-
-
-libraryoffathers0002unse
-a6784913p02cyriuoft
-catecheticallect00cyririch
-Catechetical Lectures of St. Cyril of Jerusalem
-
-
