@@ -29,7 +29,7 @@ body {
 
 a {
   color: var(--blue-bg);
-  text-underline-offset: 3px;
+  text-underline-offset: 2px;
   text-decoration-color: #19f7;
   transition: all 100ms ease-in-out;
 }
