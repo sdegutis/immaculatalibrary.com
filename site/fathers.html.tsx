@@ -106,7 +106,7 @@ export default <>
 
       <Column>
         <h3>More Fathers</h3>
-        <p>These books have not been formally added to this site yet, but they are linked here for your convenience.</p>
+        <p>These books have not been formally added to this site yet; they are linked here for convenience.</p>
         {Object.entries(others).map(([groupTitle, group]) => <>
           <h4>{groupTitle}</h4>
           <ul>
