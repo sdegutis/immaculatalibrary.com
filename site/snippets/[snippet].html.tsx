@@ -1,12 +1,13 @@
 import handlers from "handlers!";
+import { allSnippets } from "../_model/snippets.js";
+import { allTags } from "../_model/tag.js";
 import { Typography } from "../components/$typography.js";
 import { Admin } from "../components/admin.js";
 import { Spaced, SplitColumn } from "../components/column.js";
 import { LatestSnippetsArea } from "../components/latest-snippets.js";
 import { TypicalPage } from "../components/page.js";
-import { Snippet, allSnippets } from "../_model/snippets.js";
-import { allTags } from "../_model/tag.js";
 import { formatDate } from '../util/format-date.js';
+import { PrevNextLinks } from "./snippet-links.js";
 
 handlers.set('/add-tags-to-snippet', body => {
   const params = new URLSearchParams(body);
@@ -110,31 +111,3 @@ export default allSnippets.map(snippet => {
     </TypicalPage>
   </>];
 });
-
-function PrevNextLinks({ snippet }: { snippet: Snippet }) {
-  return <>
-    <div class='prevnextlinks'>
-      <span class='header'>Other snippets in this book</span>
-      <div>
-        <RelativeSnippetLink snippet={snippet.prevSnippet}>Previous</RelativeSnippetLink>
-        <span>
-          <a href={snippet.book.route}>All</a>
-          <br />
-          {snippet.book.snippets.length} total
-        </span>
-        <RelativeSnippetLink snippet={snippet.nextSnippet}>Next</RelativeSnippetLink>
-      </div>
-    </div>
-  </>;
-}
-
-function RelativeSnippetLink({ snippet }: { snippet: Snippet | undefined }, children: any) {
-  return <>
-    <span>
-      {snippet && <>
-        <a href={snippet.route}>{children}</a><br />
-        p.{snippet.data.archivePage}
-      </>}
-    </span>
-  </>;
-}
