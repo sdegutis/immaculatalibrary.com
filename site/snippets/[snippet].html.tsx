@@ -1,5 +1,5 @@
 import handlers from "handlers!";
-import { allSnippets } from "../_model/snippets.js";
+import { allSnippets, Snippet } from "../_model/snippets.js";
 import { allTags } from "../_model/tag.js";
 import { Typography } from "../components/$typography.js";
 import { Admin } from "../components/admin.js";
@@ -7,7 +7,7 @@ import { Spaced, SplitColumn } from "../components/column.js";
 import { LatestSnippetsArea } from "../components/latest-snippets.js";
 import { TypicalPage } from "../components/page.js";
 import { formatDate } from '../util/format-date.js';
-import { PrevNextLinks, RelativeSnippetLink } from "./snippet-links.js";
+import { PrevNextLinks } from "./snippet-links.js";
 
 handlers.set('/add-tags-to-snippet', body => {
   const params = new URLSearchParams(body);
@@ -24,6 +24,17 @@ handlers.set('/edit-snippet', body => {
   snippet.save();
   return snippet.route;
 });
+
+function RelativeSnippetLink({ snippet }: { snippet: Snippet | undefined }, children: any) {
+  return <>
+    <span>
+      {snippet && <>
+        <a href={snippet.route}>{children}</a><br />
+        p.{snippet.data.archivePage}
+      </>}
+    </span>
+  </>;
+}
 
 export default allSnippets.map(snippet => {
   const singleFile = snippet.book.data.files.length === 1;

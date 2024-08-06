@@ -1,7 +1,7 @@
 import MarkdownIt from 'https://cdn.jsdelivr.net/npm/markdown-it@13.0.2/+esm';
 import { HomeLoading, LoadingLine } from '../components/$loading.js';
 import { mdOptions } from '../components/$markdown.js';
-import { PrevNextLinks, SubSnippet } from '../snippets/snippet-links.js';
+import { PrevNextLinks } from '../snippets/snippet-links.js';
 import { formatDate } from "../util/format-date.js";
 import { SnippetJson } from './data/snippets/[snippet].json.js';
 import { randomElement, sleep } from './util.js';
@@ -15,17 +15,17 @@ const DURATIONS = { long: 1, short: .3 };
 
 renderSnippet(getSnippetOfTheHour(await snippetIds), 'long');
 
-function RelativeSnippetLink({ snippet }: { snippet: SubSnippet | undefined }, children: any) {
+function RelativeSnippetLink({ snippet }: { snippet: string | undefined }, children: any) {
   const span = <span /> as HTMLSpanElement;
 
   if (snippet) {
     span.replaceChildren(<LoadingLine width='3em' />);
 
-    (fetch(`/scripts/data/snippets/${snippet.route}.json`)
+    (fetch(`/scripts/data/snippets/${snippet}.json`)
       .then<SnippetJson>(res => res.json())
       .then(other => {
         span.replaceChildren(<>
-          <a onclick={nextInBook(snippet.route)} href={other.route}>{children}</a><br />
+          <a onclick={nextInBook(snippet)} href={other.route}>{children}</a><br />
           p.{other.archivePage}
         </>);
       }));
@@ -53,14 +53,8 @@ async function renderSnippet(slug: string, duration: keyof typeof DURATIONS) {
             route: snippet.bookRoute,
             snippets: { length: snippet.bookSnippetsCount },
           },
-          prevSnippet: {
-            data: { archivePage: snippet.archivePage },
-            route: snippet.prevSnippet,
-          },
-          nextSnippet: {
-            data: { archivePage: snippet.archivePage },
-            route: snippet.nextSnippet,
-          },
+          prevSnippet: snippet.prevSnippet,
+          nextSnippet: snippet.nextSnippet,
         }}
         otherLink={RelativeSnippetLink}
       />

@@ -1,9 +1,4 @@
-export interface SubSnippet {
-  route: string,
-  data: { archivePage: string },
-}
-
-interface Snippet {
+interface Snippet<SubSnippet> {
   book: {
     route: string,
     snippets: { length: number },
@@ -12,8 +7,8 @@ interface Snippet {
   nextSnippet?: SubSnippet,
 }
 
-export function PrevNextLinks(attrs: {
-  snippet: Snippet,
+export function PrevNextLinks<SubSnippet>(attrs: {
+  snippet: Snippet<SubSnippet>,
   otherLink: JSX.Component<{ snippet: SubSnippet | undefined }>,
 }) {
   return <>
@@ -30,16 +25,5 @@ export function PrevNextLinks(attrs: {
         <attrs.otherLink snippet={attrs.snippet.nextSnippet}>Next</attrs.otherLink>
       </div>
     </div>
-  </>;
-}
-
-export function RelativeSnippetLink({ snippet }: { snippet: SubSnippet | undefined }, children: any) {
-  return <>
-    <span>
-      {snippet && <>
-        <a href={snippet.route}>{children}</a><br />
-        p.{snippet.data.archivePage}
-      </>}
-    </span>
   </>;
 }
