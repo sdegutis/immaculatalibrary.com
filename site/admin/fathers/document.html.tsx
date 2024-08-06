@@ -1,7 +1,7 @@
 import handlers from "handlers!";
 import { Typography } from "../../components/$typography.js";
 import { EmptyPage } from "../../components/page.js";
-import { FatherQuote } from "../../model/fatherquotes.js";
+import { FatherQuote } from "../../_model/fatherquotes.js";
 import { Quote } from "./document-client.js";
 
 handlers.set('/create-father-quotes', body => {

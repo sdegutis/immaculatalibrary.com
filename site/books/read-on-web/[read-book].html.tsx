@@ -5,8 +5,8 @@ import { Navlinks } from "../../components/navlinks.js";
 import { EmptyPage } from "../../components/page.js";
 import { Rating } from "../../components/rating.js";
 import { SiteFooter } from "../../components/site-footer.js";
-import { allBooks } from "../../model/books.js";
-import { allSnippets } from "../../model/snippets.js";
+import { allBooks } from "../../_model/books.js";
+import { allSnippets } from "../../_model/snippets.js";
 import { markdown, sortBy } from "../../util/_helpers.js";
 
 handlers.set('/reorder-snippets-in-book', (body) => {

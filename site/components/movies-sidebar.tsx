@@ -1,5 +1,5 @@
-import { allMovies } from '../model/movies.js';
-import { allVideos } from '../model/videos.js';
+import { allMovies } from '../_model/movies.js';
+import { allVideos } from '../_model/videos.js';
 
 export const MoviesList = () => <div>
   <h2>All Movies</h2>

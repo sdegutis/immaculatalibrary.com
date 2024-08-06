@@ -1,4 +1,4 @@
-import { Snippet, allSnippets } from "../../model/snippets.js";
+import { Snippet, allSnippets } from "../../_model/snippets.js";
 
 export type SnippetJson = ReturnType<typeof snippetToJson>;
 

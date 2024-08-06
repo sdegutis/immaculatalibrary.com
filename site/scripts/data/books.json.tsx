@@ -1,4 +1,4 @@
-import { Book, allBooks } from "../../model/books.js";
+import { Book, allBooks } from "../../_model/books.js";
 
 function bookToJson(book: Book) {
   return {

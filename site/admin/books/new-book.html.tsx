@@ -1,7 +1,7 @@
 import handlers from 'handlers!';
 import { EmptyPage } from "../../components/page.js";
-import { Book } from "../../model/books.js";
-import { allCategories, categoriesBySlug } from "../../model/categories.js";
+import { Book } from "../../_model/books.js";
+import { allCategories, categoriesBySlug } from "../../_model/categories.js";
 import { slugify } from "../util/helpers.js";
 
 handlers.set('/create-book', body => {

@@ -5,7 +5,7 @@ import { Spaced, SplitColumn } from "../components/column.js";
 import { TypicalPage } from "../components/page.js";
 import { PaginatorLoading } from "../components/paginator.js";
 import { Rating } from "../components/rating.js";
-import { allBooks } from "../model/books.js";
+import { allBooks } from "../_model/books.js";
 import { formatDate } from "../util/format-date.js";
 import { markdown } from "../util/_helpers.js";
 

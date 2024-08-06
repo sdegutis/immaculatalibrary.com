@@ -1,4 +1,4 @@
-import { allFatherQuotes } from "../model/fatherquotes.js";
+import { allFatherQuotes } from "../_model/fatherquotes.js";
 
 export function FathersSearchbar() {
   return <>

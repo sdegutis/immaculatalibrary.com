@@ -2,7 +2,7 @@ import { Typography } from "../components/$typography.js";
 import { ArticlesList } from "../components/articles-list.js";
 import { Spaced, SplitColumn } from "../components/column.js";
 import { TypicalPage } from "../components/page.js";
-import { allArticles } from "../model/articles.js";
+import { allArticles } from "../_model/articles.js";
 import { formatDate } from '../util/format-date.js';
 import { markdown } from "../util/_helpers.js";
 

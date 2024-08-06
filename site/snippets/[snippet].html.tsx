@@ -4,8 +4,8 @@ import { Admin } from "../components/admin.js";
 import { Spaced, SplitColumn } from "../components/column.js";
 import { LatestSnippetsArea } from "../components/latest-snippets.js";
 import { TypicalPage } from "../components/page.js";
-import { Snippet, allSnippets } from "../model/snippets.js";
-import { allTags } from "../model/tag.js";
+import { Snippet, allSnippets } from "../_model/snippets.js";
+import { allTags } from "../_model/tag.js";
 import { formatDate } from '../util/format-date.js';
 
 handlers.set('/add-tags-to-snippet', body => {

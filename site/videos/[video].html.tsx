@@ -2,7 +2,7 @@ import { Typography } from "../components/$typography.js";
 import { Spaced, SplitColumn } from "../components/column.js";
 import { VideosList } from "../components/movies-sidebar.js";
 import { TypicalPage } from "../components/page.js";
-import { allVideos } from "../model/videos.js";
+import { allVideos } from "../_model/videos.js";
 import { MovieTabs } from "../movies.html.js";
 import { markdown } from "../util/_helpers.js";
 

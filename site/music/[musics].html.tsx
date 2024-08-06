@@ -2,7 +2,7 @@ import { Typography } from "../components/$typography.js";
 import { Spaced, SplitColumn } from "../components/column.js";
 import { MusicSidebar } from "../components/music-sidebar.js";
 import { TypicalPage } from "../components/page.js";
-import { allMusics } from "../model/musics.js";
+import { allMusics } from "../_model/musics.js";
 import { markdown } from "../util/_helpers.js";
 
 function EmbedYoutube(attrs: { youtube: string }) {

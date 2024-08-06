@@ -9,7 +9,7 @@ import { SiteFooter } from "./components/site-footer.js";
 import { SiteHeader } from "./components/site-header.js";
 import { VerifyHuman } from "./components/_verifyhuman.js";
 import { Markdown } from "./fathers.html.js";
-import { allBooks } from "./model/books.js";
+import { allBooks } from "./_model/books.js";
 
 export default <>
   <EmptyPage>

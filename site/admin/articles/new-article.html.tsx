@@ -1,7 +1,7 @@
 import handlers from 'handlers!';
 import { Typography } from "../../components/$typography.js";
 import { EmptyPage } from "../../components/page.js";
-import { Article } from "../../model/articles.js";
+import { Article } from "../../_model/articles.js";
 
 handlers.set('/create-article', body => {
   const params = new URLSearchParams(body);
