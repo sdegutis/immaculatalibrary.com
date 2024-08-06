@@ -36,6 +36,7 @@ a {
 
 a:hover {
   text-decoration-color: #19f;
+  text-decoration-thickness: 2px;
 }
 
 [disabled] {
