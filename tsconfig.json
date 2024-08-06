@@ -9,7 +9,7 @@
     "target": "ESNext",
     "noEmit": true,
     "rootDir": "site",
-    "allowSyntheticDefaultImports": false,
+    "allowSyntheticDefaultImports": true,
     "types": [
       "node",
       "@imlib/core/runtime.d.ts"
