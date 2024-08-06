@@ -1,41 +1,6 @@
+import { processSite } from "@imlib/core";
 import * as path from "path/posix";
 import allFiles from '/';
-
-const isDev = !!process.env['DEV'];
-const ARRAY_FILE_REGEX = /\[.+\]/;
-
-const paths: string[] = [];
-
-for (const { path, content } of allFiles) {
-  if (!isDev && path.startsWith('/admin/')) continue;
-
-  let match;
-  if (match = path.match(/\.(.+)\.js$/)) {
-    const filepath = path.slice(0, -3);
-    const exported = require(path).default;
-
-    if (path.match(ARRAY_FILE_REGEX)) {
-      for (const [slug, jsx] of exported) {
-        const filename = filepath.replace(ARRAY_FILE_REGEX, slug);
-        paths.push(filename);
-      }
-    }
-    else {
-      paths.push(filepath);
-    }
-  }
-  else {
-    if (path.endsWith('.md')) {
-      // skip
-    }
-    else if (path.endsWith('.js') && !path.includes('$')) {
-      // skip
-    }
-    else {
-      paths.push(path);
-    }
-  }
-}
 
 export default <>
   {`<?xml version="1.0" encoding="UTF-8"?>`}
@@ -46,7 +11,7 @@ export default <>
       'xmlns': "http://www.sitemaps.org/schemas/sitemap/0.9"
     }}
   >
-    {paths
+    {[...processSite(allFiles).keys()]
       .filter(filepath => filepath.endsWith('.html'))
       .map(filepath => {
         const name = path.basename(filepath);
