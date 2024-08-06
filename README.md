@@ -1,5 +1,7 @@
 Made with [sdegutis/imlib](https://github.com/sdegutis/imlib)
 
+This site's stats:
+
 ```
 $ scc
 ───────────────────────────────────────────────────────────────────────────────
@@ -23,9 +25,18 @@ Processed 4269704 bytes, 4.270 megabytes (SI)
 ───────────────────────────────────────────────────────────────────────────────
 ```
 
+Startup time for this site (1500+ files):
+
 ```
 C:\Program Files\nodejs\node.exe .\node_modules\@imlib\core\out\cli.js dev
 Running on http://localhost:8080
-dev-server.js:104
 Time: 767 ms
+```
+
+Reload time for this site (1500+ files) after reloading:
+
+```
+Rebuilding site...
+Time: 157 ms
+Done.
 ```
