@@ -5,10 +5,16 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "type": "node-terminal",
-      "request": "launch",
       "name": "Launch Program",
-      "command": "npm run dev",
+      "program": "${workspaceFolder}/node_modules/@imlib/core/out/cli.js",
+      "args": [
+        "dev"
+      ],
+      "request": "launch",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "node"
     }
   ]
 }

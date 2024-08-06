@@ -5,8 +5,7 @@
   "main": "out/main.js",
   "scripts": {
     "generate": "imlib generate",
-    "watch": "tsc --watch",
-    "dev": "imlib dev"
+    "watch": "tsc --watch"
   },
   "repository": {
     "type": "git",
