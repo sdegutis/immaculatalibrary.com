@@ -1,4 +1,4 @@
-interface SubSnippet {
+export interface SubSnippet {
   route: string,
   data: { archivePage: string },
 }
@@ -12,25 +12,28 @@ interface Snippet {
   nextSnippet?: SubSnippet,
 }
 
-export function PrevNextLinks({ snippet }: { snippet: Snippet }) {
+export function PrevNextLinks(attrs: {
+  snippet: Snippet,
+  otherLink: JSX.Component<{ snippet: SubSnippet | undefined }>,
+}) {
   return <>
     <link rel='stylesheet' href='/snippets/snippet-links.css' />
     <div class='prevnextlinks'>
       <span class='header'>Other snippets in this book</span>
       <div>
-        <RelativeSnippetLink snippet={snippet.prevSnippet}>Previous</RelativeSnippetLink>
+        <attrs.otherLink snippet={attrs.snippet.prevSnippet}>Previous</attrs.otherLink>
         <span>
-          <a href={snippet.book.route}>All</a>
+          <a href={attrs.snippet.book.route}>All</a>
           <br />
-          {snippet.book.snippets.length} total
+          {attrs.snippet.book.snippets.length} total
         </span>
-        <RelativeSnippetLink snippet={snippet.nextSnippet}>Next</RelativeSnippetLink>
+        <attrs.otherLink snippet={attrs.snippet.nextSnippet}>Next</attrs.otherLink>
       </div>
     </div>
   </>;
 }
 
-function RelativeSnippetLink({ snippet }: { snippet: SubSnippet | undefined }, children: any) {
+export function RelativeSnippetLink({ snippet }: { snippet: SubSnippet | undefined }, children: any) {
   return <>
     <span>
       {snippet && <>

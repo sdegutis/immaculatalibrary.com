@@ -7,7 +7,7 @@ import { Spaced, SplitColumn } from "../components/column.js";
 import { LatestSnippetsArea } from "../components/latest-snippets.js";
 import { TypicalPage } from "../components/page.js";
 import { formatDate } from '../util/format-date.js';
-import { PrevNextLinks } from "./snippet-links.js";
+import { PrevNextLinks, RelativeSnippetLink } from "./snippet-links.js";
 
 handlers.set('/add-tags-to-snippet', body => {
   const params = new URLSearchParams(body);
@@ -92,7 +92,10 @@ export default allSnippets.map(snippet => {
 
             {snippet.renderedBody}
 
-            <PrevNextLinks snippet={snippet} />
+            <PrevNextLinks
+              snippet={snippet}
+              otherLink={RelativeSnippetLink}
+            />
 
             <Spaced>
               <h3>Latest book snippets</h3>

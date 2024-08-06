@@ -10,10 +10,12 @@ function snippetToJson(snippet: Snippet) {
     bookSlug: snippet.data.bookSlug,
     bookRoute: snippet.book.route,
     bookTitle: snippet.book.data.title,
+    bookSnippetsCount: snippet.book.snippets.length,
     archiveLink: snippet.archiveLink,
     archivePage: snippet.data.archivePage,
     archiveSlug: snippet.data.archiveSlug,
     content: snippet.content,
+    prevSnippet: snippet.prevSnippet?.slug ?? '',
     nextSnippet: snippet.nextSnippet?.slug ?? '',
   };
 }

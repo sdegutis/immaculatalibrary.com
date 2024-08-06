@@ -1,9 +1,10 @@
 import MarkdownIt from 'https://cdn.jsdelivr.net/npm/markdown-it@13.0.2/+esm';
-import { HomeLoading } from '../components/$loading.js';
+import { HomeLoading, LoadingLine } from '../components/$loading.js';
 import { mdOptions } from '../components/$markdown.js';
+import { PrevNextLinks, SubSnippet } from '../snippets/snippet-links.js';
 import { formatDate } from "../util/format-date.js";
-import { randomElement, sleep } from './util.js';
 import { SnippetJson } from './data/snippets/[snippet].json.js';
+import { randomElement, sleep } from './util.js';
 
 const container = document.getElementById('random-book-snippet') as HTMLDivElement;
 
@@ -13,6 +14,25 @@ const markdown = MarkdownIt(mdOptions);
 const DURATIONS = { long: 1, short: .3 };
 
 renderSnippet(getSnippetOfTheHour(await snippetIds), 'long');
+
+function RelativeSnippetLink({ snippet }: { snippet: SubSnippet | undefined }, children: any) {
+  const span = <span /> as HTMLSpanElement;
+
+  if (snippet) {
+    span.replaceChildren(<LoadingLine width='3em' />);
+
+    (fetch(`/scripts/data/snippets/${snippet.route}.json`)
+      .then<SnippetJson>(res => res.json())
+      .then(other => {
+        span.replaceChildren(<>
+          <a onclick={nextInBook(snippet.route)} href={other.route}>{children}</a><br />
+          p.{other.archivePage}
+        </>);
+      }));
+  }
+
+  return span;
+}
 
 async function renderSnippet(slug: string, duration: keyof typeof DURATIONS) {
   container.replaceChildren((<HomeLoading />));
@@ -26,11 +46,24 @@ async function renderSnippet(slug: string, duration: keyof typeof DURATIONS) {
   const renderedBody = <>
     <div innerHTML={markdown.render(snippet.content)} />
     {snippet.nextSnippet && <p>
-      <a
-        href='#'
-        style='font-style:italic'
-        onclick={nextInBook(snippet.nextSnippet)}
-      >Read next snippet in book.</a>
+
+      <PrevNextLinks
+        snippet={{
+          book: {
+            route: snippet.bookRoute,
+            snippets: { length: snippet.bookSnippetsCount },
+          },
+          prevSnippet: {
+            data: { archivePage: snippet.archivePage },
+            route: snippet.prevSnippet,
+          },
+          nextSnippet: {
+            data: { archivePage: snippet.archivePage },
+            route: snippet.nextSnippet,
+          },
+        }}
+        otherLink={RelativeSnippetLink}
+      />
     </p>}
   </> as DocumentFragment;
 
