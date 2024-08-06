@@ -10,7 +10,7 @@ sortOrder: 118
 
 > From this miserable slavery the Son of God has delivered us. By the superabundant grace of God we have been redeemed; by the sacrifice of the cross we have been purchased.
 > 
-> Hence the Apostle tells us that "our old man---bur sensual appetite---is crucified with Christ." [Rom. vi. 6.] By the merits of His crucifixion we have been strengthened to subdue and crucify our enemies, inflicting upon them the suffering which they caused us to endure, and reducing to slavery the tyrants whom we formerly served.
+> Hence the Apostle tells us that "our old man---our sensual appetite---is crucified with Christ." [Rom. vi. 6.] By the merits of His crucifixion we have been strengthened to subdue and crucify our enemies, inflicting upon them the suffering which they caused us to endure, and reducing to slavery the tyrants whom we formerly served.
 > 
 > Thus do we verify the words of Isaias: "They shall make them captives that had taken them, and shall subdue their oppressors." [Isaias xiv. 2.] Before the reign of grace the flesh ruled the spirit and made it the slave of the most depraved desires. But strengthened by grace the spirit rules the flesh and makes it the docile instrument of the noblest deeds.
 > 
