@@ -14,6 +14,7 @@ interface Snippet {
 
 export function PrevNextLinks({ snippet }: { snippet: Snippet }) {
   return <>
+    <link rel='stylesheet' href='/snippets/snippet-links.css' />
     <div class='prevnextlinks'>
       <span class='header'>Other snippets in this book</span>
       <div>

@@ -10,26 +10,3 @@
   margin-bottom: 2em;
   font-size: 80%;
 }
-
-.prevnextlinks {
-  text-align: center;
-  font-size: 80%;
-
-  padding-top: 1em;
-  margin-bottom: 2em;
-  border-top: 1px dashed var(--border-color);
-  border-bottom: 1px dashed var(--border-color);
-}
-
-.prevnextlinks .header {
-  font-style: italic;
-  font-weight: bold;
-  margin-bottom: 1em;
-}
-
-.prevnextlinks>div {
-  margin: 1em 0;
-  display: grid;
-  justify-content: space-between;
-  grid-template-columns: 1fr 1fr 1fr;
-}
