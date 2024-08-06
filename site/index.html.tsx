@@ -22,19 +22,17 @@ export default <>
         <Spaced>
           <CenteredColumn>
             <Typography>
-              <FadeIn>
-                <h1 style='text-align:left'>Immaculata Library</h1>
-                <blockquote style='border:none; padding:0'>
-                  <Markdown>
-                    "Have always at hand some approved book of devotion, and read a little of them every day with as much devotion as if you
-                    were reading a letter which those saints had sent you from heaven to show you the way to it, and encourage you to come."
-                  </Markdown>
-                  <p style='margin-left:4em'>&mdash; St. Francis de Sales</p>
-                  <p style='margin-left:2em'>
-                    Introduction to the Devout Life, <a rel="noopener" href="/snippets/2021-06-26-how-we-should-do-holy-reading.html">page 77</a>
-                  </p>
-                </blockquote>
-              </FadeIn>
+              <h1 style='text-align:left'>Immaculata Library</h1>
+              <blockquote style='border:none; padding:0'>
+                <Markdown>
+                  "Have always at hand some approved book of devotion, and read a little of them every day with as much devotion as if you
+                  were reading a letter which those saints had sent you from heaven to show you the way to it, and encourage you to come."
+                </Markdown>
+                <p style='margin-left:4em'>&mdash; St. Francis de Sales</p>
+                <p style='margin-left:2em'>
+                  Introduction to the Devout Life, <a rel="noopener" href="/snippets/2021-06-26-how-we-should-do-holy-reading.html">page 77</a>
+                </p>
+              </blockquote>
             </Typography>
           </CenteredColumn>
         </Spaced> as string
