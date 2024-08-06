@@ -12,7 +12,7 @@
     "allowSyntheticDefaultImports": false,
     "types": [
       "node",
-      "@imlib/core/imlib.d.ts"
+      "@imlib/core/runtime.d.ts"
     ],
     "moduleResolution": "Node",
     "module": "ES2022",
