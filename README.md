@@ -30,7 +30,7 @@ Startup time for this site (1500+ files):
 ```
 C:\Program Files\nodejs\node.exe .\node_modules\@imlib\core\out\cli.js dev
 Running on http://localhost:8080
-Time: 767 ms
+Time: 701 ms
 ```
 
 Reload time for this site (1500+ files) after reloading:

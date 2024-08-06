@@ -29,11 +29,13 @@ body {
 
 a {
   color: var(--blue-bg);
-  text-decoration: none;
+  text-underline-offset: 3px;
+  text-decoration-color: #19f7;
+  transition: all 100ms ease-in-out;
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration-color: #19f;
 }
 
 [disabled] {
