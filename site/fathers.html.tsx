@@ -39,7 +39,6 @@ const others: Record<string, { id: string, title: string }[]> = {
   'Athanasius': [
     { id: 'vol38libraryoffa00unse', title: 'The First Epistles of S. Athanasius' },
     { id: 'vol13libraryoffa00unse', title: 'Historical Tracts of S. Athanasius' },
-    { id: 'vol8libraryoffat00unse', title: 'Select Treatises of S. Athanasius in Controversy with the Arians' },
     { id: 'vol19libraryoffa00unse', title: 'Select Treatises of S. Athanasius in Controversy with the Arians' },
   ],
   'Various Fathers': [
