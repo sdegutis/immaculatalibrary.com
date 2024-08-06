@@ -106,8 +106,10 @@ export default <>
     <Spaced>
 
       <Column>
+        <h3>More Fathers</h3>
+        <p>These books have not been formally added to this site yet, but they are linked here for your convenience.</p>
         {Object.entries(others).map(([groupTitle, group]) => <>
-          <h3>{groupTitle}</h3>
+          <h4>{groupTitle}</h4>
           <ul>
             {group.map(({ id, title }) => <>
               <li><a target='_blank' href={`https://archive.org/details/${id}/mode/2up?view=theater`}>{title}</a></li>
