@@ -44,7 +44,7 @@ export default allBooks.map(book => [book.slug, <>
                 <a href={`http://books.immaculatalibrary.com/${file.pdfFile}`} target="_blank">Download PDF</a>
                 {file.archiveId && <>
                   { } &bull; { }
-                  <a href={`https://archive.org/details/${file.archiveId}?view=theater`} target="_blank">Read Scans</a>
+                  <a href={`https://archive.org/details/${file.archiveId}?view=theater`} target="_blank">Read Online</a>
                 </>}
                 <Admin tag="span">
                   <a href={`/admin/snippets/create.html?book=${book.slug}&scan=${file.archiveId}`}>Make snippet</a>
