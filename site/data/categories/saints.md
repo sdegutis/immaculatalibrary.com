@@ -73,6 +73,7 @@ books:
   - bernadette-of-lourdes
   - story-of-a-soul
   - revelations-of-st-bridget
+  - saint-cajetan
 sortOrder: 5
 ---
 
