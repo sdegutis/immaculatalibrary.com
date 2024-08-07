@@ -242,7 +242,6 @@ function SorrowfulMysteries() {
         'https://upload.wikimedia.org/wikipedia/commons/8/84/Titian_-_The_Crucifixion_of_Christ_-_109_-_Pinacoteca_civica_%22Francesco_Podesti%22.jpg',
         'https://upload.wikimedia.org/wikipedia/commons/6/6a/The_Crucifixion_MET_DT10248.jpg',
         'https://upload.wikimedia.org/wikipedia/commons/8/89/Lucas_Cranach_d.%C3%84._-_Kreuzigung_%281532%2C_Indianapolis_Museum_of_Art%29.jpg',
-        'https://upload.wikimedia.org/wikipedia/commons/1/17/Christ_at_the_Cross_-_Cristo_en_la_Cruz.jpg',
         'https://upload.wikimedia.org/wikipedia/commons/5/5d/Leon_Bonnat_-_The_Crucifixion.jpg',
         'https://upload.wikimedia.org/wikipedia/commons/0/0d/Annibale_Carracci_1560-1609_Pieta.jpg',
         'https://upload.wikimedia.org/wikipedia/commons/2/23/Correggio_deposition.jpg',
