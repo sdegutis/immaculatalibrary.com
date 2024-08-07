@@ -1,7 +1,7 @@
 import { processSite, SiteProcessor } from "@imlib/core";
 import * as path from "path/posix";
 
-const fn: SiteProcessor = (files) => {
+export default ((files) => {
   const out = processSite(files);
 
   out.set('/sitemap.xml', <>
@@ -29,6 +29,4 @@ const fn: SiteProcessor = (files) => {
 
   return out;
 
-};
-
-export default fn;
+}) as SiteProcessor;
