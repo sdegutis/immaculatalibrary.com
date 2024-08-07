@@ -33,10 +33,10 @@ Running on http://localhost:8080
 Time: 701 ms
 ```
 
-Reload time for this site (1500+ files) after reloading:
+Reload time for this site (1500+ files) after saving site/index.html.tsx:
 
 ```
 Rebuilding site...
-Time: 157 ms
+Time: 89 ms
 Done.
 ```
