@@ -39,7 +39,7 @@ export class Tab implements Navable<Tab> {
   onFocus = () => { };
 
   constructor(public button: HTMLAnchorElement) {
-    this.name = button.textContent;
+    this.name = button.textContent!;
     this.button.onclick = (e) => {
       e.preventDefault();
       this.focus();
@@ -63,6 +63,8 @@ export function setupTabs() {
 
     const tab = new Tab(button);
     tabs.add(tab);
+
+    tabBody.id = tab.name;
 
     tab.onFocus = () => moveUnderlineToTab(tab);
 
