@@ -7,4 +7,8 @@ for (const el of document.querySelectorAll(`.show-today:not(.day-${new Date().ge
 
 setupTabs();
 setupGamepads();
-tabs.first.focus();
+
+const tabName = window.location.hash.slice(1);
+const lastTab = [...tabs].find(tab => tab.name === tabName);
+const startTab = lastTab ?? tabs.first;
+startTab.focus();

@@ -26,6 +26,16 @@ export class Nav<T extends Navable<T>> {
     this.last = t;
   }
 
+  [Symbol.iterator]() {
+    let node: T | undefined = this.first;
+    return (function* () {
+      while (node) {
+        yield node;
+        node = node.next;
+      }
+    })();
+  }
+
 }
 
 export class CircularNav<T extends Navable<T>> extends Nav<T> {

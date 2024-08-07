@@ -29,6 +29,8 @@ export function bounceUnderline() {
 
 export class Tab implements Navable<Tab> {
 
+  name;
+
   prev?: Tab;
   next?: Tab;
 
@@ -37,6 +39,7 @@ export class Tab implements Navable<Tab> {
   onFocus = () => { };
 
   constructor(public button: HTMLAnchorElement) {
+    this.name = button.textContent;
     this.button.onclick = (e) => {
       e.preventDefault();
       this.focus();
@@ -49,6 +52,7 @@ export class Tab implements Navable<Tab> {
     tabs.current.button.classList.add('active');
     this.panels.first.focus();
     this.onFocus();
+    location.replace('#' + this.name);
   };
 
 }
