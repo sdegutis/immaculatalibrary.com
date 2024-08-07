@@ -52,7 +52,7 @@ export class Tab implements Navable<Tab> {
     tabs.current.button.classList.add('active');
     this.panels.first.focus();
     this.onFocus();
-    location.replace('#' + this.name);
+    history.replaceState('', '', '#' + this.name);
   };
 
 }
