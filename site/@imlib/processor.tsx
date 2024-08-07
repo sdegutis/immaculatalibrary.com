@@ -3,8 +3,12 @@ import * as path from "path/posix";
 
 export default ((files) => {
   const out = processSite(files);
+  out.set('/sitemap.xml', makeSitemap(out.keys()));
+  return out;
+}) as SiteProcessor;
 
-  out.set('/sitemap.xml', <>
+function makeSitemap(paths: Iterable<string>) {
+  return <>
     {`<?xml version="1.0" encoding="UTF-8"?>`}
     <urlset
       {...{
@@ -13,7 +17,7 @@ export default ((files) => {
         'xmlns': "http://www.sitemaps.org/schemas/sitemap/0.9"
       }}
     >
-      {[...out.keys()]
+      {[...paths]
         .filter(filepath => filepath.endsWith('.html'))
         .map(filepath => {
           const name = path.basename(filepath);
@@ -25,8 +29,5 @@ export default ((files) => {
         })
       }
     </urlset>
-  </> as string);
-
-  return out;
-
-}) as SiteProcessor;
+  </> as string;
+}
