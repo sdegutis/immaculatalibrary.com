@@ -50,9 +50,9 @@ export class Tab implements Navable<Tab> {
     tabs.current.button.classList.remove('active');
     tabs.current = this;
     tabs.current.button.classList.add('active');
+    history.replaceState('', '', '#' + this.name);
     this.panels.first.focus();
     this.onFocus();
-    history.replaceState('', '', '#' + this.name);
   };
 
 }
