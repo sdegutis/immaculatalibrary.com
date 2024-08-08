@@ -11,4 +11,7 @@ setupGamepads();
 const tabName = window.location.hash.slice(1);
 const lastTab = [...tabs].find(tab => tab.name === tabName);
 const startTab = lastTab ?? tabs.first;
-startTab.focus();
+
+setTimeout(() => {
+  startTab.focus();
+}, 0);
