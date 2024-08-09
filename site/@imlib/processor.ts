@@ -8,6 +8,9 @@ export default ((files) => {
     processors.unshift([/^\/admin\//, skip]);
   }
 
+  processors.push([/\.md$/, skip]);
+  processors.push([/_.*\.js$/, skip]);
+
   const out = processSite(files, processors);
   out.set('/sitemap.xml', makeSitemap(out.keys()));
   return out;
