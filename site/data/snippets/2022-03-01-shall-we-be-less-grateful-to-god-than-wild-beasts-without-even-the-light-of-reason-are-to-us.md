@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  Shall we be less grateful to God than wild beasts without even the light of
-  reason are to us?
+title: Shall we be less grateful to God than wild beasts without even the light of reason are to us?
 archiveSlug: sinnersguide00luis
 archivePage: '39'
 bookSlug: the-sinners-guide

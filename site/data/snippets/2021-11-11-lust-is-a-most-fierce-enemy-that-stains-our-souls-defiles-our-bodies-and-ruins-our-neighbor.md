@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  Lust is a most fierce enemy, that stains our souls, defiles our bodies, and
-  ruins our neighbor
+title: Lust is a most fierce enemy, that stains our souls, defiles our bodies, and ruins our neighbor
 archiveSlug: sinnersguide00luis
 archivePage: '344'
 bookSlug: the-sinners-guide

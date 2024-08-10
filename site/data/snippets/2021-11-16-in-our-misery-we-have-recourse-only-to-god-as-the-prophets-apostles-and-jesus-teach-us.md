@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  In our misery, we have recourse only to God, as the Prophets, Apostles, and
-  Jesus teach us
+title: In our misery, we have recourse only to God, as the Prophets, Apostles, and Jesus teach us
 archiveSlug: sinnersguide00luis
 archivePage: '205'
 bookSlug: the-sinners-guide

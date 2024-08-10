@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  We owe the Holy Spirit both for maintaining our virtues and being prevented
-  from sins
+title: We owe the Holy Spirit both for maintaining our virtues and being prevented from sins
 archiveSlug: sinnersguide00luis
 archivePage: '66'
 bookSlug: the-sinners-guide

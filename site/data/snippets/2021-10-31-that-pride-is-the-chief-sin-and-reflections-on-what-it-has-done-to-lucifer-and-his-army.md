@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  That Pride is the chief sin, and reflections on what it has done to Lucifer
-  and his army
+title: That Pride is the chief sin, and reflections on what it has done to Lucifer and his army
 archiveSlug: sinnersguide00luis
 archivePage: '324'
 bookSlug: the-sinners-guide

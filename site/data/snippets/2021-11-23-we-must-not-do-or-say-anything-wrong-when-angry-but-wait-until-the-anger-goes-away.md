@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  We must not do or say anything wrong when angry, but wait until the anger goes
-  away
+title: We must not do or say anything wrong when angry, but wait until the anger goes away
 archiveSlug: sinnersguide00luis
 archivePage: '366'
 bookSlug: the-sinners-guide

@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  Even the pagan philosophers understood the value of a good conscience, and the
-  torment of a guilty one
+title: Even the pagan philosophers understood the value of a good conscience, and the torment of a guilty one
 archiveSlug: sinnersguide00luis
 archivePage: '170'
 bookSlug: the-sinners-guide

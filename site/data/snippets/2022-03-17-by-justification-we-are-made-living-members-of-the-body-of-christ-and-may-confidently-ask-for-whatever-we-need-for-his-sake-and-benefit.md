@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  By justification, we are made living members of the Body of Christ, and may
-  confidently ask for whatever we need for His sake and benefit
+title: By justification, we are made living members of the Body of Christ, and may confidently ask for whatever we need for His sake and benefit
 archiveSlug: sinnersguide00luis
 archivePage: '62'
 bookSlug: the-sinners-guide

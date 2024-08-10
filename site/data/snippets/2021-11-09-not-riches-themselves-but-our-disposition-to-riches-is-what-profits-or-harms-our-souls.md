@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  Not riches themselves, but our disposition to riches, is what profits or harms
-  our souls
+title: Not riches themselves, but our disposition to riches, is what profits or harms our souls
 archiveSlug: sinnersguide00luis
 archivePage: '340'
 bookSlug: the-sinners-guide

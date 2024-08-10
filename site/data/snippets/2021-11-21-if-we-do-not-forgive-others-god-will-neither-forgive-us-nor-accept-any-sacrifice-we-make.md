@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  If we do not forgive others, God will neither forgive us nor accept any
-  sacrifice we make
+title: If we do not forgive others, God will neither forgive us nor accept any sacrifice we make
 archiveSlug: sinnersguide00luis
 archivePage: '364'
 bookSlug: the-sinners-guide

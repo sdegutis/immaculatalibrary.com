@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  We should practice virtue because the abode of the infinitely perfect God will
-  be our reward
+title: We should practice virtue because the abode of the infinitely perfect God will be our reward
 archiveSlug: sinnersguide00luis
 archivePage: '96'
 bookSlug: the-sinners-guide

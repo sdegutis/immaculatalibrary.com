@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  The manner of our redemption might be more marvelous than our redemption
-  itself
+title: The manner of our redemption might be more marvelous than our redemption itself
 archiveSlug: sinnersguide00luis
 archivePage: '47'
 bookSlug: the-sinners-guide

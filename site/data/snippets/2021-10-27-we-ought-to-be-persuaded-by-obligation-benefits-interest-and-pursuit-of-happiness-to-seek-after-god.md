@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  We ought to be persuaded by obligation, benefits, interest, and pursuit of
-  happiness, to seek after God
+title: We ought to be persuaded by obligation, benefits, interest, and pursuit of happiness, to seek after God
 archiveSlug: sinnersguide00luis
 archivePage: '314'
 bookSlug: the-sinners-guide

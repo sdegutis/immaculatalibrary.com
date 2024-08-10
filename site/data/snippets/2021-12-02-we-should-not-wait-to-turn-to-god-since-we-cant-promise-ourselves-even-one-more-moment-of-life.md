@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  We should not wait to turn to God, since we can’t promise ourselves even one
-  more moment of life
+title: We should not wait to turn to God, since we can’t promise ourselves even one more moment of life
 archiveSlug: sinnersguide00luis
 archivePage: '238'
 bookSlug: the-sinners-guide

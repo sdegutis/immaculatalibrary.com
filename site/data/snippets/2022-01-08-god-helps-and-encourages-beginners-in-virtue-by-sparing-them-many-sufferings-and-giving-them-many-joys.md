@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  God helps and encourages beginners in virtue, by sparing them many sufferings,
-  and giving them many joys
+title: God helps and encourages beginners in virtue, by sparing them many sufferings, and giving them many joys
 archiveSlug: sinnersguide00luis
 archivePage: '161'
 bookSlug: the-sinners-guide

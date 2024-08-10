@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  The gratifications of this life can never satisfy our hearts, but only
-  increase our hunger
+title: The gratifications of this life can never satisfy our hearts, but only increase our hunger
 archiveSlug: sinnersguide00luis
 archivePage: '198'
 bookSlug: the-sinners-guide

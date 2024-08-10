@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  God is generous even to those beginning in virtue, so why should we wait to
-  begin?
+title: God is generous even to those beginning in virtue, so why should we wait to begin?
 archiveSlug: sinnersguide00luis
 archivePage: '162'
 bookSlug: the-sinners-guide

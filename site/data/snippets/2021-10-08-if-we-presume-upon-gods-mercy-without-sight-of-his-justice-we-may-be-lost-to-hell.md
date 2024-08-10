@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  If we presume upon God’s Mercy without sight of His Justice, we may be lost to
-  Hell
+title: If we presume upon God’s Mercy without sight of His Justice, we may be lost to Hell
 archiveSlug: sinnersguide00luis
 archivePage: '270'
 bookSlug: the-sinners-guide

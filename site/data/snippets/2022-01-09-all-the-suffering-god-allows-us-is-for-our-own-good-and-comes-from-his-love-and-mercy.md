@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  All the suffering God allows us, is for our own good, and comes from his Love
-  and Mercy
+title: All the suffering God allows us, is for our own good, and comes from his Love and Mercy
 archiveSlug: sinnersguide00luis
 archivePage: '445'
 bookSlug: the-sinners-guide

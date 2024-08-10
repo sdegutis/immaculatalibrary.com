@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  God created us in need so we might humbly turn to him to finish the work of
-  our creation
+title: God created us in need so we might humbly turn to him to finish the work of our creation
 archiveSlug: sinnersguide00luis
 archivePage: '31'
 bookSlug: the-sinners-guide

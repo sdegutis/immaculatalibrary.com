@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  To protect ourselves from Lust, we must guard our hearts, eyes, ears, and
-  tongue from Lustful objects
+title: To protect ourselves from Lust, we must guard our hearts, eyes, ears, and tongue from Lustful objects
 archiveSlug: sinnersguide00luis
 archivePage: '349'
 bookSlug: the-sinners-guide

@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  All creation was given to us by God for our benefit, which we should be
-  grateful to Him for
+title: All creation was given to us by God for our benefit, which we should be grateful to Him for
 archiveSlug: sinnersguide00luis
 archivePage: '36'
 bookSlug: the-sinners-guide

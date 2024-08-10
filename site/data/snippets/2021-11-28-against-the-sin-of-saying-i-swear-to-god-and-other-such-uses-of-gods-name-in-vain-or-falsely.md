@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  Against the sin of saying "I swear to God" and other such uses of God’s name
-  in vain or falsely
+title: Against the sin of saying "I swear to God" and other such uses of God’s name in vain or falsely
 archiveSlug: sinnersguide00luis
 archivePage: '374'
 bookSlug: the-sinners-guide

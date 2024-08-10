@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  Four reasons given by Blessed Duns Scotus on the danger of deathbed
-  conversions
+title: Four reasons given by Blessed Duns Scotus on the danger of deathbed conversions
 archiveSlug: sinnersguide00luis
 archivePage: '254'
 bookSlug: the-sinners-guide

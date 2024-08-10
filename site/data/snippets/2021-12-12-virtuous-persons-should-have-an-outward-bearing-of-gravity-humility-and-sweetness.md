@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  Virtuous persons should have an outward bearing of gravity, humility, and
-  sweetness
+title: Virtuous persons should have an outward bearing of gravity, humility, and sweetness
 archiveSlug: sinnersguide00luis
 archivePage: '395'
 bookSlug: the-sinners-guide

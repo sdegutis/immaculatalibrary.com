@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  Jesus underwent such excessive torture out of his abundantly excessive Love
-  for us
+title: Jesus underwent such excessive torture out of his abundantly excessive Love for us
 archiveSlug: sinnersguide00luis
 archivePage: '48'
 bookSlug: the-sinners-guide

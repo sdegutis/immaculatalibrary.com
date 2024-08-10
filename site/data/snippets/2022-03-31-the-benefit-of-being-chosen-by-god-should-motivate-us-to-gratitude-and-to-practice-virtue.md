@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  The benefit of being chosen by God should motivate us to gratitude and to
-  practice virtue
+title: The benefit of being chosen by God should motivate us to gratitude and to practice virtue
 archiveSlug: sinnersguide00luis
 archivePage: '70'
 bookSlug: the-sinners-guide

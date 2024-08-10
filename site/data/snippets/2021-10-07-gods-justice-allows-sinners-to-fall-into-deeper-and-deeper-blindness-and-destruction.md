@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  God’s Justice allows sinners to fall into deeper and deeper blindness and
-  destruction
+title: God’s Justice allows sinners to fall into deeper and deeper blindness and destruction
 archiveSlug: sinnersguide00luis
 archivePage: '269'
 bookSlug: the-sinners-guide

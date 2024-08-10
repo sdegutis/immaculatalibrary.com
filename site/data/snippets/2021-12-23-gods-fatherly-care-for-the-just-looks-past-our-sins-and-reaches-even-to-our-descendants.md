@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  God’s Fatherly care for the Just looks past our sins, and reaches even to our
-  descendants
+title: God’s Fatherly care for the Just looks past our sins, and reaches even to our descendants
 archiveSlug: sinnersguide00luis
 archivePage: '133'
 bookSlug: the-sinners-guide

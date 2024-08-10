@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  Without virtue, tribulations overwhelm us and we act even more
-  self-destructively
+title: Without virtue, tribulations overwhelm us and we act even more self-destructively
 archiveSlug: sinnersguide00luis
 archivePage: '215'
 bookSlug: the-sinners-guide

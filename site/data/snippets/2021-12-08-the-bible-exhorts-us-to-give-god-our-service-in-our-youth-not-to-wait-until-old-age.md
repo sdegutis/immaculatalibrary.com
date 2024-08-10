@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  The Bible exhorts us to give God our service in our youth, not to wait until
-  old age
+title: The Bible exhorts us to give God our service in our youth, not to wait until old age
 archiveSlug: sinnersguide00luis
 archivePage: '247'
 bookSlug: the-sinners-guide

@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  The peace of the virtuous in contrast with the torment and anxiety of the
-  wicked
+title: The peace of the virtuous in contrast with the torment and anxiety of the wicked
 archiveSlug: sinnersguide00luis
 archivePage: '200'
 bookSlug: the-sinners-guide

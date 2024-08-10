@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  The order and beauty of creation gives us an idea of the power and greatness
-  of God
+title: The order and beauty of creation gives us an idea of the power and greatness of God
 archiveSlug: sinnersguide00luis
 archivePage: '21'
 bookSlug: the-sinners-guide

@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  Those who run after the lust of the eyes, the lust of the flesh, and the pride
-  of life, never know peace in this life
+title: Those who run after the lust of the eyes, the lust of the flesh, and the pride of life, never know peace in this life
 archiveSlug: sinnersguide00luis
 archivePage: '196'
 bookSlug: the-sinners-guide

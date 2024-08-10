@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  By justifying a soul, God not only imparts immeasurable beauty, strength and
-  other gifts to it, but even dwells Himself within it
+title: By justifying a soul, God not only imparts immeasurable beauty, strength and other gifts to it, but even dwells Himself within it
 archiveSlug: sinnersguide00luis
 archivePage: '61'
 bookSlug: the-sinners-guide

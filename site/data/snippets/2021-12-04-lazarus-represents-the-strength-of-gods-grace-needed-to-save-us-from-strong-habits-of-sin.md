@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  Lazarus’s Resurrection shows the strength of God’s grace needed to save us
-  from strong habits of sin
+title: Lazarus’s Resurrection shows the strength of God’s grace needed to save us from strong habits of sin
 archiveSlug: sinnersguide00luis
 archivePage: '242'
 bookSlug: the-sinners-guide

@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  The various circumstances of our being Chosen should move us to deep gratitude
-  and joy
+title: The various circumstances of our being Chosen should move us to deep gratitude and joy
 archiveSlug: sinnersguide00luis
 archivePage: '73'
 bookSlug: the-sinners-guide

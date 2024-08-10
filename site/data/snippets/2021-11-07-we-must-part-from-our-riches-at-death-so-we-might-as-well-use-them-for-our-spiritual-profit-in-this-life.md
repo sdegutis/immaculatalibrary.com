@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  We must part from our riches at death, so we might as well use them for our
-  spiritual profit in this life
+title: We must part from our riches at death, so we might as well use them for our spiritual profit in this life
 archiveSlug: sinnersguide00luis
 archivePage: '338'
 bookSlug: the-sinners-guide

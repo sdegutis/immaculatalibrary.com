@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  The fear we ought to have if we purposely trample under foot the Innocent
-  Blood of Christ our Savior
+title: The fear we ought to have if we purposely trample under foot the Innocent Blood of Christ our Savior
 archivePage: '114'
 archiveSlug: sinnersguide00luis
 bookSlug: the-sinners-guide

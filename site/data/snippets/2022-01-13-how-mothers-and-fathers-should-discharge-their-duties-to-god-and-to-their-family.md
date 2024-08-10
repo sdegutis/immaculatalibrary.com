@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  How Mothers and Fathers should discharge their duties to God and to their
-  family
+title: How Mothers and Fathers should discharge their duties to God and to their family
 archiveSlug: sinnersguide00luis
 archivePage: '451'
 bookSlug: the-sinners-guide

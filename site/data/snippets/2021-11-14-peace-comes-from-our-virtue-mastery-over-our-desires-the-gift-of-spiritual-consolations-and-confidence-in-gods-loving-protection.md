@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  Peace comes from our virtue, mastery over our desires, the gift of spiritual
-  consolations, and confidence in God’s loving protection
+title: Peace comes from our virtue, mastery over our desires, the gift of spiritual consolations, and confidence in God’s loving protection
 archiveSlug: sinnersguide00luis
 archivePage: '202'
 bookSlug: the-sinners-guide

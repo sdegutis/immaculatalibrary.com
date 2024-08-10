@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  The Light of God can instruct our Understanding differently and better than
-  Nature or Schools can
+title: The Light of God can instruct our Understanding differently and better than Nature or Schools can
 archiveSlug: sinnersguide00luis
 archivePage: '150'
 bookSlug: the-sinners-guide

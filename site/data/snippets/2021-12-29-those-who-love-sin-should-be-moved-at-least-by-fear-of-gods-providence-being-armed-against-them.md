@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  Those who Love Sin should be moved at least by Fear of God’s Providence being
-  Armed Against Them
+title: Those who Love Sin should be moved at least by Fear of God’s Providence being Armed Against Them
 archiveSlug: sinnersguide00luis
 archivePage: '141'
 bookSlug: the-sinners-guide

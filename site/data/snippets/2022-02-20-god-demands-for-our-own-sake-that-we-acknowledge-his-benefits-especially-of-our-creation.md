@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  God demands for our own sake that we acknowledge his benefits, especially of
-  our creation
+title: God demands for our own sake that we acknowledge his benefits, especially of our creation
 archiveSlug: sinnersguide00luis
 archivePage: '28'
 bookSlug: the-sinners-guide

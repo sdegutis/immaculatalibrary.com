@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  Speaking evil against virtuous souls, or against consecrated persons, is
-  especially evil
+title: Speaking evil against virtuous souls, or against consecrated persons, is especially evil
 archiveSlug: sinnersguide00luis
 archivePage: '380'
 bookSlug: the-sinners-guide

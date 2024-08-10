@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  Virtue is not practiced because people think it’s difficult, but don’t know
-  its secret beauty and hidden value
+title: Virtue is not practiced because people think it’s difficult, but don’t know its secret beauty and hidden value
 archiveSlug: sinnersguide00luis
 archivePage: '123'
 bookSlug: the-sinners-guide

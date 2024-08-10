@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  The peace, company, glory, harmony, and beauty of Heaven are more than worth
-  some pains on earth.
+title: The peace, company, glory, harmony, and beauty of Heaven are more than worth some pains on earth.
 archivePage: '105'
 archiveSlug: sinnersguide00luis
 bookSlug: the-sinners-guide

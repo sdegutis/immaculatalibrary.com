@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  We must understand the true nature of virtue and sin if we would practice
-  virtue and avoid sin
+title: We must understand the true nature of virtue and sin if we would practice virtue and avoid sin
 archiveSlug: sinnersguide00luis
 archivePage: '321'
 bookSlug: the-sinners-guide

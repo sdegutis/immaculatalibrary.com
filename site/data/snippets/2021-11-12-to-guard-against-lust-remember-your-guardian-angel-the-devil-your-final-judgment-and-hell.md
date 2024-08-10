@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  To guard against Lust, remember your Guardian Angel, the Devil, your final
-  Judgment, and Hell
+title: To guard against Lust, remember your Guardian Angel, the Devil, your final Judgment, and Hell
 archiveSlug: sinnersguide00luis
 archivePage: '350'
 bookSlug: the-sinners-guide

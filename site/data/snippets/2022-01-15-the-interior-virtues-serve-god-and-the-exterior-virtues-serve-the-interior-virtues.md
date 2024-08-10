@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  The interior virtues serve God, and the exterior virtues serve the interior
-  virtues
+title: The interior virtues serve God, and the exterior virtues serve the interior virtues
 archiveSlug: sinnersguide00luis
 archivePage: '455'
 bookSlug: the-sinners-guide

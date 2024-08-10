@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  Short remedies against sloth, covetousness, gluttony, talkativeness, and
-  impurity
+title: Short remedies against sloth, covetousness, gluttony, talkativeness, and impurity
 archiveSlug: sinnersguide00luis
 archivePage: '391'
 bookSlug: the-sinners-guide

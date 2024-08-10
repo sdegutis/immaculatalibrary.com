@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  Our riches, honors, and pleasures will not help us in Hell but only increase
-  our eternal torments
+title: Our riches, honors, and pleasures will not help us in Hell but only increase our eternal torments
 archiveSlug: sinnersguide00luis
 archivePage: '91'
 bookSlug: the-sinners-guide

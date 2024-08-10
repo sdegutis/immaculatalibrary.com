@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  If God so richly rewards us on earth for our good deeds, how much more will he
-  in heaven?
+title: If God so richly rewards us on earth for our good deeds, how much more will he in heaven?
 archiveSlug: sinnersguide00luis
 archivePage: '100'
 bookSlug: the-sinners-guide

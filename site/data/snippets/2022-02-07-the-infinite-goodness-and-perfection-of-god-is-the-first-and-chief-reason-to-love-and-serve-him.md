@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  The Infinite Goodness and Perfection of God is the first and chief reason to
-  Love and Serve Him
+title: The Infinite Goodness and Perfection of God is the first and chief reason to Love and Serve Him
 archiveSlug: sinnersguide00luis
 archivePage: '14'
 bookSlug: the-sinners-guide

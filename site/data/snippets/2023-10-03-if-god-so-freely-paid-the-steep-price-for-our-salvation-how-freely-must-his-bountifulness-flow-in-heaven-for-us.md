@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  If God so freely paid the steep price for our salvation, how freely must his
-  bountifulness flow in heaven for us?
+title: If God so freely paid the steep price for our salvation, how freely must his bountifulness flow in heaven for us?
 archiveSlug: sinnersguide00luis
 archivePage: '100'
 bookSlug: the-sinners-guide

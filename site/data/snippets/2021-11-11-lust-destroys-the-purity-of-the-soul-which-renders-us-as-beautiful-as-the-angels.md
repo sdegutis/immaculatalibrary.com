@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  Lust destroys the purity of the soul which renders us as beautiful as the
-  Angels
+title: Lust destroys the purity of the soul which renders us as beautiful as the Angels
 archiveSlug: sinnersguide00luis
 archivePage: '347'
 bookSlug: the-sinners-guide

@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  Now is the only time we have to prepare for the terrible Day of Judgment
-  before God
+title: Now is the only time we have to prepare for the terrible Day of Judgment before God
 archiveSlug: sinnersguide00luis
 archivePage: '85'
 bookSlug: the-sinners-guide

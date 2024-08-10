@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  The folly of those who live as though they created themselves for their own
-  purposes
+title: The folly of those who live as though they created themselves for their own purposes
 archiveSlug: sinnersguide00luis
 archivePage: '26'
 bookSlug: the-sinners-guide

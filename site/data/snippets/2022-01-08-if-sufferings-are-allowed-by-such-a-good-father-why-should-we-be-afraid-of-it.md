@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  If sufferings are allowed by such a Good Father, why should we be afraid of
-  it?
+title: If sufferings are allowed by such a Good Father, why should we be afraid of it?
 archiveSlug: sinnersguide00luis
 archivePage: '444'
 bookSlug: the-sinners-guide

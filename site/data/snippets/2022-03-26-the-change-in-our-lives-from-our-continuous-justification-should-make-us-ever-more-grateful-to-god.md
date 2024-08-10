@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  The change in our lives from our continuous justification should make us ever
-  more grateful to God
+title: The change in our lives from our continuous justification should make us ever more grateful to God
 archiveSlug: sinnersguide00luis
 archivePage: '64'
 bookSlug: the-sinners-guide

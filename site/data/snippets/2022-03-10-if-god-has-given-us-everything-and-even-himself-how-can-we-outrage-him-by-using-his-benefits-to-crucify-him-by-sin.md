@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  If God has given us everything and even Himself, how can we outrage him by
-  using his benefits to crucify him by sin?
+title: If God has given us everything and even Himself, how can we outrage him by using his benefits to crucify him by sin?
 archiveSlug: sinnersguide00luis
 archivePage: '53'
 bookSlug: the-sinners-guide

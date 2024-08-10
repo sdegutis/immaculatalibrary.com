@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  Worldly riches are far worse than spiritual riches, and they cannot both dwell
-  in one heart
+title: Worldly riches are far worse than spiritual riches, and they cannot both dwell in one heart
 archiveSlug: sinnersguide00luis
 archivePage: '336'
 bookSlug: the-sinners-guide

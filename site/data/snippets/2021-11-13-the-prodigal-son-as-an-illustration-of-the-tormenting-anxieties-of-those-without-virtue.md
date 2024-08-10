@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  The prodigal son as an illustration of the tormenting anxieties of those
-  without virtue
+title: The prodigal son as an illustration of the tormenting anxieties of those without virtue
 archiveSlug: sinnersguide00luis
 archivePage: '197'
 bookSlug: the-sinners-guide

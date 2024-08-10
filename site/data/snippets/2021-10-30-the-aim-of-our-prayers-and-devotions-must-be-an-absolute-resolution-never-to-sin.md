@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  The aim of our prayers and devotions must be an absolute resolution never to
-  sin
+title: The aim of our prayers and devotions must be an absolute resolution never to sin
 archiveSlug: sinnersguide00luis
 archivePage: '320'
 bookSlug: the-sinners-guide

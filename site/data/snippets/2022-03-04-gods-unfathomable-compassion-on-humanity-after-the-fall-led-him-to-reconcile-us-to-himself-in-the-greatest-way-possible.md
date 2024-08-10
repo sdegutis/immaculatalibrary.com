@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  God's unfathomable compassion on humanity after the Fall led Him to reconcile
-  us to himself in the greatest way possible
+title: God's unfathomable compassion on humanity after the Fall led Him to reconcile us to himself in the greatest way possible
 archiveSlug: sinnersguide00luis
 archivePage: '46'
 bookSlug: the-sinners-guide

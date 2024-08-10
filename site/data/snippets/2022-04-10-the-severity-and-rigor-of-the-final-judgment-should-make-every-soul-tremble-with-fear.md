@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  The severity and rigor of the Final Judgment should make every soul tremble
-  with fear
+title: The severity and rigor of the Final Judgment should make every soul tremble with fear
 archiveSlug: sinnersguide00luis
 archivePage: '87'
 bookSlug: the-sinners-guide

@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  If we firmly resolve to abandon sin, the Angels, the Saints,  and God Himself
-  will be our defense
+title: If we firmly resolve to abandon sin, the Angels, the Saints,  and God Himself will be our defense
 archiveSlug: sinnersguide00luis
 archivePage: '317'
 bookSlug: the-sinners-guide

@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  If we continue to ignore God's warnings, we forfeit our souls permanently to
-  Hell
+title: If we continue to ignore God's warnings, we forfeit our souls permanently to Hell
 archiveSlug: sinnersguide00luis
 archivePage: '93'
 bookSlug: the-sinners-guide

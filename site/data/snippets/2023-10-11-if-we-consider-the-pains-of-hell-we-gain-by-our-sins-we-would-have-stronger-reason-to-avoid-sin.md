@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  If we consider the pains of Hell we gain by our sins, we would have stronger
-  reason to avoid sin
+title: If we consider the pains of Hell we gain by our sins, we would have stronger reason to avoid sin
 archivePage: '107'
 archiveSlug: sinnersguide00luis
 bookSlug: the-sinners-guide

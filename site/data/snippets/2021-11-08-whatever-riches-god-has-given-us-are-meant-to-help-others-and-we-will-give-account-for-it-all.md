@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  Whatever riches God has given us are meant to help others, and we will give
-  account for it all
+title: Whatever riches God has given us are meant to help others, and we will give account for it all
 archiveSlug: sinnersguide00luis
 archivePage: '339'
 bookSlug: the-sinners-guide

@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  Modesty preserves devotion and purity in the soul, and makes us fit for
-  society; whereas immodesty ruins all these things
+title: Modesty preserves devotion and purity in the soul, and makes us fit for society; whereas immodesty ruins all these things
 archiveSlug: sinnersguide00luis
 archivePage: '397'
 bookSlug: the-sinners-guide

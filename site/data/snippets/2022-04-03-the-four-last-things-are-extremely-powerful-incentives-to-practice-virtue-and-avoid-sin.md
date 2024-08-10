@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  The Four Last Things are extremely powerful incentives to practice virtue and
-  avoid sin
+title: The Four Last Things are extremely powerful incentives to practice virtue and avoid sin
 archiveSlug: sinnersguide00luis
 archivePage: '76'
 bookSlug: the-sinners-guide

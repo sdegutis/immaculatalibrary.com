@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  The sufferings of this life are not worthy of comparing to the Rewards of
-  Eternal Life
+title: The sufferings of this life are not worthy of comparing to the Rewards of Eternal Life
 archiveSlug: sinnersguide00luis
 archivePage: '445'
 bookSlug: the-sinners-guide

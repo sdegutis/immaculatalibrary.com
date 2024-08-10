@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  How easy and common it is to seriously offend God when speaking of the faults
-  of others
+title: How easy and common it is to seriously offend God when speaking of the faults of others
 archiveSlug: sinnersguide00luis
 archivePage: '376'
 bookSlug: the-sinners-guide

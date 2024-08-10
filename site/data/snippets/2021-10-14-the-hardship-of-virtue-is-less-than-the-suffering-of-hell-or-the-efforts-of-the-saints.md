@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  The hardship of Virtue is less than the suffering of Hell, or the efforts of
-  the Saints
+title: The hardship of Virtue is less than the suffering of Hell, or the efforts of the Saints
 archiveSlug: sinnersguide00luis
 archivePage: '281'
 bookSlug: the-sinners-guide

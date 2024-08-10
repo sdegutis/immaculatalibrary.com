@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  If pagan philosophers knew we should be grateful to God for everything,
-  shouldn't Christians be far more so?
+title: If pagan philosophers knew we should be grateful to God for everything, shouldn't Christians be far more so?
 archiveSlug: sinnersguide00luis
 archivePage: '38'
 bookSlug: the-sinners-guide

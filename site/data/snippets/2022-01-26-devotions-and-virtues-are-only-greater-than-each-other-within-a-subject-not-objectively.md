@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  Devotions and virtues are only greater than each other within a subject, not
-  objectively
+title: Devotions and virtues are only greater than each other within a subject, not objectively
 archiveSlug: sinnersguide00luis
 archivePage: '471'
 bookSlug: the-sinners-guide

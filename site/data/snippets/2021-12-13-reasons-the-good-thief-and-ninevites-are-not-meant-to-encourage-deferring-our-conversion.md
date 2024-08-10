@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  Reasons the Good Thief and Ninevites are not meant to encourage deferring our
-  conversion
+title: Reasons the Good Thief and Ninevites are not meant to encourage deferring our conversion
 archiveSlug: sinnersguide00luis
 archivePage: '260'
 bookSlug: the-sinners-guide

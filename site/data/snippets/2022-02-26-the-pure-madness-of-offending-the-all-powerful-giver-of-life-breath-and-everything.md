@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  The pure madness of offending the All-Powerful Giver of Life, Breath, and
-  Everything
+title: The pure madness of offending the All-Powerful Giver of Life, Breath, and Everything
 archiveSlug: sinnersguide00luis
 archivePage: '35'
 bookSlug: the-sinners-guide

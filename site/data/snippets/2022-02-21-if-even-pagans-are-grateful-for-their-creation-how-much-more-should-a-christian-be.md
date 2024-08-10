@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  If even pagans are grateful for their creation, how much more should a
-  Christian be
+title: If even pagans are grateful for their creation, how much more should a Christian be
 archiveSlug: sinnersguide00luis
 archivePage: '30'
 bookSlug: the-sinners-guide

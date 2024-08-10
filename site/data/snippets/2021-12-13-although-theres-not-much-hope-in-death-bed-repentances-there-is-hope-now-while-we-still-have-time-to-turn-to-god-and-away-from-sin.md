@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  Although there’s not much hope in death-bed repentances, there is Hope now
-  while we still have time to turn to God and away from sin
+title: Although there’s not much hope in death-bed repentances, there is Hope now while we still have time to turn to God and away from sin
 archiveSlug: sinnersguide00luis
 archivePage: '262'
 bookSlug: the-sinners-guide

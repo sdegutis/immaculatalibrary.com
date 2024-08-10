@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  God's immense love for us, especially on the Cross, should draw us away from
-  sin
+title: God's immense love for us, especially on the Cross, should draw us away from sin
 archiveSlug: sinnersguide00luis
 archivePage: '52'
 bookSlug: the-sinners-guide

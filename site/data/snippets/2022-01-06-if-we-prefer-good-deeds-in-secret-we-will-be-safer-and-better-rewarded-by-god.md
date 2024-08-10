@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  If we prefer good deeds in secret, our souls will be safer and better rewarded
-  by God
+title: If we prefer good deeds in secret, our souls will be safer and better rewarded by God
 archiveSlug: sinnersguide00luis
 archivePage: '441'
 bookSlug: the-sinners-guide

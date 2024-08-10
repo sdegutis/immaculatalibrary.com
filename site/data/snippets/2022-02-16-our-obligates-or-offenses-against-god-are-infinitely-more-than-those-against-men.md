@@ -1,8 +1,6 @@
 ---
 published: true
-title: >-
-  Our obligates or offenses against God are infinitely more than those against
-  men
+title: Our obligates or offenses against God are infinitely more than those against men
 archiveSlug: sinnersguide00luis
 archivePage: '24'
 bookSlug: the-sinners-guide
