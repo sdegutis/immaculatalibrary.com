@@ -10,8 +10,6 @@ const enum Button {
   HOME,
 }
 
-let gamepad: Gamepad;
-
 const gamepadActions = new Map<number, () => void>([
   [Button.L, () => { tabs.current.prev?.focus(); }],
   [Button.R, () => { tabs.current.next?.focus(); }],
@@ -34,7 +32,7 @@ let lastMovedFromY = 0;
 function handleController() {
   const currentMs = ticks++ * (1000 / 33);
 
-  gamepad = navigator.getGamepads().find(c => c)!;
+  const gamepad = navigator.getGamepads().find(c => c)!;
 
   const [x, y] = gamepad.axes as [number, number];
   const buttons = gamepad.buttons.map(b => b.pressed);
