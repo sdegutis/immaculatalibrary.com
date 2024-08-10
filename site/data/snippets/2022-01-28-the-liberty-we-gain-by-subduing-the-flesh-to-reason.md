@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '193'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 120
+sortOrder: 121
 ---
 
 > Besides these two divine favors there is another means by which the liberty of the just is regained.
