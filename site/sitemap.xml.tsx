@@ -19,6 +19,6 @@ export function makeSitemap(paths: Iterable<string>) {
           </url>;
         })
       }
-    </urlset >
+    </urlset>
   </> as string;
 }
