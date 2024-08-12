@@ -90,12 +90,13 @@ export default <>
             <FadeIn>
               <h2>Recently added books</h2>
               <ul>
-                {allBooks.toReversed().slice(0, 12).map(book => <>
+                {allBooks.toReversed().slice(0, 7).map(book => <>
                   <li>
                     <a href={book.route}>{book.data.title}</a> by {book.data.author}
                   </li>
                 </>)}
               </ul>
+              <p><a href="/books.html">More...</a></p>
             </FadeIn>
 
           </div>
