@@ -15,3 +15,7 @@ const startTab = lastTab ?? tabs.first;
 setTimeout(() => {
   startTab.focus();
 }, 0);
+
+window.addEventListener('resize', () => {
+  tabs.current.panels.current.focus();
+});
