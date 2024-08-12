@@ -6,10 +6,12 @@ await sleep(location.pathname === '/' ? 1 : .3);
 const allSnippets = await snippetsFetch;
 const latestSnippets = allSnippets.slice(0, 7);
 
+function goToRandomSnippet(this: HTMLAnchorElement) {
+  this.href = randomElement(allSnippets).route;
+}
+
 document.getElementById('latest-book-snippets-area')!.replaceChildren(<>
-  <p>Read a <a href='#' onclick={function (this: HTMLAnchorElement) {
-    this.href = randomElement(allSnippets).route;
-  }}>random snippet</a> or <a href='/snippets.html'>see all digitized snippets</a>.</p>
+  <p><a href='#' onclick={goToRandomSnippet}>Random snippet</a> or <a href='/snippets.html'>all digitized snippets.</a></p>
   <ul>
     {latestSnippets.map(snippet =>
       <li>
