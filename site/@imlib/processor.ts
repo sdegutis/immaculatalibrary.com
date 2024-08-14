@@ -4,7 +4,7 @@ import { isDev } from "../util/_helpers.js";
 
 export default ((files) => {
   const processors: Processor[] = [
-    isDev ? [/^\/admin\//, skip] as Processor : null,
+    !isDev ? [/^\/admin\//, skip] as Processor : null,
     [/\.md$/, skip] as Processor,
     [/_.*\.js$/, skip] as Processor,
     ...defaultProcessors,
