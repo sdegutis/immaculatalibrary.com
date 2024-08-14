@@ -1,4 +1,4 @@
-import MarkdownIt from "https://cdn.jsdelivr.net/npm/markdown-it@13.0.2/+esm";
+import MarkdownIt from "markdown-it";
 import { makePaginator } from "./paginator.js";
 import { Reactive, reactTo } from "./reactive.js";
 

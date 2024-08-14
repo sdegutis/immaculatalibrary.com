@@ -1,4 +1,4 @@
-import MarkdownIt from 'https://cdn.jsdelivr.net/npm/markdown-it@13.0.2/+esm';
+import MarkdownIt from 'markdown-it';
 import { mdOptions } from '../../components/$markdown.js';
 import { Typography } from '../../components/$typography.js';
 import { SnippetJson } from "../../scripts/data/snippets.json.js";

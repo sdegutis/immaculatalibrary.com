@@ -1,4 +1,4 @@
-import MarkdownIt from 'https://cdn.jsdelivr.net/npm/markdown-it@13.0.2/+esm';
+import MarkdownIt from 'markdown-it';
 import { mdOptions } from '../../components/$markdown.js';
 import { calculateReadingMins } from '../../util/helpers.js';
 import { slugify } from '../util/helpers.js';

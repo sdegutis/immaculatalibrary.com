@@ -1,4 +1,4 @@
-import MarkdownIt from 'https://cdn.jsdelivr.net/npm/markdown-it@13.0.2/+esm';
+import MarkdownIt from 'markdown-it';
 import { HomeLoading, LoadingLine } from '../components/$loading.js';
 import { mdOptions } from '../components/$markdown.js';
 import { PrevNextLinks } from '../snippets/snippet-links.js';

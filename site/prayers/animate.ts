@@ -1,4 +1,4 @@
-import easesLib from 'https://cdn.jsdelivr.net/npm/eases@1.0.8/+esm';
+import easesLib from 'eases';
 import { CircularNav, Navable } from './nav.js';
 import { notify } from './notify.js';
 
