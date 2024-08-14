@@ -55,8 +55,10 @@ hr {
 }
 
 blockquote {
-  border-left: 3px solid var(--border-color);
-  padding-left: 1em;
+  background-color: #fff1;
+  border-radius: 3px;
+  padding: 0 1em;
+  overflow: hidden;
   margin: 0;
 }
 
