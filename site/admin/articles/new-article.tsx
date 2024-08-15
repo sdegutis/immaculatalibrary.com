@@ -1,10 +1,8 @@
+import monaco from '@imlib/monaco-esm';
 import MarkdownIt from 'markdown-it';
 import { mdOptions } from '../../components/$markdown.js';
 import { calculateReadingMins } from '../../util/helpers.js';
 import { slugify } from '../util/helpers.js';
-import { loadMonaco } from '../util/monaco.js';
-
-const monaco = await loadMonaco();
 
 window.addEventListener('beforeunload', (e) => {
   e.returnValue = 'Abandon all changes!?';

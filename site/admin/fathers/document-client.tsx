@@ -1,9 +1,7 @@
+import monaco from '@imlib/monaco-esm';
 import MarkdownIt from 'markdown-it';
 import { mdOptions } from '../../components/$markdown.js';
 import { SnippetJson } from '../../scripts/data/snippets/[snippet].json.js';
-import { loadMonaco } from '../util/monaco.js';
-
-const monaco = await loadMonaco();
 
 const md = MarkdownIt(mdOptions);
 
