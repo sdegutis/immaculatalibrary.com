@@ -39,7 +39,7 @@ function Weather() {
   const node = <div>
     <div id="temprow">
       <div id="temperature">87 Fº</div>
-      <img id="weather-icon" />
+      <img id="weather-icon" src="" />
     </div>
     <div id="weather-full">It's gonna rain or somethin.</div>
   </div> as HTMLElement;

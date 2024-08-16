@@ -19,7 +19,7 @@ export default allVideos.map(video => {
             <link rel='stylesheet' href='/css/page/video.css' />
 
             <div class="embed-container">
-              <iframe allowfullscreen="allowfullscreen" frameborder="0" src={video.data.youtube} data-ruffle-polyfilled="" />
+              <iframe allowfullscreen frameborder="0" src={video.data.youtube} data-ruffle-polyfilled="" />
             </div>
 
             <p>By {video.data.author}</p>

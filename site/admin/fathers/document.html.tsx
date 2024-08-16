@@ -36,7 +36,7 @@ export default <>
         </Typography>
       </div>
       <div style='overflow:hidden'>
-        <iframe />
+        <iframe src="" />
       </div>
     </main>
 
