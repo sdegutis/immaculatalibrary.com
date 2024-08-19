@@ -4,7 +4,6 @@ imageFilename: https://images.unsplash.com/photo-1524679166686-04237b4667b4?ixid
 imageCaption: >-
   Photo by <a href="https://unsplash.com/@tdederichs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Torsten Dederichs</a> on <a
   href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-draft: true
 ---
 
 Sometimes life gets hard. Like, *really* hard. And you're just not sure what to do. Or whether you can handle it. But there is hope.

@@ -2,7 +2,6 @@
 title: Death and Life
 imageFilename: https://upload.wikimedia.org/wikipedia/commons/c/c9/Chmielowski_Death_and_conflagration.jpg
 imageCaption: Death and conflagration, by St. Albert Chmielowski
-draft: true
 ---
 
 We're so afraid of bad things happening, but that's exactly what Jesus came here to save us from. The more we love Jesus and trust in him, the less our problems in life can hurt us.

@@ -1,6 +1,5 @@
 ---
 title: How can a loving god allow eternal suffering?
-draft: true
 ---
 
 This is one of the most common questions I encounter when debating non-Christians of every kind. Why did God create Hell, or at least allow for it to be created? It just doesn't seem fair. Eternity seems a disproportionately long time to suffer for anything we could do wrong in this life.

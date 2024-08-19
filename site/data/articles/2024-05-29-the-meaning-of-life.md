@@ -1,6 +1,5 @@
 ---
 title: The meaning of life
-draft: true
 ---
 
 God created each and all of us to be happy forever with each other in a perfect paradise, one that never ends, and where nothing ever goes wrong.

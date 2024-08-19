@@ -4,7 +4,6 @@ imageFilename: /img/articles/eugene-chystiakov-SAoa550CmaI-unsplash.jpg
 imageCaption: >-
   Photo by [Eugene Chystiakov](https://unsplash.com/@eugenechystiakov?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on
   [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-draft: true
 ---
 
 These simple tips from St. Francis de Sales are sure to vastly improve our prayer life.

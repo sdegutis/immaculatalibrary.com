@@ -4,7 +4,6 @@ imageFilename: https://images.unsplash.com/photo-1455133031464-31897e50faaa?ixli
 imageCaption: >-
   Photo by <a href="https://unsplash.com/@currentcoast?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Joshua Davis</a> on <a
   href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-draft: true
 ---
 
 If you're upset because you can't stop committing sins, take the following steps:

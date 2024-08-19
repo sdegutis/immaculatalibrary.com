@@ -4,7 +4,6 @@ imageFilename: https://images.unsplash.com/photo-1504052434569-70ad5836ab65?ixli
 imageCaption: >-
   Photo by <a href="https://unsplash.com/@rodlong?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Rod Long</a> on <a
   href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-draft: true
 ---
 
 You have to read a little of the Bible every day. It's half of the Word of God! (The other half is Sacred Tradition.) How else are you going to know what God wants to tell you? But don't worry, it's not hard to read some of the Bible every day. Here are three shortcuts.

@@ -1,6 +1,5 @@
 ---
 title: Practical Advice
-draft: true
 ---
 
 

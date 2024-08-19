@@ -4,7 +4,6 @@ imageFilename: https://images.unsplash.com/photo-1492176273113-2d51f47b23b0?ixid
 imageCaption: >-
   Photo by <a href="https://unsplash.com/@marcojodoin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Marc-Olivier Jodoin</a> on <a
   href="https://unsplash.com/s/photos/hope?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-draft: true
 ---
 
 When times are bad, trust that God will never let them get *too* bad. Stay close to Jesus, and trust that even now, he is helping you through the storm.

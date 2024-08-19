@@ -4,7 +4,6 @@ imageFilename: https://images.unsplash.com/photo-1480623826718-27e89ac63a4f?ixli
 imageCaption: >-
   Photo by <a href="https://unsplash.com/@brookecagle?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Brooke Cagle</a> on <a
   href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-draft: true
 ---
 
 Everyone loves beauty. But when we don't understand what beauty is for, or what to do with it, we often end up sinning, offending God by that very beauty that has its source in Him.

@@ -2,7 +2,6 @@
 title: Devotion to The Holy Family
 imageFilename: https://wallpaperaccess.com/full/862444.jpg
 imageCaption: The Holy Family
-draft: true
 ---
 
 Have a strong devotion to the Holy Family, and Jesus, Mary and Joseph will bless you with a special blessing. Here's an easy way to do it:

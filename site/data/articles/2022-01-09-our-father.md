@@ -2,7 +2,6 @@
 title: Our Father
 imageFilename: https://exgfjtswhb-flywheel.netdna-ssl.com/wp-content/uploads/2021/05/trinity-1.jpeg
 imageCaption: ''
-draft: true
 ---
 
 After reflecting for a long time on these prayers, I have some thoughts on them that I think will help you to understand our basic prayers better, and to pray them better. I'll explain some of the Our Father today.

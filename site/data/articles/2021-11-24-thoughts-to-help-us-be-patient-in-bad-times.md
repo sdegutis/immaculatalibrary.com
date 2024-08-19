@@ -2,7 +2,6 @@
 title: Thoughts to help us be patient in bad times
 imageFilename: https://upload.wikimedia.org/wikipedia/commons/f/fd/ChmielowskiAdam.1881.EcceHomo.jpg
 imageCaption: Ecce Homo, by [St. Albert Chmielowski](/movies/our-gods-brother.html)
-draft: true
 ---
 
 If bad things are happening in your life, and you feel like you just can't handle it, here are some thoughts to encourage you to keep trusting in Jesus, and praying to him, until the bad things stop.

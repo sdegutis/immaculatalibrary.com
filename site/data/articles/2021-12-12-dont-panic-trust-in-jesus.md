@@ -4,7 +4,6 @@ imageFilename: https://images.unsplash.com/photo-1521106581851-da5b6457f674?ixli
 imageCaption: >-
   Photo by <a href="https://unsplash.com/@brunovdkraan?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Bruno van der Kraan</a> on <a
   href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-draft: true
 ---
 
 Jesus said, "Let not your hearts be troubled." And not just once, but twice in a row.

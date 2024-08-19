@@ -1,6 +1,5 @@
 ---
 title: The devil doesn't control us
-draft: true
 ---
 
 The excuse "the devil made me do it" is never true. The devil can't control us.

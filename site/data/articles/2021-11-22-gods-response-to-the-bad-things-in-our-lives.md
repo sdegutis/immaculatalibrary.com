@@ -1,7 +1,6 @@
 ---
 imageFilename: /img/articles/2021-11-22-gods-response-to-the-bad-things-in-our-lives.jpg
 title: God’s response to the bad things in our lives
-draft: true
 ---
 
 Sometimes we can be in the middle of very sad times in our lives. There's nothing wrong with being sad when bad things happen, especially when they're not our fault.

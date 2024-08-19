@@ -2,7 +2,6 @@
 title: Don’t hate yourself
 imageFilename: https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/StJohnsAshfield_StainedGlass_GoodShepherd_Portrait.jpg/1280px-StJohnsAshfield_StainedGlass_GoodShepherd_Portrait.jpg
 imageCaption: '"I am the Good Shepherd"'
-draft: true
 ---
 
 > "If any one comes to me and does not hate his own father and mother and wife and children and brothers and sisters, yes, and even his own life, he cannot be my disciple. Whoever does not bear his own cross and come after me, cannot be my disciple." (Luke 14:26-27)

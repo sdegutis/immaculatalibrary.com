@@ -4,7 +4,6 @@ imageFilename: /img/articles/two-angels.jpg
 imageCaption: >-
   Photo by <a href="https://unsplash.com/@lboccardo95?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Luigi Boccardo</a> on <a
   href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-draft: true
 ---
 
 This is the second time I'm writing to you about purity. Because this virtue is so especially important for holiness, and even more especially under attack in this age, I want to make sure you fully understand it.

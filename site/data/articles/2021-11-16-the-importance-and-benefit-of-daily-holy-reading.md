@@ -4,7 +4,6 @@ imageFilename: https://images.unsplash.com/photo-1519884705082-b505c3001e63?ixid
 imageCaption: >-
   Photo by <a href="https://unsplash.com/@svalenas?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sergiu Vălenaș</a> on <a
   href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-draft: true
 ---
 
 The saints practiced and strongly recommended daily reading of holy books. Here are how some examples of how these very Saints profited from holy reading, and how it even turned them into Saints.
