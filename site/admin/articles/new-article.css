@@ -1,20 +1,14 @@
 form {
 
-  width: 100vw;
+  width: 33em;
   height: 100vh;
+  margin: 0 auto;
   padding: 2em 0;
   box-sizing: border-box;
 
   display: flex;
   flex-direction: column;
   gap: 1em;
-
-  align-items: center;
-  justify-content: stretch;
-
-  > * {
-    width: 33em;
-  }
 
   input,
   button {
