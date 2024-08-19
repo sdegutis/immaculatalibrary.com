@@ -1,19 +1,19 @@
 import * as kv from 'idb-keyval';
 import { slugify } from '../util/helpers.js';
 
-const titleInput = document.querySelector<HTMLInputElement>('[name=title]')!;
-const slugInput = document.querySelector<HTMLInputElement>('[name=slug]')!;
-const contentInput = document.querySelector<HTMLTextAreaElement>('[name=content]')!;
+const title = document.querySelector<HTMLInputElement>('[name=title]')!;
+const slug = document.querySelector<HTMLInputElement>('[name=slug]')!;
+const textarea = document.querySelector<HTMLTextAreaElement>('[name=content]')!;
 
 const saved = await kv.get('newarticle');
-if (saved) contentInput.value = saved;
+if (saved) textarea.value = saved;
 
 const save = throttle(300, () => {
-  kv.set('newarticle', contentInput.value);
+  kv.set('newarticle', textarea.value);
 });
 
-titleInput.oninput = () => slugInput.value = slugify(titleInput.value);
-contentInput.oninput = save;
+title.oninput = () => slug.value = slugify(title.value);
+textarea.oninput = save;
 
 function throttle(ms: number, fn: () => void) {
   let timer: NodeJS.Timeout;
