@@ -13,7 +13,7 @@ tags:
 
 > But he that attributes any thing of good to himself, stops the grace of God from coming into him; for the grace of the Holy Ghost ever seeks an humble heart.
 > 
-> If thou couldst perfectly annihilate thyself, and cast outfrom thyself all created love, then should I flow into thee with abundance of grace.
+> If thou couldst perfectly annihilate thyself, and cast out from thyself all created love, then should I flow into thee with abundance of grace.
 > 
 > When thou lookest towards creatures, the sight of the Creator is withdrawn from thee.
 > 
