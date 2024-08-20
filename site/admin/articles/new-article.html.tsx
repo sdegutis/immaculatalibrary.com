@@ -8,7 +8,7 @@ handlers.set('/create-article', body => {
   const date = new Date().toLocaleDateString('sv');
   const slug = `${date}-${params.get('slug')!}`;
 
-  const article = new Article(slug, params.get('markdownContent')!, {
+  const article = new Article(slug, params.get('content')!, {
     title: params.get('title')!,
   });
 
@@ -23,7 +23,7 @@ export default <>
     <script src='./new-article.js' type='module'></script>
 
     <form method='POST' action='/create-article'>
-      <textarea name='content' autofocus autocomplete='off' />
+      <textarea spellcheck='true' name='content' autofocus autocomplete='off' />
       <input placeholder='Title' autocomplete='off' name='title' />
       <input placeholder='Slug' autocomplete='off' name='slug' />
       <button>Create</button>
