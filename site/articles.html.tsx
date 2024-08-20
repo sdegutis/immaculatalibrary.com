@@ -11,7 +11,7 @@ export default <>
       <SplitColumn>
 
         <Typography>
-          <h2>Letters</h2>
+          <h2>Letters I have written</h2>
           <p>Not meant for everyone.</p>
           <Admin>
             <p><a href='/admin/articles/new-article.html'>New article</a></p>
