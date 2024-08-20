@@ -1,5 +1,5 @@
 import handlers from 'handlers!';
-import { Article } from "../../_model/articles.js";
+import { Article } from "../../model/articles.js";
 import { EmptyPage } from "../../components/page.js";
 
 handlers.set('/create-article', body => {

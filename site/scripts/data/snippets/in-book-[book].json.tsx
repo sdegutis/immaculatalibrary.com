@@ -1,4 +1,4 @@
-import { allBooks } from "../../../_model/books.js";
+import { allBooks } from "../../../model/books.js";
 
 export default allBooks.map(book => {
   return [book.slug, book.snippets.map(snippet => snippet.slug)];

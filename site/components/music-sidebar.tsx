@@ -1,4 +1,4 @@
-import { allMusics } from '../_model/musics.js';
+import { allMusics } from '../model/musics.js';
 
 const categories = [
   'Gregorian Chant',

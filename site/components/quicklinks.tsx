@@ -1,6 +1,6 @@
-import { allCategories } from '../_model/categories.js';
-import { featuredBooks } from '../_model/featured.js';
-import { allMovies } from '../_model/movies.js';
+import { allCategories } from '../model/categories.js';
+import { featuredBooks } from '../model/featured.js';
+import { allMovies } from '../model/movies.js';
 import { Column } from './column.js';
 import { FadeIn } from './fadein.js';
 

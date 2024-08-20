@@ -1,6 +1,6 @@
 import handlers from "handlers!";
-import { allSnippets, Snippet } from "../_model/snippets.js";
-import { allTags } from "../_model/tag.js";
+import { allSnippets, Snippet } from "../model/snippets.js";
+import { allTags } from "../model/tag.js";
 import { Typography } from "../components/$typography.js";
 import { Admin } from "../components/admin.js";
 import { Spaced, SplitColumn } from "../components/column.js";

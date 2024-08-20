@@ -1,3 +1,3 @@
-import { allFatherQuotes } from "../../_model/fatherquotes.js";
+import { allFatherQuotes } from "../../model/fatherquotes.js";
 
 export default allFatherQuotes;

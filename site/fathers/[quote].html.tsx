@@ -1,7 +1,7 @@
 import { Spaced, SplitColumn } from "../components/column.js";
 import { FathersSearchbar } from "../components/fathers-search.js";
 import { TypicalPage } from "../components/page.js";
-import { allFatherQuotes } from "../_model/fatherquotes.js";
+import { allFatherQuotes } from "../model/fatherquotes.js";
 import { markdown } from "../util/_helpers.js";
 
 export default allFatherQuotes.map(q => [q.slug, <>

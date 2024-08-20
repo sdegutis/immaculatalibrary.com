@@ -1,5 +1,6 @@
 import { HomeLoading } from "./components/$loading.js";
 import { Typography } from "./components/$typography.js";
+import { VerifyHuman } from "./components/_verifyhuman.js";
 import { CenteredColumn, Spaced, SplitColumn } from "./components/column.js";
 import { FadeIn } from "./components/fadein.js";
 import { LatestSnippetsArea } from "./components/latest-snippets.js";
@@ -7,9 +8,8 @@ import { EmptyPage } from "./components/page.js";
 import { QuickLinks } from "./components/quicklinks.js";
 import { SiteFooter } from "./components/site-footer.js";
 import { SiteHeader } from "./components/site-header.js";
-import { VerifyHuman } from "./components/_verifyhuman.js";
 import { Markdown } from "./fathers.html.js";
-import { allBooks } from "./_model/books.js";
+import { allBooks } from "./model/books.js";
 
 export default <>
   <EmptyPage>
