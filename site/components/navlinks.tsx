@@ -7,7 +7,7 @@ const links = {
   Movies: { href: '/movies.html', title: 'Movies' },
   Music: { href: '/music.html', title: 'Music' },
   Prayers: { href: '/prayers/', title: 'Prayers' },
-  Articles: { href: '/articles.html', title: 'Articles' },
+  Articles: { href: '/articles.html', title: 'Letters' },
   Resources: { href: '/resources.html', title: 'Resources' },
 } as const;
 

@@ -11,8 +11,8 @@ export default <>
       <SplitColumn>
 
         <Typography>
-          <h2>Articles of Immaculata Library</h2>
-          <p>Thoughts.</p>
+          <h2>Letters</h2>
+          <p>Not meant for everyone.</p>
           <Admin>
             <p><a href='/admin/articles/new-article.html'>New article</a></p>
           </Admin>
