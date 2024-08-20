@@ -1,8 +1,6 @@
 import MarkdownIt from 'markdown-it';
 import { mdOptions } from '../components/$markdown.js';
 
-export const isDev = !!process.env['DEV'];
-
 export const markdown = new MarkdownIt(mdOptions);
 
 export function sortBy<T>(fn: (o: T) => string | number) {
