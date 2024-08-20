@@ -1,5 +1,5 @@
 import { processSite, SiteProcessor } from "@imlib/core";
-import { makeSitemap } from "../sitemap.xml.js";
+import { makeSitemap } from "../sitemap.js";
 import { isDev } from "../util/_helpers.js";
 
 export default ((files) => {
