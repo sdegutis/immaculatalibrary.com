@@ -1,7 +1,5 @@
 import { randomElement } from "./util.js";
 
-export default 0;
-
 class VerifyHuman {
 
   #quitting = false;
