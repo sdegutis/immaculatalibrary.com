@@ -1,9 +1,10 @@
 import { RatingStar } from "../components/$rating.js";
 import { Typography } from "../components/$typography.js";
+import { jsxToDOM } from "../util/jsx-dom.js";
+import { BookJson } from "./data/books.json.js";
 import { Reactive } from "./reactive.js";
 import { createSearch, findWithinMarkdown, highlight } from "./searchlist.js";
 import { randomElement, sleep } from "./util.js";
-import { BookJson } from "./data/books.json.js";
 
 const booksFetch = fetch('/scripts/data/books.json').then<BookJson[]>(res => res.json());
 await sleep(.1);
@@ -87,20 +88,20 @@ matchingItems.onChange(() => {
   document.querySelector('.search-count')!.textContent = matchingItems.val.length.toFixed();
 });
 
-const randomBookLink = <a href='#' onclick={function (this: HTMLAnchorElement, e: Event) {
+const randomBookLink = jsxToDOM<HTMLAnchorElement>(<a href='#' onclick={function (this: HTMLAnchorElement, e: Event) {
   if (matchingItems.val.length === 0) {
     e.preventDefault();
     return;
   }
 
   this.href = randomElement(matchingItems.val).route;
-}}>Random Book</a> as HTMLAnchorElement;
+}}>Random Book</a>);
 
 matchingItems.onChange(() => {
   randomBookLink.toggleAttribute('disabled', matchingItems.val.length === 0);
 });
 
-const searchInput = <input autofocus style='width: 100%' placeholder='Search' type="text" oninput={updateFromSearchInput} /> as HTMLInputElement;
+const searchInput = jsxToDOM<HTMLInputElement>(<input autofocus style='width: 100%' placeholder='Search' type="text" oninput={updateFromSearchInput} />);
 
 if (window.location.hash) {
   searchInput.value = decodeURIComponent(window.location.hash.slice(1));
@@ -113,7 +114,7 @@ function updateFromSearchInput() {
   window.location.hash = '#' + encodeURIComponent(term);
 }
 
-document.querySelector('.filters-container')!.replaceChildren(<>
+document.querySelector('.filters-container')!.replaceChildren(jsxToDOM(<>
   <p>
     {searchInput}
   </p>
@@ -131,7 +132,7 @@ document.querySelector('.filters-container')!.replaceChildren(<>
       <label><input type='radio' name='stars' onclick={() => starsFilterSource.set('any')} checked />Any</label>
       <label><input type='radio' name='stars' onclick={() => starsFilterSource.set('0')} />Unrated</label>
       {Array(5).fill(0).map((_, i) => {
-        const star = (<RatingStar /> as DocumentFragment).querySelector('svg')!;
+        const star = jsxToDOM<DocumentFragment>(<RatingStar />).querySelector('svg')!;
         const num = i + 1;
 
         starsFilterSource.onChange(() => {
@@ -167,4 +168,4 @@ document.querySelector('.filters-container')!.replaceChildren(<>
     Not sure what to read?<br />
     Try a {randomBookLink} from these.
   </p>
-</>);
+</>));

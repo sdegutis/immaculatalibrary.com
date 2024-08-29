@@ -1,7 +1,8 @@
+import { jsxToDOM } from "../util/jsx-dom.js";
 import { BlessedSacrament } from "./blessedsacrament.js";
 import { TimeArea } from "./time.js";
 
-document.getElementById('root')!.append(<>
+document.getElementById('root')!.append(jsxToDOM(<>
   <div id="top">
     <BlessedSacrament />
   </div>
@@ -15,10 +16,10 @@ document.getElementById('root')!.append(<>
     </div>
 
   </div>
-</>);
+</>));
 
 function FeastDay() {
-  const feastDayEl = <div id="feastday">Saint of the Day</div> as HTMLDivElement;
+  const feastDayEl = jsxToDOM<HTMLDivElement>(<div id="feastday">Saint of the Day</div>);
 
   const calendar = (window as any).Romcal.Calendar.calendarFor({ country: 'unitedStates' });
   function updateFeastDay() {
@@ -36,13 +37,13 @@ function FeastDay() {
 }
 
 function Weather() {
-  const node = <div>
+  const node = jsxToDOM<HTMLElement>(<div>
     <div id="temprow">
       <div id="temperature">87 Fº</div>
       <img id="weather-icon" src="" />
     </div>
     <div id="weather-full">It's gonna rain or somethin.</div>
-  </div> as HTMLElement;
+  </div>);
 
   updateWeather();
   setInterval(updateWeather, 1000 * 60 * 5);

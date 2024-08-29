@@ -1,3 +1,4 @@
+import { jsxToDOM } from "../util/jsx-dom.js";
 import { SnippetJson } from "./data/snippets.json.js";
 import { randomElement, sleep } from "./util.js";
 
@@ -10,7 +11,7 @@ function goToRandomSnippet(this: HTMLAnchorElement) {
   this.href = randomElement(allSnippets).route;
 }
 
-document.getElementById('latest-book-snippets-area')!.replaceChildren(<>
+document.getElementById('latest-book-snippets-area')!.replaceChildren(jsxToDOM(<>
   <p><a href='#' onclick={goToRandomSnippet}>Random snippet</a> or <a href='/snippets.html'>all digitized snippets.</a></p>
   <ul>
     {latestSnippets.map(snippet =>
@@ -23,4 +24,4 @@ document.getElementById('latest-book-snippets-area')!.replaceChildren(<>
       </li>
     )}
   </ul>
-</>);
+</>));

@@ -5,10 +5,11 @@ import { TypicalPage } from "../components/page.js";
 import { allVideos } from "../model/videos.js";
 import { MovieTabs } from "../movies.html.js";
 import { markdown } from "../util/_helpers.js";
+import { jsxToString } from "../util/jsx-strings.js";
 
 export default allVideos.map(video => {
-  return [video.slug, <>
-    <TypicalPage page="Movies" title={<MovieTabs index={1} /> as string} image={`/img/categories/blessed-sacrament-big.jpg`}>
+  return [video.slug, jsxToString(<>
+    <TypicalPage page="Movies" title={jsxToString(<MovieTabs index={1} />)} image={`/img/categories/blessed-sacrament-big.jpg`}>
 
       <Spaced>
         <SplitColumn>
@@ -42,5 +43,5 @@ export default allVideos.map(video => {
       </Spaced>
 
     </TypicalPage>
-  </>];
+  </>)];
 });

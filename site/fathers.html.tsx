@@ -1,10 +1,17 @@
 import { Column, Spaced, SplitColumn } from "./components/column.js";
 import { TypicalPage } from "./components/page.js";
 import { markdown } from "./util/_helpers.js";
+import { jsxToString } from "./util/jsx-strings.js";
 
-export function Markdown(attrs: any, children: any) {
-  children = String(children);
-  return markdown.render(children);
+export function Markdown(attrs: any, children: any[]) {
+  const lines = (children
+    .map(String)
+    .join('')
+    .split('\n')
+    .map(s => s.trimStart())
+    .join(' '));
+
+  return markdown.render(lines);
 }
 
 const others: Record<string, { id: string, title: string }[]> = {
@@ -51,7 +58,7 @@ const others: Record<string, { id: string, title: string }[]> = {
 };
 
 
-export default <>
+export default jsxToString(<>
   <TypicalPage title="Fathers of the Church" image='/img/page/articles.jpg' page="Fathers">
 
     <Spaced>
@@ -120,4 +127,4 @@ export default <>
     </Spaced>
 
   </TypicalPage>
-</>;
+</>);

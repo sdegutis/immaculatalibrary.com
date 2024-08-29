@@ -1,8 +1,9 @@
 import { Typography } from "../components/$typography.js";
+import { jsxToDOM } from "../util/jsx-dom.js";
+import { SnippetJson } from "./data/snippets.json.js";
 import { Reactive } from "./reactive.js";
 import { createSearch, findWithinMarkdown, highlight } from "./searchlist.js";
 import { randomElement, sleep } from "./util.js";
-import { SnippetJson } from "./data/snippets.json.js";
 
 const snippetsFetch = fetch('/scripts/data/snippets.json').then<SnippetJson[]>(res => res.json());
 await sleep(.1);
@@ -74,20 +75,20 @@ matchingItems.onChange(() => {
   document.querySelector('.search-count')!.textContent = matchingItems.val.length.toFixed();
 });
 
-const randomSnippetLink = <a href='#' onclick={function (this: HTMLAnchorElement, e: Event) {
+const randomSnippetLink = jsxToDOM<HTMLAnchorElement>(<a href='#' onclick={function (this: HTMLAnchorElement, e: Event) {
   if (matchingItems.val.length === 0) {
     e.preventDefault();
     return;
   }
 
   this.href = randomElement(matchingItems.val).route;
-}}>Random Snippet</a> as HTMLAnchorElement;
+}}>Random Snippet</a>);
 
 matchingItems.onChange(() => {
   randomSnippetLink.toggleAttribute('disabled', matchingItems.val.length === 0);
 });
 
-const searchInput = <input style='width: 100%' placeholder='Search' autofocus type="text" oninput={updateFromSearchInput} /> as HTMLInputElement;
+const searchInput = jsxToDOM<HTMLInputElement>(<input style='width: 100%' placeholder='Search' autofocus type="text" oninput={updateFromSearchInput} />);
 
 if (window.location.hash) {
   searchInput.value = decodeURIComponent(window.location.hash.slice(1));
@@ -100,7 +101,7 @@ function updateFromSearchInput() {
   window.location.hash = '#' + encodeURIComponent(term);
 }
 
-document.querySelector('.filters-container')!.replaceChildren(<>
+document.querySelector('.filters-container')!.replaceChildren(jsxToDOM(<>
   <p>
     {searchInput}
   </p>
@@ -135,4 +136,4 @@ document.querySelector('.filters-container')!.replaceChildren(<>
     Not sure what to read?<br />
     Try a {randomSnippetLink} from these.
   </p>
-</>);
+</>));

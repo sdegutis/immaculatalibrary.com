@@ -9,7 +9,7 @@ interface Snippet<SubSnippet> {
 
 export function PrevNextLinks<SubSnippet>(attrs: {
   snippet: Snippet<SubSnippet>,
-  otherLink: JSX.Component<{ snippet: SubSnippet | undefined }>,
+  otherLink: (attrs: { snippet: SubSnippet | undefined }, children: any) => any,
 }) {
   return <>
     <link rel='stylesheet' href='/snippets/snippet-links.css' />

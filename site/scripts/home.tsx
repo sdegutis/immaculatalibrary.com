@@ -3,6 +3,7 @@ import { HomeLoading, LoadingLine } from '../components/$loading.js';
 import { mdOptions } from '../components/$markdown.js';
 import { PrevNextLinks } from '../snippets/snippet-links.js';
 import { formatDate } from "../util/format-date.js";
+import { jsxToDOM } from '../util/jsx-dom.js';
 import { SnippetJson } from './data/snippets/[snippet].json.js';
 import { randomElement, sleep } from './util.js';
 
@@ -16,18 +17,18 @@ const DURATIONS = { long: 1, short: .3 };
 renderSnippet(getSnippetOfTheHour(await snippetIds), 'long');
 
 function RelativeSnippetLink({ snippet }: { snippet: string | undefined }, children: any) {
-  const span = <span /> as HTMLSpanElement;
+  const span = jsxToDOM<HTMLSpanElement>(<span />);
 
   if (snippet) {
-    span.replaceChildren(<LoadingLine width='3em' />);
+    span.replaceChildren(jsxToDOM(<LoadingLine width='3em' />));
 
     (fetch(`/scripts/data/snippets/${snippet}.json`)
       .then<SnippetJson>(res => res.json())
       .then(other => {
-        span.replaceChildren(<>
+        span.replaceChildren(jsxToDOM(<>
           <a onclick={nextInBook(snippet)} href={other.route}>{children}</a><br />
           p.{other.archivePage}
-        </>);
+        </>));
       }));
   }
 
@@ -35,7 +36,7 @@ function RelativeSnippetLink({ snippet }: { snippet: string | undefined }, child
 }
 
 async function renderSnippet(slug: string, duration: keyof typeof DURATIONS) {
-  container.replaceChildren((<HomeLoading />));
+  container.replaceChildren((jsxToDOM(<HomeLoading />)));
 
   const fetching = fetch(`/scripts/data/snippets/${slug}.json`).then<SnippetJson>(res => res.json());
 
@@ -43,10 +44,9 @@ async function renderSnippet(slug: string, duration: keyof typeof DURATIONS) {
 
   const snippet = await fetching;
 
-  const renderedBody = <>
+  const renderedBody = jsxToDOM(<>
     <div innerHTML={markdown.render(snippet.content)} />
     {snippet.nextSnippet && <p>
-
       <PrevNextLinks
         snippet={{
           book: {
@@ -59,7 +59,7 @@ async function renderSnippet(slug: string, duration: keyof typeof DURATIONS) {
         otherLink={RelativeSnippetLink}
       />
     </p>}
-  </> as DocumentFragment;
+  </>);
 
   const PREVIEW_LINES = 15;
   const AVERAGE_LINE_LENGTH = 50;
@@ -69,7 +69,7 @@ async function renderSnippet(slug: string, duration: keyof typeof DURATIONS) {
     previewMarkdown = snippet.content.slice(0, previewSplitSpot) + ' ...';
   }
 
-  container.replaceChildren(<>
+  container.replaceChildren(jsxToDOM(<>
     <p>(Read <a href='#' onclick={showRandomBookSnippet}>another</a>)</p>
 
     <h3><a href={snippet.route}>{snippet.renderedTitle}</a></h3>
@@ -91,7 +91,7 @@ async function renderSnippet(slug: string, duration: keyof typeof DURATIONS) {
         </>
         : <div>{renderedBody}</div>}
     </div>
-  </>);
+  </>));
 }
 
 function getSnippetOfTheHour(slugs: string[]) {

@@ -1,8 +1,9 @@
 import { Typography } from "../components/$typography.js";
+import { jsxToDOM } from "../util/jsx-dom.js";
+import { SnippetJson } from "./data/snippets.json.js";
 import { Reactive } from "./reactive.js";
 import { createSearch, findWithinMarkdown, highlight } from "./searchlist.js";
 import { randomElement, sleep } from "./util.js";
-import { SnippetJson } from "./data/snippets.json.js";
 
 const snippetsFetch = fetch('/scripts/data/snippets.json').then<SnippetJson[]>(res => res.json());
 await sleep(0.3);
@@ -44,7 +45,7 @@ if (snippetsInBook.length > 0) {
     },
   });
 
-  container.replaceChildren(<>
+  container.replaceChildren(jsxToDOM(<>
     <p>
       <a href='#' onclick={function (this: HTMLAnchorElement) {
         this.href = randomElement(snippetsInBook).route;
@@ -58,10 +59,10 @@ if (snippetsInBook.length > 0) {
       }}
     />
     {results}
-  </>);
+  </>));
 }
 else {
   container.replaceChildren(
-    <em>No snippets have been digitized for this book yet.</em>
+    jsxToDOM(<em>No snippets have been digitized for this book yet.</em>)
   );
 }

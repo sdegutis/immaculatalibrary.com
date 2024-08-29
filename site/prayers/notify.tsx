@@ -1,3 +1,5 @@
+import { jsxToDOM } from "../util/jsx-dom.js";
+
 document.body.style.position = 'relative';
 
 let notice: HTMLElement | undefined;
@@ -9,9 +11,9 @@ export function notify(msg: string) {
   notice?.remove();
   clearFn?.();
 
-  notice = <div id='notice'>
+  notice = jsxToDOM<HTMLDivElement>(<div id='notice'>
     {msg}
-  </div> as HTMLDivElement;
+  </div>);
 
   notice.classList.add('fading-out');
 

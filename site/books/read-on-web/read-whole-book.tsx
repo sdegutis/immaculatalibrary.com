@@ -2,6 +2,7 @@ import MarkdownIt from 'markdown-it';
 import { mdOptions } from '../../components/$markdown.js';
 import { Typography } from '../../components/$typography.js';
 import { SnippetJson } from "../../scripts/data/snippets.json.js";
+import { jsxToDOM } from '../../util/jsx-dom.js';
 
 const isDev = (window.location.hostname === 'localhost');
 
@@ -21,7 +22,7 @@ const snippetsInBook = snippetSlugsInBook.map(slug => {
 });
 
 function render() {
-  linksDiv.replaceChildren(<>
+  linksDiv.replaceChildren(jsxToDOM(<>
     {snippetsInBook.map((bookSnippet, i) => <span class='chapter-link'>
       <span>Ch.{i + 1}</span>
       <a href={`#snippet-${bookSnippet.slug}`} onclick={(e: Event) => {
@@ -32,9 +33,9 @@ function render() {
         {bookSnippet.title}
       </a>
     </span>)}
-  </>);
+  </>));
 
-  bodiesDiv.replaceChildren(<>
+  bodiesDiv.replaceChildren(jsxToDOM(<>
     <Typography>
       {snippetsInBook.map((bookSnippet, i) => <>
         <div class='chapter' id={`snippet-${bookSnippet.slug}`}>
@@ -59,7 +60,7 @@ function render() {
         </div>
       </>)}
     </Typography>
-  </>);
+  </>));
 }
 
 render();

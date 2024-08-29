@@ -3,8 +3,9 @@ import { Admin } from "./components/admin.js";
 import { ArticlesList } from "./components/articles-list.js";
 import { Spaced, SplitColumn } from "./components/column.js";
 import { TypicalPage } from "./components/page.js";
+import { jsxToString } from "./util/jsx-strings.js";
 
-export default <>
+export default jsxToString(<>
   <TypicalPage title="Articles" image='/img/page/articles.jpg' page="Articles">
 
     <Spaced>
@@ -24,4 +25,4 @@ export default <>
     </Spaced>
 
   </TypicalPage>
-</>;
+</>);

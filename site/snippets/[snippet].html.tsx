@@ -1,12 +1,13 @@
 import handlers from "handlers!";
-import { allSnippets, Snippet } from "../model/snippets.js";
-import { allTags } from "../model/tag.js";
 import { Typography } from "../components/$typography.js";
 import { Admin } from "../components/admin.js";
 import { Spaced, SplitColumn } from "../components/column.js";
 import { LatestSnippetsArea } from "../components/latest-snippets.js";
 import { TypicalPage } from "../components/page.js";
+import { allSnippets, Snippet } from "../model/snippets.js";
+import { allTags } from "../model/tag.js";
 import { formatDate } from '../util/format-date.js';
+import { jsxToString } from "../util/jsx-strings.js";
 import { PrevNextLinks } from "./snippet-links.js";
 
 handlers.set('/add-tags-to-snippet', body => {
@@ -44,7 +45,7 @@ export default allSnippets.map(snippet => {
     .replace('.pdf', ''));
 
 
-  return [snippet.slug, <>
+  return [snippet.slug, jsxToString(<>
     <TypicalPage title="Book Snippets" image={snippet.book.imageBig} page="Books">
 
       <link rel="stylesheet" href='/css/page/snippet.css' />
@@ -123,5 +124,5 @@ export default allSnippets.map(snippet => {
       </Spaced>
 
     </TypicalPage>
-  </>];
+  </>)];
 });

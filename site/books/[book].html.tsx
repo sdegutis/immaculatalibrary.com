@@ -6,10 +6,11 @@ import { TypicalPage } from "../components/page.js";
 import { PaginatorLoading } from "../components/paginator.js";
 import { Rating } from "../components/rating.js";
 import { allBooks } from "../model/books.js";
-import { formatDate } from "../util/format-date.js";
 import { markdown } from "../util/_helpers.js";
+import { formatDate } from "../util/format-date.js";
+import { jsxToString } from "../util/jsx-strings.js";
 
-export default allBooks.map(book => [book.slug, <>
+export default allBooks.map(book => [book.slug, jsxToString(<>
   <TypicalPage title="Books" image={book.imageBig} page="Books">
 
     <Spaced>
@@ -99,4 +100,4 @@ export default allBooks.map(book => [book.slug, <>
     </Spaced>
 
   </TypicalPage>
-</>]);
+</>)]);

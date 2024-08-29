@@ -1,4 +1,5 @@
 import { LeftArrow, RightArrow } from "../scripts/arrows.js";
+import { jsxToDOM } from "../util/jsx-dom.js";
 import { CircularNav, Nav, Navable } from "./nav.js";
 import { Panel } from "./panel.js";
 
@@ -8,7 +9,7 @@ const tabButtons = [...document.querySelectorAll<HTMLAnchorElement>('#tabs-names
 
 export const tabs = new Nav<Tab>();
 
-const underline = <div id='underline' /> as HTMLDivElement;
+const underline = jsxToDOM<HTMLDivElement>(<div id='underline' />);
 underline.style.top = `${tabNamesArea.offsetHeight - 2}px`;
 tabNamesArea.append(underline);
 
@@ -75,8 +76,8 @@ export function setupTabs() {
       tab.panels.add(panel);
 
       if (panel.prev) {
-        panel.panelDiv.append(<PageChanger to={panel.prev} side='left' />);
-        panel.prev.panelDiv.append(<PageChanger to={panel} side='right' />);
+        panel.panelDiv.append(jsxToDOM(<PageChanger to={panel.prev} side='left' />));
+        panel.prev.panelDiv.append(jsxToDOM(<PageChanger to={panel} side='right' />));
       }
     }
   }
@@ -90,11 +91,11 @@ interface PageChangerContent extends Navable<PageChangerContent> {
 
 function PageChanger(attrs: { to: Panel, side: 'left' | 'right' }) {
   const content = new CircularNav<PageChangerContent>((attrs.side === 'left'
-    ? [{ content: <LeftArrow /> }, { content: `Hey, why don't you go to the page on the ${attrs.side} by clicking here?` }]
-    : [{ content: <RightArrow /> }, { content: `Hey, why don't you go to the page on the ${attrs.side} by clicking here?` }])
+    ? [{ content: jsxToDOM(<LeftArrow />) }, { content: `Hey, why don't you go to the page on the ${attrs.side} by clicking here?` }]
+    : [{ content: jsxToDOM(<RightArrow />) }, { content: `Hey, why don't you go to the page on the ${attrs.side} by clicking here?` }])
   );
 
-  const button = <button class='page-changer' style={`${attrs.side}: 1em;`} /> as HTMLButtonElement;
+  const button = jsxToDOM<HTMLButtonElement>(<button class='page-changer' style={`${attrs.side}: 1em;`} />);
 
   function changeButtonContent() {
     button.replaceChildren(content.current.content);

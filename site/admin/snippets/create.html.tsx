@@ -2,6 +2,7 @@ import handlers from 'handlers!';
 import { Typography } from "../../components/$typography.js";
 import { EmptyPage } from "../../components/page.js";
 import { Snippet } from '../../model/snippets.js';
+import { jsxToString } from '../../util/jsx-strings.js';
 
 handlers.set('/create-snippet', body => {
   const params = new URLSearchParams(body);
@@ -23,7 +24,7 @@ handlers.set('/create-snippet', body => {
   return snippet.route;
 });
 
-export default <>
+export default jsxToString(<>
   <EmptyPage>
     <link rel='stylesheet' href='./new-book-snippet.css' />
     <script src='./new-book-snippet.js' type='module'></script>
@@ -62,4 +63,4 @@ export default <>
 
   </EmptyPage>
 
-</>;
+</>);

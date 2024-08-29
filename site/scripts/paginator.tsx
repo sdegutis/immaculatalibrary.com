@@ -1,3 +1,4 @@
+import { jsxToDOM } from "../util/jsx-dom.js";
 import { LeftArrow, RightArrow } from "./arrows.js";
 import { Reactive, reactTo } from "./reactive.js";
 
@@ -13,21 +14,21 @@ export function makePaginator<T>(
 
   const count = Reactive.from({ items }, deps => deps.items.val.length);
 
-  const prevButton = <button
+  const prevButton = jsxToDOM<HTMLButtonElement>(<button
     style='width:2em'
     onclick={(e: Event) => {
       e.preventDefault();
       page.set(Math.max(0, page.val - 1));
     }}
-  ><LeftArrow /></button> as HTMLButtonElement;
+  ><LeftArrow /></button>);
 
-  const nextButton = <button
+  const nextButton = jsxToDOM<HTMLButtonElement>(<button
     style='width:2em'
     onclick={(e: Event) => {
       e.preventDefault();
       page.set(Math.min(highestPage.val, page.val + 1));
     }}
-  ><RightArrow /></button> as HTMLButtonElement;
+  ><RightArrow /></button>);
 
   reactTo({ page, highestPage }, deps => {
     nextButton.toggleAttribute('disabled', deps.page.val === deps.highestPage.val);
@@ -37,7 +38,7 @@ export function makePaginator<T>(
     prevButton.toggleAttribute('disabled', deps.page.val === 0);
   });
 
-  const currentPage = <span style='min-width:7em; text-align:center' /> as HTMLSpanElement;
+  const currentPage = jsxToDOM<HTMLSpanElement>(<span style='min-width:7em; text-align:center' />);
   reactTo({ page, count }, deps => {
     if (deps.count.val === 0) {
       currentPage.textContent = 'n/a';
@@ -57,8 +58,8 @@ export function makePaginator<T>(
   return {
     page,
     visibleItems,
-    controls: <p style='display:flex; gap:1em; align-items:baseline'>
+    controls: jsxToDOM<HTMLParagraphElement>(<p style='display:flex; gap:1em; align-items:baseline'>
       {prevButton} {currentPage} {nextButton}
-    </p> as HTMLParagraphElement,
+    </p>),
   };
 }

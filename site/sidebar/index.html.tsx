@@ -1,4 +1,6 @@
-export default <>
+import { jsxToString } from "../util/jsx-strings.js";
+
+export default jsxToString(<>
   {'<!DOCTYPE html>'}
   <html lang="en">
 
@@ -18,4 +20,4 @@ export default <>
     </body>
 
   </html>
-</>;
+</>);

@@ -10,8 +10,9 @@ import { SiteFooter } from "./components/site-footer.js";
 import { SiteHeader } from "./components/site-header.js";
 import { Markdown } from "./fathers.html.js";
 import { allBooks } from "./model/books.js";
+import { jsxToString } from "./util/jsx-strings.js";
 
-export default <>
+export default jsxToString(<>
   <EmptyPage>
 
     <VerifyHuman />
@@ -19,7 +20,7 @@ export default <>
     <main>
 
       <SiteHeader page="Home" image="/img/page/home.jpg" title={
-        <Spaced>
+        jsxToString(<Spaced>
           <CenteredColumn>
             <Typography>
               <h1 style='text-align:left'>Immaculata Library</h1>
@@ -35,7 +36,7 @@ export default <>
               </blockquote>
             </Typography>
           </CenteredColumn>
-        </Spaced> as string
+        </Spaced>)
       } />
 
       <Spaced>
@@ -97,4 +98,4 @@ export default <>
     <SiteFooter />
 
   </EmptyPage>
-</>;
+</>);
