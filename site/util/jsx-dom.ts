@@ -1,7 +1,7 @@
 export function jsxToDOM<T extends Node>({ jsx: tag, children, ...attrs }: JSX.Element): T {
   if (typeof tag === 'function') {
     const result = tag(attrs ?? {}, children);
-    if (typeof result === 'object' && 'jsx' in result) {
+    if (result && typeof result === 'object' && 'jsx' in result) {
       return jsxToDOM(result);
     }
     return result;

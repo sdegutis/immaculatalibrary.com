@@ -3,7 +3,7 @@ const UNARY = new Set(["img", "br", "hr", "input", "meta", "link"]);
 export function jsxToString({ jsx: tag, children, ...attrs }: JSX.Element): string {
   if (typeof tag === 'function') {
     const result = tag(attrs, children);
-    if (typeof result === 'object' && 'jsx' in result) {
+    if (result && typeof result === 'object' && 'jsx' in result) {
       return jsxToString(result);
     }
     return result;
