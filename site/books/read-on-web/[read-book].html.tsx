@@ -8,7 +8,7 @@ import { SiteFooter } from "../../components/site-footer.js";
 import { allBooks } from "../../model/books.js";
 import { allSnippets } from "../../model/snippets.js";
 import { markdown, sortBy } from "../../util/_helpers.js";
-import { $ } from "../../util/jsx-strings.js";
+import { jsxToString } from "../../util/jsx-strings.js";
 
 handlers.set('/reorder-snippets-in-book', (body) => {
   const json = JSON.parse(body) as { slug: string, i: number }[];
@@ -26,7 +26,7 @@ export default allBooks.filter(book => book.data.complete).map(book => {
 
   const file = book.data.files[0]!;
 
-  return [book.slug, $(<>
+  return [book.slug, jsxToString(<>
     <EmptyPage>
 
       <link rel="stylesheet" href='/css/page/read-book.css' />

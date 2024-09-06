@@ -6,9 +6,9 @@ import { PaginatorLoading } from "../../components/paginator.js";
 import { Rating } from "../../components/rating.js";
 import { allCategories } from "../../model/categories.js";
 import { markdown } from "../../util/_helpers.js";
-import { $ } from "../../util/jsx-strings.js";
+import { jsxToString } from "../../util/jsx-strings.js";
 
-export default allCategories.map(cat => [cat.slug, $(<>
+export default allCategories.map(cat => [cat.slug, jsxToString(<>
   <TypicalPage title="Book Categories" image={`/img/categories/${cat.slug}-big.jpg`} page="Books">
 
     <Spaced>

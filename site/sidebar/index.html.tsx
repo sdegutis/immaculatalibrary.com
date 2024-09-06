@@ -1,6 +1,6 @@
-import { $ } from "../util/jsx-strings.js";
+import { jsxToString } from "../util/jsx-strings.js";
 
-export default $(<>
+export default jsxToString(<>
   {'<!DOCTYPE html>'}
   <html lang="en">
 

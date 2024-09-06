@@ -2,8 +2,6 @@ const UNARY = new Set(["img", "br", "hr", "input", "meta", "link"]);
 
 const jsx = Symbol.for('jsx');
 
-export const $ = jsxToString;
-
 export function jsxToString(object: JSX.Element): string {
   const tag = object.tag;
   const attrs = object.attrs ?? {};

@@ -3,10 +3,10 @@ import { LoadingLine, LoadingParagraph } from './components/$loading.js';
 import { Spaced, SplitColumn } from './components/column.js';
 import { TypicalPage } from './components/page.js';
 import { PaginatorLoading } from './components/paginator.js';
-import { $ } from './util/jsx-strings.js';
+import { jsxToString } from './util/jsx-strings.js';
 
-export default $(<>
-  <TypicalPage title={$(<BookTabs index={1} />)} image='/img/categories/reference-big.jpg' page='Books'>
+export default jsxToString(<>
+  <TypicalPage title={jsxToString(<BookTabs index={1} />)} image='/img/categories/reference-big.jpg' page='Books'>
 
     <Spaced>
       <SplitColumn>

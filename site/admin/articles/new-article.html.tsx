@@ -1,7 +1,7 @@
 import handlers from 'handlers!';
 import { EmptyPage } from "../../components/page.js";
 import { Article } from "../../model/articles.js";
-import { $ } from '../../util/jsx-strings.js';
+import { jsxToString } from '../../util/jsx-strings.js';
 
 handlers.set('/create-article', body => {
   const params = new URLSearchParams(body);
@@ -18,7 +18,7 @@ handlers.set('/create-article', body => {
   return article.route;
 });
 
-export default $(<>
+export default jsxToString(<>
   <EmptyPage>
     <link rel='stylesheet' href='./new-article.css' />
     <script src='./new-article.js' type='module'></script>
