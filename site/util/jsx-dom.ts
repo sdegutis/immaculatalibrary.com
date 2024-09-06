@@ -1,7 +1,13 @@
-export function jsxToDOM<T extends Node>({ jsx: tag, children, ...attrs }: JSX.Element): T {
+const jsx = Symbol.for('jsx');
+
+export function jsxToDOM<T extends Node>(object: JSX.Element): T {
+  const tag = object.tag;
+  const attrs = object.attrs ?? {};
+  const children = 'children' in object ? object.children : 'child' in object ? [object.child] : [];
+
   if (typeof tag === 'function') {
-    const result = tag(attrs ?? {}, children);
-    if (result && typeof result === 'object' && 'jsx' in result) {
+    const result = tag(attrs, children);
+    if (result && typeof result === 'object' && jsx in result) {
       return jsxToDOM(result);
     }
     return result;
@@ -24,7 +30,7 @@ export function jsxToDOM<T extends Node>({ jsx: tag, children, ...attrs }: JSX.E
 
   pushChildren(el, getGoodChildren(children));
 
-  for (const [key, val] of Object.entries(attrs ?? {})) {
+  for (const [key, val] of Object.entries(attrs)) {
     if (key.startsWith('data-')) {
       el.dataset[key.slice(5)] = val;
     }
@@ -51,7 +57,7 @@ function getGoodChildren(children: any) {
 
 function pushChildren(el: DocumentFragment | HTMLElement | SVGElement, children: any[]) {
   for (let child of children) {
-    if (typeof child === 'object' && 'jsx' in child) {
+    if (typeof child === 'object' && jsx in child) {
       child = jsxToDOM(child);
     }
 

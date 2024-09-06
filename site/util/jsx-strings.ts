@@ -1,9 +1,15 @@
 const UNARY = new Set(["img", "br", "hr", "input", "meta", "link"]);
 
-export function jsxToString({ jsx: tag, children, ...attrs }: JSX.Element): string {
+const jsx = Symbol.for('jsx');
+
+export function jsxToString(object: JSX.Element): string {
+  const tag = object.tag;
+  const attrs = object.attrs ?? {};
+  const children = 'children' in object ? object.children : 'child' in object ? [object.child] : [];
+
   if (typeof tag === 'function') {
     const result = tag(attrs, children);
-    if (result && typeof result === 'object' && 'jsx' in result) {
+    if (result && typeof result === 'object' && jsx in result) {
       return jsxToString(result);
     }
     return result;
@@ -41,7 +47,7 @@ function pushChildren(children: any[], parts: string[]) {
         pushChildren(child, parts);
       }
       else {
-        if (typeof child === 'object' && 'jsx' in child) {
+        if (typeof child === 'object' && jsx in child) {
           parts.push(jsxToString(child));
         }
         else {
