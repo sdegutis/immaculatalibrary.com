@@ -3,15 +3,15 @@ import { makeTabs } from "./components/_tabs.js";
 import { Spaced, SplitColumn } from "./components/column.js";
 import { MoviesList } from "./components/movies-sidebar.js";
 import { TypicalPage } from "./components/page.js";
-import { jsxToString } from "./util/jsx-strings.js";
+import { $ } from "./util/jsx-strings.js";
 
 export const MovieTabs = makeTabs([
   { href: '/movies.html', title: 'Catholic Movies' },
   { href: '/videos.html', title: 'Fulton Sheen' },
 ]);
 
-export default jsxToString(<>
-  <TypicalPage title={jsxToString(<MovieTabs index={0} />)} image='/img/movies/passion-of-the-christ-big.jpg' page="Movies">
+export default $(<>
+  <TypicalPage title={$(<MovieTabs index={0} />)} image='/img/movies/passion-of-the-christ-big.jpg' page="Movies">
 
     <Spaced>
       <SplitColumn>

@@ -1,4 +1,4 @@
-import { jsxToDOM } from "../util/jsx-dom.js";
+import { $ } from "../util/jsx-dom.js";
 
 document.body.style.position = 'relative';
 
@@ -11,7 +11,7 @@ export function notify(msg: string) {
   notice?.remove();
   clearFn?.();
 
-  notice = jsxToDOM<HTMLDivElement>(<div id='notice'>
+  notice = $<HTMLDivElement>(<div id='notice'>
     {msg}
   </div>);
 

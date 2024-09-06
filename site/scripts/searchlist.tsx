@@ -1,5 +1,5 @@
 import MarkdownIt from "markdown-it";
-import { jsxToDOM } from "../util/jsx-dom.js";
+import { $ } from "../util/jsx-dom.js";
 import { makePaginator } from "./paginator.js";
 import { Reactive, reactTo } from "./reactive.js";
 
@@ -23,9 +23,9 @@ export function createSearch<T>({ data, searchTerm, viewForItem, filters, sorter
 }) {
   const matchingItems = new Reactive<T[]>([]);
   const paginator = makePaginator(matchingItems, perPage);
-  const container = jsxToDOM<HTMLDivElement>(<div />);
-  const noResults = jsxToDOM(<em>No results</em>);
-  const list = jsxToDOM<HTMLUListElement>(<ul />);
+  const container = $<HTMLDivElement>(<div />);
+  const noResults = $(<em>No results</em>);
+  const list = $<HTMLUListElement>(<ul />);
 
   const views = new Map<T, Node>();
 
@@ -37,11 +37,11 @@ export function createSearch<T>({ data, searchTerm, viewForItem, filters, sorter
       list.replaceChildren(...deps.visibleItems.val.map(item => {
         if (!searchTerm.val) {
           let view = views.get(item);
-          if (!view) views.set(item, view = jsxToDOM(viewForItem(item)));
+          if (!view) views.set(item, view = $(viewForItem(item)));
           return view;
         }
         else {
-          return jsxToDOM(viewForItem(item, searchTerm.val));
+          return $(viewForItem(item, searchTerm.val));
         }
       }));
       container.replaceChildren(list);
@@ -68,7 +68,7 @@ export function createSearch<T>({ data, searchTerm, viewForItem, filters, sorter
     updateMatchingItems();
   });
 
-  const results = jsxToDOM(<>
+  const results = $(<>
     <link rel='stylesheet' href='/css/components/searchlist.css' />
     {paginator.controls}
     {container}

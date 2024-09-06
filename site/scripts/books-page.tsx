@@ -1,6 +1,6 @@
 import { RatingStar } from "../components/$rating.js";
 import { Typography } from "../components/$typography.js";
-import { jsxToDOM } from "../util/jsx-dom.js";
+import { $ } from "../util/jsx-dom.js";
 import { BookJson } from "./data/books.json.js";
 import { Reactive } from "./reactive.js";
 import { createSearch, findWithinMarkdown, highlight } from "./searchlist.js";
@@ -88,7 +88,7 @@ matchingItems.onChange(() => {
   document.querySelector('.search-count')!.textContent = matchingItems.val.length.toFixed();
 });
 
-const randomBookLink = jsxToDOM<HTMLAnchorElement>(<a href='#' onclick={function (this: HTMLAnchorElement, e: Event) {
+const randomBookLink = $<HTMLAnchorElement>(<a href='#' onclick={function (this: HTMLAnchorElement, e: Event) {
   if (matchingItems.val.length === 0) {
     e.preventDefault();
     return;
@@ -101,7 +101,7 @@ matchingItems.onChange(() => {
   randomBookLink.toggleAttribute('disabled', matchingItems.val.length === 0);
 });
 
-const searchInput = jsxToDOM<HTMLInputElement>(<input autofocus style='width: 100%' placeholder='Search' type="text" oninput={updateFromSearchInput} />);
+const searchInput = $<HTMLInputElement>(<input autofocus style='width: 100%' placeholder='Search' type="text" oninput={updateFromSearchInput} />);
 
 if (window.location.hash) {
   searchInput.value = decodeURIComponent(window.location.hash.slice(1));
@@ -114,7 +114,7 @@ function updateFromSearchInput() {
   window.location.hash = '#' + encodeURIComponent(term);
 }
 
-document.querySelector('.filters-container')!.replaceChildren(jsxToDOM(<>
+document.querySelector('.filters-container')!.replaceChildren($(<>
   <p>
     {searchInput}
   </p>
@@ -132,7 +132,7 @@ document.querySelector('.filters-container')!.replaceChildren(jsxToDOM(<>
       <label><input type='radio' name='stars' onclick={() => starsFilterSource.set('any')} checked />Any</label>
       <label><input type='radio' name='stars' onclick={() => starsFilterSource.set('0')} />Unrated</label>
       {Array(5).fill(0).map((_, i) => {
-        const star = jsxToDOM<DocumentFragment>(<RatingStar />).querySelector('svg')!;
+        const star = $<DocumentFragment>(<RatingStar />).querySelector('svg')!;
         const num = i + 1;
 
         starsFilterSource.onChange(() => {

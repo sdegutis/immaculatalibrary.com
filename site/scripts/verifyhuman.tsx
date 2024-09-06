@@ -1,13 +1,13 @@
-import { jsxToDOM } from "../util/jsx-dom.js";
+import { $ } from "../util/jsx-dom.js";
 import { randomElement } from "./util.js";
 
 class VerifyHuman {
 
   #quitting = false;
-  #screen = jsxToDOM<HTMLDivElement>(<div style='position:fixed;top:0;left:0;bottom:0;right:0;z-index:99;transition:background-color 1s ease' />);
-  #wholeArea = jsxToDOM<HTMLParagraphElement>(<p id='verifyhuman' />);
-  #wordArea = jsxToDOM<HTMLSpanElement>(<span />);
-  #cursorArea = jsxToDOM<HTMLSpanElement>(<span />);
+  #screen = $<HTMLDivElement>(<div style='position:fixed;top:0;left:0;bottom:0;right:0;z-index:99;transition:background-color 1s ease' />);
+  #wholeArea = $<HTMLParagraphElement>(<p id='verifyhuman' />);
+  #wordArea = $<HTMLSpanElement>(<span />);
+  #cursorArea = $<HTMLSpanElement>(<span />);
 
   async run(phrases: string[]) {
     const restore = this.#attach();

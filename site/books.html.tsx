@@ -4,15 +4,15 @@ import { Admin } from './components/admin.js';
 import { Spaced, SplitColumn } from './components/column.js';
 import { TypicalPage } from './components/page.js';
 import { PaginatorLoading } from './components/paginator.js';
-import { jsxToString } from './util/jsx-strings.js';
+import { $ } from './util/jsx-strings.js';
 
 export const BookTabs = makeTabs([
   { href: '/books.html', title: 'Books' },
   { href: '/snippets.html', title: 'Book Snippets' },
 ]);
 
-export default jsxToString(<>
-  <TypicalPage title={jsxToString(<BookTabs index={0} />)} image='/img/categories/reference-big.jpg' page='Books'>
+export default $(<>
+  <TypicalPage title={$(<BookTabs index={0} />)} image='/img/categories/reference-big.jpg' page='Books'>
 
     <Spaced>
       <SplitColumn>

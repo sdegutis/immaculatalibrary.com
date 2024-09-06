@@ -1,10 +1,10 @@
 import { EmptyPage } from '../components/page.js';
 import { SiteHeader } from '../components/site-header.js';
-import { jsxToString } from '../util/jsx-strings.js';
+import { $ } from '../util/jsx-strings.js';
 
 const enum Day { SUN, MON, TUE, WED, THUR, FRI, SAT };
 
-export default jsxToString(<>
+export default $(<>
   <EmptyPage favicons={<link rel="icon" type="image/png" sizes="32x32" href='./favicon.ico' />}>
     <link rel='stylesheet' href='./style.css' />
     <script src='./client.js' type='module' />
@@ -1106,7 +1106,7 @@ function Tabs(attrs: { tabs: Record<string, JSX.Element> }) {
     <div id='tab-container'>
 
       <SiteHeader image='/img/page/home.jpg' page='Prayers' title={
-        jsxToString(
+        $(
           <h1 id='tabs-names' class='tab-links'>
             {Object.keys(attrs.tabs).map(title => (
               <a href='#'>{title}</a>

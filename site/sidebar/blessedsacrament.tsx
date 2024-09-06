@@ -1,17 +1,17 @@
-import { jsxToDOM } from "../util/jsx-dom.js";
+import { $ } from "../util/jsx-dom.js";
 
 const adorationLinks = [
   "UCTv8s3mfmdIIXNcw_5Pdv_w",
   "UChmNZQg06jCB5xXHSAQQNpA",
 ].map(id => {
   const href = `https://www.youtube.com/embed/live_stream?channel=${id}&autoplay=1&mute=1`;
-  return jsxToDOM<HTMLIFrameElement>(<iframe src={href} />);
+  return $<HTMLIFrameElement>(<iframe src={href} />);
 });
 
-const blessedSacramentImage = jsxToDOM(<img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Adoration_du_Saint_Sacrement_%C3%A0_l%27Eglise_du_Sacr%C3%A9-Coeur_de_Monaco.jpg" />);
+const blessedSacramentImage = $(<img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Adoration_du_Saint_Sacrement_%C3%A0_l%27Eglise_du_Sacr%C3%A9-Coeur_de_Monaco.jpg" />);
 
 export function BlessedSacrament() {
-  const target = jsxToDOM<HTMLDivElement>(<div id='top2'>
+  const target = $<HTMLDivElement>(<div id='top2'>
     {adorationLinks[0]}
   </div>);
 

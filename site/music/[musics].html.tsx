@@ -4,7 +4,7 @@ import { MusicSidebar } from "../components/music-sidebar.js";
 import { TypicalPage } from "../components/page.js";
 import { allMusics } from "../model/musics.js";
 import { markdown } from "../util/_helpers.js";
-import { jsxToString } from "../util/jsx-strings.js";
+import { $ } from "../util/jsx-strings.js";
 
 function EmbedYoutube(attrs: { youtube: string }) {
   return (
@@ -33,7 +33,7 @@ function EmbedSpotify(attrs: { spotify: string }) {
 }
 
 export default allMusics.map(song => {
-  return [song.slug, jsxToString(<>
+  return [song.slug, $(<>
     <TypicalPage title="Music" image='/img/page/music.jpg' page="Music">
 
       <link rel="stylesheet" href='/css/page/song.css' />

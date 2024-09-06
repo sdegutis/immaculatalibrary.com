@@ -7,7 +7,7 @@ import { TypicalPage } from "../components/page.js";
 import { allSnippets, Snippet } from "../model/snippets.js";
 import { allTags } from "../model/tag.js";
 import { formatDate } from '../util/format-date.js';
-import { jsxToString } from "../util/jsx-strings.js";
+import { $ } from "../util/jsx-strings.js";
 import { PrevNextLinks } from "./snippet-links.js";
 
 handlers.set('/add-tags-to-snippet', body => {
@@ -45,7 +45,7 @@ export default allSnippets.map(snippet => {
     .replace('.pdf', ''));
 
 
-  return [snippet.slug, jsxToString(<>
+  return [snippet.slug, $(<>
     <TypicalPage title="Book Snippets" image={snippet.book.imageBig} page="Books">
 
       <link rel="stylesheet" href='/css/page/snippet.css' />

@@ -1,5 +1,5 @@
 import { Typography } from "../components/$typography.js";
-import { jsxToDOM } from "../util/jsx-dom.js";
+import { $ } from "../util/jsx-dom.js";
 import { SnippetJson } from "./data/snippets.json.js";
 import { Reactive } from "./reactive.js";
 import { createSearch, findWithinMarkdown, highlight } from "./searchlist.js";
@@ -75,7 +75,7 @@ matchingItems.onChange(() => {
   document.querySelector('.search-count')!.textContent = matchingItems.val.length.toFixed();
 });
 
-const randomSnippetLink = jsxToDOM<HTMLAnchorElement>(<a href='#' onclick={function (this: HTMLAnchorElement, e: Event) {
+const randomSnippetLink = $<HTMLAnchorElement>(<a href='#' onclick={function (this: HTMLAnchorElement, e: Event) {
   if (matchingItems.val.length === 0) {
     e.preventDefault();
     return;
@@ -88,7 +88,7 @@ matchingItems.onChange(() => {
   randomSnippetLink.toggleAttribute('disabled', matchingItems.val.length === 0);
 });
 
-const searchInput = jsxToDOM<HTMLInputElement>(<input style='width: 100%' placeholder='Search' autofocus type="text" oninput={updateFromSearchInput} />);
+const searchInput = $<HTMLInputElement>(<input style='width: 100%' placeholder='Search' autofocus type="text" oninput={updateFromSearchInput} />);
 
 if (window.location.hash) {
   searchInput.value = decodeURIComponent(window.location.hash.slice(1));
@@ -101,7 +101,7 @@ function updateFromSearchInput() {
   window.location.hash = '#' + encodeURIComponent(term);
 }
 
-document.querySelector('.filters-container')!.replaceChildren(jsxToDOM(<>
+document.querySelector('.filters-container')!.replaceChildren($(<>
   <p>
     {searchInput}
   </p>

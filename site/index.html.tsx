@@ -10,9 +10,9 @@ import { SiteFooter } from "./components/site-footer.js";
 import { SiteHeader } from "./components/site-header.js";
 import { Markdown } from "./fathers.html.js";
 import { allBooks } from "./model/books.js";
-import { jsxToString } from "./util/jsx-strings.js";
+import { $ } from "./util/jsx-strings.js";
 
-export default jsxToString(<>
+export default $(<>
   <EmptyPage>
 
     <VerifyHuman />
@@ -20,7 +20,7 @@ export default jsxToString(<>
     <main>
 
       <SiteHeader page="Home" image="/img/page/home.jpg" title={
-        jsxToString(<Spaced>
+        $(<Spaced>
           <CenteredColumn>
             <Typography>
               <h1 style='text-align:left'>Immaculata Library</h1>

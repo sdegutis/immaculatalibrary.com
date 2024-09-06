@@ -2,7 +2,7 @@ import handlers from 'handlers!';
 import { EmptyPage } from "../../components/page.js";
 import { Book } from "../../model/books.js";
 import { allCategories, categoriesBySlug } from "../../model/categories.js";
-import { jsxToString } from '../../util/jsx-strings.js';
+import { $ } from '../../util/jsx-strings.js';
 import { slugify } from "../util/helpers.js";
 
 handlers.set('/create-book', body => {
@@ -36,7 +36,7 @@ handlers.set('/create-book', body => {
   return book.route;
 });
 
-export default jsxToString(<>
+export default $(<>
   <EmptyPage>
     <form method='POST' action='/create-book' style='display:grid; grid-template-columns: auto 1fr; width:30em; margin:1em; gap:1em; align-items:baseline'>
       <span>Title</span>        <input autocomplete='off' name='title' autofocus />

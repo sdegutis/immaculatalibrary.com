@@ -1,5 +1,7 @@
 const jsx = Symbol.for('jsx');
 
+export const $ = jsxToDOM;
+
 export function jsxToDOM<T extends Node>(object: JSX.Element): T {
   const tag = object.tag;
   const attrs = object.attrs ?? {};

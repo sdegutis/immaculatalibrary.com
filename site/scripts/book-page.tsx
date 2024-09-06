@@ -1,5 +1,5 @@
 import { Typography } from "../components/$typography.js";
-import { jsxToDOM } from "../util/jsx-dom.js";
+import { $ } from "../util/jsx-dom.js";
 import { SnippetJson } from "./data/snippets.json.js";
 import { Reactive } from "./reactive.js";
 import { createSearch, findWithinMarkdown, highlight } from "./searchlist.js";
@@ -45,7 +45,7 @@ if (snippetsInBook.length > 0) {
     },
   });
 
-  container.replaceChildren(jsxToDOM(<>
+  container.replaceChildren($(<>
     <p>
       <a href='#' onclick={function (this: HTMLAnchorElement) {
         this.href = randomElement(snippetsInBook).route;
@@ -63,6 +63,6 @@ if (snippetsInBook.length > 0) {
 }
 else {
   container.replaceChildren(
-    jsxToDOM(<em>No snippets have been digitized for this book yet.</em>)
+    $(<em>No snippets have been digitized for this book yet.</em>)
   );
 }

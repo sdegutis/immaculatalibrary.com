@@ -1,8 +1,8 @@
 import * as path from "path/posix";
-import { jsxToString } from "./util/jsx-strings.js";
+import { $ } from "./util/jsx-strings.js";
 
 export function makeSitemap(paths: Iterable<string>) {
-  return jsxToString(<>
+  return $(<>
     {`<?xml version="1.0" encoding="UTF-8"?>`}
     <urlset
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"

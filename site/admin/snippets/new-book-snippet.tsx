@@ -3,7 +3,7 @@ import MarkdownIt from 'markdown-it';
 import { mdOptions } from '../../components/$markdown.js';
 import { SnippetJson } from '../../scripts/data/snippets/[snippet].json.js';
 import { calculateReadingMins } from '../../util/helpers.js';
-import { jsxToDOM } from '../../util/jsx-dom.js';
+import { $ } from '../../util/jsx-dom.js';
 import { slugify } from '../util/helpers.js';
 
 window.addEventListener('beforeunload', (e) => {
@@ -24,7 +24,7 @@ if (slug) {
   document.querySelector<HTMLInputElement>('input[name=bookSlug]')!.value = snippet.bookSlug;
   document.querySelector('iframe')!.src = snippet.archiveLink;
   document.getElementById('old-body')!.replaceChildren(
-    jsxToDOM(<>
+    $(<>
       {snippet.archivePage}
       <div innerHTML={md.render(snippet.content)} />
       <hr />
@@ -49,7 +49,7 @@ const addTagButton = document.getElementById('addtag')!;
 const tags = await fetch('../util/tags.json').then(res => res.json());
 for (const tag of tags) {
   addTagButton.parentElement!.insertAdjacentElement('beforebegin',
-    jsxToDOM<HTMLLIElement>(<li>
+    $<HTMLLIElement>(<li>
       <label>
         <input type='checkbox' name='tags' value={tag} /> {tag}
       </label>
@@ -59,7 +59,7 @@ for (const tag of tags) {
 
 addTagButton.onclick = (e) => {
   e.preventDefault();
-  const li = jsxToDOM<HTMLLIElement>(<li>
+  const li = $<HTMLLIElement>(<li>
     <label>
       <input type='input' name='tags' />
     </label>

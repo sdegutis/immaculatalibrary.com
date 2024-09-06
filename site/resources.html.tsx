@@ -1,8 +1,8 @@
 import { Spaced, SplitColumn } from './components/column.js';
 import { TypicalPage } from './components/page.js';
-import { jsxToString } from './util/jsx-strings.js';
+import { $ } from './util/jsx-strings.js';
 
-export default jsxToString(<>
+export default $(<>
   <TypicalPage title="Catholic Resources" image='/img/categories/classics-big.jpg' page='Resources'>
 
     <Spaced>
