@@ -14,14 +14,12 @@ const links = {
 
 export type NavPage = keyof typeof links;
 
-export const Navlinks = (attrs: { page: NavPage }) => {
-  return <>
-    <Column>
-      <div style='flex-wrap:wrap; margin:2em 0' class='tab-links'>
-        {Object.entries(links).map(([name, link]) => jsxToString(
-          <a href={link.href} class={attrs.page === name ? 'active' : ''}>{link.title}</a>
-        )).join(' ')}
-      </div>
-    </Column>
-  </>;
-};
+export const Navlinks = (attrs: { page: NavPage }) => <>
+  <Column>
+    <div style='flex-wrap:wrap; margin:2em 0' class='tab-links'>
+      {Object.entries(links).map(([name, link]) => jsxToString(
+        <a href={link.href} class={attrs.page === name ? 'active' : ''}>{link.title}</a>
+      )).join(' ')}
+    </div>
+  </Column>
+</>;
