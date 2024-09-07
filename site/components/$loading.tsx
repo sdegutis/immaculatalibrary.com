@@ -1,6 +1,6 @@
 const sizes = [80, 90, 70, 95, 75, 60, 85];
 
-export const LoadingParagraph: JSX.Component<{ lines: number, fullWidth?: boolean }> = ({ lines, fullWidth }) => <p>
+export const LoadingParagraph = ({ lines, fullWidth }: { lines: number, fullWidth?: boolean }) => <p>
   {fullWidth
     ? Array(lines).fill(0).map((_, i) =>
       <LoadingLine width={`${i < (lines - 1) ? 100 : 70}%`} />
@@ -11,7 +11,7 @@ export const LoadingParagraph: JSX.Component<{ lines: number, fullWidth?: boolea
   }
 </p>;
 
-export const LoadingLine: JSX.Component<{ width: string, height?: string }> = ({ width, height = '1em' }) => <>
+export const LoadingLine = ({ width, height = '1em' }: { width: string, height?: string }) => <>
   <link rel='stylesheet' href='/css/components/loading.css' />
   <span style={`width: ${width}; height: ${height}`} class='loading-item' />
 </>;

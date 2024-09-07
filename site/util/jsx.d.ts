@@ -72,8 +72,6 @@ declare namespace JSX {
     keyof IntrinsicElements |
     ((attrs: any) => Element | Node | string | null);
 
-  type Component<T extends Record<string, any> = {}> = (attrs: T) => Element;
-
   interface ElementChildrenAttribute {
     children: any;
   }

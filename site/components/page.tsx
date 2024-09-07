@@ -4,7 +4,7 @@ import { QuickLinks } from './quicklinks.js';
 import { SiteFooter } from './site-footer.js';
 import { SiteHeader } from './site-header.js';
 
-const Meta: JSX.Component<{ favicons?: JSX.Element }> = (attrs) => <>
+const Meta = (attrs: { favicons?: JSX.Element }) => <>
   {attrs.favicons ?? <>
     <link rel="apple-touch-icon" sizes="180x180" href='/meta/apple-touch-icon.png' />
     <link rel="icon" type="image/png" sizes="32x32" href='/meta/favicon-32x32.png' />
@@ -13,7 +13,7 @@ const Meta: JSX.Component<{ favicons?: JSX.Element }> = (attrs) => <>
   <link rel="manifest" href='/meta/manifest.json' />
 </>;
 
-export const EmptyPage: JSX.Component<{ favicons?: JSX.Element, children: any }> = (attrs) => <>
+export const EmptyPage = (attrs: { favicons?: JSX.Element, children: any }) => <>
   {'<!DOCTYPE html>'}
   <html lang="en">
 
@@ -41,7 +41,7 @@ export const EmptyPage: JSX.Component<{ favicons?: JSX.Element, children: any }>
   </html>
 </>;
 
-export const TypicalPage: JSX.Component<{ title: string, image: string, page: NavPage, children: any }> = (attrs) => <>
+export const TypicalPage = (attrs: { title: string, image: string, page: NavPage, children: any }) => <>
   <EmptyPage>
 
     <SiteHeader page={attrs.page} image={attrs.image} title={attrs.title} />
