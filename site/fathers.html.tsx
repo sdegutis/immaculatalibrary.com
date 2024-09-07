@@ -3,15 +3,11 @@ import { TypicalPage } from "./components/page.js";
 import { markdown } from "./util/_helpers.js";
 import { jsxToString } from "./util/jsx-strings.js";
 
-export function Markdown(attrs: any, children: any[]) {
-  const lines = (children
-    .map(String)
-    .join('')
+export function Markdown(attrs: { children: string }) {
+  return markdown.render(attrs.children
     .split('\n')
     .map(s => s.trimStart())
     .join(' '));
-
-  return markdown.render(lines);
 }
 
 const others: Record<string, { id: string, title: string }[]> = {

@@ -347,8 +347,8 @@ function Mystery(attrs: { name: string, mysteries: Record<string, Mystery[]>, da
   )}</>;
 }
 
-function Line(attrs: any, children: any) {
-  return <span class='highlightable-line'>{children}{'\n'}</span>;
+function Line(attrs: { children: any }) {
+  return <span class='highlightable-line'>{attrs.children}{'\n'}</span>;
 }
 
 function Intro() {
@@ -1068,7 +1068,7 @@ function HolyFamilyPrayer() {
   </Prayer>;
 }
 
-function Prayer(attrs: { img: string }, children: any) {
+function Prayer(attrs: { img: string, children: any }) {
   return (
     <Panel>
       <div class='half-grid'>
@@ -1076,28 +1076,28 @@ function Prayer(attrs: { img: string }, children: any) {
           <img src={attrs.img} alt="" loading='lazy' />
         </div>
         <div class='centered'>
-          {children}
+          {attrs.children}
         </div>
       </div>
     </Panel>
   );
 }
 
-function Red(attrs: any, children: any) {
-  return <span class='red'>{children}</span>;
+function Red(attrs: { children: any }) {
+  return <span class='red'>{attrs.children}</span>;
 }
 
-function Panel(attrs: any, children: any) {
+function Panel(attrs: { children: any }) {
   return <div class="panel">
     <div class='panel-body'>
-      {children}
+      {attrs.children}
     </div>
   </div>;
 }
 
-function Slideshow(attrs: any, children: any) {
+function Slideshow(attrs: { children: any }) {
   return <div class="slideshow">
-    {children}
+    {attrs.children}
   </div>;
 }
 

@@ -8,7 +8,7 @@ const categories = [
   'Purgatory',
 ];
 
-export const MusicSidebar: JSX.Component = (attrs, children) => <>
+export const MusicSidebar: JSX.Component = (attrs) => <>
   <div>
 
     {categories.map(cat => <>

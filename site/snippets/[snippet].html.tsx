@@ -26,7 +26,7 @@ handlers.set('/edit-snippet', body => {
   return snippet.route;
 });
 
-function RelativeSnippetLink({ snippet }: { snippet: Snippet | undefined }, children: any) {
+function RelativeSnippetLink({ snippet, children }: { snippet: Snippet | undefined, children: any }) {
   return <>
     <span>
       {snippet && <>

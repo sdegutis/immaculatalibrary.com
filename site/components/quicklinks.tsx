@@ -7,7 +7,7 @@ import { FadeIn } from './fadein.js';
 const ofSaints = allCategories.filter(c => c.data.saint);
 const nonSaints = allCategories.filter(c => !ofSaints.includes(c));
 
-export const QuickLinks: JSX.Component = (attrs, children) => {
+export const QuickLinks: JSX.Component = (attrs) => {
   return <>
     <link rel="stylesheet" href='/css/components/quicklinks.css' />
 

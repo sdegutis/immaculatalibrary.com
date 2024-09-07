@@ -2,16 +2,18 @@ const jsx = Symbol.for('jsx');
 
 export const $ = jsxToDOM;
 
-export function jsxToDOM<T extends Node>({ [jsx]: tag, children, ...attrs }: JSX.Element): T {
+export function jsxToDOM<T extends Node>({ [jsx]: tag, ...attrs }: JSX.Element): T {
+  let children = attrs.children;
   if (!Array.isArray(children)) children = [children];
 
   if (typeof tag === 'function') {
-    const result = tag(attrs, children);
+    const result = tag(attrs);
     if (result && typeof result === 'object' && jsx in result) {
       return jsxToDOM(result);
     }
     return result;
   }
+  delete attrs.children;
 
   if (tag === '') {
     const goodChildren = getGoodChildren(children);

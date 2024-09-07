@@ -3,7 +3,7 @@ declare namespace JSX {
   type EventHandler<T extends Event> = (e: T) => any;
   type ElementAttrs = {
 
-    [attr: string]: string | boolean | EventHandler<any>;
+    [attr: string]: any;
 
     id?: string;
     class?: string;
@@ -30,7 +30,7 @@ declare namespace JSX {
 
   };
 
-  type HtmlAttrs = { lang?: string };
+  type HtmlAttrs = { lang?: string, children?: any };
   type AnchorAttrs = ElementAttrs & { href?: string; rel?: 'noopener'; target?: string };
   type MetaAttrs = { 'http-equiv'?: string; content?: string; name?: string; charset?: string; property?: string; };
   type LinkAttrs = { href?: string } & (
@@ -54,7 +54,7 @@ declare namespace JSX {
 
   type IntrinsicElements = {
 
-    [tag: string]: Record<string, string | boolean | Function>;
+    [tag: string]: Record<string, any>;
 
     html: HtmlAttrs, head: ElementAttrs, body: ElementAttrs, title: {},
     meta: MetaAttrs, link: LinkAttrs, script: ScriptAttrs, iframe: IFrameAttrs, style: {},
@@ -70,8 +70,12 @@ declare namespace JSX {
 
   type ElementType =
     keyof IntrinsicElements |
-    ((attrs: any, children: any) => Element | Node | string | null);
+    ((attrs: any) => Element | Node | string | null);
 
-  type Component<T extends Record<string, any> = {}> = (attrs: T, children: any) => Element;
+  type Component<T extends Record<string, any> = {}> = (attrs: T) => Element;
+
+  interface ElementChildrenAttribute {
+    children: any;
+  }
 
 }

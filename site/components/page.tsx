@@ -13,7 +13,7 @@ const Meta: JSX.Component<{ favicons?: JSX.Element }> = (attrs) => <>
   <link rel="manifest" href='/meta/manifest.json' />
 </>;
 
-export const EmptyPage: JSX.Component<{ favicons?: JSX.Element }> = (attrs, children) => <>
+export const EmptyPage: JSX.Component<{ favicons?: JSX.Element, children: any }> = (attrs) => <>
   {'<!DOCTYPE html>'}
   <html lang="en">
 
@@ -34,20 +34,20 @@ export const EmptyPage: JSX.Component<{ favicons?: JSX.Element }> = (attrs, chil
 
     <body>
       <Font name='martel'>
-        {children}
+        {attrs.children}
       </Font>
     </body>
 
   </html>
 </>;
 
-export const TypicalPage: JSX.Component<{ title: string, image: string, page: NavPage }> = (attrs, children) => <>
+export const TypicalPage: JSX.Component<{ title: string, image: string, page: NavPage, children: any }> = (attrs) => <>
   <EmptyPage>
 
     <SiteHeader page={attrs.page} image={attrs.image} title={attrs.title} />
 
     <main>
-      {children}
+      {attrs.children}
     </main>
 
     <QuickLinks />

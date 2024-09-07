@@ -16,7 +16,7 @@ const DURATIONS = { long: 1, short: .3 };
 
 renderSnippet(getSnippetOfTheHour(await snippetIds), 'long');
 
-function RelativeSnippetLink({ snippet }: { snippet: string | undefined }, children: any) {
+function RelativeSnippetLink({ snippet, children }: { snippet: string | undefined, children: any }) {
   const span = $<HTMLSpanElement>(<span />);
 
   if (snippet) {

@@ -4,7 +4,7 @@ import dirFiles from './';
 const fontFiles = dirFiles.filter(f => f.path.endsWith('.woff'));
 const fontGroups = Map.groupBy(fontFiles, f => f.path.split('/')[2]!);
 
-export function Font(attrs: { name: string }, children: any) {
+export function Font(attrs: { name: string, children: any }) {
   const dir = fontGroups.get(attrs.name)!;
   return <>
     <div style={`font-family: ${attrs.name}`}>
@@ -12,7 +12,7 @@ export function Font(attrs: { name: string }, children: any) {
         <link rel="preload" href={file.path} as="font" type="font/woff" crossorigin />
       )}
       <link rel="stylesheet" href={`/fonts/${attrs.name}.css`} />
-      {children}
+      {attrs.children}
     </div>
   </>;
 }
