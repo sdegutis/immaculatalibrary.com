@@ -7,95 +7,92 @@ import { FadeIn } from './fadein.js';
 const ofSaints = allCategories.filter(c => c.data.saint);
 const nonSaints = allCategories.filter(c => !ofSaints.includes(c));
 
-export const QuickLinks = () => {
-  return <>
-    <link rel="stylesheet" href='/css/components/quicklinks.css' />
+export const QuickLinks = () => <>
+  <link rel="stylesheet" href='/css/components/quicklinks.css' />
 
-    <div id='featured-books-area'>
+  <div id='featured-books-area'>
+
+    <FadeIn>
+      <Column>
+        <h2>Featured Books</h2>
+
+        <ul>
+          {featuredBooks.map(book => <>
+            <li>
+              <h3><a href={book.route}>{book.data.title}</a></h3>
+              {book.data.frontpage!.why}
+            </li>
+          </>)}
+        </ul>
+
+      </Column>
+    </FadeIn>
+
+  </div>
+
+  <div class="recents">
+    <Column>
 
       <FadeIn>
-        <Column>
-          <h2>Featured Books</h2>
-
-          <ul>
-            {featuredBooks.map(book => <>
-              <li>
-                <h3><a href={book.route}>{book.data.title}</a></h3>
-                {book.data.frontpage!.why}
-              </li>
-            </>)}
-          </ul>
-
-        </Column>
+        <h2>Books by Topic</h2>
+        <ul class="quicklinks">
+          {nonSaints.map(cat => <li>
+            <a class="link" href={cat.route} style={`background-image: url(${cat.imageSmall});`}>
+              <span>{cat.data.shortTitle}</span>
+            </a>
+          </li>
+          )}
+        </ul>
       </FadeIn>
 
-    </div>
+    </Column>
+    <Column>
 
-    <div class="recents">
-      <Column>
+      <FadeIn>
+        <h2>Books about Saints</h2>
+        <ul class="quicklinks">
+          {ofSaints.map(cat => <li>
+            <a class="link" href={cat.route} style={`background-image: url(${cat.imageSmall});`}>
+              <span>{cat.data.shortTitle}</span>
+            </a>
+          </li>
+          )}
+        </ul>
+      </FadeIn>
 
-        <FadeIn>
-          <h2>Books by Topic</h2>
-          <ul class="quicklinks">
-            {nonSaints.map(cat => <li>
-              <a class="link" href={cat.route} style={`background-image: url(${cat.imageSmall});`}>
-                <span>{cat.data.shortTitle}</span>
-              </a>
-            </li>
-            )}
-          </ul>
-        </FadeIn>
+    </Column>
+  </div>
 
-      </Column>
-      <Column>
+  <div class="recents alt">
+    <Column>
 
-        <FadeIn>
-          <h2>Books about Saints</h2>
-          <ul class="quicklinks">
-            {ofSaints.map(cat => <li>
-              <a class="link" href={cat.route} style={`background-image: url(${cat.imageSmall});`}>
-                <span>{cat.data.shortTitle}</span>
-              </a>
-            </li>
-            )}
-          </ul>
-        </FadeIn>
+      <FadeIn>
+        <h2>Movies</h2>
+        <ul class="quicklinks">
 
-      </Column>
-    </div>
+          {allMovies.map(movie => <li>
+            <a class="link" href={movie.route} style={`background-image: url(${movie.imageSmall});`}>
+              <span>{movie.data.title} ({movie.data.year})</span>
+            </a>
+          </li>
+          )}
 
-    <div class="recents alt">
-      <Column>
+          <li>
+            <a class="link" href='/videos.html' style={`background-image: url(/img/page/videos.jpg);`}>
+              <span>Fulton Sheen</span>
+            </a>
+          </li>
 
-        <FadeIn>
-          <h2>Movies</h2>
-          <ul class="quicklinks">
+          <li>
+            <a class="link" href='/resources.html' style={`background-image: url(/img/page/audiobible.jpg);`}>
+              <span>Audio Bible</span>
+            </a>
+          </li>
 
-            {allMovies.map(movie =>
-              <li>
-                <a class="link" href={movie.route} style={`background-image: url(${movie.imageSmall});`}>
-                  <span>{movie.data.title} ({movie.data.year})</span>
-                </a>
-              </li>
-            )}
+        </ul>
+      </FadeIn>
 
-            <li>
-              <a class="link" href='/videos.html' style={`background-image: url(/img/page/videos.jpg);`}>
-                <span>Fulton Sheen</span>
-              </a>
-            </li>
+    </Column>
+  </div>
 
-            <li>
-              <a class="link" href='/resources.html' style={`background-image: url(/img/page/audiobible.jpg);`}>
-                <span>Audio Bible</span>
-              </a>
-            </li>
-
-          </ul>
-        </FadeIn>
-
-      </Column>
-    </div>
-
-  </>;
-};
+</>;
