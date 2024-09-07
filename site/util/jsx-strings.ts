@@ -2,10 +2,8 @@ const UNARY = new Set(["img", "br", "hr", "input", "meta", "link"]);
 
 const jsx = Symbol.for('jsx');
 
-export function jsxToString(object: JSX.Element): string {
-  const tag = object.tag;
-  const attrs = object.attrs ?? {};
-  const children = 'children' in object ? object.children : 'child' in object ? [object.child] : [];
+export function jsxToString({ [jsx]: tag, children, ...attrs }: JSX.Element): string {
+  if (!Array.isArray(children)) children = [children];
 
   if (typeof tag === 'function') {
     const result = tag(attrs, children);
