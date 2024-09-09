@@ -2,23 +2,38 @@ const UNARY = new Set(["img", "br", "hr", "input", "meta", "link"]);
 
 const jsx = Symbol.for('jsx');
 
-export function jsxToString({ [jsx]: tag, ...attrs }: JSX.Element): string {
+export function jsxToString(object: any): string {
+  const t = typeof object;
+  if (t === 'string') return object;
+  if (t === 'undefined' || t === 'boolean' || object === null) return '';
+  if (t !== 'object') return String(object);
+
+  const parts: string[] = [];
+
+  if (object instanceof Array) {
+    for (const child of object) {
+      parts.push(jsxToString(child));
+    }
+    return parts.join('');
+  }
+
+  if (!(jsx in object)) return String(object);
+
+
+  const { [jsx]: tag, ...attrs } = object;
+
   let children = attrs.children;
   if (!Array.isArray(children)) children = [children];
 
   if (typeof tag === 'function') {
-    const result = tag(attrs);
-    if (result && typeof result === 'object' && jsx in result) {
-      return jsxToString(result);
-    }
-    return result;
+    return jsxToString(tag(attrs));
   }
   delete attrs.children;
 
-  const parts: string[] = [];
-
   if (tag === '') {
-    pushChildren(children, parts);
+    for (const child of children) {
+      parts.push(jsxToString(child));
+    }
     return parts.join('');
   }
 
@@ -33,27 +48,11 @@ export function jsxToString({ [jsx]: tag, ...attrs }: JSX.Element): string {
   parts.push('>');
 
   if (!UNARY.has(tag)) {
-    pushChildren(children, parts);
+    for (const child of children) {
+      parts.push(jsxToString(child));
+    }
     parts.push('</', tag, '>');
   }
 
   return parts.join('');
-}
-
-function pushChildren(children: any[], parts: string[]) {
-  for (const child of children) {
-    if (child !== null && child !== undefined && child !== false) {
-      if (Array.isArray(child)) {
-        pushChildren(child, parts);
-      }
-      else {
-        if (typeof child === 'object' && jsx in child) {
-          parts.push(jsxToString(child));
-        }
-        else {
-          parts.push(child);
-        }
-      }
-    }
-  }
 }
