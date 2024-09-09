@@ -2,9 +2,18 @@ const jsx = Symbol.for('jsx');
 
 export const $ = jsxToDOM;
 
-export function jsxToDOM<T extends Node>({ [jsx]: tag, ...attrs }: JSX.Element): T {
-  let children = attrs.children;
-  if (!Array.isArray(children)) children = [children];
+export function jsxToDOM<T extends Node>(object: any): T {
+  if (object === null || object === undefined || object === false) return null as unknown as T;
+
+  if (object instanceof Array) {
+    const el = document.createDocumentFragment();
+    pushChildren(el, object);
+    return el as unknown as T;
+  }
+
+  if (typeof object !== 'object' || !(jsx in object)) return object;
+
+  const { [jsx]: tag, ...attrs }: JSX.Element = object;
 
   if (typeof tag === 'function') {
     const result = tag(attrs);
@@ -13,15 +22,14 @@ export function jsxToDOM<T extends Node>({ [jsx]: tag, ...attrs }: JSX.Element):
     }
     return result;
   }
+
+  let children = attrs.children;
+  if (!Array.isArray(children)) children = [children];
   delete attrs.children;
 
   if (tag === '') {
-    const goodChildren = getGoodChildren(children);
-    if (goodChildren.length === 1) {
-      return goodChildren[0];
-    }
     const el = document.createDocumentFragment();
-    pushChildren(el, goodChildren);
+    pushChildren(el, children);
     return el as unknown as T;
   }
 
@@ -30,7 +38,7 @@ export function jsxToDOM<T extends Node>({ [jsx]: tag, ...attrs }: JSX.Element):
     ? document.createElementNS('http://www.w3.org/2000/svg', tag)
     : document.createElement(tag));
 
-  pushChildren(el, getGoodChildren(children));
+  pushChildren(el, children);
 
   for (const [key, val] of Object.entries(attrs)) {
     if (key.startsWith('data-')) {
@@ -53,12 +61,17 @@ export function jsxToDOM<T extends Node>({ [jsx]: tag, ...attrs }: JSX.Element):
   return el;
 }
 
-function getGoodChildren(children: any) {
-  return [children].flat(Infinity).filter(child => child !== null && child !== undefined && child !== false);
-}
-
 function pushChildren(el: DocumentFragment | HTMLElement | SVGElement, children: any[]) {
   for (let child of children) {
+    if (child === null || child === undefined || child === false) {
+      continue;
+    }
+
+    if (child instanceof Array) {
+      pushChildren(el, child);
+      continue;
+    }
+
     if (typeof child === 'object' && jsx in child) {
       child = jsxToDOM(child);
     }
