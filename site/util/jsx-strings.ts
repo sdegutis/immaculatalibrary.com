@@ -18,26 +18,32 @@ export function jsxToString(object: any): string {
   }
 
   if (!(jsx in object)) return String(object);
-  const { [jsx]: tag, ...attrs } = object;
+
+  const tag = object[jsx];
+  delete object[jsx];
 
   if (typeof tag === 'function') {
-    return jsxToString(tag(attrs));
+    return jsxToString(tag(object));
   }
 
-  let children = attrs.children;
-  if (!Array.isArray(children)) children = [children];
-  delete attrs.children;
+  const children = object.children;
+  delete object.children;
 
   if (tag === '') {
-    for (const child of children) {
-      parts.push(jsxToString(child));
+    if (children instanceof Array) {
+      for (const child of children) {
+        parts.push(jsxToString(child));
+      }
+    }
+    else {
+      parts.push(jsxToString(children));
     }
     return parts.join('');
   }
 
   parts.push('<', tag);
-  for (const k in attrs) {
-    const v = attrs[k];
+  for (const k in object) {
+    const v = object[k];
     if (v === true)
       parts.push(' ', k);
     else if (v)
@@ -46,8 +52,13 @@ export function jsxToString(object: any): string {
   parts.push('>');
 
   if (!UNARY.has(tag)) {
-    for (const child of children) {
-      parts.push(jsxToString(child));
+    if (children instanceof Array) {
+      for (const child of children) {
+        parts.push(jsxToString(child));
+      }
+    }
+    else {
+      parts.push(jsxToString(children));
     }
     parts.push('</', tag, '>');
   }
