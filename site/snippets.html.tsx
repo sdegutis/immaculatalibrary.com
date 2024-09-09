@@ -6,7 +6,7 @@ import { PaginatorLoading } from './components/paginator.js';
 import { jsxToString } from './util/jsx-strings.js';
 
 export default jsxToString(<>
-  <TypicalPage title={jsxToString(<BookTabs index={1} />)} image='/img/categories/reference-big.jpg' page='Books'>
+  <TypicalPage title={<BookTabs index={1} />} image='/img/categories/reference-big.jpg' page='Books'>
 
     <Spaced>
       <SplitColumn>

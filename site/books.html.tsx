@@ -12,7 +12,7 @@ export const BookTabs = makeTabs([
 ]);
 
 export default jsxToString(<>
-  <TypicalPage title={jsxToString(<BookTabs index={0} />)} image='/img/categories/reference-big.jpg' page='Books'>
+  <TypicalPage title={<BookTabs index={0} />} image='/img/categories/reference-big.jpg' page='Books'>
 
     <Spaced>
       <SplitColumn>

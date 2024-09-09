@@ -1106,13 +1106,11 @@ function Tabs(attrs: { tabs: Record<string, JSX.Element> }) {
     <div id='tab-container'>
 
       <SiteHeader image='/img/page/home.jpg' page='Prayers' title={
-        jsxToString(
-          <h1 id='tabs-names' class='tab-links'>
-            {Object.keys(attrs.tabs).map(title => (
-              <a href='#'>{title}</a>
-            ))}
-          </h1>
-        )
+        <h1 id='tabs-names' class='tab-links'>
+          {Object.keys(attrs.tabs).map(title => (
+            <a href='#'>{title}</a>
+          ))}
+        </h1>
       } />
 
       <div id='tabs-bodies'>

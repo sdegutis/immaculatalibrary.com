@@ -20,7 +20,7 @@ export default jsxToString(<>
     <main>
 
       <SiteHeader page="Home" image="/img/page/home.jpg" title={
-        jsxToString(<Spaced>
+        <Spaced>
           <CenteredColumn>
             <Typography>
               <h1 style='text-align:left'>Immaculata Library</h1>
@@ -36,7 +36,7 @@ export default jsxToString(<>
               </blockquote>
             </Typography>
           </CenteredColumn>
-        </Spaced>)
+        </Spaced>
       } />
 
       <Spaced>

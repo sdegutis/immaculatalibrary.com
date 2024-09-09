@@ -1,4 +1,3 @@
-import { jsxToString } from "../util/jsx-strings.js";
 import { Column } from "./column.js";
 
 const links = {
@@ -17,9 +16,9 @@ export type NavPage = keyof typeof links;
 export const Navlinks = (attrs: { page: NavPage }) => <>
   <Column>
     <div style='flex-wrap:wrap; margin:2em 0' class='tab-links'>
-      {Object.entries(links).map(([name, link]) => jsxToString(
+      {Object.entries(links).map(([name, link]) => (
         <a href={link.href} class={attrs.page === name ? 'active' : ''}>{link.title}</a>
-      )).join(' ')}
+      ))}
     </div>
   </Column>
 </>;

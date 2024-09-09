@@ -6,7 +6,7 @@ import { MovieTabs } from "./movies.html.js";
 import { jsxToString } from "./util/jsx-strings.js";
 
 export default jsxToString(<>
-  <TypicalPage page="Movies" title={jsxToString(<MovieTabs index={1} />)} image='/img/movies/passion-of-the-christ-big.jpg'>
+  <TypicalPage page="Movies" title={<MovieTabs index={1} />} image='/img/movies/passion-of-the-christ-big.jpg'>
 
     <Spaced>
       <SplitColumn>

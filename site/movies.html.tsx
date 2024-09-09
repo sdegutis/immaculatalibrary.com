@@ -11,7 +11,7 @@ export const MovieTabs = makeTabs([
 ]);
 
 export default jsxToString(<>
-  <TypicalPage title={jsxToString(<MovieTabs index={0} />)} image='/img/movies/passion-of-the-christ-big.jpg' page="Movies">
+  <TypicalPage title={<MovieTabs index={0} />} image='/img/movies/passion-of-the-christ-big.jpg' page="Movies">
 
     <Spaced>
       <SplitColumn>

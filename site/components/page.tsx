@@ -41,7 +41,7 @@ export const EmptyPage = (attrs: { favicons?: JSX.Element, children: any }) => <
   </html>
 </>;
 
-export const TypicalPage = (attrs: { title: string, image: string, page: NavPage, children: any }) => <>
+export const TypicalPage = (attrs: { title: string | JSX.Element, image: string, page: NavPage, children: any }) => <>
   <EmptyPage>
 
     <SiteHeader page={attrs.page} image={attrs.image} title={attrs.title} />

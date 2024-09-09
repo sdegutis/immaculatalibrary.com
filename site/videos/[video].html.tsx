@@ -9,7 +9,7 @@ import { jsxToString } from "../util/jsx-strings.js";
 
 export default allVideos.map(video => {
   return [video.slug, jsxToString(<>
-    <TypicalPage page="Movies" title={jsxToString(<MovieTabs index={1} />)} image={`/img/categories/blessed-sacrament-big.jpg`}>
+    <TypicalPage page="Movies" title={<MovieTabs index={1} />} image={`/img/categories/blessed-sacrament-big.jpg`}>
 
       <Spaced>
         <SplitColumn>

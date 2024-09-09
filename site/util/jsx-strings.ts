@@ -18,16 +18,14 @@ export function jsxToString(object: any): string {
   }
 
   if (!(jsx in object)) return String(object);
-
-
   const { [jsx]: tag, ...attrs } = object;
-
-  let children = attrs.children;
-  if (!Array.isArray(children)) children = [children];
 
   if (typeof tag === 'function') {
     return jsxToString(tag(attrs));
   }
+
+  let children = attrs.children;
+  if (!Array.isArray(children)) children = [children];
   delete attrs.children;
 
   if (tag === '') {
