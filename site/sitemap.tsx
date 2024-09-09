@@ -1,5 +1,5 @@
+import { jsxToString } from "@imlib/core";
 import * as path from "path/posix";
-import { jsxToString } from "./util/jsx-strings.js";
 
 export function makeSitemap(paths: Iterable<string>) {
   return jsxToString(<>

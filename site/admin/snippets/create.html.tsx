@@ -1,8 +1,8 @@
+import { jsxToString } from "@imlib/core";
 import handlers from 'handlers!';
 import { Typography } from "../../components/$typography.js";
 import { EmptyPage } from "../../components/page.js";
 import { Snippet } from '../../model/snippets.js';
-import { jsxToString } from '../../util/jsx-strings.js';
 
 handlers.set('/create-snippet', body => {
   const params = new URLSearchParams(body);

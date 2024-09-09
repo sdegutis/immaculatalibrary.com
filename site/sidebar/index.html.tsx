@@ -1,4 +1,4 @@
-import { jsxToString } from "../util/jsx-strings.js";
+import { jsxToString } from "@imlib/core";
 
 export default jsxToString(<>
   {'<!DOCTYPE html>'}

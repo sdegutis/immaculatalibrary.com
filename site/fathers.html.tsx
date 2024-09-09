@@ -1,7 +1,7 @@
+import { jsxToString } from "@imlib/core";
 import { Column, Spaced, SplitColumn } from "./components/column.js";
 import { TypicalPage } from "./components/page.js";
 import { markdown } from "./util/_helpers.js";
-import { jsxToString } from "./util/jsx-strings.js";
 
 export function Markdown(attrs: { children: string }) {
   return markdown.render(attrs.children

@@ -1,9 +1,9 @@
+import { jsxToString } from "@imlib/core";
 import { Typography } from "./components/$typography.js";
 import { makeTabs } from "./components/_tabs.js";
 import { Spaced, SplitColumn } from "./components/column.js";
 import { MoviesList } from "./components/movies-sidebar.js";
 import { TypicalPage } from "./components/page.js";
-import { jsxToString } from "./util/jsx-strings.js";
 
 export const MovieTabs = makeTabs([
   { href: '/movies.html', title: 'Catholic Movies' },

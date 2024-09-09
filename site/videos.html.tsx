@@ -1,9 +1,9 @@
+import { jsxToString } from "@imlib/core";
 import { Typography } from "./components/$typography.js";
 import { Spaced, SplitColumn } from "./components/column.js";
 import { VideosList } from "./components/movies-sidebar.js";
 import { TypicalPage } from "./components/page.js";
 import { MovieTabs } from "./movies.html.js";
-import { jsxToString } from "./util/jsx-strings.js";
 
 export default jsxToString(<>
   <TypicalPage page="Movies" title={<MovieTabs index={1} />} image='/img/movies/passion-of-the-christ-big.jpg'>

@@ -1,6 +1,6 @@
+import { jsxToString } from "@imlib/core";
 import { EmptyPage } from '../components/page.js';
 import { SiteHeader } from '../components/site-header.js';
-import { jsxToString } from '../util/jsx-strings.js';
 
 const enum Day { SUN, MON, TUE, WED, THUR, FRI, SAT };
 

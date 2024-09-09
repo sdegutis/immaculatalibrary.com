@@ -1,3 +1,4 @@
+import { jsxToString } from "@imlib/core";
 import { Typography } from "../components/$typography.js";
 import { Spaced, SplitColumn } from "../components/column.js";
 import { MoviesList } from "../components/movies-sidebar.js";
@@ -5,7 +6,6 @@ import { TypicalPage } from "../components/page.js";
 import { allMovies } from "../model/movies.js";
 import { MovieTabs } from "../movies.html.js";
 import { markdown } from "../util/_helpers.js";
-import { jsxToString } from "../util/jsx-strings.js";
 
 export default allMovies.map(movie => {
   return [movie.slug, jsxToString(<>

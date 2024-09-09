@@ -1,10 +1,10 @@
+import { jsxToString } from "@imlib/core";
 import { LoadingLine, LoadingParagraph } from './components/$loading.js';
 import { makeTabs } from './components/_tabs.js';
 import { Admin } from './components/admin.js';
 import { Spaced, SplitColumn } from './components/column.js';
 import { TypicalPage } from './components/page.js';
 import { PaginatorLoading } from './components/paginator.js';
-import { jsxToString } from './util/jsx-strings.js';
 
 export const BookTabs = makeTabs([
   { href: '/books.html', title: 'Books' },

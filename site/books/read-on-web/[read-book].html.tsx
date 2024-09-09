@@ -1,3 +1,4 @@
+import { jsxToString } from "@imlib/core";
 import handlers from "handlers!";
 import { LoadingLine, LoadingParagraph } from "../../components/$loading.js";
 import { Typography } from "../../components/$typography.js";
@@ -8,7 +9,6 @@ import { SiteFooter } from "../../components/site-footer.js";
 import { allBooks } from "../../model/books.js";
 import { allSnippets } from "../../model/snippets.js";
 import { markdown, sortBy } from "../../util/_helpers.js";
-import { jsxToString } from "../../util/jsx-strings.js";
 
 handlers.set('/reorder-snippets-in-book', (body) => {
   const json = JSON.parse(body) as { slug: string, i: number }[];

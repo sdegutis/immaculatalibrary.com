@@ -1,7 +1,7 @@
+import { jsxToString } from "@imlib/core";
 import handlers from 'handlers!';
 import { EmptyPage } from "../../components/page.js";
 import { Article } from "../../model/articles.js";
-import { jsxToString } from '../../util/jsx-strings.js';
 
 handlers.set('/create-article', body => {
   const params = new URLSearchParams(body);

@@ -1,9 +1,9 @@
+import { jsxToString } from "@imlib/core";
 import { BookTabs } from './books.html.js';
 import { LoadingLine, LoadingParagraph } from './components/$loading.js';
 import { Spaced, SplitColumn } from './components/column.js';
 import { TypicalPage } from './components/page.js';
 import { PaginatorLoading } from './components/paginator.js';
-import { jsxToString } from './util/jsx-strings.js';
 
 export default jsxToString(<>
   <TypicalPage title={<BookTabs index={1} />} image='/img/categories/reference-big.jpg' page='Books'>

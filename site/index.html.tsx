@@ -1,3 +1,4 @@
+import { jsxToString } from "@imlib/core";
 import { HomeLoading } from "./components/$loading.js";
 import { Typography } from "./components/$typography.js";
 import { VerifyHuman } from "./components/_verifyhuman.js";
@@ -10,7 +11,6 @@ import { SiteFooter } from "./components/site-footer.js";
 import { SiteHeader } from "./components/site-header.js";
 import { Markdown } from "./fathers.html.js";
 import { allBooks } from "./model/books.js";
-import { jsxToString } from "./util/jsx-strings.js";
 
 export default jsxToString(<>
   <EmptyPage>
