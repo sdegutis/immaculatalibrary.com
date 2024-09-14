@@ -30,6 +30,8 @@ let ticks = 0;
 let lastMovedFromY = 0;
 
 function handleController() {
+  if (!document.hasFocus()) return;
+
   const currentMs = ticks++ * (1000 / 33);
 
   const gamepad = navigator.getGamepads().find(c => c)!;
