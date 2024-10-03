@@ -31,7 +31,7 @@ tags:
 > 
 > Unbelievers have raised many objections, striving to weaken the proving powers of this passage of Scripture, but their objections are altogether groundless.
 > 
-> They say that tlie apostle does not write; "The priests of the Church," but "the elders"; tiiat is, the chief persons of the congregation. Admitting this reading or translation, what follows? In those days the Christian congregations had no lay officers, for the heads or chief men of the congregation were the bishops and the priests; hence St. James, when saying "the elders," if he did say it, meant the bishops or the priests over the congregations.
+> They say that the apostle does not write; "The priests of the Church," but "the elders"; that is, the chief persons of the congregation. Admitting this reading or translation, what follows? In those days the Christian congregations had no lay officers, for the heads or chief men of the congregation were the bishops and the priests; hence St. James, when saying "the elders," if he did say it, meant the bishops or the priests over the congregations.
 > 
 > That such is the truth is shown by the following facts:
 > 
