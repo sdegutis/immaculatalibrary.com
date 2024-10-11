@@ -70,6 +70,13 @@ export default jsxToString(<>
           <HailMary />
           <GloryBe />
         </Slideshow>,
+      "Chaplet of Divine Mercy":
+        <Slideshow>
+          <OurFather />
+          <HailMary />
+          <ApostlesCreed />
+          <DivineMercy />
+        </Slideshow>
     }} />
   </EmptyPage>
 </>);
@@ -911,6 +918,28 @@ function HailMary() {
     <Line>        Pray for us sinners now</Line>
     <Line>            And at the hour of our death</Line>
     <Line>Amen</Line>
+  </Prayer>;
+}
+
+function DivineMercy() {
+  return <Prayer img="https://upload.wikimedia.org/wikipedia/commons/b/b5/Divine_Mercy.jpeg">
+    <Line>(On the Our Father beads)</Line>
+    <Line>Eternal Father, I offer you</Line>
+    <Line>    The Body, Blood, Soul, and Divinity</Line>
+    <Line>        Of your dearly beloved Son, Our Lord, Jesus Christ</Line>
+    <Line>            <Red>In atonement for our sins, and those of the whole world</Red></Line>
+    <p class="spaced-small" />
+    <Line>(On the Hail Mary beads)</Line>
+    <Line>For the sake of his sorrowful passion</Line>
+    <Line>    <Red>Have mercy on us</Red></Line>
+    <Line>    <Red>And on the whole world</Red></Line>
+    <p class="spaced-small" />
+    <Line>(At the end)</Line>
+    <Line>Oh Blood and Water</Line>
+    <Line>    Which gushed forth</Line>
+    <Line>    From the heart of Jesus</Line>
+    <Line>    As a fount of mercy for us</Line>
+    <Line>        <Red>I trust in you</Red></Line>
   </Prayer>;
 }
 
