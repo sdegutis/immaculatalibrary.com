@@ -17,7 +17,7 @@ export default jsxToString(<>
 
           <h2>Miracles</h2>
           <ul>
-            <li><a href='https://aleteia.org/2021/10/13/a-scientist-describes-the-miracle-of-the-sun-at-fatima'>Fatima, Purgutal</a></li>
+            <li><a href='https://aleteia.org/2021/10/13/a-scientist-describes-the-miracle-of-the-sun-at-fatima'>Fatima, Portugal</a></li>
             <li><a href='https://www.ewtn.com/catholicism/library/short-life-of-bernadette-5238'>Lourdes, France</a></li>
             <li><a href='http://www.miracolieucaristici.org/en/Liste/list.html'>Eucharistic Miracles</a></li>
           </ul>
