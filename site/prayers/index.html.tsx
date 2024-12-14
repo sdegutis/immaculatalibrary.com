@@ -1003,7 +1003,7 @@ function SaintMichael() {
 
 function RosaryPromises() {
   return <Panel>
-    <div class='centered spaced-big'>
+    <div class='centered spaced-medium'>
       <h1>Rosary Promises</h1>
       <p class='spaced-small'>
         <Line>1. If you faithfully pray the rosary, you will get extra special help from Heaven.</Line>
