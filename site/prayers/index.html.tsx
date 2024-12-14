@@ -70,13 +70,13 @@ export default jsxToString(<>
           <HailMary />
           <GloryBe />
         </Slideshow>,
-      "Chaplet of Divine Mercy":
-        <Slideshow>
-          <OurFather />
-          <HailMary />
-          <ApostlesCreed />
-          <DivineMercy />
-        </Slideshow>
+      // "Chaplet of Divine Mercy":
+      //   <Slideshow>
+      //     <OurFather />
+      //     <HailMary />
+      //     <ApostlesCreed />
+      //     <DivineMercy />
+      //   </Slideshow>
     }} />
   </EmptyPage>
 </>);
