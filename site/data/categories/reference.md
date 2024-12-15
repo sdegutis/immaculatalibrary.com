@@ -9,7 +9,6 @@ books:
   - summa-theologica
   - the-book-of-saints
   - venerable-bedes-ecclesiastical-history-of-england
-  - the-antichrist-legend
 sortOrder: 4
 ---
 
