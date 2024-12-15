@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '445'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 287
+sortOrder: 288
 ---
 
 > Nevertheless there are Christians, perfectly conformed to the divine will in prosperity, whose submission vanishes at the approach of adversity. They are like cowards, who vaunt their courage in time of peace, but throw down their arms and fly at the first sound of battle.

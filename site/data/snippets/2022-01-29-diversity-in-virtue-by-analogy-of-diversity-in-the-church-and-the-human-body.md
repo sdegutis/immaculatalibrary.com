@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '475'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 308
+sortOrder: 309
 ---
 
 > God has willed that the order and beauty which we admire in nature should exist in the works of grace.

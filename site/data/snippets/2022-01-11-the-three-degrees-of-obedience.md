@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '449'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 289
+sortOrder: 290
 ---
 
 > Let us observe, in conclusion, that theologians distinguish three degrees in this virtue.

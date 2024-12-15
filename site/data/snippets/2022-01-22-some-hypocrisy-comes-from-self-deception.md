@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '465'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 300
+sortOrder: 301
 ---
 
 > Besides that gross hypocrisy which is the pretence of virtue made by those who know they are wicked, but who strive to conceal their vices, there is a more refined and more dangerous hypocrisy, which affects many who deceive themselves as well as others by a false show of justice.

@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '402'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 261
+sortOrder: 262
 ---
 
 > Though this great prudence is necessary in eating, how much more is required in drinking!

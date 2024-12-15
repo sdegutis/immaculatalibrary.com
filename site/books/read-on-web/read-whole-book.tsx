@@ -37,28 +37,31 @@ function render() {
 
   bodiesDiv.replaceChildren($(<>
     <Typography>
-      {snippetsInBook.map((bookSnippet, i) => <>
-        <div class='chapter' id={`snippet-${bookSnippet.slug}`}>
-          <h3 class='chapter-header'>
-            Chapter {i + 1} &mdash; { }
-            <a href={bookSnippet.route}>
-              {bookSnippet.title}
-            </a>
-          </h3>
-          <p><a href='#' onclick={(e: Event) => {
-            e.preventDefault();
-            iframe.src = bookSnippet.archiveLink;
-          }}>(View in book reader)</a></p>
-          {isDev &&
-            <span>
-              <button style='margin-left:2px' onclick={() => moveSnippet(i, -1)}>Move up</button>
-              <button style='margin-left:2px' onclick={() => moveSnippet(i, +1)}>Move down</button>
-            </span>
-          }
-          <div innerHTML={bookSnippet.content} />
-          <hr />
-        </div>
-      </>)}
+      {snippetsInBook.map((bookSnippet, i) => {
+        const moveAmountInput = $<HTMLInputElement>(<input type='number' value='1' />);
+        return <>
+          <div class='chapter' id={`snippet-${bookSnippet.slug}`}>
+            <h3 class='chapter-header'>
+              Chapter {i + 1} &mdash;
+              <a href={bookSnippet.route}>
+                {bookSnippet.title}
+              </a>
+            </h3>
+            <p><a href='#' onclick={(e: Event) => {
+              e.preventDefault();
+              iframe.src = bookSnippet.archiveLink;
+            }}>(View in book reader)</a></p>
+            {isDev &&
+              <span>
+                <button style='margin-left:2px' onclick={() => moveSnippet(i, -moveAmountInput.value)}>Move up</button>
+                <button style='margin-left:2px' onclick={() => moveSnippet(i, +moveAmountInput.value)}>Move down</button>
+                {moveAmountInput}
+              </span>}
+            <div innerHTML={bookSnippet.content} />
+            <hr />
+          </div>
+        </>;
+      })}
     </Typography>
   </>));
 }

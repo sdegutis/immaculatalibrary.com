@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '447'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 288
+sortOrder: 289
 ---
 
 > Consider also the sufferings which our Saviour endured from creatures.

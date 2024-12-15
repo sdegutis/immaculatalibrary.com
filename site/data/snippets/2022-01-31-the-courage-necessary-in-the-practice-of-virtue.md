@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '479'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 310
+sortOrder: 311
 ---
 
 > *CHAPTER XLVIII.*
