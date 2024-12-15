@@ -17,3 +17,5 @@ sortOrder: 194
 > If interest be your aim, what greater could you have than to avoid eternal misery and gain eternal joy?
 >
 > If you aspire to happiness in this life, what happiness equals that of the just? The least of the privileges of virtue which we have described affords more true happiness than the possession of all the treasures of the world.
+>
+> If you reject these evidences in favor of virtue, you do so in wilful blindness, for you close your eyes to the light of truth.
