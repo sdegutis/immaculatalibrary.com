@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '441'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 285
+sortOrder: 284
 ---
 
 > Among those acts which we are free to do or not to do some are performed in public, others in secret. The former procure us temporal pleasure or advantage, while the latter bring no such reward.
