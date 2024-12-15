@@ -8,7 +8,7 @@ tags: []
 sortOrder: 261
 ---
 
-> Bemember, moreover, that of all the pleasures of the senses those of taste and feeling are the lowest.
+> Remember, moreover, that of all the pleasures of the senses those of taste and feeling are the lowest.
 > 
 > We have them in common with all animals, even the most imperfect, while there are many which lack the other three, seeing, hearing, and smelling.
 > 
