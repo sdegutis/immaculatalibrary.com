@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '366'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 239
+sortOrder: 238
 ---
 
 > The most efficacious, the sovereign remedy against this vice is to pluck from your heart inordinate love of self and of everything that pertains to you. Otherwise the slightest word or action directed against you or your interests will move you to anger.

@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '404'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 263
+sortOrder: 262
 ---
 
 > Another evil against which I would warn you is dwelling upon the merits of certain dishes, and condemning others because they are not so delicate.

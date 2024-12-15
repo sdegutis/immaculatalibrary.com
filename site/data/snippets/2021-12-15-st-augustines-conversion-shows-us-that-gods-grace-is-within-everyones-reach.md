@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '288'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 176
+sortOrder: 175
 ---
 
 > Another no less remarkable example is that of St. Augustine, who, in his "Confessions," tells us that when he began to think seriously of leaving the world a thousand difficulties presented themselves to his mind.

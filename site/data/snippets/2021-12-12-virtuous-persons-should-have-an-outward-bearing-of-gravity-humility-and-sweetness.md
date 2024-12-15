@@ -8,7 +8,7 @@ tags:
   - Morals
   - Humility
   - Modesty
-sortOrder: 258
+sortOrder: 257
 ---
 
 > Section II.

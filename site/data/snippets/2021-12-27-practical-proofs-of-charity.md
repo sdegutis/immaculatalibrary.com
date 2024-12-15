@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '425'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 274
+sortOrder: 273
 ---
 
 > Among the works comprised in charity to our neighbor the following are the most important: advice, counsel, succor, forbearance, pardon, edification.

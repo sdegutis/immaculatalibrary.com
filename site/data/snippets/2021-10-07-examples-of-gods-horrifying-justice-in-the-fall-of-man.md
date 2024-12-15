@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '267'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 163
+sortOrder: 162
 ---
 
 > Consider also the fall of man, which would have been no less terrible than that of the Angels, if it had not been repaired.

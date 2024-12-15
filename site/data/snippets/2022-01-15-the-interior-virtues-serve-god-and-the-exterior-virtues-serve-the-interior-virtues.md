@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '455'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 294
+sortOrder: 293
 ---
 
 > There is no doubt that the virtues of the first class are more meritorious and pleasing to God than those of the second.

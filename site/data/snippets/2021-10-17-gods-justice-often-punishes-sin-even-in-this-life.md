@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '295'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 180
+sortOrder: 179
 ---
 
 > Different causes multiply the miseries of the sinner. God, Who is a just Judge, sends them suffering, that crime may not remain unavenged; for though the punishment of sin is generally reserved for the next world, it sometimes begins in this.

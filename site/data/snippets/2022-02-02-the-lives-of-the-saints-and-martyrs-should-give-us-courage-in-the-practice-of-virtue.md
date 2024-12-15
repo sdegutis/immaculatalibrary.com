@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '483'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 313
+sortOrder: 312
 ---
 
 *Note from the editor of Immaculata Library:* This book snippet is graphic and should not be read by children.

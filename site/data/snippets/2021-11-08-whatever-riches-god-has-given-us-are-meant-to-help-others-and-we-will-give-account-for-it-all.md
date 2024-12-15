@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '339'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 216
+sortOrder: 215
 ---
 
 > Again, I would remind you that God, as a wise and sovereign Ruler, has appointed some of His children the depositaries of His power and the dispensers of His benefits, to guide and maintain the others.

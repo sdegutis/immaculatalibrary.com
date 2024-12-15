@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '293'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 179
+sortOrder: 178
 ---
 
 > Consider also the innumerable changes to which human happiness is exposed in this valley of tears, this land of exile, this tempestuous sea which we call the world.

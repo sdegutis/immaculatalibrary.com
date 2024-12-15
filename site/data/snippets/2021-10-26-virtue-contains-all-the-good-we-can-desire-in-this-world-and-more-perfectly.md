@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '312'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 193
+sortOrder: 192
 ---
 
 > As there is no good which is not included in virtue, we must regard it as an universal good, comparable only to God Himself.

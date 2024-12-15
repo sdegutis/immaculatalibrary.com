@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '269'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 164
+sortOrder: 163
 ---
 
 > Another subject to which I would call your serious attention is the state of the world. Reflect on this, and you will begin to realize the rigors of God's justice.

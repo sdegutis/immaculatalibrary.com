@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '378'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 247
+sortOrder: 246
 ---
 
 > Henceforward consider your neighbor's character as a forbidden tree which you cannot touch.

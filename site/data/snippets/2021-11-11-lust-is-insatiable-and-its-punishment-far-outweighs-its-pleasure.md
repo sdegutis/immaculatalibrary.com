@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '346'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 223
+sortOrder: 222
 ---
 
 > Consider, farther, that the more you indulge in these infamous gratifications, the more insatiable will be your desire for them, the less they will satisfy you. It is the nature of these pleasures to excite the appetite rather than appease it.

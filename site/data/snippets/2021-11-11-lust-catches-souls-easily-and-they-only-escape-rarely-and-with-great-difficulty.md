@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '345'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 221
+sortOrder: 220
 ---
 
 > This treacherous vice begins in pleasure, but ends in an abyss of bitterness and remorse.

@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '426'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 275
+sortOrder: 274
 ---
 
 > You will doubtless urge that you cannot feel such affection for one who is a stranger to you. But you should not regard your neighbor as a stranger. Behold in him rather the image of God, the work of His divine hands, and a living member of Christ. [Rom. xii. 5.]

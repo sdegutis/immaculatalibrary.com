@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '468'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 303
+sortOrder: 302
 ---
 
 > For human nature is the same to-day as it was in the time of the Prophets and the Apostles, whose teachings on this subject are contained in the Scriptures. We have the same inclinations, the same inheritance of original sin, and consequently our vices and failings must be the same, for like causes produce like effects.

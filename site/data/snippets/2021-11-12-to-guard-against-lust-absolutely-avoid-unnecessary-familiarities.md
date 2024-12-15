@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '351'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 228
+sortOrder: 227
 ---
 
 > In addition to all this, be very guarded in your intercourse with women, and beware of continuing alone with one for any length of time; for, according to St. Chrysostom, the enemy attacks men and women more vigorously when he finds them alone. He is bolder when there are no witnesses present to thwart his artifices.

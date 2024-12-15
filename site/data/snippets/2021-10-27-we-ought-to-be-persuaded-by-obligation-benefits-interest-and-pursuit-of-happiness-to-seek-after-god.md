@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '314'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 195
+sortOrder: 194
 ---
 
 > Do you desire any other motive to persuade you to follow this wise example and embrace so great a good?

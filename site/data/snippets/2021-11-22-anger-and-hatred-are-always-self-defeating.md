@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '365'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 238
+sortOrder: 237
 ---
 
 > Consider also that the fellow-creature whom you hate is either a just man or a sinner. If a just man, it is certainly a great misfortune to be the declared enemy of a friend of God. If a sinner, it is no less deplorable that you should undertake to punish the malice of another by plunging your own soul into sin.

@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '397'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 259
+sortOrder: 258
 ---
 
 > Another fruit which we derive from this exterior modesty is a greater facility in preserving the recollection, devotion, and purity of the soul.

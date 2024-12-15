@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '374'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 244
+sortOrder: 243
 ---
 
 > CHAPTER XXXVII.

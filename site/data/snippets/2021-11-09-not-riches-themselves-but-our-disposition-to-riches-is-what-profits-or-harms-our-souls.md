@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '340'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 217
+sortOrder: 216
 ---
 
 > Remember also that it is not poverty but the love of poverty which is a virtue. Hence all who voluntarily forsake wealth bear a striking resemblance to our Saviour, who, being rich with the riches of God, became poor for love of us.

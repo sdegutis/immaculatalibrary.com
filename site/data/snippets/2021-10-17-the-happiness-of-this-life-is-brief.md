@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '292'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 178
+sortOrder: 177
 ---
 
 > As to the first of these, who will say that that is enduring which at best must end with the brief career of man on earth? Ah! we all know the shortness of human life, for how few attain even a hundred years?

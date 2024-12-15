@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '327'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 205
+sortOrder: 204
 ---
 
 > Consider also the danger of vainglory, the daughter of pride, which as St. Bernard says, enters lightly but wounds deeply.

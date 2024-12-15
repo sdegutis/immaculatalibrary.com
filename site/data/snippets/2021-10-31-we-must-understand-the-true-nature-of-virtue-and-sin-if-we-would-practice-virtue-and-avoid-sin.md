@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '321'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 201
+sortOrder: 200
 ---
 
 > In the "Memorial of a Christian Life" we treated of this subject, and gave a number of remedies against sin in general. Our intention at present is to give special remedies applicable to particular sins, such as pride, covetousness, anger, or revenge.

@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '377'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 246
+sortOrder: 245
 ---
 
 > The second evil of this vice consists in the threefold injury which it inflicts---namely, on the one who speaks, on him who listens with approval, and on the victim who is assailed in his absence.

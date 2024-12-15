@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '350'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 227
+sortOrder: 226
 ---
 
 > In ail temptations, but particularly in temptations against purity, remember the presence of your guardian Angel and of the devil, your accuser, for they both witness all your actions, and will render an account of them to Him Who sees and judges all things.

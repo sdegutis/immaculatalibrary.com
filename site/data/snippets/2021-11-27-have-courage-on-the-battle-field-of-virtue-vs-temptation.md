@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '371'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 243
+sortOrder: 242
 ---
 
 > Let not the duration or difficulty of the labors alarm you. God, Who calls you to combat, will give you victory.

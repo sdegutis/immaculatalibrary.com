@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '351'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 229
+sortOrder: 228
 ---
 
 > But, as one of the most important remedies is avoiding dangerous occasions, we shall give an example from the "Dialogues" of St. Gregory to show you with what prudence holy souls guard this angelic virtue.

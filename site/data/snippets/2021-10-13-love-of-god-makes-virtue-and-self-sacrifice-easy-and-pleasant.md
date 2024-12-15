@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '279'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 170
+sortOrder: 169
 ---
 
 > Moreover, call to mind the assistance which charity affords us in the pursuit of virtue. Charity, or the love of God, renders the law sweet and delightful; for, as St. Augustine says, love knows no fatigue.

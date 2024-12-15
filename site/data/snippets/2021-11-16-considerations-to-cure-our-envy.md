@@ -9,7 +9,7 @@ tags:
   - Exhortation
   - Morals
   - Envy
-sortOrder: 232
+sortOrder: 231
 ---
 
 > Consider, moreover, how envy corrodes the heart, weakens the understanding, destroys all peace of soul, and condemns us to a melancholy and intolerable existence.

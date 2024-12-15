@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '438'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 283
+sortOrder: 282
 ---
 
 > The third degree of obedience, as we have said, consists in fidelity to divine inspirations.

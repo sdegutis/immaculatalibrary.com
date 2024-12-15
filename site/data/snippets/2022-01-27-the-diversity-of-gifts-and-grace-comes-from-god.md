@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '472'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 307
+sortOrder: 306
 ---
 
 > Such was the error of the Corinthians in the early ages of the Church. They had been favored with different graces, and each one extolled his own above the rest. The gifts of prophecy, of tongues, of interpreting the Scripture, of working miracles, were each preferred by those who had received them. [1 Cor. xii.]

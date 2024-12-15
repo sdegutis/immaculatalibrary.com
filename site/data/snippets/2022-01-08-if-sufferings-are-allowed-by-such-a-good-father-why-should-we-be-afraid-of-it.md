@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '444'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 286
+sortOrder: 285
 ---
 
 > *Section X.*

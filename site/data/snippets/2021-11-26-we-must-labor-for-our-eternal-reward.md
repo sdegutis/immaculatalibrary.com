@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '370'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 242
+sortOrder: 241
 ---
 
 > The number and enormity of your sins demand a proportionate penance and fervor to satisfy for them.

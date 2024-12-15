@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '270'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 165
+sortOrder: 164
 ---
 
 > Tremble for your salvation, and, while always maintaining an unshaken hope, have no less fear of hell. You have no reason to expect that God should treat you differently from other men. Bear in mind the law of His justice, as it has been explained, and so live that you may never expose yourself to its terrible effects here and hereafter.

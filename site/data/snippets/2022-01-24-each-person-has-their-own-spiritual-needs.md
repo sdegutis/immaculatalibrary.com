@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '469'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 304
+sortOrder: 303
 ---
 
 > That you may profit by the preceding counsels, let each one study his own spiritual condition, that he may learn the remedies which will profit him most.

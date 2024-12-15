@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '401'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 261
+sortOrder: 260
 ---
 
 > Bemember, moreover, that of all the pleasures of the senses those of taste and feeling are the lowest.

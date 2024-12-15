@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '342'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 219
+sortOrder: 218
 ---
 
 > The folly of covetousness goes still farther, and causes you to sacrifice yourself, your body and your soul, to your miserable possessions. You are like a man who, to save his coat, exposes his body to be pierced with a dagger. In what does your conduct differ from that of Judas, if for a little money you will sell justice, divine grace, your soul itself?

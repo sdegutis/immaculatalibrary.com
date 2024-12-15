@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '391'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 256
+sortOrder: 255
 ---
 
 > Sloth and Indolence suggest: If you apply yourself to study, prayer, meditation, and tears you will injure your eyes. If you prolong your vigils and fasts you will weaken your body and unfit yourself for spiritual exercises.

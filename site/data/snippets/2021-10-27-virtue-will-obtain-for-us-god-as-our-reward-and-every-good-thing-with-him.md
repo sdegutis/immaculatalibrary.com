@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '313'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 194
+sortOrder: 193
 ---
 
 > Virtue is an absolute good; it admits of no alloy of evil. For this reason God sends to the just this short but glorious message: "Say to the just man that it is well." [Isaias. iii. 10.]

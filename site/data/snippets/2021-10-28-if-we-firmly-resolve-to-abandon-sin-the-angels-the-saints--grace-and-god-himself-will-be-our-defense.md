@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '317'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 197
+sortOrder: 196
 ---
 
 > Be prepared, therefore, to meet with difficulties. Remember the words of the Wise Man: "Son, when thou comest to the service of God, stand in justice and in fear, and prepare thy soul for temptation." [Ecclus. ii. 1.]

@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '451'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 292
+sortOrder: 291
 ---
 
 > Let married women faithfully acquit themselves of the duties of their household, discharging all their obligations to their husband and children, that they may thus be free to attend to practices of piety without neglecting what they owe their family. That would be a worthless devotion which would occupy the time which should be given to domestic atfairs.

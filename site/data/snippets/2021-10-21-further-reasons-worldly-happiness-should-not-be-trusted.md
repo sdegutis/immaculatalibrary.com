@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '302'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 186
+sortOrder: 184
 ---
 
 > These miseries inseparable from worldly happiness should suffice to show you that it contains more gall than honey, more bitterness than sweetness.

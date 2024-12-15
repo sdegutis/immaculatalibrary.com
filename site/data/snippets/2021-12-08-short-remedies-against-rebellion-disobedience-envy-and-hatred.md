@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '388'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 254
+sortOrder: 253
 ---
 
 > Rebellion and Disobedience argue: Why should you be subject to those who are your inferiors? It is your place to command and theirs to obey, for they are inferior to you in wisdom and virtue. It suffices to obey the laws of God; you have no need to be bound by the commands of man.

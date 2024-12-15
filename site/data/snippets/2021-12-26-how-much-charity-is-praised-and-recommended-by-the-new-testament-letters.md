@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '424'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 273
+sortOrder: 272
 ---
 
 > Behold how highly the great Apostle extols the virtue of charity; how strongly he recommends it; how minutely he enumerates its advantages. He gives it the first place among the virtues, and tells us that it is the bond of perfection, the end of the commandments, and the fulfilment of the law. [1 Cor. xiii. 13; Coloss. iii. 14; 1 Tim. i. 5; Rom. xiii. 8; Gal. v. 14.]

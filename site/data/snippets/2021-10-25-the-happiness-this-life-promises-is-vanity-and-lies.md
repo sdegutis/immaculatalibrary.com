@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '310'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 192
+sortOrder: 191
 ---
 
 > How long, then, O sons of men! will you be dull of heart? Why will you love vanity and seek after lies? [Ps. iv. 3.]

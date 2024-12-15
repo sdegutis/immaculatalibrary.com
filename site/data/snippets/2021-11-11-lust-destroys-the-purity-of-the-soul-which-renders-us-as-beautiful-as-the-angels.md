@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '347'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 224
+sortOrder: 223
 ---
 
 > Consider also the nobility and the value of virginal purity, which this vice destroys.

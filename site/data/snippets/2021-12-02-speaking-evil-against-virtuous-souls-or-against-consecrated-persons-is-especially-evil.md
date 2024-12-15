@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '380'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 248
+sortOrder: 247
 ---
 
 > But of all detractions, that which is directed against virtuous persons is the most sinful.

@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '325'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 204
+sortOrder: 203
 ---
 
 > After this reflect on that astonishing example of humility given us by the Son of God, Who for love of us took upon Himself a nature so infinitely beneath His own, and "became obedient unto death, even the death of the cross." [Phil. ii. 8.]

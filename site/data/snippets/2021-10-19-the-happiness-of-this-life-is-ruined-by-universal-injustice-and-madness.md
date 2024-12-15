@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '299'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 183
+sortOrder: 182
 ---
 
 > St. Cyprian, desiring to excite in a friend contempt for the world, makes use of this argument only. [L. ii. Ep. 2 ad Donat.]

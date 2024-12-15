@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '324'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 203
+sortOrder: 202
 ---
 
 > The first and most formidable of these enemies is pride, that inordinate desire of our own excellence, which spiritual writers universally regard as the father and king of all the other vices.

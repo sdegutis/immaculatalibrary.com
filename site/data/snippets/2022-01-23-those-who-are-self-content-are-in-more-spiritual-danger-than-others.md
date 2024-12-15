@@ -5,7 +5,7 @@ archiveSlug: sinnersguide00luis
 archivePage: '467'
 bookSlug: the-sinners-guide
 tags: []
-sortOrder: 302
+sortOrder: 301
 ---
 
 > You marvel, doubtless, why a soul that is cold should be less displeasing to God than one that is luke-warm.
