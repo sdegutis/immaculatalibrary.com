@@ -21,3 +21,5 @@ sortOrder: 191
 > O children of men, created to the image of God, redeemed by His blood, destined to be the companions of Angels, why do you love vanity and seek after a lie? Why do you seek in false blessings a peace which they cannot give? Why do you leave the table of Angels to feed with beasts? Will not the calamities with which the world visits you determine you to break the chains of this cruel tyrant?
 >
 > Reason and experience clearly prove that the happiness we seek is to be found only in God. Is it not madness to seek it elsewhere? "Go where you will," says St. Augustine, "visit all lands, but you will not find happiness until you go to God."
+>
+> As we have now arrived at the conclusion of our arguments in favor of virtue and in praise of its rewards, let us briefly resume what we have said.
