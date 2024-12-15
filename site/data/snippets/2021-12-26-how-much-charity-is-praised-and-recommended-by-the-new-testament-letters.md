@@ -17,5 +17,3 @@ sortOrder: 273
 > So frequently did he repeat to his disciples the touching words, "My little children, love one another," that at last, as St. Jerome tells us, they became somewhat weary of always hearing the same, and asked him: Good master, why do you always give us this one command? His answer, says St. Jerome, was worthy of John; "Because it is the command of the Lord; and if you do this alone it will suffice."
 >
 > Without doubt, therefore, he who desires to please God must fulfil this great precept of charity, not only in word but also in deed. "He that hath the substance of this world," says St. John, "and shall see his brother in need, and shall shut up his bowels from him, how doth the charity of God abide in him? My little children, let us not love in word nor in tongue, but in deed and in truth." [1 St. John iii. 17, 18.]
->
-> Among the works comprised in charity to our neighbor the following are the most important: advice, counsel, succor, forbearance, pardon, edification. These are so strongly linked with charity that the practice of them indicates the progress we have made in the practice of charity.
