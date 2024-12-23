@@ -35,5 +35,5 @@ sortOrder: 77
 >> For thus saith the Lord: Behold I will bring upon her as it were a river of peace, and as an overflowing torrent, the glory of the gentiles, which you shall suck; you shall be carried at the breasts, and upon the knees they shall caress you.
 >>
 >> As one whom the mother caresseth, so will I comfort you, and you shall be comforted in Jerusalem. And you shall see, and your heart shall rejoice, and your bones shall flourish like an herb, and the hand of the Lord shall be known to His servants. [Isaias lxvi. 10-15.]
-
-Yes, "the hand of the Lord shall be known to His servants"; for as men by the beauties and wonders of the universe judge of the infinite beauty and omnipotence of God, so shall the just recognize the infinite love and goodness of God in the incomparable joys and favors which He will bestow upon them.
+>>
+>> Yes, "the hand of the Lord shall be known to His servants"; for as men by the beauties and wonders of the universe judge of the infinite beauty and omnipotence of God, so shall the just recognize the infinite love and goodness of God in the incomparable joys and favors which He will bestow upon them.
