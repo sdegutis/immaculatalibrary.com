@@ -515,7 +515,7 @@ function LitanyOfSaints() {
         <Line>  St. Dymphna <Red>Pray for us.</Red></Line>
         <div class='spaced-small' />
         <Line>St. Francis de Sales <Red>Pray for us.</Red></Line>
-        <Line> St. Vincent de Paul <Red>Pray for us.</Red></Line>
+        <Line> St. Stephen <Red>Pray for us.</Red></Line>
         <Line>  St. Thomas More <Red>Pray for us.</Red></Line>
       </div>
       <div class='spaced-small two-cols'>
