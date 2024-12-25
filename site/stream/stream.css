@@ -1,0 +1,5 @@
+canvas {
+  border: 1px solid #777;
+  height: calc(100vh - 2em);
+  margin: 1em;
+}
