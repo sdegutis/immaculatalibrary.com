@@ -4,6 +4,8 @@ title: 'Ninth Meditation: On the choice of Heaven'
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '32'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 26
 ---
 
 > CHAPTER XVII.

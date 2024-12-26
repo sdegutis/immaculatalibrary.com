@@ -4,6 +4,8 @@ title: 'Annual Retreat Exercise #6:An examination of the affections of your soul
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '272'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 132
 ---
 
 > CHAPTER VII.

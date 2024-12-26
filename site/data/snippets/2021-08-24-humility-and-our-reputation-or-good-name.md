@@ -4,6 +4,8 @@ title: Humility and our Reputation or Good Name
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '115'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 67
 ---
 
 > Praise, honour, and glory are not given to men for every degree of virtue, but for an excellence of virtue; for by praise we endeavour to persuade others to esteem the excellency of those whom we praise; by honour we testify that we ourselves esteem them; and glory, in my opinion, is nothing else but a certain lustre of reputation that arises from the concurrence of praise and honour; so that honour and praise are like precious stones, from a collection of which glory proceeds, like a certain enamelling.

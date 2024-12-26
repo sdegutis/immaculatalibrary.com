@@ -4,6 +4,8 @@ title: The relationship between Charity and Devotion
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '2'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 7
 ---
 
 > True devotion, Philothea, presupposes, not a partial, but a thorough love of God.

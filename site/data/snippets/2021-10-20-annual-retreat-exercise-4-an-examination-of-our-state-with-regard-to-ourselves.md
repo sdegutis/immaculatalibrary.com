@@ -4,6 +4,8 @@ title: 'Annual Retreat Exercise #4: An examination of our state with regard to o
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '270'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 130
 ---
 
 > CHAPTER V.

@@ -4,6 +4,8 @@ title: 'Annual Retreat Exercise #3: An examination of the state of your soul tow
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '268'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 129
 ---
 
 > CHAPTER IV.

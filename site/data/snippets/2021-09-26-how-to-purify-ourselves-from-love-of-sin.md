@@ -4,6 +4,8 @@ title: How to purify ourselves from love of sin
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '15'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 17
 ---
 
 > CHAPTER VIII.

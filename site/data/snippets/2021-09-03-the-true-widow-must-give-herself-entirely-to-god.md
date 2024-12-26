@@ -4,6 +4,8 @@ title: The True Widow must Give Herself Entirely to God
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '214'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 100
 ---
 
 > *Second [requirement to be a "widow indeed"]*

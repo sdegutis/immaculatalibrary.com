@@ -4,6 +4,8 @@ title: 'Annual Retreat Exercise #1: God in his generous mercy called us to him b
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '264'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 124
 ---
 
 > Consider that God inspired you with these holy resolutions in the flower of your age.

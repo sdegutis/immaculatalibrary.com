@@ -4,6 +4,8 @@ title: We must purify ourselves from all affection to venial sins
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '41'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 31
 ---
 
 > CHAPTER XXII.

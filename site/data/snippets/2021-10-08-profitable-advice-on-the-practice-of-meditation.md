@@ -4,6 +4,8 @@ title: Profitable advice on the practice of Meditation
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '56'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 42
 ---
 
 > CHAPTER VIII.

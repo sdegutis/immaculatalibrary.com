@@ -4,6 +4,8 @@ title: 'Fourth Meditation: On Sin'
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '23'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 21
 ---
 
 > CHAPTER XII.

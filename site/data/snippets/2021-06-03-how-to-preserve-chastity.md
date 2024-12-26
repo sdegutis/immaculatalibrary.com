@@ -4,6 +4,8 @@ title: How to preserve Chastity
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '133'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 75
 ---
 
 > Chapter XII.

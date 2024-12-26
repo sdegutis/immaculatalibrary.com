@@ -4,6 +4,8 @@ title: Humility allows charity to reveal our gifts
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '110'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 65
 ---
 
 > To imagine we know what we know not is very great folly; to desire to be supposed to know that of which we are ignorant is intolerable vanity.

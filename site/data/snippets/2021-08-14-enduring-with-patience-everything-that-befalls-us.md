@@ -4,6 +4,8 @@ title: Enduring with Patience everything that befalls us
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '98'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 58
 ---
 
 > "Patience is necessary for you, that in doing the will of God, you may receive the promise" (Heb. x. 36).

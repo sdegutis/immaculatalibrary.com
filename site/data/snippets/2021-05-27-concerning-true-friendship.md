@@ -4,6 +4,8 @@ title: Concerning true friendship
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '151'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 81
 ---
 
 > Chapter XIX.

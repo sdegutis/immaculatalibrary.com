@@ -4,6 +4,8 @@ title: The nature and discernment of temptations
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '224'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 105
 ---
 
 > ### CHAPTER III.

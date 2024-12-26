@@ -4,6 +4,8 @@ title: Aspirations, prayers, and good thoughts.
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '66'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 47
 ---
 
 > Chapter XIII.

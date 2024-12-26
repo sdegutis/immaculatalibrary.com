@@ -4,6 +4,8 @@ title: 'Annual Retreat Exercise #15: The sentiments we must preserve after the c
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '282'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 142
 ---
 
 > CHAPTER XVI.

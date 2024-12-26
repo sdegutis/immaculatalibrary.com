@@ -4,6 +4,8 @@ title: More advice on friendship
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '159'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 84
 ---
 
 > Chapter XXII.

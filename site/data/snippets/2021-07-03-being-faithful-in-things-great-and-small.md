@@ -4,6 +4,8 @@ title: Being faithful in things great and small
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '196'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 95
 ---
 
 > Chapter XXXV.

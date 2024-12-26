@@ -4,6 +4,8 @@ title: 'Second Meditation: On the end for which we were created'
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '19'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 19
 ---
 
 > CHAPTER X.

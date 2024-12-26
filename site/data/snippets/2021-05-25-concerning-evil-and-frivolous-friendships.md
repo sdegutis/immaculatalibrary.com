@@ -4,6 +4,8 @@ title: Concerning evil and frivolous friendships
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '145'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 79
 ---
 
 > Chapter XVII.

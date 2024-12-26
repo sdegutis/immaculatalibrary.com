@@ -4,6 +4,8 @@ title: Confession turns the Ugliness of Sin into the Beauty of Humility
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '36'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 28
 ---
 
 > CHAPTER XIX.

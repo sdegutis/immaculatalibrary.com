@@ -4,6 +4,8 @@ title: 'Annual Retreat: We ought every year to renew our good resolutions by the
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '262'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 121
 ---
 
 > PART THE FIFTH.

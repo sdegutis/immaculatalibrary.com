@@ -4,6 +4,8 @@ title: 'Annual Retreat Exercise #2: How to begin the self-examination of the ann
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '267'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 128
 ---
 
 > To begin then this examination properly:

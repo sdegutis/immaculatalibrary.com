@@ -4,6 +4,8 @@ title: How to Place Ourselves in the Presence of God
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '49'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 36
 ---
 
 > CHAPTER II.

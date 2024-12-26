@@ -4,6 +4,8 @@ title: The Effects of this Profession of Renewed Loyalty toward God
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '40'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 30
 ---
 
 > CHAPTER XXI.

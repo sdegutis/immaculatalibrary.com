@@ -4,6 +4,8 @@ title: How to keep your mind just and reasonable
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '199'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 96
 ---
 
 > Chapter XXXVI.

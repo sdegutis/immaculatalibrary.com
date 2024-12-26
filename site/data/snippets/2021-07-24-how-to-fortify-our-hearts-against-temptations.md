@@ -4,6 +4,8 @@ title: How to fortify our hearts against temptations
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '237'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 110
 ---
 
 > *How to fortify our hearts against temptations.*

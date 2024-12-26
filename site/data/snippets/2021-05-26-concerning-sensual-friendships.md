@@ -4,6 +4,8 @@ title: Concerning sensual friendships
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '147'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 80
 ---
 
 > Chapter XVIII.

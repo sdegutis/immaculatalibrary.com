@@ -4,6 +4,8 @@ title: 'Third Meditation: On the Benefits of God'
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '21'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 20
 ---
 
 > CHAPTER XI.

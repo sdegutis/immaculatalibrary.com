@@ -4,6 +4,8 @@ title: Widows must be Firm in their Resolve to Remain Widows
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '212'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 99
 ---
 
 > CHAPTER XXXIX.

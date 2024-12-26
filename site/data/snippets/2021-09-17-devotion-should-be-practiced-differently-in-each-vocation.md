@@ -4,6 +4,8 @@ title: Devotion should be practiced differently in each vocation
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '6'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 9
 ---
 
 > CHAPTER III.

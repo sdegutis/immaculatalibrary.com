@@ -4,6 +4,8 @@ title: The Conclusion of each Meditation, and the Spiritual Nosegay
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '55'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 41
 ---
 
 > CHAPTER VII.

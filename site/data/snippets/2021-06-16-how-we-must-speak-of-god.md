@@ -4,6 +4,8 @@ title: How we must speak of God
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '173'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 87
 ---
 
 > Chapter XXVI.

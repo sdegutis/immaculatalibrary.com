@@ -4,6 +4,8 @@ title: The exercises in this book are suitable even for those not accustomed to 
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '283'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 143
 ---
 
 > The world will perhaps say that I suppose, almost throughout the whole work, that Philothea has the gift of mental prayer; and yet, everyone has it not; so that this introduction will not serve for all.

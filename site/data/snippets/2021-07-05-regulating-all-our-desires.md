@@ -4,6 +4,8 @@ title: Regulating all our desires
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '202'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 97
 ---
 
 > Chapter XXXVII.

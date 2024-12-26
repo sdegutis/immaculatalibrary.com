@@ -4,6 +4,8 @@ title: Our holy anchor in all things
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '243'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 113
 ---
 
 > *Of spiritual and sensible consolations, and how we must behave with regard to them.*

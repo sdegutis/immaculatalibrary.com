@@ -4,6 +4,8 @@ title: This Book is Written with Fatherly Love and Attention
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: n13
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 4
 ---
 
 > In this capricious age I foresee that many will say: "It belongs only to religious to give particular directions concerning piety, since they have more leisure than a bishop can have, who is charged with a diocese so heavy as mine is; that such an undertaking too much distracts the understanding, which should be employed in affairs of importance."

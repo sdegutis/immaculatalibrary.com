@@ -4,6 +4,8 @@ title: 'Annual Retreat Exercise #10: Consideration of the example of the Saints'
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '276'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 136
 ---
 
 > ### CHAPTER XII.

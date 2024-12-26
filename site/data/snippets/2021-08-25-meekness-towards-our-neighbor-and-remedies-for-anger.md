@@ -4,6 +4,8 @@ title: Meekness Towards our Neighbor, and Remedies for Anger
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '119'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 68
 ---
 
 > The holy chrism, which by apostolical tradition we use in the Church of God for confirmations and consecrations, is composed of oil of olives mingled with balm, which, amongst other things, represent to us the two favourite and well-beloved virtues which shone forth in the sacred person of our Lord, and which He has strenuously recommended to us; as by them our heart ought to be in a particular manner consecrated to his service, and dedicated to his imitation.

@@ -4,6 +4,8 @@ title: Obtaining Humility by Considering God’s Benefits
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '106'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 62
 ---
 
 > But you desire, Philothea, to penetrate still deeper into humility; for what I have hitherto said, rather concerns wisdom than humility. Let us, then, pass on farther.

@@ -4,6 +4,8 @@ title: Spiritual Recollection
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '63'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 46
 ---
 
 > CHAPTER XII.

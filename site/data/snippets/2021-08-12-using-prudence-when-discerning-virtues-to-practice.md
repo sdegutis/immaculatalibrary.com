@@ -4,6 +4,8 @@ title: Using prudence when discerning virtues to practice
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '95'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 56
 ---
 
 > *Continuation of the former discourse on the choice of virtues.*

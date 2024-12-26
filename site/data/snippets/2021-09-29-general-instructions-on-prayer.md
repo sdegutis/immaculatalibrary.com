@@ -4,6 +4,8 @@ title: General Instructions on Prayer
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '47'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 35
 ---
 
 > Employ an hour every day before dinner in this spiritual exercise, or, if convenient, early in the morning, when your mind will be less distracted and more fresh, after the repose of the night: but see that you extend it not beyond an hour, except with the advice of your spiritual director.

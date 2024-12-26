@@ -4,6 +4,8 @@ title: 'First Meditation: The Creation'
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '17'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 18
 ---
 
 > CHAPTER IX.

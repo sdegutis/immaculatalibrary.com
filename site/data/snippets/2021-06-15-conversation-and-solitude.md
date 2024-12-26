@@ -4,6 +4,8 @@ title: Conversation and Solitude
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '168'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 86
 ---
 
 > Chapter XXIV.

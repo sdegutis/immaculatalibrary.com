@@ -4,6 +4,8 @@ title: How to practice Richness of Spirit in real Poverty
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '143'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 78
 ---
 
 > Chapter XVI.

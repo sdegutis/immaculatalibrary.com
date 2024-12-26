@@ -4,6 +4,8 @@ title: How to benefit from the Holy Mass
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '72'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 48
 ---
 
 > Chapter XIV.

@@ -4,6 +4,8 @@ title: How we ought to receive Inspirations
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '78'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 51
 ---
 
 > Chapter XVIII.

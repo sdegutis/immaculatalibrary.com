@@ -4,6 +4,8 @@ title: Obedience, Chastity, and Poverty
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '128'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 71
 ---
 
 > Charity alone can place us in perfection, but obedience, chastity, and poverty, are the three principal means by which to attain to it. 

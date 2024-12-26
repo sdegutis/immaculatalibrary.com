@@ -4,6 +4,8 @@ title: We ought to purify ourselves from an affection for useless and dangerous 
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '43'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 32
 ---
 
 > CHAPTER XXIII.

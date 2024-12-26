@@ -4,6 +4,8 @@ title: 'Annual Retreat Exercise #1: God in his goodness and sweet love called us
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '264'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 123
 ---
 
 > Consider by what means you were induced to make your protestation. Ah! how good and gracious was God to you at that time?

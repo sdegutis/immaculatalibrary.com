@@ -4,6 +4,8 @@ title: A profession of renewed loyalty toward God, to be made after a General Co
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '38'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 29
 ---
 
 > CHAPTER XX.

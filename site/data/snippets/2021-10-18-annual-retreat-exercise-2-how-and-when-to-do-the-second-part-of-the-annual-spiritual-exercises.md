@@ -4,6 +4,8 @@ title: 'Annual Retreat Exercise #2: How and when to do the second part of the an
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '266'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 127
 ---
 
 > CHAPTER III.

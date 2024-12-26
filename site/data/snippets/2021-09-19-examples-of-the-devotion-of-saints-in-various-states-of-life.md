@@ -4,6 +4,8 @@ title: Examples of the Devotion of Saints in various States of Life
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '7'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 11
 ---
 
 > It is an error, or rather a heresy, to endeavour to banish a devout life from the camps of soldiers, the shops of tradesmen, the courts of princes, or the affairs of married people.

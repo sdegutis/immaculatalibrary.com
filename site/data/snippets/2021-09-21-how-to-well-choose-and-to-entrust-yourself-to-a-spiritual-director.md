@@ -7,6 +7,7 @@ bookSlug: introduction-to-the-devout-life
 tags:
   - Obedience
   - Spiritual Directors
+sortOrder: 13
 ---
 
 > But who shall find this man? The wise men answer, "They that fear God:" that is, the humble, who earnestly desire their spiritual advancement.

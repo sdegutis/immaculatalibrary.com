@@ -4,6 +4,8 @@ title: Frequent Communion
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '84'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 53
 ---
 
 > Chapter XX.

@@ -4,6 +4,8 @@ title: 'Annual Retreat Exercise #1: This protestation is noble and much to be de
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '263'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 122
 ---
 
 > CHAPTER II.

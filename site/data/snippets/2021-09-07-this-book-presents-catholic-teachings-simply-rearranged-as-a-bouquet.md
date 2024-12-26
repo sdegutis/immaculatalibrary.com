@@ -4,6 +4,8 @@ title: This Book presents Catholic Teachings simply Rearranged as a Bouquet
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: n8
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 0
 ---
 
 > Dear reader, I pray you to read this Preface for your satisfaction and for mine.

@@ -4,6 +4,8 @@ title: The necessity of a Guide to conduct us on the way of Devotion
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '8'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 12
 ---
 
 > CHAPTER IV.

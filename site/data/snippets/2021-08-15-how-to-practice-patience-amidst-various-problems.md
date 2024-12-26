@@ -4,6 +4,8 @@ title: How to practice Patience amidst various problems
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '100'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 59
 ---
 
 > Attend to the following advice of St. Gregory:

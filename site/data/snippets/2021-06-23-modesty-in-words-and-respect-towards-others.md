@@ -4,6 +4,8 @@ title: Modesty in words, and respect towards others
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '175'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 88
 ---
 
 > Chapter XXVII.

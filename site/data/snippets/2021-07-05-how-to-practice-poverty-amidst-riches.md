@@ -4,6 +4,8 @@ title: How to practice Poverty amidst Riches
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '138'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 77
 ---
 
 > Chapter XV.

@@ -4,6 +4,8 @@ title: True devotion is never incompatible with our state of life, but enriches 
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '6'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 10
 ---
 
 > No, Philothea, devotion prejudices nothing, when it is true, but rather makes all things perfect; and when it is not suitable to the lawful vocation of any person, then without doubt it is not safe.

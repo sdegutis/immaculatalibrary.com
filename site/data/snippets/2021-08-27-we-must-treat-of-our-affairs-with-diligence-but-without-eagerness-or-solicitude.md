@@ -4,6 +4,8 @@ title: We must treat of our affairs with diligence, but without eagerness or sol
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '126'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 70
 ---
 
 > That care and diligence wherewith we ought to attend to our affairs must never be confounded with anxiety and solicitude.

@@ -4,6 +4,8 @@ title: We must begin the Spiritual Life with Purification and Courage
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '10'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 14
 ---
 
 > CHAPTER V.

@@ -4,6 +4,8 @@ title: Devotion is not only not unpleasant, but most pleasant
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '3'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 8
 ---
 
 > CHAPTER II.

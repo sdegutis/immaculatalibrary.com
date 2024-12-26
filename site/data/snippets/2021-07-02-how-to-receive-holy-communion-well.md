@@ -4,6 +4,8 @@ title: How to receive Holy Communion well
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '87'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 54
 ---
 
 > Chapter XXI.

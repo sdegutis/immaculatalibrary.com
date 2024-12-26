@@ -5,6 +5,7 @@ archiveSlug: an-introduction-to-the-devout-life
 archivePage: '156'
 bookSlug: introduction-to-the-devout-life
 tags: []
+sortOrder: 83
 ---
 
 > Chapter XXI.

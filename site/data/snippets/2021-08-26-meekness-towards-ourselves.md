@@ -10,6 +10,7 @@ tags:
   - Doctrine
   - Meekness
   - Mercy
+sortOrder: 69
 ---
 
 > One of the best exercises of meekness we can perform is that of which the subject is within ourselves, in never fretting at our imperfections; for, though reason requires that we should be sorry when we commit a fault, yet we must refrain from that bitter, gloomy, spiteful, and passionate displeasure for which many are greatly to blame, who being overcome by anger, are angry for having been angry, and vexed to see themselves vexed, for by this means they keep their hearts perpetually steeped in passion; and though it seems as if the second anger destroyed the first, it serves nevertheless to open a passage for fresh anger on the first occasion that may present itself.

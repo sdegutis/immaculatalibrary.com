@@ -4,6 +4,8 @@ title: How we should do Holy Reading
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '77'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 50
 ---
 
 > Chapter XVII.

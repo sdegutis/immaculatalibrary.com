@@ -4,6 +4,8 @@ title: 'Annual Retreat Exercise #7: Affections to be exercised after this examin
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '273'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 133
 ---
 
 > CHAPTER VIII.

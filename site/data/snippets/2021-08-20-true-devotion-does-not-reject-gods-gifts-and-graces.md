@@ -4,6 +4,8 @@ title: True devotion does not reject God’s gifts and graces
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '108'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 64
 ---
 
 > Many say that they leave mental prayer to those that are perfect; that, for their part, they are unworthy to use it.

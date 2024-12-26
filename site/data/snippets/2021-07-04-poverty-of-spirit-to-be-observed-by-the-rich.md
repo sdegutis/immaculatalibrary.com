@@ -4,6 +4,8 @@ title: Poverty of Spirit to be observed by the Rich
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '135'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 76
 ---
 
 > Chapter XIV.

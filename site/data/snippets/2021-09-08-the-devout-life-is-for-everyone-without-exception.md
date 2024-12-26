@@ -5,6 +5,7 @@ archiveSlug: an-introduction-to-the-devout-life
 archivePage: n9
 bookSlug: introduction-to-the-devout-life
 tags: []
+sortOrder: 1
 ---
 
 > Almost all those who have hitherto treated of *devotion* have had the instruction of persons wholly retired from the world in view, or have taught a kind of devotion leading to this absolute retirement: whereas my intention is to instruct such as live in towns, in households, or in courts, and who, by their condition, are obliged to lead, as to the exterior, an ordinary life, and who frequently, under the pretext of a pretended impossibility, will not even think of undertaking a *devout life*, believing, that as no animal dares to taste the seed of the herb called *Palma Christi*, so no man ought to aspire to the palm of Christian piety so long as he lives in the turmoil of worldly affairs.

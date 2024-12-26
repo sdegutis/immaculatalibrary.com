@@ -9,6 +9,7 @@ tags:
   - Doctors of the Church
   - Doctrine
   - Obedience
+sortOrder: 72
 ---
 
 > There are two sorts of obedience, the one necessary, the other voluntary.

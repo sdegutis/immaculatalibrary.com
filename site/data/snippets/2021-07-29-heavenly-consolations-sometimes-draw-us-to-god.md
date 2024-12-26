@@ -8,6 +8,7 @@ tags:
   - Doctors of the Church
   - Doctrine
   - Heaven
+sortOrder: 115
 ---
 
 > Yet these tender and delightful affections are sometimes good and profitable; for they excite the appetite for piety in the soul, strengthen the spirit, and add to the promptitude of devotion a holy gaiety and cheerfulness, which makes our actions more beautiful and agreeable, even on the exterior.

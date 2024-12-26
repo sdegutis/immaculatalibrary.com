@@ -4,6 +4,8 @@ title: We must purify ourselves from our natural imperfections
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '45'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 33
 ---
 
 > CHAPTER XXIV.

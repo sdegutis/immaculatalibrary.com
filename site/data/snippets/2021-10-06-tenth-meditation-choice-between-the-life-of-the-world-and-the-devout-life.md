@@ -4,6 +4,8 @@ title: 'Tenth Meditation: Choice between the life of the World and the Devout Li
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '34'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 27
 ---
 
 > CHAPTER XVIII.

@@ -4,6 +4,8 @@ title: Spiritual dryness, and its various causes
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '250'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 118
 ---
 
 > As long as consolations may last, do as I have just now directed you, Philothea. But this fine and agreeable weather will not always continue; for sometimes you shall find yourself so absolutely destitute of all feeling of devotion that your soul shall seem to be a wild, fruitless, barren desert, in which there is no trace of a pathway to find her God, nor any water of grace to refresh her, on account of the dryness which seems to threaten her with total and absolute desolation.

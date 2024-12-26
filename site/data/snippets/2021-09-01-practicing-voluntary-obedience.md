@@ -4,6 +4,8 @@ title: Practicing Voluntary Obedience
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '130'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 73
 ---
 
 > We call that obedience voluntary which we practise of our own choice, and which is not imposed upon us by another.

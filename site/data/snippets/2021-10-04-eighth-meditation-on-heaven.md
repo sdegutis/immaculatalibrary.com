@@ -4,6 +4,8 @@ title: 'Eighth Meditation: On Heaven'
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '30'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 25
 ---
 
 > CHAPTER XVI.

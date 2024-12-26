@@ -4,6 +4,8 @@ title: How to make a good Confession
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '81'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 52
 ---
 
 > Chapter XIX.

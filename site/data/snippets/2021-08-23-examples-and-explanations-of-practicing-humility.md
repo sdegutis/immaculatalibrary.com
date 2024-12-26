@@ -4,6 +4,8 @@ title: Examples and explanations of practicing humility
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '111'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 66
 ---
 
 > I pass on further, and tell you, Philothea, that in all, and through all, you should love your own abjection. But you will ask me, what is it to love our own abjection?

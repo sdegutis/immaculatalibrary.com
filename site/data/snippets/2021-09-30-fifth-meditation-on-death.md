@@ -4,6 +4,8 @@ title: 'Fifth Meditation: On Death'
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '25'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 22
 ---
 
 > CHAPTER XIII.

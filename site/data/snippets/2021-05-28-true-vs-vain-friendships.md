@@ -4,6 +4,8 @@ title: True vs vain friendships
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '154'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 82
 ---
 
 > Chapter XX.

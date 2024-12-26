@@ -4,6 +4,8 @@ title: The Necessity of Chastity
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '131'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 74
 ---
 
 > Chapter XII.

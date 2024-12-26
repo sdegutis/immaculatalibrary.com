@@ -4,6 +4,8 @@ title: Have courage when abandoning follies and vanities
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '222'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 104
 ---
 
 > *We must always have courage.*

@@ -8,6 +8,7 @@ tags:
   - Doctors of the Church
   - Doctrine
   - Prayer
+sortOrder: 44
 ---
 
 > OHAPTER X.

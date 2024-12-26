@@ -4,6 +4,8 @@ title: 'Annual Retreat Exercise #5: An examination of the state of our soul towa
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '271'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 131
 ---
 
 > CHAPTER VI.

@@ -4,6 +4,8 @@ title: The Structure and Purpose of This Book
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: n11
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 3
 ---
 
 > I address my discourse to Philothea, because, desiring to reduce what I at first had written for one only, to the common advantage of many souls, I make use of a name applicable to all such as aspire to devotion; for the Greek word, Philothen, signifies a soul loving, or in love with, God.

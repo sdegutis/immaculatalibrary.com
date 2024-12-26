@@ -4,6 +4,8 @@ title: Further instructions on spiritual dryness
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '256'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 120
 ---
 
 > To make the whole of this instruction the more evident, I will here relate an excellent passage from the history of St. Bernard, as it has been related by a learned and judicious writer. It is an ordinary thing, he says, with all that serve God, and are not as yet experienced in the vicissitudes of spiritual life, to lose breath and fall into pusillanimity and sadness when the sweetness of sensible devotion, together with that agreeable light which invites them to run forward in the way of God, is withdrawn from them.

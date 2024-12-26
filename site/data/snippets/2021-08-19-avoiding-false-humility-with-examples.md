@@ -4,6 +4,8 @@ title: Avoiding False Humility, with Examples
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '107'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 63
 ---
 
 > We often acknowledge ourselves to be nothing, nay, misery itself, and the refuse of the world; but we would be very sorry that anyone should take us at our word, or tell others that we are really such miserable wretches.

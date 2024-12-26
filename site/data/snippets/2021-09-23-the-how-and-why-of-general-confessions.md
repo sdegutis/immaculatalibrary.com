@@ -4,6 +4,8 @@ title: The How and Why of General Confessions
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '12'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 15
 ---
 
 > CHAPTER VI.

@@ -4,6 +4,8 @@ title: We must cling closely to God through our Protestation, which will protect
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '284'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 144
 ---
 
 > CHAPTER XVIII.

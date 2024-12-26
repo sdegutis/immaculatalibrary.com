@@ -4,6 +4,8 @@ title: The advice in this book are not too numerous in practice
 archiveSlug: an-introduction-to-the-devout-life
 archivePage: '282'
 bookSlug: introduction-to-the-devout-life
+tags: []
+sortOrder: 141
 ---
 
 > CHAPTER XVII.
