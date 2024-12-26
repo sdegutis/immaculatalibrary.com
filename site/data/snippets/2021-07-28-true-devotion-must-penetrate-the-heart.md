@@ -8,6 +8,8 @@ tags: []
 sortOrder: 115
 ---
 
+> But, besides these general instructions, we have need of some particular rules.
+>
 > I say, therefore, that devotion does not always consist in that sweetness, delight, consolation, or sensible tenderness of heart, which moves us to tears, and gives us a certain agreeable and savoury satisfaction in certain spiritual exercises; no, Philothea, for there are many souls who experience these tendernesses and consolations, and nevertheless are very vicious, and consequently have not a true love of God, much less true devotion.
 >
 > Saul, whilst persecuting David to death, who was fleeing before him in the wilderness of Engaddi, entered alone into a cavern, where David and his people lay concealed; David, who on that occasion had many opportunities of killing him, spared his life, and did not even put him in bodily fear; but, having suffered him to go out without injury, afterwards called on him to demonstrate to him his innocence, and to convince him that he had been at his mercy.
