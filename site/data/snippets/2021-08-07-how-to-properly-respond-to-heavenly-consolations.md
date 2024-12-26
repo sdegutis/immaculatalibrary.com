@@ -5,7 +5,7 @@ archiveSlug: an-introduction-to-the-devout-life
 archivePage: '248'
 bookSlug: introduction-to-the-devout-life
 tags: []
-sortOrder: 117
+sortOrder: 118
 ---
 
 > Whenever we experience these consolations we must humble ourselves exceedingly before God, and beware of saying: "Oh, how good am I!" No, Philothea, these consolations, as I have already said, cannot make us the better: devotion does not consist in them; but let us say: "O how good is God to such as hope in Him, to the soul that seeks Him!"
