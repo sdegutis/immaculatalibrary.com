@@ -5,7 +5,7 @@ archiveSlug: an-introduction-to-the-devout-life
 archivePage: '264'
 bookSlug: introduction-to-the-devout-life
 tags: []
-sortOrder: 125
+sortOrder: 126
 ---
 
 > Consider that God inspired you with these holy resolutions in the flower of your age.
