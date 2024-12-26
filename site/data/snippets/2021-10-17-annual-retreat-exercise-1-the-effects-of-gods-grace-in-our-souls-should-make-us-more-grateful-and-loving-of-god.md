@@ -9,7 +9,7 @@ tags:
   - Doctors of the Church
   - Exhortation
   - Meditations
-sortOrder: 126
+sortOrder: 127
 ---
 
 > Consider the effects of this vocation, and comparing what you now are with what you have been, you will doubtless find in yourself a great change for the better.

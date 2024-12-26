@@ -8,7 +8,7 @@ tags:
   - Exhortation
   - Passion
   - Love
-sortOrder: 137
+sortOrder: 138
 ---
 
 > ### CHAPTER XIII.

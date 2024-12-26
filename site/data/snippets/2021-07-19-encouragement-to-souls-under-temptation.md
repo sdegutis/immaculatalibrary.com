@@ -5,7 +5,7 @@ archiveSlug: an-introduction-to-the-devout-life
 archivePage: '229'
 bookSlug: introduction-to-the-devout-life
 tags: []
-sortOrder: 106
+sortOrder: 107
 ---
 
 > *An Encouragement to a soul that is under temptation*

@@ -5,7 +5,7 @@ archiveSlug: an-introduction-to-the-devout-life
 archivePage: '234'
 bookSlug: introduction-to-the-devout-life
 tags: []
-sortOrder: 109
+sortOrder: 110
 ---
 
 > *We must resist small temptations.*

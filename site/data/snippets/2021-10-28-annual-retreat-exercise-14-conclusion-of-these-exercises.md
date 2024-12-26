@@ -5,7 +5,7 @@ archiveSlug: an-introduction-to-the-devout-life
 archivePage: '281'
 bookSlug: introduction-to-the-devout-life
 tags: []
-sortOrder: 140
+sortOrder: 141
 ---
 
 > After these affections you must consider the particular means necessary to maintain your dear resolutions, and determine to be faithful in making good use of them: such as frequent prayer, the sacraments, good works, the amendment of your faults, discovered in the examination, lessening the occasions of evil, and following the advice which may be given you for this purpose.

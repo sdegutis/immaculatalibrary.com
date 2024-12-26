@@ -5,7 +5,7 @@ archiveSlug: an-introduction-to-the-devout-life
 archivePage: '262'
 bookSlug: introduction-to-the-devout-life
 tags: []
-sortOrder: 121
+sortOrder: 122
 ---
 
 > PART THE FIFTH.

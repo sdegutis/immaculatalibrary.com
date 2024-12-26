@@ -5,7 +5,7 @@ archiveSlug: an-introduction-to-the-devout-life
 archivePage: '267'
 bookSlug: introduction-to-the-devout-life
 tags: []
-sortOrder: 128
+sortOrder: 129
 ---
 
 > To begin then this examination properly:

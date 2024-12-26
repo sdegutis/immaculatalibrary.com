@@ -5,7 +5,7 @@ archiveSlug: an-introduction-to-the-devout-life
 archivePage: '264'
 bookSlug: introduction-to-the-devout-life
 tags: []
-sortOrder: 123
+sortOrder: 124
 ---
 
 > Consider by what means you were induced to make your protestation. Ah! how good and gracious was God to you at that time?

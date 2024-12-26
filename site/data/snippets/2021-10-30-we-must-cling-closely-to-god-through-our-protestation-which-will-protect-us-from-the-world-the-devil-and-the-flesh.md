@@ -5,7 +5,7 @@ archiveSlug: an-introduction-to-the-devout-life
 archivePage: '284'
 bookSlug: introduction-to-the-devout-life
 tags: []
-sortOrder: 144
+sortOrder: 145
 ---
 
 > CHAPTER XVIII.

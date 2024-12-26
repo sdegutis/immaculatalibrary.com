@@ -5,7 +5,7 @@ archiveSlug: an-introduction-to-the-devout-life
 archivePage: '252'
 bookSlug: introduction-to-the-devout-life
 tags: []
-sortOrder: 119
+sortOrder: 120
 ---
 
 > There are several causes which occasion our fall from the consolations of devotion into dryness and barrenness of spirit. Let us then examine whether we can find any of them in ourselves; but observe, Philothea, that this examination is not to be made either with inquietude or too much curiosity; but if, after having faithfully considered our conduct, we find the cause of the evil to originate in ourselves, let us thank God for the discovery; for the evil is half cured when the cause of it is known; but if, on the contrary, you can find nothing in particular which may seem to have occasioned this dryness, do not trouble yourself about making any further inquiry, but with all simplicity, do as I shall now advise you.

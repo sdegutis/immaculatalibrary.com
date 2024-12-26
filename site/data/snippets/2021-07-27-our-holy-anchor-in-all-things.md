@@ -5,7 +5,7 @@ archiveSlug: an-introduction-to-the-devout-life
 archivePage: '243'
 bookSlug: introduction-to-the-devout-life
 tags: []
-sortOrder: 113
+sortOrder: 114
 ---
 
 > *Of spiritual and sensible consolations, and how we must behave with regard to them.*

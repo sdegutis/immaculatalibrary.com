@@ -5,7 +5,7 @@ archiveSlug: an-introduction-to-the-devout-life
 archivePage: '232'
 bookSlug: introduction-to-the-devout-life
 tags: []
-sortOrder: 108
+sortOrder: 109
 ---
 
 > *Remedies against great temptations.*

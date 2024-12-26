@@ -5,7 +5,7 @@ archiveSlug: an-introduction-to-the-devout-life
 archivePage: '217'
 bookSlug: introduction-to-the-devout-life
 tags: []
-sortOrder: 102
+sortOrder: 103
 ---
 
 > O virgins, I have only three words to say to you, for the rest you will find elsewhere.

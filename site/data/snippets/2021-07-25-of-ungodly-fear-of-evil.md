@@ -5,7 +5,7 @@ archiveSlug: an-introduction-to-the-devout-life
 archivePage: '238'
 bookSlug: introduction-to-the-devout-life
 tags: []
-sortOrder: 111
+sortOrder: 112
 ---
 
 > *Of Inquietude.*

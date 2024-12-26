@@ -5,7 +5,7 @@ archiveSlug: an-introduction-to-the-devout-life
 archivePage: '275'
 bookSlug: introduction-to-the-devout-life
 tags: []
-sortOrder: 135
+sortOrder: 136
 ---
 
 > ### CHAPTER XI.

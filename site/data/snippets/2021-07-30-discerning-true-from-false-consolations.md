@@ -5,7 +5,7 @@ archiveSlug: an-introduction-to-the-devout-life
 archivePage: '248'
 bookSlug: introduction-to-the-devout-life
 tags: []
-sortOrder: 117
+sortOrder: 118
 ---
 
 > But you will perhaps ask me, since there are sensible consolations which are good, because they come from God, and others unprofitable, dangerous, and even pernicious, that proceed either from nature or from the enemy, how shall I be able to distinguish the one from the other, or know those that are evil or unprofitable from those that are good?

@@ -8,7 +8,7 @@ tags:
   - Morals
   - Example
   - Doctrine
-sortOrder: 107
+sortOrder: 108
 ---
 
 > *How temptation and delectation may become sinful.*

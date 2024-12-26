@@ -5,7 +5,7 @@ archiveSlug: an-introduction-to-the-devout-life
 archivePage: '219'
 bookSlug: introduction-to-the-devout-life
 tags: []
-sortOrder: 103
+sortOrder: 104
 ---
 
 > *We must not concern ourselves about what the children of the world may say.*
