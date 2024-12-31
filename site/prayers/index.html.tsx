@@ -489,7 +489,7 @@ function LitanyOfSaints() {
       <h1>Litany of Saints</h1>
       <div class='spaced-small two-cols'>
         <Line>St. Jane Frances de Chantal <Red>Pray for us.</Red></Line>
-        <Line> St. Kateri Tekakwitha <Red>Pray for us.</Red></Line>
+        <Line> St. John to Baptist <Red>Pray for us.</Red></Line>
         <Line>  St. Peter the Apostle <Red>Pray for us.</Red></Line>
         <div class='spaced-small' />
         <Line>St. Therese of Lisieux <Red>Pray for us.</Red></Line>
