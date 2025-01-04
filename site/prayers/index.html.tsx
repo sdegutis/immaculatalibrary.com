@@ -489,7 +489,7 @@ function LitanyOfSaints() {
       <h1>Litany of Saints</h1>
       <div class='spaced-small two-cols'>
         <Line>St. Jane Frances de Chantal <Red>Pray for us.</Red></Line>
-        <Line> St. John to Baptist <Red>Pray for us.</Red></Line>
+        <Line> St. John the Baptist <Red>Pray for us.</Red></Line>
         <Line>  St. Peter the Apostle <Red>Pray for us.</Red></Line>
         <div class='spaced-small' />
         <Line>St. Therese of Lisieux <Red>Pray for us.</Red></Line>
@@ -1006,21 +1006,21 @@ function RosaryPromises() {
     <div class='centered spaced-medium'>
       <h1>Rosary Promises</h1>
       <p class='spaced-small'>
-        <Line>1. If you faithfully pray the rosary, you will get extra special help from Heaven.</Line>
-        <Line>2. Mary promises her special protection from Heaven for anyone who says the Rosary.</Line>
-        <Line>3. The Rosary is a special armor against hell, the devil, sins, temptations, and lies.</Line>
-        <Line>4. Saying the Rosary will help you know what God's will is and become good.</Line>
-        <Line>5. If you say the Rosary faithfully, Mary will save you from Hell.</Line>
-        <Line>6. If you say the Rosary devoutly, God will not be angry at you or punish you anymore.</Line>
-        <Line>7. True devotion to the Rosary will make sure your death leads you to Heaven.</Line>
-        <Line>8. Being faithful to the Rosary will protect you from being tricked by the devil.</Line>
-        <Line>9. If you are devoted to the Rosary, you will be saved from Purgatory.</Line>
-        <Line>10. The faithful children of the Rosary will have a very high place in Heaven.</Line>
-        <Line>11. By saying the Rosary, you will receive whatever help you ask of Mary.</Line>
-        <Line>12. Those who spread love of the Rosary will be helped by Heaven in all their needs.</Line>
-        <Line>13. Those who defend the Rosary will have the help of All of Heaven in life and at death.</Line>
-        <Line>14. Saying the Rosary will make you part of the family of Jesus in Heaven.</Line>
-        <Line>15. Devotion to the Rosary is a special sign that you were chosen by God before all time.</Line>
+        <Line>1. 🙏 If you faithfully pray the rosary, you will get extra special help from Heaven.</Line>
+        <Line>2. ⚔️ Mary promises her special protection from Heaven for anyone who says the Rosary.</Line>
+        <Line>3. 🛡️ The Rosary is a special armor against hell, the devil, sins, temptations, and lies.</Line>
+        <Line>4. 😇 Saying the Rosary will help you know what God's will is and become good.</Line>
+        <Line>5. 🔥 If you say the Rosary faithfully, Mary will save you from Hell.</Line>
+        <Line>6. 😡 If you say the Rosary devoutly, God will not be angry at you or punish you anymore.</Line>
+        <Line>7. ⚰️ True devotion to the Rosary will make sure your death leads you to Heaven.</Line>
+        <Line>8. 👿 Being faithful to the Rosary will protect you from being tricked by the devil.</Line>
+        <Line>9. ❤️‍🔥 If you are devoted to the Rosary, you will be saved from Purgatory.</Line>
+        <Line>10. ☁️ The faithful children of the Rosary will have a very high place in Heaven.</Line>
+        <Line>11. 😩 By saying the Rosary, you will receive whatever help you ask of Mary.</Line>
+        <Line>12. 🍓 Those who spread love of the Rosary will be helped by Heaven in all their needs.</Line>
+        <Line>13. 🎺 Those who defend the Rosary will have the help of All of Heaven in life and at death.</Line>
+        <Line>14. 👩‍👧‍👦 Saying the Rosary will make you part of the family of Jesus in Heaven.</Line>
+        <Line>15. 🪧 Devotion to the Rosary is a special sign that you were chosen by God before all time.</Line>
       </p>
     </div>
   </Panel>;
