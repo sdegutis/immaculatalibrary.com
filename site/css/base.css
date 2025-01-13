@@ -56,6 +56,9 @@ hr {
 
 blockquote {
   background-color: #fff1;
+  box-shadow:
+    0px -1px 1px 0px #fff3,
+    0px 1px 1px 0px #0007;
   border-radius: 7px;
   padding: 0 1em;
   overflow: hidden;
