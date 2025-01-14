@@ -9,7 +9,6 @@ const links = {
   Prayers: { href: '/prayers/', title: 'Prayers' },
   Articles: { href: '/articles.html', title: 'Letters' },
   Resources: { href: '/resources.html', title: 'Resources' },
-  Discord: { href: 'https://discord.gg/TCPNGNAk', title: 'Discord' },
 } as const;
 
 export type NavPage = keyof typeof links;
