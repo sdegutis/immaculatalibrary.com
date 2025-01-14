@@ -23,8 +23,7 @@ export default jsxToString(<>
         <Spaced>
           <CenteredColumn>
             <Typography>
-              <h1 style='text-align:left'>Immaculata Library</h1>
-              <blockquote style='border:none; padding:0; overflow:unset; background-color:unset'>
+              <blockquote>
                 <Markdown>
                   "Have always at hand some approved book of devotion, and read a little of them every day with as much devotion as if you
                   were reading a letter which those saints had sent you from heaven to show you the way to it, and encourage you to come."
