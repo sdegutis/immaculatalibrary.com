@@ -1,0 +1,30 @@
+html {
+  background-color: #222;
+}
+
+#linktree > * {
+  list-style-type: none;
+  /* border: 1px solid red; */
+  border-radius: 7px;
+  padding: 1em;
+  margin: 0.5em 0;
+
+  display: block;
+
+  &:is(span) {
+    font-weight: bold;
+    color: #fff;
+  }
+
+  &:is(a) {
+    background-color: #333;
+    box-shadow:
+      0px -1px 1px 0px #fff3,
+      0px 1px 1px 0px #0007;
+    text-decoration: none;
+
+    &[href]:hover {
+      background-color: #444;
+    }
+  }
+}
