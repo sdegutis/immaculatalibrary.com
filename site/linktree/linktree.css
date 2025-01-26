@@ -1,5 +1,16 @@
-html {
+html::before {
+  position: absolute;
+  inset: 0 0 0 0;
+  z-index: -1;
+  content: '';
+
   background-color: #222;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/0/08/John_Martin_Le_Pandemonium_Louvre.JPG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: center;
+  background-position-x: right;
+  filter: blur(5px);
 }
 
 #linktree > * {
@@ -17,7 +28,7 @@ html {
   }
 
   &:is(a) {
-    background-color: #333;
+    background-color: #333a;
     box-shadow:
       0px -1px 1px 0px #fff3,
       0px 1px 1px 0px #0007;
