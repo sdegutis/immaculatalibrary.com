@@ -38,6 +38,7 @@ export default jsxToString(<>
           <h2>Apps</h2>
           <ul>
             <li><a href='/sidebar/'>Adoration Sidebar</a> (install as a desktop app)</li>
+            <li><a href='https://shepherdgame.com/'>Shepherd Game</a> (for kids to practice teamwork)</li>
           </ul>
         </div>
 
