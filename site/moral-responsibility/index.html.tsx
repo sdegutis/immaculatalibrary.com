@@ -1,9 +1,9 @@
 import { jsxToString } from "@imlib/core";
+import MarkdownIt from 'markdown-it';
 import { Typography } from "../components/$typography.js";
 import { CenteredColumn, Spaced } from "../components/column.js";
 import { TypicalPage } from "../components/page.js";
 import files from './';
-import MarkdownIt from 'markdown-it';
 
 const md = new MarkdownIt({
   typographer: true,
