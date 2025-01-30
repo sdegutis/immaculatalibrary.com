@@ -39,6 +39,14 @@ export default jsxToString(<>
       } />
 
       <Spaced>
+        <CenteredColumn>
+          <div>
+            <a href='/moral-responsibility/'>Moral Responsibility</a> (book)
+          </div>
+        </CenteredColumn>
+      </Spaced>
+
+      <Spaced>
         <SplitColumn>
 
           {/* <img
