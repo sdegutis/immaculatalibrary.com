@@ -38,11 +38,9 @@ export default jsxToString(<>
         </Spaced>
       } />
 
-      <Spaced>
-        <div style='text-align:center'>
-          <a href='/moral-responsibility/'>Moral Responsibility</a> (book draft)
-        </div>
-      </Spaced>
+      <div style='text-align:center' class='recents alt'>
+        <a href='/moral-responsibility/'>Moral Responsibility</a> (book draft)
+      </div>
 
       <Spaced>
         <SplitColumn>
