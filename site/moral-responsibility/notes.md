@@ -569,3 +569,6 @@ Hebrews
 	Mother of the 7.
 	Possessed by the Spirit.
 	Blood of Christ, Mother of God, Name of Jesus.
+
+
+How is it not a punishment from God to misspend all your money?
