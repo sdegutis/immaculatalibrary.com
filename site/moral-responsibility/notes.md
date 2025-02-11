@@ -585,3 +585,30 @@ But Jesus wants us to love one another as he loved us.
 We must love one another by laying down our lives for one another.
 If we don't do this, then we are deluding ourselves by thinking we know him.
 If we don't help our neighbor in real need, Jesus will say I never knew you.
+
+
+Captain America said "I can do this all day" after he was all out of strength.
+Too often being overwhelmed is just us thinking God gave us too many problems.
+God promised he would never give us too many problems, and we have to trust that.
+The whole point of this life is to learn to not give up and keep trusting God.
+The entire purpose of this life requires trying to convince us to not trust God.
+The reason "I can do this all day" is so encouraging is because he doesn't give up.
+If even a fictional mythological hero can encourage us, why can't the words of Jesus?
+And what's the point of making Rogers say that except to convince us we can do the same?
+We have to trust that God will not give us more than we can handle.
+We have to trust that God always gives us a way to escape every temptation.
+The biggest temptation of today is despair, feeling like there's no hope for good.
+Despair is giving into the spirit of the world and the devil who tell us to give up.
+If we just keep going, fighting for what's right and good, God will not let us down.
+God wants good more than we do, and if he wants it to be successful, he will make it so.
+He doesn't care so much about the success of our efforts, but that we're not giving up.
+
+
+What is a prophet? Someone who speaks the word of God to others.
+Jesus was the main and final prophet, being the Word of God in the flesh.
+Jesus said he is the truth, and he told us the truth about God and about ourselves.
+Jesus is the Logos, or reason and logic, and through these we can see the truth.
+False prophets call themselves infallible and ridicule anyone who questions them at all.
+False prophets call themselves experts and make a living through teaching their lies.
+False prophets use logical fallacies to support their lies and hide them in sophistry.
+
