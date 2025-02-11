@@ -572,3 +572,16 @@ Hebrews
 
 
 How is it not a punishment from God to misspend all your money?
+
+St. Paul says that to love one another sums up the law.
+He also says that loving one another fulfills the law.
+Most Christians think Jesus fulfilled the law and so we're done.
+But we are meant to imitate Christ and be little Christs.
+We are meant to repeat his pattern, and do as he did before us.
+Most Christians think "believing in Jesus" gets you into heaven.
+Heaven is loving one another with the pure and true love of God.
+Most Christians Jesus did it all for us so we don't have to do anything.
+But Jesus wants us to love one another as he loved us.
+We must love one another by laying down our lives for one another.
+If we don't do this, then we are deluding ourselves by thinking we know him.
+If we don't help our neighbor in real need, Jesus will say I never knew you.
