@@ -612,3 +612,24 @@ False prophets call themselves infallible and ridicule anyone who questions them
 False prophets call themselves experts and make a living through teaching their lies.
 False prophets use logical fallacies to support their lies and hide them in sophistry.
 
+Adam and Eve tried to get knowledge of evil by doing evil.
+Jesus and Mary had knowledge of evil without doing evil.
+Seeing others do evil and the consequences is far better than doing evil.
+Ideally nobody would do evil, and this will happen in heaven.
+But apparently, to be convinced not to do evil, we must see the fruits of it.
+Maybe this is why God allowed us all to be born into a world full of evil.
+
+Desire for physical pleasure is never satisfied, it can only be abandoned.
+Food, alcohol, drugs, bad music, these never quench our thirst but increase it.
+When we don't think we have real food, we at least settle for unfilling crumbs.
+Physical goods decrease when used, spiritual pleasures increase when used.
+Good music, love, friendship, creativity, these never run out, but multiply.
+
+Winter seems to be a metaphor given to us by God to describe eternal Hell.
+There's no color, the sky and the ground are both a dull gray.
+There's no warmth, the sun has no effect despite its presence.
+There's no life, all the useful animals are hidden and asleep.
+There's no food, all the plants are barren and fruitless.
+There's no music, all the birds of the air have moved away.
+There's no joy, seasonal depression robs many people of happiness.
+There's no hope, the only way out is when the sun gets closer again.
