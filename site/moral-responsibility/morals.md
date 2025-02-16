@@ -11,7 +11,7 @@ There's no life, all the useful animals are hidden and asleep.
 There's no food, all the plants are barren and fruitless.
 There's no music, all the birds of the air have moved away.
 There's no joy, seasonal depression robs many people of happiness.
-There's no hope, the only way out is when the sun gets closer again.
+There's no hope, the only way out is if the sun gets closer again.
 
 "... then they can change their doctrine and their rules."
 Recently Sen. Noel Frame said this about the seal of confession becoming illegal.
