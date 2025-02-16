@@ -38,8 +38,11 @@ export default jsxToString(<>
         </Spaced>
       } />
 
-      <div style='text-align:center' class='recents alt'>
-        <a href='/moral-responsibility/'>Moral Responsibility</a> (book draft)
+      <div class='recents alt'>
+        <div style='margin:0 auto; width: 90%; max-width: 600px'>
+          <h3>Daily moral</h3>
+          <div id='daily-morals'></div>
+        </div>
       </div>
 
       <Spaced>

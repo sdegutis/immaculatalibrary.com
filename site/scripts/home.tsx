@@ -7,6 +7,13 @@ import { $ } from '../util/jsx-dom.js';
 import { SnippetJson } from './data/snippets/[snippet].json.js';
 import { randomElement, sleep } from './util.js';
 
+const dailyMorals = fetch('/moral-responsibility/morals.json').then<string[]>(res => res.json());
+
+dailyMorals.then(morals => {
+  const which = Math.floor((Date.now() / 1000 / 60 / 60 / 24) % morals.length);
+  document.getElementById('daily-morals')!.innerHTML = morals[which]!;
+});
+
 const container = document.getElementById('random-book-snippet') as HTMLDivElement;
 
 const snippetIds = fetch('/scripts/data/snippet-ids.json').then<string[]>(res => res.json());
