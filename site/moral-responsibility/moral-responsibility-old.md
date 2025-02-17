@@ -673,6 +673,14 @@ make in a moral dilemma.
 
 ## Misc
 
+https://www.catholicexorcism.org/post/exorcist-diary-331-lucifer-i-hate-that-name
+We are likely given new names in heaven.
+It seems related to women receiving the name of her husband.
+The Church is the Bride of Christ, and we are its members.
+A name also means more than just sounds and letters.
+Names represent core values and principles and a purpose.
+Jesus has received a new name and we will have a new name also.
+
 Goodness and truth are inseparable. Jesus came into the world bringing
 both truth and grace. Jesus said that goodness and honesty are the two
 conditions of a heart that brings forth abundant fruit. St. Paul said
