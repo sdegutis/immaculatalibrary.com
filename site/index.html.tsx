@@ -39,7 +39,7 @@ export default jsxToString(<>
       } />
 
       <div class='recents alt'>
-        <div style='margin:0 auto; width: 90%; max-width: 600px'>
+        <div style='margin:0 auto; width: 90%; max-width: 800px'>
           <h3>Daily Moral</h3>
           <div id='daily-morals'></div>
         </div>
