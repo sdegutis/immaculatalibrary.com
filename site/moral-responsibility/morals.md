@@ -20,3 +20,11 @@ If a doctrine is immutable, then by definition, it can't be changed by any human
 The Catholic Church claims that our doctrines are immutable, including Confession.
 This is clearly an attack on the Church disguised as concern for the abused.
 Yet the abused includes unborn humans murdered with permission from Democrats.
+
+Goodness and truth are inseparable.
+Jesus came into the world bringing both truth and grace.
+Jesus said only a good and honest heart brings forth abundant fruit.
+St. Paul said those who love sin choose delusion over truth.
+Hebrews says an evil and unbelieving heart are the same thing.
+Adam and Eve rejected both God's truth and God's morals.
+To love the truth is to do what is good.
