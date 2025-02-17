@@ -21,3 +21,10 @@ There's no food, all the plants are barren and fruitless.
 There's no music, all the birds of the air have moved away.
 There's no joy, seasonal depression robs many people of happiness.
 There's no hope, the only way out is if the sun gets closer again.
+
+God's will is wherever you can do good and avoid sin.
+If you can do good, then you can be confident God is helping you.
+If you fall into sin despite prayers, you wandered from God's protection.
+Don't worry about mixing up God's will with Satan's will accidentally.
+Just as pagans demand a sacrifice of you every now and then, so does Satan.
+If you're trying to do God's will and can resist temptations, you're safe.
