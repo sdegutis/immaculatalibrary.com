@@ -1,5 +1,5 @@
 import { jsxToString } from "@imlib/core";
-import { HomeLoading } from "./components/$loading.js";
+import { HomeLoading, LoadingParagraph } from "./components/$loading.js";
 import { Typography } from "./components/$typography.js";
 import { VerifyHuman } from "./components/_verifyhuman.js";
 import { CenteredColumn, Spaced, SplitColumn } from "./components/column.js";
@@ -41,7 +41,9 @@ export default jsxToString(<>
       <div class='recents alt'>
         <div style='margin:0 auto; width: 90%; max-width: 800px'>
           <h3>Daily Moral</h3>
-          <div id='daily-morals'></div>
+          <div id='daily-morals'>
+            <LoadingParagraph lines={7} />
+          </div>
         </div>
       </div>
 

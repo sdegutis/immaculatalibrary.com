@@ -9,7 +9,8 @@ import { randomElement, sleep } from './util.js';
 
 const dailyMorals = fetch('/moral-responsibility/morals.json').then<string[]>(res => res.json());
 
-dailyMorals.then(morals => {
+dailyMorals.then(async morals => {
+  await sleep(.5);
   const which = Math.floor((Date.now() / 1000 / 60 / 60 / 24) % morals.length);
   document.getElementById('daily-morals')!.innerHTML = morals[which]!;
 });
