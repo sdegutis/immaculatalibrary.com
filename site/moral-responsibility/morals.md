@@ -13,14 +13,6 @@ There's no music, all the birds of the air have moved away.
 There's no joy, seasonal depression robs many people of happiness.
 There's no hope, the only way out is if the sun gets closer again.
 
-"... then they can change their doctrine and their rules."
-Recently Sen. Noel Frame said this about the seal of confession becoming illegal.
-This statement shows that she does not believe in absolute, objective truth.
-If a doctrine is immutable, then by definition, it can't be changed by any human.
-The Catholic Church claims that our doctrines are immutable, including Confession.
-This is clearly an attack on the Church disguised as concern for the abused.
-Yet the abused includes unborn humans murdered with permission from Democrats.
-
 Goodness and truth are inseparable.
 Jesus came into the world bringing both truth and grace.
 Jesus said only a good and honest heart brings forth abundant fruit.
