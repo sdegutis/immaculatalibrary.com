@@ -23,11 +23,13 @@ Don't worry about mixing up God's will with Satan's will accidentally.
 Just as pagans demand a sacrifice of you every now and then, so does Satan.
 If you're trying to do God's will and can resist temptations, you're safe.
 
-Desire for physical pleasure is never satisfied, it can only be abandoned.
-Food, alcohol, drugs, bad music, these never quench our thirst but increase it.
-When we don't think we have real food, we at least settle for unfilling crumbs.
-Physical goods decrease when used, spiritual pleasures increase when used.
-Good music, love, friendship, creativity, these never run out, but multiply.
+You can never make yourself happy, only being loved can make you happy.
+Love comes from God and from God alone, for God *is* love.
+God loves us all, and we are happier the more we recognize his love.
+When others truly love us, it's God's love passing through them to us.
+We can make others happy by doing something out of true love for them.
+Recognize God's love for you, and love others freely and without worry.
+Those in heaven are always loving and happy, those in hell never are either.
 
 "Look what you have done to yourself."
 An abusive and wicked person says this to their victims after abusing them.
@@ -36,3 +38,9 @@ But we are responsible for our own actions, we cannot blame others for it.
 If we do wrong and blame someone else's actions for it, we are not excused.
 If someone blames us for the wrong they did to us, they are not with God.
 But God is not mocked, and he will have his vengeance against such in due time.
+
+Desire for physical pleasure is never satisfied, it can only be abandoned.
+Food, alcohol, drugs, bad music, these never quench our thirst but increase it.
+When we don't think we have real food, we at least settle for unfilling crumbs.
+Physical goods decrease when used, spiritual pleasures increase when used.
+Good music, love, friendship, creativity, these never run out, but multiply.
