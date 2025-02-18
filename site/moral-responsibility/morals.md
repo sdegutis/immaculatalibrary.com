@@ -28,3 +28,11 @@ Food, alcohol, drugs, bad music, these never quench our thirst but increase it.
 When we don't think we have real food, we at least settle for unfilling crumbs.
 Physical goods decrease when used, spiritual pleasures increase when used.
 Good music, love, friendship, creativity, these never run out, but multiply.
+
+"Look what you have done to yourself."
+An abusive and wicked person says this to their victims after abusing them.
+They want their victim to believe it's the victim's fault for being abused.
+But we are responsible for our own actions, we cannot blame others for it.
+If we do wrong and blame someone else's actions for it, we are not excused.
+If someone blames us for the wrong they did to us, they are not with God.
+But God is not mocked, and he will have his vengeance against such in due time.
