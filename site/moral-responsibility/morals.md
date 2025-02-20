@@ -31,6 +31,22 @@ We can make others happy by doing something out of true love for them.
 Recognize God's love for you, and love others freely and without worry.
 Those in heaven are always loving and happy, those in hell never are either.
 
+It's best to be both happy and good.
+The point of this life is to be good, not to be happy.
+Sometimes you can't be both happy and good at the same time.
+In those times, we should choose to be good rather than happy.
+This life is a test to see which choice each person will make.
+Only those who choose to be good rather than happy will be in heaven.
+Avoid being friends with people who would rather be happy than good.
+
+Never try to win someone's heart over.
+People fall in love when their hearts resonate together.
+Hearts only resonate when they share the same values and loves.
+When this happens, a marriage has equality and will be balanced.
+But when a heart needs to be won over, there can't be equality.
+People who chase after hearts will never be satisfied.
+The one heart that is always given to us for free is God's.
+
 "Look what you have done to yourself."
 An abusive and wicked person says this to their victims after abusing them.
 They want their victim to believe it's the victim's fault for being abused.
