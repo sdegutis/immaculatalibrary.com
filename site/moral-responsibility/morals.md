@@ -55,6 +55,8 @@ If we do wrong and blame someone else's actions for it, we are not excused.
 If someone blames us for the wrong they did to us, they are not with God.
 But God is not mocked, and he will have his vengeance against such in due time.
 
+"The night is far gone, the day is at hand."
+"Therefore make no provision for the flesh, to satisfy its desires."
 Desire for physical pleasure is never satisfied, it can only be abandoned.
 Food, alcohol, drugs, bad music, these never quench our thirst but increase it.
 When we don't think we have real food, we at least settle for unfilling crumbs.

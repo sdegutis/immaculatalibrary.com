@@ -11,8 +11,12 @@ const dailyMorals = fetch('/moral-responsibility/morals.json').then<string[]>(re
 
 dailyMorals.then(async morals => {
   await sleep(.5);
-  const which = Math.floor((Date.now() / 1000 / 60 / 60 / 24) % morals.length);
-  document.getElementById('daily-morals')!.innerHTML = morals[which]!;
+  const which = Math.floor(Date.now() / 1000 / 60 / 60 / 24 % morals.length);
+  const container = document.getElementById('daily-morals')!;
+  container.innerHTML = morals[which]!;
+
+  const hoursLeft = Math.ceil(24 - Date.now() / 1000 / 60 / 60 / 24 % morals.length / morals.length * 24);
+  container.previousElementSibling!.setAttribute('title', `${which} / ${morals.length} - ${hoursLeft}h`);
 });
 
 const container = document.getElementById('random-book-snippet') as HTMLDivElement;
