@@ -10,7 +10,7 @@ sortOrder: 149
 
 > But among all these obstacles the greatest is the tyranny of evil habits. Would that I could make you understand the power with which they bind us!
 > 
-> As each blow of the hammer drives a nail farther and farther into the Avood, until it can hardly be withdrawn, so every sinful action is a fresh blow which sinks vices deeper and deeper into our souls until it is almost impossible to uproot them.
+> As each blow of the hammer drives a nail farther and farther into the wood, until it can hardly be withdrawn, so every sinful action is a fresh blow which sinks vices deeper and deeper into our souls until it is almost impossible to uproot them.
 > 
 > Thus it is not rare to see the sinner in his old age a prey to vices which have dishonored his youth, in which he is no longer capable of finding pleasure, and which his years and the weakness of nature would repel, were he not bound to them by long-continued habit.
 > 
