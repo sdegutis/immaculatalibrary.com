@@ -38,14 +38,14 @@ export default jsxToString(<>
         </Spaced>
       } />
 
-      <div class='recents alt'>
+      {/* <div class='recents alt'>
         <div style='margin:0 auto; width: 90%; max-width: 800px'>
           <h3>Daily Moral</h3>
           <div id='daily-morals'>
             <LoadingParagraph lines={7} />
           </div>
         </div>
-      </div>
+      </div> */}
 
       <Spaced>
         <SplitColumn>
