@@ -21,9 +21,7 @@ tags:
 > 
 > This I do so that, coming to perfect self-knowledge, they may know that of themselves they are nothing and have no grace, and accordingly in time of battle fly to Me, as their Benefactor, seeking Me alone, with true humility, for which purpose I treat them thus, withdrawing from them consolation indeed, but not grace.
 > 
-> At such a time these weak ones, of whom I speak, relax their energy, impatiently turning backwards, and sometimes abandon, under colour of virtue, many
-> 
-> of their exercises, saying to themselves, This labour does not profit me. All this they do, because they feel themselves deprived of mental consolation.
+> At such a time these weak ones, of whom I speak, relax their energy, impatiently turning backwards, and sometimes abandon, under colour of virtue, many of their exercises, saying to themselves, This labour does not profit me. All this they do, because they feel themselves deprived of mental consolation.
 > 
 > Such a soul acts imperfectly, for she has not yet unwound the bandage of spiritual self-love, for, had she unwound it she would see that, in truth, everything proceeds from Me, that no leaf of a tree falls to the ground without My providence, and that what I give and promise to My creatures, I give and promise to them for their sanctification, which is the good and the end for which I created them.
 > 
