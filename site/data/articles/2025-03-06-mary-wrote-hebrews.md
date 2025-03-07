@@ -50,7 +50,7 @@ It's almost like grace follows this letter wherever it goes. Which is exactly wh
 
 ### It's bold in its warnings
 
-Out of all warnings in the New Testament, apart from Jesus, every author is at least a little restrained in warning of the dangers of sinning. This is because sinners are aware that as we judge so will we be judged, so although St. Peter and St. Paul and the author authors warned of the punishments of sin, they were gentle about it, and quickly moved on to the mercy of God.
+Out of all warnings in the New Testament, apart from Jesus, every author is at least a little restrained in warning of the dangers of sinning. This is because sinners are aware that as we judge so will we be judged, so although St. Peter and St. Paul and the other authors warned of the punishments of sin, they were gentle about it, and quickly moved on to the mercy of God.
 
 But Mary, who never sinned once, did not hold back. Hebrews is very, very stark several times in talking about what will happen to those who are lost forever, and even opines that perhaps the reader will be one of them around chapter six. Yet she didn't exclude herself from the possibility of apostasy, knowing that the higher you are, the harder you fall.
 
