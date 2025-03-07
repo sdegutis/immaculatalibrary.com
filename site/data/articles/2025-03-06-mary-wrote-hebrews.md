@@ -40,7 +40,7 @@ The theory is more specifically that Mary and the Holy Spirit co-authored this l
 
 The entire letter is filled with the same messages: don't draw back, keep pushing forward; you can do this, God will help you; don't give up, we went through it too and survived; your father doesn't hate you and hasn't abandoned you, he's disciplining you because he loves and accepts you. This is what a good mother does.
 
-It has the same tone as the mother of the seven martyrs in the book of Machabees, who encouraged them with her last words to give glory to God through their deaths. Especiall chapters eleven and twelve. Near the end of eleven, after the names are exhausted, there's a short list of heroic deeds, followed by "women received their dead by resurrection," followed by a short list of martyrdoms. That woman was especially Mary receiving Jesus back and then witnessing the early Church being slaughtered.
+It has the same tone as the mother of the seven martyrs in the book of Machabees, who encouraged them with her last words to give glory to God through their deaths. Especially chapters eleven and twelve. Near the end of eleven, after the names are exhausted, there's a short list of heroic deeds, followed by "women received their dead by resurrection," followed by a short list of martyrdoms. That woman was especially Mary receiving Jesus back and then witnessing the early Church being slaughtered.
 
 ### It has a reverse curse of excellency
 
