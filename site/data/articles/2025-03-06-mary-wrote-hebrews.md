@@ -16,9 +16,9 @@ Every other New Testament letter was written by one of the leaders of the infant
 
 ### No introduction makes perfect sense
 
-It's universally bafflign that this letter has no introduction. It would best be explained if the introduction would be too confusing, too difficult to believe, too difficult to accept, too distracting from the rest of the letter, and a potential cause for scandal.
+It's universally baffling that this letter has no introduction. It would best be explained if the introduction would be too confusing, too difficult to believe, too difficult to accept, too distracting from the rest of the letter, and a potential cause for scandal.
 
-All of these reasons fully match up to the theory that Mary wrote this letter. She wanted to get right to the point, she wanted to stiffle any complaints that a woman shouldn't write a letter, or that it can't be inspired Scripture. She was writing an exhortation to her children, and got right to the point.
+All of these reasons fully match up to the theory that Mary wrote this letter. She wanted to get right to the point, she wanted to stifle any complaints that a woman shouldn't write a letter, or that it can't be inspired Scripture. She was writing an exhortation to her children, and got right to the point.
 
 ### Mary was in Rome around A.D. 58
 
@@ -34,7 +34,7 @@ She most likely wrote it herself, and then brought it to someone to deliver to o
 
 All Scripture is God-breathed, or inspired by the Holy Spirit. We know that Mary was filled with the Holy Spirit more than anyone else, and that she is the spouse of the Holy Spirit, as she is the daughter of the Father and the mother of the Son.
 
-The theory is more specifically that Mary and the Holy Spirit co-authored this letter. This resolves two difficulties. One is the use in chapter 11 of a masculine word in Greek, as the Holy Spirit used his own pronouns in that moment. The other is the fact that "we" is used interchangably with "I".
+The theory is more specifically that Mary and the Holy Spirit co-authored this letter. This resolves two difficulties. One is the use in chapter 11 of a masculine word in Greek, as the Holy Spirit used his own pronouns in that moment. The other is the fact that "we" is used interchangeably with "I".
 
 ### It's clearly a maternal exhortation
 
@@ -56,4 +56,4 @@ But Mary, who never sinned once, did not hold back. Hebrews is very, very stark 
 
 ### The moral lesson
 
-Someone asked me once, why does it matter who it is, or whether it's Mary? I didn't have an answer, but came up with one on the spot: if Mary wrote it, and especially if she wrote it as her dying exhortation to all Christians facing the flaming sword of the garden of Eden and shying away, then this entire letter is an instruction manual to teach mothers how to encourage their children not to be afraid of their fathers, but rather to love and obey them, trusting that their fathers only want whats best for them.
+Someone asked me once, why does it matter who it is, or whether it's Mary? I didn't have an answer, but came up with one on the spot: if Mary wrote it, and especially if she wrote it as her dying exhortation to all Christians facing the flaming sword of the garden of Eden and shying away, then this entire letter is an instruction manual to teach mothers how to encourage their children not to be afraid of their fathers, but rather to love and obey them, trusting that their fathers only want what's best for them.
