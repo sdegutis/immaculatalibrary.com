@@ -1,5 +1,5 @@
 ---
-title: The secret to growing the church.
+title: The secret to growing the church
 ---
 
 So often I see Catholic writers wondering how we can renew the church, and priests desperately trying to convince the parish to evangelize. Just recently I saw an article by someone explaining what he thought was the secret ingredient of how the early church grow 40% every decade for two hundred years.
