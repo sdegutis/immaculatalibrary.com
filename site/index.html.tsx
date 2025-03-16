@@ -1,15 +1,15 @@
-import { jsxToString } from "@imlib/core";
-import { HomeLoading } from "./components/$loading.js";
-import { Typography } from "./components/$typography.js";
-import { VerifyHuman } from "./components/_verifyhuman.js";
-import { ArticlesList } from "./components/articles-list.js";
-import { CenteredColumn, Spaced, SplitColumn } from "./components/column.js";
-import { FadeIn } from "./components/fadein.js";
-import { EmptyPage } from "./components/page.js";
-import { QuickLinks } from "./components/quicklinks.js";
-import { SiteFooter } from "./components/site-footer.js";
-import { SiteHeader } from "./components/site-header.js";
-import { Markdown } from "./fathers.html.js";
+import { jsxToString } from "@imlib/core"
+import { HomeLoading } from "./components/$loading.js"
+import { Typography } from "./components/$typography.js"
+import { VerifyHuman } from "./components/_verifyhuman.js"
+import { ArticlesList } from "./components/articles-list.js"
+import { CenteredColumn, Spaced, SplitColumn } from "./components/column.js"
+import { FadeIn } from "./components/fadein.js"
+import { EmptyPage } from "./components/page.js"
+import { QuickLinks } from "./components/quicklinks.js"
+import { SiteFooter } from "./components/site-footer.js"
+import { SiteHeader } from "./components/site-header.js"
+import { Markdown } from "./fathers.html.js"
 
 export default jsxToString(<>
   <EmptyPage>
@@ -79,6 +79,7 @@ export default jsxToString(<>
 
             <FadeIn>
               <h2>Latest Articles</h2>
+              <p><i>Not written to everyone.</i></p>
               <ArticlesList count={12} />
             </FadeIn>
 
@@ -93,4 +94,4 @@ export default jsxToString(<>
     <SiteFooter />
 
   </EmptyPage>
-</>);
+</>)
