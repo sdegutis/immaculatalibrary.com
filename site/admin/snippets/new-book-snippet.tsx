@@ -1,10 +1,10 @@
-import monaco from '@imlib/monaco-esm';
 import MarkdownIt from 'markdown-it';
 import { mdOptions } from '../../components/$markdown.js';
 import { SnippetJson } from '../../scripts/data/snippets/[snippet].json.js';
 import { calculateReadingMins } from '../../util/helpers.js';
 import { $ } from '../../util/jsx-dom.js';
 import { slugify } from '../util/helpers.js';
+import monaco from '../util/monaco.js';
 
 window.addEventListener('beforeunload', (e) => {
   e.returnValue = 'Abandon all changes!?';

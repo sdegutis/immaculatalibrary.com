@@ -29,7 +29,6 @@
   },
   "dependencies": {
     "@imlib/core": "^3.3.1",
-    "@imlib/monaco-esm": "^0.0.4",
     "js-yaml": "^4.1.0",
     "markdown-it": "^14.1.0"
   }
