@@ -1,16 +1,15 @@
 import { jsxToString } from "@imlib/core";
-import { HomeLoading, LoadingParagraph } from "./components/$loading.js";
+import { HomeLoading } from "./components/$loading.js";
 import { Typography } from "./components/$typography.js";
 import { VerifyHuman } from "./components/_verifyhuman.js";
+import { ArticlesList } from "./components/articles-list.js";
 import { CenteredColumn, Spaced, SplitColumn } from "./components/column.js";
 import { FadeIn } from "./components/fadein.js";
-import { LatestSnippetsArea } from "./components/latest-snippets.js";
 import { EmptyPage } from "./components/page.js";
 import { QuickLinks } from "./components/quicklinks.js";
 import { SiteFooter } from "./components/site-footer.js";
 import { SiteHeader } from "./components/site-header.js";
 import { Markdown } from "./fathers.html.js";
-import { allBooks } from "./model/books.js";
 
 export default jsxToString(<>
   <EmptyPage>
@@ -79,20 +78,8 @@ export default jsxToString(<>
           <div>
 
             <FadeIn>
-              <h2>Latest book snippets</h2>
-              <LatestSnippetsArea />
-            </FadeIn>
-
-            <FadeIn>
-              <h2>Recently added books</h2>
-              <ul>
-                {allBooks.toReversed().slice(0, 7).map(book => <>
-                  <li>
-                    <a href={book.route}>{book.data.title}</a> by {book.data.author}
-                  </li>
-                </>)}
-              </ul>
-              <p><a href="/books.html">More...</a></p>
+              <h2>Latest Articles</h2>
+              <ArticlesList count={12} />
             </FadeIn>
 
           </div>

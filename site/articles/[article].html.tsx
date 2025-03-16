@@ -28,7 +28,10 @@ export default allArticles.map(article => [article.slug, jsxToString(<>
           </Typography>
         </div>
 
-        <ArticlesList />
+        <div>
+          <h2>All Articles</h2>
+          <ArticlesList />
+        </div>
 
       </SplitColumn>
     </Spaced>

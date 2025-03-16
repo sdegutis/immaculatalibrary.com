@@ -19,7 +19,10 @@ export default jsxToString(<>
           </Admin>
         </Typography>
 
-        <ArticlesList />
+        <div>
+          <h2>All Articles</h2>
+          <ArticlesList />
+        </div>
 
       </SplitColumn>
     </Spaced>
