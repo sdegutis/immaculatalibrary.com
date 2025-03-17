@@ -1,6 +1,7 @@
 import * as fs from "fs";
 import * as Yaml from "js-yaml";
 import * as path from "path/posix";
+import { tostring } from "./tostring.js";
 
 export class DataFile<D> {
 
@@ -12,7 +13,7 @@ export class DataFile<D> {
   ) {
     const slug = path.basename(filepath).slice(0, -3);
 
-    const fileContents = rawContent.toString('utf8').replace(/\r\n/g, '\n');
+    const fileContents = tostring(rawContent).replace(/\r\n/g, '\n');
     const fileContentsMatch = fileContents.match(/^---\n(.+?)\n---\n\n?(.*?)$/s)!;
     const frontmatter = fileContentsMatch[1]!;
     const content = fileContentsMatch[2]!;
