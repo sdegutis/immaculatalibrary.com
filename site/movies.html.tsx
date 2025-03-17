@@ -1,4 +1,3 @@
-import { jsxToString } from "@imlib/core";
 import { Typography } from "./components/$typography.js";
 import { makeTabs } from "./components/_tabs.js";
 import { Spaced, SplitColumn } from "./components/column.js";
@@ -10,7 +9,7 @@ export const MovieTabs = makeTabs([
   { href: '/videos.html', title: 'Fulton Sheen' },
 ]);
 
-export default jsxToString(<>
+export default <>
   <TypicalPage title={<MovieTabs index={0} />} image='/img/movies/passion-of-the-christ-big.jpg' page="Movies">
 
     <Spaced>
@@ -33,4 +32,4 @@ export default jsxToString(<>
     </Spaced>
 
   </TypicalPage>
-</>);
+</>;

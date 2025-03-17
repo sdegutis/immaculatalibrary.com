@@ -1,4 +1,3 @@
-import { jsxToString } from "@imlib/core";
 import handlers from 'handlers!';
 import { Typography } from "../../components/$typography.js";
 import { EmptyPage } from "../../components/page.js";
@@ -24,7 +23,7 @@ handlers.set('/create-snippet', body => {
   return snippet.route;
 });
 
-export default jsxToString(<>
+export default <>
   <EmptyPage>
     <link rel='stylesheet' href='./new-book-snippet.css' />
     <script src='./new-book-snippet.js' type='module'></script>
@@ -63,4 +62,4 @@ export default jsxToString(<>
 
   </EmptyPage>
 
-</>);
+</>;

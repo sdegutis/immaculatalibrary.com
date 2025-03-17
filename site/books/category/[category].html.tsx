@@ -1,4 +1,3 @@
-import { jsxToString } from "@imlib/core";
 import { LoadingParagraph } from "../../components/$loading.js";
 import { Typography } from "../../components/$typography.js";
 import { CenteredColumn, Spaced, SplitColumn } from "../../components/column.js";
@@ -8,7 +7,7 @@ import { Rating } from "../../components/rating.js";
 import { allCategories } from "../../model/categories.js";
 import { markdown } from "../../util/_helpers.js";
 
-export default allCategories.map(cat => [cat.slug, jsxToString(<>
+export default allCategories.map(cat => [cat.slug, <>
   <TypicalPage title="Book Categories" image={`/img/categories/${cat.slug}-big.jpg`} page="Books">
 
     <Spaced>
@@ -93,7 +92,7 @@ export default allCategories.map(cat => [cat.slug, jsxToString(<>
     </Spaced>
 
   </TypicalPage >
-</>)]);
+</>]);
 
 function excerpt(s: string) {
   return s.split(/\r?\n\r?\n/)[0]!;

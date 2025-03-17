@@ -1,10 +1,9 @@
-import { jsxToString } from "@imlib/core";
 import { Column, Spaced, SplitColumn } from "./components/column.js";
 import { TypicalPage } from "./components/page.js";
 import { markdown } from "./util/_helpers.js";
 
-export function Markdown(attrs: { children: string }) {
-  return markdown.render(attrs.children
+export function Markdown(attrs: { children: string | string[] }) {
+  return markdown.render((attrs.children instanceof Array ? attrs.children[0]! : attrs.children)
     .split('\n')
     .map(s => s.trimStart())
     .join(' '));
@@ -54,7 +53,7 @@ const others: Record<string, { id: string, title: string }[]> = {
 };
 
 
-export default jsxToString(<>
+export default <>
   <TypicalPage title="Fathers of the Church" image='/img/page/articles.jpg' page="Fathers">
 
     <Spaced>
@@ -123,4 +122,4 @@ export default jsxToString(<>
     </Spaced>
 
   </TypicalPage>
-</>);
+</>;

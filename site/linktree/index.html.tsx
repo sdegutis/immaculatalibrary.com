@@ -1,8 +1,7 @@
-import { jsxToString } from "@imlib/core";
 import { CenteredColumn, Spaced } from '../components/column.js';
 import { EmptyPage } from '../components/page.js';
 
-export default jsxToString(<>
+export default <>
   <EmptyPage>
     <Spaced>
       <CenteredColumn>
@@ -17,4 +16,4 @@ export default jsxToString(<>
       </CenteredColumn>
     </Spaced>
   </EmptyPage>
-</>);
+</>;

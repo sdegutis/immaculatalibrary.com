@@ -1,4 +1,3 @@
-import { jsxToString } from "@imlib/core";
 import { Typography } from "../components/$typography.js";
 import { Spaced, SplitColumn } from "../components/column.js";
 import { MoviesList } from "../components/movies-sidebar.js";
@@ -8,7 +7,7 @@ import { MovieTabs } from "../movies.html.js";
 import { markdown } from "../util/_helpers.js";
 
 export default allMovies.map(movie => {
-  return [movie.slug, jsxToString(<>
+  return [movie.slug, <>
     <TypicalPage title={<MovieTabs index={0} />} image={`/img/movies/${movie.slug}-big.jpg`} page="Movies">
 
       <Spaced>
@@ -26,5 +25,5 @@ export default allMovies.map(movie => {
       </Spaced>
 
     </TypicalPage>
-  </>)];
+  </>];
 });

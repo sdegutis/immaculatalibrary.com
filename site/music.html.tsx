@@ -1,4 +1,3 @@
-import { jsxToString } from "@imlib/core";
 import { Typography } from "./components/$typography.js";
 import { Spaced, SplitColumn } from "./components/column.js";
 import { MusicSidebar } from "./components/music-sidebar.js";
@@ -6,7 +5,7 @@ import { TypicalPage } from "./components/page.js";
 
 const playlist = 'https://open.spotify.com/playlist/2VpGGkgru7iXryNu1PMid0?si=ab81cea245694a6e';
 
-export default jsxToString(<>
+export default <>
   <TypicalPage title="Music" image='/img/page/music.jpg' page="Music">
 
     <Spaced>
@@ -29,4 +28,4 @@ export default jsxToString(<>
     </Spaced>
 
   </TypicalPage>
-</>);
+</>;

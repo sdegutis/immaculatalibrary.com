@@ -1,4 +1,4 @@
-import { processFile, SiteProcessor } from "@imlib/core";
+import { processFile, SiteProcessor } from "immaculata";
 import { extname } from "path";
 import { isDev } from "../components/admin.js";
 import { makeSitemap } from "../sitemap.js";
@@ -8,6 +8,14 @@ const contentProcessors: Record<string, (s: any) => string> = {
   '.json': JSON.stringify,
 };
 
+const importmap = `
+<script type="importmap">{
+  "imports": {
+    "markdown-it": "https://cdn.jsdelivr.net/npm/markdown-it@latest/+esm"
+  }
+}</script>
+`
+
 function hoistHtml(jsx: string) {
   const hoisted = new Set<string>();
   return (jsx
@@ -15,7 +23,7 @@ function hoistHtml(jsx: string) {
       hoisted.add(s);
       return '';
     })
-    .replace(/<\/head>/, [...hoisted, '</head>'].join('')));
+    .replace(/<\/head>/, [...hoisted, importmap, '</head>'].join('')));
 }
 
 function processContent(content: any, ext: string) {

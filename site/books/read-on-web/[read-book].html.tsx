@@ -1,4 +1,3 @@
-import { jsxToString } from "@imlib/core";
 import handlers from "handlers!";
 import { LoadingLine, LoadingParagraph } from "../../components/$loading.js";
 import { Typography } from "../../components/$typography.js";
@@ -26,7 +25,7 @@ export default allBooks.filter(book => book.data.complete).map(book => {
 
   const file = book.data.files[0]!;
 
-  return [book.slug, jsxToString(<>
+  return [book.slug, <>
     <EmptyPage>
 
       <link rel="stylesheet" href='/css/page/read-book.css' />
@@ -82,5 +81,5 @@ export default allBooks.filter(book => book.data.complete).map(book => {
       </main>
 
     </EmptyPage>
-  </>)];
+  </>];
 });

@@ -13,7 +13,7 @@
     "moduleResolution": "Node",
     "types": [
       "node",
-      "@imlib/core/runtime.d.ts"
+      "immaculata/runtime.d.ts"
     ],
     "forceConsistentCasingInFileNames": true,
     "strict": true,

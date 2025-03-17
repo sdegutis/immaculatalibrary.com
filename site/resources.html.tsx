@@ -1,8 +1,7 @@
-import { jsxToString } from "@imlib/core";
 import { Spaced, SplitColumn } from './components/column.js';
 import { TypicalPage } from './components/page.js';
 
-export default jsxToString(<>
+export default <>
   <TypicalPage title="Catholic Resources" image='/img/categories/classics-big.jpg' page='Resources'>
 
     <Spaced>
@@ -46,4 +45,4 @@ export default jsxToString(<>
     </Spaced>
 
   </TypicalPage>
-</>);
+</>;

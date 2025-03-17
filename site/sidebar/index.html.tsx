@@ -1,6 +1,4 @@
-import { jsxToString } from "@imlib/core";
-
-export default jsxToString(<>
+export default <>
   {'<!DOCTYPE html>'}
   <html lang="en">
 
@@ -20,4 +18,4 @@ export default jsxToString(<>
     </body>
 
   </html>
-</>);
+</>;

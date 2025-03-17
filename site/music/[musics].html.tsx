@@ -1,4 +1,3 @@
-import { jsxToString } from "@imlib/core";
 import { Typography } from "../components/$typography.js";
 import { Spaced, SplitColumn } from "../components/column.js";
 import { MusicSidebar } from "../components/music-sidebar.js";
@@ -33,7 +32,7 @@ function EmbedSpotify(attrs: { spotify: string }) {
 }
 
 export default allMusics.map(song => {
-  return [song.slug, jsxToString(<>
+  return [song.slug, <>
     <TypicalPage title="Music" image='/img/page/music.jpg' page="Music">
 
       <link rel="stylesheet" href='/css/page/song.css' />
@@ -54,5 +53,5 @@ export default allMusics.map(song => {
       </Spaced>
 
     </TypicalPage >
-  </>)];
+  </>];
 });

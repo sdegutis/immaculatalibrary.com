@@ -1,11 +1,10 @@
-import { jsxToString } from "@imlib/core";
 import { Typography } from "./components/$typography.js";
 import { Spaced, SplitColumn } from "./components/column.js";
 import { VideosList } from "./components/movies-sidebar.js";
 import { TypicalPage } from "./components/page.js";
 import { MovieTabs } from "./movies.html.js";
 
-export default jsxToString(<>
+export default <>
   <TypicalPage page="Movies" title={<MovieTabs index={1} />} image='/img/movies/passion-of-the-christ-big.jpg'>
 
     <Spaced>
@@ -27,4 +26,4 @@ export default jsxToString(<>
     </Spaced>
 
   </TypicalPage>
-</>);
+</>;

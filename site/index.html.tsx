@@ -1,4 +1,3 @@
-import { jsxToString } from "@imlib/core"
 import { HomeLoading } from "./components/$loading.js"
 import { Typography } from "./components/$typography.js"
 import { VerifyHuman } from "./components/_verifyhuman.js"
@@ -11,7 +10,7 @@ import { SiteFooter } from "./components/site-footer.js"
 import { SiteHeader } from "./components/site-header.js"
 import { Markdown } from "./fathers.html.js"
 
-export default jsxToString(<>
+export default <>
   <EmptyPage>
 
     <VerifyHuman />
@@ -94,4 +93,4 @@ export default jsxToString(<>
     <SiteFooter />
 
   </EmptyPage>
-</>)
+</>

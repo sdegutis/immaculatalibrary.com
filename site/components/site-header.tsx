@@ -1,6 +1,6 @@
 import { NavPage, Navlinks } from "./navlinks.js";
 
-export const SiteHeader = (attrs: { title: string | JSX.Element, image: string, page: NavPage }) => <>
+export const SiteHeader = (attrs: { title: JSX.Element, image: string, page: NavPage }) => <>
   <link rel="stylesheet" href='/css/components/site-header.css' />
 
   <header id="page-hero">
@@ -10,7 +10,7 @@ export const SiteHeader = (attrs: { title: string | JSX.Element, image: string, 
     </div>
     <div style='text-align:center'>
       <section>
-        {(typeof attrs.title === 'string')
+        {(!(attrs.title as string).includes('<'))
           ? <h1>{attrs.title}</h1>
           : attrs.title}
       </section>

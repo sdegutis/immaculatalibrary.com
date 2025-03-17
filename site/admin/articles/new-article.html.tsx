@@ -1,4 +1,3 @@
-import { jsxToString } from "@imlib/core";
 import handlers from 'handlers!';
 import { EmptyPage } from "../../components/page.js";
 import { Article } from "../../model/articles.js";
@@ -18,7 +17,7 @@ handlers.set('/create-article', body => {
   return article.route;
 });
 
-export default jsxToString(<>
+export default <>
   <EmptyPage>
     <link rel='stylesheet' href='./new-article.css' />
     <script src='./new-article.js' type='module'></script>
@@ -31,4 +30,4 @@ export default jsxToString(<>
     </form>
 
   </EmptyPage>
-</>);
+</>;

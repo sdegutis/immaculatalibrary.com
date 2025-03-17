@@ -1,7 +1,6 @@
-import { jsxToString } from "@imlib/core";
 import { EmptyPage } from "../components/page.js";
 
-export default jsxToString(
+export default (
   <EmptyPage>
     <script src='stream.js' type='module' />
     <link rel="stylesheet" href="stream.css" />

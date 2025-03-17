@@ -1,4 +1,3 @@
-import { jsxToString } from "@imlib/core";
 import { LoadingLine, LoadingParagraph } from "../components/$loading.js";
 import { Typography } from "../components/$typography.js";
 import { Admin } from "../components/admin.js";
@@ -10,7 +9,7 @@ import { allBooks } from "../model/books.js";
 import { markdown } from "../util/_helpers.js";
 import { formatDate } from "../util/format-date.js";
 
-export default allBooks.map(book => [book.slug, jsxToString(<>
+export default allBooks.map(book => [book.slug, <>
   <TypicalPage title="Books" image={book.imageBig} page="Books">
 
     <Spaced>
@@ -100,4 +99,4 @@ export default allBooks.map(book => [book.slug, jsxToString(<>
     </Spaced>
 
   </TypicalPage>
-</>)]);
+</>]);

@@ -1,4 +1,3 @@
-import { jsxToString } from "@imlib/core";
 import handlers from "handlers!";
 import { Typography } from "../components/$typography.js";
 import { Admin } from "../components/admin.js";
@@ -45,7 +44,7 @@ export default allSnippets.map(snippet => {
     .replace('.pdf', ''));
 
 
-  return [snippet.slug, jsxToString(<>
+  return [snippet.slug, <>
     <TypicalPage title="Book Snippets" image={snippet.book.imageBig} page="Books">
 
       <link rel="stylesheet" href='/css/page/snippet.css' />
@@ -124,5 +123,5 @@ export default allSnippets.map(snippet => {
       </Spaced>
 
     </TypicalPage>
-  </>)];
+  </>];
 });

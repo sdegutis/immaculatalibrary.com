@@ -1,5 +1,7 @@
 declare namespace JSX {
 
+  type Element = string | HTMLElement | SVGElement;
+
   type EventHandler<T extends Event> = (e: T) => any;
   type ElementAttrs = {
 
@@ -39,7 +41,7 @@ declare namespace JSX {
     { rel?: 'apple-touch-icon'; sizes?: string } |
     { rel?: 'preload'; as?: 'font'; type?: 'font/woff'; crossorigin?: boolean } |
     { rel?: 'manifest' });
-  type ScriptAttrs = ElementAttrs & { type?: 'module'; src?: string };
+  type ScriptAttrs = ElementAttrs & { type?: 'module' | 'importmap'; src?: string };
   type ImgAttrs = ElementAttrs & { src?: string; loading?: 'lazy', alt?: '' };
   type FormAttrs = ElementAttrs & { method?: string; action?: string };
   type ButtonAttrs = ElementAttrs & { type?: string };

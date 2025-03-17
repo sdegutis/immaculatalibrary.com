@@ -1,10 +1,9 @@
-import { jsxToString } from "@imlib/core";
 import { EmptyPage } from '../components/page.js';
 import { SiteHeader } from '../components/site-header.js';
 
 const enum Day { SUN, MON, TUE, WED, THUR, FRI, SAT };
 
-export default jsxToString(<>
+export default <>
   <EmptyPage favicons={<link rel="icon" type="image/png" sizes="32x32" href='./favicon.ico' />}>
     <link rel='stylesheet' href='./style.css' />
     <script src='./client.js' type='module' />
@@ -80,7 +79,7 @@ export default jsxToString(<>
       //   </Slideshow>
     }} />
   </EmptyPage>
-</>);
+</>;
 
 function JoyfulMysteries() {
   return <Mystery

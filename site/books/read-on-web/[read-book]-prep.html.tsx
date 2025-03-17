@@ -1,4 +1,3 @@
-import { jsxToString } from "@imlib/core";
 import handlers from "handlers!";
 import { Typography } from "../../components/$typography.js";
 import { EmptyPage } from "../../components/page.js";
@@ -22,7 +21,7 @@ export default allBooks.filter(book => book.data.complete).map(book => {
 
   const file = book.data.files[0]!;
 
-  return [book.slug, jsxToString(<>
+  return [book.slug, <>
     <EmptyPage>
 
       {book.snippets.map((bookSnippet, i) => <>
@@ -41,5 +40,5 @@ export default allBooks.filter(book => book.data.complete).map(book => {
       </>)}
 
     </EmptyPage>
-  </>)];
+  </>];
 });

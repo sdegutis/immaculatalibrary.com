@@ -1,4 +1,3 @@
-import { jsxToString } from "@imlib/core";
 import { LoadingLine, LoadingParagraph } from './components/$loading.js';
 import { makeTabs } from './components/_tabs.js';
 import { Admin } from './components/admin.js';
@@ -11,7 +10,7 @@ export const BookTabs = makeTabs([
   { href: '/snippets.html', title: 'Book Snippets' },
 ]);
 
-export default jsxToString(<>
+export default <>
   <TypicalPage title={<BookTabs index={0} />} image='/img/categories/reference-big.jpg' page='Books'>
 
     <Spaced>
@@ -68,4 +67,4 @@ export default jsxToString(<>
     </Spaced>
 
   </TypicalPage>
-</>);
+</>;
