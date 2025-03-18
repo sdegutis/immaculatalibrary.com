@@ -9,6 +9,9 @@ import { QuickLinks } from "./components/quicklinks.js"
 import { SiteFooter } from "./components/site-footer.js"
 import { SiteHeader } from "./components/site-header.js"
 import { Markdown } from "./fathers.html.js"
+import { allVideos } from "./model/videos.js"
+
+const video = allVideos.find(v => v.data.title.includes('Devil'))!
 
 export default <>
   <EmptyPage>
@@ -36,14 +39,29 @@ export default <>
         </Spaced>
       } />
 
-      {/* <div class='recents alt'>
+      <div class='recents alt'>
         <div style='margin:0 auto; width: 90%; max-width: 800px'>
-          <h3>Daily Moral</h3>
+
+          <Typography>
+            <h2>Featured Video</h2>
+
+            <h3>{video.data.title}</h3>
+
+            <link rel='stylesheet' href='/css/page/video-partial.css' />
+
+            <div class="embed-container">
+              <iframe allowfullscreen frameborder="0" src={video.data.youtube} data-ruffle-polyfilled="" />
+            </div>
+
+          </Typography>
+
+          {/* <h3>Daily Moral</h3>
           <div id='daily-morals'>
             <LoadingParagraph lines={7} />
-          </div>
+          </div> */}
+
         </div>
-      </div> */}
+      </div>
 
       <Spaced>
         <SplitColumn>
