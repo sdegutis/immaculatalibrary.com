@@ -399,29 +399,6 @@ the action that caused it, not realizing that the fact that the action
 brought happiness was because it was done out of love by another. This
 is also why we can't tickle ourselves.
 
-## Divine Humor
-
-There is so much evil humor in the world, probably most of it. And
-throughout the Bible, there is very little humor, and none that I'm
-aware of by Jesus himself. But does this mean God doesn't have a sense
-of humor?
-
-There is a very good, holy, and wholesome type of humor, and it very
-literally is God's humor, and it's called play on words. Since the Word
-of God is divine, then words are to some extent also divine. This is
-partly why the devil's tactics from the Garden of Eden until now has
-been to redefine and misuse words to confuse and deceive people.
-
-Wordplay is literally playing with an aspect of the divine, which is why
-it's the fuel behind dad jokes. The modern hatred of dad jokes is
-absolutely unjustified and unreasonable, and I've always found that
-hatred confusing and now I see why it's evil: dad jokes are a part of
-the paternal nature of God the Father. It's literally the father
-playfully wrestling with the son!
-
-Dad jokes and similar word play need to come back in style, in every
-form.
-
 ## True Death
 
 You have to understand that your life in the kingdom of Adam is over.
