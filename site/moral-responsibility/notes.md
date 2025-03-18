@@ -21,6 +21,66 @@ structure of book
 - purpose of life
 - new theology with garden of Eden as basis
 
+
+st paul says there's nothing wrong with marriage
+but its far better to be single than married
+countless people want to get married or act married
+often for love of evil pleasure (2 Thessalonians 2:9-12)
+often because they think this is proof that they're loved
+but people can do good actions for evil purposes
+they can sleep with or marry someone while only hating them
+the greatest proof of love is jesus being crucified (John 15:13)
+god loves us, and unlike fallible people, his love means something
+he knows us at our worst, he knows our secret heart
+he loves us with nothing in return except pain from us
+he loves us because he is good
+we love because he loved us first
+if you have a hard time loving, first learn that god loves you
+
+
+
+
+blue seems gentle on the eyes but blue light is harsh on them
+red seems harsh but red light is much gentler on the eyes
+the crimson blood of Christ seems harsh but is meek and humble
+the world's understanding of heaven seems like paradise but is hell
+
+if god is good and being fulfilled is good
+then gods will is for you to be fulfilled
+so its good to do things that are fulfilling
+just because you enjoy it doesn't mean its wrong
+but this doesn't apply to things that are sinful
+
+jesus says divorce is allowed in unchastity
+he means if you have legally married but not in gods eyes
+that is to say, one of you did not have pure intentions
+in such a case, the marriage is false and simply fornication
+but since at least one heart is impure, unchastity proceeds
+
+false guilt is what bad people use to control others
+if they can get you to feel guilty, they will use it
+they do this to get you to do whatever they want you to
+dont care what they think, care what god thinks of you
+what good is it to gain the whole world but lose your soul?
+gaining the whole world includes the approval of those in it
+
+to get free money you could have earned is stealing from the poor
+judas stole from the purse of contributions to the poor regularly
+work hard and do your best to support yourself with no ones help
+st paul says to be independent and earn the respect of outsiders
+
+if things seem to fall into place perfectly without you trying
+then its very possibly a sign that you're doing god's will
+but when you try to make things seem perfect, god isn't behind it
+
+st paul says we dont hope for what we already see
+and that for now we see the truth dimly as through a fog
+all sins come from rejecting the truth; all sin is lying
+when we are with god, we will fully understand the truth
+when we fully accept the truth, we are with god even now
+
+
+
 sudoku bible
 
 ocd is a result of trying to make the results perfect without the right cause
@@ -569,76 +629,3 @@ Hebrews
 	Mother of the 7.
 	Possessed by the Spirit.
 	Blood of Christ, Mother of God, Name of Jesus.
-
-
-How is it not a punishment from God to misspend all your money?
-
-St. Paul says that to love one another sums up the law.
-He also says that loving one another fulfills the law.
-Most Christians think Jesus fulfilled the law and so we're done.
-But we are meant to imitate Christ and be little Christs.
-We are meant to repeat his pattern, and do as he did before us.
-Most Christians think "believing in Jesus" gets you into heaven.
-Heaven is loving one another with the pure and true love of God.
-Most Christians Jesus did it all for us so we don't have to do anything.
-But Jesus wants us to love one another as he loved us.
-We must love one another by laying down our lives for one another.
-If we don't do this, then we are deluding ourselves by thinking we know him.
-If we don't help our neighbor in real need, Jesus will say I never knew you.
-
-
-Captain America said "I can do this all day" after he was all out of strength.
-Too often being overwhelmed is just us thinking God gave us too many problems.
-God promised he would never give us too many problems, and we have to trust that.
-The whole point of this life is to learn to not give up and keep trusting God.
-The entire purpose of this life requires trying to convince us to not trust God.
-The reason "I can do this all day" is so encouraging is because he doesn't give up.
-If even a fictional mythological hero can encourage us, why can't the words of Jesus?
-And what's the point of making Rogers say that except to convince us we can do the same?
-We have to trust that God will not give us more than we can handle.
-We have to trust that God always gives us a way to escape every temptation.
-The biggest temptation of today is despair, feeling like there's no hope for good.
-Despair is giving into the spirit of the world and the devil who tell us to give up.
-If we just keep going, fighting for what's right and good, God will not let us down.
-God wants good more than we do, and if he wants it to be successful, he will make it so.
-He doesn't care so much about the success of our efforts, but that we're not giving up.
-
-
-What is a prophet? Someone who speaks the word of God to others.
-Jesus was the main and final prophet, being the Word of God in the flesh.
-Jesus said he is the truth, and he told us the truth about God and about ourselves.
-Jesus is the Logos, or reason and logic, and through these we can see the truth.
-False prophets call themselves infallible and ridicule anyone who questions them at all.
-False prophets call themselves experts and make a living through teaching their lies.
-False prophets use logical fallacies to support their lies and hide them in sophistry.
-
-Adam and Eve tried to get knowledge of evil by doing evil.
-Jesus and Mary had knowledge of evil without doing evil.
-Seeing others do evil and the consequences is far better than doing evil.
-Ideally nobody would do evil, and this will happen in heaven.
-But apparently, to be convinced not to do evil, we must see the fruits of it.
-Maybe this is why God allowed us all to be born into a world full of evil.
-
-Desire for physical pleasure is never satisfied, it can only be abandoned.
-Food, alcohol, drugs, bad music, these never quench our thirst but increase it.
-When we don't think we have real food, we at least settle for unfilling crumbs.
-Physical goods decrease when used, spiritual pleasures increase when used.
-Good music, love, friendship, creativity, these never run out, but multiply.
-
-Winter seems to be a metaphor given to us by God to describe eternal Hell.
-There's no color, the sky and the ground are both a dull gray.
-There's no warmth, the sun has no effect despite its presence.
-There's no life, all the useful animals are hidden and asleep.
-There's no food, all the plants are barren and fruitless.
-There's no music, all the birds of the air have moved away.
-There's no joy, seasonal depression robs many people of happiness.
-There's no hope, the only way out is when the sun gets closer again.
-
-"... then they can change their doctrine and their rules."
-Recently Sen. Noel Frame said this about the seal of confession becoming illegal.
-This statement shows that she does not believe in absolute, objective truth.
-If a doctrine is immutable, then by definition, it can't be changed by any human.
-The Catholic Church claims that our doctrines are immutable, including Confession.
-This is clearly an attack on the Church disguised as concern for the abused.
-Yet the abused includes unborn humans murdered with permission from Democrats.
-If we have lists for sex offenders and violent criminals, why not for women who get abortions?
