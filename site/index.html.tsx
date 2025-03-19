@@ -11,7 +11,7 @@ import { SiteHeader } from "./components/site-header.js"
 import { Markdown } from "./fathers.html.js"
 import { allVideos } from "./model/videos.js"
 
-const video = allVideos.find(v => v.data.title.includes('Devil'))!
+const video = allVideos.find(v => v.data.title.includes('Demonic'))!
 
 export default <>
   <EmptyPage>
