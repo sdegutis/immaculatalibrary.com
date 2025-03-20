@@ -1,7 +1,7 @@
-import { processFile, SiteProcessor } from "immaculata";
-import { extname } from "path";
-import { isDev } from "../components/admin.js";
-import { makeSitemap } from "../sitemap.js";
+import { processFile, SiteProcessor } from "immaculata"
+import { extname } from "path"
+import { isDev } from "../components/admin.js"
+import { makeSitemap } from "../sitemap.js"
 
 export default (({ inFiles, outFiles }) => {
 
@@ -18,7 +18,7 @@ export default (({ inFiles, outFiles }) => {
   const contentProcessors: Record<string, (s: any) => string> = {
     '.html': hoistHtml,
     '.json': JSON.stringify,
-  };
+  }
 
   const importmap = `
   <script type="importmap">{
@@ -30,18 +30,19 @@ export default (({ inFiles, outFiles }) => {
   `
 
   function hoistHtml(jsx: string) {
-    const hoisted = new Set<string>();
+    const hoisted = new Set<string>()
     return (jsx
       .replace(/<script .+?><\/script>|<link .+?>/g, (s, s2) => {
-        hoisted.add(s);
-        return '';
+        hoisted.add(s)
+        return ''
       })
-      .replace(/<\/head>/, [...hoisted, importmap, '</head>'].join('')));
+      .replace('<head>', `$&${importmap}`)
+      .replace(/<\/head>/, [...hoisted, '</head>'].join('')))
   }
 
   function processContent(content: any, ext: string) {
-    const fn = contentProcessors[ext];
-    return fn ? fn(content) : content;
+    const fn = contentProcessors[ext]
+    return fn ? fn(content) : content
   }
 
   for (const file of files) {
@@ -49,13 +50,13 @@ export default (({ inFiles, outFiles }) => {
       (file.path.startsWith('/admin/') && !isDev) ||
       (file.path.startsWith('/data/')) ||
       (file.path.startsWith('/model/'))
-    ) continue;
+    ) continue
 
     for (const { path, content } of processFile(file)) {
-      outFiles.set(path, processContent(content, extname(path)));
+      outFiles.set(path, processContent(content, extname(path)))
     }
   }
 
-  outFiles.set('/sitemap.xml', makeSitemap(outFiles.keys()));
+  outFiles.set('/sitemap.xml', makeSitemap(outFiles.keys()))
 
-}) as SiteProcessor;
+}) as SiteProcessor
