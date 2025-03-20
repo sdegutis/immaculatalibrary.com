@@ -1,6 +1,6 @@
-import { $ } from "../util/jsx-dom.js";
-import { BlessedSacrament } from "./blessedsacrament.js";
-import { TimeArea } from "./time.js";
+import { $ } from "../util/jsx-dom.js"
+import { BlessedSacrament } from "./blessedsacrament.js"
+import { TimeArea } from "./time.js"
 
 document.getElementById('root')!.append($(<>
   <div id="top">
@@ -16,24 +16,24 @@ document.getElementById('root')!.append($(<>
     </div>
 
   </div>
-</>));
+</>))
 
 function FeastDay() {
-  const feastDayEl = $<HTMLDivElement>(<div id="feastday">Saint of the Day</div>);
+  const feastDayEl = $<HTMLDivElement>(<div id="feastday">Saint of the Day</div>)
 
-  const calendar = (window as any).Romcal.Calendar.calendarFor({ country: 'unitedStates' });
+  const calendar = (window as any).Romcal.Calendar.calendarFor({ country: 'unitedStates' })
   function updateFeastDay() {
-    const ostensibleDate = new Date();
-    const tzOffset = ostensibleDate.getTimezoneOffset() * 60_000;
-    const localDate = new Date(ostensibleDate.getTime() - tzOffset);
-    const yyyymmdd = localDate.toISOString().split('T')[0];
-    const feastDay = calendar.find((day: any) => day.moment.split('T')[0] === yyyymmdd);
-    feastDayEl.innerText = feastDay.name;
+    const ostensibleDate = new Date()
+    const tzOffset = ostensibleDate.getTimezoneOffset() * 60_000
+    const localDate = new Date(ostensibleDate.getTime() - tzOffset)
+    const yyyymmdd = localDate.toISOString().split('T')[0]
+    const feastDay = calendar.find((day: any) => day.moment.split('T')[0] === yyyymmdd)
+    feastDayEl.innerText = feastDay.name
   }
-  updateFeastDay();
-  setInterval(updateFeastDay, 1000 * 60 * 60 * 5);
+  updateFeastDay()
+  setInterval(updateFeastDay, 1000 * 60 * 60 * 5)
 
-  return feastDayEl;
+  return feastDayEl
 }
 
 function Weather() {
@@ -43,25 +43,25 @@ function Weather() {
       <img id="weather-icon" src="" />
     </div>
     <div id="weather-full">It's gonna rain or somethin.</div>
-  </div>);
+  </div>)
 
-  updateWeather();
-  setInterval(updateWeather, 1000 * 60 * 5);
+  updateWeather()
+  setInterval(updateWeather, 1000 * 60 * 5)
 
   function updateWeather() {
     navigator.geolocation.getCurrentPosition(async pos => {
-      const { latitude, longitude } = pos.coords;
-      const points = await fetch(`https://api.weather.gov/points/${latitude},${longitude}`).then(res => res.json());
-      const forecastNow = await fetch(points.properties.forecastHourly).then(res => res.json());
-      const forecastLater = await fetch(points.properties.forecast).then(res => res.json());
-      const now = forecastNow.properties.periods[0];
-      const later = forecastLater.properties.periods[0];
+      const { latitude, longitude } = pos.coords
+      const points = await fetch(`https://api.weather.gov/points/${latitude},${longitude}`).then(res => res.json())
+      const forecastNow = await fetch(points.properties.forecastHourly).then(res => res.json())
+      const forecastLater = await fetch(points.properties.forecast).then(res => res.json())
+      const now = forecastNow.properties.periods[0]
+      const later = forecastLater.properties.periods[0]
 
-      node.querySelector<HTMLElement>('#temperature')!.innerText = `${now.temperature} ${now.temperatureUnit}°`;
-      node.querySelector<HTMLImageElement>('#weather-icon')!.src = later.icon;
-      node.querySelector<HTMLElement>('#weather-full')!.innerText = later.detailedForecast;
-    });
+      node.querySelector<HTMLElement>('#temperature')!.innerText = `${now.temperature} ${now.temperatureUnit}°`
+      node.querySelector<HTMLImageElement>('#weather-icon')!.src = later.icon
+      node.querySelector<HTMLElement>('#weather-full')!.innerText = later.detailedForecast
+    })
   }
 
-  return node;
+  return node
 }
