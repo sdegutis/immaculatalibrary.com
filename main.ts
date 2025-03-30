@@ -1,4 +1,4 @@
-import * as immaculata from 'immaculata'
+import immaculata from 'immaculata'
 // import { makeSitemap } from './site/sitemap.js'
 
 const isDev = process.argv[2] !== 'generate'
@@ -9,7 +9,7 @@ runtime.processor = (files) => {
   files = files.filter(f => !f.path.startsWith('/admin/') || isDev)
   files = files.filter(f => !f.path.startsWith('/data/'))
   files = files.filter(f => !f.path.startsWith('/model/'))
-  files = files.flatMap(immaculata.processFile)
+  files = files.flatMap(immaculata.deprecated.processFile)
   files.filter(f => f.path.endsWith('.json')).forEach(f => f.content = JSON.stringify(f.content))
   files.filter(f => f.path.endsWith('.html')).forEach(f => f.content = hoistHeaders(f.content as string))
 
@@ -27,7 +27,7 @@ runtime.processor = (files) => {
   return files
 }
 
-runtime.rebuildAll()
+runtime.loadTree()
 
 if (isDev) {
   process.env['DEV'] = '1'
