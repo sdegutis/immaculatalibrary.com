@@ -1,11 +1,5 @@
 import * as immaculata from 'immaculata'
-import { extname } from 'path'
 // import { makeSitemap } from './site/sitemap.js'
-
-const contentProcessors: Record<string, (s: any) => string> = {
-  '.html': hoistHtml,
-  '.json': JSON.stringify,
-}
 
 const importmap = `
 <script type="importmap">{
@@ -16,20 +10,19 @@ const importmap = `
 }</script>
 `
 
-function hoistHtml(jsx: string) {
-  const hoisted = new Set<string>()
-  return (jsx
-    .replace(/<script .+?><\/script>|<link .+?>/g, (s, s2) => {
-      hoisted.add(s)
-      return ''
-    })
-    .replace('<head>', `$&${importmap}`)
-    .replace(/<\/head>/, [...hoisted, '</head>'].join('')))
+function processJson(file: FsFile) {
+  if (!file.path.endsWith('.json')) return
+  file.content = JSON.stringify(file.content)
 }
 
-function processContent(content: any, ext: string) {
-  const fn = contentProcessors[ext]
-  return fn ? fn(content) : content
+function processHtml(file: FsFile) {
+  if (!file.path.endsWith('.html')) return
+
+  const hoisted = new Set<string>()
+  file.content = ((file.content as string)
+    .replace(/<script .+?><\/script>|<link .+?>/g, (s, s2) => { hoisted.add(s); return '' })
+    .replace('<head>', `$&${importmap}`)
+    .replace(/<\/head>/, [...hoisted, '</head>'].join('')))
 }
 
 const isDev = process.argv[2] !== 'generate'
@@ -42,7 +35,8 @@ runtime.processor = (files) => {
   files = files.filter(f => !f.path.startsWith('/data/'))
   files = files.filter(f => !f.path.startsWith('/model/'))
   files = files.flatMap(immaculata.processFile)
-  files = files.map(({ path, content }) => ({ path, content: processContent(content, extname(path)) }))
+  files.forEach(processJson)
+  files.forEach(processHtml)
   // outFiles.set('/sitemap.xml', makeSitemap(outFiles.keys()))
   return files
 }
