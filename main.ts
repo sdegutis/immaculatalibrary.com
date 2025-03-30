@@ -18,7 +18,6 @@ function hoistHeaders(content: string) {
 }
 
 const isDev = process.argv[2] !== 'generate'
-const action = isDev ? immaculata.startDevServer : immaculata.generateFiles
 
 const runtime = new immaculata.Runtime()
 
@@ -36,4 +35,9 @@ runtime.processor = (files) => {
 
 runtime.rebuildAll()
 
-action(runtime)
+if (isDev) {
+  immaculata.startDevServer(runtime)
+}
+else {
+  immaculata.generateFiles(runtime)
+}
