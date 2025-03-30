@@ -10,18 +10,10 @@ const importmap = `
 }</script>
 `
 
-function processJson(file: FsFile) {
-  if (!file.path.endsWith('.json')) return
-  file.content = JSON.stringify(file.content)
-}
-
-function processHtml(file: FsFile) {
-  if (!file.path.endsWith('.html')) return
-
+function hoistHeaders(content: string) {
   const hoisted = new Set<string>()
-  file.content = ((file.content as string)
+  return (content
     .replace(/<script .+?><\/script>|<link .+?>/g, (s, s2) => { hoisted.add(s); return '' })
-    .replace('<head>', `$&${importmap}`)
     .replace(/<\/head>/, [...hoisted, '</head>'].join('')))
 }
 
@@ -35,8 +27,9 @@ runtime.processor = (files) => {
   files = files.filter(f => !f.path.startsWith('/data/'))
   files = files.filter(f => !f.path.startsWith('/model/'))
   files = files.flatMap(immaculata.processFile)
-  files.forEach(processJson)
-  files.forEach(processHtml)
+  files.filter(f => f.path.endsWith('.json')).forEach(f => f.content = JSON.stringify(f.content))
+  files.filter(f => f.path.endsWith('.html')).forEach(f => f.content = hoistHeaders(f.content as string))
+  files.filter(f => f.path.endsWith('.html')).forEach(f => f.content = (f.content as string).replace('<head>', `$&${importmap}`))
   // outFiles.set('/sitemap.xml', makeSitemap(outFiles.keys()))
   return files
 }
