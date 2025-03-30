@@ -36,6 +36,7 @@ runtime.processor = (files) => {
 runtime.rebuildAll()
 
 if (isDev) {
+  process.env['DEV'] = '1'
   immaculata.startDevServer(runtime)
 }
 else {
