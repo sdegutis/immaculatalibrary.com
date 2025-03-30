@@ -8,7 +8,7 @@
     "jsx": "react-native",
     "target": "ESNext",
     "module": "ESNext",
-    "rootDir": "site",
+    "rootDir": ".",
     "noEmit": true,
     "moduleResolution": "Node",
     "allowImportingTsExtensions": true,
