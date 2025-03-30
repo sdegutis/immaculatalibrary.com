@@ -12,7 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/sdegutis/immaculatalibrary.com.git"
   },
-  "keywords": [ ],
+  "keywords": [],
   "author": "Steven Degutis",
   "license": "",
   "bugs": {
@@ -23,10 +23,10 @@
     "@types/eases": "^1.0.4",
     "@types/js-yaml": "^4.0.9",
     "@types/markdown-it": "^14.1.1",
-    "@types/node": "^20.14.13",
+    "@types/node": "^22.13.14",
     "idb-keyval": "^6.2.1",
     "monaco-editor": "^0.43.0",
-    "typescript": "^5.6.0-beta"
+    "typescript": "^5.8.2"
   },
   "dependencies": {
     "immaculata": "^0.0.7",
