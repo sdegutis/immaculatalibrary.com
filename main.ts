@@ -1,11 +1,31 @@
+import { transformSync } from '@swc/core'
 import * as immaculata from 'immaculata'
+import { registerHooks } from 'module'
 // import { makeSitemap } from './site/sitemap.js'
 
 const isDev = process.argv[2] !== 'generate'
 
 const tree = new immaculata.LiveTree('site', import.meta.url)
 
-tree.enableModules(immaculata.transformModuleJsxToStrings)
+registerHooks(tree.moduleHook())
+registerHooks(immaculata.tryTsTsxJsxModuleHook)
+registerHooks(immaculata.jsxRuntimeModuleHook('immaculata/dist/jsx-strings.js'))
+registerHooks(immaculata.compileJsxTsxModuleHook((source, url) => {
+  return transformSync(source, {
+    isModule: true,
+    sourceMaps: 'inline',
+    jsc: {
+      keepClassNames: true,
+      target: 'esnext',
+      parser: url.match(/\.tsx(\?|$)/)
+        ? { syntax: 'typescript', tsx: true, decorators: true }
+        : { syntax: 'ecmascript', jsx: true, decorators: true },
+      transform: {
+        react: { runtime: 'automatic' },
+      },
+    },
+  }).code
+}))
 
 
 export const handlers = new Map<string, (body: string) => string>()
@@ -20,6 +40,7 @@ async function processSite() {
     const singleDynFile = /\..+(?<ext>\.tsx?)$/
     await files.with(singleDynFile).doAsync(async file => {
       const match = file.path.match(singleDynFile)!
+      console.log(file.path)
       const exports = await import('./site' + file.path)
       const o = exports.default
       file.path = file.path.slice(0, -match.groups!["ext"]!.length)
