@@ -1,5 +1,5 @@
-import { $ } from "../util/jsx-dom.js";
-import { randomElement } from "./util.js";
+import { $ } from "../util/jsx-dom.js"
+import { randomElement } from "./util.js"
 
 class VerifyHuman {
 
@@ -10,96 +10,96 @@ class VerifyHuman {
   #cursorArea = $<HTMLSpanElement>(<span />);
 
   async run(phrases: string[]) {
-    const restore = this.#attach();
-    await this.#type(phrases);
-    restore();
+    const restore = this.#attach()
+    await this.#type(phrases)
+    restore()
   }
 
   #attach() {
-    this.#screen.onclick = (e) => this.#quitting = true;
-    this.#wholeArea.append(this.#wordArea, this.#cursorArea);
+    this.#screen.onclick = (e) => this.#quitting = true
+    this.#wholeArea.append(this.#wordArea, this.#cursorArea)
 
     const keyListener = (e: KeyboardEvent) => {
-      e.preventDefault();
-      this.#quitting = true;
-    };
+      e.preventDefault()
+      this.#quitting = true
+    }
 
-    window.addEventListener('keydown', keyListener);
+    window.addEventListener('keydown', keyListener)
 
-    document.body.children[0]!.append(this.#screen, this.#wholeArea);
-    setTimeout(() => this.#screen.style.backgroundColor = '#000c', 100);
+    document.body.children[0]!.append(this.#screen, this.#wholeArea)
+    setTimeout(() => this.#screen.style.backgroundColor = '#000c', 100)
 
-    const documentOverflow = document.documentElement.style.overflow;
-    document.documentElement.style.overflow = 'hidden';
+    const documentOverflow = document.documentElement.style.overflow
+    document.documentElement.style.overflow = 'hidden'
 
     return () => {
-      window.removeEventListener('keydown', keyListener);
+      window.removeEventListener('keydown', keyListener)
 
-      document.documentElement.style.overflow = documentOverflow;
+      document.documentElement.style.overflow = documentOverflow
 
-      this.#screen.style.backgroundColor = 'unset';
-      setTimeout(() => this.#screen.remove(), 1100);
+      this.#screen.style.backgroundColor = 'unset'
+      setTimeout(() => this.#screen.remove(), 1100)
 
-      this.#wholeArea.classList.add('disappearing');
-      setTimeout(() => this.#wholeArea.remove(), 450);
-    };
+      this.#wholeArea.classList.add('disappearing')
+      setTimeout(() => this.#wholeArea.remove(), 450)
+    }
   }
 
   async #type(phrases: string[]) {
     for (const phrase of phrases) {
       for (let i = 0; i <= phrase.length; i++) {
         if (phrase[i] === '\r') {
-          await this.#wait(0.33);
-          if (this.#quitting) return;
+          await this.#wait(0.33)
+          if (this.#quitting) return
         }
         else {
-          this.#wordArea.textContent = phrase.slice(0, i + 1);
-          await this.#sleep(0.05);
-          if (this.#quitting) return;
+          this.#wordArea.textContent = phrase.slice(0, i + 1)
+          await this.#sleep(0.05)
+          if (this.#quitting) return
         }
       }
 
       for (let i = phrase.length - 1; i >= 0; i--) {
-        this.#wordArea.textContent = phrase.slice(0, i);
-        await this.#sleep(0.01);
-        if (this.#quitting) return;
+        this.#wordArea.textContent = phrase.slice(0, i)
+        await this.#sleep(0.01)
+        if (this.#quitting) return
       }
     }
   }
 
   async #wait(sec: number) {
-    this.#cursorArea.classList.add('pulsing');
-    await this.#sleep(sec);
-    this.#cursorArea.classList.remove('pulsing');
+    this.#cursorArea.classList.add('pulsing')
+    await this.#sleep(sec)
+    this.#cursorArea.classList.remove('pulsing')
   }
 
   async #sleep(sec: number) {
-    const startedAt = this.#getCurrentTime();
-    const endTime = startedAt + (sec * 1000);
+    const startedAt = this.#getCurrentTime()
+    const endTime = startedAt + (sec * 1000)
 
     return new Promise<void>(resolve => {
       const checkIfDone = () => {
-        const currentTime = this.#getCurrentTime();
+        const currentTime = this.#getCurrentTime()
         if (this.#quitting || currentTime >= endTime) {
-          resolve();
+          resolve()
         }
         else {
           setTimeout(checkIfDone, 10)
         };
-      };
-      checkIfDone();
-    });
+      }
+      checkIfDone()
+    })
   }
 
   #getCurrentTime() {
-    return +document.timeline.currentTime!;
+    return +document.timeline.currentTime!
   }
 
 }
 
 async function checkIfHuman(phrase: string[]) {
-  const v = new VerifyHuman();
-  await v.run(phrase);
+  const v = new VerifyHuman()
+  await v.run(phrase)
 }
 
 if (Math.random() < 0.005) {
@@ -126,7 +126,7 @@ if (Math.random() < 0.005) {
       `So what's your favorite magazine, maybe wired?\r 👁️👄👁️\r\r\r\r\r\r.\r.\r.\r.\r.\r.\r.\r.\r`,
       `Okay fine\r, you're free to go\r\r, for now.......\r\r\r`,
     ],
-  ];
+  ]
 
-  checkIfHuman(randomElement(phrases));
+  checkIfHuman(randomElement(phrases))
 }

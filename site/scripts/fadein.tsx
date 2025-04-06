@@ -3,7 +3,7 @@ new MutationObserver((records) => {
     for (const node of record.target.childNodes) {
       if (node instanceof HTMLElement) {
         if (node.matches('.fadein')) {
-          fadeIn(node);
+          fadeIn(node)
         }
       }
     }
@@ -11,22 +11,22 @@ new MutationObserver((records) => {
 }).observe(document.documentElement, {
   subtree: true,
   childList: true,
-});
+})
 
 for (const el of document.querySelectorAll<HTMLElement>('.fadein')) {
-  fadeIn(el);
+  fadeIn(el)
 }
 
 function fadeIn(el: HTMLElement) {
   const observer = new IntersectionObserver(([entry]) => {
     if (entry!.isIntersecting) {
-      el.style.transition = 'all 1s ease';
-      el.style.opacity = '';
-      el.style.transform = '';
+      el.style.transition = 'all 1s ease'
+      el.style.opacity = ''
+      el.style.transform = ''
 
-      el.classList.remove('fadein');
-      observer.disconnect();
+      el.classList.remove('fadein')
+      observer.disconnect()
     }
-  }, { threshold: 0.1 });
-  observer.observe(el);
+  }, { threshold: 0.1 })
+  observer.observe(el)
 }

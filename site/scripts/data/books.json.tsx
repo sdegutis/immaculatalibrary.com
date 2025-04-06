@@ -1,4 +1,4 @@
-import { Book, allBooks } from "../../model/books.js";
+import { Book, allBooks } from "../../model/books.js"
 
 function bookToJson(book: Book) {
   return {
@@ -10,9 +10,9 @@ function bookToJson(book: Book) {
     description: book.content,
     dateAdded: book.data.dateAdded,
     categories: book.categories.map(cat => cat.data.title),
-  };
+  }
 }
 
-export type BookJson = ReturnType<typeof bookToJson>;
+export type BookJson = ReturnType<typeof bookToJson>
 
-export default allBooks.map(bookToJson);
+export default allBooks.map(bookToJson)

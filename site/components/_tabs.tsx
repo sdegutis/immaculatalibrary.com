@@ -5,5 +5,5 @@ export function makeTabs(tabs: { href: string, title: string }[]) {
         <a href={link.href} class={i === attrs.index ? 'active' : ''}>{link.title}</a>
       ))}
     </h1>
-  );
+  )
 }

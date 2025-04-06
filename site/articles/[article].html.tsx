@@ -1,10 +1,10 @@
-import { Typography } from "../components/$typography.js";
-import { ArticlesList } from "../components/articles-list.js";
-import { Spaced, SplitColumn } from "../components/column.js";
-import { TypicalPage } from "../components/page.js";
-import { allArticles } from "../model/articles.js";
-import { markdown } from "../util/_helpers.js";
-import { formatDate } from '../util/format-date.js';
+import { Typography } from "../components/$typography.js"
+import { ArticlesList } from "../components/articles-list.js"
+import { Spaced, SplitColumn } from "../components/column.js"
+import { TypicalPage } from "../components/page.js"
+import { allArticles } from "../model/articles.js"
+import { markdown } from "../util/_helpers.js"
+import { formatDate } from '../util/format-date.js'
 
 export default allArticles.map(article => [article.slug, <>
   <TypicalPage title="Articles" image={article.data.imageFilename ?? '/img/page/articles.jpg'} page="Articles">
@@ -36,4 +36,4 @@ export default allArticles.map(article => [article.slug, <>
     </Spaced>
 
   </TypicalPage>
-</>]);
+</>])

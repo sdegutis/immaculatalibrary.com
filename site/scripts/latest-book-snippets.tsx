@@ -1,14 +1,14 @@
-import { $ } from "../util/jsx-dom.js";
-import { SnippetJson } from "./data/snippets.json.js";
-import { randomElement, sleep } from "./util.js";
+import { $ } from "../util/jsx-dom.js"
+import { SnippetJson } from "./data/snippets.json.js"
+import { randomElement, sleep } from "./util.js"
 
-const snippetsFetch = fetch('/scripts/data/snippets.json').then<SnippetJson[]>(res => res.json());
-await sleep(location.pathname === '/' ? 1 : .3);
-const allSnippets = await snippetsFetch;
-const latestSnippets = allSnippets.slice(0, 7);
+const snippetsFetch = fetch('/scripts/data/snippets.json').then<SnippetJson[]>(res => res.json())
+await sleep(location.pathname === '/' ? 1 : .3)
+const allSnippets = await snippetsFetch
+const latestSnippets = allSnippets.slice(0, 7)
 
 function goToRandomSnippet(this: HTMLAnchorElement) {
-  this.href = randomElement(allSnippets).route;
+  this.href = randomElement(allSnippets).route
 }
 
 document.getElementById('latest-book-snippets-area')!.replaceChildren($(<>
@@ -24,4 +24,4 @@ document.getElementById('latest-book-snippets-area')!.replaceChildren($(<>
       </li>
     )}
   </ul>
-</>));
+</>))

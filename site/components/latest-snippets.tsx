@@ -1,4 +1,4 @@
-import { LoadingLine, LoadingParagraph } from "./$loading.js";
+import { LoadingLine, LoadingParagraph } from "./$loading.js"
 
 export const LatestSnippetsArea = () => <>
   <div id='latest-book-snippets-area'>
@@ -16,4 +16,4 @@ export const LatestSnippetsArea = () => <>
     </ul>
   </div>
   <script type='module' src='/scripts/latest-book-snippets.js' />
-</>;
+</>

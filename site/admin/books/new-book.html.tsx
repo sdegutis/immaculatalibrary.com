@@ -1,16 +1,16 @@
-import handlers from 'handlers!';
-import { EmptyPage } from "../../components/page.js";
-import { Book } from "../../model/books.js";
-import { allCategories, categoriesBySlug } from "../../model/categories.js";
-import { slugify } from "../util/helpers.js";
+import { handlers } from "../../../data.js"
+import { EmptyPage } from "../../components/page.js"
+import { Book } from "../../model/books.js"
+import { allCategories, categoriesBySlug } from "../../model/categories.js"
+import { slugify } from "../util/helpers.js"
 
 handlers.set('/create-book', body => {
-  const params = new URLSearchParams(body);
+  const params = new URLSearchParams(body)
 
-  const title = params.get('title')!;
-  const slug = slugify(title);
+  const title = params.get('title')!
+  const slug = slugify(title)
 
-  const date = new Date().toLocaleDateString('sv');
+  const date = new Date().toLocaleDateString('sv')
 
   const book = new Book(slug, params.get('description')!, {
     rating: 0,
@@ -25,15 +25,15 @@ handlers.set('/create-book', body => {
     }],
     title: title,
     subtitle: params.get('subtitle')!,
-  });
-  book.save();
+  })
+  book.save()
 
-  const cat = categoriesBySlug[params.get('category')!]!;
-  cat.data.books.push(book.slug);
-  cat.save();
+  const cat = categoriesBySlug[params.get('category')!]!
+  cat.data.books.push(book.slug)
+  cat.save()
 
-  return book.route;
-});
+  return book.route
+})
 
 export default <>
   <EmptyPage>
@@ -48,4 +48,4 @@ export default <>
       <span /> <button>Create</button>
     </form>
   </EmptyPage>
-</>;
+</>

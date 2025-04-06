@@ -1,9 +1,9 @@
-import { Typography } from "../components/$typography.js";
-import { Spaced, SplitColumn } from "../components/column.js";
-import { MusicSidebar } from "../components/music-sidebar.js";
-import { TypicalPage } from "../components/page.js";
-import { allMusics } from "../model/musics.js";
-import { markdown } from "../util/_helpers.js";
+import { Typography } from "../components/$typography.js"
+import { Spaced, SplitColumn } from "../components/column.js"
+import { MusicSidebar } from "../components/music-sidebar.js"
+import { TypicalPage } from "../components/page.js"
+import { allMusics } from "../model/musics.js"
+import { markdown } from "../util/_helpers.js"
 
 function EmbedYoutube(attrs: { youtube: string }) {
   return (
@@ -14,7 +14,7 @@ function EmbedYoutube(attrs: { youtube: string }) {
         src={attrs.youtube}
       />
     </div>
-  );
+  )
 }
 
 function EmbedSpotify(attrs: { spotify: string }) {
@@ -28,7 +28,7 @@ function EmbedSpotify(attrs: { spotify: string }) {
       allowfullscreen=""
       allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
       loading="lazy" />
-  );
+  )
 }
 
 export default allMusics.map(song => {
@@ -53,5 +53,5 @@ export default allMusics.map(song => {
       </Spaced>
 
     </TypicalPage >
-  </>];
-});
+  </>]
+})

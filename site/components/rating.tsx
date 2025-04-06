@@ -1,4 +1,4 @@
-import { RatingStar } from "./$rating.js";
+import { RatingStar } from "./$rating.js"
 
 export const Rating = ({ n }: { n: number }) => (n > 0) ? <>
   <RatingStar lit={n >= 1} /> { }
@@ -6,4 +6,4 @@ export const Rating = ({ n }: { n: number }) => (n > 0) ? <>
   <RatingStar lit={n >= 3} /> { }
   <RatingStar lit={n >= 4} /> { }
   <RatingStar lit={n >= 5} /> { }
-</> : <></>;
+</> : <></>

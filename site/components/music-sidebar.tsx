@@ -1,4 +1,4 @@
-import { allMusics } from '../model/musics.js';
+import { allMusics } from '../model/musics.js'
 
 const categories = [
   'Gregorian Chant',
@@ -6,7 +6,7 @@ const categories = [
   'Accidentally Christian',
   // 'Wordless Christian',
   'Purgatory',
-];
+]
 
 export const MusicSidebar = () => <>
   <div>
@@ -23,4 +23,4 @@ export const MusicSidebar = () => <>
     </>)}
 
   </div>
-</>;
+</>

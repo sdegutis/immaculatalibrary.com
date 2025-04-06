@@ -1,4 +1,4 @@
-const sizes = [80, 90, 70, 95, 75, 60, 85];
+const sizes = [80, 90, 70, 95, 75, 60, 85]
 
 export const LoadingParagraph = ({ lines, fullWidth }: { lines: number, fullWidth?: boolean }) => <p>
   {fullWidth
@@ -9,12 +9,12 @@ export const LoadingParagraph = ({ lines, fullWidth }: { lines: number, fullWidt
       <LoadingLine width={`${size}%`} />
     )
   }
-</p>;
+</p>
 
 export const LoadingLine = ({ width, height = '1em' }: { width: string, height?: string }) => <>
   <link rel='stylesheet' href='/css/components/loading.css' />
   <span style={`width: ${width}; height: ${height}`} class='loading-item' />
-</>;
+</>
 
 export const HomeLoading = () => <>
   <LoadingLine width="7em" />
@@ -30,4 +30,4 @@ export const HomeLoading = () => <>
     <LoadingParagraph lines={7} fullWidth />
   </blockquote>
   <LoadingLine width="7em" />
-</>;
+</>

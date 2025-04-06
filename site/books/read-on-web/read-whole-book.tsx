@@ -1,44 +1,44 @@
-import MarkdownIt from 'markdown-it';
-import { mdOptions } from '../../components/$markdown.js';
-import { Typography } from '../../components/$typography.js';
-import { SnippetJson } from "../../scripts/data/snippets.json.js";
-import { $ } from '../../util/jsx-dom.js';
+import MarkdownIt from 'markdown-it'
+import { mdOptions } from '../../components/$markdown.js'
+import { Typography } from '../../components/$typography.js'
+import { SnippetJson } from "../../scripts/data/snippets.json.js"
+import { $ } from '../../util/jsx-dom.js'
 
-const isDev = (window.location.hostname === 'localhost');
+const isDev = (window.location.hostname === 'localhost')
 
-const markdown = MarkdownIt(mdOptions);
+const markdown = MarkdownIt(mdOptions)
 
-const bookSlug = document.querySelector<HTMLScriptElement>('script[data-book]')!.dataset['book']!;
-const allSnippets = await fetch('/scripts/data/snippets.json').then<SnippetJson[]>(res => res.json());
-const snippetSlugsInBook = await fetch(`/scripts/data/snippets/in-book-${bookSlug}.json`).then<string[]>(res => res.json());
+const bookSlug = document.querySelector<HTMLScriptElement>('script[data-book]')!.dataset['book']!
+const allSnippets = await fetch('/scripts/data/snippets.json').then<SnippetJson[]>(res => res.json())
+const snippetSlugsInBook = await fetch(`/scripts/data/snippets/in-book-${bookSlug}.json`).then<string[]>(res => res.json())
 
-const linksDiv = document.getElementById('readonline-chapters') as HTMLDivElement;
-const bodiesDiv = document.getElementById('chapter-bodies') as HTMLDivElement;
-const iframe = document.querySelector('iframe')!;
+const linksDiv = document.getElementById('readonline-chapters') as HTMLDivElement
+const bodiesDiv = document.getElementById('chapter-bodies') as HTMLDivElement
+const iframe = document.querySelector('iframe')!
 
 const snippetsInBook = snippetSlugsInBook.map(slug => {
-  const snippet = allSnippets.find(s => s.slug === slug)!;
-  return { ...snippet, content: markdown.render(snippet.markdown) };
-});
+  const snippet = allSnippets.find(s => s.slug === slug)!
+  return { ...snippet, content: markdown.render(snippet.markdown) }
+})
 
 function render() {
   linksDiv.replaceChildren($(<>
     {snippetsInBook.map((bookSnippet, i) => <span class='chapter-link'>
       <span>Ch.{i + 1}</span>
       <a href={`#snippet-${bookSnippet.slug}`} onclick={(e: Event) => {
-        e.preventDefault();
-        localStorage.setItem(bookSlug, i.toString());
-        navigateTo(i, { scrollBody: true });
+        e.preventDefault()
+        localStorage.setItem(bookSlug, i.toString())
+        navigateTo(i, { scrollBody: true })
       }}>
         {bookSnippet.title}
       </a>
     </span>)}
-  </>));
+  </>))
 
   bodiesDiv.replaceChildren($(<>
     <Typography>
       {snippetsInBook.map((bookSnippet, i) => {
-        const moveAmountInput = $<HTMLInputElement>(<input type='number' value='1' />);
+        const moveAmountInput = $<HTMLInputElement>(<input type='number' value='1' />)
         return <>
           <div class='chapter' id={`snippet-${bookSnippet.slug}`}>
             <h3 class='chapter-header'>
@@ -48,8 +48,8 @@ function render() {
               </a>
             </h3>
             <p><a href='#' onclick={(e: Event) => {
-              e.preventDefault();
-              iframe.src = bookSnippet.archiveLink;
+              e.preventDefault()
+              iframe.src = bookSnippet.archiveLink
             }}>(View in book reader)</a></p>
             {isDev &&
               <span>
@@ -60,62 +60,62 @@ function render() {
             <div innerHTML={bookSnippet.content} />
             <hr />
           </div>
-        </>;
+        </>
       })}
     </Typography>
-  </>));
+  </>))
 }
 
-render();
+render()
 
-const last = localStorage.getItem(bookSlug);
+const last = localStorage.getItem(bookSlug)
 if (last !== null) {
-  const i = +last;
-  navigateTo(i, { scrollBody: false });
+  const i = +last
+  navigateTo(i, { scrollBody: false })
 
   iframe.onload = () => {
-    iframe.onload = null;
-    iframe.src = snippetsInBook[i]!.archiveLink;
-  };
+    iframe.onload = null
+    iframe.src = snippetsInBook[i]!.archiveLink
+  }
 }
 
 iframe.contentWindow?.addEventListener('message', (e) => {
-  alert('Finally got Internet Archive BookReader.js iframe message, after all these years!');
-});
+  alert('Finally got Internet Archive BookReader.js iframe message, after all these years!')
+})
 
 function navigateTo(i: number, options: { scrollBody: boolean }) {
-  const linksScroller = document.querySelector<HTMLDivElement>('#link-scroll-area')!;
-  const link = document.querySelectorAll<HTMLDivElement>('#readonline-chapters a')[i]!;
-  const linkY = link.offsetTop - linksScroller.offsetTop - (linksScroller.offsetHeight / 2) + (link.offsetHeight / 2);
-  linksScroller.scrollTo({ top: linkY, behavior: 'smooth' });
+  const linksScroller = document.querySelector<HTMLDivElement>('#link-scroll-area')!
+  const link = document.querySelectorAll<HTMLDivElement>('#readonline-chapters a')[i]!
+  const linkY = link.offsetTop - linksScroller.offsetTop - (linksScroller.offsetHeight / 2) + (link.offsetHeight / 2)
+  linksScroller.scrollTo({ top: linkY, behavior: 'smooth' })
 
-  const bodyDiv = document.querySelectorAll<HTMLDivElement>('#chapter-bodies .chapter')[i]!;
-  const bodyY = bodyDiv.offsetTop - bodiesDiv.offsetTop;
-  bodiesDiv.scrollTo({ top: bodyY, behavior: options.scrollBody ? 'smooth' : 'instant' });
+  const bodyDiv = document.querySelectorAll<HTMLDivElement>('#chapter-bodies .chapter')[i]!
+  const bodyY = bodyDiv.offsetTop - bodiesDiv.offsetTop
+  bodiesDiv.scrollTo({ top: bodyY, behavior: options.scrollBody ? 'smooth' : 'instant' })
 
   for (const span of document.querySelectorAll('.chapter-link')) {
-    span.classList.toggle('current', span === link.parentElement);
+    span.classList.toggle('current', span === link.parentElement)
   }
 }
 
 function moveSnippet(i: number, by: number) {
-  const j = i + by;
-  if (j < 0 || j > snippetsInBook.length) return;
+  const j = i + by
+  if (j < 0 || j > snippetsInBook.length) return
 
-  const s = snippetsInBook[i]!;
-  snippetsInBook.splice(i, 1);
-  snippetsInBook.splice(j, 0, s);
-  render();
+  const s = snippetsInBook[i]!
+  snippetsInBook.splice(i, 1)
+  snippetsInBook.splice(j, 0, s)
+  render()
 
-  navigateTo(j, { scrollBody: false });
+  navigateTo(j, { scrollBody: false })
 
-  saveOrder();
+  saveOrder()
 }
 
 function saveOrder() {
-  const json = snippetsInBook.map(({ slug }, i) => ({ slug, i }));
+  const json = snippetsInBook.map(({ slug }, i) => ({ slug, i }))
   fetch('/reorder-snippets-in-book', {
     method: 'POST',
     body: JSON.stringify(json),
-  });
+  })
 }

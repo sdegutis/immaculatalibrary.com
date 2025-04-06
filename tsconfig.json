@@ -8,13 +8,10 @@
     "jsx": "react-native",
     "target": "ESNext",
     "module": "ESNext",
-    "rootDir": "site",
+    "rootDir": ".",
     "noEmit": true,
     "moduleResolution": "Node",
-    "types": [
-      "node",
-      "immaculata/runtime.d.ts"
-    ],
+    "allowImportingTsExtensions": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitAny": true,

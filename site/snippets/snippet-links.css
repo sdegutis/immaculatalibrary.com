@@ -15,7 +15,7 @@
   margin-bottom: 1em;
 }
 
-.prevnextlinks>div {
+.prevnextlinks > div {
   margin: 1em 0;
   display: grid;
   justify-content: space-between;

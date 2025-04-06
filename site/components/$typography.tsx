@@ -3,4 +3,4 @@ export const Typography = ({ children, deindent, ...attrs }: { deindent?: boolea
     <link rel="stylesheet" href='/css/components/typography.css' />
     {children}
   </div>
-</>;
+</>

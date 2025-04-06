@@ -1,5 +1,5 @@
-import { EmptyPage } from '../components/page.js';
-import { SiteHeader } from '../components/site-header.js';
+import { EmptyPage } from '../components/page.js'
+import { SiteHeader } from '../components/site-header.js'
 
 const enum Day { SUN, MON, TUE, WED, THUR, FRI, SAT };
 
@@ -79,7 +79,7 @@ export default <>
       //   </Slideshow>
     }} />
   </EmptyPage>
-</>;
+</>
 
 function JoyfulMysteries() {
   return <Mystery
@@ -134,7 +134,7 @@ function JoyfulMysteries() {
         'https://upload.wikimedia.org/wikipedia/commons/5/51/Cima_da_Conegliano_Christ_among_the_doctors.jpg',
         'https://upload.wikimedia.org/wikipedia/commons/a/a5/Der_zw%C3%B6lfj%C3%A4hrige_Jesus_im_Tempel.jpg',
       ],
-    }} />;
+    }} />
 }
 
 function LuminousMysteries() {
@@ -181,7 +181,7 @@ function LuminousMysteries() {
         'https://upload.wikimedia.org/wikipedia/commons/d/d2/Ecce_Agnus_Dei.jpg',
         'https://upload.wikimedia.org/wikipedia/commons/8/8a/Adoration_du_Saint_Sacrement_%C3%A0_l%27Eglise_du_Sacr%C3%A9-Coeur_de_Monaco.jpg',
       ],
-    }} />;
+    }} />
 }
 
 function SorrowfulMysteries() {
@@ -261,7 +261,7 @@ function SorrowfulMysteries() {
         'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Anthony_van_Dyck_-_Bewening_van_Christus2.JPG/2560px-Anthony_van_Dyck_-_Bewening_van_Christus2.JPG',
 
       ],
-    }} />;
+    }} />
 }
 
 function GloriousMysteries() {
@@ -312,20 +312,20 @@ function GloriousMysteries() {
         'https://upload.wikimedia.org/wikipedia/commons/f/fd/Coronation_of_the_Virgin_-_Sittow.jpg',
         'https://upload.wikimedia.org/wikipedia/commons/1/16/Botticelli%2C_incoronazione_della_vergine.jpg',
       ],
-    }} />;
+    }} />
 }
 
 type MysteryData = {
-  image: string;
-  author: string;
-  year: string;
-};
+  image: string
+  author: string
+  year: string
+}
 
-type Mystery = string | MysteryData;
+type Mystery = string | MysteryData
 
 function Mystery(attrs: { name: string, mysteries: Record<string, Mystery[]>, days: Day[] }) {
-  const dayClasses = attrs.days.map(day => `show-today day-${day}`).join(' ');
-  const labels = ['First', 'Second', 'Third', 'Fourth', 'Fifth'];
+  const dayClasses = attrs.days.map(day => `show-today day-${day}`).join(' ')
+  const labels = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
   return <>{Object.entries(attrs.mysteries).map(([name, hrefs], i) =>
     <Panel>
       {hrefs.map(href => {
@@ -333,7 +333,7 @@ function Mystery(attrs: { name: string, mysteries: Record<string, Mystery[]>, da
           author: '',
           year: '',
           image: href,
-        } : href;
+        } : href
 
         return <>
           <div class={`half-grid highlightable-line mystery ${dayClasses}`}>
@@ -348,14 +348,14 @@ function Mystery(attrs: { name: string, mysteries: Record<string, Mystery[]>, da
               } */}
             </div>
           </div>
-        </>;
+        </>
       })}
     </Panel>
-  )}</>;
+  )}</>
 }
 
 function Line(attrs: { children: any }) {
-  return <span class='highlightable-line'>{attrs.children}{'\n'}</span>;
+  return <span class='highlightable-line'>{attrs.children}{'\n'}</span>
 }
 
 function Intro() {
@@ -398,7 +398,7 @@ function Intro() {
         </p>
       </div>
     </div>
-  </Panel>;
+  </Panel>
 }
 
 function Conclusion() {
@@ -436,7 +436,7 @@ function Conclusion() {
         <Line><Red>In the name of the Father, the Son and the Holy Spirit. Amen.</Red></Line>
       </p>
     </div>
-  </Panel>;
+  </Panel>
 }
 
 function MorningPrayers() {
@@ -479,7 +479,7 @@ function MorningPrayers() {
         <Line><Red>Amen</Red></Line>
       </p>
     </div>
-  </Panel>;
+  </Panel>
 }
 
 function LitanyOfSaints() {
@@ -533,7 +533,7 @@ function LitanyOfSaints() {
         <Line>Let us pray</Line>
       </p>
     </div>
-  </Panel>;
+  </Panel>
 }
 
 function Sunday() {
@@ -586,7 +586,7 @@ function Sunday() {
         <Line>Amen.</Line>
       </p>
     </div>
-  </Panel>;
+  </Panel>
 }
 
 function Monday() {
@@ -604,7 +604,7 @@ function Monday() {
         <Line>              Amen.</Line>
       </p>
     </div>
-  </Panel>;
+  </Panel>
 }
 
 function Tuesday() {
@@ -622,7 +622,7 @@ function Tuesday() {
         <Line>              Amen.</Line>
       </p>
     </div>
-  </Panel>;
+  </Panel>
 }
 
 function Wednesday() {
@@ -668,7 +668,7 @@ function Wednesday() {
         </p>
       </div>
     </div>
-  </Panel>;
+  </Panel>
 }
 
 function Thursday() {
@@ -705,7 +705,7 @@ function Thursday() {
         <Line><Red>Amen.</Red></Line>
       </p>
     </div>
-  </Panel>;
+  </Panel>
 }
 
 function Friday() {
@@ -746,7 +746,7 @@ function Friday() {
         <Line>That others may become holier than I, provided that I become as holy as I should, <Red>Jesus, grant me the grace to desire it.</Red></Line>
       </p>
     </div>
-  </Panel>;
+  </Panel>
 }
 
 function Saturday() {
@@ -768,7 +768,7 @@ function Saturday() {
         <Line><Red>Amen.</Red></Line>
       </p>
     </div>
-  </Panel>;
+  </Panel>
 }
 
 function LitanyOfThePreciousBlood() {
@@ -855,7 +855,7 @@ function LitanyOfThePreciousBlood() {
         <Line>  <Red>Amen.</Red></Line>
       </p>
     </div>
-  </Panel>;
+  </Panel>
 }
 
 function AngelMorning() {
@@ -870,7 +870,7 @@ function AngelMorning() {
     <Line>        To light and guard,</Line>
     <Line>            to rule and guide</Line>
     <Line>Amen</Line>
-  </Prayer>;
+  </Prayer>
 }
 
 function AngelNight() {
@@ -885,7 +885,7 @@ function AngelNight() {
     <Line>        To light and guard,</Line>
     <Line>            to rule and guide</Line>
     <Line>Amen</Line>
-  </Prayer>;
+  </Prayer>
 }
 
 function OurFather() {
@@ -903,7 +903,7 @@ function OurFather() {
     <Line>    And lead us not into temptation</Line>
     <Line>        But deliver us from evil</Line>
     <Line>Amen</Line>
-  </Prayer>;
+  </Prayer>
 }
 
 function HailMary() {
@@ -918,7 +918,7 @@ function HailMary() {
     <Line>        Pray for us sinners now</Line>
     <Line>            And at the hour of our death</Line>
     <Line>Amen</Line>
-  </Prayer>;
+  </Prayer>
 }
 
 function DivineMercy() {
@@ -940,7 +940,7 @@ function DivineMercy() {
     <Line>    From the heart of Jesus</Line>
     <Line>    As a fount of mercy for us</Line>
     <Line>        <Red>I trust in you</Red></Line>
-  </Prayer>;
+  </Prayer>
 }
 
 function GloryBe() {
@@ -956,7 +956,7 @@ function GloryBe() {
     <Line>    And ever shall be</Line>
     <Line>        World without end</Line>
     <Line>Amen</Line>
-  </Prayer>;
+  </Prayer>
 }
 
 function PreciousBlood() {
@@ -976,7 +976,7 @@ function PreciousBlood() {
     <Line>        Those in my own home</Line>
     <Line>        And within my family</Line>
     <Line>Amen</Line>
-  </Prayer>;
+  </Prayer>
 }
 
 function SaintMichael() {
@@ -997,7 +997,7 @@ function SaintMichael() {
     <Line>            Who prowl about the world</Line>
     <Line>            Seeking the ruin of souls</Line>
     <Line>Amen</Line>
-  </Prayer>;
+  </Prayer>
 }
 
 function RosaryPromises() {
@@ -1022,7 +1022,7 @@ function RosaryPromises() {
         <Line>15. 🪧 Devotion to the Rosary is a special sign that you were chosen by God before all time.</Line>
       </p>
     </div>
-  </Panel>;
+  </Panel>
 }
 
 function ApostlesCreed() {
@@ -1049,7 +1049,7 @@ function ApostlesCreed() {
     <Line>    The resurrection of the body</Line>
     <Line>      And life everlasting</Line>
     <Line>Amen.</Line>
-  </Prayer>;
+  </Prayer>
 }
 
 function HailHolyQueen() {
@@ -1069,7 +1069,7 @@ function HailHolyQueen() {
     <Line>  Pray for us, O Holy Mother of God</Line>
     <Line>    That we may be worthy of the promises of Christ</Line>
     <Line>Amen.</Line>
-  </Prayer>;
+  </Prayer>
 }
 
 function RosaryPrayer() {
@@ -1086,7 +1086,7 @@ function RosaryPrayer() {
     <Line>          And obtain what they promise</Line>
     <Line>            Through the same Christ, Our Lord</Line>
     <Line>Amen</Line>
-  </Prayer>;
+  </Prayer>
 }
 
 function Memorare() {
@@ -1111,7 +1111,7 @@ function Memorare() {
     <Line>    But in thy mercy</Line>
     <Line>        Hear and answer me</Line>
     <Line>Amen</Line>
-  </Prayer>;
+  </Prayer>
 }
 
 function HolyFamilyPrayer() {
@@ -1119,7 +1119,7 @@ function HolyFamilyPrayer() {
     <Line>Holy Family</Line>
     <Line>    Save our family</Line>
     <Line>        Amen</Line>
-  </Prayer>;
+  </Prayer>
 }
 
 function Prayer(attrs: { img: string, children: any }) {
@@ -1134,11 +1134,11 @@ function Prayer(attrs: { img: string, children: any }) {
         </div>
       </div>
     </Panel>
-  );
+  )
 }
 
 function Red(attrs: { children: any }) {
-  return <span class='red'>{attrs.children}</span>;
+  return <span class='red'>{attrs.children}</span>
 }
 
 function Panel(attrs: { children: any }) {
@@ -1146,13 +1146,13 @@ function Panel(attrs: { children: any }) {
     <div class='panel-body'>
       {attrs.children}
     </div>
-  </div>;
+  </div>
 }
 
 function Slideshow(attrs: { children: any }) {
   return <div class="slideshow">
     {attrs.children}
-  </div>;
+  </div>
 }
 
 function Tabs(attrs: { tabs: Record<string, JSX.Element> }) {
@@ -1172,5 +1172,5 @@ function Tabs(attrs: { tabs: Record<string, JSX.Element> }) {
       </div>
 
     </div>
-  </>;
+  </>
 }

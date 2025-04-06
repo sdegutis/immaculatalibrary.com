@@ -1,20 +1,20 @@
-import { Typography } from "../components/$typography.js";
-import { $ } from "../util/jsx-dom.js";
-import { SnippetJson } from "./data/snippets.json.js";
-import { Reactive } from "./reactive.js";
-import { createSearch, findWithinMarkdown, highlight } from "./searchlist.js";
-import { randomElement, sleep } from "./util.js";
+import { Typography } from "../components/$typography.js"
+import { $ } from "../util/jsx-dom.js"
+import { SnippetJson } from "./data/snippets.json.js"
+import { Reactive } from "./reactive.js"
+import { createSearch, findWithinMarkdown, highlight } from "./searchlist.js"
+import { randomElement, sleep } from "./util.js"
 
-const snippetsFetch = fetch('/scripts/data/snippets.json').then<SnippetJson[]>(res => res.json());
-await sleep(0.3);
-const allSnippets = await snippetsFetch;
+const snippetsFetch = fetch('/scripts/data/snippets.json').then<SnippetJson[]>(res => res.json())
+await sleep(0.3)
+const allSnippets = await snippetsFetch
 
-const container = document.getElementById('snippets-in-book') as HTMLDivElement;
-const bookSlug = container.dataset['book'];
-const snippetsInBook = allSnippets.filter(s => s.book === bookSlug);
+const container = document.getElementById('snippets-in-book') as HTMLDivElement
+const bookSlug = container.dataset['book']
+const snippetsInBook = allSnippets.filter(s => s.book === bookSlug)
 
 if (snippetsInBook.length > 0) {
-  const searchTerm = new Reactive('');
+  const searchTerm = new Reactive('')
 
   const { results } = createSearch({
     data: snippetsInBook,
@@ -30,7 +30,7 @@ if (snippetsInBook.length > 0) {
     }],
     searchTerm,
     viewForItem: (snippet, search) => {
-      const matchedBody = findWithinMarkdown(snippet.markdown, search);
+      const matchedBody = findWithinMarkdown(snippet.markdown, search)
       return <li>
         <p>
           p.{snippet.archivePage} { }
@@ -41,14 +41,14 @@ if (snippetsInBook.length > 0) {
             <blockquote innerHTML={matchedBody} />
           </Typography>
         }
-      </li>;
+      </li>
     },
-  });
+  })
 
   container.replaceChildren($(<>
     <p>
       <a href='#' onclick={function (this: HTMLAnchorElement) {
-        this.href = randomElement(snippetsInBook).route;
+        this.href = randomElement(snippetsInBook).route
       }}>Random in book</a>
     </p>
     <input
@@ -59,10 +59,10 @@ if (snippetsInBook.length > 0) {
       }}
     />
     {results}
-  </>));
+  </>))
 }
 else {
   container.replaceChildren(
     $(<em>No snippets have been digitized for this book yet.</em>)
-  );
+  )
 }

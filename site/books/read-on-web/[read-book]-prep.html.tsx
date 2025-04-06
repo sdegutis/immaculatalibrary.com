@@ -1,25 +1,25 @@
-import handlers from "handlers!";
-import { Typography } from "../../components/$typography.js";
-import { EmptyPage } from "../../components/page.js";
-import { allBooks } from "../../model/books.js";
-import { allSnippets } from "../../model/snippets.js";
-import { sortBy } from "../../util/_helpers.js";
+import { handlers } from "../../../data.js"
+import { Typography } from "../../components/$typography.js"
+import { EmptyPage } from "../../components/page.js"
+import { allBooks } from "../../model/books.js"
+import { allSnippets } from "../../model/snippets.js"
+import { sortBy } from "../../util/_helpers.js"
 
 handlers.set('/reorder-snippets-in-book', (body) => {
-  const json = JSON.parse(body) as { slug: string, i: number }[];
+  const json = JSON.parse(body) as { slug: string, i: number }[]
   for (const { i, slug } of json) {
-    const s = allSnippets.find(s => slug === s.slug)!;
-    s.data.sortOrder = i;
-    s.save();
+    const s = allSnippets.find(s => slug === s.slug)!
+    s.data.sortOrder = i
+    s.save()
   }
-  return '/';
-});
+  return '/'
+})
 
 export default allBooks.filter(book => book.data.complete).map(book => {
-  const orderedSnippets = [...book.snippets];
-  orderedSnippets.sort(sortBy(s => s.data.sortOrder ?? 0));
+  const orderedSnippets = [...book.snippets]
+  orderedSnippets.sort(sortBy(s => s.data.sortOrder ?? 0))
 
-  const file = book.data.files[0]!;
+  const file = book.data.files[0]!
 
   return [book.slug, <>
     <EmptyPage>
@@ -40,5 +40,5 @@ export default allBooks.filter(book => book.data.complete).map(book => {
       </>)}
 
     </EmptyPage>
-  </>];
-});
+  </>]
+})

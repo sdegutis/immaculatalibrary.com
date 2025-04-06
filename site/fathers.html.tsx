@@ -1,12 +1,12 @@
-import { Column, Spaced, SplitColumn } from "./components/column.js";
-import { TypicalPage } from "./components/page.js";
-import { markdown } from "./util/_helpers.js";
+import { Column, Spaced, SplitColumn } from "./components/column.js"
+import { TypicalPage } from "./components/page.js"
+import { markdown } from "./util/_helpers.js"
 
 export function Markdown(attrs: { children: string | string[] }) {
   return markdown.render((attrs.children instanceof Array ? attrs.children[0]! : attrs.children)
     .split('\n')
     .map(s => s.trimStart())
-    .join(' '));
+    .join(' '))
 }
 
 const others: Record<string, { id: string, title: string }[]> = {
@@ -50,7 +50,7 @@ const others: Record<string, { id: string, title: string }[]> = {
     { id: 'vol17libraryoffa00unse', title: 'Epistles of S. Cyprian with the Council of Carthage on the Baptism of Heretics, To which are added the extant works of S. Pacian, Bishop of Barcelona' },
     { id: 'libraryoffathers0002unse', title: 'Catechetical Lectures of St. Cyril of Jerusalem' },
   ],
-};
+}
 
 
 export default <>
@@ -122,4 +122,4 @@ export default <>
     </Spaced>
 
   </TypicalPage>
-</>;
+</>

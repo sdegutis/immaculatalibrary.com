@@ -1,8 +1,8 @@
-import { Font } from '../fonts/[font].css.js';
-import { NavPage } from './navlinks.js';
-import { QuickLinks } from './quicklinks.js';
-import { SiteFooter } from './site-footer.js';
-import { SiteHeader } from './site-header.js';
+import { Font } from '../fonts/[font].css.js'
+import { NavPage } from './navlinks.js'
+import { QuickLinks } from './quicklinks.js'
+import { SiteFooter } from './site-footer.js'
+import { SiteHeader } from './site-header.js'
 
 const Meta = (attrs: { favicons?: JSX.Element }) => <>
   {attrs.favicons ?? <>
@@ -11,7 +11,7 @@ const Meta = (attrs: { favicons?: JSX.Element }) => <>
     <link rel="icon" type="image/png" sizes="16x16" href='/meta/favicon-16x16.png' />
   </>}
   <link rel="manifest" href='/meta/manifest.json' />
-</>;
+</>
 
 export const EmptyPage = (attrs: { favicons?: JSX.Element, children: any }) => <>
   {'<!DOCTYPE html>'}
@@ -39,7 +39,7 @@ export const EmptyPage = (attrs: { favicons?: JSX.Element, children: any }) => <
     </body>
 
   </html>
-</>;
+</>
 
 export const TypicalPage = (attrs: { title: JSX.Element, image: string, page: NavPage, children: any }) => <>
   <EmptyPage>
@@ -54,4 +54,4 @@ export const TypicalPage = (attrs: { title: JSX.Element, image: string, page: Na
     <SiteFooter />
 
   </EmptyPage>
-</>;
+</>

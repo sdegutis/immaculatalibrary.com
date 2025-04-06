@@ -1,23 +1,23 @@
-import { RatingStar } from "../components/$rating.js";
-import { Typography } from "../components/$typography.js";
-import { $ } from "../util/jsx-dom.js";
-import { BookJson } from "./data/books.json.js";
-import { Reactive } from "./reactive.js";
-import { createSearch, findWithinMarkdown, highlight } from "./searchlist.js";
-import { randomElement, sleep } from "./util.js";
+import { RatingStar } from "../components/$rating.js"
+import { Typography } from "../components/$typography.js"
+import { $ } from "../util/jsx-dom.js"
+import { BookJson } from "./data/books.json.js"
+import { Reactive } from "./reactive.js"
+import { createSearch, findWithinMarkdown, highlight } from "./searchlist.js"
+import { randomElement, sleep } from "./util.js"
 
-const booksFetch = fetch('/scripts/data/books.json').then<BookJson[]>(res => res.json());
-await sleep(.1);
-const books = await booksFetch;
+const booksFetch = fetch('/scripts/data/books.json').then<BookJson[]>(res => res.json())
+await sleep(.1)
+const books = await booksFetch
 
-const allCategories = [...new Set(books.flatMap(book => book.categories))].sort();
+const allCategories = [...new Set(books.flatMap(book => book.categories))].sort()
 
-const sortBooksSource = new Reactive<'last' | 'first'>('last');
-const snippetsFilterSource = new Reactive('both');
-const starsFilterSource = new Reactive('any');
-const searchTerm = new Reactive('');
+const sortBooksSource = new Reactive<'last' | 'first'>('last')
+const snippetsFilterSource = new Reactive('both')
+const starsFilterSource = new Reactive('any')
+const searchTerm = new Reactive('')
 
-const currentCategory = new Reactive('_any');
+const currentCategory = new Reactive('_any')
 
 const { results, matchingItems } = createSearch({
   data: books,
@@ -25,34 +25,34 @@ const { results, matchingItems } = createSearch({
   sorter: {
     source: sortBooksSource,
     sortBy: (a, b) => {
-      const dir = sortBooksSource.val === 'first' ? 1 : -1;
+      const dir = sortBooksSource.val === 'first' ? 1 : -1
 
-      if (a.dateAdded < b.dateAdded) return -dir;
-      if (a.dateAdded > b.dateAdded) return dir;
-      return 0;
+      if (a.dateAdded < b.dateAdded) return -dir
+      if (a.dateAdded > b.dateAdded) return dir
+      return 0
     },
   },
   filters: [
     {
       source: currentCategory,
       matches: (book: BookJson) => {
-        if (currentCategory.val === '_any') return true;
-        return book.categories.includes(currentCategory.val);
+        if (currentCategory.val === '_any') return true
+        return book.categories.includes(currentCategory.val)
       },
     },
     {
       source: snippetsFilterSource,
       matches: (book: BookJson) => {
-        if (snippetsFilterSource.val === 'none') return book.empty;
-        if (snippetsFilterSource.val === 'some') return !book.empty;
-        return true;
+        if (snippetsFilterSource.val === 'none') return book.empty
+        if (snippetsFilterSource.val === 'some') return !book.empty
+        return true
       },
     },
     {
       source: starsFilterSource,
       matches: (book: BookJson) => {
-        if (starsFilterSource.val === 'any') return true;
-        return book.stars === +starsFilterSource.val;
+        if (starsFilterSource.val === 'any') return true
+        return book.stars === +starsFilterSource.val
       },
     },
     {
@@ -65,7 +65,7 @@ const { results, matchingItems } = createSearch({
     },
   ],
   viewForItem: (book, search) => {
-    const matchedBody = findWithinMarkdown(book.description, search);
+    const matchedBody = findWithinMarkdown(book.description, search)
     return (
       <li>
         <p title={`Added ${book.dateAdded}`}>
@@ -78,40 +78,40 @@ const { results, matchingItems } = createSearch({
           </Typography>
         }
       </li>
-    );
+    )
   },
-});
+})
 
-document.querySelector('.search-results')!.replaceChildren(results);
+document.querySelector('.search-results')!.replaceChildren(results)
 
 matchingItems.onChange(() => {
-  document.querySelector('.search-count')!.textContent = matchingItems.val.length.toFixed();
-});
+  document.querySelector('.search-count')!.textContent = matchingItems.val.length.toFixed()
+})
 
 const randomBookLink = $<HTMLAnchorElement>(<a href='#' onclick={function (this: HTMLAnchorElement, e: Event) {
   if (matchingItems.val.length === 0) {
-    e.preventDefault();
-    return;
+    e.preventDefault()
+    return
   }
 
-  this.href = randomElement(matchingItems.val).route;
-}}>Random Book</a>);
+  this.href = randomElement(matchingItems.val).route
+}}>Random Book</a>)
 
 matchingItems.onChange(() => {
-  randomBookLink.toggleAttribute('disabled', matchingItems.val.length === 0);
-});
+  randomBookLink.toggleAttribute('disabled', matchingItems.val.length === 0)
+})
 
-const searchInput = $<HTMLInputElement>(<input autofocus style='width: 100%' placeholder='Search' type="text" oninput={updateFromSearchInput} />);
+const searchInput = $<HTMLInputElement>(<input autofocus style='width: 100%' placeholder='Search' type="text" oninput={updateFromSearchInput} />)
 
 if (window.location.hash) {
-  searchInput.value = decodeURIComponent(window.location.hash.slice(1));
-  updateFromSearchInput();
+  searchInput.value = decodeURIComponent(window.location.hash.slice(1))
+  updateFromSearchInput()
 }
 
 function updateFromSearchInput() {
-  const term = searchInput.value.trim().toLowerCase();
-  searchTerm.set(term);
-  window.location.hash = '#' + encodeURIComponent(term);
+  const term = searchInput.value.trim().toLowerCase()
+  searchTerm.set(term)
+  window.location.hash = '#' + encodeURIComponent(term)
 }
 
 document.querySelector('.filters-container')!.replaceChildren($(<>
@@ -132,19 +132,19 @@ document.querySelector('.filters-container')!.replaceChildren($(<>
       <label><input type='radio' name='stars' onclick={() => starsFilterSource.set('any')} checked />Any</label>
       <label><input type='radio' name='stars' onclick={() => starsFilterSource.set('0')} />Unrated</label>
       {Array(5).fill(0).map((_, i) => {
-        const star = $<DocumentFragment>(<RatingStar />).querySelector('svg')!;
-        const num = i + 1;
+        const star = $<DocumentFragment>(<RatingStar />).querySelector('svg')!
+        const num = i + 1
 
         starsFilterSource.onChange(() => {
-          star.classList.toggle('lit', +starsFilterSource.val >= num);
-        });
+          star.classList.toggle('lit', +starsFilterSource.val >= num)
+        })
 
         return <>
           <label>
             <input type='radio' name='stars' onclick={() => starsFilterSource.set(num.toFixed())} />
             {star}
           </label>
-        </>;
+        </>
       })}
     </span>
 
@@ -168,4 +168,4 @@ document.querySelector('.filters-container')!.replaceChildren($(<>
     Not sure what to read?<br />
     Try a {randomBookLink} from these.
   </p>
-</>));
+</>))
