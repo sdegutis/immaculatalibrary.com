@@ -7,17 +7,6 @@ const tree = new immaculata.LiveTree('site', import.meta.url)
 
 tree.enableModules(immaculata.transformModuleJsxToStrings)
 
-const importmap = `
-<script type="importmap">{
-  "imports": {
-    "markdown-it": "https://cdn.jsdelivr.net/npm/markdown-it@latest/+esm",
-    "eases": "https://cdn.jsdelivr.net/npm/eases@latest/+esm"
-  }
-}</script>
-`
-
-const singleDynFile = /\..+(?<ext>\.tsx?)$/
-const arrayDynFile = /\/.*(?<slug>\[.+\]).*\..+(?<ext>\.tsx?)$/
 
 export const handlers = new Map<string, (body: string) => string>()
 
@@ -28,6 +17,7 @@ async function processSite() {
     files.with('^/data/')
     files.with('^/model/')
 
+    const singleDynFile = /\..+(?<ext>\.tsx?)$/
     await files.with(singleDynFile).doAsync(async file => {
       const match = file.path.match(singleDynFile)!
       const exports = await import('./site' + file.path)
@@ -36,6 +26,7 @@ async function processSite() {
       file.text = typeof o === 'string' ? o : JSON.stringify(o)
     })
 
+    const arrayDynFile = /\/.*(?<slug>\[.+\]).*\..+(?<ext>\.tsx?)$/
     await files.with(arrayDynFile).doAsync(async file => {
       const match = file.path.match(arrayDynFile)!
       const exports = await import('./site' + file.path)
@@ -49,6 +40,16 @@ async function processSite() {
     })
 
     files.with('\.html$').do(file => file.text = hoistHeaders(file.text))
+
+
+    const importmap = `
+      <script type="importmap">{
+        "imports": {
+          "markdown-it": "https://cdn.jsdelivr.net/npm/markdown-it@latest/+esm",
+          "eases": "https://cdn.jsdelivr.net/npm/eases@latest/+esm"
+        }
+      }</script>
+    `
     files.with('\.html$').do(file => file.text = file.text.replace('<head>', `$&${importmap}`))
 
   })
