@@ -1,4 +1,5 @@
 import { transformSync } from '@swc/core'
+import { randomUUID } from 'crypto'
 import * as immaculata from 'immaculata'
 import { registerHooks } from 'module'
 import { handlers, tree } from './data.ts'
@@ -29,22 +30,16 @@ registerHooks(immaculata.compileJsxTsxModuleHook((source, url) => transformSync(
 async function processSite() {
   return tree.processFiles(async files => {
 
+    if (!isDev) files.with('^/admin/').remove()
     files.with(/\.d\.ts$/).remove()
+    files.with('^/data/').remove()
+    files.with('^/model/').remove()
 
-    if (!isDev) files.with('^/admin/')
-    files.with('^/data/')
-    files.with('^/model/')
+    files.with('/sitemap.tsx').remove()
 
     const singleDynFile = /\..+(?<ext>\.tsx?)$/
-    await files.with(singleDynFile).doAsync(async file => {
-      const match = file.path.match(singleDynFile)!
-      const exports = await import('./site' + file.path)
-      const o = exports.default
-      file.path = file.path.slice(0, -match.groups!["ext"]!.length)
-      file.text = typeof o === 'string' ? o : JSON.stringify(o)
-    })
-
     const arrayDynFile = /\/.*(?<slug>\[.+\]).*\..+(?<ext>\.tsx?)$/
+
     await files.with(arrayDynFile).doAsync(async file => {
       const match = file.path.match(arrayDynFile)!
       const exports = await import('./site' + file.path)
@@ -53,12 +48,39 @@ async function processSite() {
 
       for (const [name, obj] of array) {
         const filepath = file.path.replace(match.groups!["slug"]!, name)
-        files.add(filepath.slice(0, -match.groups!["ext"]!.length), '', obj)
+        const realpath = filepath.slice(0, -match.groups!["ext"]!.length)
+        files.add(realpath, realpath.endsWith('.json') ? JSON.stringify(obj) : obj)
       }
+    })
+
+    await files.with(singleDynFile).doAsync(async file => {
+      const match = file.path.match(singleDynFile)!
+      const exports = await import('./site' + file.path)
+      const o = exports.default
+      file.path = file.path.slice(0, -match.groups!["ext"]!.length)
+      file.text = typeof o === 'string' ? o : JSON.stringify(o)
     })
 
     files.with('\.html$').do(file => file.text = hoistHeaders(file.text))
 
+    files.with(/\.tsx?$/).do(file => {
+      const placeholder = randomUUID()
+      file.text = transformSync(file.text, {
+        isModule: true,
+        filename: file.path,
+        sourceMaps: 'inline',
+        jsc: {
+          keepClassNames: true,
+          target: 'esnext',
+          parser: { syntax: 'typescript', tsx: true, decorators: true },
+          transform: {
+            react: { runtime: 'automatic', importSource: placeholder },
+          },
+        },
+      }).code
+      file.text = file.text.replace(`${placeholder}/jsx-runtime`, '/util/jsx-runtime.js')
+      file.path = file.path.replace(/\.tsx?$/, '.js')
+    })
 
     const importmap = `
       <script type="importmap">{
