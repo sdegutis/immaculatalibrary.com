@@ -71,7 +71,7 @@ export default <>
           <div>
 
             <FadeIn>
-              <h2>Latest Articles</h2>
+              <h2>Latest Letters</h2>
               <p><i>Not written to everyone.</i></p>
               <ArticlesList count={12} />
             </FadeIn>
