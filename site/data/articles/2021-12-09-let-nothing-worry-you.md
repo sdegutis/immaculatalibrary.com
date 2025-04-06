@@ -20,9 +20,15 @@ These words of Mary to St. Juan Diego in 1531 were meant for all of us also:
 >
 > Do you need anything more?
 
-Since I can't find an original source of this quote anywhere on the internet, but only a bunch with slight variations, I used the quote from the kids movie *Juan Diego: Messenger of Guadalupe* ([watch on FORMED](https://watch.formed.org/the-saints-and-heroes-collection/season:1/videos/juan-diego-messenger-of-guadalupe)), which is the simplest of them all.
+That version was taken from *Juan Diego: Messenger of Guadalupe* ([watch on FORMED](https://watch.formed.org/the-saints-and-heroes-collection/season:1/videos/juan-diego-messenger-of-guadalupe)). The full version from [the official book](http://localhost:8080/books/holy-mary-of-guadalupe.html) is:
 
-Although it's a kids movie, it is *very* inspiring, and seems extremely accurate (for an adaptation) from what I've researched. I highly recommend watching it today.
-
-Trust in the love and power of our Mother Mary, just as St. Juan Diego did! She will help us. Trust her.
+> Hear, my son, what I now say to thee: let nothing trouble or afflict thee.
+>
+> Fear neither pain nor sickness nor other grievous accident. Am not I here, I who am thy Mother?
+>
+> Thou art beneath my shadow and protection. And am not I life and health?
+>
+> In my lap art thou, and counted as mine. What more dost thou need?
+>
+> Have neither sorrow nor anxiety on account of thy uncle's sickness, for he will not die of this attack. Be even assured that he is already well.
 
