@@ -1,21 +1,21 @@
-import handlers from 'handlers!';
-import { EmptyPage } from "../../components/page.js";
-import { Article } from "../../model/articles.js";
+import handlers from 'handlers!'
+import { EmptyPage } from "../../components/page.js"
+import { Article } from "../../model/articles.js"
 
 handlers.set('/create-article', body => {
-  const params = new URLSearchParams(body);
+  const params = new URLSearchParams(body)
 
-  const date = new Date().toLocaleDateString('sv');
-  const slug = `${date}-${params.get('slug')!}`;
+  const date = new Date().toLocaleDateString('sv')
+  const slug = `${date}-${params.get('slug')!}`
 
   const article = new Article(slug, params.get('content')!, {
     title: params.get('title')!,
-  });
+  })
 
-  article.save();
+  article.save()
 
-  return article.route;
-});
+  return article.route
+})
 
 export default <>
   <EmptyPage>
@@ -30,4 +30,4 @@ export default <>
     </form>
 
   </EmptyPage>
-</>;
+</>

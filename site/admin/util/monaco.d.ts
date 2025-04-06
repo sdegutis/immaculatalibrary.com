@@ -1,2 +1,2 @@
-import * as monaco from 'monaco-editor';
-export default monaco;
+import * as monaco from 'monaco-editor'
+export default monaco

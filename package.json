@@ -12,7 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/sdegutis/immaculatalibrary.com.git"
   },
-  "keywords": [],
+  "keywords": [ ],
   "author": "Steven Degutis",
   "license": "",
   "bugs": {

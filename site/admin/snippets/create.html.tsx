@@ -1,13 +1,13 @@
-import handlers from 'handlers!';
-import { Typography } from "../../components/$typography.js";
-import { EmptyPage } from "../../components/page.js";
-import { Snippet } from '../../model/snippets.js';
+import handlers from 'handlers!'
+import { Typography } from "../../components/$typography.js"
+import { EmptyPage } from "../../components/page.js"
+import { Snippet } from '../../model/snippets.js'
 
 handlers.set('/create-snippet', body => {
-  const params = new URLSearchParams(body);
+  const params = new URLSearchParams(body)
 
-  const date = new Date().toLocaleDateString('sv');
-  const slug = `${date}-${params.get('slug')!}`;
+  const date = new Date().toLocaleDateString('sv')
+  const slug = `${date}-${params.get('slug')!}`
 
   const snippet = new Snippet(slug, params.get('markdownContent')!, {
     published: true,
@@ -16,12 +16,12 @@ handlers.set('/create-snippet', body => {
     archiveSlug: params.get('archiveSlug')!,
     bookSlug: params.get('bookSlug')!,
     tags: params.getAll('tags').filter(t => t),
-  });
+  })
 
-  snippet.save();
+  snippet.save()
 
-  return snippet.route;
-});
+  return snippet.route
+})
 
 export default <>
   <EmptyPage>
@@ -62,4 +62,4 @@ export default <>
 
   </EmptyPage>
 
-</>;
+</>

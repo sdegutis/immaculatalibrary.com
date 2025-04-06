@@ -1,5 +1,5 @@
-import { Spaced, SplitColumn } from './components/column.js';
-import { TypicalPage } from './components/page.js';
+import { Spaced, SplitColumn } from './components/column.js'
+import { TypicalPage } from './components/page.js'
 
 export default <>
   <TypicalPage title="Catholic Resources" image='/img/categories/classics-big.jpg' page='Resources'>
@@ -45,4 +45,4 @@ export default <>
     </Spaced>
 
   </TypicalPage>
-</>;
+</>

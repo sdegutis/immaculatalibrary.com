@@ -1,4 +1,4 @@
-import * as path from "path/posix";
+import * as path from "path/posix"
 
 export function makeSitemap(paths: Iterable<string>) {
   return <>
@@ -11,14 +11,14 @@ export function makeSitemap(paths: Iterable<string>) {
       {[...paths]
         .filter(filepath => filepath.endsWith('.html'))
         .map(filepath => {
-          const name = path.basename(filepath);
-          const date = name.match(/^(\d{4}-\d{2}-\d{2})-/)?.[1];
+          const name = path.basename(filepath)
+          const date = name.match(/^(\d{4}-\d{2}-\d{2})-/)?.[1]
           return <url>
             <loc>https://www.immaculatalibrary.com{filepath}</loc>
             {date && <lastmod>{date}</lastmod>}
-          </url>;
+          </url>
         })
       }
     </urlset>
-  </> as string;
+  </> as string
 }

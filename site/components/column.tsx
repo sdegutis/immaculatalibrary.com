@@ -1,6 +1,6 @@
 export const Spaced = (attrs: { children: any }) => <>
   <div class='spaced' style='margin: 3em 0'>{attrs.children}</div>
-</>;
+</>
 
 export const CenteredColumn = (attrs: { children: any }) => <>
   <link rel="stylesheet" href='/css/components/centered-column.css' />
@@ -9,7 +9,7 @@ export const CenteredColumn = (attrs: { children: any }) => <>
       {attrs.children}
     </section>
   </Column>
-</>;
+</>
 
 export const SplitColumn = (attrs: { wide?: boolean, children: any }) => <>
   <link rel="stylesheet" href='/css/components/split-column.css' />
@@ -18,10 +18,10 @@ export const SplitColumn = (attrs: { wide?: boolean, children: any }) => <>
       {attrs.children}
     </section>
   </Column>
-</>;
+</>
 
 export const Column = (attrs: { wide?: boolean, children: any }) => <>
   <div style={`width:90%; max-width: ${attrs.wide ? '1000px' : '800px'}; margin: 0 auto`}>
     {attrs.children}
   </div>
-</>;
+</>

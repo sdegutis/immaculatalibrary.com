@@ -1,13 +1,13 @@
-import allVideoFiles from "../data/videos/";
-import { DataFile } from '../util/_datafiles.js';
-import { sortBy } from '../util/_helpers.js';
+import allVideoFiles from "../data/videos/"
+import { DataFile } from '../util/_datafiles.js'
+import { sortBy } from '../util/_helpers.js'
 
 interface VideoFile {
-  title: string;
-  youtube: string;
-  author: string;
-  desc?: string;
-  sort: number;
+  title: string
+  youtube: string
+  author: string
+  desc?: string
+  sort: number
 }
 
 export class Video extends DataFile<VideoFile> {
@@ -18,4 +18,4 @@ export class Video extends DataFile<VideoFile> {
 
 export const allVideos = (allVideoFiles
   .map(file => Video.fromFile(file)))
-  .sort(sortBy(video => video.data.sort));
+  .sort(sortBy(video => video.data.sort))

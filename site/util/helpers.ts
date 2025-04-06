@@ -1,3 +1,3 @@
 export function calculateReadingMins(str: string) {
-  return Math.round(str.length / 888);
+  return Math.round(str.length / 888)
 }

@@ -1,10 +1,10 @@
-import easesLib from 'eases';
-import { CircularNav, Navable } from './nav.js';
-import { notify } from './notify.js';
+import easesLib from 'eases'
+import { CircularNav, Navable } from './nav.js'
+import { notify } from './notify.js'
 
 interface Ease extends Navable<Ease> {
-  fn: (t: number) => number;
-  name: string;
+  fn: (t: number) => number
+  name: string
 }
 
 const eases = new CircularNav<Ease>([
@@ -19,16 +19,16 @@ const eases = new CircularNav<Ease>([
   { fn: easesLib.quartOut, name: 'quart' },
   { fn: easesLib.quintOut, name: 'quint' },
   { fn: easesLib.sineOut, name: 'sine' },
-]);
+])
 
 export function nextEase() {
-  eases.current = eases.current.next!;
-  notify(eases.current.name);
+  eases.current = eases.current.next!
+  notify(eases.current.name)
 }
 
 export function prevEase() {
-  eases.current = eases.current.prev!;
-  notify(eases.current.name);
+  eases.current = eases.current.prev!
+  notify(eases.current.name)
 }
 
 class Animation {
@@ -42,56 +42,56 @@ class Animation {
   ) { }
 
   start() {
-    this.running = true;
+    this.running = true
 
     const startPos = {
       x: this.container.scrollLeft,
       y: this.container.scrollTop,
-    };
+    }
 
-    const startedAt = +document.timeline.currentTime!;
+    const startedAt = +document.timeline.currentTime!
 
     const step = () => {
       requestAnimationFrame(time => {
-        if (!this.running) return;
+        if (!this.running) return
 
-        const percentDone = (time - startedAt) / this.duration;
+        const percentDone = (time - startedAt) / this.duration
         if (percentDone >= 1) {
-          this.container.scrollLeft = this.to.x;
-          this.container.scrollTop = this.to.y;
-          return;
+          this.container.scrollLeft = this.to.x
+          this.container.scrollTop = this.to.y
+          return
         }
 
-        const percentToAnimate = eases.current.fn(percentDone);
+        const percentToAnimate = eases.current.fn(percentDone)
 
-        const x = (this.to.x - startPos.x) * percentToAnimate + startPos.x;
-        const y = (this.to.y - startPos.y) * percentToAnimate + startPos.y;
+        const x = (this.to.x - startPos.x) * percentToAnimate + startPos.x
+        const y = (this.to.y - startPos.y) * percentToAnimate + startPos.y
 
-        this.container.scrollLeft = x;
-        this.container.scrollTop = y;
+        this.container.scrollLeft = x
+        this.container.scrollTop = y
 
-        step();
-      });
-    };
-    step();
+        step()
+      })
+    }
+    step()
   }
 
   stop() {
-    this.running = false;
+    this.running = false
   }
 
 }
 
-const animations = new Map<HTMLElement, Animation>();
+const animations = new Map<HTMLElement, Animation>()
 
 export function animateTo(container: HTMLElement, duration: number, to: { x: number, y: number }) {
-  const found = animations.get(container);
+  const found = animations.get(container)
   if (found) {
-    found.stop();
+    found.stop()
   }
 
-  const anim = new Animation(container, duration, to);
-  anim.start();
+  const anim = new Animation(container, duration, to)
+  anim.start()
 
-  animations.set(container, anim);
+  animations.set(container, anim)
 }

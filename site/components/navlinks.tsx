@@ -1,4 +1,4 @@
-import { Column } from "./column.js";
+import { Column } from "./column.js"
 
 const links = {
   Home: { href: '/', title: 'Immaculata Library' },
@@ -9,9 +9,9 @@ const links = {
   Prayers: { href: '/prayers/', title: 'Prayers' },
   Articles: { href: '/articles.html', title: 'Letters' },
   Resources: { href: '/resources.html', title: 'Resources' },
-} as const;
+} as const
 
-export type NavPage = keyof typeof links;
+export type NavPage = keyof typeof links
 
 export const Navlinks = (attrs: { page: NavPage }) => <>
   <Column>
@@ -21,4 +21,4 @@ export const Navlinks = (attrs: { page: NavPage }) => <>
       ))}
     </div>
   </Column>
-</>;
+</>

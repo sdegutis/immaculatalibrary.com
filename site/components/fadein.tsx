@@ -3,4 +3,4 @@ export const FadeIn = (attrs: { children: any }) => <>
     <script type='module' src='/scripts/fadein.js' />
     {attrs.children}
   </div>
-</>;
+</>

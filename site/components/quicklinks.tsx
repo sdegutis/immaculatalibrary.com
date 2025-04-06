@@ -1,11 +1,11 @@
-import { allCategories } from '../model/categories.js';
-import { featuredBooks } from '../model/featured.js';
-import { allMovies } from '../model/movies.js';
-import { Column } from './column.js';
-import { FadeIn } from './fadein.js';
+import { allCategories } from '../model/categories.js'
+import { featuredBooks } from '../model/featured.js'
+import { allMovies } from '../model/movies.js'
+import { Column } from './column.js'
+import { FadeIn } from './fadein.js'
 
-const ofSaints = allCategories.filter(c => c.data.saint);
-const nonSaints = allCategories.filter(c => !ofSaints.includes(c));
+const ofSaints = allCategories.filter(c => c.data.saint)
+const nonSaints = allCategories.filter(c => !ofSaints.includes(c))
 
 export const QuickLinks = () => <>
   <link rel="stylesheet" href='/css/components/quicklinks.css' />
@@ -95,4 +95,4 @@ export const QuickLinks = () => <>
     </Column>
   </div>
 
-</>;
+</>

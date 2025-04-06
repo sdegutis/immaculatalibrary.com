@@ -1,39 +1,39 @@
 export interface Navable<T> {
-  next?: T;
-  prev?: T;
+  next?: T
+  prev?: T
 }
 
 export class Nav<T extends Navable<T>> {
 
-  first!: T;
-  last!: T;
-  current!: T;
+  first!: T
+  last!: T
+  current!: T
 
   constructor(ts?: T[]) {
     for (const t of ts ?? []) {
-      this.add(t);
+      this.add(t)
     }
   }
 
   add(t: T) {
     if (!this.first) {
-      this.current = this.first = this.last = t;
-      return;
+      this.current = this.first = this.last = t
+      return
     }
 
-    this.last.next = t;
-    t.prev = this.last;
-    this.last = t;
+    this.last.next = t
+    t.prev = this.last
+    this.last = t
   }
 
   [Symbol.iterator]() {
-    let node: T | undefined = this.first;
+    let node: T | undefined = this.first
     return (function* () {
       while (node) {
-        yield node;
-        node = node.next;
+        yield node
+        node = node.next
       }
-    })();
+    })()
   }
 
 }
@@ -41,10 +41,10 @@ export class Nav<T extends Navable<T>> {
 export class CircularNav<T extends Navable<T>> extends Nav<T> {
 
   override add(t: T): void {
-    super.add(t);
+    super.add(t)
 
-    this.last.next = this.first;
-    this.first.prev = this.last;
+    this.last.next = this.first
+    this.first.prev = this.last
   }
 
 }

@@ -1,29 +1,29 @@
-import handlers from "handlers!";
-import { Typography } from "../components/$typography.js";
-import { Admin } from "../components/admin.js";
-import { Spaced, SplitColumn } from "../components/column.js";
-import { LatestSnippetsArea } from "../components/latest-snippets.js";
-import { TypicalPage } from "../components/page.js";
-import { allSnippets, Snippet } from "../model/snippets.js";
-import { allTags } from "../model/tag.js";
-import { formatDate } from '../util/format-date.js';
-import { PrevNextLinks } from "./snippet-links.js";
+import handlers from "handlers!"
+import { Typography } from "../components/$typography.js"
+import { Admin } from "../components/admin.js"
+import { Spaced, SplitColumn } from "../components/column.js"
+import { LatestSnippetsArea } from "../components/latest-snippets.js"
+import { TypicalPage } from "../components/page.js"
+import { allSnippets, Snippet } from "../model/snippets.js"
+import { allTags } from "../model/tag.js"
+import { formatDate } from '../util/format-date.js'
+import { PrevNextLinks } from "./snippet-links.js"
 
 handlers.set('/add-tags-to-snippet', body => {
-  const params = new URLSearchParams(body);
-  const snippet = allSnippets.find(s => s.slug === params.get('slug')!)!;
-  snippet.data.tags = params.getAll('tag')!.sort();
-  snippet.save();
-  return snippet.route;
-});
+  const params = new URLSearchParams(body)
+  const snippet = allSnippets.find(s => s.slug === params.get('slug')!)!
+  snippet.data.tags = params.getAll('tag')!.sort()
+  snippet.save()
+  return snippet.route
+})
 
 handlers.set('/edit-snippet', body => {
-  const params = new URLSearchParams(body);
-  const snippet = allSnippets.find(s => s.slug === params.get('slug')!)!;
-  snippet.content = params.get('content')!;
-  snippet.save();
-  return snippet.route;
-});
+  const params = new URLSearchParams(body)
+  const snippet = allSnippets.find(s => s.slug === params.get('slug')!)!
+  snippet.content = params.get('content')!
+  snippet.save()
+  return snippet.route
+})
 
 function RelativeSnippetLink({ snippet, children }: { snippet: Snippet | undefined, children: any }) {
   return <>
@@ -33,15 +33,15 @@ function RelativeSnippetLink({ snippet, children }: { snippet: Snippet | undefin
         p.{snippet.data.archivePage}
       </>}
     </span>
-  </>;
+  </>
 }
 
 export default allSnippets.map(snippet => {
-  const singleFile = snippet.book.data.files.length === 1;
+  const singleFile = snippet.book.data.files.length === 1
   const specificBookName = (!singleFile && snippet.book.data.files
     .find(file => file.archiveId === snippet.data.archiveSlug)
     ?.pdfFile
-    .replace('.pdf', ''));
+    .replace('.pdf', ''))
 
 
   return [snippet.slug, <>
@@ -123,5 +123,5 @@ export default allSnippets.map(snippet => {
       </Spaced>
 
     </TypicalPage>
-  </>];
-});
+  </>]
+})

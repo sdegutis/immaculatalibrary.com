@@ -16,7 +16,7 @@ main {
   grid-template-columns: 15fr 20fr 15fr 30fr;
 }
 
-main>* {
+main > * {
   overflow: auto;
 }
 
@@ -27,11 +27,11 @@ main>* {
   overflow: auto;
 }
 
-#left-panel>* {
+#left-panel > * {
   overflow: auto;
 }
 
-#left-panel>:nth-child(2) {
+#left-panel > :nth-child(2) {
   padding-right: 1em;
 }
 

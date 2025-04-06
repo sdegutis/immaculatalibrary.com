@@ -1,19 +1,19 @@
-import { Typography } from "../components/$typography.js";
-import { $ } from "../util/jsx-dom.js";
-import { SnippetJson } from "./data/snippets.json.js";
-import { Reactive } from "./reactive.js";
-import { createSearch, findWithinMarkdown, highlight } from "./searchlist.js";
-import { randomElement, sleep } from "./util.js";
+import { Typography } from "../components/$typography.js"
+import { $ } from "../util/jsx-dom.js"
+import { SnippetJson } from "./data/snippets.json.js"
+import { Reactive } from "./reactive.js"
+import { createSearch, findWithinMarkdown, highlight } from "./searchlist.js"
+import { randomElement, sleep } from "./util.js"
 
-const snippetsFetch = fetch('/scripts/data/snippets.json').then<SnippetJson[]>(res => res.json());
-await sleep(.1);
-const snippets = await snippetsFetch;
+const snippetsFetch = fetch('/scripts/data/snippets.json').then<SnippetJson[]>(res => res.json())
+await sleep(.1)
+const snippets = await snippetsFetch
 
-const tags = [...new Set(snippets.flatMap(s => s.tags))].sort();
+const tags = [...new Set(snippets.flatMap(s => s.tags))].sort()
 
-const currentTag = new Reactive(new URL(window.location.href).searchParams.get('tag') ?? '_any');
-const lengthFilter = new Reactive('');
-const searchTerm = new Reactive('');
+const currentTag = new Reactive(new URL(window.location.href).searchParams.get('tag') ?? '_any')
+const lengthFilter = new Reactive('')
+const searchTerm = new Reactive('')
 
 const { results, matchingItems } = createSearch({
   data: snippets,
@@ -22,21 +22,21 @@ const { results, matchingItems } = createSearch({
     {
       source: currentTag,
       matches: (snippet: SnippetJson) => {
-        if (currentTag.val === '_any') return true;
-        if (currentTag.val === '_some') return snippet.tags.length > 0;
-        if (currentTag.val === '_none') return snippet.tags.length === 0;
-        return snippet.tags.includes(currentTag.val);
+        if (currentTag.val === '_any') return true
+        if (currentTag.val === '_some') return snippet.tags.length > 0
+        if (currentTag.val === '_none') return snippet.tags.length === 0
+        return snippet.tags.includes(currentTag.val)
       },
     },
     {
       source: lengthFilter,
       matches: (snippet: SnippetJson) => {
         switch (lengthFilter.val) {
-          case 'short': return snippet.mins < 3;
-          case 'medium': return snippet.mins >= 3 && snippet.mins <= 5;
-          case 'long': return snippet.mins >= 6 && snippet.mins <= 8;
-          case 'very-long': return snippet.mins >= 9;
-          case '': default: return true;
+          case 'short': return snippet.mins < 3
+          case 'medium': return snippet.mins >= 3 && snippet.mins <= 5
+          case 'long': return snippet.mins >= 6 && snippet.mins <= 8
+          case 'very-long': return snippet.mins >= 9
+          case '': default: return true
         }
       },
     },
@@ -51,7 +51,7 @@ const { results, matchingItems } = createSearch({
     },
   ],
   viewForItem: (snippet, search) => {
-    const matchedBody = findWithinMarkdown(snippet.markdown, search);
+    const matchedBody = findWithinMarkdown(snippet.markdown, search)
     return (
       <li>
         <p>
@@ -65,40 +65,40 @@ const { results, matchingItems } = createSearch({
           </Typography>
         </>}
       </li>
-    );
+    )
   },
-});
+})
 
-document.querySelector('.search-results')!.replaceChildren(results);
+document.querySelector('.search-results')!.replaceChildren(results)
 
 matchingItems.onChange(() => {
-  document.querySelector('.search-count')!.textContent = matchingItems.val.length.toFixed();
-});
+  document.querySelector('.search-count')!.textContent = matchingItems.val.length.toFixed()
+})
 
 const randomSnippetLink = $<HTMLAnchorElement>(<a href='#' onclick={function (this: HTMLAnchorElement, e: Event) {
   if (matchingItems.val.length === 0) {
-    e.preventDefault();
-    return;
+    e.preventDefault()
+    return
   }
 
-  this.href = randomElement(matchingItems.val).route;
-}}>Random Snippet</a>);
+  this.href = randomElement(matchingItems.val).route
+}}>Random Snippet</a>)
 
 matchingItems.onChange(() => {
-  randomSnippetLink.toggleAttribute('disabled', matchingItems.val.length === 0);
-});
+  randomSnippetLink.toggleAttribute('disabled', matchingItems.val.length === 0)
+})
 
-const searchInput = $<HTMLInputElement>(<input style='width: 100%' placeholder='Search' autofocus type="text" oninput={updateFromSearchInput} />);
+const searchInput = $<HTMLInputElement>(<input style='width: 100%' placeholder='Search' autofocus type="text" oninput={updateFromSearchInput} />)
 
 if (window.location.hash) {
-  searchInput.value = decodeURIComponent(window.location.hash.slice(1));
-  updateFromSearchInput();
+  searchInput.value = decodeURIComponent(window.location.hash.slice(1))
+  updateFromSearchInput()
 }
 
 function updateFromSearchInput() {
-  const term = searchInput.value.trim().toLowerCase();
-  searchTerm.set(term);
-  window.location.hash = '#' + encodeURIComponent(term);
+  const term = searchInput.value.trim().toLowerCase()
+  searchTerm.set(term)
+  window.location.hash = '#' + encodeURIComponent(term)
 }
 
 document.querySelector('.filters-container')!.replaceChildren($(<>
@@ -136,4 +136,4 @@ document.querySelector('.filters-container')!.replaceChildren($(<>
     Not sure what to read?<br />
     Try a {randomSnippetLink} from these.
   </p>
-</>));
+</>))

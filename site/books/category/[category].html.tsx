@@ -1,11 +1,11 @@
-import { LoadingParagraph } from "../../components/$loading.js";
-import { Typography } from "../../components/$typography.js";
-import { CenteredColumn, Spaced, SplitColumn } from "../../components/column.js";
-import { TypicalPage } from "../../components/page.js";
-import { PaginatorLoading } from "../../components/paginator.js";
-import { Rating } from "../../components/rating.js";
-import { allCategories } from "../../model/categories.js";
-import { markdown } from "../../util/_helpers.js";
+import { LoadingParagraph } from "../../components/$loading.js"
+import { Typography } from "../../components/$typography.js"
+import { CenteredColumn, Spaced, SplitColumn } from "../../components/column.js"
+import { TypicalPage } from "../../components/page.js"
+import { PaginatorLoading } from "../../components/paginator.js"
+import { Rating } from "../../components/rating.js"
+import { allCategories } from "../../model/categories.js"
+import { markdown } from "../../util/_helpers.js"
 
 export default allCategories.map(cat => [cat.slug, <>
   <TypicalPage title="Book Categories" image={`/img/categories/${cat.slug}-big.jpg`} page="Books">
@@ -53,7 +53,7 @@ export default allCategories.map(cat => [cat.slug, <>
                   <Typography style='font-size:smaller; margin-left:1em'>
                     {markdown.render(excerpt(book.content))}
                   </Typography>
-                </div>;
+                </div>
               })}
             </div>
           </div>
@@ -92,8 +92,8 @@ export default allCategories.map(cat => [cat.slug, <>
     </Spaced>
 
   </TypicalPage >
-</>]);
+</>])
 
 function excerpt(s: string) {
-  return s.split(/\r?\n\r?\n/)[0]!;
+  return s.split(/\r?\n\r?\n/)[0]!
 }

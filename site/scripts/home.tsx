@@ -1,11 +1,11 @@
-import MarkdownIt from 'markdown-it';
-import { HomeLoading, LoadingLine } from '../components/$loading.js';
-import { mdOptions } from '../components/$markdown.js';
-import { PrevNextLinks } from '../snippets/snippet-links.js';
-import { formatDate } from "../util/format-date.js";
-import { $ } from '../util/jsx-dom.js';
-import { SnippetJson } from './data/snippets/[snippet].json.js';
-import { randomElement, sleep } from './util.js';
+import MarkdownIt from 'markdown-it'
+import { HomeLoading, LoadingLine } from '../components/$loading.js'
+import { mdOptions } from '../components/$markdown.js'
+import { PrevNextLinks } from '../snippets/snippet-links.js'
+import { formatDate } from "../util/format-date.js"
+import { $ } from '../util/jsx-dom.js'
+import { SnippetJson } from './data/snippets/[snippet].json.js'
+import { randomElement, sleep } from './util.js'
 
 // const dailyMorals = fetch('/moral-responsibility/morals.json').then<string[]>(res => res.json());
 
@@ -19,17 +19,17 @@ import { randomElement, sleep } from './util.js';
 //   container.previousElementSibling!.setAttribute('title', `${which} / ${morals.length} - ${hoursLeft}h`);
 // });
 
-const container = document.getElementById('random-book-snippet') as HTMLDivElement;
+const container = document.getElementById('random-book-snippet') as HTMLDivElement
 
-const snippetIds = fetch('/scripts/data/snippet-ids.json').then<string[]>(res => res.json());
+const snippetIds = fetch('/scripts/data/snippet-ids.json').then<string[]>(res => res.json())
 
-const markdown = MarkdownIt(mdOptions);
-const DURATIONS = { long: 1, short: .3 };
+const markdown = MarkdownIt(mdOptions)
+const DURATIONS = { long: 1, short: .3 }
 
-renderSnippet(getSnippetOfTheHour(await snippetIds), 'long');
+renderSnippet(getSnippetOfTheHour(await snippetIds), 'long')
 
 function RelativeSnippetLink({ snippet, children }: { snippet: string | undefined, children: any }) {
-  const span = $<HTMLSpanElement>(<span />);
+  const span = $<HTMLSpanElement>(<span />)
 
   if (snippet) {
     span.replaceChildren($(<LoadingLine width='3em' />));
@@ -40,21 +40,21 @@ function RelativeSnippetLink({ snippet, children }: { snippet: string | undefine
         span.replaceChildren($(<>
           <a onclick={nextInBook(snippet)} href={other.route}>{children}</a><br />
           p.{other.archivePage}
-        </>));
-      }));
+        </>))
+      }))
   }
 
-  return span;
+  return span
 }
 
 async function renderSnippet(slug: string, duration: keyof typeof DURATIONS) {
-  container.replaceChildren(($(<HomeLoading />)));
+  container.replaceChildren(($(<HomeLoading />)))
 
-  const fetching = fetch(`/scripts/data/snippets/${slug}.json`).then<SnippetJson>(res => res.json());
+  const fetching = fetch(`/scripts/data/snippets/${slug}.json`).then<SnippetJson>(res => res.json())
 
-  await sleep(DURATIONS[duration]);
+  await sleep(DURATIONS[duration])
 
-  const snippet = await fetching;
+  const snippet = await fetching
 
   const renderedBody = $(<>
     <div innerHTML={markdown.render(snippet.content)} />
@@ -71,14 +71,14 @@ async function renderSnippet(slug: string, duration: keyof typeof DURATIONS) {
         otherLink={RelativeSnippetLink}
       />
     </p>}
-  </>);
+  </>)
 
-  const PREVIEW_LINES = 15;
-  const AVERAGE_LINE_LENGTH = 50;
-  let previewMarkdown;
-  const previewSplitSpot = snippet.content.indexOf(' ', PREVIEW_LINES * AVERAGE_LINE_LENGTH);
+  const PREVIEW_LINES = 15
+  const AVERAGE_LINE_LENGTH = 50
+  let previewMarkdown
+  const previewSplitSpot = snippet.content.indexOf(' ', PREVIEW_LINES * AVERAGE_LINE_LENGTH)
   if (previewSplitSpot !== -1) {
-    previewMarkdown = snippet.content.slice(0, previewSplitSpot) + ' ...';
+    previewMarkdown = snippet.content.slice(0, previewSplitSpot) + ' ...'
   }
 
   container.replaceChildren($(<>
@@ -97,35 +97,35 @@ async function renderSnippet(slug: string, duration: keyof typeof DURATIONS) {
         ? <>
           <div innerHTML={markdown.render(previewMarkdown)} />
           <p><a href='#' onclick={(function (this: HTMLAnchorElement, e: Event) {
-            e.preventDefault();
-            this.parentElement!.parentElement!.replaceChildren(renderedBody);
+            e.preventDefault()
+            this.parentElement!.parentElement!.replaceChildren(renderedBody)
           }) as any}><i>Continue reading...</i></a></p>
         </>
         : <div>{renderedBody}</div>}
     </div>
-  </>));
+  </>))
 }
 
 function getSnippetOfTheHour(slugs: string[]) {
-  const yearStart = new Date(new Date().getFullYear(), 0, 1).getTime();
-  const yearDuration = (1000 * 60 * 60 * 24 * 365);
-  const now = Date.now();
-  const percent = (now - yearStart) / yearDuration;
-  return slugs[Math.floor(percent * slugs.length)]!;
+  const yearStart = new Date(new Date().getFullYear(), 0, 1).getTime()
+  const yearDuration = (1000 * 60 * 60 * 24 * 365)
+  const now = Date.now()
+  const percent = (now - yearStart) / yearDuration
+  return slugs[Math.floor(percent * slugs.length)]!
 }
 
 async function showRandomBookSnippet(e: Event) {
-  e.preventDefault();
-  renderSnippet(randomElement(await snippetIds), 'short');
+  e.preventDefault()
+  renderSnippet(randomElement(await snippetIds), 'short')
 }
 
 function nextInBook(next: string) {
   return (e: Event) => {
-    e.preventDefault();
+    e.preventDefault()
 
-    const top = container.closest('.spaced')!;
-    top.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const top = container.closest('.spaced')!
+    top.scrollIntoView({ behavior: 'smooth', block: 'start' })
 
-    renderSnippet(next, 'long');
-  };
+    renderSnippet(next, 'long')
+  }
 }

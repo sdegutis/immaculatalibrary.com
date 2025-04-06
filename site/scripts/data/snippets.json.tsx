@@ -1,6 +1,6 @@
-import { Snippet, allSnippets } from "../../model/snippets.js";
+import { Snippet, allSnippets } from "../../model/snippets.js"
 
-export type SnippetJson = ReturnType<typeof snippetToJson>;
+export type SnippetJson = ReturnType<typeof snippetToJson>
 
 function snippetToJson(snippet: Snippet) {
   return {
@@ -15,7 +15,7 @@ function snippetToJson(snippet: Snippet) {
     book: snippet.data.bookSlug,
     archivePage: snippet.data.archivePage,
     archiveLink: snippet.archiveLink,
-  };
+  }
 }
 
-export default allSnippets.map(snippetToJson);
+export default allSnippets.map(snippetToJson)

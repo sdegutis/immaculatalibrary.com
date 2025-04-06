@@ -1,8 +1,8 @@
-import { BookTabs } from './books.html.js';
-import { LoadingLine, LoadingParagraph } from './components/$loading.js';
-import { Spaced, SplitColumn } from './components/column.js';
-import { TypicalPage } from './components/page.js';
-import { PaginatorLoading } from './components/paginator.js';
+import { BookTabs } from './books.html.js'
+import { LoadingLine, LoadingParagraph } from './components/$loading.js'
+import { Spaced, SplitColumn } from './components/column.js'
+import { TypicalPage } from './components/page.js'
+import { PaginatorLoading } from './components/paginator.js'
 
 export default <>
   <TypicalPage title={<BookTabs index={1} />} image='/img/categories/reference-big.jpg' page='Books'>
@@ -53,4 +53,4 @@ export default <>
     </Spaced>
 
   </TypicalPage>
-</>;
+</>

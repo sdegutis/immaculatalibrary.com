@@ -1,7 +1,7 @@
-import { allArticles } from "../model/articles.js";
-import { formatDate } from "../util/format-date.js";
-import { LoadingParagraph } from "./$loading.js";
-import { PaginatorLoading } from "./paginator.js";
+import { allArticles } from "../model/articles.js"
+import { formatDate } from "../util/format-date.js"
+import { LoadingParagraph } from "./$loading.js"
+import { PaginatorLoading } from "./paginator.js"
 
 export const ArticlesList = (data: { count?: number }) => <>
   <script type='module' src='/scripts/paginate.js' />
@@ -25,4 +25,4 @@ export const ArticlesList = (data: { count?: number }) => <>
       </>)}
     </div>
   </div>
-</>;
+</>

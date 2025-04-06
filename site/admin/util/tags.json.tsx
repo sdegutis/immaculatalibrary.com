@@ -1,2 +1,2 @@
-import { allTags } from "../../model/tag.js";
-export default allTags;
+import { allTags } from "../../model/tag.js"
+export default allTags

@@ -1,4 +1,4 @@
-import { NavPage, Navlinks } from "./navlinks.js";
+import { NavPage, Navlinks } from "./navlinks.js"
 
 export const SiteHeader = (attrs: { title: JSX.Element, image: string, page: NavPage }) => <>
   <link rel="stylesheet" href='/css/components/site-header.css' />
@@ -16,4 +16,4 @@ export const SiteHeader = (attrs: { title: JSX.Element, image: string, page: Nav
       </section>
     </div>
   </header>
-</>;
+</>

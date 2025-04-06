@@ -25,5 +25,5 @@ export function PrevNextLinks<SubSnippet>(attrs: {
         <attrs.otherLink snippet={attrs.snippet.nextSnippet}>Next</attrs.otherLink>
       </div>
     </div>
-  </>;
+  </>
 }

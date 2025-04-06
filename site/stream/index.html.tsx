@@ -1,4 +1,4 @@
-import { EmptyPage } from "../components/page.js";
+import { EmptyPage } from "../components/page.js"
 
 export default (
   <EmptyPage>
@@ -6,4 +6,4 @@ export default (
     <link rel="stylesheet" href="stream.css" />
     <canvas width='1186' height='2108' />
   </EmptyPage>
-);
+)

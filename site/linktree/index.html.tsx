@@ -1,5 +1,5 @@
-import { CenteredColumn, Spaced } from '../components/column.js';
-import { EmptyPage } from '../components/page.js';
+import { CenteredColumn, Spaced } from '../components/column.js'
+import { EmptyPage } from '../components/page.js'
 
 export default <>
   <EmptyPage>
@@ -16,4 +16,4 @@ export default <>
       </CenteredColumn>
     </Spaced>
   </EmptyPage>
-</>;
+</>

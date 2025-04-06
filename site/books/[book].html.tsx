@@ -1,13 +1,13 @@
-import { LoadingLine, LoadingParagraph } from "../components/$loading.js";
-import { Typography } from "../components/$typography.js";
-import { Admin } from "../components/admin.js";
-import { Spaced, SplitColumn } from "../components/column.js";
-import { TypicalPage } from "../components/page.js";
-import { PaginatorLoading } from "../components/paginator.js";
-import { Rating } from "../components/rating.js";
-import { allBooks } from "../model/books.js";
-import { markdown } from "../util/_helpers.js";
-import { formatDate } from "../util/format-date.js";
+import { LoadingLine, LoadingParagraph } from "../components/$loading.js"
+import { Typography } from "../components/$typography.js"
+import { Admin } from "../components/admin.js"
+import { Spaced, SplitColumn } from "../components/column.js"
+import { TypicalPage } from "../components/page.js"
+import { PaginatorLoading } from "../components/paginator.js"
+import { Rating } from "../components/rating.js"
+import { allBooks } from "../model/books.js"
+import { markdown } from "../util/_helpers.js"
+import { formatDate } from "../util/format-date.js"
 
 export default allBooks.map(book => [book.slug, <>
   <TypicalPage title="Books" image={book.imageBig} page="Books">
@@ -99,4 +99,4 @@ export default allBooks.map(book => [book.slug, <>
     </Spaced>
 
   </TypicalPage>
-</>]);
+</>])

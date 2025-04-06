@@ -1,11 +1,11 @@
-import allMusicFiles from "../data/music/";
-import { DataFile } from '../util/_datafiles.js';
+import allMusicFiles from "../data/music/"
+import { DataFile } from '../util/_datafiles.js'
 
 interface MusicFile {
-  title: string;
-  youtube?: string;
-  spotify?: string;
-  category: string;
+  title: string
+  youtube?: string
+  spotify?: string
+  category: string
 }
 
 export class Music extends DataFile<MusicFile> {
@@ -15,4 +15,4 @@ export class Music extends DataFile<MusicFile> {
 }
 
 export const allMusics = (allMusicFiles
-  .map(file => Music.fromFile(file)));
+  .map(file => Music.fromFile(file)))
