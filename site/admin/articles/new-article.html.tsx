@@ -1,4 +1,4 @@
-import handlers from 'handlers!'
+import { handlers } from "../../../main.js"
 import { EmptyPage } from "../../components/page.js"
 import { Article } from "../../model/articles.js"
 

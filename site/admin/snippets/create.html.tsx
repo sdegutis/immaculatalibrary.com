@@ -1,4 +1,4 @@
-import handlers from 'handlers!'
+import { handlers } from "../../../main.js"
 import { Typography } from "../../components/$typography.js"
 import { EmptyPage } from "../../components/page.js"
 import { Snippet } from '../../model/snippets.js'

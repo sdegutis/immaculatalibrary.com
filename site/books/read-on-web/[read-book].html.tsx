@@ -1,4 +1,4 @@
-import handlers from "handlers!"
+import { handlers } from "../../../main.js"
 import { LoadingLine, LoadingParagraph } from "../../components/$loading.js"
 import { Typography } from "../../components/$typography.js"
 import { Navlinks } from "../../components/navlinks.js"

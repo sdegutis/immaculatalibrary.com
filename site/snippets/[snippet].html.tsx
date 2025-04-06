@@ -1,4 +1,4 @@
-import handlers from "handlers!"
+import { handlers } from "../../main.js"
 import { Typography } from "../components/$typography.js"
 import { Admin } from "../components/admin.js"
 import { Spaced, SplitColumn } from "../components/column.js"
