@@ -20,7 +20,10 @@ registerHooks(immaculata.compileJsxTsxModuleHook((source, url) => transformSync(
       ? { syntax: 'typescript', tsx: true, decorators: true }
       : { syntax: 'ecmascript', jsx: true, decorators: true },
     transform: {
-      react: { runtime: 'automatic' },
+      react: {
+        throwIfNamespace: false,
+        runtime: 'automatic'
+      },
     },
   },
 }).code))
@@ -91,7 +94,8 @@ async function processSite() {
     `
     files.with('\.html$').do(file => file.text = file.text.replace('<head>', `$&${importmap}`))
 
-    // files.add('/sitemap.xml', (await import('./site/sitemap.js')).makeSitemap(files.paths()))
+    const sitemapFn = await import('./site/sitemap.js')
+    files.add('/sitemap.xml', sitemapFn.makeSitemap(files.paths()))
 
   })
 }
