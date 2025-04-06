@@ -23,7 +23,7 @@
     "@types/eases": "^1.0.4",
     "@types/js-yaml": "^4.0.9",
     "@types/markdown-it": "^14.1.1",
-    "@types/node": "^22.13.14",
+    "@types/node": "^22.14.0",
     "idb-keyval": "^6.2.1",
     "monaco-editor": "^0.43.0",
     "typescript": "^5.8.2"
