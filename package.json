@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "@swc/core": "^1.11.16",
-    "immaculata": "^0.1.3",
+    "immaculata": "^0.1.4",
     "js-yaml": "^4.1.0",
     "markdown-it": "^14.1.0"
   }
