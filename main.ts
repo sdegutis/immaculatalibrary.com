@@ -3,7 +3,6 @@ import { randomUUID } from 'crypto'
 import * as immaculata from 'immaculata'
 import { registerHooks } from 'module'
 import { handlers, tree } from './data.ts'
-// import { makeSitemap } from './site/sitemap.js'
 
 const isDev = process.argv[2] !== 'generate'
 
@@ -91,6 +90,8 @@ async function processSite() {
       }</script>
     `
     files.with('\.html$').do(file => file.text = file.text.replace('<head>', `$&${importmap}`))
+
+    // files.add('/sitemap.xml', (await import('./site/sitemap.js')).makeSitemap(files.paths()))
 
   })
 }
