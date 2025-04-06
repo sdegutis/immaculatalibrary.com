@@ -1,10 +1,12 @@
-import allSnippetFiles from "../data/snippets/"
+import { getFiles } from "../../data.js"
 import { DataFileWithDate } from "../util/_datafiles.js"
 import { markdown, sortBy } from "../util/_helpers.js"
 import { calculateReadingMins } from '../util/helpers.js'
 import { Book } from './books.js'
 import * as relations from "./relations.js"
 import { addTags } from './tag.js'
+
+const allSnippetFiles = getFiles('/data/snippets/')
 
 interface SnippetFile {
   published: boolean

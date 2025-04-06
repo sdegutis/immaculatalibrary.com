@@ -1,9 +1,11 @@
-import allBookFiles from "../data/books/"
+import { getFiles } from "../../data.js"
 import { DataFile } from "../util/_datafiles.js"
 import { sortBy } from "../util/_helpers.js"
 import { Category } from "./categories.js"
 import * as relations from "./relations.js"
 import { Snippet } from "./snippets.js"
+
+const allBookFiles = getFiles('/data/books/')
 
 interface BookFile {
   title: string

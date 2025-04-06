@@ -1,5 +1,7 @@
-import allMusicFiles from "../data/music/"
+import { getFiles } from '../../data.js'
 import { DataFile } from '../util/_datafiles.js'
+
+const allMusicFiles = getFiles('/data/music/')
 
 interface MusicFile {
   title: string

@@ -9,7 +9,7 @@ export class DataFile<D> {
 
   static fromFile<T extends DataFile<any>>(
     this: new (...args: any[]) => T,
-    { path: filepath, content: rawContent }: FsFile
+    { path: filepath, content: rawContent }: { path: string, content: string | Buffer }
   ) {
     const slug = path.basename(filepath).slice(0, -3)
 
@@ -23,11 +23,18 @@ export class DataFile<D> {
     return new this(slug, content, data)
   }
 
+  public slug: string
+  public content: string
+  public data: D
   constructor(
-    public slug: string,
-    public content: string,
-    public data: D,
-  ) { }
+    slug: string,
+    content: string,
+    data: D,
+  ) {
+    this.slug = slug
+    this.content = content
+    this.data = data
+  }
 
   save() {
     const modelDir = (this.constructor as typeof DataFile<D>).modelDir

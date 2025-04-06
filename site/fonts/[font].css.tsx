@@ -1,5 +1,7 @@
 import * as path from "path"
-import dirFiles from './'
+import { getFiles } from "../../data.ts"
+
+const dirFiles = getFiles('/fonts/')
 
 const fontFiles = dirFiles.filter(f => f.path.endsWith('.woff'))
 const fontGroups = Map.groupBy(fontFiles, f => f.path.split('/')[2]!)
