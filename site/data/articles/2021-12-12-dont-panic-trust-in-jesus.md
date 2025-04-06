@@ -6,13 +6,7 @@ imageCaption: >-
   href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 ---
 
-Jesus said, "Let not your hearts be troubled." And not just once, but twice in a row.
+Jesus said, "Let not your hearts be troubled." And not just once, but twice in a row. Then he said, "I have said all this to keep you from falling away."
 
-Then he said, "I have said all this to keep you from falling away."
-
-He knew bad things were going to happen to us. He said it would.
-
-But he also *conquered* those bad things, and *earned the right* to save us from them.
-
-So if we stick close to Jesus, he will rescue us from it all. And soon!
+He knew bad things were going to happen to us. He said it would. But he also *conquered* those bad things, and *earned the right* to save us from them. So if we stick close to Jesus, he will rescue us from it all. And soon!
 
