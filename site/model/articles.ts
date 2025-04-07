@@ -3,7 +3,7 @@ import { DataFileWithDate } from '../util/_datafiles.js'
 import { sortBy } from '../util/_helpers.js'
 import { calculateReadingMins } from '../util/helpers.js'
 
-const allArticleFiles = getFiles('/data/articles/')
+const allArticleFiles = getFiles('/data/articles/', import.meta.url)
 
 interface ArticleFile {
   title: string

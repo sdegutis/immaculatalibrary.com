@@ -4,7 +4,7 @@ import { sortBy } from '../util/_helpers.js'
 import { Book } from './books.js'
 import * as relations from './relations.js'
 
-const allCategoryFiles = getFiles('/data/categories/')
+const allCategoryFiles = getFiles('/data/categories/', import.meta.url)
 
 interface CategoryFile {
   title: string

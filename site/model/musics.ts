@@ -1,7 +1,7 @@
 import { getFiles } from '../../data.js'
 import { DataFile } from '../util/_datafiles.js'
 
-const allMusicFiles = getFiles('/data/music/')
+const allMusicFiles = getFiles('/data/music/', import.meta.url)
 
 interface MusicFile {
   title: string

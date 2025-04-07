@@ -5,7 +5,7 @@ import { Category } from "./categories.js"
 import * as relations from "./relations.js"
 import { Snippet } from "./snippets.js"
 
-const allBookFiles = getFiles('/data/books/')
+const allBookFiles = getFiles('/data/books/', import.meta.url)
 
 interface BookFile {
   title: string

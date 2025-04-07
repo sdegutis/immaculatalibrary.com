@@ -6,7 +6,7 @@ import { Book } from './books.js'
 import * as relations from "./relations.js"
 import { addTags } from './tag.js'
 
-const allSnippetFiles = getFiles('/data/snippets/')
+const allSnippetFiles = getFiles('/data/snippets/', import.meta.url)
 
 interface SnippetFile {
   published: boolean

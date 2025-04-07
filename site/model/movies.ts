@@ -2,7 +2,7 @@ import { getFiles } from "../../data.js"
 import { DataFile } from '../util/_datafiles.js'
 import { sortBy } from '../util/_helpers.js'
 
-const allMovieFiles = getFiles('/data/movies/')
+const allMovieFiles = getFiles('/data/movies/', import.meta.url)
 
 interface MovieFile {
   title: string

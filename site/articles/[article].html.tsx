@@ -15,9 +15,9 @@ export default allArticles.map(article => [article.slug, <>
         <div>
           <h2>{markdown.renderInline(article.data.title)}</h2>
 
-          {article.data.imageCaption &&
+          {/* {article.data.imageCaption &&
             <p><small>(Image: {article.data.imageCaption})</small></p>
-          }
+          } */}
 
           <p><small>{article.mins} min &bull; {formatDate(article.date)}</small></p>
 
