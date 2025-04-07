@@ -103,7 +103,10 @@ async function processSite() {
 if (isDev) {
   const server = new immaculata.DevServer(8080)
   server.handlers = handlers
+
+  const start = Date.now()
   server.files = await processSite()
+  console.log(`Time: ${Date.now() - start} ms`)
 
   tree.watch({
     ignored: (str) => str.endsWith('/site/api.d.ts')
