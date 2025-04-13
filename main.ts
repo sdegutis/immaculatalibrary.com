@@ -6,7 +6,7 @@ import { handlers, tree } from './data.ts'
 
 const isDev = process.argv[2] !== 'generate'
 
-registerHooks(tree.moduleHook())
+registerHooks(tree.enableImportsModuleHook())
 registerHooks(immaculata.tryTsTsxJsxModuleHook)
 registerHooks(immaculata.jsxRuntimeModuleHook('immaculata/dist/jsx-strings.js'))
 registerHooks(immaculata.compileJsxTsxModuleHook((source, url) => transformSync(source, {
@@ -109,7 +109,7 @@ if (isDev) {
   console.log(`Time: ${Date.now() - start} ms`)
 
   tree.watch({
-    ignored: (str) => str.endsWith('/site/api.d.ts')
+    ignored: (str) => { console.log(str); return false }
   }, async (paths) => {
     const start = Date.now()
     server.files = await processSite()
