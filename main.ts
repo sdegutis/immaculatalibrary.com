@@ -108,9 +108,7 @@ if (isDev) {
   server.files = await processSite()
   console.log(`Time: ${Date.now() - start} ms`)
 
-  tree.watch({
-    ignored: (str) => { console.log(str); return false }
-  }, async (paths) => {
+  tree.watch({}, async (paths) => {
     const start = Date.now()
     server.files = await processSite()
     server.reload()
