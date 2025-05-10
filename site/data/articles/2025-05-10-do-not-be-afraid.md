@@ -36,7 +36,7 @@ When bad things happen to you, remember these quotes from the Bible:
 
 "Count it as a good thing and rejoice when bad things happen to you." (James 1:2)
 
-"When bad people persecute you and lie about you whenever you do good, rejoice and leap for joy!" (Jesus in Luke 6:23)
+"When bad people do wrong against you and lie about you whenever you do good, rejoice and leap for joy! Because your reward is *great* in heaven!" (Jesus in Luke 6:23)
 
 "Do not be surprised when bad things happen to you, just like they happen to every Christian." (1 Peter 4:12)
 
