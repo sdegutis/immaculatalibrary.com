@@ -1,6 +1,6 @@
-import { LiveTree } from "immaculata"
+import { FileTree } from "immaculata"
 
-export const tree = new LiveTree('site', import.meta.url)
+export const tree = new FileTree('site', import.meta.url)
 export const handlers = new Map<string, (body: string) => string>()
 
 export function getFiles(dir: string, importMetaUrl: string): { path: string, content: string | Buffer }[] {

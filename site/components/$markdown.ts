@@ -1,6 +1,6 @@
-import MarkdownIt from "markdown-it"
+import type { Options } from "markdown-it"
 
-export const mdOptions: MarkdownIt.Options = {
+export const mdOptions: Options = {
   typographer: true,
   html: true,
   linkify: true,
