@@ -30,14 +30,26 @@ Jesus is the *savior*. He saves us from drowning in our problems. He helps us to
 
 When bad things happen to you, remember these quotes from the Bible:
 
-> Resist the devil, and he will flee from you. Draw near to God, and he will draw near to you. (James)
+"Resist the devil, and he will flee from you. Draw near to God, and he will draw near to you." (James 4:7)
 
-> Count it as a good thing and rejoice when bad things happen to you. (James)
+"With every temptation, God will give you a way to escape it." (1 Corinthians 10:13)
 
-> Do not be surprised when bad things happen to you, just like they happen to every Christian. God lets it happen to purify your faith like fire purifies gold, and your faith is more precious than gold. (Peter)
+"Count it as a good thing and rejoice when bad things happen to you." (James 1:2)
 
-> Is a servant greater than the master? If bad things happened to me, bad things must also happen to you. (Jesus)
+"When bad people persecute you and lie about you whenever you do good, rejoice and leap for joy!" (Jesus in Luke 6:23)
 
-> He was not blind because he sinned or his parents sinned, but only to prove the glory of God. (Jesus)
+"Do not be surprised when bad things happen to you, just like they happen to every Christian." (1 Peter 4:12)
 
-> God is treating you as sons. For what son is there who does not get disciplined? He disciplines you because he *accepts* you as a son. If you were *not* disciplined, it would be because you are *not* his son. (Hebrews)
+"Is a servant greater than the master? If bad things happened to me, bad things must also happen to you. But don't let your hearts be troubled or afraid." (Jesus in John 14:1, John 14:27, John 13:15-16, and John 15:20)
+
+"The Lord is my helper. I will not be afraid." (Hebrews 13:6)
+
+"He was not blind because he sinned or his parents sinned, but only to prove the glory of God." (Jesus in John 9:3)
+
+"Now my soul is troubled. And what shall I say, father save me from this hour? No! I came *for* this hour. Father, glorify your name!" (Jesus in John 12:27)
+
+"My soul is sad enough that I could die from it. Abba, father, you can do anything. If it be possible, take this cup from me. But let your will be done, not my will!" (Jesus in Matthew 26:39 and Mark 14:36)
+
+"God is treating you as sons. For what son is there who does not get disciplined? He disciplines you because he *accepts* you as a son. If you were *not* disciplined, it would be because you are *not* his son." (Hebrews 12:7-13)
+
+"God lets bad things happen to you to purify your faith just like fire purifies gold, and your faith is more precious than gold." (1 Peter 1:7)
