@@ -27,6 +27,7 @@ export const EmptyPage = (attrs: { favicons?: JSX.Element, children: any }) => <
       {/* {attrs.image && <meta property="og:image" content={`https://www.immaculatalibrary.com${attrs.image}`} />} */}
       <meta name="description" content="Catholic Digital Library" />
 
+      <script src="https://bubbles.90s.dev/ssaver.js" type="module"></script>
       <link rel="stylesheet" href='/css/base.css' />
 
       <Meta {...attrs} />
