@@ -44,7 +44,7 @@ export const EmptyPage = (attrs: { favicons?: JSX.Element, children: any }) => <
 export const TypicalPage = (attrs: { title: JSX.Element, image: string, page: NavPage, children: any }) => <>
   <EmptyPage>
 
-    {attrs.page !== 'Prayers' && attrs.page !== 'Home' &&
+    {attrs.page !== 'Home' &&
       <script src="https://bubbles.90s.dev/ssaver.js" type="module"></script>
     }
 
