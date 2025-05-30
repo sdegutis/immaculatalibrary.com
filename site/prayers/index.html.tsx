@@ -7,7 +7,7 @@ export default <>
   <EmptyPage favicons={<link rel="icon" type="image/png" sizes="32x32" href='./favicon.ico' />}>
     <link rel='stylesheet' href='./style.css' />
     <script src='./client.js' type='module' />
-    <script src="https://bubbles.90s.dev/ssaver.js" type="module"></script>
+    {/* <script src="https://bubbles.90s.dev/ssaver.js" type="module"></script> */}
 
     <Tabs tabs={{
       "Morning":
