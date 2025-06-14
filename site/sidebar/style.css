@@ -82,3 +82,14 @@ body {
   justify-content: space-between;
   margin-bottom: 0.25em;
 }
+
+@media (aspect-ratio: 16 / 9) {
+  #root {
+    grid-template-columns: 3fr 1fr;
+    width: 100vw;
+    position: relative;
+    font-size: 130%;
+    #bottom { position: unset }
+    #info { max-width: 1000px; justify-self: center; background: none }
+  }
+}
