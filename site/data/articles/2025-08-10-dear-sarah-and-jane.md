@@ -38,6 +38,10 @@ Don't be tricked by people who say they have shortcuts to happiness, or shortcut
 
 Our life is changing a little right now. That keeps happening. That's part of life. Life changes. It happened to the Saints too, don't forget that. Try to play Saint Game every day.
 
-Don't read the Gospel by Gen Z. I do not like that book anymore. I only wrote it so I could have money. But I don't think very many good things came from that book. Many people liked it, but it didn't help them to become Saints, or to become Catholic. So I don't think it was a good book. Just ignore that book.
+Don't read the Gospel by Gen Z. I do not like that book anymore. I only wrote it so I could have money. But I don't think very many good things came from that book. Many people liked it, but it didn't help them to become Catholic or receive more Sacraments. So I don't think it was a good book. Just ignore that book.
+
+I love you so much, and I am praying for you every day. Obey your mom and do what she tells you, just like you obeyed me. If you disobey her, you will make me sad. She is trying so hard to be a good mom, but it is difficult to have lots of children and take care of them all. Obey her, to make her life easier.
+
+Don't forget your brown scapular. Mary will deliver you from purgatory if you wear it and keep your heart pure and clean, and don't let evil love into your heart. Most people let evil love into their heart, and God punishes them by giving them a very bad life. Please don't let that happen to you. Keep your heart pure, both of you, for my sake.
 
 
