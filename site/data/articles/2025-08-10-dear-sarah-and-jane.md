@@ -44,6 +44,8 @@ I love you so much, and I am praying for you every day. Obey your mom and do wha
 
 Don't forget your brown scapular. Mary will deliver you from purgatory if you wear it and keep your heart pure and clean, and don't let evil love into your heart. Most people let evil love into their heart, and God punishes them by giving them a very bad life. Please don't let that happen to you. Keep your heart pure, both of you, for my sake.
 
-Later you will probably learn about the wrongs I did, and the wrongs others did against me. Please forgive me because my past mistakes are making your life harder. And don't hate other people for the wrong they have done to you or to me. Everyone makes mistakes. Forgive everyone, for they do not know what they do. Don't ever hate anyone.
+Later you will probably learn about the wrongs I did, and the wrongs others did against me. Please forgive me because my past mistakes are making your life harder. And don't hate other people for the wrong they have done to you or to me. Everyone makes mistakes. Forgive everyone, like Jesus forgives us, saying "Father, forgive them, for they do not know what they do." Don't ever hate anyone.
 
 The only reason I have not answered David and Abigail is because they are not here. The court said they must come here. Samantha and Daniel are adults now, so they don't have to come here. But David and Abigail do. I don't hate them. I forgive them. But if they do not come here, then they are not ready yet to learn anything from me. So there's nothing for me to say to them yet. Besides, they are more your mom's children than mine. That is why they didn't come here but stayed with her.
+
+Trust me when I say that I love you both, my daughters, and that I love God. You both helped me to love God even more, by being good girls. You helped me. Thank you so much for that. May God bless you for it!
