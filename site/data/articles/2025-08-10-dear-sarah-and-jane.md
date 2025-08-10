@@ -44,4 +44,4 @@ I love you so much, and I am praying for you every day. Obey your mom and do wha
 
 Don't forget your brown scapular. Mary will deliver you from purgatory if you wear it and keep your heart pure and clean, and don't let evil love into your heart. Most people let evil love into their heart, and God punishes them by giving them a very bad life. Please don't let that happen to you. Keep your heart pure, both of you, for my sake.
 
-
+Later you will probably learn about the wrongs I did, and the wrongs others did against me. Please forgive me because my past mistakes are making your life harder. And don't hate other people for the wrong they have done to you or to me. Everyone makes mistakes. Forgive everyone, for they do not know what they do. Don't ever hate anyone.
