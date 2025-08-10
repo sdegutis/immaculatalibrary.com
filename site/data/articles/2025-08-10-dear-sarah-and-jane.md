@@ -2,9 +2,7 @@
 title: Dear Sarah and Jane...
 ---
 
-It's me, your dad. I am writing this to you because I love you, my daughters. I have tried to call you many times in the past 7 hours as I promised I would, but she's not letting me. I think they are trying to keep you from me again. I don't know what is happening.
-
-I am writing this to you because I don't know when I will see you next, and I don't know what will happen to me, and I want to say a few more things to you. I told you most of these things already, but I want to make sure you can remember them better for later.
+It's me, your dad. I am writing this to you because I love you, my daughters, and I want to say a few more things to you. I told you most of these things already, but I want to make sure you can remember them better for later.
 
 I trust that God will help me, and I know God will help you. Always trust in God and carry your cross. Never forget what I taught you: you know you are following the real Jesus if you are carrying your cross.
 
@@ -49,3 +47,7 @@ Later you will probably learn about the wrongs I did, and the wrongs others did 
 The only reason I have not answered David and Abigail is because they are not here. The court said they must come here. Samantha and Daniel are adults now, so they don't have to come here. But David and Abigail do. I don't hate them. I forgive them. But if they do not come here, then they are not ready yet to learn anything from me. So there's nothing for me to say to them yet. Besides, they are more your mom's children than mine. That is why they didn't come here but stayed with her.
 
 Trust me when I say that I love you both, my daughters, and that I love God. You both helped me to love God even more, by being good girls. You helped me. Thank you so much for that. May God bless you for it!
+
+Remember that if you sin, you will make your life more sad, and if you do good, you will make your life more happy. Sometimes bad things happen to you if you do good, but God gives you joy in your heart. Sometimes good things happen to you when you are bad, but God takes away your peace until you become sorry.
+
+I don't know how much longer God will let me write these things. But while he lets me, I will use my time to write you a little bit every day.
