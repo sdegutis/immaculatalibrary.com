@@ -1,5 +1,5 @@
 ---
-title: Dear Sarah and Jane...
+title: To my daughters...
 ---
 
 It's me, your dad. I am writing this to you because I love you, my daughters, and I want to say a few more things to you. I told you most of these things already, but I want to make sure you can remember them better for later.
@@ -44,10 +44,6 @@ Don't forget your brown scapular. Mary will deliver you from purgatory if you we
 
 Later you will probably learn about the wrongs I did, and the wrongs others did against me. Please forgive me because my past mistakes are making your life harder. And don't hate other people for the wrong they have done to you or to me. Everyone makes mistakes. Forgive everyone, like Jesus forgives us, saying "Father, forgive them, for they do not know what they do." Don't ever hate anyone.
 
-The only reason I have not answered David and Abigail is because they are not here. The court said they must come here. Samantha and Daniel are adults now, so they don't have to come here. But David and Abigail do. I don't hate them. I forgive them. But if they do not come here, then they are not ready yet to learn anything from me. So there's nothing for me to say to them yet.
-
 Trust me when I say that I love you both, my daughters, and that I love God. You both helped me to love God even more, by being good girls. You helped me. Thank you so much for that. May God bless you for it!
 
 Remember that if you sin, you will make your life more sad, and if you do good, you will make your life more happy. Sometimes bad things happen to you if you do good, but God gives you joy in your heart. Sometimes good things happen to you when you are bad, but God takes away your peace until you become sorry.
-
-I don't know how much longer God will let me write these things. But while he lets me, I will use my time to write you a little bit every day.
