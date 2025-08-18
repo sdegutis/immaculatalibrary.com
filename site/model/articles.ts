@@ -7,6 +7,7 @@ const allArticleFiles = getFiles('/data/articles/', import.meta.url)
 
 interface ArticleFile {
   title: string
+  break?: boolean
   draft?: boolean
   imageFilename?: string
   imageCaption?: string
@@ -23,6 +24,7 @@ export class Article extends DataFileWithDate<ArticleFile> {
     super(slug, content, data)
     this.route = `/articles/${this.slug}.html`
     this.mins = calculateReadingMins(this.content)
+    this.data.break ??= true
   }
 
 }

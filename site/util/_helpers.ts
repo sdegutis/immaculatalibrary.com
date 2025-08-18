@@ -2,6 +2,7 @@ import MarkdownIt from 'markdown-it'
 import { mdOptions } from '../components/$markdown.js'
 
 export const markdown = new MarkdownIt(mdOptions)
+export const markdownNoBreak = new MarkdownIt({ ...mdOptions, breaks: false })
 
 export function sortBy<T>(fn: (o: T) => string | number) {
   return (l: T, r: T) => {

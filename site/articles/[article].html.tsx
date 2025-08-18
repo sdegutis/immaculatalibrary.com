@@ -3,7 +3,7 @@ import { ArticlesList } from "../components/articles-list.js"
 import { Spaced, SplitColumn } from "../components/column.js"
 import { TypicalPage } from "../components/page.js"
 import { allArticles } from "../model/articles.js"
-import { markdown } from "../util/_helpers.js"
+import { markdown, markdownNoBreak } from "../util/_helpers.js"
 import { formatDate } from '../util/format-date.js'
 
 export default allArticles.map(article => [article.slug, <>
@@ -23,7 +23,7 @@ export default allArticles.map(article => [article.slug, <>
 
           <style>{`.typography > p { text-indent: 1em; }`}</style>
           <Typography>
-            {markdown.render(article.content)}
+            {(article.data.break ? markdown : markdownNoBreak).render(article.content)}
           </Typography>
         </div>
 
