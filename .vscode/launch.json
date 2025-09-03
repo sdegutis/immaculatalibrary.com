@@ -9,6 +9,7 @@
       "name": "Launch Program",
       "request": "launch",
       "program": "${workspaceFolder}/main.ts",
+      "env": {"DEV":"1"},
       "runtimeArgs": [ "--disable-warning=ExperimentalWarning", "--watch-path=main.ts" ],
       "skipFiles": [ "<node_internals>/**" ],
     }
