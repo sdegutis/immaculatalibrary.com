@@ -1,7 +1,7 @@
 ---
 published: true
 title: God alone is our strength and victory over temptations
-archivePage: '10'
+archivePage: '13'
 archiveSlug: the-spiritual-combat-dornin-edition
 bookSlug: the-spiritual-combat
 tags:
