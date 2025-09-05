@@ -15,6 +15,7 @@ function snippetToJson(snippet: Snippet) {
     book: snippet.data.bookSlug,
     archivePage: snippet.data.archivePage,
     archiveLink: snippet.archiveLink,
+    date: snippet.date,
   }
 }
 

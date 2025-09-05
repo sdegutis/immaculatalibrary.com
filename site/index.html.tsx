@@ -1,9 +1,9 @@
 import { HomeLoading } from "./components/$loading.js"
 import { Typography } from "./components/$typography.js"
 import { VerifyHuman } from "./components/_verifyhuman.js"
-import { ArticlesList } from "./components/articles-list.js"
 import { CenteredColumn, Spaced, SplitColumn } from "./components/column.js"
 import { FadeIn } from "./components/fadein.js"
+import { LatestSnippetsArea } from "./components/latest-snippets.tsx"
 import { EmptyPage } from "./components/page.js"
 import { QuickLinks } from "./components/quicklinks.js"
 import { SiteFooter } from "./components/site-footer.js"
@@ -71,9 +71,8 @@ export default <>
           <div>
 
             <FadeIn>
-              <h2>Latest Letters</h2>
-              <p><i>Not written to everyone.</i></p>
-              <ArticlesList count={12} />
+              <h2>Latest Digitized Book Snippets</h2>
+              <LatestSnippetsArea />
             </FadeIn>
 
           </div>

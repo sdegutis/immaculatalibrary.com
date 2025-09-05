@@ -1,3 +1,4 @@
+import { formatDate } from "../util/format-date.js"
 import { $ } from "../util/jsx-dom.js"
 import { SnippetJson } from "./data/snippets.json.js"
 import { randomElement, sleep } from "./util.js"
@@ -20,6 +21,8 @@ document.getElementById('latest-book-snippets-area')!.replaceChildren($(<>
           <a href={snippet.route}>{snippet.title}</a>
           <br />
           {snippet.mins} min &bull; {snippet.bookTitle}
+          <br />
+          <small>Digitized on {formatDate(snippet.date)}</small>
         </p>
       </li>
     )}

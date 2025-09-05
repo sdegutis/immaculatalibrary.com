@@ -6,13 +6,13 @@ export const LatestSnippetsArea = () => <>
       <LoadingLine width="24em" />
     </p>
     <ul>
-      <li><LoadingParagraph lines={2} /></li>
-      <li><LoadingParagraph lines={2} /></li>
-      <li><LoadingParagraph lines={2} /></li>
-      <li><LoadingParagraph lines={2} /></li>
-      <li><LoadingParagraph lines={2} /></li>
-      <li><LoadingParagraph lines={2} /></li>
-      <li><LoadingParagraph lines={2} /></li>
+      <li><LoadingParagraph lines={3} /></li>
+      <li><LoadingParagraph lines={4} /></li>
+      <li><LoadingParagraph lines={3} /></li>
+      <li><LoadingParagraph lines={3} /></li>
+      <li><LoadingParagraph lines={4} /></li>
+      <li><LoadingParagraph lines={3} /></li>
+      <li><LoadingParagraph lines={3} /></li>
     </ul>
   </div>
   <script type='module' src='/scripts/latest-book-snippets.js' />
