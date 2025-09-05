@@ -111,7 +111,9 @@ if (isDev) {
       res.req.on('end', () => {
         const body = Buffer.concat(data).toString('utf8')
         const redirect = fn(body)
-        res.end(`<a href="${redirect}">Next</a>`)
+        res.setHeader("Location", redirect)
+        res.statusCode = 303
+        res.end()
       })
 
       return 'handled'
