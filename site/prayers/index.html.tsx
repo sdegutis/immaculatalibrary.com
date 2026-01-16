@@ -715,7 +715,7 @@ function Friday() {
       <h1>Friday</h1>
       <h2>Litany of Humility</h2>
       <p class='two-cols spaced-small'>
-        <Line>O Jesus meek and humble, <Red>hear me.</Red></Line>
+        <Line>O Jesus meek and humble of heart, <Red>hear me.</Red></Line>
       </p>
       <p class='two-cols spaced-small'>
         <Line>From the desire of being esteemed, <Red>deliver me Jesus.</Red></Line>
